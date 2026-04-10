@@ -1,0 +1,74 @@
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+header.navbar {
+    height: 65px;
+    position: sticky;
+    top: 0;
+}
+
+#sidebarMenu {
+    height: calc(100vh - 65px);
+    position: sticky;
+    top: 65px;
+}
+
+#login-div {
+    height: calc(100vh - 65px);
+    width: 50%;
+    margin:3em auto;
+}
+
+div.floating-menu {
+    position: fixed;
+    z-index: 99;
+}
+
+div.floating-menu > button {
+    position: absolute;
+    top: calc(100vh - 8em);
+    z-index: 99;
+    box-shadow: 0 3px 10px rgb(0 0 0);
+}
+
+.save-to-right {
+    width:100px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    margin-left: auto;
+}
+
+.save-to-left {
+    width:100px;
+    position: fixed;
+    bottom: 10px;
+    z-index: 99;
+}
+
+.need-to-save {
+    width: auto;
+    position: fixed;
+    font-size: 32px;
+    font-weight: bold;
+    color: red;
+    left: 50%;
+    padding-left: 16.67%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    z-index: 99;
+}
+
+.images-click-box {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.display-btn {
+    // width: 100px;
+    height: 2em;
+    margin: 0.5em;
+    padding: 0.25em;
+    border-color:black;
+}

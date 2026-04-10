@@ -1,0 +1,25 @@
+{
+  "name": "kicube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "crc": "^4.3.2",
+    "easy-soap-request": "^5.6.1",
+    "express": "^4.19.2",
+    "glob": "^11.0.0",
+    "gm": "^1.25.0",
+    "karran-utility-functions": "file:node_modules_CUSTOM/karran-utility-functions",
+    "mssql": "^10.0.1",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.7",
+    "stream-buffers": "^3.0.3"
+  }
+}

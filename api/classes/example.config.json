@@ -1,0 +1,12 @@
+{
+    "api": {
+        "listen_port":50000,
+        "env": ""
+    },
+    "db": {
+            "host":"localhost",
+            "database":"zeq",
+            "user":"root",
+            "password":""
+    },
+}
