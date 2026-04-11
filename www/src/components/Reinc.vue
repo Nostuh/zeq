@@ -1309,7 +1309,7 @@ export default {
    wishes, and boons can all be seen without tab-hopping. */
 .extras-grid {
     display: grid;
-    grid-template-columns: minmax(12rem, 0.8fr) minmax(16rem, 1.4fr) minmax(16rem, 1.4fr);
+    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 1fr);
     gap: 0.75rem;
     flex: 1 1 auto;
     min-height: 0;
@@ -1385,7 +1385,6 @@ export default {
 /* Mobile / narrow */
 @media (max-width: 1100px) {
     .extras-grid { grid-template-columns: 1fr 1fr; }
-    .extras-grid .ex-training { grid-column: 1 / -1; max-width: 20rem; }
 }
 @media (max-width: 800px) {
     .general-grid, .skills-grid, .extras-grid, .export-grid { grid-template-columns: 1fr; }
