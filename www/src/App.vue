@@ -2,7 +2,7 @@
 import axios from 'axios';
 import BugReportModal from './components/BugReportModal.vue';
 
-const PUBLIC_ROUTES = ['home', 'reinc', 'login', 'dashboard', 'updates'];
+const PUBLIC_ROUTES = ['home', 'reinc', 'login', 'dashboard', 'updates', 'builds'];
 
 // Per-route <title> strings. Keep the ZombieMUD + reinc keyword prefix
 // in each one so Google's result snippets anchor on the same brand.
@@ -20,6 +20,7 @@ const ROUTE_TITLES = {
     users:          'User administration — Nostuh',
     bugs:           'Bug reports — Nostuh',
     updates:        'Recent updates — Nostuh ZombieMUD Reinc Planner',
+    builds:         'Shared reinc builds — Nostuh ZombieMUD Reinc Planner',
     equipment:      'My Equipment — Nostuh',
     'equipment-all':'All Equipment — Nostuh',
     'equipment-add':'Add Equipment — Nostuh',
@@ -188,6 +189,7 @@ export default {
         <router-link :to="{name:'home'}" class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-decoration-none">Nostuh — Reinc Planner</router-link>
         <div class="navbar-nav flex-row ms-auto pe-3 align-items-center">
             <router-link class="nav-link text-light me-3" :to="{name:'home'}">Planner</router-link>
+            <router-link class="nav-link text-light me-3" :to="{name:'builds'}">Builds</router-link>
             <router-link class="nav-link text-light me-3" :to="{name:'updates'}">Updates</router-link>
             <router-link v-if="isEditor" class="nav-link text-light me-3" :to="{name:'races'}">Admin</router-link>
             <router-link v-else-if="isAuthed" class="nav-link text-light me-3" :to="{name:'equipment'}">My Equipment</router-link>

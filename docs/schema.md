@@ -106,6 +106,27 @@ Categories: `racial` / `minor` / `preference` / `lesser` / `knowledge`
 / `weapon` / `greater`. Effect semantics are simpler — most boons
 today are `flag` only and contribute PP cost without affecting math.
 
+## Saved reincs (`game_saved_reincs` + `game_saved_reinc_votes`)
+
+Public share-a-reinc gallery at `/builds`. One row per user-saved
+build. `state` is a JSON blob (MEDIUMTEXT) versioned with `v: 1`
+containing race_id, guild_picks, stat_train, wishes, boons, learned
+skill/spell percents, extra_free, and quest. The surrounding row
+caches display metadata (`race_name`, `guild_summary`, `total_levels`,
+`total_exp`, `gold`, `hp`, `sp`) so the list view doesn't need the
+engine. `is_featured` pins the curated seeds above tied scores.
+
+Votes live in `game_saved_reinc_votes`, one row per
+`(reinc_id, sha1(ip+salt))`. A unique index enforces one vote per
+viewer; clearing a vote deletes the row. Cached `upvotes`/`downvotes`
+on `game_saved_reincs` are refreshed on every vote.
+
+**Data drift warning:** the `state` JSON references `game_*` IDs.
+Renames are safe (id-stable); deletes leak through as missing
+guilds/skills/wishes when the planner rehydrates. See
+[saved-reincs.md](saved-reincs.md) for the full drift-handling
+rules — they matter for any future game-data migration.
+
 ## Bug reports
 
 ### `bug_reports`

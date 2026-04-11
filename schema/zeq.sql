@@ -231,3 +231,52 @@ CREATE TABLE IF NOT EXISTS game_ss_costs (
     PRIMARY KEY (id),
     UNIQUE KEY uk_gssc (from_pct, to_pct)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ---------- SAVED REINCS ("builds") ----------
+-- Public share-a-reinc page at /builds. `state` is a JSON blob with
+-- everything the planner needs to rebuild the character: race_id,
+-- guild_picks, selected wishes/boons, learned skill/spell percents,
+-- extra_free, quest, stat_train. Display metadata columns are cached
+-- at save time so the list view doesn't need the engine to render.
+--
+-- IMPORTANT: `state` stores game_* IDs. If a race or guild is renamed
+-- or deleted in future imports, old builds can lose pieces of their
+-- character. See docs/saved-reincs.md for the drift-handling rules.
+CREATE TABLE IF NOT EXISTS game_saved_reincs (
+    id            INT NOT NULL AUTO_INCREMENT,
+    title         VARCHAR(128) NOT NULL,
+    author        VARCHAR(64)  NOT NULL,
+    description   VARCHAR(1024) NULL,
+    state         MEDIUMTEXT NOT NULL,
+    race_name     VARCHAR(64)  NOT NULL DEFAULT '',
+    guild_summary VARCHAR(255) NOT NULL DEFAULT '',
+    total_levels  INT    NOT NULL DEFAULT 0,
+    total_exp     BIGINT NOT NULL DEFAULT 0,
+    gold          BIGINT NOT NULL DEFAULT 0,
+    hp            INT    NOT NULL DEFAULT 0,
+    sp            INT    NOT NULL DEFAULT 0,
+    upvotes       INT    NOT NULL DEFAULT 0,
+    downvotes     INT    NOT NULL DEFAULT 0,
+    is_featured   TINYINT(1) NOT NULL DEFAULT 0,
+    created       DATETIME NOT NULL,
+    PRIMARY KEY (id),
+    KEY ix_saved_reincs_created (created),
+    KEY ix_saved_reincs_score   (upvotes, downvotes)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- One vote per (reinc, ip-hash). `ip_hash` is sha1(ip + salt) — the raw
+-- IP never touches disk. `vote` is +1 or -1; clearing a vote deletes
+-- the row. Cached totals on game_saved_reincs are kept in sync on every
+-- vote by the /vote endpoint.
+CREATE TABLE IF NOT EXISTS game_saved_reinc_votes (
+    id         INT NOT NULL AUTO_INCREMENT,
+    reinc_id   INT NOT NULL,
+    ip_hash    CHAR(40) NOT NULL,
+    vote       TINYINT  NOT NULL,
+    created    DATETIME NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_vote_per_ip (reinc_id, ip_hash),
+    KEY ix_vote_reinc (reinc_id),
+    CONSTRAINT fk_srv_reinc FOREIGN KEY (reinc_id)
+        REFERENCES game_saved_reincs(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

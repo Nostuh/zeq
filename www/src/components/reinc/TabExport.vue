@@ -196,14 +196,24 @@ export default {
             <div v-if="!commandBlocks.length" class="text-muted small">
                 (nothing to train — set some skill/spell percents first)
             </div>
-            <div v-for="blk in commandBlocks" :key="blk.guild.id" class="per-guild-block">
-                <div class="per-guild-head">
-                    <strong class="small">{{ blk.guild.name }}</strong>
-                    <button class="btn btn-sm btn-outline-primary" @click="copyText('g' + blk.guild.id, blk.commands)">
-                        {{ copied === 'g' + blk.guild.id ? 'Copied!' : 'Copy' }}
-                    </button>
+            <!--
+              The per-guild command blocks have to live in their own
+              scroll container because .ex-section sets overflow: hidden
+              to keep the planner fitted inside 100vh. Without this wrap,
+              any build with more than ~two guilds of commands (Abjurer
+              + both its subguilds, for instance) gets the later blocks
+              silently clipped off the bottom of the screen.
+            -->
+            <div v-if="commandBlocks.length" class="per-guild-list">
+                <div v-for="blk in commandBlocks" :key="blk.guild.id" class="per-guild-block">
+                    <div class="per-guild-head">
+                        <strong class="small">{{ blk.guild.name }}</strong>
+                        <button class="btn btn-sm btn-outline-primary" @click="copyText('g' + blk.guild.id, blk.commands)">
+                            {{ copied === 'g' + blk.guild.id ? 'Copied!' : 'Copy' }}
+                        </button>
+                    </div>
+                    <pre class="export-pre per-guild-pre">{{ blk.commands }}</pre>
                 </div>
-                <pre class="export-pre">{{ blk.commands }}</pre>
             </div>
         </section>
 
@@ -221,11 +231,27 @@ export default {
 </template>
 
 <style scoped>
+/* The command-blocks list owns its own overflow region so the user can
+   scroll between guilds when a wide build produces more commands than
+   fit in the tab. Each inner `.per-guild-pre` falls back to natural
+   height so a full block is visible at once instead of the user having
+   to fight a nested scroll. */
+.per-guild-list {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
 .per-guild-block + .per-guild-block { margin-top: 0.75rem; }
 .per-guild-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.25rem;
+}
+.per-guild-pre {
+    flex: 0 0 auto;
+    overflow: visible;
+    max-height: none;
 }
 </style>

@@ -11,12 +11,13 @@ import TabSkills from './reinc/TabSkills.vue';
 import TabSpells from './reinc/TabSpells.vue';
 import TabExtras from './reinc/TabExtras.vue';
 import TabExport from './reinc/TabExport.vue';
+import SaveBuildModal from './reinc/SaveBuildModal.vue';
 
 const STATS = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
 
 export default {
     name: 'Reinc',
-    components: { TabGeneral, TabSkills, TabSpells, TabExtras, TabExport },
+    components: { TabGeneral, TabSkills, TabSpells, TabExtras, TabExport, SaveBuildModal },
     // Children inject `reinc` to read shared state and call shared methods.
     // `this` in Vue 3 Options API is a reactive instance proxy, so child
     // templates reading `reinc.character` etc. stay reactive. Keeping all
@@ -68,6 +69,21 @@ export default {
             infoGuildId: null,
             infoGuildLevel: 0,
             infoLoading: false,
+
+            // "Share Build" modal — posts the current state to /api/builds
+            // so it shows up on the /builds page for other visitors to
+            // open and vote on.
+            showSaveBuildModal: false,
+
+            // Gimdori Mode is now a persistent toggle, not a one-shot
+            // button. While ON: every guild / wish / boon change
+            // re-maxes skills and spells and re-selects every wish and
+            // boon. Flipping OFF freezes the current selections in
+            // place — it doesn't clear them. Applied in a `watch`
+            // below so the planner stays consistent whenever state
+            // that Gimdori cares about changes.
+            gimdoriOn: false,
+            gimdoriReapplying: false,
         };
     },
     computed: {
@@ -407,6 +423,182 @@ export default {
             const budget = Math.max(0, MAX_LEVEL - this.guildLevelsSum);
             this.extraFree = Math.max(0, Math.min(budget, parseInt(v, 10) || 0));
         },
+        // ---- Saved-build share pipeline ------------------------------
+        // `buildSnapshot()` freezes the whole planner state into a JSON
+        // shape the /api/builds POST expects. Display metadata is the
+        // computed totals at the moment of save — NOT recomputed on the
+        // server — so the Builds list can render a dense table without
+        // running the engine. When a build is later opened, the planner
+        // reloads bootstrap data and re-runs the engine from scratch,
+        // which is where `applyBuildState` comes in.
+        buildSnapshot() {
+            if (!this.race || !this.character) return null;
+            const state = {
+                v: 1,
+                race_id: this.race.id,
+                guild_picks: this.guildPicks.map((p) => ({ guild_id: p.guildId, level: p.level })),
+                stat_train: { ...this.statTrain },
+                wishes: Array.from(this.selectedWishes),
+                boons: Array.from(this.selectedBoons),
+                skill_learned: { ...this.skillLearned },
+                spell_learned: { ...this.spellLearned },
+                extra_free: this.extraFree | 0,
+                quest: this.quest | 0,
+                tp: this.tp | 0,
+            };
+            // Compact, human-readable guild list for the builds table:
+            // "Fighter 45 / Warlord 25 / Barbarian 10".
+            const guildSummary = this.resolvedPicks
+                .map((p) => `${p.guild.name} ${p.level}`)
+                .join(' / ');
+            return {
+                state,
+                race_name: this.race.name,
+                guild_summary: guildSummary,
+                total_levels: this.totalLevels,
+                total_exp: this.totalExp,
+                gold: this.goldRequired,
+                hp: this.character.hp,
+                sp: this.character.sp,
+            };
+        },
+        // Rehydrate the planner from a saved state blob. Must run AFTER
+        // the catalog `load()` call — races/guilds/skills/spells/wishes/
+        // boons/costs all need to be in memory so the computed chain
+        // produces a stable character snapshot. Guild data for each
+        // picked guild is lazy-loaded here before the picks are
+        // assigned, so the skill/spell tabs don't momentarily show empty
+        // rows while the fetches are in flight.
+        async applyBuildState(state) {
+            if (!state || typeof state !== 'object') return;
+            try {
+                // Race: drop silently if the saved race_id is gone from
+                // the current bootstrap (race disabled/renamed/deleted).
+                const race = this.races.find((r) => r.id === (state.race_id | 0));
+                if (race) this.selectedRaceId = race.id;
+                // Guild picks: only keep ones that still exist, and
+                // clamp their level to the current max_level (in case a
+                // guild's cap was lowered in a re-import).
+                //
+                // CRITICAL subguild rule: a subguild is only valid when
+                // its parent guild is ALSO picked AND sitting at the
+                // parent's current `max_level` (matches the live
+                // `isLocked` check in `onGuildClick`). An old saved build
+                // can carry a subguild whose parent was since re-levelled,
+                // or a build authored directly via the API (bypassing
+                // the UI lock) can contain an outright invalid subguild.
+                // Drop those picks at load time and flash a warning so
+                // the user knows the state they see isn't literally the
+                // saved state. Parents are walked first so every
+                // subguild has its parent state visible in the same loop.
+                const rawPicks = Array.isArray(state.guild_picks) ? state.guild_picks : [];
+                const resolved = [];
+                for (const p of rawPicks) {
+                    const g = this.guilds.find((x) => x.id === (p.guild_id | 0));
+                    if (!g) continue;
+                    const lvl = Math.max(1, Math.min(g.max_level | 0, p.level | 0));
+                    resolved.push({ guild: g, level: lvl });
+                }
+                // Parents first so subguild checks can look up the
+                // parent's selected level in one pass.
+                resolved.sort((a, b) => {
+                    const ap = a.guild.parent_id ? 1 : 0;
+                    const bp = b.guild.parent_id ? 1 : 0;
+                    return ap - bp;
+                });
+                const parentLevelById = new Map();
+                const validPicks = [];
+                const droppedSubs = [];
+                for (const r of resolved) {
+                    const g = r.guild;
+                    if (g.parent_id) {
+                        const parentLvl = parentLevelById.get(g.parent_id);
+                        const parent = this.guilds.find((x) => x.id === g.parent_id);
+                        if (!parent || parentLvl == null || parentLvl < (parent.max_level | 0)) {
+                            droppedSubs.push(g.name);
+                            continue;
+                        }
+                    } else {
+                        parentLevelById.set(g.id, r.level);
+                    }
+                    validPicks.push({ guildId: g.id, level: r.level });
+                }
+                if (droppedSubs.length) {
+                    this.$root.flashMsg(
+                        `Dropped invalid subguild pick${droppedSubs.length > 1 ? 's' : ''}: `
+                        + `${droppedSubs.join(', ')} (parent not at max level)`,
+                        'danger');
+                }
+                // Load each guild's per-level data before assigning
+                // `guildPicks` so the deep-watch doesn't fire mid-apply.
+                for (const p of validPicks) {
+                    if (!this.guildData[p.guildId]) {
+                        try { await this.loadGuildData(p.guildId); }
+                        catch (e) { /* ignore missing guild data */ }
+                    }
+                }
+                this.guildPicks = validPicks;
+                // Stat training — six keys, silently ignore any junk.
+                if (state.stat_train && typeof state.stat_train === 'object') {
+                    const st = { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 };
+                    for (const k of Object.keys(st)) st[k] = state.stat_train[k] | 0;
+                    this.statTrain = st;
+                }
+                // Wishes / boons — drop ids that don't exist in the
+                // current catalog (categories can change across seeds).
+                const validWishIds = new Set(this.wishesCatalog.map((w) => w.id));
+                const validBoonIds = new Set(this.boonsCatalog.map((b) => b.id));
+                this.selectedWishes = new Set((state.wishes || [])
+                    .map((v) => v | 0).filter((id) => validWishIds.has(id)));
+                this.selectedBoons = new Set((state.boons || [])
+                    .map((v) => v | 0).filter((id) => validBoonIds.has(id)));
+                // Skills/spells: only restore rows whose underlying
+                // game_skills / game_spells id is still present.
+                const validSkillIds = new Set(this.skills.map((s) => s.id));
+                const validSpellIds = new Set(this.spells.map((s) => s.id));
+                const sl = {};
+                for (const [k, v] of Object.entries(state.skill_learned || {})) {
+                    const id = +k;
+                    if (validSkillIds.has(id)) sl[id] = v | 0;
+                }
+                const spl = {};
+                for (const [k, v] of Object.entries(state.spell_learned || {})) {
+                    const id = +k;
+                    if (validSpellIds.has(id)) spl[id] = v | 0;
+                }
+                this.skillLearned = sl;
+                this.spellLearned = spl;
+                this.extraFree = state.extra_free | 0;
+                this.quest = state.quest | 0;
+                if (typeof state.tp === 'number') this.tp = state.tp | 0;
+            } catch (e) {
+                console.error('applyBuildState failed', e);
+                this.$root.flashMsg('Some parts of that build could not be loaded', 'danger');
+            }
+        },
+        async loadBuildFromQuery() {
+            const buildId = parseInt(this.$route.query.build, 10);
+            if (!buildId) return;
+            try {
+                const r = await axios.get('/api/builds/' + buildId);
+                const row = r.data && r.data.data;
+                if (!row) return;
+                if (row.state) await this.applyBuildState(row.state);
+                this.$root.flashMsg(`Loaded "${row.title}" by ${row.author}`);
+            } catch (e) {
+                this.$root.flashError(e);
+            }
+        },
+        openSaveBuildModal() { this.showSaveBuildModal = true; },
+        closeSaveBuildModal() { this.showSaveBuildModal = false; },
+        onBuildSaved(id) {
+            this.showSaveBuildModal = false;
+            // Send the user to the /builds page so they can see the new
+            // row. The flashMsg from the modal already confirmed the
+            // save, so this is a hard navigation rather than a toast.
+            if (id) this.$router.push({ name: 'builds' });
+        },
+
         async load() {
             const r = await axios.get('/api/game/reinc-bootstrap');
             const d = r.data.data;
@@ -531,29 +723,46 @@ export default {
             this.selectedBoons = new Set(this.boonsCatalog.map((b) => b.id));
         },
         clearAllBoons() { this.selectedBoons = new Set(); },
-        // Gimdori Mode — max every skill and spell the currently-picked
-        // guilds unlock. The user's guild selection is intentionally left
-        // alone: this button is for the common "I already picked my
-        // guilds, now train everything to the cap" case. Wishes, boons,
-        // free levels, and quest points are also left alone — use the
-        // Extras-tab All/None buttons if you want to fill those.
-        async gimdoriMode() {
-            if (!this.resolvedPicks.length) {
-                this.$root.flashMsg('Pick at least one guild first', 'danger');
-                return;
+        // Gimdori Mode — persistent toggle. While the toggle is ON,
+        // every change to the guild picks, wishes, or boons triggers a
+        // re-max: all unlocked skills and spells get capped at their
+        // current scaled-max, and every wish and boon in the catalog
+        // gets selected. Flipping the toggle OFF leaves the current
+        // selections in place (it's a one-way saturation, not a
+        // clear-on-exit). The guard `gimdoriReapplying` prevents the
+        // mutation-triggered watchers from re-entering while a
+        // re-application is in flight.
+        async toggleGimdori() {
+            this.gimdoriOn = !this.gimdoriOn;
+            if (this.gimdoriOn) {
+                await this.applyGimdori();
+                this.$root.flashMsg('Gimdori Mode ON — skills, spells, wishes and boons maxed');
+            } else {
+                this.$root.flashMsg('Gimdori Mode OFF — your picks stay as they are');
             }
-            // Make sure every picked guild has its skill/spell data loaded
-            // — otherwise skillRows/spellRows would silently skip them.
-            for (const p of this.resolvedPicks) {
-                if (!this.guildData[p.guild.id]) {
-                    try { await this.loadGuildData(p.guild.id); }
-                    catch (e) { /* ignore — the row will just be absent */ }
+        },
+        async applyGimdori() {
+            if (this.gimdoriReapplying) return;
+            this.gimdoriReapplying = true;
+            try {
+                // Ensure per-guild bonus/skill/spell data for every
+                // picked guild is in memory before we read skillRows /
+                // spellRows — otherwise the auto-max would silently
+                // skip any guild whose data is still fetching.
+                for (const p of this.resolvedPicks) {
+                    if (!this.guildData[p.guild.id]) {
+                        try { await this.loadGuildData(p.guild.id); }
+                        catch (e) { /* guild row will be absent */ }
+                    }
                 }
+                await this.$nextTick();
+                this.maxAllSkills();
+                this.maxAllSpells();
+                this.selectAllWishes();
+                this.selectAllBoons();
+            } finally {
+                this.gimdoriReapplying = false;
             }
-            await this.$nextTick();
-            this.maxAllSkills();
-            this.maxAllSpells();
-            this.$root.flashMsg('Gimdori Mode — skills and spells maxed');
         },
         setMaxSkill() {
             if (!this.activeSkill) return;
@@ -604,6 +813,11 @@ export default {
     async mounted() {
         try { await this.load(); }
         catch (e) { this.$root.flashError(e); }
+        // `?build=<id>` on the planner URL rehydrates a saved reinc
+        // from /api/builds. Runs AFTER the catalog load so every
+        // reference in the build state can be resolved against the
+        // current race/guild/skill/spell/wish/boon catalogs.
+        await this.loadBuildFromQuery();
         // Expose a snapshot of the planner state to the bug reporter.
         this.$root.registerBugStateProvider(() => ({
             tab: this.tab,
@@ -649,7 +863,22 @@ export default {
                 // bump it here — `freeLevels` automatically clamps itself
                 // to `MAX_LEVEL - guildLevelsSum` at render time.
                 for (const p of picks) if (!this.guildData[p.guildId]) await this.loadGuildData(p.guildId);
+                // Re-max skills/spells after a guild change while
+                // Gimdori Mode is on. The applyGimdori call also
+                // re-selects wishes and boons, which is a no-op if
+                // they're already fully selected.
+                if (this.gimdoriOn) await this.applyGimdori();
             },
+        },
+        // When the wishes or boons catalogs grow (they're loaded once
+        // in `load()` but could in theory refresh), or whenever the
+        // toggle is flipped on by something other than the button,
+        // keep the selected sets in lockstep with the catalogs.
+        wishesCatalog() {
+            if (this.gimdoriOn) this.selectAllWishes();
+        },
+        boonsCatalog() {
+            if (this.gimdoriOn) this.selectAllBoons();
         },
     },
 };
@@ -674,6 +903,14 @@ export default {
             <div class="sb-cell"><span class="sb-label">Level</span><span class="sb-value" :title="`${guildLevelsSum} guild + ${freeLevels} free`">{{ guildLevelsSum }}+{{ freeLevels }}/{{ MAX_LEVEL }}</span></div>
             <div class="sb-cell"><span class="sb-label">Total XP</span><span class="sb-value" :title="nfmt(totalExp)">{{ sfmt(totalExp) }}</span></div>
             <div class="sb-cell"><span class="sb-label">Gold</span><span class="sb-value" :title="nfmt(goldRequired)">{{ sfmt(goldRequired) }}</span></div>
+            <div class="sb-cell sb-share">
+                <button type="button" class="btn btn-sm btn-outline-light sb-share-btn"
+                        @click="openSaveBuildModal"
+                        :disabled="!character"
+                        :title="character ? 'Save this build to the public /builds page' : 'Pick a race first'">
+                    💾 Share Build
+                </button>
+            </div>
         </div>
         <!-- Bug #16 — experience breakdown + QP readouts now live in the
              header so they're visible on every tab, not just General.
@@ -731,6 +968,8 @@ export default {
     <TabExtras v-else-if="tab==='extras'" />
     <TabExport v-else-if="tab==='export'" />
 
+
+<SaveBuildModal :show="showSaveBuildModal" @close="closeSaveBuildModal" @saved="onBuildSaved" />
 
 <!-- Per-guild "what does this teach" modal — bug #13. -->
 <div v-if="infoGuild" class="reinc-modal-backdrop" @click.self="closeGuildInfo">
@@ -823,6 +1062,8 @@ export default {
 .sb-chip.sub { background: #4b3a5a; }
 .sb-chip.wish { background: #1e40af; }
 .sb-resist { gap: 0.35rem; }
+.sb-share { margin-left: auto; align-self: center; }
+.sb-share-btn { white-space: nowrap; font-size: 0.75rem; padding: 0.2rem 0.55rem; }
 
 .reinc-tabs { flex: 0 0 auto; margin-bottom: 0; }
 .tab-body {

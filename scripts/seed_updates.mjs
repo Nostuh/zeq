@@ -116,6 +116,23 @@ const SEED = [
         title: 'Export tab: per-guild train blocks and a new Select Wishes copy box',
         body: 'Train and study commands are now split into one block per guild, each with its own Copy button — the button copies only the command line (not the guild name above it), so you can paste while standing in that guildhall without a paste error on the header. A new "Select Wishes" block emits `select <wish>` commands for every wish you picked, joined by semicolons for a single-line paste.',
     },
+
+    // 2026-04-11 night — Shared Builds + Gimdori toggle
+    {
+        created: '2026-04-11 22:00:00', kind: 'feature',
+        title: 'Shared Reinc Builds page (/builds)',
+        body: 'A new public page at /builds shows reincs other planner users have saved, each with a short summary, per-stat totals, and up/down votes. Hit the 💾 Share Build button in the planner\'s summary bar to save your current reinc with a title, your name, and an optional description. Click "Open in planner" on any build to rehydrate the exact state and inspect or tweak it. Builds can\'t be edited after saving — make changes and save again for a new version.',
+    },
+    {
+        created: '2026-04-11 22:05:00', kind: 'tweak',
+        title: 'Gimdori Mode is now a persistent toggle',
+        body: 'Gimdori Mode used to be a one-shot "max everything right now" button. It now toggles ON or OFF: while ON, every guild change automatically re-maxes skills and spells and re-selects every wish and boon. Flip it off when you\'re done and the current selections freeze in place. Easier to experiment with guild combos without clicking the button ten times.',
+    },
+    {
+        created: '2026-04-11 22:10:00', kind: 'fix',
+        title: 'Export tab: later train/study blocks no longer clipped',
+        body: 'The Train/Study Commands column on the Export tab was silently hiding blocks past the first two when a build had lots of guilds (Abjurer + both subguilds + a second parent, for instance). The list of per-guild blocks now lives in its own scroll region so every guild is reachable without the later ones falling off the bottom of the viewport.',
+    },
 ];
 
 async function main() {

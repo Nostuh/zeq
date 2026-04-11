@@ -104,6 +104,24 @@ Admin-editable catalogs the reinc planner consumes. Same shape for both:
 | GET | `/api/game/reinc-bootstrap`  | `{races, guilds, skills, spells, wishes, boons, level_costs, ss_costs}` — one call, returns enabled races only |
 | GET | `/api/game/reinc-guild/:id`  | `{id, bonuses, skills, spells}` — lazy-loaded on first guild pick |
 
+## Saved reincs (`/api/builds`)
+
+Public share-a-reinc API backing the `/builds` page. All endpoints
+are public; abuse mitigation on votes is a single row per
+`(reinc_id, sha1(ip+salt))`. See [saved-reincs.md](saved-reincs.md)
+for the data model + drift-handling rules.
+
+| Method | Path | Purpose |
+|---|---|---|
+| GET    | `/api/builds?sort=top\|new&q=...` | list rows; `data = {rows, myVotes}` where `myVotes` is `{id: 1|-1}` for the caller's IP |
+| GET    | `/api/builds/:id`                 | full row including `state` JSON and `myVote` |
+| POST   | `/api/builds`                     | create `{title, author, description?, state, race_name, guild_summary, total_levels, total_exp, gold, hp, sp}`; `state` is the planner snapshot, metadata is trusted for display only |
+| POST   | `/api/builds/:id/vote`            | `{value: 1 \| -1 \| 0}` — 0 clears the caller's existing vote; response is `{id, upvotes, downvotes, myVote}` |
+
+There is no edit / delete endpoint. To "update" a build, the user
+reopens it in the planner (`/#/reinc?build=<id>`), makes changes,
+and saves again as a new row.
+
 ## Bug reports & ideas (`/api/bugs`)
 
 Submissions are public; admin endpoints require `admin`.

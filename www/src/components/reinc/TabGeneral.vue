@@ -121,9 +121,14 @@ export default {
         </div>
         <div class="d-flex gap-2 mt-2">
             <button class="btn btn-danger btn-sm" @click="reinc.reset">RESET</button>
-            <button class="btn btn-warning btn-sm fw-bold" @click="reinc.gimdoriMode"
-                    title="Max every skill and spell taught by the guilds you've already picked. Leaves guild selection, wishes, boons, and quest points alone.">
-                💪 GIMDORI MODE
+            <button type="button"
+                    class="btn btn-sm fw-bold"
+                    :class="reinc.gimdoriOn ? 'btn-warning' : 'btn-outline-warning'"
+                    @click="reinc.toggleGimdori"
+                    :title="reinc.gimdoriOn
+                        ? 'Gimdori Mode is ON — every guild change auto-maxes skills, spells, wishes and boons. Click to turn off.'
+                        : 'Turn on Gimdori Mode — every subsequent guild change will auto-max skills, spells, wishes and boons.'">
+                💪 GIMDORI MODE: {{ reinc.gimdoriOn ? 'ON' : 'OFF' }}
             </button>
         </div>
     </div>

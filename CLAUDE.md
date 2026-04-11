@@ -25,8 +25,7 @@ See [docs/schema.md](docs/schema.md).
 
 ## Conventions
 
-- SQL: `@name` placeholders via [api/classes/mysql.mjs](api/classes/mysql.mjs);
-  never hand-interpolate user input.
+- SQL: `@name` placeholders via [api/classes/mysql.mjs](api/classes/mysql.mjs); never hand-interpolate user input.
 - New endpoints: one file in `api/rest/api/*.mjs`, `export const <name>`
   matching the filename; auto-mounted at `/api/<filename>`.
 - Auth: session cookie + roles `admin`/`editor`/`viewer`; see [docs/auth.md](docs/auth.md).
@@ -39,6 +38,7 @@ See [docs/schema.md](docs/schema.md).
   `/tmp/Zcreator-Enhanced/decompiled_source/CharCreator/`. Page locked to
   `100vh` — never add page-level scroll. See [docs/reinc.md](docs/reinc.md), [docs/seo.md](docs/seo.md).
 - Updates feed: every user-visible fix/feature → `site_updates` row (set `bug_id` when from a report). No refactors. See [docs/updates.md](docs/updates.md).
+- Saved reincs (`/builds`): state JSON stores `game_*` IDs, so game-data migrations can rot old builds — read drift rules in [docs/saved-reincs.md](docs/saved-reincs.md) before renaming/deleting game rows.
 
 ## Running
 
