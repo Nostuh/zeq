@@ -1309,7 +1309,12 @@ export default {
    wishes, and boons can all be seen without tab-hopping. */
 .extras-grid {
     display: grid;
-    grid-template-columns: minmax(16rem, 1fr) minmax(16rem, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    /* min-height:0 on .ex-section lets the grid shrink implicit rows
+       below their content size; pin them to max-content so each section
+       always reserves its full height and the grid container scrolls
+       instead of stacking sections on top of each other. */
+    grid-auto-rows: max-content;
     gap: 0.75rem;
     flex: 1 1 auto;
     min-height: 0;
@@ -1383,9 +1388,6 @@ export default {
 .wish-item { display: flex; align-items: center; margin-bottom: 0.15rem; cursor: pointer; }
 
 /* Mobile / narrow */
-@media (max-width: 1100px) {
-    .extras-grid { grid-template-columns: 1fr 1fr; }
-}
 @media (max-width: 800px) {
     .general-grid, .skills-grid, .extras-grid, .export-grid { grid-template-columns: 1fr; }
     .wish-cols, .boon-cols { grid-template-columns: 1fr; }

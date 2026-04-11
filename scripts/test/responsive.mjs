@@ -39,6 +39,7 @@ const VIEWPORTS = [
     { label: 'mobile',       width: 360,  height: 780  }, // iPhone-ish
     { label: 'mobile-wide',  width: 414,  height: 900  }, // larger phone
     { label: 'tablet',       width: 800,  height: 1100 }, // portrait tablet
+    { label: 'small-laptop', width: 1032, height: 703  }, // bug #23 — wishes/boons overlapped at this size
     { label: 'laptop',       width: 1280, height: 800  },
     { label: 'desktop',      width: 1600, height: 900  },
     { label: 'desktop-wide', width: 1920, height: 1080 },
@@ -71,6 +72,10 @@ const CASES = [
         // Reinc page is explicitly locked to the viewport; body should not
         // scroll at all.
         expectNoPageScroll: true,
+        // After the initial checks, walk every tab and run the same overflow
+        // checks plus a sibling-overlap check on the tab body. Bug #23
+        // shipped because the harness only ever inspected the General tab.
+        tabs: ['General', 'Skills', 'Spells', 'Extras', 'Export'],
     },
     {
         route: '/#/login',
@@ -189,6 +194,64 @@ async function runCase(browser, vp, tc) {
         }
 
         await page.screenshot({ path: path.join(OUT, label + '.png'), fullPage: false });
+
+        // 4) Walk each tab. For each one: re-check horizontal overflow at the
+        //    body level, and check that the tab-body's direct grid children
+        //    don't visually overlap each other (bug #23 — Wishes section
+        //    overflowed its grid row and rendered on top of Boons).
+        for (const tabName of (tc.tabs || [])) {
+            const clicked = await page.evaluate((name) => {
+                const tabs = [...document.querySelectorAll('.nav-tabs .nav-link')];
+                const t = tabs.find((a) => a.textContent.trim() === name);
+                if (!t) return false;
+                t.click();
+                return true;
+            }, tabName);
+            if (!clicked) { errors.push(`tab not found: ${tabName}`); continue; }
+            await new Promise((r) => setTimeout(r, 200));
+
+            const tabDims = await page.evaluate(() => ({
+                scrollW: document.documentElement.scrollWidth,
+                clientW: document.documentElement.clientWidth,
+                bodyScrollH: document.body.scrollHeight,
+                clientH: document.documentElement.clientHeight,
+            }));
+            if (tabDims.scrollW > tabDims.clientW + 1) {
+                errors.push(`[${tabName}] horizontal overflow: scrollWidth=${tabDims.scrollW} > clientWidth=${tabDims.clientW}`);
+            }
+            if (tc.expectNoPageScroll && tabDims.bodyScrollH > tabDims.clientH + 1) {
+                errors.push(`[${tabName}] page vertically scrollable: bodyScrollHeight=${tabDims.bodyScrollH} > clientHeight=${tabDims.clientH}`);
+            }
+
+            // Sibling-overlap check on every grid container inside .tab-body.
+            // If any two children's bounding rects intersect by more than 4px
+            // in both axes, that's an overlap bug.
+            const overlaps = await page.evaluate(() => {
+                const out = [];
+                const grids = document.querySelectorAll('.tab-body .extras-grid, .tab-body .general-grid, .tab-body .skills-grid, .tab-body .export-grid');
+                for (const g of grids) {
+                    const kids = [...g.children].filter((c) => {
+                        const cs = getComputedStyle(c);
+                        return cs.display !== 'none' && cs.visibility !== 'hidden';
+                    });
+                    const rects = kids.map((c) => c.getBoundingClientRect());
+                    for (let i = 0; i < rects.length; i++) {
+                        for (let j = i + 1; j < rects.length; j++) {
+                            const a = rects[i], b = rects[j];
+                            const xOv = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+                            const yOv = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+                            if (xOv > 4 && yOv > 4) {
+                                out.push(`${g.className} children ${i}/${j} overlap by ${xOv.toFixed(0)}x${yOv.toFixed(0)}`);
+                            }
+                        }
+                    }
+                }
+                return out;
+            });
+            for (const ov of overlaps) errors.push(`[${tabName}] ${ov}`);
+
+            await page.screenshot({ path: path.join(OUT, label + '_tab-' + tabName.toLowerCase() + '.png'), fullPage: false });
+        }
     } catch (e) {
         errors.push('exception: ' + (e.message || String(e)));
     }
