@@ -371,17 +371,15 @@ export default {
 }
 </script>
 
-<style>
-th {
-position: sticky;
+<style scoped>
+:deep(th) {
+    position: sticky;
     z-index: 999999;
     top: 65px;
-    border: 0 !important; 
+    border: 0 !important;
     outline: 1px solid;
     outline-offset: -2px;
 }
-
-
 </style>
 
 <template>
