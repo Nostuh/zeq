@@ -122,10 +122,22 @@ makeSimple('spells', 'game_spells');
 // ---------------- GUILDS ----------------
 router.get('/guilds', requireAuth, async function(req, res) {
     const rows = await zeq.query(
-        `SELECT g.id, g.name, g.file_name, g.parent_id, g.max_level, p.name AS parent_name
+        `SELECT g.id, g.name, g.file_name, g.parent_id, g.max_level, g.enabled, p.name AS parent_name
          FROM game_guilds g LEFT JOIN game_guilds p ON p.id = g.parent_id
          ORDER BY COALESCE(p.name, g.name), g.parent_id IS NULL DESC, g.name`);
     ok(res, rows);
+});
+
+// Toggle a guild's open/closed state. Mirrors the in-game
+// `help guilds` (open)/(closed) marker — set enabled=0 when a guild
+// is closed for reincs, and the public planner will stop offering it.
+router.post('/guilds/:id/enabled', requireEditor, async function(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const enabled = req.body && req.body.enabled ? 1 : 0;
+    try {
+        await zeq.query(`UPDATE game_guilds SET enabled = @enabled WHERE id = @id`, { id, enabled });
+        ok(res, { id, enabled });
+    } catch (e) { fail(res, e.sqlMessage || String(e)); }
 });
 
 router.get('/guilds/:id', requireAuth, async function(req, res) {
@@ -371,30 +383,33 @@ router.delete('/wishes/:id', requireEditor, async function(req, res) {
 // ---------------- BOONS ----------------
 router.get('/boons', requireAuth, async function(req, res) {
     ok(res, await zeq.query(
-        `SELECT id, name, category, pp_cost, effect_key, effect_value, sort_order
+        `SELECT id, name, category, pp_cost, effect_key, effect_value, sort_order, description
          FROM game_boons ORDER BY category, sort_order, name`));
 });
 router.post('/boons', requireEditor, async function(req, res) {
-    const { name, category, pp_cost, effect_key, effect_value, sort_order = 0 } = req.body || {};
+    const { name, category, pp_cost, effect_key, effect_value, sort_order = 0, description = null } = req.body || {};
     if (!name || !category) return fail(res, 'name and category required');
     try {
         const r = await zeq.query(
-            `INSERT INTO game_boons (name, category, pp_cost, effect_key, effect_value, sort_order)
-             VALUES (@name, @category, @pp_cost, @effect_key, @effect_value, @sort_order)`,
+            `INSERT INTO game_boons (name, category, pp_cost, effect_key, effect_value, sort_order, description)
+             VALUES (@name, @category, @pp_cost, @effect_key, @effect_value, @sort_order, @description)`,
             { name, category, pp_cost: parseInt(pp_cost, 10) || 0, effect_key: effect_key || null,
-              effect_value: parseInt(effect_value, 10) || 0, sort_order: parseInt(sort_order, 10) || 0 });
+              effect_value: parseInt(effect_value, 10) || 0, sort_order: parseInt(sort_order, 10) || 0,
+              description: description || null });
         ok(res, { id: r.insertId });
     } catch (e) { fail(res, e.sqlMessage || String(e)); }
 });
 router.post('/boons/:id', requireEditor, async function(req, res) {
     const id = parseInt(req.params.id, 10);
-    const { name, category, pp_cost, effect_key, effect_value, sort_order } = req.body || {};
+    const { name, category, pp_cost, effect_key, effect_value, sort_order, description = null } = req.body || {};
     try {
         await zeq.query(
             `UPDATE game_boons SET name=@name, category=@category, pp_cost=@pp_cost,
-             effect_key=@effect_key, effect_value=@effect_value, sort_order=@sort_order WHERE id=@id`,
+             effect_key=@effect_key, effect_value=@effect_value, sort_order=@sort_order,
+             description=@description WHERE id=@id`,
             { id, name, category, pp_cost: parseInt(pp_cost, 10) || 0, effect_key: effect_key || null,
-              effect_value: parseInt(effect_value, 10) || 0, sort_order: parseInt(sort_order, 10) || 0 });
+              effect_value: parseInt(effect_value, 10) || 0, sort_order: parseInt(sort_order, 10) || 0,
+              description: description || null });
         ok(res, { id });
     } catch (e) { fail(res, e.sqlMessage || String(e)); }
 });
@@ -412,9 +427,15 @@ router.get('/reinc-bootstrap', async function(req, res) {
              LEFT JOIN game_races p ON p.id = r.parent_id
              WHERE r.enabled = 1
              ORDER BY COALESCE(p.name, r.name), r.parent_id IS NULL DESC, r.name`);
+        // Only send enabled guilds to the public planner. Admins can
+        // flip `enabled` via POST /api/game/guilds/:id/enabled to
+        // mirror the game's `help guilds` (open|closed) state — e.g.
+        // when Warlock closes for a reinc cycle the admin toggles it
+        // off and the planner stops offering it.
         const guilds = await zeq.query(
             `SELECT g.id, g.name, g.file_name, g.parent_id, g.max_level, p.name AS parent_name
              FROM game_guilds g LEFT JOIN game_guilds p ON p.id = g.parent_id
+             WHERE g.enabled = 1 AND (p.id IS NULL OR p.enabled = 1)
              ORDER BY COALESCE(p.name, g.name), g.parent_id IS NULL DESC, g.name`);
         const skills = await zeq.query(`SELECT id, name, start_cost FROM game_skills ORDER BY name`);
         const spells = await zeq.query(`SELECT id, name, start_cost FROM game_spells ORDER BY name`);
@@ -422,7 +443,7 @@ router.get('/reinc-bootstrap', async function(req, res) {
             `SELECT id, name, category, tp_cost, effect_key, effect_value, sort_order
              FROM game_wishes ORDER BY category, sort_order, name`);
         const boons = await zeq.query(
-            `SELECT id, name, category, pp_cost, effect_key, effect_value, sort_order
+            `SELECT id, name, category, pp_cost, effect_key, effect_value, sort_order, description
              FROM game_boons ORDER BY category, sort_order, name`);
         const level_costs = await zeq.query(
             `SELECT kind, level, cost FROM game_level_costs ORDER BY kind, level`);

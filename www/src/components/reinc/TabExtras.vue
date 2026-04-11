@@ -80,46 +80,87 @@ export default {
                 </div>
             </div>
             <div class="boon-cols">
+                <!-- Five categories match the live game's `list <cat>`
+                     output exactly: racial / power / minor / lesser /
+                     greater. Each boon row has an info button that
+                     opens a modal showing the game's `info <cat> N`
+                     description text, seeded into game_boons.description.
+                     Racial boons are locked unless the selected race
+                     matches their "Boon of <Race>" suffix. -->
                 <div class="boon-col">
-                    <div class="cat-head">Racial (50 PP)</div>
-                    <label v-for="b in reinc.groupedBoons.racial" :key="b.id" class="wish-item">
-                        <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedBoons.has(b.id)" @change="reinc.toggleBoon(b.id)">
-                        {{ b.name }}
-                    </label>
-                    <div class="cat-head mt-2">Preference (50 PP)</div>
-                    <label v-for="b in reinc.groupedBoons.preference" :key="b.id" class="wish-item">
-                        <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedBoons.has(b.id)" @change="reinc.toggleBoon(b.id)">
-                        {{ b.name }}
-                    </label>
-                    <div class="cat-head mt-2">Knowledge (100 PP)</div>
-                    <label v-for="b in reinc.groupedBoons.knowledge" :key="b.id" class="wish-item">
-                        <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedBoons.has(b.id)" @change="reinc.toggleBoon(b.id)">
-                        {{ b.name }}
-                    </label>
+                    <div class="cat-head">Racial</div>
+                    <div v-for="b in reinc.groupedBoons.racial" :key="b.id"
+                         class="boon-item"
+                         :class="{ locked: reinc.isBoonLocked(b) }"
+                         :title="reinc.isBoonLocked(b) ? 'Only selectable when your race is ' + b.name.replace(/^Boon of /, '') : ''">
+                        <label class="wish-item flex-grow-1 mb-0">
+                            <input type="checkbox" class="form-check-input me-1"
+                                   :checked="reinc.selectedBoons.has(b.id)"
+                                   :disabled="reinc.isBoonLocked(b)"
+                                   @change="reinc.toggleBoon(b.id)">
+                            {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
+                        </label>
+                        <button type="button" class="info-btn" @click.stop.prevent="reinc.openBoonInfo(b)"
+                                :title="`What does ${b.name} do?`" aria-label="Show boon info">
+                            <i class="bi bi-info-circle"></i>
+                        </button>
+                    </div>
+                    <div class="cat-head mt-2">Power</div>
+                    <div v-for="b in reinc.groupedBoons.power" :key="b.id" class="boon-item">
+                        <label class="wish-item flex-grow-1 mb-0">
+                            <input type="checkbox" class="form-check-input me-1"
+                                   :checked="reinc.selectedBoons.has(b.id)"
+                                   @change="reinc.toggleBoon(b.id)">
+                            {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
+                        </label>
+                        <button type="button" class="info-btn" @click.stop.prevent="reinc.openBoonInfo(b)"
+                                :title="`What does ${b.name} do?`" aria-label="Show boon info">
+                            <i class="bi bi-info-circle"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="boon-col">
-                    <div class="cat-head">Minor (100 PP)</div>
-                    <label v-for="b in reinc.groupedBoons.minor" :key="b.id" class="wish-item">
-                        <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedBoons.has(b.id)" @change="reinc.toggleBoon(b.id)">
-                        {{ b.name }}
-                    </label>
-                    <div class="cat-head mt-2">Weapon (75 PP)</div>
-                    <label v-for="b in reinc.groupedBoons.weapon" :key="b.id" class="wish-item">
-                        <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedBoons.has(b.id)" @change="reinc.toggleBoon(b.id)">
-                        {{ b.name }}
-                    </label>
+                    <div class="cat-head">Minor</div>
+                    <div v-for="b in reinc.groupedBoons.minor" :key="b.id" class="boon-item">
+                        <label class="wish-item flex-grow-1 mb-0">
+                            <input type="checkbox" class="form-check-input me-1"
+                                   :checked="reinc.selectedBoons.has(b.id)"
+                                   @change="reinc.toggleBoon(b.id)">
+                            {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
+                        </label>
+                        <button type="button" class="info-btn" @click.stop.prevent="reinc.openBoonInfo(b)"
+                                :title="`What does ${b.name} do?`" aria-label="Show boon info">
+                            <i class="bi bi-info-circle"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="boon-col">
                     <div class="cat-head">Lesser</div>
-                    <label v-for="b in reinc.groupedBoons.lesser" :key="b.id" class="wish-item">
-                        <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedBoons.has(b.id)" @change="reinc.toggleBoon(b.id)">
-                        {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
-                    </label>
+                    <div v-for="b in reinc.groupedBoons.lesser" :key="b.id" class="boon-item">
+                        <label class="wish-item flex-grow-1 mb-0">
+                            <input type="checkbox" class="form-check-input me-1"
+                                   :checked="reinc.selectedBoons.has(b.id)"
+                                   @change="reinc.toggleBoon(b.id)">
+                            {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
+                        </label>
+                        <button type="button" class="info-btn" @click.stop.prevent="reinc.openBoonInfo(b)"
+                                :title="`What does ${b.name} do?`" aria-label="Show boon info">
+                            <i class="bi bi-info-circle"></i>
+                        </button>
+                    </div>
                     <div class="cat-head mt-2">Greater</div>
-                    <label v-for="b in reinc.groupedBoons.greater" :key="b.id" class="wish-item">
-                        <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedBoons.has(b.id)" @change="reinc.toggleBoon(b.id)">
-                        {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
-                    </label>
+                    <div v-for="b in reinc.groupedBoons.greater" :key="b.id" class="boon-item">
+                        <label class="wish-item flex-grow-1 mb-0">
+                            <input type="checkbox" class="form-check-input me-1"
+                                   :checked="reinc.selectedBoons.has(b.id)"
+                                   @change="reinc.toggleBoon(b.id)">
+                            {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
+                        </label>
+                        <button type="button" class="info-btn" @click.stop.prevent="reinc.openBoonInfo(b)"
+                                :title="`What does ${b.name} do?`" aria-label="Show boon info">
+                            <i class="bi bi-info-circle"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

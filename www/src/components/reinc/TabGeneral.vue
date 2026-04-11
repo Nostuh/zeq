@@ -47,11 +47,13 @@ export default {
                 <input v-if="reinc.isPicked(g)" type="number" class="form-control form-control-sm level-input"
                        :value="reinc.pickLevel(g)" @input="reinc.setPickLevel(g, $event.target.value)" :max="g.max_level" min="1">
                 <span v-if="reinc.isPicked(g)" class="small text-muted ms-1">/ {{ g.max_level }}</span>
-                <button type="button" class="btn btn-link btn-sm guild-info-btn"
+                <button type="button" class="info-btn"
                         :disabled="reinc.isLocked(g)"
                         @click.stop.prevent="reinc.openGuildInfo(g)"
                         :title="`Show skills and spells taught by ${g.name}`"
-                        aria-label="Show skills and spells">ⓘ</button>
+                        aria-label="Show skills and spells">
+                    <i class="bi bi-info-circle"></i>
+                </button>
             </div>
         </div>
     </div>

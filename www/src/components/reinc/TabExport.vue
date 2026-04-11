@@ -160,6 +160,19 @@ export default {
             if (!picked.length) return '';
             return picked.map((w) => `select ${w.name.toLowerCase()}`).join(';');
         },
+        // `select <boon>` commands for every boon currently picked.
+        // Same shape as the wish trainer — one line per boon so the
+        // player can paste the whole block at the boon trader. Racial
+        // boons that don't match the selected race are filtered out
+        // defensively; they should already be unselected by the race
+        // watcher in Reinc.vue, but belt-and-braces keeps the export
+        // honest if state ever drifts.
+        boonSelectText() {
+            const r = this.reinc;
+            const picked = r.boonsCatalog.filter((b) => r.selectedBoons.has(b.id) && !r.isBoonLocked(b));
+            if (!picked.length) return '';
+            return picked.map((b) => `select ${b.name.toLowerCase()}`).join(';');
+        },
     },
     methods: {
         async copyText(key, text) {
@@ -225,6 +238,16 @@ export default {
                 </button>
             </div>
             <pre class="export-pre">{{ wishSelectText || '(no wishes selected)' }}</pre>
+        </section>
+
+        <section class="ex-section">
+            <div class="ex-head d-flex align-items-center justify-content-between">
+                <span>Select Boons</span>
+                <button class="btn btn-sm btn-outline-primary" @click="copyText('boons', boonSelectText)" :disabled="!boonSelectText">
+                    {{ copied === 'boons' ? 'Copied!' : 'Copy' }}
+                </button>
+            </div>
+            <pre class="export-pre">{{ boonSelectText || '(no boons selected)' }}</pre>
         </section>
     </div>
 </div>

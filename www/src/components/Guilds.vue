@@ -43,6 +43,17 @@ export default {
                 else this.$root.flashMsg(r.data.error, 'danger');
             } catch (e) { this.$root.flashError(e); }
         },
+        // Flip a guild's enabled flag to mirror the game's
+        // `help guilds` open/closed state. Disabled guilds disappear
+        // from the public planner's bootstrap payload.
+        async toggleEnabled(g) {
+            try {
+                const next = g.enabled ? 0 : 1;
+                const r = await axios.post(`/api/game/guilds/${g.id}/enabled`, { enabled: next });
+                if (r.data.ok) { g.enabled = next; }
+                else this.$root.flashMsg(r.data.error, 'danger');
+            } catch (e) { this.$root.flashError(e); }
+        },
     },
     mounted() { this.load(); },
 };
@@ -75,19 +86,33 @@ export default {
     </div></div>
 
     <table class="table table-sm table-striped table-hover">
-        <thead><tr><th>Name</th><th>File</th><th>Max level</th><th></th></tr></thead>
+        <thead><tr><th>Name</th><th>File</th><th>Max level</th><th>Status</th><th></th></tr></thead>
         <tbody>
             <template v-for="g in topLevel" :key="g.id">
-                <tr>
+                <tr :class="{ 'table-secondary': !g.enabled }">
                     <td><strong>{{ g.name }}</strong></td>
                     <td><code class="small">{{ g.file_name }}</code></td>
                     <td>{{ g.max_level }}</td>
+                    <td>
+                        <span v-if="g.enabled" class="badge bg-success">open</span>
+                        <span v-else class="badge bg-secondary">closed</span>
+                        <button v-if="canEdit" class="btn btn-sm btn-outline-secondary ms-2" @click="toggleEnabled(g)">
+                            {{ g.enabled ? 'Close' : 'Open' }}
+                        </button>
+                    </td>
                     <td><router-link class="btn btn-sm btn-outline-primary" :to="{name:'guild-detail',params:{id:g.id}}">Open</router-link></td>
                 </tr>
-                <tr v-for="sg in (subOf[g.id] || [])" :key="sg.id">
+                <tr v-for="sg in (subOf[g.id] || [])" :key="sg.id" :class="{ 'table-secondary': !sg.enabled }">
                     <td class="ps-4 text-muted">↳ {{ sg.name }}</td>
                     <td><code class="small">{{ sg.file_name }}</code></td>
                     <td>{{ sg.max_level }}</td>
+                    <td>
+                        <span v-if="sg.enabled" class="badge bg-success">open</span>
+                        <span v-else class="badge bg-secondary">closed</span>
+                        <button v-if="canEdit" class="btn btn-sm btn-outline-secondary ms-2" @click="toggleEnabled(sg)">
+                            {{ sg.enabled ? 'Close' : 'Open' }}
+                        </button>
+                    </td>
                     <td><router-link class="btn btn-sm btn-outline-secondary" :to="{name:'guild-detail',params:{id:sg.id}}">Open</router-link></td>
                 </tr>
             </template>

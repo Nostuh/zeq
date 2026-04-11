@@ -14,6 +14,22 @@ try {
     app.use(bodyParser.urlencoded({limit:'200mb',extended: false}));
     app.use(express.json({limit: '200mb'}));
 
+    // Request logging: one line per request to stdout so admins can
+    // watch traffic live with `pm2 logs` / `pm2 monit`. Fires on the
+    // response's `finish` event so we get the final status and full
+    // latency. Intentionally NOT persisted to the DB — the request
+    // stream is high-volume and we already have pm2 log rotation.
+    app.use(function requestLogger(req, res, next) {
+        const start = Date.now();
+        res.on('finish', function () {
+            const ip = (req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '').toString().split(',')[0].trim() || '-';
+            const path = req.originalUrl || req.url || '';
+            const ms = Date.now() - start;
+            console.log(`[req] ${req.method} ${path} ${res.statusCode} ${ms}ms ${ip}`);
+        });
+        next();
+    });
+
     // Dynamically get all endpoints
     console.log(process.cwd());
     let rest = globSync(process.cwd()+'/rest/*/*.mjs');

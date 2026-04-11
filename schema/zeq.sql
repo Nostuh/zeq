@@ -151,10 +151,15 @@ CREATE TABLE IF NOT EXISTS game_guilds (
     file_name     VARCHAR(128) NOT NULL,  -- underscored stem
     parent_id     INT NULL,               -- set for subguilds
     max_level     INT NOT NULL DEFAULT 0,
+    enabled       TINYINT(1) NOT NULL DEFAULT 1,  -- 0 = closed for reincs (game's help guilds)
     PRIMARY KEY (id),
     UNIQUE KEY uk_game_guilds_name (name),
     KEY ix_game_guilds_parent (parent_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Re-apply safety: add `enabled` if the table existed before this column.
+ALTER TABLE game_guilds
+    ADD COLUMN IF NOT EXISTS enabled TINYINT(1) NOT NULL DEFAULT 1;
 
 -- Per-level guild stat/attribute bonuses.
 CREATE TABLE IF NOT EXISTS game_guild_bonuses (

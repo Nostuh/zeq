@@ -70,6 +70,13 @@ export default {
             infoGuildLevel: 0,
             infoLoading: false,
 
+            // Per-boon "what does this do" modal. Same pattern as the
+            // guild info modal: `infoBoonId` null when closed, otherwise
+            // points at a row in boonsCatalog. Content text comes from
+            // the game's `info <category> N` output, seeded into
+            // game_boons.description.
+            infoBoonId: null,
+
             // "Share Build" modal — posts the current state to /api/builds
             // so it shows up on the /builds page for other visitors to
             // open and vote on.
@@ -357,9 +364,17 @@ export default {
             };
         },
         groupedBoons() {
-            const m = { racial: [], minor: [], preference: [], knowledge: [], weapon: [], lesser: [], greater: [] };
-            for (const b of this.boonsCatalog) (m[b.category] || (m.racial = m.racial || [])).push(b);
+            // Five categories match the live game's `list <cat>` output:
+            // racial, power, minor, lesser, greater. Anything with an
+            // unexpected category is tucked under `racial` so it stays
+            // visible until an admin fixes it.
+            const m = { racial: [], power: [], minor: [], lesser: [], greater: [] };
+            for (const b of this.boonsCatalog) (m[b.category] || m.racial).push(b);
             return m;
+        },
+        infoBoon() {
+            if (!this.infoBoonId) return null;
+            return this.boonsCatalog.find((b) => b.id === this.infoBoonId) || null;
         },
     },
     methods: {
@@ -647,6 +662,23 @@ export default {
             }
         },
         closeGuildInfo() { this.infoGuildId = null; },
+        openBoonInfo(b) { this.infoBoonId = b.id; },
+        closeBoonInfo() { this.infoBoonId = null; },
+        // Racial boons are only available to characters of that race.
+        // The live `list racial` output names each boon "Boon of <Race>"
+        // and the game rejects `select boon of dwarf` unless your race
+        // actually is Dwarf — subraces (e.g. Highland dwarf) count as a
+        // distinct race with their own boon. Match on the suffix of
+        // "Boon of " against the currently-selected race name,
+        // case-insensitively. Non-racial boons are never locked here.
+        isBoonLocked(b) {
+            if (!b || b.category !== 'racial') return false;
+            if (!this.race) return true;
+            const prefix = 'boon of ';
+            const name = (b.name || '').toLowerCase();
+            if (!name.startsWith(prefix)) return false;
+            return name.slice(prefix.length) !== this.race.name.toLowerCase();
+        },
         parentOf(g) {
             return g && g.parent_id ? this.guilds.find((x) => x.id === g.parent_id) : null;
         },
@@ -763,12 +795,20 @@ export default {
         },
         clearAllWishes() { this.selectedWishes = new Set(); },
         toggleBoon(id) {
+            const b = this.boonsCatalog.find((x) => x.id === id);
+            if (b && this.isBoonLocked(b)) return;
             const s = new Set(this.selectedBoons);
             s.has(id) ? s.delete(id) : s.add(id);
             this.selectedBoons = s;
         },
+        // Selects every boon the character is actually allowed to
+        // take. Racial boons for the wrong race are skipped — picking
+        // them would be invalid in-game (the `select` command would
+        // refuse), and leaving them selected would inflate PP Total.
         selectAllBoons() {
-            this.selectedBoons = new Set(this.boonsCatalog.map((b) => b.id));
+            this.selectedBoons = new Set(
+                this.boonsCatalog.filter((b) => !this.isBoonLocked(b)).map((b) => b.id),
+            );
         },
         clearAllBoons() { this.selectedBoons = new Set(); },
         // Gimdori Mode — persistent toggle. While the toggle is ON,
@@ -928,6 +968,19 @@ export default {
         boonsCatalog() {
             if (this.gimdoriOn) this.selectAllBoons();
         },
+        // Switching race: drop any racial boon that no longer matches
+        // the selected race, since racial boons are race-locked. Also
+        // re-apply Gimdori so the right racial boon auto-selects.
+        selectedRaceId() {
+            const s = new Set(this.selectedBoons);
+            let changed = false;
+            for (const id of Array.from(s)) {
+                const b = this.boonsCatalog.find((x) => x.id === id);
+                if (b && this.isBoonLocked(b)) { s.delete(id); changed = true; }
+            }
+            if (changed) this.selectedBoons = s;
+            if (this.gimdoriOn) this.selectAllBoons();
+        },
     },
 };
 </script>
@@ -1067,6 +1120,23 @@ export default {
         </div>
     </div>
 </div>
+
+<!-- Per-boon "what does this do" modal. Mirror of the guild info
+     modal above. Content comes from game_boons.description, which
+     is seeded from the live game's `info <category> N` output. -->
+<div v-if="infoBoon" class="reinc-modal-backdrop" @click.self="closeBoonInfo">
+    <div class="reinc-modal-panel">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="m-0">
+                {{ infoBoon.name }}
+                <span class="text-muted small ms-2">{{ infoBoon.category }} &middot; {{ infoBoon.pp_cost }} PP</span>
+            </h5>
+            <button type="button" class="btn-close" aria-label="Close" @click="closeBoonInfo"></button>
+        </div>
+        <pre v-if="infoBoon.description" class="boon-desc">{{ infoBoon.description }}</pre>
+        <div v-else class="text-muted small">No description recorded for this boon yet.</div>
+    </div>
+</div>
 </div>
 <div v-else class="p-3">Loading Zcreator data…</div>
 </template>
@@ -1196,12 +1266,38 @@ export default {
 .guild-row.sub { padding-left: 1rem; }
 .guild-row.picked { background: #e7f1ff; }
 .guild-row.locked { opacity: 0.55; }
-.guild-info-btn {
-    padding: 0 0.35rem; line-height: 1; text-decoration: none;
-    color: #6c757d; font-size: 1rem;
+/* Shared info button (used by the guild picker and by each boon row
+   on the Extras tab). Cleaner than the old "ⓘ" glyph — a real
+   bi-info-circle that highlights on hover and dims when disabled. */
+.info-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    margin-left: 0.25rem;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
 }
-.guild-info-btn:hover:not(:disabled) { color: #0d6efd; }
-.guild-info-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+.info-btn:hover:not(:disabled) {
+    color: #0d6efd;
+    background: rgba(13, 110, 253, 0.12);
+}
+.info-btn:focus-visible {
+    outline: 2px solid #0d6efd;
+    outline-offset: 1px;
+}
+.info-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
 
 /* Per-guild "what does this teach" modal — bug #13.
  * Uses its own classes (not .modal-backdrop) so it doesn't collide with
@@ -1386,6 +1482,23 @@ export default {
 .wish-col, .boon-col { font-family: monospace; }
 .cat-head { font-weight: 700; text-transform: uppercase; font-size: 0.7rem; color: #555; border-bottom: 1px solid #aaa; margin-bottom: 0.25rem; }
 .wish-item { display: flex; align-items: center; margin-bottom: 0.15rem; cursor: pointer; }
+/* Boon rows use a boon-item wrapper so the checkbox label and the
+   info button sit on one line. Locked racial boons dim to signal
+   they aren't selectable. */
+.boon-item { display: flex; align-items: center; margin-bottom: 0.15rem; }
+.boon-item.locked { opacity: 0.45; }
+.boon-item.locked .wish-item { cursor: not-allowed; }
+.boon-desc {
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 0.85rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 0.6rem 0.8rem;
+    margin: 0;
+    color: #212529;
+}
 
 /* Mobile / narrow */
 @media (max-width: 800px) {
