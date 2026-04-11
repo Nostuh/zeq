@@ -59,6 +59,7 @@ admin edit changes those underlying tables, old builds can rot:
 | Skill / spell deleted         | Learned percent is dropped for that entity. |
 | Wish / boon renamed or deleted| Selection is dropped. |
 | Cost table values changed     | No effect on state, BUT cached `total_exp` / `gold` are now stale. |
+| New constraint added (e.g. 15 sub-levels per primary)| Restore loop clamps or drops the offending picks; user gets a flash. The build can never re-import as an *invalid* state — see the `subBudgetByParent` walk in `applyBuildState`. |
 
 **Rules when making future changes to game data:**
 

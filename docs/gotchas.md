@@ -61,6 +61,19 @@ the user dropped a guild because `totalLevels` didn't follow. Match
 the C# convention ([Character.cs:150](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Character.cs)):
 `totalLevels => 120 - guildlevels + free` with `free` as the setter.
 
+### Subguild levels are capped at 15 per primary guild
+[Guild.cs:200](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Guild.cs)
+initialises every primary guild with `availSubLevels = 15`, and the
+desktop client decrements that pool as the user picks subguild levels
+under it. The web planner originally enforced *only* "subguild parent
+must be at max level" plus the 120-level global cap, so a Bard 45 +
+Actors/Gallants/Minstrels/Troubadours @5 each (20 sub-levels) was
+accepted. Bug #21. Three places now clamp against `subRoomFor(g)` in
+[Reinc.vue](../www/src/components/Reinc.vue): `toggleGuild` (initial
+level on add), `setPickLevel` (in-place edits), and the saved-build
+restore loop (so re-importing an old state cannot resurrect an illegal
+build). See [reinc.md](reinc.md#guild-and-subguild-ordering-rules).
+
 ### `100vw` includes the vertical scrollbar
 Any `max-width: 100vw` or similar on a page-level container overflows
 horizontally as soon as the content generates a vertical scrollbar.
@@ -159,6 +172,34 @@ entries plus unhandled errors). The client-side capture is installed
 in [main.js](../www/src/main.js) BEFORE Vue boots so it catches early
 errors. When triaging a bug, use the captured context instead of
 guessing. See [bug-workflow.md](bug-workflow.md).
+
+### `site_updates.created` is a naive Eastern wall-clock string, not UTC
+The droplet's MySQL is `system_time_zone = UTC` and the `mysql@2.18.1`
+driver returns `datetime` columns as JS `Date`s anchored to that
+timezone. The first cut of `/api/updates/` exposed `created` as a
+`...Z` ISO string, which then fanned out two ways:
+1. The `Updates.vue` grouping built day headings via
+   `new Date(iso).toISOString().slice(0,10)` — UTC date — and then
+   re-parsed `"YYYY-MM-DD"` (UTC midnight) for the heading. Any
+   viewer west of UTC saw every entry render as the previous day.
+2. Seed strings like `'2026-04-11 23:00:00'` were authored as
+   *Eastern* wall-clock but stored as if UTC, so they drifted 4–5
+   hours from when the work actually shipped.
+
+The fix avoids JS `Date` round-trips entirely. The GET handler in
+[updates.mjs](../api/rest/api/updates.mjs) wraps the column in
+`DATE_FORMAT(u.created, '%Y-%m-%dT%H:%i:%s')` so the API ships a
+naive string with no `Z`. POST/UPDATE accept the same shape via
+`naiveDatetime()`; new entries authored without an explicit
+timestamp default to `nowNaiveEastern()` (`Intl.DateTimeFormat`
+with `timeZone: 'America/New_York'`). The Vue side parses the
+string by hand (`parseNaive` → local-component Date for formatting
+only) and never calls `new Date(naive)`. Net effect: every viewer
+sees the same Eastern wall-clock the entry was authored in,
+regardless of their browser's TZ. **If you add another `datetime`
+column whose semantics are "wall-clock the user typed" (rather
+than "UTC moment something happened"), copy this pattern instead
+of letting the driver's UTC default leak through.**
 
 ### Bug attachment pipeline
 - Max 6 JPG/PNG files × 5MB each per report

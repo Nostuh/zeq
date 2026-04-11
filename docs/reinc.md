@@ -225,6 +225,26 @@ parent's `Subguilds:` section):
 - Subguild levels **stack on top** of the parent's full level track; they
   are not a replacement. The summed `guildLevelsSum` feeds both the 120-cap
   check and the level-cost formula.
+- **15-level subguild budget per primary guild.** [Guild.cs:200](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Guild.cs)
+  initialises every primary guild with `availSubLevels = 15`, and
+  `updateSubLevels` / `updateSubGuildInfo` (lines 213–233, 427–435) draw
+  every subguild level pick down from that pool. The planner enforces
+  the same cap in three places via `subRoomFor(g)` /
+  `subLevelsUnderParent(parentId, excludeSubId)` in
+  [Reinc.vue](../www/src/components/Reinc.vue):
+  1. `toggleGuild` clamps the initial level when adding a sub and
+     refuses to add when the budget is exhausted.
+  2. `setPickLevel` clamps in-place edits against the remaining budget,
+     excluding the sub's own current level so an in-place change can
+     re-use its own headroom.
+  3. The saved-build restore loop walks parents first, tracks
+     `subBudgetByParent`, and clamps (or drops) over-quota subs at load
+     time so an old build authored before this rule existed cannot
+     re-import an illegal state. Clamped subs flash a warning so the
+     user knows the loaded state isn't literally the saved state.
+  Bug #21 was filed exactly because the planner was missing this rule
+  (a Bard 45 + Actors/Gallants/Minstrels/Troubadours @5 each = 20
+  sub-levels build was accepted).
 
 ## Wishes and boons
 
