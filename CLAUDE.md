@@ -30,9 +30,11 @@ See [docs/schema.md](docs/schema.md).
   matching the filename; auto-mounted at `/api/<filename>`.
 - Auth: session cookie + roles `admin`/`editor`/`viewer`; see [docs/auth.md](docs/auth.md).
 - Vue: components in `www/src/components/`; ignore `old_components/`.
-- UI: dense Bootstrap tables; viewers see data, no edit controls. Must
-  work desktop/tablet/mobile via CSS grid + `@media` (no fixed px). Gate
-  on `cd scripts/test && node responsive.mjs`. See [docs/ui.md](docs/ui.md), [docs/testing.md](docs/testing.md).
+- UI: dense Bootstrap tables; viewers see data, no edit controls; responsive
+  via CSS grid + `@media` (no fixed px). Every new style MUST work in BOTH
+  light and dark themes (`data-bs-theme` on `<html>`, overrides in [www/src/scss/styles.scss](www/src/scss/styles.scss)).
+  Responsive harness (`scripts/test/responsive.mjs`) only runs when asked.
+  See [docs/ui.md](docs/ui.md), [docs/testing.md](docs/testing.md).
 - API shape: `{ok:true,data}` / `{ok:false,error}`; see [docs/api.md](docs/api.md).
 - Reinc planner: public at `/`, targets ZombieMUD. Math changes MUST cite
   `/tmp/Zcreator-Enhanced/decompiled_source/CharCreator/`. Page locked to
@@ -54,8 +56,6 @@ this CLAUDE.md and the subsystem's source of truth (C# decompile /
 
 ## Before touching code
 
-**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit
-us in past sessions (Vue checkbox desync, int32 wrap, `.tab-body`+grid
-class trap, `totalLevels` state direction, mysql shim `@name`-only).
-Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md),
-and for planner math [docs/reinc.md](docs/reinc.md).
+**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us
+(Vue checkbox desync, int32 wrap, `.tab-body`+grid class trap, `totalLevels`
+direction, mysql shim `@name`-only). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), and for planner math [docs/reinc.md](docs/reinc.md).

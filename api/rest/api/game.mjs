@@ -122,7 +122,8 @@ makeSimple('spells', 'game_spells');
 // ---------------- GUILDS ----------------
 router.get('/guilds', requireAuth, async function(req, res) {
     const rows = await zeq.query(
-        `SELECT g.id, g.name, g.file_name, g.parent_id, g.max_level, g.enabled, p.name AS parent_name
+        `SELECT g.id, g.name, g.file_name, g.parent_id, g.max_level, g.enabled,
+                g.last_verified_at, p.name AS parent_name
          FROM game_guilds g LEFT JOIN game_guilds p ON p.id = g.parent_id
          ORDER BY COALESCE(p.name, g.name), g.parent_id IS NULL DESC, g.name`);
     ok(res, rows);
@@ -197,6 +198,114 @@ router.delete('/guilds/:id', requireEditor, async function(req, res) {
     await zeq.query(`UPDATE game_guilds SET parent_id = NULL WHERE parent_id = @id`, { id });
     await zeq.query(`DELETE FROM game_guilds WHERE id = @id`, { id });
     ok(res, {});
+});
+
+// POST /api/game/guilds/:id/import-text
+// Rebuilds bonuses/skills/spells for this guild from a pasted blob
+// of the in-game `info short` + `info full` output. Body:
+//   { text: "...", dry_run?: bool }
+// Dry-run returns the parsed rows plus a list of skill/spell names
+// that don't match game_skills.name / game_spells.name, so the admin
+// can see exactly what will happen before committing. A real run
+// replaces every bonus/skill/spell row for the guild and stamps
+// `last_verified_at = NOW()`.
+router.post('/guilds/:id/import-text', requireEditor, async function(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const { text, dry_run = false } = req.body || {};
+    if (!text || !String(text).trim()) return fail(res, 'text is required');
+    try {
+        const { parseGuildInfo } = await import('../../utils/guild_text_parser.mjs');
+        const parsed = parseGuildInfo(text);
+
+        // Resolve skill / spell names to catalog ids. Case-insensitive
+        // match against game_skills.name / game_spells.name. Missing
+        // names come back in the response so the caller can decide
+        // whether to add them to the catalog first.
+        const skillRows = await zeq.query(`SELECT id, LOWER(name) AS name FROM game_skills`);
+        const spellRows = await zeq.query(`SELECT id, LOWER(name) AS name FROM game_spells`);
+        const skillIdByName = new Map(skillRows.map((r) => [r.name, r.id]));
+        const spellIdByName = new Map(spellRows.map((r) => [r.name, r.id]));
+
+        const resolvedSkills = [];
+        const missingSkills = [];
+        for (const s of parsed.skills) {
+            const sid = skillIdByName.get(s.name);
+            if (sid) resolvedSkills.push({ ...s, skill_id: sid });
+            else missingSkills.push(s.name);
+        }
+        const resolvedSpells = [];
+        const missingSpells = [];
+        for (const s of parsed.spells) {
+            const sid = spellIdByName.get(s.name);
+            if (sid) resolvedSpells.push({ ...s, spell_id: sid });
+            else missingSpells.push(s.name);
+        }
+
+        const summary = {
+            parsed: {
+                bonuses: parsed.bonuses.length,
+                skills: parsed.skills.length,
+                spells: parsed.spells.length,
+            },
+            resolved: {
+                skills: resolvedSkills.length,
+                spells: resolvedSpells.length,
+            },
+            missing_skills: [...new Set(missingSkills)],
+            missing_spells: [...new Set(missingSpells)],
+            bonuses: parsed.bonuses,
+            skills: parsed.skills,
+            spells: parsed.spells,
+        };
+
+        if (dry_run) return ok(res, { ...summary, committed: false });
+
+        // Refuse to commit if the parser couldn't find any rows at
+        // all — pasting a random string should not wipe the guild.
+        if (!parsed.bonuses.length && !parsed.skills.length && !parsed.spells.length) {
+            return fail(res, 'nothing recognized in pasted text — need `info short` and/or `info full` output');
+        }
+        // Refuse to commit on unknown skill/spell names so the admin
+        // has to add them to the catalog explicitly before the import
+        // lands. That keeps the guild rows aligned with the catalogs.
+        if (missingSkills.length || missingSpells.length) {
+            return fail(res, 'unknown skill/spell names — add them to the catalog first: '
+                + [...new Set(missingSkills)].map((n) => 'skill:' + n).concat(
+                    [...new Set(missingSpells)].map((n) => 'spell:' + n),
+                ).join(', '));
+        }
+
+        // Replace-not-merge: clear existing rows and re-insert from
+        // the parse. Merging would leave stale rows behind whenever
+        // the game's actual list shrinks.
+        await zeq.query(`DELETE FROM game_guild_bonuses WHERE guild_id = @id`, { id });
+        await zeq.query(`DELETE FROM game_guild_skills  WHERE guild_id = @id`, { id });
+        await zeq.query(`DELETE FROM game_guild_spells  WHERE guild_id = @id`, { id });
+        for (const b of parsed.bonuses) {
+            await zeq.query(
+                `INSERT INTO game_guild_bonuses (guild_id, level, bonus_name, value)
+                 VALUES (@guild_id, @level, @bonus_name, @value)`,
+                { guild_id: id, level: b.level, bonus_name: b.bonus_name, value: b.value });
+        }
+        for (const s of resolvedSkills) {
+            await zeq.query(
+                `INSERT INTO game_guild_skills (guild_id, skill_id, level, max_percent)
+                 VALUES (@guild_id, @skill_id, @level, @max_percent)`,
+                { guild_id: id, skill_id: s.skill_id, level: s.level, max_percent: s.max_percent });
+        }
+        for (const s of resolvedSpells) {
+            await zeq.query(
+                `INSERT INTO game_guild_spells (guild_id, spell_id, level, max_percent)
+                 VALUES (@guild_id, @spell_id, @level, @max_percent)`,
+                { guild_id: id, spell_id: s.spell_id, level: s.level, max_percent: s.max_percent });
+        }
+        await zeq.query(`UPDATE game_guilds SET last_verified_at = NOW() WHERE id = @id`, { id });
+
+        ok(res, { ...summary, committed: true });
+    } catch (e) {
+        console.error(e);
+        fail(res, e.sqlMessage || String(e));
+    }
 });
 
 // ---- Guild bonuses ----

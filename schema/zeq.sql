@@ -157,9 +157,11 @@ CREATE TABLE IF NOT EXISTS game_guilds (
     KEY ix_game_guilds_parent (parent_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Re-apply safety: add `enabled` if the table existed before this column.
+-- Re-apply safety for existing installations: add `enabled` and
+-- `last_verified_at` if the table existed before these columns.
 ALTER TABLE game_guilds
-    ADD COLUMN IF NOT EXISTS enabled TINYINT(1) NOT NULL DEFAULT 1;
+    ADD COLUMN IF NOT EXISTS enabled TINYINT(1) NOT NULL DEFAULT 1,
+    ADD COLUMN IF NOT EXISTS last_verified_at DATETIME NULL;
 
 -- Per-level guild stat/attribute bonuses.
 CREATE TABLE IF NOT EXISTS game_guild_bonuses (

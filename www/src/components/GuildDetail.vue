@@ -27,6 +27,14 @@ export default {
             spellEditId: null, spellDraft: {},
             spellNew: null,
             spellOptions: [],
+
+            // Import-from-text card: admin pastes the in-game
+            // `info short` + `info full` blob, previews the parse
+            // via dry_run, then commits.
+            showImport: false,
+            importText: '',
+            importPreview: null,
+            importLoading: false,
         };
     },
     computed: {
@@ -192,6 +200,56 @@ export default {
                 await this.load();
             } catch (e) { this.$root.flashError(e); }
         },
+
+        // --- import from pasted game text ---
+        startImport() {
+            this.showImport = true;
+            this.importText = '';
+            this.importPreview = null;
+        },
+        cancelImport() {
+            this.showImport = false;
+            this.importText = '';
+            this.importPreview = null;
+        },
+        async previewImport() {
+            if (!this.importText.trim()) return;
+            this.importLoading = true;
+            try {
+                const r = await axios.post(`/api/game/guilds/${this.id}/import-text`,
+                    { text: this.importText, dry_run: true });
+                if (r.data.ok) { this.importPreview = r.data.data; }
+                else this.$root.flashMsg(r.data.error, 'danger');
+            } catch (e) { this.$root.flashError(e); }
+            finally { this.importLoading = false; }
+        },
+        async commitImport() {
+            if (!this.importPreview) return;
+            const p = this.importPreview;
+            const msg = `Replace this guild's data with the parsed rows?\n\n`
+                + `  ${p.parsed.bonuses} bonuses\n`
+                + `  ${p.parsed.skills} skill unlocks\n`
+                + `  ${p.parsed.spells} spell unlocks\n\n`
+                + `Existing rows for this guild will be deleted.`;
+            if (!confirm(msg)) return;
+            this.importLoading = true;
+            try {
+                const r = await axios.post(`/api/game/guilds/${this.id}/import-text`,
+                    { text: this.importText, dry_run: false });
+                if (r.data.ok) {
+                    this.$root.flashMsg('Guild data imported from game text');
+                    this.cancelImport();
+                    await this.load();
+                } else this.$root.flashMsg(r.data.error, 'danger');
+            } catch (e) { this.$root.flashError(e); }
+            finally { this.importLoading = false; }
+        },
+        formatVerified(ts) {
+            if (!ts) return 'never';
+            // The column is a naive DATETIME stored in the server's
+            // local clock; toLocaleString is fine for a human hint.
+            return new Date(ts.replace(' ', 'T')).toLocaleString();
+        },
     },
     mounted() { this.load(); },
     watch: { id() { this.load(); } },
@@ -211,7 +269,11 @@ export default {
             <span class="me-3">Max level: <strong>{{ guild.max_level }}</strong></span>
             <span class="me-3">File: <code>{{ guild.file_name }}.chr</code></span>
             <span class="me-3" v-if="guild.parent_name">Parent: <strong>{{ guild.parent_name }}</strong></span>
+            <span class="me-3 small text-muted" :title="guild.last_verified_at || 'never verified against the live game'">
+                Last verified: <strong>{{ formatVerified(guild.last_verified_at) }}</strong>
+            </span>
             <button v-if="canEdit" class="btn btn-sm btn-outline-primary me-1" @click="startEditMeta">Edit</button>
+            <button v-if="canEdit" class="btn btn-sm btn-outline-success me-1" @click="startImport">Import from game text</button>
             <button v-if="canEdit" class="btn btn-sm btn-outline-danger" @click="del">Delete</button>
         </div>
         <div v-else class="row g-2">
@@ -230,6 +292,53 @@ export default {
             </div>
         </div>
     </div>
+
+    <!-- Import-from-text card. Admin pastes the in-game `info short`
+         and/or `info full` output here. Clicking Preview parses the
+         text server-side (dry_run) and shows counts + any skill/spell
+         names that don't match the catalog. Commit replaces every
+         bonus/skill/spell row for this guild and stamps
+         last_verified_at. -->
+    <div v-if="showImport" class="card mb-3"><div class="card-body">
+        <h5 class="card-title">Import from game text</h5>
+        <p class="small text-muted mb-2">
+            Paste the output of <code>info short</code> and <code>info full</code> from the guild trainer.
+            Both blocks can be in one paste, in any order. Preview first to see what will change.
+        </p>
+        <textarea class="form-control font-monospace" rows="10"
+                  v-model="importText"
+                  placeholder="| Lvl | Str | Dex | ... | Spr |&#10;|   1 |     |   2 | ... |   1 |&#10;...&#10;Level 1 abilities:&#10;May study spell ... to ...%"></textarea>
+        <div class="mt-2 d-flex gap-2 align-items-center flex-wrap">
+            <button class="btn btn-sm btn-primary" @click="previewImport" :disabled="importLoading || !importText.trim()">
+                {{ importLoading ? 'Working…' : 'Preview' }}
+            </button>
+            <button class="btn btn-sm btn-success" @click="commitImport" :disabled="!importPreview || importLoading">
+                Commit
+            </button>
+            <button class="btn btn-sm btn-secondary" @click="cancelImport">Cancel</button>
+        </div>
+        <div v-if="importPreview" class="mt-3 small">
+            <div>
+                Parsed:
+                <strong>{{ importPreview.parsed.bonuses }}</strong> bonuses,
+                <strong>{{ importPreview.parsed.skills }}</strong> skill unlocks
+                (<span :class="{ 'text-danger': importPreview.missing_skills.length }">{{ importPreview.resolved.skills }} matched</span>),
+                <strong>{{ importPreview.parsed.spells }}</strong> spell unlocks
+                (<span :class="{ 'text-danger': importPreview.missing_spells.length }">{{ importPreview.resolved.spells }} matched</span>).
+            </div>
+            <div v-if="importPreview.missing_skills.length" class="text-danger">
+                Unknown skills (add to the Skills catalog first):
+                <code v-for="n in importPreview.missing_skills" :key="n" class="me-2">{{ n }}</code>
+            </div>
+            <div v-if="importPreview.missing_spells.length" class="text-danger">
+                Unknown spells (add to the Spells catalog first):
+                <code v-for="n in importPreview.missing_spells" :key="n" class="me-2">{{ n }}</code>
+            </div>
+            <div v-if="!importPreview.missing_skills.length && !importPreview.missing_spells.length" class="text-success">
+                Everything resolves — Commit will delete this guild's existing rows and replace them with the parse.
+            </div>
+        </div>
+    </div></div>
 
     <div v-if="subguilds.length" class="mb-3">
         <h5>Subguilds</h5>

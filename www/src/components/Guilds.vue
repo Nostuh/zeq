@@ -89,7 +89,7 @@ export default {
         <thead><tr><th>Name</th><th>File</th><th>Max level</th><th>Status</th><th></th></tr></thead>
         <tbody>
             <template v-for="g in topLevel" :key="g.id">
-                <tr :class="{ 'table-secondary': !g.enabled }">
+                <tr :class="{ 'guild-closed-row': !g.enabled }">
                     <td><strong>{{ g.name }}</strong></td>
                     <td><code class="small">{{ g.file_name }}</code></td>
                     <td>{{ g.max_level }}</td>
@@ -102,7 +102,7 @@ export default {
                     </td>
                     <td><router-link class="btn btn-sm btn-outline-primary" :to="{name:'guild-detail',params:{id:g.id}}">Open</router-link></td>
                 </tr>
-                <tr v-for="sg in (subOf[g.id] || [])" :key="sg.id" :class="{ 'table-secondary': !sg.enabled }">
+                <tr v-for="sg in (subOf[g.id] || [])" :key="sg.id" :class="{ 'guild-closed-row': !sg.enabled }">
                     <td class="ps-4 text-muted">↳ {{ sg.name }}</td>
                     <td><code class="small">{{ sg.file_name }}</code></td>
                     <td>{{ sg.max_level }}</td>

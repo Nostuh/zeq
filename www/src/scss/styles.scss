@@ -73,6 +73,13 @@ div.floating-menu > button {
     border-color:black;
 }
 
+/* Admin Guilds page: closed-guild row dims in both themes. The
+   dark-mode override lives in the DARK MODE block below. */
+tr.guild-closed-row > * {
+    background: #f5e9e9;
+    color: #6c757d;
+}
+
 /* =========================================================================
    DARK MODE
    Bootstrap 5.3 handles most components via data-bs-theme="dark" on <html>.
@@ -113,8 +120,27 @@ div.floating-menu > button {
     .skill-row.active { background: #1e3a5f; color: #dbeafe; }
     .race-row.sub { color: #8a939c; }
     .guild-row.picked { background: #1e3a5f; }
-    .guild-info-btn { color: #8a939c; }
-    .guild-info-btn:hover:not(:disabled) { color: #6ea8fe; }
+    /* Shared .info-btn (replaces .guild-info-btn) — used by the guild
+       picker AND every boon row. Keep color tokens here so the dark
+       theme stays a single concern (per this file's header note). */
+    .info-btn { color: #8a939c; }
+    .info-btn:hover:not(:disabled) {
+        color: #6ea8fe;
+        background: rgba(110, 168, 254, 0.14);
+    }
+    /* Boon info modal body — unscoped .boon-desc uses a light #f8f9fa
+       default for the printable <pre>; dark mode needs its own panel. */
+    .boon-desc {
+        background: #23272e;
+        border-color: #2a2f36;
+        color: #e9ecef;
+    }
+    /* Admin Guilds page: closed guilds dim instead of flashing a
+       white Bootstrap .table-secondary background in dark mode. */
+    tr.guild-closed-row > * {
+        background: #2a1f1f;
+        color: #adb5bd;
+    }
 
     .desc-box {
         background: #23272e;
