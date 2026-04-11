@@ -21,10 +21,38 @@ const ok = (res, data) => res.json({ ok: true, data });
 
 const KINDS = ['fix', 'feature', 'tweak', 'content'];
 
+// `created` is stored as a naive datetime in Eastern wall-clock — see
+// the GET handler. Coerce client input to the same naive `YYYY-MM-DD HH:MM:SS`
+// shape so the round trip stays in the same timezone (no JS Date in
+// the middle, which would re-anchor to UTC).
+function naiveDatetime(v) {
+    if (!v) return null;
+    const m = String(v).match(/^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2}))?/);
+    if (!m) return null;
+    return `${m[1]}-${m[2]}-${m[3]} ${m[4]}:${m[5]}:${m[6] || '00'}`;
+}
+function nowNaiveEastern() {
+    // Use Intl to get the current wall-clock time in America/New_York,
+    // matching how seed entries are authored.
+    const parts = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/New_York',
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        hour12: false,
+    }).formatToParts(new Date()).reduce((a, p) => (a[p.type] = p.value, a), {});
+    const hh = parts.hour === '24' ? '00' : parts.hour;
+    return `${parts.year}-${parts.month}-${parts.day} ${hh}:${parts.minute}:${parts.second}`;
+}
+
 router.get('/', async function(req, res) {
     try {
+        // DATE_FORMAT returns a naive string (no TZ), so the mysql driver
+        // doesn't coerce it through a JS Date in UTC. The client treats
+        // the value as Eastern wall-clock and renders it as-is — every
+        // viewer sees the same time the entry was authored in.
         const rows = await zeq.query(
-            `SELECT u.id, u.kind, u.title, u.body, u.bug_id, u.created,
+            `SELECT u.id, u.kind, u.title, u.body, u.bug_id,
+                    DATE_FORMAT(u.created, '%Y-%m-%dT%H:%i:%s') AS created,
                     b.title AS bug_title, b.status AS bug_status
                FROM site_updates u
                LEFT JOIN bug_reports b ON b.id = u.bug_id
@@ -38,7 +66,7 @@ router.post('/', requireAdmin, async function(req, res) {
     if (!b.title) return fail(res, 'title required');
     const kind = KINDS.includes(b.kind) ? b.kind : 'fix';
     const bug_id = b.bug_id ? parseInt(b.bug_id, 10) : null;
-    const created = b.created ? new Date(b.created) : new Date();
+    const created = naiveDatetime(b.created) || nowNaiveEastern();
     try {
         const r = await zeq.query(
             `INSERT INTO site_updates (kind, title, body, bug_id, created)
@@ -64,7 +92,7 @@ router.post('/:id', requireAdmin, async function(req, res) {
         if (f === 'kind' && !KINDS.includes(b.kind)) return fail(res, 'bad kind');
         sets.push(`${f} = @${f}`);
         params[f] = f === 'bug_id' && b[f] ? parseInt(b[f], 10)
-                  : f === 'created' && b[f] ? new Date(b[f])
+                  : f === 'created' && b[f] ? (naiveDatetime(b[f]) || b[f])
                   : b[f];
     }
     if (!sets.length) return ok(res, {});

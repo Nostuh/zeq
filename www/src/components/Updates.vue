@@ -8,9 +8,28 @@ const KINDS = [
     { value: 'content', label: 'Content', badge: 'bg-secondary' },
 ];
 
-function toLocalInput(d) {
-    const pad = (n) => String(n).padStart(2, '0');
-    return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+const pad = (n) => String(n).padStart(2, '0');
+
+// `<input type="datetime-local">` wants `YYYY-MM-DDTHH:mm`. The API
+// returns `created` as a naive Eastern wall-clock string already in
+// that shape (just with seconds), so editing simply trims the seconds.
+function toFormInput(naive) {
+    if (!naive) return '';
+    const m = String(naive).match(/^(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2})/);
+    return m ? `${m[1]}T${m[2]}` : '';
+}
+
+// Current wall-clock time in America/New_York, formatted for the
+// datetime-local input. Used when authoring a new entry — the seed
+// file timestamps are Eastern, and we keep new ones consistent.
+function nowEasternInput() {
+    const parts = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/New_York',
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', hour12: false,
+    }).formatToParts(new Date()).reduce((a, p) => (a[p.type] = p.value, a), {});
+    const hh = parts.hour === '24' ? '00' : parts.hour;
+    return `${parts.year}-${parts.month}-${parts.day}T${hh}:${parts.minute}`;
 }
 
 export default {
@@ -26,27 +45,44 @@ export default {
     },
     computed: {
         isAdmin() { return this.$root && this.$root.isAdmin; },
-        grouped() {
-            const by = {};
-            for (const r of this.rows) {
-                const d = new Date(r.created);
-                const key = d.toISOString().slice(0, 10);
-                (by[key] ||= []).push(r);
-            }
-            return Object.entries(by)
-                .sort((a, b) => b[0].localeCompare(a[0]))
-                .map(([date, items]) => ({ date, items }));
+        sortedRows() {
+            // `created` is a naive string ("YYYY-MM-DDTHH:mm:ss") authored
+            // in Eastern wall-clock. Lexicographic sort is fine — no need
+            // to round-trip through Date.
+            return [...this.rows].sort((a, b) => {
+                return String(b.created || '').localeCompare(String(a.created || ''));
+            });
         },
     },
     methods: {
         emptyForm() {
-            return { id: null, kind: 'fix', title: '', body: '', bug_id: '', created: toLocalInput(new Date()) };
+            return { id: null, kind: 'fix', title: '', body: '', bug_id: '', created: nowEasternInput() };
         },
         kindMeta(k) { return KINDS.find((x) => x.value === k) || KINDS[0]; },
-        fmtDate(iso) {
-            if (!iso) return '';
-            const d = new Date(iso);
-            return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+        // `naive` is "YYYY-MM-DDTHH:mm:ss" with no timezone. Treat it as
+        // Eastern wall-clock and format it as wall-clock — never coerce
+        // through `new Date(naive)`, which would re-interpret it as the
+        // viewer's local TZ and shift it across day boundaries.
+        parseNaive(naive) {
+            if (!naive) return null;
+            const m = String(naive).match(/^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2}):(\d{2})/);
+            if (!m) return null;
+            return {
+                y: +m[1], mo: +m[2], d: +m[3],
+                h: +m[4], mi: +m[5], s: +m[6],
+            };
+        },
+        fmtStampDate(naive) {
+            const p = this.parseNaive(naive);
+            if (!p) return '';
+            const dt = new Date(p.y, p.mo - 1, p.d);
+            return dt.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+        },
+        fmtStampTime(naive) {
+            const p = this.parseNaive(naive);
+            if (!p) return '';
+            const dt = new Date(2000, 0, 1, p.h, p.mi);
+            return dt.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
         },
         async load() {
             this.loading = true;
@@ -68,7 +104,7 @@ export default {
                 title: r.title,
                 body: r.body || '',
                 bug_id: r.bug_id || '',
-                created: toLocalInput(new Date(r.created)),
+                created: toFormInput(r.created),
             };
         },
         cancel() { this.editing = null; this.form = this.emptyForm(); },
@@ -78,7 +114,11 @@ export default {
                 title: this.form.title.trim(),
                 body: this.form.body.trim() || null,
                 bug_id: this.form.bug_id === '' ? null : parseInt(this.form.bug_id, 10),
-                created: new Date(this.form.created).toISOString(),
+                // Send the form value as a naive wall-clock string. The
+                // server stores it verbatim — never round-trip through
+                // `new Date()` here, which would re-anchor it to UTC and
+                // shift it a few hours when displayed.
+                created: this.form.created || null,
             };
             if (!payload.title) { this.$root.flashMsg('Title required', 'danger'); return; }
             try {
@@ -161,27 +201,28 @@ export default {
     <div v-if="loading" class="text-muted">Loading…</div>
     <div v-else-if="!rows.length" class="text-muted">No updates logged yet.</div>
 
-    <div v-for="group in grouped" :key="group.date" class="upd-group">
-        <div class="upd-date">{{ fmtDate(group.date) }}</div>
-        <ul class="upd-list">
-            <li v-for="r in group.items" :key="r.id" class="upd-item">
-                <span class="badge" :class="kindMeta(r.kind).badge">{{ kindMeta(r.kind).label }}</span>
-                <div class="upd-body">
-                    <div class="upd-title">
-                        {{ r.title }}
-                        <span v-if="r.bug_id" class="upd-bug" :title="r.bug_title || ''">
-                            (from bug #{{ r.bug_id }})
-                        </span>
-                    </div>
-                    <div v-if="r.body" class="upd-desc">{{ r.body }}</div>
+    <ul class="upd-list">
+        <li v-for="r in sortedRows" :key="r.id" class="upd-item">
+            <div class="upd-stamp" :title="r.created">
+                <span class="upd-stamp-date">{{ fmtStampDate(r.created) }}</span>
+                <span class="upd-stamp-time">{{ fmtStampTime(r.created) }}</span>
+            </div>
+            <span class="badge" :class="kindMeta(r.kind).badge">{{ kindMeta(r.kind).label }}</span>
+            <div class="upd-body">
+                <div class="upd-title">
+                    {{ r.title }}
+                    <span v-if="r.bug_id" class="upd-bug" :title="r.bug_title || ''">
+                        (from bug #{{ r.bug_id }})
+                    </span>
                 </div>
-                <div v-if="isAdmin" class="upd-actions">
-                    <button class="btn btn-sm btn-outline-secondary" @click="startEdit(r)">Edit</button>
-                    <button class="btn btn-sm btn-outline-danger" @click="del(r)">Delete</button>
-                </div>
-            </li>
-        </ul>
-    </div>
+                <div v-if="r.body" class="upd-desc">{{ r.body }}</div>
+            </div>
+            <div v-if="isAdmin" class="upd-actions">
+                <button class="btn btn-sm btn-outline-secondary" @click="startEdit(r)">Edit</button>
+                <button class="btn btn-sm btn-outline-danger" @click="del(r)">Delete</button>
+            </div>
+        </li>
+    </ul>
 </div>
 </template>
 
@@ -199,28 +240,28 @@ export default {
     margin-bottom: 1.25rem;
 }
 .upd-admin-actions { flex-shrink: 0; }
-.upd-group { margin-bottom: 1.5rem; }
-.upd-date {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #6c757d;
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.6rem;
-}
 .upd-list { list-style: none; padding: 0; margin: 0; }
 .upd-item {
     display: grid;
-    grid-template-columns: 5rem 1fr auto;
+    grid-template-columns: 7.5rem 5rem 1fr auto;
     gap: 0.75rem;
     align-items: start;
-    padding: 0.55rem 0;
+    padding: 0.6rem 0;
     border-bottom: 1px solid #f1f3f5;
 }
 .upd-item:last-child { border-bottom: none; }
 .upd-item .badge { justify-self: start; margin-top: 0.15rem; }
+.upd-stamp {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.78rem;
+    color: #6c757d;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.2;
+    padding-top: 0.15rem;
+}
+.upd-stamp-date { font-weight: 600; }
+.upd-stamp-time { font-weight: 400; opacity: 0.85; }
 .upd-title { font-weight: 600; line-height: 1.3; }
 .upd-bug { font-weight: 400; color: #6c757d; font-size: 0.85em; margin-left: 0.25rem; }
 .upd-desc { margin-top: 0.25rem; color: #495057; font-size: 0.9rem; white-space: pre-wrap; }
@@ -235,11 +276,8 @@ export default {
     .upd-header { flex-direction: column; }
 }
 
-[data-bs-theme="dark"] .upd-date {
-    color: #adb5bd;
-    border-bottom-color: #2a2f36;
-}
 [data-bs-theme="dark"] .upd-item { border-bottom-color: #23272e; }
 [data-bs-theme="dark"] .upd-bug { color: #adb5bd; }
+[data-bs-theme="dark"] .upd-stamp { color: #adb5bd; }
 [data-bs-theme="dark"] .upd-desc { color: #ced4da; }
 </style>
