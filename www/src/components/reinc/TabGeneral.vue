@@ -31,8 +31,19 @@ export default {
                 <span class="race-cell" :title="`Spell Cost ${r.spell_cost}`">{{ r.spell_cost }}</span>
             </div>
         </div>
+    </div>
 
-        <label class="form-label small mb-1 mt-2"><strong>Select Guilds</strong></label>
+    <!-- Bug #26 — guild picker now owns its own column instead of sharing
+         vertical space with the race list. When the summary bar grows
+         from picking guilds/resists, the tab-body shrinks and .guild-list
+         absorbs the shrink via its own overflow-y scroll. Previously the
+         race-list's 18rem cap + .col-races { overflow:hidden } clipped
+         the guild list off-screen on taller viewports too.
+         The old Racial Stats / Computed readouts lived here but were
+         redundant with the summary bar — those chips now show base/max
+         alongside the computed values up top. -->
+    <div class="col-guilds">
+        <label class="form-label small mb-1"><strong>Select Guilds</strong></label>
         <input type="search" class="form-control form-control-sm mb-1" placeholder="Search guilds…" v-model="reinc.guildSearch">
         <div class="guild-list">
             <div v-if="reinc.guildTree.length === 0" class="small text-muted p-2">No guilds match “{{ reinc.guildSearch }}”.</div>
@@ -54,47 +65,6 @@ export default {
                         aria-label="Show skills and spells">
                     <i class="bi bi-info-circle"></i>
                 </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-stats" v-if="reinc.race && reinc.character">
-        <div class="racial-box">
-            <h6 class="m-0 mb-1">Racial Stats</h6>
-            <div class="racial-grid small">
-                <div>Exp: <b>{{ reinc.race.exp_rate }}</b></div>
-                <div>Size: <b>{{ reinc.race.size }}</b></div>
-                <div>Str: <b>{{ reinc.race.max_str }}</b></div>
-                <div>Dex: <b>{{ reinc.race.max_dex }}</b></div>
-                <div>Con: <b>{{ reinc.race.max_con }}</b></div>
-                <div>Int: <b>{{ reinc.race.max_int }}</b></div>
-                <div>Wis: <b>{{ reinc.race.max_wis }}</b></div>
-                <div>Cha: <b>{{ reinc.race.max_cha }}</b></div>
-                <div>HP Reg: <b>{{ reinc.race.hp_regen }}</b></div>
-                <div>SP Reg: <b>{{ reinc.race.sp_regen }}</b></div>
-                <div>Sk Max: <b>{{ reinc.race.skill_max }}</b></div>
-                <div>Sk Cost: <b>{{ reinc.race.skill_cost }}</b></div>
-                <div>Sp Max: <b>{{ reinc.race.spell_max }}</b></div>
-                <div>Sp Cost: <b>{{ reinc.race.spell_cost }}</b></div>
-            </div>
-        </div>
-
-        <div class="computed-box">
-            <h6 class="m-0 mb-1">Computed</h6>
-            <div class="computed-grid small">
-                <div>HP <b>{{ reinc.nfmt(reinc.character.hp) }}</b></div>
-                <div>Str <b>{{ reinc.character.finalStats.str }}</b></div>
-                <div>Int <b>{{ reinc.character.finalStats.int }}</b></div>
-                <div>SkMax <b>{{ reinc.character.skillMax }}</b></div>
-                <div>SP <b>{{ reinc.nfmt(reinc.character.sp) }}</b></div>
-                <div>Con <b>{{ reinc.character.finalStats.con }}</b></div>
-                <div>Wis <b>{{ reinc.character.finalStats.wis }}</b></div>
-                <div>SpMax <b>{{ reinc.character.spellMax }}</b></div>
-                <div>HPR <b>{{ reinc.character.hpr }}</b></div>
-                <div>Dex <b>{{ reinc.character.finalStats.dex }}</b></div>
-                <div>Cha <b>{{ reinc.character.finalStats.cha }}</b></div>
-                <div>Size <b>{{ reinc.character.size }}</b></div>
-                <div>SPR <b>{{ reinc.character.spr }}</b></div>
             </div>
         </div>
     </div>

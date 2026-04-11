@@ -994,12 +994,20 @@ export default {
             <div class="sb-cell"><span class="sb-label">Race</span><span class="sb-value">{{ race.name }}</span></div>
             <div class="sb-cell"><span class="sb-label">HP</span><span class="sb-value">{{ sfmt(character.hp) }}</span></div>
             <div class="sb-cell"><span class="sb-label">SP</span><span class="sb-value">{{ sfmt(character.sp) }}</span></div>
-            <div class="sb-cell"><span class="sb-label">HPR</span><span class="sb-value">{{ character.hpr }}</span></div>
-            <div class="sb-cell"><span class="sb-label">SPR</span><span class="sb-value">{{ character.spr }}</span></div>
-            <div class="sb-cell" v-for="s in ['str','dex','con','int','wis','cha']" :key="s">
-                <span class="sb-label">{{ s.toUpperCase() }}</span><span class="sb-value">{{ character.finalStats[s] }}</span>
+            <div class="sb-cell" :title="`Base racial regen: ${race.hp_regen}`"><span class="sb-label">HPR</span><span class="sb-value">{{ character.hpr }}<small class="sb-max">/{{ race.hp_regen }}</small></span></div>
+            <div class="sb-cell" :title="`Base racial regen: ${race.sp_regen}`"><span class="sb-label">SPR</span><span class="sb-value">{{ character.spr }}<small class="sb-max">/{{ race.sp_regen }}</small></span></div>
+            <!-- Bug #26 companion — stat chips show `computed / racial-max`
+                 so the "Racial Stats" and "Computed" boxes that used to
+                 live on the General tab are no longer needed. -->
+            <div class="sb-cell" v-for="s in ['str','dex','con','int','wis','cha']" :key="s"
+                 :title="`Racial max ${s.toUpperCase()}: ${race['max_'+s]}`">
+                <span class="sb-label">{{ s.toUpperCase() }}</span><span class="sb-value">{{ character.finalStats[s] }}<small class="sb-max">/{{ race['max_'+s] }}</small></span>
             </div>
-            <div class="sb-cell"><span class="sb-label">Size</span><span class="sb-value">{{ character.size }}</span></div>
+            <div class="sb-cell" :title="`Base racial size: ${race.size}`"><span class="sb-label">Size</span><span class="sb-value">{{ character.size }}<small class="sb-max">/{{ race.size }}</small></span></div>
+            <div class="sb-cell" title="Effective skill cap after guild bonuses / racial cap"><span class="sb-label">SkMax</span><span class="sb-value">{{ character.skillMax }}<small class="sb-max">/{{ race.skill_max }}</small></span></div>
+            <div class="sb-cell" title="Effective spell cap after guild bonuses / racial cap"><span class="sb-label">SpMax</span><span class="sb-value">{{ character.spellMax }}<small class="sb-max">/{{ race.spell_max }}</small></span></div>
+            <div class="sb-cell" title="Racial skill learning cost"><span class="sb-label">SkCost</span><span class="sb-value">{{ race.skill_cost }}</span></div>
+            <div class="sb-cell" title="Racial spell learning cost"><span class="sb-label">SpCost</span><span class="sb-value">{{ race.spell_cost }}</span></div>
             <div class="sb-cell"><span class="sb-label">Exp rate</span><span class="sb-value">{{ race.exp_rate }}%</span></div>
             <div class="sb-cell"><span class="sb-label">Level</span><span class="sb-value" :title="`${guildLevelsSum} guild + ${freeLevels} free`">{{ guildLevelsSum }}+{{ freeLevels }}/{{ MAX_LEVEL }}</span></div>
             <div class="sb-cell"><span class="sb-label">Total XP</span><span class="sb-value" :title="nfmt(totalExp)">{{ sfmt(totalExp) }}</span></div>
@@ -1179,6 +1187,9 @@ export default {
 .sb-chip small { opacity: 0.7; }
 .sb-chip.sub { background: #4b3a5a; }
 .sb-chip.wish { background: #1e40af; }
+/* Bug #26 companion — stat chips now show `computed / racial-max`; the
+   `/max` half is dimmed so the computed value stays the visual anchor. */
+.sb-max { font-weight: 400; font-size: 0.72rem; opacity: 0.55; margin-left: 0.12rem; }
 .sb-resist { gap: 0.35rem; }
 .sb-share { margin-left: auto; align-self: center; }
 .sb-share-btn { white-space: nowrap; font-size: 0.75rem; padding: 0.2rem 0.55rem; }
@@ -1200,15 +1211,16 @@ export default {
 /* GENERAL */
 .general-grid {
     display: grid;
-    /* Give the guild picker the most room on desktop since that's where
-       users spend the most time; stats and exp are narrower. */
-    grid-template-columns: minmax(18rem, 1.6fr) minmax(16rem, 1.2fr) minmax(14rem, 1fr);
+    /* Bug #26 — guild picker gets its own column so it no longer fights
+       the race list for vertical space. Race list is narrower since it's
+       just the picker; guilds get the fattest track. */
+    grid-template-columns: minmax(15rem, 1fr) minmax(18rem, 1.6fr) minmax(14rem, 1fr);
     gap: 0.75rem;
     width: 100%;
     flex: 1 1 auto;
     min-height: 0;
 }
-.col-races, .col-stats, .col-exp {
+.col-races, .col-guilds, .col-exp {
     min-width: 0;
     min-height: 0;
     display: flex;
@@ -1328,19 +1340,6 @@ export default {
     .reinc-modal-backdrop { padding: 1rem 0.5rem; }
 }
 .level-input { width: 4em; padding: 0.1rem 0.3rem; height: auto; }
-
-.racial-box, .computed-box {
-    border: 1px solid #6c757d;
-    padding: 0.4rem 0.5rem;
-    border-radius: 0.25rem;
-    margin-bottom: 0.5rem;
-    font-family: monospace;
-}
-.racial-grid, .computed-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.1rem 0.6rem;
-}
 
 .levels-grid { display: grid; grid-template-columns: 1fr; gap: 0.2rem; }
 .lg-row { display: grid; grid-template-columns: 9rem 1fr; align-items: center; gap: 0.5rem; }
@@ -1504,7 +1503,6 @@ export default {
 @media (max-width: 800px) {
     .general-grid, .skills-grid, .extras-grid, .export-grid { grid-template-columns: 1fr; }
     .wish-cols, .boon-cols { grid-template-columns: 1fr; }
-    .racial-grid, .computed-grid { grid-template-columns: repeat(2, 1fr); }
     .summary-bar { font-size: 0.75rem; }
     /* On narrow viewports the stacked single-column layout cannot fit in
        a fixed viewport, so the tab-body scrolls internally. This is still
@@ -1512,7 +1510,7 @@ export default {
        the "no page scroll" rule from CLAUDE.md. The inner col-* elements
        drop their own overflow so there isn't a nested double-scroll. */
     .tab-body { overflow-y: auto; }
-    .col-races, .col-stats, .col-exp,
+    .col-races, .col-guilds, .col-exp,
     .col-skill-list, .col-skill-detail { overflow: visible; }
     .guild-list, .skill-list, .cost-table-wrap { max-height: none; }
     .general-grid, .skills-grid { flex: 0 0 auto; }
@@ -1525,7 +1523,7 @@ export default {
    (still not a page-level scroll — honours the 100vh rule). */
 @media (max-height: 720px) {
     .tab-body { overflow-y: auto; }
-    .col-races, .col-stats, .col-exp,
+    .col-races, .col-guilds, .col-exp,
     .col-skill-list, .col-skill-detail { overflow: visible; }
     .guild-list, .skill-list, .cost-table-wrap { max-height: none; }
     .general-grid, .skills-grid { flex: 0 0 auto; }
