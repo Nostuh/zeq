@@ -234,4 +234,12 @@ export default {
     .upd-actions { justify-self: start; }
     .upd-header { flex-direction: column; }
 }
+
+[data-bs-theme="dark"] .upd-date {
+    color: #adb5bd;
+    border-bottom-color: #2a2f36;
+}
+[data-bs-theme="dark"] .upd-item { border-bottom-color: #23272e; }
+[data-bs-theme="dark"] .upd-bug { color: #adb5bd; }
+[data-bs-theme="dark"] .upd-desc { color: #ced4da; }
 </style>

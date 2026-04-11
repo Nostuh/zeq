@@ -149,4 +149,11 @@ export default {
     font-family: monospace;
     font-size: 0.72rem;
 }
+
+[data-bs-theme="dark"] .context-block {
+    background: #23272e;
+    border-color: #2a2f36;
+    color: #e9ecef;
+}
+[data-bs-theme="dark"] .attachment-thumb { border-color: #2a2f36; }
 </style>

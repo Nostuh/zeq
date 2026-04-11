@@ -283,4 +283,15 @@ export default {
     line-height: 1;
     cursor: pointer;
 }
+
+[data-bs-theme="dark"] .modal-panel {
+    background: #1b1f23;
+    color: #e9ecef;
+}
+[data-bs-theme="dark"] .dropzone { border-color: #3a3f48; }
+[data-bs-theme="dark"] .dropzone.dragover {
+    background: #1e2a3e;
+    border-color: #6ea8fe;
+}
+[data-bs-theme="dark"] .thumb-wrap img { border-color: #2a2f36; }
 </style>

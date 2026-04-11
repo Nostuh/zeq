@@ -36,6 +36,7 @@ export default {
             ready: false,
             flash: { msg: '', type: '' },
             showBugModal: false,
+            theme: 'light',
         };
     },
     computed: {
@@ -119,8 +120,26 @@ export default {
             const name = this.$route && this.$route.name;
             document.title = ROUTE_TITLES[name] || DEFAULT_TITLE;
         },
+        loadTheme() {
+            let t = null;
+            try { t = localStorage.getItem('zeq_theme'); } catch (e) {}
+            if (t !== 'light' && t !== 'dark') {
+                t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            this.theme = t;
+            this.applyTheme();
+        },
+        applyTheme() {
+            document.documentElement.setAttribute('data-bs-theme', this.theme);
+        },
+        toggleTheme() {
+            this.theme = this.theme === 'dark' ? 'light' : 'dark';
+            this.applyTheme();
+            try { localStorage.setItem('zeq_theme', this.theme); } catch (e) {}
+        },
     },
     async mounted() {
+        this.loadTheme();
         await this.loadMe();
         this.ready = true;
         this.syncReincBodyClass();
@@ -194,6 +213,12 @@ export default {
             <router-link v-if="isEditor" class="nav-link text-light me-3" :to="{name:'races'}">Admin</router-link>
             <router-link v-else-if="isAuthed" class="nav-link text-light me-3" :to="{name:'equipment'}">My Equipment</router-link>
             <button class="btn btn-sm btn-outline-warning me-3" @click="openBug">Report Bug / Idea</button>
+            <button class="btn btn-sm btn-outline-light me-3 theme-toggle"
+                    @click="toggleTheme"
+                    :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+                    :title="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'">
+                <i class="bi" :class="theme === 'dark' ? 'bi-sun-fill' : 'bi-moon-stars-fill'"></i>
+            </button>
             <span class="navbar-text text-light me-3" v-if="user">
                 {{ user.name }} <span class="badge bg-secondary">{{ user.role }}</span>
             </span>

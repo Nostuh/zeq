@@ -289,4 +289,23 @@ export default {
     .bl-actions { grid-column: 1 / -1; flex-direction: row; justify-content: flex-end; }
     .bl-date { margin-left: 0; }
 }
+
+/* Dark mode — scoped overrides live here so Vue's scope hash doesn't
+   outrank them. Ancestor [data-bs-theme="dark"] on <html> still matches. */
+[data-bs-theme="dark"] .bl-card {
+    background: #1b1f23;
+    border-color: #2a2f36;
+}
+[data-bs-theme="dark"] .bl-vote { color: #adb5bd; }
+[data-bs-theme="dark"] .bl-vote:hover { background: #23272e; color: #e9ecef; }
+[data-bs-theme="dark"] .bl-vote.up.active { color: #75b798; background: #1c3a2b; }
+[data-bs-theme="dark"] .bl-vote.down.active { color: #ea868f; background: #3a1c21; }
+[data-bs-theme="dark"] .bl-author,
+[data-bs-theme="dark"] .bl-meta { color: #adb5bd; }
+[data-bs-theme="dark"] .bl-stats { color: #e9ecef; }
+[data-bs-theme="dark"] .bl-stats b { color: #8a939c; }
+[data-bs-theme="dark"] .bl-desc {
+    background: #23272e;
+    border-left-color: #6ea8fe;
+}
 </style>

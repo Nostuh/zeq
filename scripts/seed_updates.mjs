@@ -133,6 +133,16 @@ const SEED = [
         title: 'Export tab: later train/study blocks no longer clipped',
         body: 'The Train/Study Commands column on the Export tab was silently hiding blocks past the first two when a build had lots of guilds (Abjurer + both subguilds + a second parent, for instance). The list of per-guild blocks now lives in its own scroll region so every guild is reachable without the later ones falling off the bottom of the viewport.',
     },
+    {
+        created: '2026-04-11 23:00:00', kind: 'fix',
+        title: 'Table headers no longer bleed across every page',
+        body: 'The Equipment admin pages were styling every <th> in the app with a sticky outlined header, which leaked to the Bug Reports list, modals, and anywhere else a table appeared — showing harsh black bars with white outlines floating over content. The rule is now scoped to the Equipment pages only.',
+    },
+    {
+        created: '2026-04-11 23:30:00', kind: 'feature',
+        title: 'Dark mode toggle in the header',
+        body: 'A sun/moon button in the top-right of the header flips the whole site between light and dark themes. Your choice is remembered across visits, and first-time visitors get whichever theme their OS prefers. Covers the planner, Builds, Updates, Bug Reports, and the admin pages.',
+    },
 ];
 
 async function main() {

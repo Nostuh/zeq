@@ -72,3 +72,79 @@ div.floating-menu > button {
     padding: 0.25em;
     border-color:black;
 }
+
+/* =========================================================================
+   DARK MODE
+   Bootstrap 5.3 handles most components via data-bs-theme="dark" on <html>.
+   The rules below patch places where components use hand-picked hex colors
+   (Reinc planner, Builds list, Bugs filter bar, BugReportModal) and fix
+   the sidebar's hard-coded `bg-light` class. Component files are left
+   alone — all overrides live here so the dark theme is a single concern.
+   ========================================================================= */
+[data-bs-theme="dark"] {
+    color-scheme: dark;
+
+    /* Sidebar uses .bg-light which is a fixed light color — override it. */
+    #sidebarMenu.bg-light {
+        background-color: #1b1f23 !important;
+        border-right: 1px solid #2a2f36;
+    }
+
+    /* ---- Reinc planner ---- */
+    .tab-body {
+        background: #1b1f23;
+        border-color: #2a2f36;
+    }
+    .race-list,
+    .reinc-modal-panel,
+    .cost-table thead th {
+        background: #1b1f23;
+    }
+    .race-list { border-color: #2a2f36; }
+    .race-hd {
+        background: #23272e;
+        color: #adb5bd;
+        border-bottom-color: #3a3f48;
+    }
+    .race-row + .race-row { border-top-color: #23272e; }
+    .race-row:hover,
+    .skill-row:hover { background: #23303e; }
+    .race-row.active,
+    .skill-row.active { background: #1e3a5f; color: #dbeafe; }
+    .race-row.sub { color: #8a939c; }
+    .guild-row.picked { background: #1e3a5f; }
+    .guild-info-btn { color: #8a939c; }
+    .guild-info-btn:hover:not(:disabled) { color: #6ea8fe; }
+
+    .desc-box {
+        background: #23272e;
+        border-color: #2a2f36;
+    }
+    .guild-list,
+    .racial-box, .computed-box,
+    .ex-section {
+        border-color: #2a2f36;
+    }
+    .ex-head {
+        color: #adb5bd;
+        border-bottom-color: #3a3f48;
+    }
+    .cost-table thead th { border-bottom-color: #3a3f48; }
+    .cost-table tbody tr.over-max { color: #6c757d; }
+    .cost-table tbody tr.cap-marker td {
+        color: #adb5bd;
+        border-top-color: #3a3f48;
+        border-bottom-color: #3a3f48;
+    }
+    .exp-table td { border-top-color: #23272e; }
+    .exp-summary { border-top-color: #2a2f36; }
+    .export-pre {
+        background: #23272e;
+        border-color: #2a2f36;
+        color: #e9ecef;
+    }
+
+    /* Builds / Bugs / BugReportModal use <style scoped>. Dark overrides
+       for those live inside their own scoped blocks so Vue's scope hash
+       doesn't outrank them. Only unscoped components are patched here. */
+}
