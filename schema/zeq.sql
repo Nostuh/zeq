@@ -89,6 +89,24 @@ ALTER TABLE bug_reports
     ADD COLUMN IF NOT EXISTS dom_snapshot MEDIUMTEXT NULL,
     ADD COLUMN IF NOT EXISTS console_log MEDIUMTEXT NULL;
 
+-- ---------- SITE UPDATES (user-visible changelog) ----------
+-- Admin-editable feed shown on /updates. Links to bug_reports via
+-- nullable bug_id so a fix tied to a user report can cite it directly.
+-- See docs/updates.md. Public GET; all mutations are admin-only.
+CREATE TABLE IF NOT EXISTS site_updates (
+    id          INT NOT NULL AUTO_INCREMENT,
+    kind        VARCHAR(16) NOT NULL DEFAULT 'fix',  -- 'fix','feature','tweak','content'
+    title       VARCHAR(255) NOT NULL,
+    body        MEDIUMTEXT NULL,
+    bug_id      INT NULL,
+    created     DATETIME NOT NULL,
+    PRIMARY KEY (id),
+    KEY ix_site_updates_created (created),
+    KEY ix_site_updates_bug (bug_id),
+    CONSTRAINT fk_site_updates_bug FOREIGN KEY (bug_id)
+        REFERENCES bug_reports(id) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- ---------- BUG ATTACHMENTS ----------
 -- JPG/PNG uploads attached to a bug report. Files live on disk under
 -- /srv/zeq/api/uploads/bugs/{bug_id}/; this table stores metadata and

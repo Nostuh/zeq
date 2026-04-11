@@ -12,6 +12,12 @@ export default {
 <template>
 <div class="tab-body">
     <div class="extras-grid">
+        <!-- Stat training removed: ZombieMUD no longer has a stat room, so
+             there's nothing for the planner to cost out. The stat-training
+             exp math is still in engine.js (statTrain stays at zero, so
+             statExpTotal is always 0) in case the game ever brings stat
+             training back. If it does, uncomment this section and the
+             "Stat XP" chip in Reinc.vue's summary bar.
         <section class="ex-section ex-training">
             <h6 class="ex-head">Stat Training</h6>
             <div class="stat-grid">
@@ -22,13 +28,17 @@ export default {
             </div>
             <div class="small mt-2">Exp for stat training: <strong>{{ reinc.nfmt(reinc.statExpTotal) }}</strong></div>
         </section>
+        -->
 
         <section class="ex-section ex-wishes">
-            <div class="ex-head d-flex align-items-center justify-content-between">
+            <div class="ex-head d-flex align-items-center justify-content-between flex-wrap gap-2">
                 <span>Wishes</span>
-                <span class="small fw-normal">TPs spent: <strong>{{ reinc.nfmt(reinc.wishTpUsed) }}</strong>
-                    / <input type="number" v-model.number="reinc.tp" class="form-control form-control-sm d-inline-block" style="width:6em;">
-                </span>
+                <div class="d-flex align-items-center gap-2 small fw-normal">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" @click="reinc.selectAllWishes">All</button>
+                    <button class="btn btn-sm btn-outline-secondary" type="button" @click="reinc.clearAllWishes">None</button>
+                    <span>TPs spent: <strong>{{ reinc.nfmt(reinc.wishTpUsed) }}</strong></span>
+                    <span>/ <input type="number" v-model.number="reinc.tp" class="form-control form-control-sm d-inline-block" style="width:6em;"></span>
+                </div>
             </div>
             <div class="wish-cols">
                 <div class="wish-col">
@@ -61,9 +71,13 @@ export default {
         </section>
 
         <section class="ex-section ex-boons">
-            <div class="ex-head d-flex align-items-center justify-content-between">
+            <div class="ex-head d-flex align-items-center justify-content-between flex-wrap gap-2">
                 <span>Boons</span>
-                <span class="small fw-normal">Total PP Cost: <strong>{{ reinc.nfmt(reinc.boonPpTotal) }}</strong></span>
+                <div class="d-flex align-items-center gap-2 small fw-normal">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" @click="reinc.selectAllBoons">All</button>
+                    <button class="btn btn-sm btn-outline-secondary" type="button" @click="reinc.clearAllBoons">None</button>
+                    <span>Total PP Cost: <strong>{{ reinc.nfmt(reinc.boonPpTotal) }}</strong></span>
+                </div>
             </div>
             <div class="boon-cols">
                 <div class="boon-col">

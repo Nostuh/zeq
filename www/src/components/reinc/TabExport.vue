@@ -6,6 +6,14 @@
 // CharCreator.cs:4152 (saveCharacter_FileOk) and CharCreator.cs:3146
 // (train/study chunking — skills emit at most 20 `n train name` calls
 // per line before splitting to a new chunk).
+//
+// Train/study commands are rendered as one block per guild, each with
+// its own copy button, so users can paste straight into the game one
+// guild at a time (you have to be IN the guildhall to run the commands,
+// and the guild header label itself is not a valid game command —
+// that's why the copy button deliberately copies ONLY the command line,
+// never the guild name above it). A separate "Select Wishes" block
+// emits `select <wish>` commands for every wish the user picked.
 export default {
     name: 'ReincTabExport',
     inject: ['reinc'],
@@ -69,20 +77,23 @@ export default {
             lines.push(dashes);
             return lines.join('\n');
         },
-        // Mirror of CharCreator.cs:3146 — each guild gets its own block
-        // with train/study commands joined by `;`. A skill learned at
-        // n * 5% emits `n train name`, and `n > 20` splits into multiple
-        // 20-count calls (the game caps one train command at 20).
-        commandsText() {
+        // Per-guild train/study blocks. Each entry is
+        //   { guild: {id,name}, commands: "…" }
+        // where `commands` is the game-pasteable command string (no
+        // guild-name header — that's display-only). Chunking follows
+        // CharCreator.cs:3146: each skill learned at n*5% emits
+        // `n train name`, and n>20 splits into 20-count calls because
+        // the game caps one train command at 20.
+        commandBlocks() {
             const r = this.reinc;
-            if (!r.race) return '';
-            const out = [];
+            if (!r.race) return [];
             const perGuildSkills = new Map();
             const perGuildSpells = new Map();
             const skillById = new Map(r.skills.map((s) => [s.id, s]));
             const spellById = new Map(r.spells.map((s) => [s.id, s]));
-            // Attribute each learned skill/spell to the guild that unlocked
-            // it first (lowest level) — matches the Zcreator grouping.
+            // Attribute each learned skill/spell to the guild that
+            // unlocked it first (lowest level) — matches the Zcreator
+            // grouping.
             for (const [idRaw, pct] of Object.entries(r.skillLearned)) {
                 const id = +idRaw; const learned = pct | 0;
                 if (learned <= 0) continue;
@@ -115,43 +126,48 @@ export default {
                 if (!perGuildSpells.has(best.guild.id)) perGuildSpells.set(best.guild.id, { guild: best.guild, items: [] });
                 perGuildSpells.get(best.guild.id).items.push({ name: (spellById.get(id) || {}).name || ('#' + id), n: Math.floor(learned / 5) });
             }
-            // Walk guilds in pick order so output is stable.
-            const guildOrder = r.resolvedPicks.map((p) => p.guild);
-            for (const g of guildOrder) {
+            const chunks = (items, verb) => {
+                const parts = [];
+                for (const it of items) {
+                    let left = it.n;
+                    while (left > 0) {
+                        const take = left > 20 ? 20 : left;
+                        parts.push(`${take} ${verb} ${it.name}`);
+                        left -= take;
+                    }
+                }
+                return parts.join(';');
+            };
+            const out = [];
+            for (const p of r.resolvedPicks) {
+                const g = p.guild;
                 const s = perGuildSkills.get(g.id);
                 const sp = perGuildSpells.get(g.id);
                 if (!s && !sp) continue;
-                const chunks = (items, verb) => {
-                    const parts = [];
-                    for (const it of items) {
-                        let left = it.n;
-                        while (left > 0) {
-                            const take = left > 20 ? 20 : left;
-                            parts.push(`${take} ${verb} ${it.name}`);
-                            left -= take;
-                        }
-                    }
-                    return parts.join(';');
-                };
                 const trainLine = s ? chunks(s.items, 'train') : '';
                 const studyLine = sp ? chunks(sp.items, 'study') : '';
-                if (!trainLine && !studyLine) continue;
-                if (out.length) out.push('');
-                out.push(`${g.name}:`);
-                if (trainLine) out.push(trainLine);
-                if (studyLine) out.push(studyLine);
+                const commands = [trainLine, studyLine].filter(Boolean).join('\n');
+                if (!commands) continue;
+                out.push({ guild: { id: g.id, name: g.name }, commands });
             }
-            return out.join('\n');
+            return out;
+        },
+        // `select <wish>` commands for every wish currently picked,
+        // joined by `;` so the whole string pastes as one input.
+        wishSelectText() {
+            const r = this.reinc;
+            const picked = r.wishesCatalog.filter((w) => r.selectedWishes.has(w.id));
+            if (!picked.length) return '';
+            return picked.map((w) => `select ${w.name.toLowerCase()}`).join(';');
         },
     },
     methods: {
-        async copy(kind) {
-            const text = kind === 'summary' ? this.summaryText : this.commandsText;
+        async copyText(key, text) {
             if (!text) return;
             try {
                 await navigator.clipboard.writeText(text);
-                this.copied = kind;
-                setTimeout(() => { if (this.copied === kind) this.copied = ''; }, 1500);
+                this.copied = key;
+                setTimeout(() => { if (this.copied === key) this.copied = ''; }, 1500);
             } catch (e) {
                 this.reinc.$root.flashMsg('Copy failed — select the text manually', 'danger');
             }
@@ -165,21 +181,51 @@ export default {
         <section class="ex-section">
             <div class="ex-head d-flex align-items-center justify-content-between">
                 <span>Character Summary</span>
-                <button class="btn btn-sm btn-outline-primary" @click="copy('summary')" :disabled="!summaryText">
+                <button class="btn btn-sm btn-outline-primary" @click="copyText('summary', summaryText)" :disabled="!summaryText">
                     {{ copied === 'summary' ? 'Copied!' : 'Copy' }}
                 </button>
             </div>
             <pre class="export-pre">{{ summaryText || '(select a race first)' }}</pre>
         </section>
+
+        <section class="ex-section">
+            <div class="ex-head">
+                <span>Train / Study Commands</span>
+                <div class="small text-muted fw-normal">One block per guild — the copy button copies only the command line, not the guild name, so you can paste it while standing in that guildhall.</div>
+            </div>
+            <div v-if="!commandBlocks.length" class="text-muted small">
+                (nothing to train — set some skill/spell percents first)
+            </div>
+            <div v-for="blk in commandBlocks" :key="blk.guild.id" class="per-guild-block">
+                <div class="per-guild-head">
+                    <strong class="small">{{ blk.guild.name }}</strong>
+                    <button class="btn btn-sm btn-outline-primary" @click="copyText('g' + blk.guild.id, blk.commands)">
+                        {{ copied === 'g' + blk.guild.id ? 'Copied!' : 'Copy' }}
+                    </button>
+                </div>
+                <pre class="export-pre">{{ blk.commands }}</pre>
+            </div>
+        </section>
+
         <section class="ex-section">
             <div class="ex-head d-flex align-items-center justify-content-between">
-                <span>Train / Study Commands</span>
-                <button class="btn btn-sm btn-outline-primary" @click="copy('commands')" :disabled="!commandsText">
-                    {{ copied === 'commands' ? 'Copied!' : 'Copy' }}
+                <span>Select Wishes</span>
+                <button class="btn btn-sm btn-outline-primary" @click="copyText('wishes', wishSelectText)" :disabled="!wishSelectText">
+                    {{ copied === 'wishes' ? 'Copied!' : 'Copy' }}
                 </button>
             </div>
-            <pre class="export-pre">{{ commandsText || '(nothing to train — set some skill/spell percents first)' }}</pre>
+            <pre class="export-pre">{{ wishSelectText || '(no wishes selected)' }}</pre>
         </section>
     </div>
 </div>
 </template>
+
+<style scoped>
+.per-guild-block + .per-guild-block { margin-top: 0.75rem; }
+.per-guild-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+</style>

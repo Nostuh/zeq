@@ -518,10 +518,42 @@ export default {
             s.has(id) ? s.delete(id) : s.add(id);
             this.selectedWishes = s;
         },
+        selectAllWishes() {
+            this.selectedWishes = new Set(this.wishesCatalog.map((w) => w.id));
+        },
+        clearAllWishes() { this.selectedWishes = new Set(); },
         toggleBoon(id) {
             const s = new Set(this.selectedBoons);
             s.has(id) ? s.delete(id) : s.add(id);
             this.selectedBoons = s;
+        },
+        selectAllBoons() {
+            this.selectedBoons = new Set(this.boonsCatalog.map((b) => b.id));
+        },
+        clearAllBoons() { this.selectedBoons = new Set(); },
+        // Gimdori Mode — max every skill and spell the currently-picked
+        // guilds unlock. The user's guild selection is intentionally left
+        // alone: this button is for the common "I already picked my
+        // guilds, now train everything to the cap" case. Wishes, boons,
+        // free levels, and quest points are also left alone — use the
+        // Extras-tab All/None buttons if you want to fill those.
+        async gimdoriMode() {
+            if (!this.resolvedPicks.length) {
+                this.$root.flashMsg('Pick at least one guild first', 'danger');
+                return;
+            }
+            // Make sure every picked guild has its skill/spell data loaded
+            // — otherwise skillRows/spellRows would silently skip them.
+            for (const p of this.resolvedPicks) {
+                if (!this.guildData[p.guild.id]) {
+                    try { await this.loadGuildData(p.guild.id); }
+                    catch (e) { /* ignore — the row will just be absent */ }
+                }
+            }
+            await this.$nextTick();
+            this.maxAllSkills();
+            this.maxAllSpells();
+            this.$root.flashMsg('Gimdori Mode — skills and spells maxed');
         },
         setMaxSkill() {
             if (!this.activeSkill) return;
@@ -652,7 +684,11 @@ export default {
             <div class="sb-cell"><span class="sb-label">Spells XP</span><span class="sb-value" :title="nfmt(spellExpTotal)">{{ sfmt(spellExpTotal) }}</span></div>
             <div class="sb-cell"><span class="sb-label">Race Lv XP</span><span class="sb-value" :title="nfmt(levelExpObj.raceExp)">{{ sfmt(levelExpObj.raceExp) }}</span></div>
             <div class="sb-cell"><span class="sb-label">Guild Lv XP</span><span class="sb-value" :title="nfmt(levelExpObj.guildExp)">{{ sfmt(levelExpObj.guildExp) }}</span></div>
-            <div class="sb-cell"><span class="sb-label">Stat XP</span><span class="sb-value" :title="nfmt(statExpTotal)">{{ sfmt(statExpTotal) }}</span></div>
+            <!-- Stat XP hidden: the game no longer has a stat room, so
+                 the Stat Training section in TabExtras is commented out
+                 and this readout is always 0. Restore this chip if
+                 stat training ever comes back. -->
+            <!-- <div class="sb-cell"><span class="sb-label">Stat XP</span><span class="sb-value" :title="nfmt(statExpTotal)">{{ sfmt(statExpTotal) }}</span></div> -->
             <div class="sb-cell"><span class="sb-label">QPs Need</span><span class="sb-value" :title="nfmt(qpsNeeded)">{{ sfmt(qpsNeeded) }}</span></div>
             <div class="sb-cell"><span class="sb-label">QPs Left</span><span class="sb-value" :title="nfmt(levelExpObj.qpsLeft)">{{ sfmt(levelExpObj.qpsLeft) }}</span></div>
         </div>

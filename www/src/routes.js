@@ -11,6 +11,7 @@ import EquipmentAll from './components/EquipmentAll.vue';
 import EquipmentAdd from './components/EquipmentAdd.vue';
 import Reinc from './components/Reinc.vue';
 import Bugs from './components/Bugs.vue';
+import Updates from './components/Updates.vue';
 
 export const routes = [
     // Public landing: the reinc planner is the homepage.
@@ -28,6 +29,7 @@ export const routes = [
     { path: '/costs', name: 'costs', component: Costs },
     { path: '/users', name: 'users', component: Users },
     { path: '/bugs', name: 'bugs', component: Bugs },
+    { path: '/updates', name: 'updates', component: Updates },
     { path: '/equipment', name: 'equipment', component: Equipment },
     { path: '/equipment-all', name: 'equipment-all', component: EquipmentAll },
     { path: '/equipment-add', name: 'equipment-add', component: EquipmentAdd },

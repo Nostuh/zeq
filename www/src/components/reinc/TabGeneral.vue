@@ -119,7 +119,13 @@ export default {
             Level / XP / QP totals live in the header above — they update live
             as you adjust guilds, free levels, quest points, skills, and wishes.
         </div>
-        <button class="btn btn-danger btn-sm mt-2" @click="reinc.reset">RESET</button>
+        <div class="d-flex gap-2 mt-2">
+            <button class="btn btn-danger btn-sm" @click="reinc.reset">RESET</button>
+            <button class="btn btn-warning btn-sm fw-bold" @click="reinc.gimdoriMode"
+                    title="Max every skill and spell taught by the guilds you've already picked. Leaves guild selection, wishes, boons, and quest points alone.">
+                💪 GIMDORI MODE
+            </button>
+        </div>
     </div>
     </div><!-- /general-grid -->
 </div>

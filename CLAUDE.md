@@ -31,14 +31,14 @@ See [docs/schema.md](docs/schema.md).
   matching the filename; auto-mounted at `/api/<filename>`.
 - Auth: session cookie + roles `admin`/`editor`/`viewer`; see [docs/auth.md](docs/auth.md).
 - Vue: components in `www/src/components/`; ignore `old_components/`.
-- UI: dense Bootstrap tables; viewers see data, no edit controls. Every
-  change must work desktop/tablet/mobile — CSS grid + `@media`, no fixed
-  px widths. Gate on `cd scripts/test && node responsive.mjs` (headless
-  Chromium, 6 viewports). See [docs/ui.md](docs/ui.md), [docs/testing.md](docs/testing.md).
+- UI: dense Bootstrap tables; viewers see data, no edit controls. Must
+  work desktop/tablet/mobile via CSS grid + `@media` (no fixed px). Gate
+  on `cd scripts/test && node responsive.mjs`. See [docs/ui.md](docs/ui.md), [docs/testing.md](docs/testing.md).
 - API shape: `{ok:true,data}` / `{ok:false,error}`; see [docs/api.md](docs/api.md).
 - Reinc planner: public at `/`, targets ZombieMUD. Math changes MUST cite
   `/tmp/Zcreator-Enhanced/decompiled_source/CharCreator/`. Page locked to
   `100vh` — never add page-level scroll. See [docs/reinc.md](docs/reinc.md), [docs/seo.md](docs/seo.md).
+- Updates feed: every user-visible fix/feature → `site_updates` row (set `bug_id` when from a report). No refactors. See [docs/updates.md](docs/updates.md).
 
 ## Running
 
