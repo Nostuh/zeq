@@ -30,11 +30,17 @@ export default {
 
             // Import-from-text card: admin pastes the in-game
             // `info short` + `info full` blob, previews the parse
-            // via dry_run, then commits.
+            // via dry_run, then commits. Unknown skill/spell names
+            // surface as editable rows so the admin can create the
+            // missing catalog entries inline instead of bouncing out
+            // to the Skills/Spells pages.
             showImport: false,
             importText: '',
             importPreview: null,
             importLoading: false,
+            // Draft rows for missing catalog items. Keyed by name.
+            importSkillDrafts: {},
+            importSpellDrafts: {},
         };
     },
     computed: {
@@ -218,8 +224,74 @@ export default {
             try {
                 const r = await axios.post(`/api/game/guilds/${this.id}/import-text`,
                     { text: this.importText, dry_run: true });
-                if (r.data.ok) { this.importPreview = r.data.data; }
+                if (r.data.ok) {
+                    this.importPreview = r.data.data;
+                    // Seed draft rows for every missing name so the
+                    // UI can show editable inputs. Keep any drafts
+                    // the admin already typed for names that still
+                    // appear in the refreshed preview.
+                    const nextSk = {};
+                    for (const n of r.data.data.missing_skills) {
+                        nextSk[n] = this.importSkillDrafts[n] || { start_cost: 0 };
+                    }
+                    this.importSkillDrafts = nextSk;
+                    const nextSp = {};
+                    for (const n of r.data.data.missing_spells) {
+                        nextSp[n] = this.importSpellDrafts[n] || { start_cost: 0 };
+                    }
+                    this.importSpellDrafts = nextSp;
+                }
                 else this.$root.flashMsg(r.data.error, 'danger');
+            } catch (e) { this.$root.flashError(e); }
+            finally { this.importLoading = false; }
+        },
+        async createMissingSkill(name) {
+            const draft = this.importSkillDrafts[name];
+            if (!draft) return;
+            try {
+                const r = await axios.post('/api/game/skills', {
+                    name, start_cost: parseInt(draft.start_cost, 10) || 0,
+                });
+                if (r.data.ok) {
+                    this.$root.flashMsg(`Created skill "${name}"`);
+                    await this.previewImport();
+                } else this.$root.flashMsg(r.data.error, 'danger');
+            } catch (e) { this.$root.flashError(e); }
+        },
+        async createMissingSpell(name) {
+            const draft = this.importSpellDrafts[name];
+            if (!draft) return;
+            try {
+                const r = await axios.post('/api/game/spells', {
+                    name, start_cost: parseInt(draft.start_cost, 10) || 0,
+                });
+                if (r.data.ok) {
+                    this.$root.flashMsg(`Created spell "${name}"`);
+                    await this.previewImport();
+                } else this.$root.flashMsg(r.data.error, 'danger');
+            } catch (e) { this.$root.flashError(e); }
+        },
+        // Create every missing skill AND spell using whatever
+        // start_cost the admin typed into each draft row (defaulting
+        // to 0). Reloads the preview once at the end.
+        async createAllMissing() {
+            if (!this.importPreview) return;
+            this.importLoading = true;
+            try {
+                for (const name of this.importPreview.missing_skills) {
+                    const draft = this.importSkillDrafts[name] || { start_cost: 0 };
+                    await axios.post('/api/game/skills', {
+                        name, start_cost: parseInt(draft.start_cost, 10) || 0,
+                    });
+                }
+                for (const name of this.importPreview.missing_spells) {
+                    const draft = this.importSpellDrafts[name] || { start_cost: 0 };
+                    await axios.post('/api/game/spells', {
+                        name, start_cost: parseInt(draft.start_cost, 10) || 0,
+                    });
+                }
+                this.$root.flashMsg('Missing entries created');
+                await this.previewImport();
             } catch (e) { this.$root.flashError(e); }
             finally { this.importLoading = false; }
         },
@@ -312,7 +384,9 @@ export default {
             <button class="btn btn-sm btn-primary" @click="previewImport" :disabled="importLoading || !importText.trim()">
                 {{ importLoading ? 'Working…' : 'Preview' }}
             </button>
-            <button class="btn btn-sm btn-success" @click="commitImport" :disabled="!importPreview || importLoading">
+            <button class="btn btn-sm btn-success" @click="commitImport"
+                    :disabled="!importPreview || importLoading
+                               || (importPreview && (importPreview.missing_skills.length || importPreview.missing_spells.length))">
                 Commit
             </button>
             <button class="btn btn-sm btn-secondary" @click="cancelImport">Cancel</button>
@@ -326,14 +400,60 @@ export default {
                 <strong>{{ importPreview.parsed.spells }}</strong> spell unlocks
                 (<span :class="{ 'text-danger': importPreview.missing_spells.length }">{{ importPreview.resolved.spells }} matched</span>).
             </div>
-            <div v-if="importPreview.missing_skills.length" class="text-danger">
-                Unknown skills (add to the Skills catalog first):
-                <code v-for="n in importPreview.missing_skills" :key="n" class="me-2">{{ n }}</code>
+
+            <!-- Inline catalog add: whenever the parser finds a skill
+                 or spell name that isn't in game_skills / game_spells,
+                 we surface it here with a start_cost input and a
+                 Create button. Admins can also click Create all to
+                 bulk-create every row at whatever cost they typed
+                 (defaulting to 0 so it's obvious which ones still
+                 need a real cost). Preview auto-reloads after each
+                 create so resolved counts update in place. -->
+            <div v-if="importPreview.missing_skills.length || importPreview.missing_spells.length" class="mt-2">
+                <div class="alert alert-warning p-2 mb-2">
+                    The parser found names that aren't in the skill/spell catalog yet.
+                    Fill in each <code>start_cost</code> (leave 0 if you don't know it — you can edit later on the Skills/Spells page),
+                    then Create each row or use <em>Create all</em>. Commit will be enabled once every row resolves.
+                </div>
+                <button class="btn btn-sm btn-warning mb-2" :disabled="importLoading" @click="createAllMissing">
+                    Create all ({{ importPreview.missing_skills.length + importPreview.missing_spells.length }})
+                </button>
+
+                <div v-if="importPreview.missing_skills.length" class="mb-2">
+                    <h6 class="mb-1">Missing skills</h6>
+                    <table class="table table-sm mb-0">
+                        <thead><tr><th>Name</th><th style="width:8em;">Start cost</th><th style="width:7em;"></th></tr></thead>
+                        <tbody>
+                            <tr v-for="n in importPreview.missing_skills" :key="n">
+                                <td><code>{{ n }}</code></td>
+                                <td>
+                                    <input type="number" min="0" class="form-control form-control-sm"
+                                           v-model.number="importSkillDrafts[n].start_cost">
+                                </td>
+                                <td><button class="btn btn-sm btn-outline-primary" @click="createMissingSkill(n)">Create</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div v-if="importPreview.missing_spells.length" class="mb-2">
+                    <h6 class="mb-1">Missing spells</h6>
+                    <table class="table table-sm mb-0">
+                        <thead><tr><th>Name</th><th style="width:8em;">Start cost</th><th style="width:7em;"></th></tr></thead>
+                        <tbody>
+                            <tr v-for="n in importPreview.missing_spells" :key="n">
+                                <td><code>{{ n }}</code></td>
+                                <td>
+                                    <input type="number" min="0" class="form-control form-control-sm"
+                                           v-model.number="importSpellDrafts[n].start_cost">
+                                </td>
+                                <td><button class="btn btn-sm btn-outline-primary" @click="createMissingSpell(n)">Create</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div v-if="importPreview.missing_spells.length" class="text-danger">
-                Unknown spells (add to the Spells catalog first):
-                <code v-for="n in importPreview.missing_spells" :key="n" class="me-2">{{ n }}</code>
-            </div>
+
             <div v-if="!importPreview.missing_skills.length && !importPreview.missing_spells.length" class="text-success">
                 Everything resolves — Commit will delete this guild's existing rows and replace them with the parse.
             </div>

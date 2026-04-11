@@ -25,7 +25,11 @@ try {
             const ip = (req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '').toString().split(',')[0].trim() || '-';
             const path = req.originalUrl || req.url || '';
             const ms = Date.now() - start;
-            console.log(`[req] ${req.method} ${path} ${res.statusCode} ${ms}ms ${ip}`);
+            // Timestamp each line so pm2 logs / pm2 monit can be
+            // scanned for time-of-day traffic patterns without
+            // needing pm2's own timestamp flag. ISO keeps it sortable.
+            const ts = new Date().toISOString();
+            console.log(`[req ${ts}] ${req.method} ${path} ${res.statusCode} ${ms}ms ${ip}`);
         });
         next();
     });
