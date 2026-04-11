@@ -185,15 +185,23 @@ export function computeCharacter({
 
 // ----- Experience -----
 
-// Build a length-20 "costs" array mirroring setCosts(skillCost, costs[]).
-// costs[] here is the per-5% multiplier from costs.txt (20 entries).
+// Build a length-20 "costs" array mirroring SkillSpell.setCosts(skillCost, costs[])
+// at SkillSpell.cs:225. `costs` is the per-5% multiplier table from costs.txt
+// (20 entries); `charSkillCost` is the race's skill_cost or spell_cost.
+//
+// CRITICAL: maxcost = charSkillCost × 100000, NOT startCost × 100000. The
+// C# parameter is named `skillCost` and is the race multiplier — the per-skill
+// `startCost` is a separate field. Earlier code in this file used startCost
+// here and that produced per-bucket caps 10–50× too high for skills with
+// large startCost values, inflating Total Exp by ~48× for a maxed Devil
+// build (3.3B in Zcreator vs 158B here). See bug #14.
 export function buildSkillCostArray(startCost, costs, charSkillCost) {
     const out = new Array(20).fill(0);
-    const maxcost = startCost * 100000;
+    const maxcost = (charSkillCost | 0) * 100000;
     for (let i = 0; i < 20; i++) {
-        let n = startCost * costs[i];
+        let n = (startCost | 0) * (costs[i] | 0);
         if (n >= 100) n -= n % 100;
-        let n2 = n * (charSkillCost / 100);
+        let n2 = n * ((charSkillCost | 0) / 100);
         if (n2 > maxcost || n2 < 0) n2 = maxcost;
         if (n2 < 100) n2 = 100;
         if (n2 % 5 !== 0) n2 += 5 - (n2 % 5);
@@ -220,29 +228,35 @@ export function skillExp(percent, costArray, maxcost = 0) {
     return exp;
 }
 
-// Level/guild/free-level experience from the C# updateExperience().
-// guildLevels = integer, freeLevels = integer, qps = integer
-// levelCosts is an array indexed by level-1 (length ~120).
+// Level experience — mirrors Character.cs:1046 updateExperience() exactly.
+// One loop over j = 0 .. (guildLevels + freeLevels - 1):
+//   - "Race" bucket gets the FULL levelCost[j], or 0.75× if remaining QPs
+//     can cover qpCosts[j] for that level (and the QPs are deducted).
+//   - "Guild" bucket gets an EXTRA 0.4× levelCost[j] for guild levels only
+//     (j < guildLevels). This is on top of the Race contribution.
+// QPs flow from level 0 upward and discount whatever level slots they reach
+// first — guild levels are not exempt.
 export function computeLevelExp({ guildLevels, freeLevels, qps, levelCosts, questCosts }) {
-    let raceExp = 0, guildExp = 0, levelExp = 0;
-    for (let j = 0; j < guildLevels && j < levelCosts.length; j++) {
-        raceExp += levelCosts[j] * 0.4 - ((levelCosts[j] * 0.4) % 100);
-        guildExp += levelCosts[j] * 0.4 - ((levelCosts[j] * 0.4) % 100);
-    }
+    const total = (guildLevels | 0) + (freeLevels | 0);
+    const cap = Math.min(total, levelCosts.length, questCosts.length);
+    let raceExp = 0, guildExp = 0;
     let qpsLeft = qps | 0;
-    const totalExtras = freeLevels | 0;
-    for (let j = 0; j < totalExtras; j++) {
-        const idx = guildLevels + j;
-        if (idx >= levelCosts.length) break;
-        const qpNeeded = questCosts[idx] | 0;
+    for (let j = 0; j < cap; j++) {
+        const lc = levelCosts[j] | 0;
+        const qpNeeded = questCosts[j] | 0;
         if (qpNeeded <= qpsLeft) {
             qpsLeft -= qpNeeded;
-            levelExp += levelCosts[idx] * 0.75 - ((levelCosts[idx] * 0.75) % 100);
+            const discounted = lc * 0.75;
+            raceExp += discounted - (discounted % 100);
         } else {
-            levelExp += levelCosts[idx];
+            raceExp += lc;
+        }
+        if (j < guildLevels) {
+            const g = lc * 0.4;
+            guildExp += g - (g % 100);
         }
     }
-    return { raceExp: Math.floor(raceExp), guildExp: Math.floor(guildExp), levelExp: Math.floor(levelExp), qpsLeft };
+    return { raceExp: Math.floor(raceExp), guildExp: Math.floor(guildExp), qpsLeft };
 }
 
 export function computeStatExp(stats, statCosts) {

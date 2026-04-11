@@ -46,6 +46,16 @@ export default {
             skillLearned: {},               // skill_id -> current %
             activeSpellId: null,
             spellLearned: {},
+
+            // "What does this guild teach?" modal — bug #13.
+            // `infoGuildId` is null when closed; the data comes from
+            // `guildData[infoGuildId]`, lazy-loaded the same way picks are.
+            // `infoGuildLevel` is the level slider inside the modal so the
+            // user can preview unlocks at any level (defaulted to the picked
+            // level when applicable, else the guild's max_level).
+            infoGuildId: null,
+            infoGuildLevel: 0,
+            infoLoading: false,
         };
     },
     computed: {
@@ -240,17 +250,19 @@ export default {
         },
         totalExp() {
             return this.skillExpTotal + this.spellExpTotal + this.statExpTotal
-                 + this.levelExpObj.raceExp + this.levelExpObj.guildExp + this.levelExpObj.levelExp;
+                 + this.levelExpObj.raceExp + this.levelExpObj.guildExp;
         },
         goldRequired() {
             return Math.floor((this.skillExpTotal + this.spellExpTotal) / 2250);
         },
         qpsNeeded() {
-            // Minimum QPs to afford every free level at the 75% discount.
+            // Mirrors Character.cs:978 qpsneeded — sums questCosts across
+            // EVERY level (guild + free), starting at level 0. QPs discount
+            // every level the budget reaches, not just the free-level tail.
             let total = 0;
-            for (let j = this.guildLevelsSum; j < this.guildLevelsSum + this.freeLevels; j++) {
-                total += this.levelCostMap.quest[j] || 0;
-            }
+            const end = this.guildLevelsSum + this.freeLevels;
+            const arr = this.levelCostMap.quest;
+            for (let j = 0; j < end && j < arr.length; j++) total += arr[j] | 0;
             return total;
         },
         wishTpUsed() {
@@ -267,6 +279,46 @@ export default {
             const m = { generic: [], lesser: [], greater: [], resist: [], other: [] };
             for (const w of this.wishesCatalog) (m[w.category] || (m.other)).push(w);
             return m;
+        },
+        infoGuild() {
+            return this.infoGuildId == null ? null : this.guilds.find((g) => g.id === this.infoGuildId) || null;
+        },
+        // Skills and spells the info-modal guild teaches at or below
+        // `infoGuildLevel`. Sorted by unlock-level then name so the
+        // progression reads top-to-bottom. Skills/spells unlocked at
+        // multiple levels collapse to their lowest unlock level.
+        infoGuildUnlocks() {
+            if (!this.infoGuild) return { skills: [], spells: [] };
+            const data = this.guildData[this.infoGuildId];
+            if (!data) return { skills: [], spells: [] };
+            const lvl = this.infoGuildLevel | 0;
+            const skillById = new Map();
+            for (const r of data.skills || []) {
+                if (r.level > lvl) continue;
+                const prev = skillById.get(r.skill_id);
+                if (!prev || r.level < prev.level) {
+                    const name = (this.skills.find((s) => s.id === r.skill_id) || {}).name || ('#' + r.skill_id);
+                    skillById.set(r.skill_id, { id: r.skill_id, name, level: r.level, max_percent: r.max_percent });
+                } else if (r.max_percent > prev.max_percent) {
+                    prev.max_percent = r.max_percent;
+                }
+            }
+            const spellById = new Map();
+            for (const r of data.spells || []) {
+                if (r.level > lvl) continue;
+                const prev = spellById.get(r.spell_id);
+                if (!prev || r.level < prev.level) {
+                    const name = (this.spells.find((s) => s.id === r.spell_id) || {}).name || ('#' + r.spell_id);
+                    spellById.set(r.spell_id, { id: r.spell_id, name, level: r.level, max_percent: r.max_percent });
+                } else if (r.max_percent > prev.max_percent) {
+                    prev.max_percent = r.max_percent;
+                }
+            }
+            const sortFn = (a, b) => a.level - b.level || a.name.localeCompare(b.name);
+            return {
+                skills: [...skillById.values()].sort(sortFn),
+                spells: [...spellById.values()].sort(sortFn),
+            };
         },
         groupedBoons() {
             const m = { racial: [], minor: [], preference: [], knowledge: [], weapon: [], lesser: [], greater: [] };
@@ -350,6 +402,17 @@ export default {
             const r = await axios.get('/api/game/reinc-guild/' + id);
             this.guildData[id] = r.data.data;
         },
+        async openGuildInfo(g) {
+            this.infoGuildId = g.id;
+            const pick = this.guildPicks.find((p) => p.guildId === g.id);
+            this.infoGuildLevel = pick ? pick.level : g.max_level;
+            if (!this.guildData[g.id]) {
+                this.infoLoading = true;
+                try { await this.loadGuildData(g.id); }
+                finally { this.infoLoading = false; }
+            }
+        },
+        closeGuildInfo() { this.infoGuildId = null; },
         parentOf(g) {
             return g && g.parent_id ? this.guilds.find((x) => x.id === g.parent_id) : null;
         },
@@ -599,6 +662,11 @@ export default {
                     <input v-if="isPicked(g)" type="number" class="form-control form-control-sm level-input"
                            :value="pickLevel(g)" @input="setPickLevel(g, $event.target.value)" :max="g.max_level" min="1">
                     <span v-if="isPicked(g)" class="small text-muted ms-1">/ {{ g.max_level }}</span>
+                    <button type="button" class="btn btn-link btn-sm guild-info-btn"
+                            :disabled="isLocked(g)"
+                            @click.stop.prevent="openGuildInfo(g)"
+                            :title="`Show skills and spells taught by ${g.name}`"
+                            aria-label="Show skills and spells">ⓘ</button>
                 </div>
             </div>
         </div>
@@ -650,7 +718,8 @@ export default {
                 <div class="lg-row"><span>Guild Levels:</span><span class="readout">{{ guildLevelsSum }}</span></div>
                 <div class="lg-row"><span>Free Levels:</span><span class="readout">{{ freeLevels }}</span></div>
                 <div class="lg-row"><span>Quest Points:</span><input type="number" v-model.number="quest" class="form-control form-control-sm"></div>
-                <div class="lg-row"><span>QPs Needed:</span><span class="readout">{{ qpsNeeded }}</span></div>
+                <div class="lg-row"><span>QPs Needed:</span><span class="readout">{{ nfmt(qpsNeeded) }}</span></div>
+                <div class="lg-row"><span>QPs Left:</span><span class="readout">{{ nfmt(levelExpObj.qpsLeft) }}</span></div>
             </div>
 
             <table class="exp-table small">
@@ -658,7 +727,6 @@ export default {
                 <tr><td>Experience for Spells:</td><td class="text-end">{{ nfmt(spellExpTotal) }}</td></tr>
                 <tr><td>Experience for Race Levels:</td><td class="text-end">{{ nfmt(levelExpObj.raceExp) }}</td></tr>
                 <tr><td>Experience for Guild Levels:</td><td class="text-end">{{ nfmt(levelExpObj.guildExp) }}</td></tr>
-                <tr><td>Experience for Free Levels:</td><td class="text-end">{{ nfmt(levelExpObj.levelExp) }}</td></tr>
                 <tr><td>Experience for Stat Training:</td><td class="text-end">{{ nfmt(statExpTotal) }}</td></tr>
                 <tr class="fw-bold"><td>Total Experience:</td><td class="text-end">{{ nfmt(totalExp) }}</td></tr>
                 <tr><td>Gold Required:</td><td class="text-end">{{ nfmt(goldRequired) }} gp</td></tr>
@@ -903,6 +971,55 @@ export default {
         </div>
         </div><!-- /boons-grid -->
     </div>
+
+<!-- Per-guild "what does this teach" modal — bug #13. -->
+<div v-if="infoGuild" class="reinc-modal-backdrop" @click.self="closeGuildInfo">
+    <div class="reinc-modal-panel">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="m-0">{{ infoGuild.name }}<span class="text-muted small ms-2">skills &amp; spells</span></h5>
+            <button type="button" class="btn-close" aria-label="Close" @click="closeGuildInfo"></button>
+        </div>
+        <div class="d-flex align-items-center gap-2 mb-2 small">
+            <label class="m-0">Show unlocks at level</label>
+            <input type="number" class="form-control form-control-sm rm-level-input"
+                   v-model.number="infoGuildLevel" min="1" :max="infoGuild.max_level">
+            <span class="text-muted">/ {{ infoGuild.max_level }}</span>
+            <input type="range" class="form-range flex-grow-1"
+                   v-model.number="infoGuildLevel" min="1" :max="infoGuild.max_level">
+        </div>
+        <div v-if="infoLoading" class="text-muted small">Loading…</div>
+        <div v-else class="rm-cols">
+            <div>
+                <h6 class="mb-1">Skills <span class="text-muted small">({{ infoGuildUnlocks.skills.length }})</span></h6>
+                <div v-if="!infoGuildUnlocks.skills.length" class="text-muted small">None at this level.</div>
+                <table v-else class="table table-sm small mb-0">
+                    <thead><tr><th>Lv</th><th>Name</th><th class="text-end">Max %</th></tr></thead>
+                    <tbody>
+                        <tr v-for="s in infoGuildUnlocks.skills" :key="s.id">
+                            <td class="text-muted">{{ s.level }}</td>
+                            <td>{{ s.name }}</td>
+                            <td class="text-end">{{ s.max_percent }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h6 class="mb-1">Spells <span class="text-muted small">({{ infoGuildUnlocks.spells.length }})</span></h6>
+                <div v-if="!infoGuildUnlocks.spells.length" class="text-muted small">None at this level.</div>
+                <table v-else class="table table-sm small mb-0">
+                    <thead><tr><th>Lv</th><th>Name</th><th class="text-end">Max %</th></tr></thead>
+                    <tbody>
+                        <tr v-for="s in infoGuildUnlocks.spells" :key="s.id">
+                            <td class="text-muted">{{ s.level }}</td>
+                            <td>{{ s.name }}</td>
+                            <td class="text-end">{{ s.max_percent }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 <div v-else class="p-3">Loading Zcreator data…</div>
 </template>
@@ -982,6 +1099,41 @@ export default {
 .guild-row.sub { padding-left: 1rem; }
 .guild-row.picked { background: #e7f1ff; }
 .guild-row.locked { opacity: 0.55; }
+.guild-info-btn {
+    padding: 0 0.35rem; line-height: 1; text-decoration: none;
+    color: #6c757d; font-size: 1rem;
+}
+.guild-info-btn:hover:not(:disabled) { color: #0d6efd; }
+.guild-info-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* Per-guild "what does this teach" modal — bug #13.
+ * Uses its own classes (not .modal-backdrop) so it doesn't collide with
+ * BugReportModal's scoped styles or Bootstrap's modal CSS. The panel
+ * scrolls internally because the planner page is locked to 100vh. */
+.reinc-modal-backdrop {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 2000;
+    display: flex; align-items: flex-start; justify-content: center;
+    padding: 3rem 1rem 1rem;
+    overflow-y: auto;
+}
+.reinc-modal-panel {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 44rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.35);
+}
+.rm-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.rm-level-input { width: 4.5rem; }
+@media (max-width: 720px) {
+    .rm-cols { grid-template-columns: 1fr; }
+    .reinc-modal-backdrop { padding: 1rem 0.5rem; }
+}
 .level-input { width: 4em; padding: 0.1rem 0.3rem; height: auto; }
 
 .racial-box, .computed-box {

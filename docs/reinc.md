@@ -118,28 +118,38 @@ boons, wish catalog, boon catalog.
 Implemented by `computeLevelExp()`. Inputs: `guildLevels` (sum of picked
 guild levels), `freeLevels`, `qps`, `levelCosts[]`, `questCosts[]`.
 
-```
-// Race and guild exp are IDENTICAL formulas in C#:
-for j in 0..guildLevels-1:
-    raceExp  += floor(levelCosts[j] * 0.4 / 100) * 100   // round down to 100
-    guildExp += floor(levelCosts[j] * 0.4 / 100) * 100
+The C# loop ([Character.cs:1046-1085](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Character.cs))
+walks **every level from 0 to total-1 in a single pass**. Quest points
+flow in starting at level 0 and discount whichever level slots they reach
+first — guild levels are NOT exempt; the QPs apply to them too. There is
+no separate "free levels" exp bucket: it all rolls up into "Race".
 
-// Free-level exp: first try to spend QPs at a 25% discount, then
-// fall back to full cost.
+```
+total = guildLevels + freeLevels
 qpsLeft = qps
-for j in guildLevels .. guildLevels+freeLevels-1:
+for j in 0..total-1:
     if questCosts[j] <= qpsLeft:
         qpsLeft -= questCosts[j]
-        levelExp += floor(levelCosts[j] * 0.75 / 100) * 100
+        raceExp += floor(levelCosts[j] * 0.75 / 100) * 100   // 25% discount
     else:
-        levelExp += levelCosts[j]       // full cost, no discount
+        raceExp += levelCosts[j]                              // full cost
+    if j < guildLevels:
+        guildExp += floor(levelCosts[j] * 0.4 / 100) * 100    // extra 40% on guild levels
 ```
+
+`raceExp` ends up as the C# `experience["Race"]` bucket; `guildExp` is
+`experience["Guild"]`. There is no third "Free Levels" bucket — the
+earlier JS implementation invented one and under-counted Race by ~60%.
 
 **Gold** = `floor((skillExp + spellExp) / 2250)` — no rounding is applied
 in the C# formula, this is the raw quotient.
 
-**QPs needed** = sum of `questCosts[j]` for every free-level slot. Shown
-alongside the current `quest` input so the user knows the target.
+**QPs needed** = sum of `questCosts[j]` for `j = 0 .. total-1` — i.e. the
+total QPs required to apply the 25% discount to **every** level the
+character has, guild levels included. Mirrors `Character.qpsneeded`
+([Character.cs:978](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Character.cs)).
+The UI shows a "QPs Left" readout next to the input so the user can see
+how much of their budget is unspent after the discount flow.
 
 ## Stat training — `Character.updateStatExp()`
 
@@ -159,7 +169,7 @@ length-20 array mapping 5% → `costArray[0]`, 10% → `costArray[1]`, ..,
 100% → `costArray[19]`:
 
 ```
-maxcost = startCost * 100000
+maxcost = charSkillCost * 100000           // race multiplier × 100000, NOT startCost
 for i in 0..19:
     n = startCost * costs[i]
     if n >= 100: n -= n % 100              // floor to nearest 100
@@ -169,6 +179,13 @@ for i in 0..19:
     if n2 % 5 != 0: n2 += 5 - (n2 % 5)     // round UP to nearest 5
     costArray[i] = floor(n2)
 ```
+
+**Watch the `maxcost` line.** The C# parameter is `skillCost` (the race
+multiplier), not `startCost`. An earlier version of `engine.js` used
+`startCost * 100000` and the per-bucket cap effectively never triggered
+for skills with high `start_cost` values like *gestalt conjuration*
+(10M). That inflated Total Exp by ~48× on a maxed Devil build (158B
+where Zcreator desktop showed 3.3B). See bug #14.
 
 `costs[]` is the per-5% multiplier array from `costs.txt` (our
 `game_ss_costs` table). `charSkillCost` is `race.skill_cost` or

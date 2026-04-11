@@ -24,6 +24,17 @@ Correct structure:
 </div>
 ```
 
+### `buildSkillCostArray` maxcost = race skillCost, NOT startCost
+[SkillSpell.cs:227](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/SkillSpell.cs)
+`int num = skillCost * 100000` — `skillCost` is the **parameter**, the race's
+`skill_cost` / `spell_cost`, **not** the per-skill `startCost`. The earlier
+JS implementation in `engine.js` did `const maxcost = startCost * 100000`
+and the per-bucket clamp effectively never fired for skills with large
+`start_cost` (gestalt conjuration is 10,000,000), so a maxed Devil build
+showed Total Exp of 158B where Zcreator desktop showed 3.3B (~48×). The
+sanity script in [scripts/test/sanity_level_exp.mjs](../scripts/test/sanity_level_exp.mjs)
+hand-ports `setCosts` against the engine module — keep it green.
+
 ### `(n | 0)` is signed 32-bit, not "integer cast"
 `Math.floor(Number(n))` is the safe way to truncate numbers for
 display. The planner's `nfmt()` started with `(n | 0).toLocaleString()`
