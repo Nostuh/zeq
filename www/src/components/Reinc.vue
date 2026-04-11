@@ -507,8 +507,10 @@ export default {
                     return ap - bp;
                 });
                 const parentLevelById = new Map();
+                const subBudgetByParent = new Map();
                 const validPicks = [];
                 const droppedSubs = [];
+                const clampedSubs = [];
                 for (const r of resolved) {
                     const g = r.guild;
                     if (g.parent_id) {
@@ -518,10 +520,24 @@ export default {
                             droppedSubs.push(g.name);
                             continue;
                         }
-                    } else {
-                        parentLevelById.set(g.id, r.level);
+                        // Guild.cs:200 — 15 sub levels per primary guild.
+                        const used = subBudgetByParent.get(g.parent_id) || 0;
+                        const room = 15 - used;
+                        if (room <= 0) { droppedSubs.push(g.name); continue; }
+                        let lvl = r.level;
+                        if (lvl > room) { lvl = room; clampedSubs.push(g.name); }
+                        subBudgetByParent.set(g.parent_id, used + lvl);
+                        validPicks.push({ guildId: g.id, level: lvl });
+                        continue;
                     }
+                    parentLevelById.set(g.id, r.level);
                     validPicks.push({ guildId: g.id, level: r.level });
+                }
+                if (clampedSubs.length) {
+                    this.$root.flashMsg(
+                        `Clamped subguild level${clampedSubs.length > 1 ? 's' : ''}: `
+                        + `${clampedSubs.join(', ')} (15 sub levels per primary guild)`,
+                        'danger');
                 }
                 if (droppedSubs.length) {
                     this.$root.flashMsg(
@@ -644,6 +660,30 @@ export default {
             if (!pick) return true;
             return (pick.level | 0) < (parent.max_level | 0);
         },
+        // Hard cap from Guild.cs:200 — `availSubLevels = 15` per primary
+        // guild. Sums currently-picked subguild levels under `parentId`,
+        // optionally excluding one sub (so an in-place edit can compute
+        // remaining headroom for itself).
+        subLevelsUnderParent(parentId, excludeSubId = null) {
+            const subIds = new Set(
+                this.guilds.filter((x) => x.parent_id === parentId).map((x) => x.id),
+            );
+            let sum = 0;
+            for (const p of this.guildPicks) {
+                if (!subIds.has(p.guildId)) continue;
+                if (p.guildId === excludeSubId) continue;
+                sum += (p.level | 0);
+            }
+            return sum;
+        },
+        subRoomFor(g) {
+            // Returns remaining sub-level headroom under g's parent if g is
+            // a subguild, else Infinity. Excludes g's own current pick so
+            // editing in place sees its own room.
+            if (!g.parent_id) return Infinity;
+            const used = this.subLevelsUnderParent(g.parent_id, g.id);
+            return Math.max(0, 15 - used);
+        },
         dropDependentsOf(parentGuild) {
             // Remove any selected subguilds whose parent is no longer valid.
             const subs = this.guilds.filter((x) => x.parent_id === parentGuild.id);
@@ -675,7 +715,13 @@ export default {
                 this.$root.flashMsg(`Total character level is capped at ${MAX_LEVEL}`, 'danger');
                 return;
             }
-            const startLevel = Math.min(g.max_level, room);
+            // Per-primary subguild cap (Guild.cs:200, availSubLevels = 15).
+            const subRoom = this.subRoomFor(g);
+            if (subRoom <= 0) {
+                this.$root.flashMsg('Only 15 subguild levels allowed per primary guild', 'danger');
+                return;
+            }
+            const startLevel = Math.min(g.max_level, room, subRoom);
             this.guildPicks.push({ guildId: g.id, level: startLevel });
             await this.loadGuildData(g.id);
         },
@@ -687,10 +733,12 @@ export default {
         setPickLevel(g, v) {
             const p = this.guildPicks.find((pp) => pp.guildId === g.id);
             if (!p) return;
-            // Respect the per-guild max AND the global 120-level cap.
+            // Respect the per-guild max, the global 120-level cap, AND the
+            // 15-level per-parent subguild cap (Guild.cs:200).
             const otherSum = this.guildLevelsSum - p.level;
             const globalRoom = Math.max(0, MAX_LEVEL - otherSum);
-            const newLevel = Math.max(1, Math.min(g.max_level, globalRoom, parseInt(v, 10) || 0));
+            const subRoom = this.subRoomFor(g);
+            const newLevel = Math.max(1, Math.min(g.max_level, globalRoom, subRoom, parseInt(v, 10) || 0));
             p.level = newLevel;
             if (!g.parent_id && newLevel < g.max_level) this.dropDependentsOf(g);
         },

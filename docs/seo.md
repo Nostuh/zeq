@@ -1,6 +1,6 @@
 # SEO
 
-Nostuh is positioned as the canonical online reinc planner for
+Zorky's is positioned as the canonical online reinc planner for
 [ZombieMUD](http://zombiemud.org/). SEO is layered so crawlers and
 screen readers see rich semantic content without cluttering the actual
 UI.
@@ -42,7 +42,7 @@ A `<script type="application/ld+json">` block in `<head>` declares:
 - **`VideoGame`** — ZombieMUD, `@id: https://zombiemud.org/#game`,
   `genre: [MUD, Text-based MMORPG, Role-playing]`, `playMode: MultiPlayer`,
   `gamePlatform: Telnet/SSH`. This is the explicit link Google uses to
-  associate Nostuh with the game.
+  associate Zorky's with the game.
 - **`WebSite`** — the site entity with publisher info.
 
 Validate with Google's [Rich Results Test](https://search.google.com/test/rich-results)
@@ -73,7 +73,7 @@ the block.
 ## Layer 4: per-route document titles ([www/src/App.vue](../www/src/App.vue))
 
 `ROUTE_TITLES` in `App.vue` maps every route name to a distinct title,
-all anchored on `ZombieMUD` + `Nostuh`. Vue router's `$route` watcher
+all anchored on `ZombieMUD` + `Zorky's`. Vue router's `$route` watcher
 calls `syncDocumentTitle()` on every navigation so the Google crawler's
 JS rendering phase sees per-page titles even though the app is a SPA
 with hash routing.

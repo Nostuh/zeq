@@ -149,7 +149,7 @@ them without testing the old Equipment.vue flow still works.
 
 ### Session cookie is `sameSite: 'strict'` + `secure: true`
 After switching from `lax` → `strict`, a user following a link from an
-external site back into Nostuh will land unauthenticated. This is
+external site back into Zorky's will land unauthenticated. This is
 intentional (CSRF defense). Don't weaken it without a reason.
 
 ### Bug submissions carry captured context

@@ -112,7 +112,7 @@ export default {
         <div>
             <h2 class="mb-1">Recent Updates</h2>
             <p class="text-muted mb-0 small">
-                Fixes, tweaks, and new features to the Nostuh reinc planner.
+                Fixes, tweaks, and new features to the Zorky's reinc planner.
                 Items tagged with a bug number came from a user report via the
                 “Report Bug / Idea” button — thanks for the feedback!
             </p>

@@ -118,7 +118,7 @@ router.post('/login', async function(req, res) {
             httpOnly: true,
             // Strict (rather than Lax) — the session cookie will not
             // accompany ANY cross-site navigation. Users following a link
-            // from an external site back to Nostuh will land unauthenticated
+            // from an external site back to Zorky's will land unauthenticated
             // and must re-log in. No real UX loss since admin pages aren't
             // linked from elsewhere. Blocks all cross-site state-changing
             // requests at the cookie layer.

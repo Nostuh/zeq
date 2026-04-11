@@ -35,7 +35,7 @@ Each GET endpoint on `/api/game/*` uses `requireAuth`; every mutation
 - Cookie attributes: **`HttpOnly`**, **`SameSite=Strict`**, **`Secure`**,
   `Path=/`, `Max-Age=14d`. Strict sameSite means the cookie never
   accompanies cross-site navigation — users following an external link
-  into Nostuh land unauthenticated and must re-log in. This is the
+  into Zorky's land unauthenticated and must re-log in. This is the
   hardening pass from the bug-check punch list item #11; intentional
   CSRF defence, small UX cost.
 - `GET /api/auth/me` returns `{ok: true, data: user|null}`. The SPA

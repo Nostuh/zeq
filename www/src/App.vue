@@ -7,23 +7,23 @@ const PUBLIC_ROUTES = ['home', 'reinc', 'login', 'dashboard', 'updates', 'builds
 // Per-route <title> strings. Keep the ZombieMUD + reinc keyword prefix
 // in each one so Google's result snippets anchor on the same brand.
 const ROUTE_TITLES = {
-    home:           'Nostuh — ZombieMUD Reinc Planner & Character Calculator',
-    reinc:          'Nostuh — ZombieMUD Reinc Planner & Character Calculator',
-    dashboard:      'Nostuh — ZombieMUD Reinc Planner & Character Calculator',
-    login:          'Sign in — Nostuh ZombieMUD Reinc Planner',
-    races:          'ZombieMUD Races — Nostuh Reinc Planner',
-    guilds:         'ZombieMUD Guilds & Subguilds — Nostuh Reinc Planner',
-    'guild-detail': 'ZombieMUD Guild Detail — Nostuh Reinc Planner',
-    skills:         'ZombieMUD Skills — Nostuh Reinc Planner',
-    spells:         'ZombieMUD Spells — Nostuh Reinc Planner',
-    costs:          'ZombieMUD Cost Tables — Nostuh Reinc Planner',
-    users:          'User administration — Nostuh',
-    bugs:           'Bug reports — Nostuh',
-    updates:        'Recent updates — Nostuh ZombieMUD Reinc Planner',
-    builds:         'Shared reinc builds — Nostuh ZombieMUD Reinc Planner',
-    equipment:      'My Equipment — Nostuh',
-    'equipment-all':'All Equipment — Nostuh',
-    'equipment-add':'Add Equipment — Nostuh',
+    home:           "Zorky's — ZombieMUD Reinc Planner & Character Calculator",
+    reinc:          "Zorky's — ZombieMUD Reinc Planner & Character Calculator",
+    dashboard:      "Zorky's — ZombieMUD Reinc Planner & Character Calculator",
+    login:          "Sign in — Zorky's ZombieMUD Reinc Planner",
+    races:          "ZombieMUD Races — Zorky's Reinc Planner",
+    guilds:         "ZombieMUD Guilds & Subguilds — Zorky's Reinc Planner",
+    'guild-detail': "ZombieMUD Guild Detail — Zorky's Reinc Planner",
+    skills:         "ZombieMUD Skills — Zorky's Reinc Planner",
+    spells:         "ZombieMUD Spells — Zorky's Reinc Planner",
+    costs:          "ZombieMUD Cost Tables — Zorky's Reinc Planner",
+    users:          "User administration — Zorky's",
+    bugs:           "Bug reports — Zorky's",
+    updates:        "Recent updates — Zorky's ZombieMUD Reinc Planner",
+    builds:         "Shared reinc builds — Zorky's ZombieMUD Reinc Planner",
+    equipment:      "My Equipment — Zorky's",
+    'equipment-all':"All Equipment — Zorky's",
+    'equipment-add':"Add Equipment — Zorky's",
 };
 const DEFAULT_TITLE = ROUTE_TITLES.home;
 
@@ -172,9 +172,9 @@ export default {
       display:none — search engines penalise that. See docs/seo.md.
     -->
     <div class="visually-hidden" aria-hidden="false">
-        <h1>Nostuh — ZombieMUD Reinc Planner, Skill Cost Calculator and Character Builder</h1>
+        <h1>Zorky's — ZombieMUD Reinc Planner, Skill Cost Calculator and Character Builder</h1>
         <p>
-            Nostuh is a free online reincarnation planner and character calculator for
+            Zorky's is a free online reincarnation planner and character calculator for
             <a href="http://zombiemud.org/">ZombieMUD</a>, the long-running text-based
             multiplayer online role-playing game (MUD). Choose a race, stack one or more
             guilds and subguilds, assign stat training points, pick wishes and boons,
@@ -205,7 +205,7 @@ export default {
     </div>
 
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <router-link :to="{name:'home'}" class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-decoration-none">Nostuh — Reinc Planner</router-link>
+        <router-link :to="{name:'home'}" class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-decoration-none">Zorky's — Reinc Planner</router-link>
         <div class="navbar-nav flex-row ms-auto pe-3 align-items-center">
             <router-link class="nav-link text-light me-3" :to="{name:'home'}">Planner</router-link>
             <router-link class="nav-link text-light me-3" :to="{name:'builds'}">Builds</router-link>
