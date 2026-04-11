@@ -3,4 +3,5 @@ api/classes/config.json
 api/zeq.sql
 api/uploads/
 www/src/dist/
+scripts/test/out/
 api/uploads/
