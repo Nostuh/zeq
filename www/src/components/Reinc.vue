@@ -1404,6 +1404,19 @@ export default {
     .guild-list, .skill-list, .cost-table-wrap { max-height: none; }
     .general-grid, .skills-grid { flex: 0 0 auto; }
 }
+/* Short viewports (bug #25): at heights like 1024x654 the 3-column
+   desktop layout still applies, but the general-grid row is too short
+   for .race-list's 18rem cap + .guild-list, so the guild list gets
+   pushed past the bottom and clipped by .col-races { overflow: hidden }.
+   Mirror the narrow-width escape hatch: let .tab-body scroll internally
+   (still not a page-level scroll — honours the 100vh rule). */
+@media (max-height: 720px) {
+    .tab-body { overflow-y: auto; }
+    .col-races, .col-stats, .col-exp,
+    .col-skill-list, .col-skill-detail { overflow: visible; }
+    .guild-list, .skill-list, .cost-table-wrap { max-height: none; }
+    .general-grid, .skills-grid { flex: 0 0 auto; }
+}
 @media (max-width: 520px) {
     .summary-bar { font-size: 0.7rem; }
     .sb-cell { min-width: 2.75em; }

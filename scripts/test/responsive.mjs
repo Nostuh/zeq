@@ -39,6 +39,7 @@ const VIEWPORTS = [
     { label: 'mobile',       width: 360,  height: 780  }, // iPhone-ish
     { label: 'mobile-wide',  width: 414,  height: 900  }, // larger phone
     { label: 'tablet',       width: 800,  height: 1100 }, // portrait tablet
+    { label: 'short-laptop', width: 1024, height: 654  }, // bug #25 — General tab clipped guild list below search input
     { label: 'small-laptop', width: 1032, height: 703  }, // bug #23 — wishes/boons overlapped at this size
     { label: 'laptop',       width: 1280, height: 800  },
     { label: 'desktop',      width: 1600, height: 900  },

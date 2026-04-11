@@ -92,7 +92,14 @@ function sumWishEffects(wishes, wishCatalog) {
             acc.stat_wish += v * 3;
         }
         else if (k && k.startsWith('stat_pct_')) acc.stat_pct[k.slice(9)] = (acc.stat_pct[k.slice(9)] || 0) + v;
-        else if (k === 'skill_max') acc.skill_max += v;
+        else if (k === 'skill_max') {
+            // C# CharCreator.cs:3640-3673 — Better/Superior knowledge
+            // toggles bump BOTH cs.skWish and cs.spWish. There is no wish
+            // in the game that lifts skill max without also lifting spell
+            // max, so the single effect_key maps to both axes.
+            acc.skill_max += v;
+            acc.spell_max += v;
+        }
         else if (k === 'spell_max') acc.spell_max += v;
         else if (k === 'phys_wish') acc.phys_wish += v;
         else if (k === 'mag_wish') acc.mag_wish += v;
