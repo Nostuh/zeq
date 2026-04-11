@@ -205,36 +205,44 @@ export default {
         // Max" marker rows so the table visually matches the desktop app.
         skillCostRows() { return this._annotatedCostRows(this.skillCostTable, this.activeSkill, 'skill'); },
         spellCostRows() { return this._annotatedCostRows(this.spellCostTable, this.activeSpell, 'spell'); },
-        // Exp spent on the currently active skill/spell at its current `learned` value.
+        // Exp spent on the currently active skill/spell at its current
+        // `learned` value. We pass `maxcost` so the SkillSpell.updateExp
+        // tail clause for learned > 100 fires correctly when the planner
+        // ever caps a skill above 100% (a 120-cap skill on a max-skill
+        // race, for instance — the audit hits these cases).
         activeSkillExp() {
             if (!this.activeSkill || !this.race) return 0;
-            return skillExp(this.activeSkill.learned || 0, this.skillCostTable);
+            const maxcost = (this.race.skill_cost | 0) * 100000;
+            return skillExp(this.activeSkill.learned || 0, this.skillCostTable, maxcost);
         },
         activeSpellExp() {
             if (!this.activeSpell || !this.race) return 0;
-            return skillExp(this.activeSpell.learned || 0, this.spellCostTable);
+            const maxcost = (this.race.spell_cost | 0) * 100000;
+            return skillExp(this.activeSpell.learned || 0, this.spellCostTable, maxcost);
         },
         skillExpTotal() {
             if (!this.race) return 0;
+            const maxcost = (this.race.skill_cost | 0) * 100000;
             let total = 0;
             for (const row of this.skillRows) {
                 if (!row.learned) continue;
                 const full = this.skills.find((s) => s.id === row.skill_id);
                 if (!full) continue;
                 const arr = buildSkillCostArray(full.start_cost, this.ssCosts, this.race.skill_cost);
-                total += skillExp(row.learned, arr);
+                total += skillExp(row.learned, arr, maxcost);
             }
             return total;
         },
         spellExpTotal() {
             if (!this.race) return 0;
+            const maxcost = (this.race.spell_cost | 0) * 100000;
             let total = 0;
             for (const row of this.spellRows) {
                 if (!row.learned) continue;
                 const full = this.spells.find((s) => s.id === row.spell_id);
                 if (!full) continue;
                 const arr = buildSkillCostArray(full.start_cost, this.ssCosts, this.race.spell_cost);
-                total += skillExp(row.learned, arr);
+                total += skillExp(row.learned, arr, maxcost);
             }
             return total;
         },

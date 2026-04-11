@@ -197,11 +197,18 @@ export function computeCharacter({
 // build (3.3B in Zcreator vs 158B here). See bug #14.
 export function buildSkillCostArray(startCost, costs, charSkillCost) {
     const out = new Array(20).fill(0);
-    const maxcost = (charSkillCost | 0) * 100000;
+    const sc = charSkillCost | 0;
+    const maxcost = sc * 100000;
     for (let i = 0; i < 20; i++) {
         let n = (startCost | 0) * (costs[i] | 0);
         if (n >= 100) n -= n % 100;
-        let n2 = n * ((charSkillCost | 0) / 100);
+        // C# evaluates `num2 * (float)skillCost / 100f` left-to-right —
+        // multiply first, then divide. We must match: dividing first turns
+        // the multiplier into an inexact float (135/100 = 1.35000…0089),
+        // and `n * 1.35` lands a hair above the integer, which the
+        // mod-5 round-up below then bumps by a full 5. That's the
+        // bug the audit (sanity script + audit_engine.mjs) catches.
+        let n2 = (n * sc) / 100;
         if (n2 > maxcost || n2 < 0) n2 = maxcost;
         if (n2 < 100) n2 = 100;
         if (n2 % 5 !== 0) n2 += 5 - (n2 % 5);
@@ -210,12 +217,16 @@ export function buildSkillCostArray(startCost, costs, charSkillCost) {
     return out;
 }
 
-// Experience spent to reach `percent` on a skill with the given cost array.
-// Mirrors SkillSpell.updateExp() in Character.cs. When `percent > 100`
-// (i.e. training past the 20-bucket table — possible for buffs/boons in
-// future features), C# adds `(n - costs.Length) * maxcost` as a tail.
-// `maxcost` is `startCost * 100000`; pass it in when you know it, else
-// the tail is skipped and callers that clamp to ≤100 get the old answer.
+// Experience spent to reach `percent` on a skill with the given cost
+// array. Mirrors SkillSpell.updateExp() in SkillSpell.cs:245. When
+// `percent > 100` — which happens for any skill whose `maxPercent` from
+// game_guild_skills exceeds 100 (and the race's skill_max scales it
+// above 100), or when a future skill_max wish lifts the cap — the C#
+// adds `(n - costs.Length) * maxcost` as a tail. `maxcost` is
+// `charSkillCost * 100000` (the same value buildSkillCostArray uses for
+// its per-bucket clamp). Callers MUST pass it for any skill whose
+// learned percent can exceed 100; otherwise the tail is silently
+// dropped and the audit will catch the divergence.
 export function skillExp(percent, costArray, maxcost = 0) {
     const n = Math.floor(percent / 5);
     let exp = 0;
