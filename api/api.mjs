@@ -27,8 +27,14 @@ try {
             const ms = Date.now() - start;
             // Timestamp each line so pm2 logs / pm2 monit can be
             // scanned for time-of-day traffic patterns without
-            // needing pm2's own timestamp flag. ISO keeps it sortable.
-            const ts = new Date().toISOString();
+            // needing pm2's own timestamp flag. Formatted in the
+            // server's local wall-clock (America/New_York after the
+            // 2026-04 tz change) so the values match what admins
+            // read elsewhere on the box; still sortable within a day.
+            const d = new Date();
+            const pad = (n, w = 2) => String(n).padStart(w, '0');
+            const ts = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} `
+                + `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}.${pad(d.getMilliseconds(), 3)}`;
             console.log(`[req ${ts}] ${req.method} ${path} ${res.statusCode} ${ms}ms ${ip}`);
         });
         next();
