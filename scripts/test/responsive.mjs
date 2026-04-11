@@ -56,14 +56,14 @@ const CASES = [
         mustBeVisibleOnLoad: [
             '.summary-bar',
             '.nav-tabs',
-            'select[size]',
+            '.race-list',
             'input[type="search"]',
         ],
         // Anywhere-reachable elements — OK to be scroll-into-view.
         mustExist: [
             '.summary-bar',
             '.nav-tabs',
-            'select[size]',
+            '.race-list',
             'input[type="search"]',
             '.guild-list',
             'button.btn-danger',

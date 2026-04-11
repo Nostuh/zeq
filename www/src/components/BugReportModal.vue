@@ -84,17 +84,38 @@ export default {
         // and drag-drop. Text paste in the title/description inputs is
         // untouched because we only react to items whose `kind === 'file'`.
         onPaste(e) {
-            const items = (e.clipboardData && e.clipboardData.items) || [];
+            const cd = e.clipboardData;
+            if (!cd) return;
+            const items = cd.items || [];
             const files = [];
+            let sawImageItem = false;
             for (const it of items) {
                 if (it.kind === 'file' && /^image\//.test(it.type)) {
+                    sawImageItem = true;
                     const f = it.getAsFile();
                     if (f) files.push(f);
                 }
             }
+            // Some browsers / screenshot tools expose the image only through
+            // cd.files rather than cd.items — fall back to that before giving
+            // up so a Ctrl+V still grabs the screenshot.
+            if (!files.length && cd.files && cd.files.length) {
+                for (const f of cd.files) if (/^image\//.test(f.type)) files.push(f);
+            }
             if (files.length) {
                 e.preventDefault();
                 this.addFiles(files);
+                return;
+            }
+            // If we saw an image item we couldn't read, or the user pasted
+            // something outside an input (likely aiming at the dropzone),
+            // surface a visible error instead of silently doing nothing.
+            const tag = (e.target && e.target.tagName) || '';
+            const inField = tag === 'INPUT' || tag === 'TEXTAREA';
+            if (sawImageItem) {
+                this.attachmentError = 'Could not read pasted image — try drag-and-drop or the file picker.';
+            } else if (!inField) {
+                this.attachmentError = 'No image in clipboard. Copy a screenshot first, then paste.';
             }
         },
         async submit() {
@@ -207,10 +228,14 @@ export default {
 <style scoped>
 .modal-backdrop {
     position: fixed; inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.75);
+    /* Bootstrap's sticky-top navbar is z-index 1020. We have to sit above
+       both it AND its ::before shadow, so 2000 is plenty — the darker
+       backdrop obscures the navbar text so it no longer visually bleeds
+       through the translucent overlay. */
     z-index: 2000;
     display: flex; align-items: flex-start; justify-content: center;
-    padding-top: 3rem;
+    padding-top: 1rem;
     overflow-y: auto;
 }
 .modal-panel {

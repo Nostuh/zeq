@@ -32,24 +32,38 @@ decides which ones to act on.
 
 ## 1. Query the bug database
 
-Pull every unresolved report:
+The `/api/bugs/` endpoints are auth-gated (admin session cookie), so
+curling them as the agent returns `{"ok":false,"error":"not authenticated"}`.
+Go straight to the DB. Credentials live in
+[../api/classes/config.json](../api/classes/config.json).
 
-```
-GET /api/bugs/?status=open
-GET /api/bugs/?status=in_progress
+List unresolved reports, severity-ordered:
+
+```sh
+mysql -uzork -pstarcraft zeq -e "
+  SELECT id, title, severity, page_url, screen_size, created, status
+  FROM bug_reports
+  WHERE status IN ('open','in_progress')
+  ORDER BY FIELD(severity,'critical','high','normal','low'), created DESC;"
 ```
 
-Or, for a direct read:
+Pull descriptions for triage — descriptions are long, use `\G`:
 
-```sql
-SELECT id, title, description, severity, page_url, user_agent,
-       screen_size, reporter_name, reporter_contact, created, status
-FROM bug_reports
-WHERE status IN ('open','in_progress')
-ORDER BY
-  FIELD(severity,'critical','high','normal','low'),
-  created DESC;
+```sh
+mysql -uzork -pstarcraft zeq -e "
+  SELECT id, title, description FROM bug_reports
+  WHERE status IN ('open','in_progress') ORDER BY id DESC\G"
 ```
+
+The captured context columns (`app_state`, `dom_snapshot`, `console_log`)
+are big — slice them or they'll flood the terminal:
+
+- `app_state` is JSON; pull fields with `JSON_EXTRACT(app_state, '$.route')`.
+- `dom_snapshot` is the `<main>` HTML. Walk it with
+  `SUBSTRING(dom_snapshot, 1, 2000)` and shift the offset
+  (`SUBSTRING(dom_snapshot, 8000, 6000)`) to read further in.
+- `console_log` is an NDJSON tail. Check `LENGTH(console_log)` first —
+  it's often `0` for reports filed without any console activity.
 
 Schema lives in [schema.md](schema.md#bug_reports) and the API shape in
 [api.md](api.md#bug-reports).

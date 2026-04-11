@@ -6,11 +6,23 @@ import {
     computeLevelExp, computeStatExp,
     MAX_LEVEL,
 } from './reinc/engine.js';
+import TabGeneral from './reinc/TabGeneral.vue';
+import TabSkills from './reinc/TabSkills.vue';
+import TabSpells from './reinc/TabSpells.vue';
+import TabExtras from './reinc/TabExtras.vue';
+import TabExport from './reinc/TabExport.vue';
 
 const STATS = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
 
 export default {
     name: 'Reinc',
+    components: { TabGeneral, TabSkills, TabSpells, TabExtras, TabExport },
+    // Children inject `reinc` to read shared state and call shared methods.
+    // `this` in Vue 3 Options API is a reactive instance proxy, so child
+    // templates reading `reinc.character` etc. stay reactive. Keeping all
+    // state/computeds/methods on the parent means the tab files are pure
+    // templates plus an `inject: ['reinc']`.
+    provide() { return { reinc: this }; },
     data() {
         return {
             loaded: false,
@@ -389,6 +401,12 @@ export default {
             const target = Math.max(0, Math.min(MAX_LEVEL, parseInt(v, 10) || 0));
             this.extraFree = Math.max(0, target - this.guildLevelsSum);
         },
+        // Bug #16 — let the user type free levels directly. The budget is
+        // `MAX_LEVEL - guildLevelsSum`; anything above that clamps down.
+        setFreeLevels(v) {
+            const budget = Math.max(0, MAX_LEVEL - this.guildLevelsSum);
+            this.extraFree = Math.max(0, Math.min(budget, parseInt(v, 10) || 0));
+        },
         async load() {
             const r = await axios.get('/api/game/reinc-bootstrap');
             const d = r.data.data;
@@ -621,9 +639,32 @@ export default {
             </div>
             <div class="sb-cell"><span class="sb-label">Size</span><span class="sb-value">{{ character.size }}</span></div>
             <div class="sb-cell"><span class="sb-label">Exp rate</span><span class="sb-value">{{ race.exp_rate }}%</span></div>
-            <div class="sb-cell"><span class="sb-label">Level</span><span class="sb-value">{{ guildLevelsSum + freeLevels }}/{{ MAX_LEVEL }}</span></div>
+            <div class="sb-cell"><span class="sb-label">Level</span><span class="sb-value" :title="`${guildLevelsSum} guild + ${freeLevels} free`">{{ guildLevelsSum }}+{{ freeLevels }}/{{ MAX_LEVEL }}</span></div>
             <div class="sb-cell"><span class="sb-label">Total XP</span><span class="sb-value" :title="nfmt(totalExp)">{{ sfmt(totalExp) }}</span></div>
             <div class="sb-cell"><span class="sb-label">Gold</span><span class="sb-value" :title="nfmt(goldRequired)">{{ sfmt(goldRequired) }}</span></div>
+        </div>
+        <!-- Bug #16 — experience breakdown + QP readouts now live in the
+             header so they're visible on every tab, not just General.
+             The General tab keeps only the two inputs (Free Levels,
+             Quest Points) the reporter specifically called out. -->
+        <div class="sb-row sb-exp">
+            <div class="sb-cell"><span class="sb-label">Skills XP</span><span class="sb-value" :title="nfmt(skillExpTotal)">{{ sfmt(skillExpTotal) }}</span></div>
+            <div class="sb-cell"><span class="sb-label">Spells XP</span><span class="sb-value" :title="nfmt(spellExpTotal)">{{ sfmt(spellExpTotal) }}</span></div>
+            <div class="sb-cell"><span class="sb-label">Race Lv XP</span><span class="sb-value" :title="nfmt(levelExpObj.raceExp)">{{ sfmt(levelExpObj.raceExp) }}</span></div>
+            <div class="sb-cell"><span class="sb-label">Guild Lv XP</span><span class="sb-value" :title="nfmt(levelExpObj.guildExp)">{{ sfmt(levelExpObj.guildExp) }}</span></div>
+            <div class="sb-cell"><span class="sb-label">Stat XP</span><span class="sb-value" :title="nfmt(statExpTotal)">{{ sfmt(statExpTotal) }}</span></div>
+            <div class="sb-cell"><span class="sb-label">QPs Need</span><span class="sb-value" :title="nfmt(qpsNeeded)">{{ sfmt(qpsNeeded) }}</span></div>
+            <div class="sb-cell"><span class="sb-label">QPs Left</span><span class="sb-value" :title="nfmt(levelExpObj.qpsLeft)">{{ sfmt(levelExpObj.qpsLeft) }}</span></div>
+        </div>
+        <div class="sb-row sb-resist"
+             v-if="Object.keys(character.resistances).length || character.wishResistances.length">
+            <span class="sb-label me-2">RESIST</span>
+            <span v-for="(val, key) in character.resistances" :key="key" class="sb-chip">
+                {{ key }} <small>{{ val }}</small>
+            </span>
+            <span v-for="r in character.wishResistances" :key="r" class="sb-chip wish">
+                {{ r }}
+            </span>
         </div>
         <div class="sb-row sb-guilds" v-if="pickedGuildSummaries.length">
             <span class="sb-label me-2">GUILDS</span>
@@ -633,352 +674,27 @@ export default {
         </div>
     </div>
 
-    <!-- Tabs -->
+    <!-- Tabs. The old Misc / Wishes / Boons tabs were folded into a single
+         "Extras" tab (bug #18) and a new "Export" tab (bug #17) exposes the
+         character summary + train/study commands the original Zcreator
+         desktop app could save to disk. -->
     <ul class="nav nav-tabs reinc-tabs">
         <li class="nav-item"><a class="nav-link" :class="{active:tab==='general'}" href="#" @click.prevent="tab='general'">General</a></li>
         <li class="nav-item"><a class="nav-link" :class="{active:tab==='skills'}" href="#" @click.prevent="tab='skills'">Skills</a></li>
         <li class="nav-item"><a class="nav-link" :class="{active:tab==='spells'}" href="#" @click.prevent="tab='spells'">Spells</a></li>
-        <li class="nav-item"><a class="nav-link" :class="{active:tab==='misc'}" href="#" @click.prevent="tab='misc'">Miscellaneous</a></li>
-        <li class="nav-item"><a class="nav-link" :class="{active:tab==='wishes'}" href="#" @click.prevent="tab='wishes'">Wishes</a></li>
-        <li class="nav-item"><a class="nav-link" :class="{active:tab==='boons'}" href="#" @click.prevent="tab='boons'">Boons</a></li>
+        <li class="nav-item"><a class="nav-link" :class="{active:tab==='extras'}" href="#" @click.prevent="tab='extras'">Extras</a></li>
+        <li class="nav-item"><a class="nav-link" :class="{active:tab==='export'}" href="#" @click.prevent="tab='export'">Export</a></li>
     </ul>
 
-    <!-- ============ GENERAL TAB ============ -->
-    <!-- tab-body is an outer scroll container; grid is a separate inner
-         element so the mobile @media `flex: 0 0 auto` rule on the grid
-         doesn't also collapse the scroll container. -->
-    <div v-if="tab==='general'" class="tab-body">
-        <div class="general-grid">
-        <div class="col-races">
-            <label class="form-label small mb-1"><strong>Select Race</strong></label>
-            <select class="form-select form-select-sm list-select" size="12" v-model="selectedRaceId">
-                <option v-for="r in enabledRaces" :key="r.id" :value="r.id">{{ r.parent_name ? '  ' : '' }}{{ r.name }}</option>
-            </select>
+    <!-- Tab panes live in their own SFCs under components/reinc/. Each one
+         injects the Reinc instance as `reinc` to read shared state and call
+         shared methods — keeps this file to the shell + modal + styles. -->
+    <TabGeneral v-if="tab==='general'" />
+    <TabSkills v-else-if="tab==='skills'" />
+    <TabSpells v-else-if="tab==='spells'" />
+    <TabExtras v-else-if="tab==='extras'" />
+    <TabExport v-else-if="tab==='export'" />
 
-            <label class="form-label small mb-1 mt-2"><strong>Select Guilds</strong></label>
-            <input type="search" class="form-control form-control-sm mb-1" placeholder="Search guilds…" v-model="guildSearch">
-            <div class="guild-list">
-                <div v-if="guildTree.length === 0" class="small text-muted p-2">No guilds match “{{ guildSearch }}”.</div>
-                <div v-for="g in guildTree" :key="g.id" class="guild-row"
-                     :class="{ picked: isPicked(g), sub: g.depth, locked: isLocked(g) }"
-                     :title="isLocked(g) ? 'Select the parent guild at max level to unlock this subguild' : ''">
-                    <label class="d-flex align-items-center flex-grow-1 mb-0" :style="isLocked(g) ? 'cursor:not-allowed;' : 'cursor:pointer;'" @click.prevent="onGuildClick(g)">
-                        <input type="checkbox" class="form-check-input me-2" :checked="isPicked(g)" :disabled="isLocked(g)" @click.prevent>
-                        <span :class="{ 'text-muted': g.depth || isLocked(g) }">{{ g.depth ? '- ' : '' }}{{ g.name }}</span>
-                        <span v-if="isLocked(g)" class="ms-2 small text-muted">🔒</span>
-                    </label>
-                    <input v-if="isPicked(g)" type="number" class="form-control form-control-sm level-input"
-                           :value="pickLevel(g)" @input="setPickLevel(g, $event.target.value)" :max="g.max_level" min="1">
-                    <span v-if="isPicked(g)" class="small text-muted ms-1">/ {{ g.max_level }}</span>
-                    <button type="button" class="btn btn-link btn-sm guild-info-btn"
-                            :disabled="isLocked(g)"
-                            @click.stop.prevent="openGuildInfo(g)"
-                            :title="`Show skills and spells taught by ${g.name}`"
-                            aria-label="Show skills and spells">ⓘ</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-stats" v-if="race && character">
-            <div class="racial-box">
-                <h6 class="m-0 mb-1">Racial Stats</h6>
-                <div class="racial-grid small">
-                    <div>Exp: <b>{{ race.exp_rate }}</b></div>
-                    <div>Size: <b>{{ race.size }}</b></div>
-                    <div>Str: <b>{{ race.max_str }}</b></div>
-                    <div>Dex: <b>{{ race.max_dex }}</b></div>
-                    <div>Con: <b>{{ race.max_con }}</b></div>
-                    <div>Int: <b>{{ race.max_int }}</b></div>
-                    <div>Wis: <b>{{ race.max_wis }}</b></div>
-                    <div>Cha: <b>{{ race.max_cha }}</b></div>
-                    <div>HP Reg: <b>{{ race.hp_regen }}</b></div>
-                    <div>SP Reg: <b>{{ race.sp_regen }}</b></div>
-                    <div>Sk Max: <b>{{ race.skill_max }}</b></div>
-                    <div>Sk Cost: <b>{{ race.skill_cost }}</b></div>
-                    <div>Sp Max: <b>{{ race.spell_max }}</b></div>
-                    <div>Sp Cost: <b>{{ race.spell_cost }}</b></div>
-                </div>
-            </div>
-
-            <div class="computed-box">
-                <h6 class="m-0 mb-1">Computed</h6>
-                <div class="computed-grid small">
-                    <div>HP <b>{{ nfmt(character.hp) }}</b></div>
-                    <div>Str <b>{{ character.finalStats.str }}</b></div>
-                    <div>Int <b>{{ character.finalStats.int }}</b></div>
-                    <div>SkMax <b>{{ character.skillMax }}</b></div>
-                    <div>SP <b>{{ nfmt(character.sp) }}</b></div>
-                    <div>Con <b>{{ character.finalStats.con }}</b></div>
-                    <div>Wis <b>{{ character.finalStats.wis }}</b></div>
-                    <div>SpMax <b>{{ character.spellMax }}</b></div>
-                    <div>HPR <b>{{ character.hpr }}</b></div>
-                    <div>Dex <b>{{ character.finalStats.dex }}</b></div>
-                    <div>Cha <b>{{ character.finalStats.cha }}</b></div>
-                    <div>Size <b>{{ character.size }}</b></div>
-                    <div>SPR <b>{{ character.spr }}</b></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-exp">
-            <div class="levels-grid small mb-2">
-                <div class="lg-row"><span>Total Levels:</span><input type="number" :value="totalLevels" @input="setTotalLevels($event.target.value)" :max="MAX_LEVEL" min="0" class="form-control form-control-sm"></div>
-                <div class="lg-row"><span>Guild Levels:</span><span class="readout">{{ guildLevelsSum }}</span></div>
-                <div class="lg-row"><span>Free Levels:</span><span class="readout">{{ freeLevels }}</span></div>
-                <div class="lg-row"><span>Quest Points:</span><input type="number" v-model.number="quest" class="form-control form-control-sm"></div>
-                <div class="lg-row"><span>QPs Needed:</span><span class="readout">{{ nfmt(qpsNeeded) }}</span></div>
-                <div class="lg-row"><span>QPs Left:</span><span class="readout">{{ nfmt(levelExpObj.qpsLeft) }}</span></div>
-            </div>
-
-            <table class="exp-table small">
-                <tr><td>Experience for Skills:</td><td class="text-end">{{ nfmt(skillExpTotal) }}</td></tr>
-                <tr><td>Experience for Spells:</td><td class="text-end">{{ nfmt(spellExpTotal) }}</td></tr>
-                <tr><td>Experience for Race Levels:</td><td class="text-end">{{ nfmt(levelExpObj.raceExp) }}</td></tr>
-                <tr><td>Experience for Guild Levels:</td><td class="text-end">{{ nfmt(levelExpObj.guildExp) }}</td></tr>
-                <tr><td>Experience for Stat Training:</td><td class="text-end">{{ nfmt(statExpTotal) }}</td></tr>
-                <tr class="fw-bold"><td>Total Experience:</td><td class="text-end">{{ nfmt(totalExp) }}</td></tr>
-                <tr><td>Gold Required:</td><td class="text-end">{{ nfmt(goldRequired) }} gp</td></tr>
-            </table>
-
-            <button class="btn btn-danger btn-sm mt-2" @click="reset">RESET</button>
-        </div>
-        </div><!-- /general-grid -->
-    </div>
-
-    <!-- ============ SKILLS TAB ============ -->
-    <div v-if="tab==='skills'" class="tab-body">
-        <div class="skills-grid">
-        <div class="col-skill-list">
-            <div class="d-flex align-items-center mb-1 gap-2 flex-wrap">
-                <h6 class="m-0 flex-grow-1">Available Skills ({{ skillRows.length }})</h6>
-                <button class="btn btn-sm btn-outline-success" @click="maxAllSkills" :disabled="!skillRows.length">Max All</button>
-                <button class="btn btn-sm btn-outline-secondary" @click="zeroAllSkills" :disabled="!skillRows.length">Zero All</button>
-            </div>
-            <div class="skill-list">
-                <div v-for="s in skillRows" :key="s.skill_id"
-                     class="skill-row" :class="{active: activeSkillId===s.skill_id}"
-                     @click="activeSkillId = s.skill_id">
-                    <span class="flex-grow-1">{{ s.name }}</span>
-                    <span class="small">{{ s.learned }} / {{ s.scaled }}</span>
-                </div>
-            </div>
-            <div class="mt-2 small exp-summary">
-                <div>Exp for selected Skill: <strong>{{ nfmt(activeSkillExp) }}</strong></div>
-                <div>Total Exp for all Skills: <strong>{{ nfmt(skillExpTotal) }}</strong></div>
-            </div>
-        </div>
-        <div class="col-skill-detail">
-            <h6 class="m-0 mb-1">Skill Description</h6>
-            <div class="desc-box">
-                <div v-if="activeSkill" class="small">
-                    <div><strong>{{ activeSkill.name }}</strong> — start cost: {{ nfmt(activeSkill.start_cost) }}</div>
-                    <div>Per-guild max: {{ activeSkill.maxPerGuild }}% → char max: {{ activeSkill.scaled }}%</div>
-                    <div class="mt-2 d-flex align-items-center gap-2">
-                        <input type="number" class="form-control form-control-sm" style="width:6em;"
-                               :value="activeSkill.learned" @input="setSkillValue($event.target.value)">
-                        <button class="btn btn-sm btn-outline-primary" @click="setMaxSkill">Max</button>
-                    </div>
-                </div>
-                <div v-else class="text-muted small">Select a skill from the list.</div>
-            </div>
-            <h6 class="m-0 mt-3 mb-1">Estimated Skill Costs</h6>
-            <div class="cost-table-wrap">
-                <table class="cost-table small">
-                    <thead><tr><th>%</th><th class="text-end">Exp</th><th class="text-end">Gold</th></tr></thead>
-                    <tbody>
-                        <template v-for="(row, i) in skillCostRows" :key="i">
-                            <tr v-if="row.kind === 'row'" :class="{ 'over-max': row.overCharMax }">
-                                <td>{{ row.pct }}%</td>
-                                <td class="text-end">{{ nfmt(row.exp) }}</td>
-                                <td class="text-end">{{ nfmt(row.gold) }}</td>
-                            </tr>
-                            <tr v-else class="cap-marker">
-                                <td colspan="3">──── {{ row.label }} ({{ row.pct }}%) ────</td>
-                            </tr>
-                        </template>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        </div><!-- /skills-grid -->
-    </div>
-
-    <!-- ============ SPELLS TAB ============ -->
-    <div v-if="tab==='spells'" class="tab-body">
-        <div class="skills-grid">
-        <div class="col-skill-list">
-            <div class="d-flex align-items-center mb-1 gap-2 flex-wrap">
-                <h6 class="m-0 flex-grow-1">Available Spells ({{ spellRows.length }})</h6>
-                <button class="btn btn-sm btn-outline-success" @click="maxAllSpells" :disabled="!spellRows.length">Max All</button>
-                <button class="btn btn-sm btn-outline-secondary" @click="zeroAllSpells" :disabled="!spellRows.length">Zero All</button>
-            </div>
-            <div class="skill-list">
-                <div v-for="s in spellRows" :key="s.spell_id"
-                     class="skill-row" :class="{active: activeSpellId===s.spell_id}"
-                     @click="activeSpellId = s.spell_id">
-                    <span class="flex-grow-1">{{ s.name }}</span>
-                    <span class="small">{{ s.learned }} / {{ s.scaled }}</span>
-                </div>
-            </div>
-            <div class="mt-2 small exp-summary">
-                <div>Exp for selected Spell: <strong>{{ nfmt(activeSpellExp) }}</strong></div>
-                <div>Total Exp for all Spells: <strong>{{ nfmt(spellExpTotal) }}</strong></div>
-            </div>
-        </div>
-        <div class="col-skill-detail">
-            <h6 class="m-0 mb-1">Spell Description</h6>
-            <div class="desc-box">
-                <div v-if="activeSpell" class="small">
-                    <div><strong>{{ activeSpell.name }}</strong> — start cost: {{ nfmt(activeSpell.start_cost) }}</div>
-                    <div>Per-guild max: {{ activeSpell.maxPerGuild }}% → char max: {{ activeSpell.scaled }}%</div>
-                    <div class="mt-2 d-flex align-items-center gap-2">
-                        <input type="number" class="form-control form-control-sm" style="width:6em;"
-                               :value="activeSpell.learned" @input="setSpellValue($event.target.value)">
-                        <button class="btn btn-sm btn-outline-primary" @click="setMaxSpell">Max</button>
-                    </div>
-                </div>
-                <div v-else class="text-muted small">Select a spell from the list.</div>
-            </div>
-            <h6 class="m-0 mt-3 mb-1">Estimated Spell Costs</h6>
-            <div class="cost-table-wrap">
-                <table class="cost-table small">
-                    <thead><tr><th>%</th><th class="text-end">Exp</th><th class="text-end">Gold</th></tr></thead>
-                    <tbody>
-                        <template v-for="(row, i) in spellCostRows" :key="i">
-                            <tr v-if="row.kind === 'row'" :class="{ 'over-max': row.overCharMax }">
-                                <td>{{ row.pct }}%</td>
-                                <td class="text-end">{{ nfmt(row.exp) }}</td>
-                                <td class="text-end">{{ nfmt(row.gold) }}</td>
-                            </tr>
-                            <tr v-else class="cap-marker">
-                                <td colspan="3">──── {{ row.label }} ({{ row.pct }}%) ────</td>
-                            </tr>
-                        </template>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        </div><!-- /skills-grid -->
-    </div>
-
-    <!-- ============ MISC TAB ============ -->
-    <div v-if="tab==='misc'" class="tab-body">
-        <div class="misc-grid">
-        <div>
-            <h6>Stat Training</h6>
-            <div class="stat-grid">
-                <div v-for="s in ['str','con','dex','int','wis','cha']" :key="s" class="stat-row">
-                    <label class="form-label small m-0 me-2" style="width:3em;">{{ s.toUpperCase() }}:</label>
-                    <input type="number" class="form-control form-control-sm" v-model.number="statTrain[s]" min="0" max="50">
-                </div>
-            </div>
-            <div class="small mt-2">Exp for stat training: <strong>{{ nfmt(statExpTotal) }}</strong></div>
-        </div>
-        <div>
-            <h6>Resistances</h6>
-            <div v-if="character" class="small">
-                <div v-for="(val, key) in character.resistances" :key="key">
-                    {{ key }}: {{ val }}
-                </div>
-                <div v-if="!Object.keys(character.resistances).length" class="text-muted">— no guild resistance bonuses —</div>
-                <div v-if="character.wishResistances.length" class="mt-2">
-                    Wish resistances: <span v-for="r in character.wishResistances" :key="r" class="badge bg-info text-dark me-1">{{ r }}</span>
-                </div>
-            </div>
-        </div>
-        </div><!-- /misc-grid -->
-    </div>
-
-    <!-- ============ WISHES TAB ============ -->
-    <div v-if="tab==='wishes'" class="tab-body">
-        <div class="wishes-grid">
-        <div class="wishes-header">
-            <h6 class="m-0">Wishes</h6>
-            <div class="small">TPs spent: <strong>{{ nfmt(wishTpUsed) }}</strong> / <input type="number" v-model.number="tp" class="form-control form-control-sm d-inline-block" style="width:6em;"></div>
-        </div>
-        <div class="wish-cols">
-            <div class="wish-col">
-                <div class="cat-head">Generic</div>
-                <label v-for="w in groupedWishes.generic" :key="w.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedWishes.has(w.id)" @change="toggleWish(w.id)">
-                    {{ w.name }} <small class="text-muted">({{ w.tp_cost }})</small>
-                </label>
-                <div class="cat-head mt-2">Resistances</div>
-                <label v-for="w in groupedWishes.resist" :key="w.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedWishes.has(w.id)" @change="toggleWish(w.id)">
-                    {{ w.name }} <small class="text-muted">({{ w.tp_cost }})</small>
-                </label>
-            </div>
-            <div class="wish-col">
-                <div class="cat-head">Lesser</div>
-                <label v-for="w in groupedWishes.lesser" :key="w.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedWishes.has(w.id)" @change="toggleWish(w.id)">
-                    {{ w.name }} <small class="text-muted">({{ w.tp_cost }})</small>
-                </label>
-            </div>
-            <div class="wish-col">
-                <div class="cat-head">Greater</div>
-                <label v-for="w in groupedWishes.greater" :key="w.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedWishes.has(w.id)" @change="toggleWish(w.id)">
-                    {{ w.name }} <small class="text-muted">({{ w.tp_cost }})</small>
-                </label>
-            </div>
-        </div>
-        </div><!-- /wishes-grid -->
-    </div>
-
-    <!-- ============ BOONS TAB ============ -->
-    <div v-if="tab==='boons'" class="tab-body">
-        <div class="boons-grid">
-        <div class="boons-header">
-            <h6 class="m-0">Boons</h6>
-            <div class="small">Total PP Cost: <strong>{{ nfmt(boonPpTotal) }}</strong></div>
-        </div>
-        <div class="boon-cols">
-            <div class="boon-col">
-                <div class="cat-head">Racial (50 PP)</div>
-                <label v-for="b in groupedBoons.racial" :key="b.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedBoons.has(b.id)" @change="toggleBoon(b.id)">
-                    {{ b.name }}
-                </label>
-                <div class="cat-head mt-2">Preference (50 PP)</div>
-                <label v-for="b in groupedBoons.preference" :key="b.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedBoons.has(b.id)" @change="toggleBoon(b.id)">
-                    {{ b.name }}
-                </label>
-                <div class="cat-head mt-2">Knowledge (100 PP)</div>
-                <label v-for="b in groupedBoons.knowledge" :key="b.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedBoons.has(b.id)" @change="toggleBoon(b.id)">
-                    {{ b.name }}
-                </label>
-            </div>
-            <div class="boon-col">
-                <div class="cat-head">Minor (100 PP)</div>
-                <label v-for="b in groupedBoons.minor" :key="b.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedBoons.has(b.id)" @change="toggleBoon(b.id)">
-                    {{ b.name }}
-                </label>
-                <div class="cat-head mt-2">Weapon (75 PP)</div>
-                <label v-for="b in groupedBoons.weapon" :key="b.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedBoons.has(b.id)" @change="toggleBoon(b.id)">
-                    {{ b.name }}
-                </label>
-            </div>
-            <div class="boon-col">
-                <div class="cat-head">Lesser</div>
-                <label v-for="b in groupedBoons.lesser" :key="b.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedBoons.has(b.id)" @change="toggleBoon(b.id)">
-                    {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
-                </label>
-                <div class="cat-head mt-2">Greater</div>
-                <label v-for="b in groupedBoons.greater" :key="b.id" class="wish-item">
-                    <input type="checkbox" class="form-check-input me-1" :checked="selectedBoons.has(b.id)" @change="toggleBoon(b.id)">
-                    {{ b.name }} <small class="text-muted">({{ b.pp_cost }})</small>
-                </label>
-            </div>
-        </div>
-        </div><!-- /boons-grid -->
-    </div>
 
 <!-- Per-guild "what does this teach" modal — bug #13. -->
 <div v-if="infoGuild" class="reinc-modal-backdrop" @click.self="closeGuildInfo">
@@ -1032,7 +748,14 @@ export default {
 <div v-else class="p-3">Loading Zcreator data…</div>
 </template>
 
-<style scoped>
+<!-- Unscoped on purpose: the tab child SFCs (reinc/Tab*.vue) reuse these
+     class names (.tab-body, .general-grid, .skill-row, .wish-item, etc.).
+     Vue's `scoped` attribute would add a data-v hash that wouldn't match
+     the children's elements, so the tab panes would render unstyled. The
+     classes are all specific to the reinc planner — collisions with other
+     routes are unlikely, but if any crop up, re-prefix them under `.reinc`
+     rather than reintroducing `scoped`. -->
+<style>
 .reinc {
     font-size: 0.85rem;
     display: flex;
@@ -1049,6 +772,7 @@ export default {
 }
 .sb-row { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
 .sb-row + .sb-row { margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px solid rgba(255,255,255,0.12); }
+.sb-exp .sb-value { color: #fde68a; }          /* amber accent on the XP row */
 .sb-cell { display: flex; flex-direction: column; min-width: 3.5em; }
 .sb-label { font-size: 0.65rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.5px; }
 .sb-value { font-weight: 700; font-size: 0.95rem; }
@@ -1061,6 +785,8 @@ export default {
 }
 .sb-chip small { opacity: 0.7; }
 .sb-chip.sub { background: #4b3a5a; }
+.sb-chip.wish { background: #1e40af; }
+.sb-resist { gap: 0.35rem; }
 
 .reinc-tabs { flex: 0 0 auto; margin-bottom: 0; }
 .tab-body {
@@ -1095,6 +821,44 @@ export default {
     overflow: hidden;
 }
 .list-select { font-family: monospace; flex: 0 0 auto; }
+/* Race picker (bug #15): each row shows name + skill/spell max/cost
+   right-aligned, so race comparison is a glance instead of a click. */
+.race-list {
+    flex: 0 0 auto;
+    max-height: 18rem;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    background: #fff;
+}
+.race-hd, .race-row {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.6rem;
+    gap: 0.75rem;
+}
+.race-hd {
+    position: sticky; top: 0;
+    background: #f1f3f5;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 1px solid #adb5bd;
+    z-index: 1;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.race-row { cursor: pointer; }
+.race-row + .race-row { border-top: 1px solid #f1f3f5; }
+.race-row:hover { background: #f1f5f9; }
+.race-row.active { background: #cfe2ff; }
+.race-row.sub { color: #6c757d; }
+.race-cell {
+    width: 2.4rem;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
 .guild-list {
     flex: 1 1 auto;
     min-height: 4rem;
@@ -1215,17 +979,57 @@ export default {
 }
 .exp-summary { flex: 0 0 auto; padding-top: 0.25rem; border-top: 1px solid #dee2e6; margin-top: 0.5rem !important; }
 
-/* MISC */
-.misc-grid {
+/* EXTRAS (bug #18 — merged Misc / Wishes / Boons). Four labelled
+   sections live in one scrollable grid so stat training, resistances,
+   wishes, and boons can all be seen without tab-hopping. */
+.extras-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: minmax(12rem, 0.8fr) minmax(16rem, 1.4fr) minmax(16rem, 1.4fr);
+    gap: 0.75rem;
     flex: 1 1 auto;
     min-height: 0;
     overflow: auto;
+    align-items: start;
+}
+.ex-section {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.6rem;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+.ex-head {
+    font-weight: 700; text-transform: uppercase; font-size: 0.7rem;
+    color: #555; border-bottom: 1px solid #aaa;
+    padding-bottom: 0.2rem; margin-bottom: 0.4rem;
 }
 .stat-grid { display: grid; grid-template-columns: 1fr; gap: 0.25rem; max-width: 14rem; }
 .stat-row { display: flex; align-items: center; }
+
+/* EXPORT (bug #17) */
+.export-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+}
+.export-grid .ex-section { min-height: 0; overflow: hidden; }
+.export-pre {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-family: monospace;
+    font-size: 0.78rem;
+    white-space: pre-wrap;
+    margin: 0;
+}
 
 /* WISHES + BOONS */
 .wishes-grid, .boons-grid {
@@ -1254,8 +1058,12 @@ export default {
 .wish-item { display: flex; align-items: center; margin-bottom: 0.15rem; cursor: pointer; }
 
 /* Mobile / narrow */
+@media (max-width: 1100px) {
+    .extras-grid { grid-template-columns: 1fr 1fr; }
+    .extras-grid .ex-training { grid-column: 1 / -1; max-width: 20rem; }
+}
 @media (max-width: 800px) {
-    .general-grid, .skills-grid, .misc-grid { grid-template-columns: 1fr; }
+    .general-grid, .skills-grid, .extras-grid, .export-grid { grid-template-columns: 1fr; }
     .wish-cols, .boon-cols { grid-template-columns: 1fr; }
     .racial-grid, .computed-grid { grid-template-columns: repeat(2, 1fr); }
     .summary-bar { font-size: 0.75rem; }

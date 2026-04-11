@@ -16,6 +16,13 @@ export default {
             catch (e) { this.$root.flashError(e); }
         },
         isSelf(u) { return this.$root.user && u.id === this.$root.user.id; },
+        fmtDate(v) {
+            if (!v) return '—';
+            const d = new Date(v);
+            if (isNaN(d.getTime())) return String(v);
+            const pad = (n) => String(n).padStart(2, '0');
+            return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+        },
         async add() {
             try {
                 const r = await axios.post('/api/users/', this.newUser);
@@ -97,7 +104,7 @@ export default {
                 <td>
                     <span class="badge" :class="u.active ? 'bg-success' : 'bg-secondary'">{{ u.active ? 'active' : 'inactive' }}</span>
                 </td>
-                <td class="small">{{ u.last_login }}</td>
+                <td class="small">{{ fmtDate(u.last_login) }}</td>
                 <td>
                     <button class="btn btn-sm btn-outline-secondary me-1" @click="toggleActive(u)" :disabled="isSelf(u)">
                         {{ u.active ? 'Disable' : 'Enable' }}
