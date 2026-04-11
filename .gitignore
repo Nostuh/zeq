@@ -1,3 +1,6 @@
 node_modules/
 api/classes/config.json
 api/zeq.sql
+api/uploads/
+www/src/dist/
+api/uploads/

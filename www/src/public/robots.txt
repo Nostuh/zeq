@@ -1,0 +1,12 @@
+# robots.txt for https://nostuh.com/
+# Nostuh is a free online ZombieMUD reinc planner and character calculator.
+# See https://nostuh.com/sitemap.xml
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /#/users
+Disallow: /#/bugs
+Disallow: /#/login
+
+Sitemap: https://nostuh.com/sitemap.xml

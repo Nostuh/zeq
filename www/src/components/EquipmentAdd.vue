@@ -34,7 +34,7 @@ This item loses its magical powers with average speed.
     },
     methods: {
         add: async function() {
-            if ( this.item_info != "" && this.the_slot != "" && this.selected_eqmob != "" && this.$root.user.first_name !== false) {
+            if ( this.item_info != "" && this.the_slot != "" && this.selected_eqmob != "" && this.$root.user ) {
                 await axios.post(`/api/eq/add`,
                     {
                         item_info:this.item_info.trim(),

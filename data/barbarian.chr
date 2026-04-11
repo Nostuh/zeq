@@ -1,0 +1,687 @@
+Updated 2011.04.15
+
+,-----------------------------------------------------------------------.
+| Lvl | Guild bonuses                                                   |
+|=====|=================================================================|
+|   1 | Hit points(12), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|   2 | Hit points(13), Strength(3), Constitution(3), Dexterity(1),     |
+|     | Hit point regeneration(3), Physical resistance(1)               |
+|   3 | Hit points(12), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|   4 | Hit points(13), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3), Physical resistance(1)               |
+|   5 | Hit points(13), Strength(2), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|   6 | Hit points(12), Strength(3), Constitution(3), Dexterity(2),     |
+|     | Hit point regeneration(3), Physical resistance(1)               |
+|   7 | Hit points(13), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3), Physical resistance(1)               |
+|   8 | Hit points(12), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|   9 | Hit points(13), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3), Physical resistance(1)               |
+|  10 | Hit points(13), Strength(2), Constitution(3), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|  11 | Hit points(11), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3), Physical resistance(1)               |
+|  12 | Hit points(12), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(2)                                       |
+|  13 | Hit points(12), Strength(2), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3), Physical resistance(1)               |
+|  14 | Hit points(11), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|  15 | Hit points(12), Strength(2), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  16 | Hit points(12), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|  17 | Hit points(11), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3), Physical resistance(1)               |
+|  18 | Hit points(12), Strength(2), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|  19 | Hit points(12), Strength(3), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  20 | Hit points(12), Strength(2), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|  21 | Hit points(9), Strength(3), Constitution(2), Dexterity(1),      |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  22 | Hit points(10), Strength(2), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(3)                                       |
+|  23 | Hit points(10), Strength(2), Constitution(2), Dexterity(1),     |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  24 | Hit points(10), Strength(2), Constitution(1), Dexterity(1),     |
+|     | Hit point regeneration(2)                                       |
+|  25 | Hit points(8), Strength(2), Constitution(2), Dexterity(1),      |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  26 | Hit points(7), Strength(2), Constitution(1),                    |
+|     | Hit point regeneration(2)                                       |
+|  27 | Hit points(8), Strength(1), Constitution(2), Dexterity(1),      |
+|     | Hit point regeneration(2)                                       |
+|  28 | Hit points(8), Strength(2), Constitution(1), Dexterity(1),      |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  29 | Hit points(7), Strength(2), Constitution(1),                    |
+|     | Hit point regeneration(1)                                       |
+|  30 | Hit points(8), Strength(1), Constitution(2), Dexterity(1),      |
+|     | Hit point regeneration(2)                                       |
+|  31 | Hit points(8), Strength(2), Constitution(1), Dexterity(1),      |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  32 | Hit points(7), Strength(2), Constitution(1),                    |
+|     | Hit point regeneration(2)                                       |
+|  33 | Hit points(8), Strength(2), Constitution(2), Dexterity(1),      |
+|     | Hit point regeneration(1)                                       |
+|  34 | Hit points(8), Strength(1), Constitution(1), Dexterity(1),      |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  35 | Hit points(6), Strength(2), Constitution(1),                    |
+|     | Hit point regeneration(2)                                       |
+|  36 | Hit points(7), Strength(1), Constitution(1), Dexterity(1),      |
+|     | Hit point regeneration(1)                                       |
+|  37 | Hit points(7), Strength(2), Constitution(2), Dexterity(1),      |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  38 | Hit points(7), Strength(1), Constitution(1),                    |
+|     | Hit point regeneration(2)                                       |
+|  39 | Hit points(6), Strength(2), Constitution(1), Dexterity(1),      |
+|     | Hit point regeneration(1)                                       |
+|  40 | Hit points(7), Strength(1), Constitution(1),                    |
+|     | Hit point regeneration(2)                                       |
+|  41 | Hit points(7), Strength(2), Constitution(1), Dexterity(1),      |
+|     | Hit point regeneration(1), Physical resistance(1)               |
+|  42 | Hit points(7), Strength(1), Constitution(2), Dexterity(1),      |
+|     | Hit point regeneration(2)                                       |
+|  43 | Hit points(6), Strength(2), Constitution(1),                    |
+|     | Hit point regeneration(1)                                       |
+|  44 | Hit points(7), Strength(1), Constitution(1), Dexterity(1),      |
+|     | Hit point regeneration(2), Physical resistance(1)               |
+|  45 | Hit points(20), Strength(5), Constitution(4), Dexterity(2),     |
+|     | Hit point regeneration(5), Physical resistance(1)               |
+`-----------------------------------------------------------------------'
+
+------------------------------------------------------.
+
+Level 1 abilities:
+May train skill weapon skill 2h bludgeon to 5%
+May train skill weapon skill 2h staff to 5%
+May train skill appraise to 5%
+May train skill weapon skill 2h ancient to 5%
+May train skill weapon skill 2h axe to 5%
+May train skill weapon skill 2h sword to 5%
+May train skill weapon skill 2h polearm to 5%
+May train skill consider to 5%
+May train skill tumble to 5%
+May train skill weapon skill 2h dagger to 5%
+May train skill attack to 10%
+------------------------------------------------------.
+
+Level 2 abilities:
+May train skill strike to 5%
+May train skill weapon skill 2h bludgeon to 10%
+May train skill hear noises to 5%
+May train skill weapon skill 2h ancient to 10%
+May train skill weapon skill 2h axe to 10%
+May train skill weapon skill 2h sword to 10%
+May train skill weapon skill 2h polearm to 10%
+May train skill consider to 20%
+May train skill weapon skill 2h dagger to 10%
+May train skill attack to 25%
+------------------------------------------------------.
+
+Level 3 abilities:
+May train skill weapon skill 2h bludgeon to 15%
+May train skill strike to 10%
+May train skill dodge to 5%
+May train skill kick to 10%
+May train skill weapon skill 2h staff to 15%
+May train skill tinning to 10%
+May train skill appraise to 15%
+May train skill weapon skill 2h ancient to 15%
+May train skill weapon skill 2h polearm to 15%
+May train skill weapon skill 2h dagger to 15%
+May train skill consider to 35%
+May train skill attack to 45%
+------------------------------------------------------.
+
+Level 4 abilities:
+May train skill weapon skill 2h bludgeon to 20%
+May train skill appraise to 25%
+May train skill weapon skill 2h axe to 15%
+May train skill weapon skill 2h sword to 20%
+May train skill weapon skill 2h polearm to 25%
+May train skill consider to 45%
+May train skill weapon skill 2h dagger to 25%
+May train skill weapon skill 2h staff to 25%
+------------------------------------------------------.
+
+Level 5 abilities:
+May train skill hear noises to 10%
+May train skill dodge to 10%
+May train skill strike to 15%
+May train skill kick to 15%
+May train skill tinning to 25%
+May train skill weapon skill 2h ancient to 25%
+May train skill appraise to 35%
+May train skill weapon skill 2h sword to 35%
+May train skill riposte to 5%
+May train skill stun to 5%
+May train skill weapon skill 2h polearm to 35%
+May train skill tumble to 10%
+May train skill consider to 65%
+May train skill attack to 55%
+May train skill tracking to 5%
+------------------------------------------------------.
+
+Level 6 abilities:
+May train skill weapon skill 2h bludgeon to 35%
+May train skill strike to 20%
+May train skill leftwield to 5%
+May train skill weapon skill 2h axe to 35%
+May train skill weapon skill 2h polearm to 45%
+May train skill weapon skill 2h dagger to 35%
+May train skill weapon skill 2h staff to 35%
+May train skill zapping to 10%
+------------------------------------------------------.
+
+Level 7 abilities:
+May train skill hear noises to 25%
+May train skill dodge to 15%
+May train skill kick to 25%
+May train skill weapon skill 2h staff to 45%
+May train skill tinning to 35%
+May train skill weapon skill 2h ancient to 45%
+May train skill doublehit to 5%
+May train skill appraise to 45%
+May train skill weapon skill 2h dagger to 45%
+May train skill tumble to 15%
+May train skill consider to 85%
+May train skill attack to 75%
+------------------------------------------------------.
+
+Level 8 abilities:
+May train skill weapon skill 2h bludgeon to 45%
+May train skill strike to 25%
+May train skill kick to 45%
+May train skill zapping to 25%
+May train skill tinning to 45%
+May train skill weapon skill 2h ancient to 55%
+May train skill weapon skill 2h axe to 45%
+May train skill stun to 10%
+May train skill weapon skill 2h sword to 45%
+May train skill consider to 100%
+May train skill camping to 10%
+May train skill tracking to 15%
+May train skill attack to 85%
+------------------------------------------------------.
+
+Level 9 abilities:
+May train skill hear noises to 35%
+May train skill strike to 30%
+May train skill weapon skill 2h bludgeon to 55%
+May train skill weapon skill 2h staff to 55%
+May train skill tinning to 65%
+May train skill leftwield to 15%
+May train skill appraise to 55%
+May train skill weapon skill 2h axe to 55%
+May train skill weapon skill 2h polearm to 55%
+May train skill tumble to 20%
+May train skill weapon skill 2h dagger to 55%
+May train skill attack to 95%
+------------------------------------------------------.
+
+Level 10 abilities:
+May train skill dodge to 20%
+May train skill hear noises to 45%
+May train skill critical to 5%
+May train skill weapon skill 2h staff to 65%
+May train skill doublehit to 15%
+May train skill leftwield to 25%
+May train skill weapon skill 2h ancient to 65%
+May train skill camping to 20%
+May train skill weapon skill 2h bludgeon to 65%
+May train skill leadership to 20%
+May train skill kick to 55%
+May train skill whirlwind attack to 10%
+May train skill weapon skill 2h axe to 65%
+May train skill weapon skill 2h sword to 55%
+May train skill riposte to 10%
+May train skill weapon skill 2h polearm to 65%
+May train skill weapon skill 2h dagger to 65%
+May train skill attack to 100%
+------------------------------------------------------.
+
+Level 11 abilities:
+May train skill strike to 35%
+May train skill kick to 65%
+May train skill weapon skill 2h polearm to 75%
+May train skill weapon skill 2h dagger to 75%
+May train skill tracking to 25%
+------------------------------------------------------.
+
+Level 12 abilities:
+May train skill hear noises to 55%
+May train skill fire building to 10%
+May train skill weapon skill 2h staff to 75%
+May train skill leftwield to 35%
+May train skill weapon skill 2h ancient to 75%
+May train skill stun to 20%
+May train skill tumble to 30%
+May train skill camping to 30%
+May train skill strike to 40%
+May train skill weapon skill 2h bludgeon to 75%
+May train skill kick to 85%
+May train skill whirlwind attack to 15%
+May train skill tinning to 75%
+May train skill appraise to 65%
+May train skill weapon skill 2h axe to 85%
+May train skill weapon skill 2h sword to 65%
+May train skill weapon skill 2h polearm to 85%
+May train skill weapon skill 2h dagger to 85%
+------------------------------------------------------.
+
+Level 13 abilities:
+May train skill weapon skill 2h bludgeon to 85%
+May train skill dodge to 25%
+May train skill critical to 10%
+May train skill kick to 100%
+May train skill zapping to 35%
+May train skill weapon skill 2h ancient to 85%
+May train skill leftwield to 55%
+May train skill doublehit to 25%
+May train skill stun to 35%
+May train skill weapon skill 2h sword to 75%
+May train skill weapon skill 2h polearm to 95%
+------------------------------------------------------.
+
+Level 14 abilities:
+May train skill weapon skill 2h bludgeon to 100%
+May train skill strike to 45%
+May train skill dodge to 35%
+May train skill whirlwind attack to 25%
+May train skill weapon skill 2h staff to 100%
+May train skill appraise to 75%
+May train skill weapon skill 2h ancient to 100%
+May train skill weapon skill 2h axe to 100%
+May train skill weapon skill 2h sword to 100%
+May train skill weapon skill 2h polearm to 100%
+May train skill weapon skill 2h dagger to 100%
+May train skill tracking to 40%
+May train skill camping to 40%
+------------------------------------------------------.
+
+Level 15 abilities:
+May train skill hear noises to 75%
+May train skill dodge to 45%
+May train skill strike to 50%
+May train skill fire building to 20%
+May train skill leadership to 35%
+May train skill anatomy to 10%
+May train skill tinning to 100%
+May train skill leftwield to 65%
+May train skill doublehit to 45%
+May train skill appraise to 100%
+May train skill stun to 45%
+May train skill riposte to 15%
+------------------------------------------------------.
+
+Level 16 abilities:
+May train skill hear noises to 100%
+May train skill camping to 50%
+May train skill critical to 20%
+May train skill zapping to 45%
+------------------------------------------------------.
+
+Level 17 abilities:
+May train skill strike to 55%
+May train skill whirlwind attack to 45%
+May train skill critical to 35%
+May train skill zapping to 65%
+May train skill doublehit to 55%
+May train skill leftwield to 75%
+May train skill stun to 55%
+May train skill tumble to 40%
+May train skill tracking to 55%
+------------------------------------------------------.
+
+Level 18 abilities:
+May train skill strike to 60%
+May train skill dodge to 55%
+May train skill fire building to 30%
+May train skill zapping to 75%
+May train skill camping to 60%
+------------------------------------------------------.
+
+Level 19 abilities:
+May train skill leftwield to 100%
+May train skill doublehit to 75%
+May train skill whirlwind attack to 55%
+May train skill stun to 65%
+May train skill critical to 45%
+May train skill attend wounds to 5%
+------------------------------------------------------.
+
+Level 20 abilities:
+May train skill dodge to 60%
+May train skill strike to 65%
+May train skill throw sand to 5%
+May train skill fire building to 40%
+May train skill leadership to 50%
+May train skill anatomy to 15%
+May train skill zapping to 85%
+May train skill doublehit to 85%
+May train skill riposte to 20%
+May train skill stun to 75%
+May train skill tumble to 60%
+May train skill camping to 70%
+May train skill tracking to 70%
+------------------------------------------------------.
+
+Level 21 abilities:
+May train skill doublehit to 100%
+May train skill strike to 70%
+May train skill critical to 55%
+May train skill whirlwind attack to 65%
+May train skill attend wounds to 15%
+------------------------------------------------------.
+
+Level 22 abilities:
+May train skill dodge to 70%
+May train skill fire building to 50%
+May train skill camping to 80%
+May train skill inner strength to 5%
+------------------------------------------------------.
+
+Level 23 abilities:
+May train skill strike to 75%
+May train skill inner strength to 10%
+May train skill critical to 65%
+May train skill attend wounds to 25%
+May train skill tracking to 85%
+------------------------------------------------------.
+
+Level 24 abilities:
+May train skill strike to 80%
+May train skill throw sand to 10%
+May train skill fire building to 60%
+May train skill whirlwind attack to 75%
+May train skill stun to 85%
+May train skill tumble to 65%
+May train skill camping to 90%
+May train skill zapping to 100%
+------------------------------------------------------.
+
+Level 25 abilities:
+May train skill camouflage to 10%
+May train skill dodge to 75%
+May train skill critical to 75%
+May train skill riposte to 25%
+May train skill leadership to 60%
+May train skill anatomy to 20%
+------------------------------------------------------.
+
+Level 26 abilities:
+May train skill strike to 85%
+May train skill throw sand to 15%
+May train skill fire building to 70%
+May train skill inner strength to 15%
+May train skill attend wounds to 35%
+May train skill tracking to 100%
+May train skill camping to 100%
+------------------------------------------------------.
+
+Level 27 abilities:
+May train skill strike to 90%
+May train skill critical to 85%
+------------------------------------------------------.
+
+Level 28 abilities:
+May train skill camouflage to 20%
+May train skill dodge to 80%
+May train skill fire building to 80%
+May train skill stun to 100%
+------------------------------------------------------.
+
+Level 29 abilities:
+May train skill strike to 95%
+May train skill whirlwind attack to 85%
+May train skill throw sand to 20%
+May train skill tumble to 70%
+May train skill attend wounds to 45%
+------------------------------------------------------.
+
+Level 30 abilities:
+May train skill dodge to 85%
+May train skill brutal swiftness to 5%
+May train skill relentless advance to 10%
+May train skill defiant roar to 5%
+May train skill critical to 90%
+May train skill fire building to 90%
+May train skill danger sense to 10%
+May train skill last stand to 5%
+May train skill spot weakness to 5%
+May train skill rending strike to 5%
+May train skill reckless strike to 5%
+May train skill crimson charge to 10%
+May train skill strike to 100%
+May train skill leadership to 75%
+May train skill savage charge to 10%
+May train skill primal roar to 10%
+May train skill anatomy to 30%
+May train skill overpower to 5%
+May train skill riposte to 30%
+May train skill war paint to 10%
+May train skill ancestral rite to 10%
+------------------------------------------------------.
+
+Level 31 abilities:
+May train skill ancestral leap to 5%
+May train skill camouflage to 30%
+------------------------------------------------------.
+
+Level 32 abilities:
+May train skill crimson charge to 25%
+May train skill brutal swiftness to 15%
+May train skill relentless advance to 25%
+May train skill defiant roar to 10%
+May train skill primal roar to 25%
+May train skill savage charge to 25%
+May train skill whirlwind attack to 90%
+May train skill fire building to 100%
+May train skill last stand to 10%
+May train skill overpower to 10%
+May train skill inner strength to 20%
+May train skill rending strike to 15%
+May train skill ancestral rite to 20%
+May train skill reckless strike to 15%
+May train skill attend wounds to 55%
+------------------------------------------------------.
+
+Level 33 abilities:
+May train skill leadership to 85%
+May train skill throw sand to 25%
+May train skill war paint to 25%
+May train skill tumble to 75%
+May train skill danger sense to 25%
+May train skill ancestral leap to 10%
+------------------------------------------------------.
+
+Level 34 abilities:
+May train skill crimson charge to 40%
+May train skill camouflage to 40%
+May train skill dodge to 90%
+May train skill brutal swiftness to 25%
+May train skill relentless advance to 40%
+May train skill defiant roar to 15%
+May train skill primal roar to 40%
+May train skill savage charge to 40%
+May train skill last stand to 15%
+May train skill overpower to 15%
+May train skill spot weakness to 10%
+May train skill rending strike to 25%
+May train skill ancestral rite to 35%
+May train skill reckless strike to 25%
+------------------------------------------------------.
+
+Level 35 abilities:
+May train skill dodge to 95%
+May train skill leadership to 100%
+May train skill whirlwind attack to 100%
+May train skill anatomy to 40%
+May train skill ancestral leap to 15%
+May train skill inner strength to 25%
+May train skill riposte to 35%
+May train skill steady metabolism to 5%
+May train skill relentless to 5%
+May train skill tumble to 80%
+May train skill attend wounds to 65%
+------------------------------------------------------.
+
+Level 36 abilities:
+May train skill crimson charge to 50%
+May train skill relentless advance to 50%
+May train skill brutal swiftness to 35%
+May train skill defiant roar to 20%
+May train skill savage charge to 50%
+May train skill primal roar to 50%
+May train skill danger sense to 40%
+May train skill last stand to 20%
+May train skill steady metabolism to 10%
+May train skill overpower to 20%
+May train skill war paint to 40%
+May train skill rending strike to 35%
+May train skill ancestral rite to 50%
+May train skill reckless strike to 45%
+------------------------------------------------------.
+
+Level 37 abilities:
+May train skill camouflage to 50%
+May train skill inner strength to 30%
+May train skill steady metabolism to 15%
+May train skill relentless to 10%
+May train skill ancestral leap to 25%
+------------------------------------------------------.
+
+Level 38 abilities:
+May train skill crimson charge to 60%
+May train skill defiant roar to 25%
+May train skill brutal swiftness to 50%
+May train skill dodge to 100%
+May train skill relentless advance to 60%
+May train skill primal roar to 60%
+May train skill savage charge to 60%
+May train skill last stand to 25%
+May train skill overpower to 25%
+May train skill inner strength to 35%
+May train skill steady metabolism to 20%
+May train skill spot weakness to 15%
+May train skill rending strike to 50%
+May train skill ancestral rite to 65%
+May train skill reckless strike to 60%
+May train skill attend wounds to 75%
+------------------------------------------------------.
+
+Level 39 abilities:
+May train skill camouflage to 60%
+May train skill throw sand to 30%
+May train skill critical to 100%
+May train skill steady metabolism to 30%
+May train skill war paint to 55%
+May train skill danger sense to 55%
+May train skill relentless to 15%
+May train skill ancestral leap to 30%
+------------------------------------------------------.
+
+Level 40 abilities:
+May train skill relentless advance to 65%
+May train skill brutal swiftness to 65%
+May train skill defiant roar to 30%
+May train skill last stand to 30%
+May train skill spot weakness to 25%
+May train skill rending strike to 70%
+May train skill reckless strike to 75%
+May train skill crimson charge to 65%
+May train skill savage charge to 65%
+May train skill primal roar to 65%
+May train skill anatomy to 50%
+May train skill steady metabolism to 40%
+May train skill overpower to 30%
+May train skill inner strength to 45%
+May train skill riposte to 40%
+May train skill spirit guidance to 5%
+May train skill ancestral rite to 80%
+------------------------------------------------------.
+
+Level 41 abilities:
+May train skill camouflage to 70%
+May train skill steady metabolism to 50%
+May train skill throw sand to 40%
+May train skill relentless to 20%
+May train skill ancestral leap to 60%
+------------------------------------------------------.
+
+Level 42 abilities:
+May train skill brutal swiftness to 80%
+May train skill defiant roar to 35%
+May train skill throw sand to 45%
+May train skill danger sense to 75%
+May train skill last stand to 35%
+May train skill spirit guidance to 10%
+May train skill steady metabolism to 60%
+May train skill overpower to 35%
+May train skill war paint to 70%
+May train skill tumble to 90%
+May train skill spot weakness to 35%
+May train skill rending strike to 85%
+May train skill reckless strike to 85%
+May train skill attend wounds to 85%
+------------------------------------------------------.
+
+Level 43 abilities:
+May train skill relentless advance to 70%
+May train skill camouflage to 80%
+May train skill crimson charge to 70%
+May train skill savage charge to 70%
+May train skill primal roar to 70%
+May train skill ancestral leap to 80%
+May train skill steady metabolism to 70%
+May train skill relentless to 25%
+May train skill ancestral rite to 90%
+------------------------------------------------------.
+
+Level 44 abilities:
+May train skill defiant roar to 40%
+May train skill last stand to 40%
+May train skill spirit guidance to 15%
+May train skill steady metabolism to 80%
+May train skill overpower to 45%
+May train skill war paint to 85%
+------------------------------------------------------.
+
+Level 45 abilities:
+May train skill camouflage to 85%
+May train skill brutal swiftness to 100%
+May train skill relentless advance to 75%
+May train skill defiant roar to 45%
+May train skill danger sense to 100%
+May train skill last stand to 45%
+May train skill tumble to 100%
+May train skill relentless to 30%
+May train skill spot weakness to 90%
+May train skill rending strike to 100%
+May train skill reckless strike to 100%
+May train skill attend wounds to 100%
+May train skill crimson charge to 75%
+May train skill savage charge to 75%
+May train skill primal roar to 75%
+May train skill anatomy to 90%
+May train skill ancestral leap to 100%
+May train skill spirit guidance to 20%
+May train skill steady metabolism to 100%
+May train skill overpower to 55%
+May train skill inner strength to 100%
+May train skill riposte to 45%
+May train skill war paint to 100%
+May train skill ancestral rite to 100%
+------------------------------------------------------.
+
+Subguilds:
+Warbringer 15
+Savage 15
+Berserker 15
+Bloodbound 15

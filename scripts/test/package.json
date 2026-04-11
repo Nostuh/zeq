@@ -1,0 +1,8 @@
+{
+  "name": "zeq-responsive-tests",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}

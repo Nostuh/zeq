@@ -283,7 +283,7 @@ export default {
     },
     mounted: async function() {
         let that = this;
-        if ( this.$root.user.first_name === false ) { this.$router.push({name:"dashboard"}); }
+        if ( !this.$root.user ) { this.$router.push({name:"dashboard"}); return; }
         let data = await axios.post('/api/eq/eq',{user_id:this.$root.user.id});
         let eq = data.data;
         

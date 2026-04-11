@@ -2,6 +2,7 @@ import config from './classes/config.json' with { type: "json" };
 import express from 'express';
 import { globSync } from 'glob';
 import bodyParser from 'body-parser';
+import { bootstrapFirstAdmin } from './rest/api/auth.mjs';
 const router = express.Router();
 
 const app = express();
@@ -28,8 +29,9 @@ try {
     console.log('api.js had error!');
 }
 
-app.listen(port, () => {
+app.listen(port, async () => {
     console.log('listening at http://localhost:'+port);
+    await bootstrapFirstAdmin();
 });
 
 export const handler = app;

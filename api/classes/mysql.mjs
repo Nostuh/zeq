@@ -9,6 +9,12 @@ export default class mysql {
         try {
             let config = connection_config[connection_name];
             config.port = 3306;
+            // CRITICAL: force utf8mb4 on the driver connection. The `mysql`
+            // package defaults to 3-byte `utf8` which cannot round-trip
+            // 4-byte codepoints (emoji, astral-plane characters). Any
+            // INSERT with a 4-byte char into a utf8mb4 column fails with
+            // ER_TRUNCATED_WRONG_VALUE_FOR_FIELD. See docs/gotchas.md.
+            config.charset = 'utf8mb4';
             if ( mysql.dbs[connection_name] == undefined ) {
                 mysql.dbs[connection_name] = {};
                 mysql.dbs[connection_name].pool = _mysql.createPool(config);
@@ -19,7 +25,7 @@ export default class mysql {
             console.log(e);
             throw e;
         }
-        
+
     }
 
     static query(sql,vars,config,replace_all_on=false) {
@@ -29,28 +35,16 @@ export default class mysql {
             (resolve,reject) => {
                 try {
                     if ( vars != false ) {
-                        //console.log(vars);
+                        // Always use replaceAll. Using `.replace()` only
+                        // substitutes the first occurrence, which silently
+                        // breaks any query that references the same @name
+                        // placeholder twice AND allows a pathological case
+                        // where a value containing `@otherparam` gets
+                        // substituted-through by the next iteration. See
+                        // docs/bug-workflow.md punch list item #3.
                         uf.dloop(vars,function(i,v) {
-                            //console.log(v);
-                            if ( replace_all_on ) {
-
-                                // 9/11/2024 Why am I testing if v is an array then doing exactly the same thing on the if....
-                                if ( Array.isArray(v) ) {
-                                    sql = sql.replaceAll('@'+i,that.escape(v));
-                                } else {
-                                    sql = sql.replaceAll('@'+i,that.escape(v));
-                                }
-                            } else {
-                                if ( Array.isArray(v) ) {
-                                    sql = sql.replace('@'+i,that.escape(v));
-                                } else {
-                                    sql = sql.replace('@'+i,that.escape(v));
-                                }
-                            }
-
-                            
+                            sql = sql.replaceAll('@' + i, that.escape(v));
                         });
-                        //console.log(sql);
                     }
                     //console.log(sql);
                     mysql.dbs[config].pool.query(sql,function(err,data) {
