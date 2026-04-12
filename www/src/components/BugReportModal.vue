@@ -217,7 +217,7 @@ export default {
                 <label class="form-label small">Your name <span class="text-muted">(optional)</span></label>
                 <input class="form-control form-control-sm" v-model="form.reporter_name">
             </div>
-            <div class="text-end">
+            <div class="text-end modal-actions">
                 <button type="button" class="btn btn-sm btn-secondary me-2" @click="$emit('close')">Cancel</button>
                 <button type="submit" class="btn btn-sm btn-primary" :disabled="busy">Submit</button>
             </div>
@@ -235,8 +235,7 @@ export default {
        through the translucent overlay. */
     z-index: 2000;
     display: flex; align-items: flex-start; justify-content: center;
-    padding-top: 1rem;
-    overflow-y: auto;
+    padding: 1rem;
 }
 .modal-panel {
     background: #fff;
@@ -245,7 +244,27 @@ export default {
     width: 100%;
     max-width: 38rem;
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.35);
-    margin: 1rem;
+    /* Cap to the visual viewport so the panel itself scrolls instead of
+       relying on the fixed backdrop. iOS doesn't resize position:fixed
+       elements when the virtual keyboard opens, so a backdrop scroll
+       leaves the submit button stuck below the keyboard with no way to
+       reach it. `100dvh` follows the visible viewport on browsers that
+       support it; the `100vh` line is the fallback. */
+    max-height: 100vh;
+    max-height: calc(100dvh - 2rem);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+/* Pin the Cancel/Submit row to the bottom of the (now scrollable) panel
+   so the submit button is always reachable, even with a long form and a
+   virtual keyboard occupying half the screen. */
+.modal-actions {
+    position: sticky;
+    bottom: 0;
+    background: inherit;
+    padding-top: 0.5rem;
+    margin-top: auto;
 }
 .dropzone {
     position: relative;

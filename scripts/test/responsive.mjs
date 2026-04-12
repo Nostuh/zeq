@@ -77,6 +77,98 @@ const CASES = [
         // checks plus a sibling-overlap check on the tab body. Bug #23
         // shipped because the harness only ever inspected the General tab.
         tabs: ['General', 'Skills', 'Spells', 'Extras', 'Export'],
+        // Modals: open each one, check the panel/primary action stay inside
+        // the viewport. setupSrc is a function-source string that runs
+        // inside page.evaluate; it must return true on success and leave
+        // the modal open. teardownSrc closes it again.
+        modals: [
+            {
+                name: 'bug-report',
+                setupSrc: `(async () => {
+                    // The persistent FAB is the canonical entry point on
+                    // every viewport (the header button hides at <560px).
+                    const fab = document.querySelector('.fab-report');
+                    if (!fab) return false;
+                    fab.click();
+                    return true;
+                })()`,
+                panelSel: '.modal-panel',
+                primarySel: '.modal-panel button[type="submit"]',
+                closeSel: '.modal-panel .btn-close',
+                teardownSrc: `(() => {
+                    const x = document.querySelector('.modal-panel .btn-close');
+                    if (x) x.click();
+                })()`,
+            },
+            {
+                name: 'share-build',
+                setupSrc: `(async () => {
+                    const btn = document.querySelector('.sb-share-btn');
+                    if (!btn) return false;
+                    btn.click();
+                    return true;
+                })()`,
+                // SaveBuildModal renders into a .reinc-modal-backdrop with a
+                // .reinc-modal-panel inside (separate class namespace from
+                // BugReportModal so the two can co-exist).
+                panelSel: '.reinc-modal-panel',
+                primarySel: '.reinc-modal-panel button[type="submit"], .reinc-modal-panel .btn-primary',
+                closeSel: '.reinc-modal-panel .btn-close',
+                teardownSrc: `(() => {
+                    const x = document.querySelector('.reinc-modal-panel .btn-close');
+                    if (x) x.click();
+                })()`,
+            },
+            {
+                name: 'guild-info',
+                // The ⓘ button is on every guild row in the picker. Pick
+                // the first one regardless of guild — every row has the
+                // same handler. Need to be on the General tab, which the
+                // harness leaves the page on after the tab walk (last
+                // tab clicked is Export, so re-click General).
+                setupSrc: `(async () => {
+                    const tabs = [...document.querySelectorAll('.nav-tabs .nav-link')];
+                    const gen = tabs.find((a) => a.textContent.trim() === 'General');
+                    if (gen) gen.click();
+                    // Wait for the General tab body to render — the tab
+                    // walk leaves us on Export, and Vue's v-if swap is
+                    // synchronous-but-renders-next-tick.
+                    await new Promise((r) => setTimeout(r, 200));
+                    const btn = document.querySelector('.guild-list .info-btn:not([disabled])');
+                    if (!btn) return false;
+                    btn.click();
+                    return true;
+                })()`,
+                panelSel: '.reinc-modal-panel',
+                closeSel: '.reinc-modal-panel .btn-close',
+                teardownSrc: `(() => {
+                    const x = document.querySelector('.reinc-modal-panel .btn-close');
+                    if (x) x.click();
+                })()`,
+            },
+            {
+                name: 'boon-info',
+                // Switch to Extras, find the first boon ⓘ button.
+                setupSrc: `(async () => {
+                    const tabs = [...document.querySelectorAll('.nav-tabs .nav-link')];
+                    const ex = tabs.find((a) => a.textContent.trim() === 'Extras');
+                    if (!ex) return false;
+                    ex.click();
+                    return new Promise((res) => setTimeout(() => {
+                        const btn = document.querySelector('.boon-item .info-btn, .boons-grid .info-btn, .ex-section .info-btn');
+                        if (!btn) { res(false); return; }
+                        btn.click();
+                        res(true);
+                    }, 200));
+                })()`,
+                panelSel: '.reinc-modal-panel',
+                closeSel: '.reinc-modal-panel .btn-close',
+                teardownSrc: `(() => {
+                    const x = document.querySelector('.reinc-modal-panel .btn-close');
+                    if (x) x.click();
+                })()`,
+            },
+        ],
     },
     {
         route: '/#/login',
@@ -252,6 +344,78 @@ async function runCase(browser, vp, tc) {
             for (const ov of overlaps) errors.push(`[${tabName}] ${ov}`);
 
             await page.screenshot({ path: path.join(OUT, label + '_tab-' + tabName.toLowerCase() + '.png'), fullPage: false });
+        }
+
+        // 5) Modal sweep — open every modal the planner can show, and for
+        //    each one check that the panel fits the viewport horizontally,
+        //    the close button is reachable, and the primary action button
+        //    (Submit / Save / Close) is in the visible viewport without a
+        //    page-level scroll. Bug #29-companion: on small phones the
+        //    bug-report modal had its Submit button hidden below the iOS
+        //    keyboard area; the panel now scrolls internally with a sticky
+        //    footer, so the action row should always be visible.
+        if (tc.modals && tc.modals.length) {
+            for (const modal of tc.modals) {
+                // Each modal definition is { name, setup, panelSel,
+                // primarySel, closeSel }. `setup` is an in-page function
+                // expression that opens the modal (returns true on
+                // success); we eval it inside page.evaluate.
+                const opened = await page.evaluate(modal.setupSrc);
+                if (!opened) { errors.push(`[modal:${modal.name}] could not open`); continue; }
+                await new Promise((r) => setTimeout(r, 250));
+
+                const m = await page.evaluate((sel) => {
+                    const panel = document.querySelector(sel.panelSel);
+                    if (!panel) return { found: false };
+                    const pr = panel.getBoundingClientRect();
+                    const primary = sel.primarySel ? document.querySelector(sel.primarySel) : null;
+                    const closeBtn = sel.closeSel ? document.querySelector(sel.closeSel) : null;
+                    const r = (el) => el ? el.getBoundingClientRect() : null;
+                    const visible = (rect) => rect && rect.width > 0 && rect.height > 0
+                        && rect.top < window.innerHeight && rect.bottom > 0
+                        && rect.left < window.innerWidth && rect.right > 0;
+                    return {
+                        found: true,
+                        panel: { l: pr.left, r: pr.right, t: pr.top, b: pr.bottom, w: pr.width, h: pr.height },
+                        vw: window.innerWidth, vh: window.innerHeight,
+                        scrollW: document.documentElement.scrollWidth,
+                        clientW: document.documentElement.clientWidth,
+                        bodyScrollH: document.body.scrollHeight,
+                        clientH: document.documentElement.clientHeight,
+                        primaryFound: !!primary,
+                        primaryVisible: visible(r(primary)),
+                        primaryRect: primary ? r(primary) : null,
+                        closeFound: !!closeBtn,
+                        closeVisible: visible(r(closeBtn)),
+                    };
+                }, { panelSel: modal.panelSel, primarySel: modal.primarySel, closeSel: modal.closeSel });
+
+                if (!m.found) { errors.push(`[modal:${modal.name}] panel not in DOM after open`); continue; }
+                if (m.scrollW > m.clientW + 1) {
+                    errors.push(`[modal:${modal.name}] horizontal page overflow: ${m.scrollW} > ${m.clientW}`);
+                }
+                if (m.panel.r > m.vw + 1 || m.panel.l < -1) {
+                    errors.push(`[modal:${modal.name}] panel clipped horizontally (${m.panel.l.toFixed(0)}-${m.panel.r.toFixed(0)} vs vw ${m.vw})`);
+                }
+                if (modal.primarySel) {
+                    if (!m.primaryFound) errors.push(`[modal:${modal.name}] primary action missing: ${modal.primarySel}`);
+                    else if (!m.primaryVisible) {
+                        errors.push(`[modal:${modal.name}] primary action not in viewport: ${modal.primarySel} (rect ${m.primaryRect.left.toFixed(0)},${m.primaryRect.top.toFixed(0)} vs ${m.vw}x${m.vh})`);
+                    }
+                }
+                if (modal.closeSel) {
+                    if (!m.closeFound) errors.push(`[modal:${modal.name}] close button missing: ${modal.closeSel}`);
+                    else if (!m.closeVisible) errors.push(`[modal:${modal.name}] close button not in viewport: ${modal.closeSel}`);
+                }
+
+                await page.screenshot({ path: path.join(OUT, label + '_modal-' + modal.name + '.png'), fullPage: false });
+
+                // Tear the modal down before opening the next one.
+                if (modal.teardownSrc) {
+                    await page.evaluate(modal.teardownSrc);
+                    await new Promise((r) => setTimeout(r, 150));
+                }
+            }
         }
     } catch (e) {
         errors.push('exception: ' + (e.message || String(e)));

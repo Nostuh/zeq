@@ -137,6 +137,31 @@ const SEED = [
         title: 'Dark mode toggle in the header',
         body: 'A sun/moon button in the top-right of the header flips the whole site between light and dark themes. Your choice is remembered across visits, and first-time visitors get whichever theme their OS prefers. Covers the planner, Builds, Updates, Bug Reports, and the admin pages.',
     },
+    {
+        created: '2026-04-11 20:15:00', kind: 'fix',
+        title: 'Bug-report Submit button reachable on mobile',
+        body: 'On phones, opening the keyboard in the bug-report form pushed the Submit button below the visible area with no way to scroll to it. The form now scrolls inside the modal and the Cancel/Submit row is pinned to the bottom so it stays visible no matter how much you type.',
+    },
+    {
+        created: '2026-04-11 20:30:00', kind: 'fix', bug_id: 27,
+        title: 'Guild checkboxes respond to clicks on the box itself',
+        body: 'In the guild picker, clicking directly on a checkbox did nothing — you had to click the guild name for the selection to register. The row now handles clicks on both the checkbox and the name, so either spot toggles the pick.',
+    },
+    {
+        created: '2026-04-11 20:31:00', kind: 'tweak', bug_id: 28,
+        title: 'Guild picker shows each guild\u2019s max level at a glance',
+        body: 'Every guild and subguild in the picker now shows its max level right next to the name (e.g. "Masters of magic /8") so you can see a subguild\u2019s ceiling without selecting it or opening the unlock modal.',
+    },
+    {
+        created: '2026-04-11 20:32:00', kind: 'fix', bug_id: 29,
+        title: 'Header fits on mobile screens',
+        body: 'The top navigation bar was overflowing on small phones — brand, links, the Report button, and the theme toggle were all fighting for space. The brand shrinks to "Zorky\u2019s" under 560px, the header Report button hides (the red FAB bottom-right already covers that), and spacing tightens so the remaining links and theme toggle fit a 352px viewport.',
+    },
+    {
+        created: '2026-04-11 20:55:00', kind: 'tweak',
+        title: 'Compact summary bar on small phones',
+        body: 'On viewports under 520px wide, the planner summary bar drops the secondary chips (Size, SkCost, SpCost, Exp rate, and the XP-breakdown row) and the race list shrinks its height cap, so the race picker, guild search, and first guild rows all fit on the initial screen without scrolling. Hidden values are still surfaced via the Extras and Export tabs and on larger viewports.',
+    },
 ];
 
 async function main() {

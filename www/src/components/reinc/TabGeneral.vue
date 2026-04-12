@@ -50,11 +50,29 @@ export default {
             <div v-for="g in reinc.guildTree" :key="g.id" class="guild-row"
                  :class="{ picked: reinc.isPicked(g), sub: g.depth, locked: reinc.isLocked(g) }"
                  :title="reinc.isLocked(g) ? 'Select the parent guild at max level to unlock this subguild' : ''">
-                <label class="d-flex align-items-center flex-grow-1 mb-0" :style="reinc.isLocked(g) ? 'cursor:not-allowed;' : 'cursor:pointer;'" @click.prevent="reinc.onGuildClick(g)">
-                    <input type="checkbox" class="form-check-input me-2" :checked="reinc.isPicked(g)" :disabled="reinc.isLocked(g)" @click.prevent>
-                    <span :class="{ 'text-muted': g.depth || reinc.isLocked(g) }">{{ g.depth ? '- ' : '' }}{{ g.name }}</span>
+                <!-- Bug #27 — checkbox and name both carry their own click
+                     handler. Wrapping the input in a <label> with the real
+                     handler on the label caused the browser's label-default
+                     path + @click.prevent to swallow clicks that landed on
+                     the checkbox itself (text still worked because the span
+                     click bubbled directly to the label). Per
+                     docs/gotchas.md "Vue checkbox desync", :checked +
+                     @click.prevent must sit on the input directly. -->
+                <div class="d-flex align-items-center flex-grow-1 mb-0"
+                     :style="reinc.isLocked(g) ? 'cursor:not-allowed;' : 'cursor:pointer;'">
+                    <input type="checkbox" class="form-check-input me-2"
+                           :checked="reinc.isPicked(g)"
+                           :disabled="reinc.isLocked(g)"
+                           @click.prevent="reinc.onGuildClick(g)">
+                    <!-- Bug #28 — show "/max" next to every guild name when
+                         it's NOT currently picked, so the user can eyeball
+                         each row's ceiling without picking it or opening the
+                         unlock modal. Picked rows already display "/max" as
+                         part of the level input on the right. -->
+                    <span :class="{ 'text-muted': g.depth || reinc.isLocked(g) }"
+                          @click="reinc.isLocked(g) || reinc.onGuildClick(g)">{{ g.depth ? '- ' : '' }}{{ g.name }}<small v-if="!reinc.isPicked(g)" class="text-muted ms-1">/{{ g.max_level }}</small></span>
                     <span v-if="reinc.isLocked(g)" class="ms-2 small text-muted">🔒</span>
-                </label>
+                </div>
                 <input v-if="reinc.isPicked(g)" type="number" class="form-control form-control-sm level-input"
                        :value="reinc.pickLevel(g)" @input="reinc.setPickLevel(g, $event.target.value)" :max="g.max_level" min="1">
                 <span v-if="reinc.isPicked(g)" class="small text-muted ms-1">/ {{ g.max_level }}</span>

@@ -48,14 +48,16 @@ For every `(route, viewport)` pair:
 
 ## Viewport matrix
 
-The harness exercises six viewports covering the full responsive range:
+The harness exercises eight viewports covering the full responsive range:
 
 | label        | width  | height | represents              |
 |--------------|-------:|-------:|-------------------------|
 | mobile       |  360px |  780px | narrow phone (iPhone SE)|
 | mobile-wide  |  414px |  900px | larger phone            |
 | tablet       |  800px | 1100px | portrait tablet         |
-| laptop       | 1280px |  800px | cramped laptop          |
+| short-laptop | 1024px |  654px | short-height laptop (bug #25) |
+| small-laptop | 1032px |  703px | cramped laptop (bug #23)|
+| laptop       | 1280px |  800px | standard laptop         |
 | desktop      | 1600px |  900px | standard desktop        |
 | desktop-wide | 1920px | 1080px | large monitor           |
 
@@ -82,6 +84,23 @@ A case should either assert no page scroll OR scroll freely — don't mix
 semantics. The reinc planner is the only "locked viewport" route today;
 every admin page and the login page scroll normally.
 
+## Modal sweep
+
+After the tab walk, the harness opens every planner modal via real DOM
+clicks and checks each panel fits the viewport:
+
+- **bug-report** — opens via the `.fab-report` FAB (always visible,
+  including at <560px where the header Report button hides). Asserts
+  the panel, submit button, and close button are all inside the
+  viewport (validates the sticky-footer fix for mobile keyboards).
+- **share-build** — opens via the `.sb-share-btn` in the summary bar.
+- **guild-info** — switches to General tab, clicks the first guild's
+  ⓘ button.
+- **boon-info** — switches to Extras tab, clicks the first boon's ⓘ
+  button.
+
+Each modal is torn down (close button clicked) before the next opens.
+
 ## What the harness does NOT catch
 
 - **Visual regressions** — pixel-diffing would catch colour/spacing
@@ -89,9 +108,6 @@ every admin page and the login page scroll normally.
   eye when a PR touches CSS heavily.
 - **Keyboard / focus management** — not exercised. Use manual keyboard
   testing when adding new form widgets.
-- **Actual interactivity** — the harness does not click, type, or
-  navigate after load. Add test cases with explicit click/type flows
-  if a regression proves this is needed.
 - **CSS `prefers-reduced-motion` / dark-mode / RTL** — not tested.
 
 ## Dependencies
@@ -113,7 +129,7 @@ dnf install -y nss atk at-spi2-atk cups-libs libdrm gtk3 \
 2. `cd ../../scripts/test && node responsive.mjs`
 3. Fix any failures. Look at the corresponding `_initial.png` screenshot
    to understand *why* a breakpoint failed.
-4. Re-run until all 12 cases (2 routes × 6 viewports) are green.
+4. Re-run until all 16 cases (2 routes × 8 viewports) are green.
 
 This is a hard gate for any responsive-design work per
 [CLAUDE.md](../CLAUDE.md).

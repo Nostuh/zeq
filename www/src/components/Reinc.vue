@@ -1003,12 +1003,12 @@ export default {
                  :title="`Racial max ${s.toUpperCase()}: ${race['max_'+s]}`">
                 <span class="sb-label">{{ s.toUpperCase() }}</span><span class="sb-value">{{ character.finalStats[s] }}<small class="sb-max">/{{ race['max_'+s] }}</small></span>
             </div>
-            <div class="sb-cell" :title="`Base racial size: ${race.size}`"><span class="sb-label">Size</span><span class="sb-value">{{ character.size }}<small class="sb-max">/{{ race.size }}</small></span></div>
+            <div class="sb-cell sb-cell-secondary" :title="`Base racial size: ${race.size}`"><span class="sb-label">Size</span><span class="sb-value">{{ character.size }}<small class="sb-max">/{{ race.size }}</small></span></div>
             <div class="sb-cell" title="Effective skill cap after guild bonuses / racial cap"><span class="sb-label">SkMax</span><span class="sb-value">{{ character.skillMax }}<small class="sb-max">/{{ race.skill_max }}</small></span></div>
             <div class="sb-cell" title="Effective spell cap after guild bonuses / racial cap"><span class="sb-label">SpMax</span><span class="sb-value">{{ character.spellMax }}<small class="sb-max">/{{ race.spell_max }}</small></span></div>
-            <div class="sb-cell" title="Racial skill learning cost"><span class="sb-label">SkCost</span><span class="sb-value">{{ race.skill_cost }}</span></div>
-            <div class="sb-cell" title="Racial spell learning cost"><span class="sb-label">SpCost</span><span class="sb-value">{{ race.spell_cost }}</span></div>
-            <div class="sb-cell"><span class="sb-label">Exp rate</span><span class="sb-value">{{ race.exp_rate }}%</span></div>
+            <div class="sb-cell sb-cell-secondary" title="Racial skill learning cost"><span class="sb-label">SkCost</span><span class="sb-value">{{ race.skill_cost }}</span></div>
+            <div class="sb-cell sb-cell-secondary" title="Racial spell learning cost"><span class="sb-label">SpCost</span><span class="sb-value">{{ race.spell_cost }}</span></div>
+            <div class="sb-cell sb-cell-secondary"><span class="sb-label">Exp rate</span><span class="sb-value">{{ race.exp_rate }}%</span></div>
             <div class="sb-cell"><span class="sb-label">Level</span><span class="sb-value" :title="`${guildLevelsSum} guild + ${freeLevels} free`">{{ guildLevelsSum }}+{{ freeLevels }}/{{ MAX_LEVEL }}</span></div>
             <div class="sb-cell"><span class="sb-label">Total XP</span><span class="sb-value" :title="nfmt(totalExp)">{{ sfmt(totalExp) }}</span></div>
             <div class="sb-cell"><span class="sb-label">Gold</span><span class="sb-value" :title="nfmt(goldRequired)">{{ sfmt(goldRequired) }}</span></div>
@@ -1529,7 +1529,24 @@ export default {
     .general-grid, .skills-grid { flex: 0 0 auto; }
 }
 @media (max-width: 520px) {
-    .summary-bar { font-size: 0.7rem; }
+    .summary-bar { font-size: 0.7rem; padding: 0.3rem 0.45rem; }
+    .sb-row + .sb-row { margin-top: 0.25rem; padding-top: 0.25rem; }
     .sb-cell { min-width: 2.75em; }
+    .sb-value { font-size: 0.85rem; }
+    /* On narrow phones the planner has to fit more than just the summary
+       bar — the General tab's race picker and guild search both have to
+       be reachable without scrolling miles. Shrink the race list's
+       desktop 18rem cap so the guild search (which lives below it after
+       the columns stack) lands in the initial viewport. The race-list's
+       internal overflow keeps every race reachable via its own scroll. */
+    .race-list { max-height: 11rem; }
+    /* Hide the lower-priority chips on the narrowest viewports — Size,
+       SkCost/SpCost, Exp rate, and the secondary XP-breakdown row. Race,
+       HP, SP, HPR, SPR, the six stats, SkMax/SpMax, Level, Total XP and
+       Gold all stay. The hidden values are still surfaced via the
+       Extras / Export tabs and the chip tooltips on desktop, so this is
+       a "screen real estate" trim, not a feature loss. */
+    .sb-cell-secondary { display: none; }
+    .sb-row.sb-exp { display: none; }
 }
 </style>

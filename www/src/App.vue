@@ -204,15 +204,24 @@ export default {
         </p>
     </div>
 
-    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <router-link :to="{name:'home'}" class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-decoration-none">Zorky's — Reinc Planner</router-link>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow zeq-navbar">
+        <!-- Bug #29 — mobile layout: the full brand string + every nav
+             link + the Report button overflowed a 352px viewport. The
+             brand shrinks to "Zorky's", the Report button hides under
+             the FAB on the right, and gaps shrink to `me-1` so the
+             remaining Planner/Builds/Updates + theme toggle + Sign in
+             fit on one row. All scoped to `<560px` via `.zeq-navbar`. -->
+        <router-link :to="{name:'home'}" class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-decoration-none">
+            <span class="brand-full">Zorky's — Reinc Planner</span>
+            <span class="brand-short">Zorky's</span>
+        </router-link>
         <div class="navbar-nav flex-row ms-auto pe-3 align-items-center">
             <router-link class="nav-link text-light me-3" :to="{name:'home'}">Planner</router-link>
             <router-link class="nav-link text-light me-3" :to="{name:'builds'}">Builds</router-link>
             <router-link class="nav-link text-light me-3" :to="{name:'updates'}">Updates</router-link>
             <router-link v-if="isEditor" class="nav-link text-light me-3" :to="{name:'races'}">Admin</router-link>
             <router-link v-else-if="isAuthed" class="nav-link text-light me-3" :to="{name:'equipment'}">My Equipment</router-link>
-            <button class="btn btn-sm btn-outline-warning me-3" @click="openBug">Report Bug / Idea</button>
+            <button class="btn btn-sm btn-outline-warning me-3 report-btn" @click="openBug">Report Bug / Idea</button>
             <button class="btn btn-sm btn-outline-light me-3 theme-toggle"
                     @click="toggleTheme"
                     :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
@@ -350,6 +359,24 @@ body.reinc-active #app {
 }
 @media (prefers-reduced-motion: reduce) {
     .fab-report { animation: none; }
+}
+
+/* Bug #29 — mobile header layout. Default (desktop) hides the short
+   brand; narrow viewports flip the visibility and tighten gaps so the
+   whole header fits 352px without overflow. The Report Bug / Idea
+   button hides on mobile because the red FAB bottom-right is the
+   primary entry point on a phone anyway. */
+.zeq-navbar .brand-short { display: none; }
+@media (max-width: 560px) {
+    .zeq-navbar .navbar-brand { padding-left: 0.6rem; padding-right: 0.6rem; }
+    .zeq-navbar .brand-full { display: none; }
+    .zeq-navbar .brand-short { display: inline; }
+    .zeq-navbar .navbar-nav { padding-right: 0.5rem !important; }
+    .zeq-navbar .navbar-nav .nav-link,
+    .zeq-navbar .navbar-nav .theme-toggle,
+    .zeq-navbar .navbar-nav .navbar-text { margin-right: 0.4rem !important; }
+    .zeq-navbar .navbar-nav .nav-link { padding-left: 0.25rem; padding-right: 0.25rem; font-size: 0.85rem; }
+    .zeq-navbar .report-btn { display: none; }
 }
 
 .reinc-wrap {
