@@ -1278,6 +1278,7 @@ export default {
 .guild-row.sub { padding-left: 1rem; }
 .guild-row.picked { background: #e7f1ff; }
 .guild-row.locked { opacity: 0.55; }
+.guild-check { font-size: 1rem; line-height: 1; flex-shrink: 0; }
 /* Shared info button (used by the guild picker and by each boon row
    on the Extras tab). Cleaner than the old "ⓘ" glyph — a real
    bi-info-circle that highlights on hover and dims when disabled. */

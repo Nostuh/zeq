@@ -47,12 +47,14 @@ If `<input type="checkbox" :checked="..." @change="fn">` is wired up
 and `fn` decides not to mutate the bound value, Vue does NOT re-render
 the checkbox (bound value unchanged) but the browser already flipped
 the DOM `.checked` property. Result: visually checked but state says
-unchecked. Fix: don't wrap the checkbox in a `<label>` — use
-`@click.prevent="handler"` directly on the `<input>` and a separate
-`@click` on the sibling text `<span>`. `:checked` is the only source
-of truth. The reinc guild list (TabGeneral.vue) uses this pattern;
-bug #27 confirmed that the old `<label>` wrapper swallowed clicks on
-the checkbox itself.
+unchecked. Even `@click.prevent` on the `<input>` with `:checked` as
+the sole source of truth can still desync across browsers — the DOM
+`.checked` property drifts from the Vue-managed attribute. The only
+reliable fix is to **not use a native checkbox at all**: replace it
+with a Bootstrap icon (`bi-check-square-fill` / `bi-square`) driven
+purely by reactive state. The reinc guild list (TabGeneral.vue) uses
+this approach after bug #27 proved every native-checkbox pattern
+eventually desyncs.
 
 ### Derived state vs. primary state for totalLevels
 `totalLevels` in the reinc planner is a COMPUTED value derived from
