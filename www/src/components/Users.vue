@@ -55,6 +55,28 @@ export default {
                 else this.$root.flashMsg(r.data.error, 'danger');
             } catch (e) { this.$root.flashError(e); }
         },
+        async toggleEqRole(u, role) {
+            const current = u.eqRoles || [];
+            let newRoles;
+            if (current.includes(role)) {
+                newRoles = current.filter(r => r !== role);
+            } else {
+                newRoles = [...current, role];
+                // eq_editor implies eq_viewer
+                if (role === 'eq_editor' && !newRoles.includes('eq_viewer')) {
+                    newRoles.push('eq_viewer');
+                }
+            }
+            // Removing eq_viewer also removes eq_editor
+            if (role === 'eq_viewer' && !newRoles.includes('eq_viewer')) {
+                newRoles = newRoles.filter(r => r !== 'eq_editor');
+            }
+            try {
+                const r = await axios.post('/api/users/' + u.id + '/eq-roles', { roles: newRoles });
+                if (r.data.ok) { this.$root.flashMsg('EQ roles updated'); await this.load(); }
+                else this.$root.flashMsg(r.data.error, 'danger');
+            } catch (e) { this.$root.flashError(e); }
+        },
         async del(u) {
             if (!confirm(`Delete user "${u.name}"?`)) return;
             try {
@@ -90,7 +112,7 @@ export default {
     </div>
 
     <table class="table table-sm table-striped align-middle">
-        <thead><tr><th>Name</th><th>Role</th><th>Status</th><th>Last login</th><th style="width:30em;">Actions</th></tr></thead>
+        <thead><tr><th>Name</th><th>Role</th><th>EQ Access</th><th>Status</th><th>Last login</th><th style="width:30em;">Actions</th></tr></thead>
         <tbody>
             <tr v-for="u in rows" :key="u.id">
                 <td>{{ u.name }} <span v-if="isSelf(u)" class="badge bg-warning text-dark">you</span></td>
@@ -100,6 +122,23 @@ export default {
                         <option value="editor">editor</option>
                         <option value="admin">admin</option>
                     </select>
+                </td>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox"
+                               :checked="(u.eqRoles || []).includes('eq_viewer')"
+                               @change="toggleEqRole(u, 'eq_viewer')"
+                               :disabled="u.role === 'admin'">
+                        <label class="form-check-label small">Viewer</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox"
+                               :checked="(u.eqRoles || []).includes('eq_editor')"
+                               @change="toggleEqRole(u, 'eq_editor')"
+                               :disabled="u.role === 'admin'">
+                        <label class="form-check-label small">Editor</label>
+                    </div>
+                    <span v-if="u.role === 'admin'" class="text-muted small">(auto)</span>
                 </td>
                 <td>
                     <span class="badge" :class="u.active ? 'bg-success' : 'bg-secondary'">{{ u.active ? 'active' : 'inactive' }}</span>

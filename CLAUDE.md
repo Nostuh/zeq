@@ -41,6 +41,7 @@ See [docs/schema.md](docs/schema.md).
   `100vh` — never add page-level scroll. See [docs/reinc.md](docs/reinc.md), [docs/seo.md](docs/seo.md).
 - Updates feed: every user-visible fix/feature → `site_updates` row (set `bug_id` when from a report). No refactors. See [docs/updates.md](docs/updates.md).
 - Saved reincs (`/builds`): state JSON stores `game_*` IDs, so game-data migrations can rot old builds — read drift rules in [docs/saved-reincs.md](docs/saved-reincs.md) before renaming/deleting game rows.
+- EQ Mob KB: `mob_*` tables, `/api/mobs`, eq roles in `user_roles`. [docs/mobs.md](docs/mobs.md).
 
 ## Running
 
@@ -56,6 +57,4 @@ this CLAUDE.md and the subsystem's source of truth (C# decompile /
 
 ## Before touching code
 
-**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us
-(Vue checkbox desync, int32 wrap, `.tab-body`+grid class trap, `totalLevels`
-direction, mysql shim `@name`-only). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), and for planner math [docs/reinc.md](docs/reinc.md).
+**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us (Vue checkbox desync, int32 wrap, `.tab-body`+grid trap, `totalLevels` direction, mysql `@name`-only, param prefix collisions). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), [docs/mobs.md](docs/mobs.md).

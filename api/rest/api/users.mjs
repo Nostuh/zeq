@@ -20,12 +20,20 @@ const router = express.Router();
 const zeq = dbs.get('zeq');
 
 const ROLES = ['admin', 'editor', 'viewer'];
+const EQ_ROLES = ['eq_editor', 'eq_viewer'];
 
 function fail(res, msg, code = 400) { res.status(code).json({ ok: false, error: msg }); }
 
 router.get('/', requireAdmin, async function(req, res) {
     const rows = await zeq.query(
         `SELECT id, name, role, active, last_login, created FROM users ORDER BY name`);
+    // Attach eq roles for each user
+    if (rows.length) {
+        const allEq = await zeq.query(`SELECT user_id, role FROM user_roles ORDER BY user_id`);
+        const byUser = {};
+        for (const r of allEq) (byUser[r.user_id] ||= []).push(r.role);
+        for (const row of rows) row.eqRoles = byUser[row.id] || [];
+    }
     res.json({ ok: true, data: rows });
 });
 
@@ -120,6 +128,34 @@ router.delete('/:id', requireAdmin, async function(req, res) {
     await zeq.query(`DELETE FROM sessions WHERE user_id = @id`, { id });
     await zeq.query(`DELETE FROM users WHERE id = @id`, { id });
     res.json({ ok: true });
+});
+
+// --- EQ roles (supplementary roles from user_roles table) ---
+
+router.get('/:id/eq-roles', requireAdmin, async function(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const rows = await zeq.query(
+        `SELECT role FROM user_roles WHERE user_id = @id`, { id });
+    res.json({ ok: true, data: rows.map(r => r.role) });
+});
+
+router.post('/:id/eq-roles', requireAdmin, async function(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const roles = req.body && Array.isArray(req.body.roles) ? req.body.roles : [];
+    // Validate all roles
+    for (const r of roles) {
+        if (!EQ_ROLES.includes(r)) return fail(res, `invalid eq role: ${r}`);
+    }
+    try {
+        // Delete existing eq roles for this user and re-insert
+        await zeq.query(`DELETE FROM user_roles WHERE user_id = @id`, { id });
+        for (const r of roles) {
+            await zeq.query(
+                `INSERT INTO user_roles (user_id, role) VALUES (@id, @role)`,
+                { id, role: r });
+        }
+        res.json({ ok: true, data: roles });
+    } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
 
 export const users = router;

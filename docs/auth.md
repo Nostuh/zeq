@@ -21,6 +21,14 @@ Middleware exports:
 - `requireAuth` — any authenticated active user (viewer+).
 - `requireEditor` — editor or admin.
 - `requireAdmin` — admin only.
+- `requireEqViewer` — has `eq_viewer` or `eq_editor` in `user_roles`, or is admin.
+- `requireEqEditor` — has `eq_editor` in `user_roles`, or is admin.
+
+The eq roles are supplementary — stored in `user_roles` table, not
+`users.role`. `loadUser()` queries both tables and returns `eqRoles: [...]`
+on the user object. The `/api/auth/me` response includes `eqRoles`.
+Admins get eq roles via `user_roles` or automatically (middleware checks
+`role === 'admin'`). `eq_editor` implies `eq_viewer`.
 
 Each GET endpoint on `/api/game/*` uses `requireAuth`; every mutation
 (POST/DELETE) uses `requireEditor`; every `/api/users/*` endpoint uses

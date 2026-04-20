@@ -13,6 +13,8 @@ import Reinc from './components/Reinc.vue';
 import Bugs from './components/Bugs.vue';
 import Updates from './components/Updates.vue';
 import Builds from './components/Builds.vue';
+import MobList from './components/MobList.vue';
+import MobDetail from './components/MobDetail.vue';
 
 export const routes = [
     // Public landing: the reinc planner is the homepage.
@@ -32,6 +34,8 @@ export const routes = [
     { path: '/bugs', name: 'bugs', component: Bugs },
     { path: '/updates', name: 'updates', component: Updates },
     { path: '/builds', name: 'builds', component: Builds },
+    { path: '/mobs', name: 'mobs', component: MobList },
+    { path: '/mobs/:id', name: 'mob-detail', component: MobDetail, props: true },
     { path: '/equipment', name: 'equipment', component: Equipment },
     { path: '/equipment-all', name: 'equipment-all', component: EquipmentAll },
     { path: '/equipment-add', name: 'equipment-add', component: EquipmentAdd },

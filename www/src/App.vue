@@ -24,6 +24,8 @@ const ROUTE_TITLES = {
     equipment:      "My Equipment — Zorky's",
     'equipment-all':"All Equipment — Zorky's",
     'equipment-add':"Add Equipment — Zorky's",
+    mobs:           "EQ Mob Database — Zorky's",
+    'mob-detail':   "Mob Detail — Zorky's",
 };
 const DEFAULT_TITLE = ROUTE_TITLES.home;
 
@@ -44,6 +46,17 @@ export default {
         isAdmin() { return this.user && this.user.role === 'admin'; },
         isEditor() { return this.user && (this.user.role === 'admin' || this.user.role === 'editor'); },
         canEdit() { return this.isEditor; },
+        hasEqAccess() {
+            if (!this.user) return false;
+            if (this.user.role === 'admin') return true;
+            const eq = this.user.eqRoles || [];
+            return eq.includes('eq_viewer') || eq.includes('eq_editor');
+        },
+        canEditEq() {
+            if (!this.user) return false;
+            if (this.user.role === 'admin') return true;
+            return (this.user.eqRoles || []).includes('eq_editor');
+        },
         onReinc() { return this.$route && ['home','reinc','dashboard'].includes(this.$route.name); },
     },
     methods: {
@@ -157,6 +170,9 @@ export default {
             if (to.name === 'users' && !this.isAdmin) {
                 this.$router.push({ name: 'home' });
             }
+            if ((to.name === 'mobs' || to.name === 'mob-detail') && !this.hasEqAccess) {
+                this.$router.push({ name: 'home' });
+            }
         },
     },
 };
@@ -262,6 +278,9 @@ export default {
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment'}">My Equipment</router-link></li>
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-all'}">All Equipment</router-link></li>
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-add'}">Add Equipment</router-link></li>
+
+                        <li class="nav-item mt-3" v-if="hasEqAccess"><small class="text-muted ps-2 text-uppercase fw-bold">EQ Mobs</small></li>
+                        <li class="nav-item" v-if="hasEqAccess"><router-link class="nav-link" :to="{name:'mobs'}">Mob Database</router-link></li>
 
                         <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Admin</small></li>
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'races'}">Races</router-link></li>

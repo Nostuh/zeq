@@ -142,6 +142,15 @@ The shim uses `replaceAll`, not `replace` — a past version used
 non-global replace and silently broke any query that referenced the
 same placeholder twice. Don't revert to `replace`.
 
+**Param name collision:** Because the shim iterates params and calls
+`sql.replaceAll('@' + key, ...)`, a param named `@dir` will match
+inside `@dirback`, replacing the first part and leaving garbage like
+`NULLback` in the SQL. This bit the mob API twice. **Rule: no param
+name may be a substring of another param name in the same query.**
+When a query has many columns, use short unique prefixed names like
+`@vn`, `@vs`, `@vd`, `@vb` instead of descriptive names like
+`@directions` / `@directions_back`.
+
 ### MySQL can't self-reference a table in an UPDATE subquery
 The "last active admin" check in [users.mjs](../api/rest/api/users.mjs)
 wraps its users subquery in a derived table so MySQL allows it:

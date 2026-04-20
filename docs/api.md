@@ -154,6 +154,40 @@ Submission rules:
   All three are optional but strongly recommended — they are how a
   future triage session will reproduce the bug.
 
+## EQ Mob Knowledge Base (`/api/mobs`)
+
+Login-gated by eq roles. Full documentation in [mobs.md](mobs.md).
+
+| Method | Path | Role | Purpose |
+|---|---|---|---|
+| GET | `/api/mobs?q=...` | eq_viewer | list/search mobs |
+| GET | `/api/mobs/:id` | eq_viewer | full mob detail (all sub-resources joined) |
+| POST | `/api/mobs` | eq_editor | create mob |
+| POST | `/api/mobs/:id` | eq_editor | update mob (requires `version` for optimistic lock) |
+| DELETE | `/api/mobs/:id` | eq_editor | delete mob + cascade + disk cleanup |
+| POST | `/api/mobs/:id/resistances` | eq_editor | bulk set all 9 damage types |
+| POST | `/api/mobs/:id/prots` | eq_editor | add/upsert protection |
+| DELETE | `/api/mobs/:id/prots/:pid` | eq_editor | remove protection |
+| POST | `/api/mobs/:id/guilds` | eq_editor | add guild role |
+| POST | `/api/mobs/:id/guilds/:gid` | eq_editor | update guild role |
+| DELETE | `/api/mobs/:id/guilds/:gid` | eq_editor | remove guild |
+| POST | `/api/mobs/:id/loot` | eq_editor | add loot |
+| POST | `/api/mobs/:id/loot/:lid` | eq_editor | update loot |
+| DELETE | `/api/mobs/:id/loot/:lid` | eq_editor | remove loot |
+| POST | `/api/mobs/:id/images` | eq_editor | upload images (base64 array) |
+| GET | `/api/mobs/:id/images/:iid` | eq_viewer | serve image binary |
+| DELETE | `/api/mobs/:id/images/:iid` | eq_editor | remove image |
+| POST | `/api/mobs/:id/maps` | eq_editor | create/update ASCII map |
+| DELETE | `/api/mobs/:id/maps/:mid` | eq_editor | remove map |
+| GET | `/api/mobs/:id/history?page=N` | eq_viewer | paginated edit history |
+
+EQ role management (admin only, on the users router):
+
+| Method | Path | Purpose |
+|---|---|---|
+| GET | `/api/users/:id/eq-roles` | get user's eq roles |
+| POST | `/api/users/:id/eq-roles` | `{roles: ['eq_editor']}` — set eq roles |
+
 ## Conventions
 
 - All SQL goes through the `@name` placeholder shim in

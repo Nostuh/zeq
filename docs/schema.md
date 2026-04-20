@@ -153,6 +153,47 @@ relative `path`. `ON DELETE CASCADE` on `bug_id` so cleanup is
 automatic. MIME is validated by **sniffing the decoded buffer's first
 bytes**, not the client's claimed mime. See [bugs.mjs](../api/rest/api/bugs.mjs).
 
+## Supplementary roles
+
+### `user_roles`
+Additional roles beyond `users.role`. Keyed by `(user_id, role)`.
+Currently holds `eq_viewer` and `eq_editor` for the mob knowledge base.
+No FK to `users` (MyISAM legacy table). Admins assign from the Users
+page; the main `admin` role implicitly grants all eq access without
+needing rows here.
+
+## EQ Mob Knowledge Base tables
+
+DDL lives in [schema/mobs.sql](../schema/mobs.sql). All prefixed `mob_`.
+Full documentation in [docs/mobs.md](mobs.md).
+
+### `mob_monsters`
+Core mob record. `notes` is the primary content field (PDF import dumps
+all text here). `version` (INT, starts at 1) enables optimistic locking
+— every update increments it; the API rejects stale versions with 409.
+
+### `mob_resistances`
+Per-mob damage type values. One row per `(mob_id, damage_type)`. Value
+is the 1–8 kya scale; NULL means unknown.
+
+### `mob_prots`, `mob_guilds`, `mob_loot`
+Required protections, party guild roles, and equipment drops. All
+cascade on mob delete. `mob_loot.equipment_id` is a NULL placeholder
+for a future FK to an equipment table.
+
+### `mob_images`
+Photo attachments. Files on disk at `/srv/zeq/api/uploads/mobs/{mob_id}/`.
+Same MIME-sniffing + path-guard pattern as `bug_attachments`.
+
+### `mob_maps`
+ASCII maps with strict 7-bit content. `mob_id` is nullable (for
+area-level maps not tied to a specific mob).
+
+### `mob_history`
+Full edit audit trail. `user_name = 'init'` marks system imports.
+`diff_json` stores `{field: {old, new}}` for updates. `snapshot`
+stores the full created state. Cascades on mob delete.
+
 ## Referential integrity
 
 `game_guild_bonuses`, `game_guild_skills`, `game_guild_spells` all have

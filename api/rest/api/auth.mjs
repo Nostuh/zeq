@@ -58,7 +58,14 @@ export async function loadUser(req) {
          FROM sessions s JOIN users u ON u.id = s.user_id
          WHERE s.id = @sid AND s.expires > NOW() AND u.active = 1`,
         { sid });
-    return rows[0] || null;
+    if (!rows[0]) return null;
+    const user = rows[0];
+    // Load supplementary roles from user_roles table.
+    const eqRows = await zeq.query(
+        `SELECT role FROM user_roles WHERE user_id = @uid`,
+        { uid: user.id });
+    user.eqRoles = eqRows.map(r => r.role);
+    return user;
 }
 
 export function requireRole(...roles) {
@@ -77,6 +84,22 @@ export function requireRole(...roles) {
 export const requireAuth = requireRole('viewer', 'editor', 'admin');
 export const requireEditor = requireRole('editor', 'admin');
 export const requireAdmin = requireRole('admin');
+
+// EQ Mob Knowledge Base roles — checked against user_roles table.
+// Admins automatically have access to everything.
+export function requireEqRole(...eqRoles) {
+    return async function(req, res, next) {
+        const u = await loadUser(req);
+        if (!u) return res.status(401).json({ ok: false, error: 'not authenticated' });
+        if (u.role === 'admin' || eqRoles.some(r => u.eqRoles.includes(r))) {
+            req.user = u;
+            return next();
+        }
+        return res.status(403).json({ ok: false, error: 'forbidden' });
+    };
+}
+export const requireEqViewer = requireEqRole('eq_viewer', 'eq_editor');
+export const requireEqEditor = requireEqRole('eq_editor');
 
 // --- routes ---
 router.post('/login', async function(req, res) {
@@ -127,7 +150,11 @@ router.post('/login', async function(req, res) {
             path: '/',
             maxAge: SESSION_DAYS * 86400,
         }));
-        res.json({ ok: true, data: { id: u.id, name: u.name, role: u.role } });
+        // Load eqRoles for the login response.
+        const eqRows = await zeq.query(
+            `SELECT role FROM user_roles WHERE user_id = @uid`, { uid: u.id });
+        const eqRoles = eqRows.map(r => r.role);
+        res.json({ ok: true, data: { id: u.id, name: u.name, role: u.role, eqRoles } });
     } catch (e) {
         console.error(e);
         res.status(500).json({ ok: false, error: 'server error' });
@@ -147,7 +174,7 @@ router.post('/logout', async function(req, res) {
 router.get('/me', async function(req, res) {
     const u = await loadUser(req);
     if (!u) return res.json({ ok: true, data: null });
-    res.json({ ok: true, data: { id: u.id, name: u.name, role: u.role } });
+    res.json({ ok: true, data: { id: u.id, name: u.name, role: u.role, eqRoles: u.eqRoles || [] } });
 });
 
 export const auth = router;

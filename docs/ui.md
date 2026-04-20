@@ -98,6 +98,31 @@ Outputs into `www/src/dist`. Nginx serves that directory. During
 development, `npx vite` from the same directory serves on port 8081
 with `/api` proxied to `localhost:50000`.
 
+## EQ Mob Knowledge Base pages
+
+The mob KB is a two-column layout: main content left (~85%), sidebar
+right (~220px sticky). Components:
+
+- `MobList.vue` — searchable table (desktop) / cards (mobile). Search
+  is debounced 300ms. Click row → detail view.
+- `MobDetail.vue` — all-in-one mob view. Left side: directions, kill
+  strategy, notes (primary content), maps, images. Right sidebar:
+  resistances (compact color-coded rows), protections (badges), guilds,
+  loot. Edit forms hidden behind `+` buttons to reduce clutter; empty
+  sections show "Empty". Optimistic lock conflict shows a toast.
+- `MobHistory.vue` — paginated changelog. Click entry to expand inline
+  diff (old → new per field). `init` entries styled as system imports.
+- `MobAsciiEditor.vue` — split-pane: textarea left, `<pre>` preview
+  right. Auto-strips non-7-bit ASCII on paste. Line/col counter.
+
+Route guard: `/mobs` and `/mobs/:id` redirect to home if
+`$root.hasEqAccess` is false. Sidebar nav "EQ Mobs" section is between
+Equipment and Admin, gated on `hasEqAccess`.
+
+New `$root` computed properties:
+- `hasEqAccess` — user has eq_viewer or eq_editor, or is admin
+- `canEditEq` — user has eq_editor, or is admin
+
 ## Avoid
 
 - The `www/src/old_components/` directory — orphaned from the legacy
