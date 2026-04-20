@@ -2,6 +2,7 @@ node_modules/
 api/classes/config.json
 api/zeq.sql
 api/uploads/
+docs/Zombiemud.pdf
 www/src/dist/
 scripts/test/out/
 api/uploads/
