@@ -57,16 +57,22 @@ export default {
                 </div>
                 <div class="wish-col">
                     <div class="cat-head">Lesser</div>
+                    <div class="wish-scale" :title="'Nth lesser wish costs the Nth value in this list'">
+                        Costs: <span v-for="(c, i) in reinc.wishCostMap.lesser" :key="i">{{ c }}<span v-if="i < reinc.wishCostMap.lesser.length - 1"> · </span></span>
+                    </div>
                     <label v-for="w in reinc.groupedWishes.lesser" :key="w.id" class="wish-item">
                         <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedWishes.has(w.id)" @change="reinc.toggleWish(w.id)">
-                        {{ w.name }} <small class="text-muted">({{ w.tp_cost }})</small>
+                        {{ w.name }}
                     </label>
                 </div>
                 <div class="wish-col">
                     <div class="cat-head">Greater</div>
+                    <div class="wish-scale" :title="'Nth greater wish costs the Nth value in this list'">
+                        Costs: <span v-for="(c, i) in reinc.wishCostMap.greater" :key="i">{{ c }}<span v-if="i < reinc.wishCostMap.greater.length - 1"> · </span></span>
+                    </div>
                     <label v-for="w in reinc.groupedWishes.greater" :key="w.id" class="wish-item">
                         <input type="checkbox" class="form-check-input me-1" :checked="reinc.selectedWishes.has(w.id)" @change="reinc.toggleWish(w.id)">
-                        {{ w.name }} <small class="text-muted">({{ w.tp_cost }})</small>
+                        {{ w.name }}
                     </label>
                 </div>
             </div>

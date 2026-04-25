@@ -1594,6 +1594,12 @@ export default {
 }
 .wish-col, .boon-col { font-family: monospace; }
 .cat-head { font-weight: 700; text-transform: uppercase; font-size: 0.7rem; color: #555; border-bottom: 1px solid #aaa; margin-bottom: 0.25rem; }
+/* Cost scale for the Lesser/Greater wish columns. Each tier's cost
+   ramps with how many of that tier are already selected, so showing
+   a per-row "(N)" annotation would lie. The scale lives once at the
+   top of the column instead. Bug #32 follow-up. */
+.wish-scale { font-size: 0.68rem; color: #6c757d; margin-bottom: 0.35rem; line-height: 1.3; cursor: help; }
+[data-bs-theme="dark"] .wish-scale { color: #8a939c; }
 .wish-item { display: flex; align-items: center; margin-bottom: 0.15rem; cursor: pointer; }
 /* Boon rows use a boon-item wrapper so the checkbox label and the
    info button sit on one line. Locked racial boons dim to signal
