@@ -76,7 +76,7 @@ const CASES = [
         // After the initial checks, walk every tab and run the same overflow
         // checks plus a sibling-overlap check on the tab body. Bug #23
         // shipped because the harness only ever inspected the General tab.
-        tabs: ['General', 'Skills', 'Spells', 'Extras', 'Export'],
+        tabs: ['General', 'Skills/Spells', 'Extras', 'Export'],
         // Modals: open each one, check the panel/primary action stay inside
         // the viewport. setupSrc is a function-source string that runs
         // inside page.evaluate; it must return true on success and leave
@@ -343,7 +343,8 @@ async function runCase(browser, vp, tc) {
             });
             for (const ov of overlaps) errors.push(`[${tabName}] ${ov}`);
 
-            await page.screenshot({ path: path.join(OUT, label + '_tab-' + tabName.toLowerCase() + '.png'), fullPage: false });
+            const tabSlug = tabName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+            await page.screenshot({ path: path.join(OUT, label + '_tab-' + tabSlug + '.png'), fullPage: false });
         }
 
         // 5) Modal sweep — open every modal the planner can show, and for

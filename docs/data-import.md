@@ -2,11 +2,9 @@
 
 The importer lives at [scripts/import_zcreator.mjs](../scripts/import_zcreator.mjs).
 It reads every file under [data/](../data/) and populates the `game_*`
-tables. Source of truth for the file formats is the decompiled Zcreator
-C# code, which we cloned from
-`https://github.com/Antiflower/Zcreator-Enhanced.git`; the `data/`
-directory in this repo is a copy of `Zcreator Updated/data/` from that
-repository.
+tables. The `data/` directory in this repo is a copy of the
+`Zcreator Updated/data/` directory from the Zcreator-Enhanced
+distribution.
 
 ## Running it
 
@@ -26,9 +24,10 @@ run.
 
 ## File formats and parsing rules
 
-Every rule below is copied from the C# methods in
-`decompiled_source/CharCreator/*.cs`. Treat the C# code as the source
-of truth when a question arises about parsing.
+Every rule below mirrors the format of the corresponding `.chr` /
+`.txt` file in [data/](../data/). When a parsing question arises,
+re-read the raw file — the leading non-comment lines usually document
+the field order.
 
 ### `races.chr` — `Race(string, StringTokenizer)`
 - Colon-separated, 15 fields: `name : maxStr : maxDex : maxCon : maxInt

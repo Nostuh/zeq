@@ -37,7 +37,9 @@ export default {
                     <button class="btn btn-sm btn-outline-secondary" type="button" @click="reinc.selectAllWishes">All</button>
                     <button class="btn btn-sm btn-outline-secondary" type="button" @click="reinc.clearAllWishes">None</button>
                     <span>TPs spent: <strong>{{ reinc.nfmt(reinc.wishTpUsed) }}</strong></span>
-                    <span>/ <input type="number" v-model.number="reinc.tp" class="form-control form-control-sm d-inline-block" style="width:6em;"></span>
+                    <span class="text-muted" :title="`5 TPs per level × ${reinc.totalLevels} levels`">
+                        (earned from levels: <strong>{{ reinc.nfmt(reinc.tpEarnedFromLevels) }}</strong>)
+                    </span>
                 </div>
             </div>
             <div class="wish-cols">

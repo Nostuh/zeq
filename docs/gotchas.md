@@ -25,14 +25,14 @@ Correct structure:
 ```
 
 ### `buildSkillCostArray` maxcost = race skillCost, NOT startCost
-[SkillSpell.cs:227](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/SkillSpell.cs)
-`int num = skillCost * 100000` — `skillCost` is the **parameter**, the race's
-`skill_cost` / `spell_cost`, **not** the per-skill `startCost`. The earlier
-JS implementation in `engine.js` did `const maxcost = startCost * 100000`
-and the per-bucket clamp effectively never fired for skills with large
-`start_cost` (gestalt conjuration is 10,000,000), so a maxed Devil build
-showed Total Exp of 158B where Zcreator desktop showed 3.3B (~48×). The
-sanity script in [scripts/test/sanity_level_exp.mjs](../scripts/test/sanity_level_exp.mjs)
+`maxcost = skillCost * 100000` — `skillCost` is the **race** multiplier
+(`race.skill_cost` / `race.spell_cost`), **not** the per-skill
+`startCost`. The earlier JS implementation in `engine.js` did
+`const maxcost = startCost * 100000` and the per-bucket clamp
+effectively never fired for skills with large `start_cost` (gestalt
+conjuration is 10,000,000), so a maxed Devil build showed Total Exp of
+158B where Zcreator desktop showed 3.3B (~48×). The sanity script in
+[scripts/test/sanity_level_exp.mjs](../scripts/test/sanity_level_exp.mjs)
 hand-ports `setCosts` against the engine module — keep it green.
 
 ### `(n | 0)` is signed 32-bit, not "integer cast"
@@ -61,13 +61,29 @@ eventually desyncs.
 `guildLevelsSum + freeLevels` where `extraFree` is the only primary
 field. The earlier version had `totalLevels` as primary state and
 derived `freeLevels` from it; that produced phantom free levels when
-the user dropped a guild because `totalLevels` didn't follow. Match
-the C# convention ([Character.cs:150](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Character.cs)):
-`totalLevels => 120 - guildlevels + free` with `free` as the setter.
+the user dropped a guild because `totalLevels` didn't follow. The rule
+mirrors the Zcreator desktop convention: `totalLevels = 120 -
+guildlevels + free`, with `free` as the setter.
+
+### Lesser / greater wishes use a progressive cost, not the flat `tp_cost`
+`game_wishes.tp_cost` is correct for **generic / resist / minor** rows
+(40 for stats, 150 for resists, etc.), but **lesser** and **greater**
+wishes ignore that field and use [data/wishcost.chr](../data/wishcost.chr)
+(table `game_wish_costs`): the Nth lesser pick costs `lesser[N-1]`,
+the Nth greater pick costs `greater[N-1]`. The first cut of the planner
+just summed `tp_cost` for every selected wish, which under-counted the
+in-game spend dramatically (a fully-stacked greater set was ~1700 in
+the planner vs ~2300 in game). Fix lives in `sumWishEffects` in
+[engine.js](../www/src/components/reinc/engine.js) and the matching
+`wishTpUsed` computed in
+[Reinc.vue](../www/src/components/Reinc.vue) — both must keep agreeing.
+**Note:** there are 10 lesser and 10 greater wishes in the catalog but
+`wishcost.chr` only defines 9 tiers; `progressiveTier()` clamps the
+10th pick to the last tier so the planner stays defined either way.
+Bug #32.
 
 ### Subguild levels are capped at 15 per primary guild
-[Guild.cs:200](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Guild.cs)
-initialises every primary guild with `availSubLevels = 15`, and the
+Every primary guild starts with 15 available subguild levels, and the
 desktop client decrements that pool as the user picks subguild levels
 under it. The web planner originally enforced *only* "subguild parent
 must be at max level" plus the 120-level global cap, so a Bard 45 +

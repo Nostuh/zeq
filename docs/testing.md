@@ -138,12 +138,11 @@ This is a hard gate for any responsive-design work per
 
 A separate gate at [scripts/test/audit_engine.mjs](../scripts/test/audit_engine.mjs)
 asserts that `www/src/components/reinc/engine.js` (the planner's live
-computation module) matches a hand-port of the Zcreator C# code at
+computation module) matches a frozen reference implementation at
 [scripts/test/lib/zcreator_reference.mjs](../scripts/test/lib/zcreator_reference.mjs).
-The reference is a verbatim port of `Character.cs` / `SkillSpell.cs` —
-method names and the order of operations are kept identical so a reader
-can hold the C# open in one window and the JS in another and step
-through line by line.
+The reference holds the Zcreator desktop math as a known-good
+implementation; method names and the order of operations mirror the
+desktop client so a reader can compare the two side by side.
 
 ## What it covers
 

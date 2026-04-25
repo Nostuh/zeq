@@ -69,23 +69,30 @@ function canonBonus(name) {
     return n.replace(/\s+/g, '_');
 }
 
-function sumWishEffects(wishes, wishCatalog) {
+// `wishCosts` is { lesser: [c1..cN], greater: [c1..cN] } from
+// wishcost.chr. Lesser/greater wishes use a progressive cost — Nth
+// pick costs wishCosts.lesser[N-1] (or .greater[N-1]) — instead of
+// the flat per-row `tp_cost` that other categories use. If the user
+// somehow exceeds the array length, the last entry repeats. Bug #32.
+function sumWishEffects(wishes, wishCatalog, wishCosts) {
     const acc = {
         stat_pct: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
         skill_max: 0, spell_max: 0,
         phys_wish: 0, mag_wish: 0, battle_regen: 0,
-        // Mirror of Character.cs:42 `statWish` counter. Lesser stats wish
-        // bumps this by 15, Superior stats by 30; Character.cs:1387 then
-        // folds `statWish / 15` into size for HP calculation (C# lines
-        // 1387 and 3624). We derive it from the summed stat_pct_all
-        // contribution: 5% → +15, 10% → +30 (i.e. pct * 3).
+        // `statWish` counter: lesser stats bumps this by 15, superior
+        // stats by 30; the planner folds `statWish / 15` into size
+        // when computing HP. Derived from the summed stat_pct_all
+        // contribution (5% → +15, 10% → +30, i.e. pct * 3).
         stat_wish: 0,
         resistances: [],
         tp_cost: 0,
     };
+    let lesserCount = 0, greaterCount = 0;
     for (const w of wishCatalog) {
         if (!wishes.has(w.id)) continue;
-        acc.tp_cost += w.tp_cost | 0;
+        if (w.category === 'lesser') lesserCount++;
+        else if (w.category === 'greater') greaterCount++;
+        else acc.tp_cost += w.tp_cost | 0;
         const k = w.effect_key, v = w.effect_value | 0;
         if (k === 'stat_pct_all') {
             for (const s of STATS) acc.stat_pct[s] += v;
@@ -106,7 +113,20 @@ function sumWishEffects(wishes, wishCatalog) {
         else if (k === 'battle_regen') acc.battle_regen += v;
         else if (k === 'resist') acc.resistances.push(w.name);
     }
+    acc.tp_cost += progressiveTier(wishCosts && wishCosts.lesser, lesserCount);
+    acc.tp_cost += progressiveTier(wishCosts && wishCosts.greater, greaterCount);
     return acc;
+}
+
+// Sum the first `count` entries of a progressive cost array, clamping
+// any extra picks beyond the array's length to the last entry.
+function progressiveTier(arr, count) {
+    if (!arr || !arr.length || count <= 0) return 0;
+    let sum = 0;
+    for (let i = 0; i < count; i++) {
+        sum += arr[Math.min(i, arr.length - 1)] | 0;
+    }
+    return sum;
 }
 
 function sumBoonCost(boons, boonCatalog) {
@@ -117,11 +137,11 @@ function sumBoonCost(boons, boonCatalog) {
 
 export function computeCharacter({
     race, guildPicks, stats, wishes, boons,
-    wishCatalog, boonCatalog,
+    wishCatalog, boonCatalog, wishCosts,
 }) {
     if (!race) return null;
     const guildSum = sumGuildBonuses(guildPicks);
-    const wishFx = sumWishEffects(wishes, wishCatalog);
+    const wishFx = sumWishEffects(wishes, wishCatalog, wishCosts);
     const boonPP = sumBoonCost(boons, boonCatalog);
 
     // effective base % per stat with wish modifiers

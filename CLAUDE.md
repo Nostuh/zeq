@@ -36,8 +36,7 @@ See [docs/schema.md](docs/schema.md).
   Responsive harness (`scripts/test/responsive.mjs`) only runs when asked.
   See [docs/ui.md](docs/ui.md), [docs/testing.md](docs/testing.md).
 - API shape: `{ok:true,data}` / `{ok:false,error}`; see [docs/api.md](docs/api.md).
-- Reinc planner: public at `/`, targets ZombieMUD. Math changes MUST cite
-  `/tmp/Zcreator-Enhanced/decompiled_source/CharCreator/`. Page locked to
+- Reinc planner: public at `/`, targets ZombieMUD. Page locked to
   `100vh` — never add page-level scroll. See [docs/reinc.md](docs/reinc.md), [docs/seo.md](docs/seo.md).
 - Updates feed: every user-visible fix/feature → `site_updates` row (set `bug_id` when from a report). No refactors. See [docs/updates.md](docs/updates.md).
 - Saved reincs (`/builds`): state JSON stores `game_*` IDs, so game-data migrations can rot old builds — read drift rules in [docs/saved-reincs.md](docs/saved-reincs.md) before renaming/deleting game rows.
@@ -51,8 +50,8 @@ See [docs/schema.md](docs/schema.md).
 
 Follow [docs/bug-workflow.md](docs/bug-workflow.md). Every report is a
 hypothesis that must be **confirmed or denied** with evidence. Re-read
-this CLAUDE.md and the subsystem's source of truth (C# decompile /
-`.chr` / `schema/*.sql` / responsive harness). Each bug captures
+this CLAUDE.md and the subsystem's source of truth (`.chr` /
+`schema/*.sql` / responsive harness). Each bug captures
 `app_state` / `dom_snapshot` / `console_log` — use them. NEVER auto-apply.
 
 ## Before touching code

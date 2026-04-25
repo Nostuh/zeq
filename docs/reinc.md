@@ -2,11 +2,10 @@
 
 Public, no-login required character planner at `/` and `/#/reinc`. Emulates
 the Zcreator Enhanced desktop app (ZombieMUD character creator) against
-the data we imported into `game_*` tables. All formulas here are copied
-from the decompiled C# at
-`/tmp/Zcreator-Enhanced/decompiled_source/CharCreator/`; the C# source is
-the authoritative reference and must be consulted for every future change
-to the computation engine.
+the data we imported into `game_*` tables. The formulas here are a port
+of the Zcreator desktop client's math; when a question arises, the live
+game's in-game output (e.g. `wish`, `info skill <name>`) and the raw
+`.chr` data files in [data/](../data/) are the working sources of truth.
 
 ## Files
 
@@ -14,20 +13,26 @@ to the computation engine.
   tabbed page. No sidebar; uses the full viewport via `App.vue`'s `onReinc`
   check.
 - [www/src/components/reinc/engine.js](../www/src/components/reinc/engine.js)
-  — stateless computation module. Every exported function mirrors a method
-  in `Character.cs` or `SkillSpell.cs`; line references below.
+  — stateless computation module. Each exported function implements one
+  piece of the Zcreator math (character stats, experience, skill/spell
+  cost tables); the formulas are documented inline below.
 - [api/rest/api/game.mjs](../api/rest/api/game.mjs) — `GET /api/game/reinc-bootstrap`
   returns races (enabled only), guilds, skills, spells, wishes, boons,
-  level/stat/quest cost tables, and the ss-costs array in one call.
-  `GET /api/game/reinc-guild/:id` lazy-loads per-guild bonuses/skill/spell
-  unlocks the first time the user picks a guild.
+  level/stat/quest cost tables, ss-costs, and the wish-cost progression
+  in one call. `skills` and `spells` rows include `help_text` for the
+  per-row info modal. `GET /api/game/reinc-guild/:id` lazy-loads
+  per-guild bonuses/skill/spell unlocks the first time the user picks
+  a guild.
+- Tab subcomponents under `www/src/components/reinc/`:
+  `TabGeneral.vue`, `TabSkillSpells.vue` (merged Skills + Spells with
+  a top-row toggle and per-row ℹ️ help modal — bug #33),
+  `TabExtras.vue`, `TabExport.vue`, plus `SaveBuildModal.vue`.
 
 ## Constants
 
-- **`MAX_LEVEL = 120`** — from [Character.cs:150](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Character.cs)
-  `totalLevels => 120 - guildlevels + free`. The setter at lines 361–378
-  clamps `free <= remaining budget`, so total character level can never
-  exceed 120. The planner enforces this in four places:
+- **`MAX_LEVEL = 120`** — `totalLevels = 120 - guildlevels + free`, with
+  `free` clamped to the remaining budget, so total character level can
+  never exceed 120. The planner enforces this in four places:
   1. Typing `totalLevels` above 120 is clamped by `setTotalLevels`.
   2. Adding a guild whose `max_level` would push the sum over 120 starts
      it at the remaining budget instead of its max.
@@ -118,11 +123,11 @@ boons, wish catalog, boon catalog.
 Implemented by `computeLevelExp()`. Inputs: `guildLevels` (sum of picked
 guild levels), `freeLevels`, `qps`, `levelCosts[]`, `questCosts[]`.
 
-The C# loop ([Character.cs:1046-1085](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Character.cs))
-walks **every level from 0 to total-1 in a single pass**. Quest points
-flow in starting at level 0 and discount whichever level slots they reach
-first — guild levels are NOT exempt; the QPs apply to them too. There is
-no separate "free levels" exp bucket: it all rolls up into "Race".
+The loop walks **every level from 0 to total-1 in a single pass**.
+Quest points flow in starting at level 0 and discount whichever level
+slots they reach first — guild levels are NOT exempt; the QPs apply to
+them too. There is no separate "free levels" exp bucket: it all rolls up
+into "Race".
 
 ```
 total = guildLevels + freeLevels
@@ -137,19 +142,18 @@ for j in 0..total-1:
         guildExp += floor(levelCosts[j] * 0.4 / 100) * 100    // extra 40% on guild levels
 ```
 
-`raceExp` ends up as the C# `experience["Race"]` bucket; `guildExp` is
-`experience["Guild"]`. There is no third "Free Levels" bucket — the
-earlier JS implementation invented one and under-counted Race by ~60%.
+`raceExp` is the "Race" exp bucket; `guildExp` is the "Guild" bucket.
+There is no third "Free Levels" bucket — the earlier JS implementation
+invented one and under-counted Race by ~60%.
 
-**Gold** = `floor((skillExp + spellExp) / 2250)` — no rounding is applied
-in the C# formula, this is the raw quotient.
+**Gold** = `floor((skillExp + spellExp) / 2250)` — the raw quotient, no
+additional rounding.
 
 **QPs needed** = sum of `questCosts[j]` for `j = 0 .. total-1` — i.e. the
 total QPs required to apply the 25% discount to **every** level the
-character has, guild levels included. Mirrors `Character.qpsneeded`
-([Character.cs:978](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Character.cs)).
-The UI shows a "QPs Left" readout next to the input so the user can see
-how much of their budget is unspent after the discount flow.
+character has, guild levels included. The UI shows a "QPs Left" readout
+next to the input so the user can see how much of their budget is
+unspent after the discount flow.
 
 ## Stat training — `Character.updateStatExp()`
 
@@ -162,7 +166,7 @@ for s in str,int,wis,con,dex,cha:
 Cumulative (the cost of training the Nth point is `statCosts[N-1]`), per
 stat independently. Not race-modified.
 
-## Skill/spell cost table — `SkillSpell.setCosts(skillCost, costs[])`
+## Skill/spell cost table — `buildSkillCostArray`
 
 `buildSkillCostArray(startCost, costs[], charSkillCost)` returns a
 length-20 array mapping 5% → `costArray[0]`, 10% → `costArray[1]`, ..,
@@ -180,12 +184,12 @@ for i in 0..19:
     costArray[i] = floor(n2)
 ```
 
-**Watch the `maxcost` line.** The C# parameter is `skillCost` (the race
-multiplier), not `startCost`. An earlier version of `engine.js` used
-`startCost * 100000` and the per-bucket cap effectively never triggered
-for skills with high `start_cost` values like *gestalt conjuration*
-(10M). That inflated Total Exp by ~48× on a maxed Devil build (158B
-where Zcreator desktop showed 3.3B). See bug #14.
+**Watch the `maxcost` line.** `maxcost` is `charSkillCost * 100000` —
+the race's skill/spell-cost multiplier, NOT `startCost`. An earlier
+version of `engine.js` used `startCost * 100000` and the per-bucket cap
+effectively never triggered for skills with high `start_cost` values
+like *gestalt conjuration* (10M). That inflated Total Exp by ~48× on a
+maxed Devil build (158B where Zcreator desktop showed 3.3B). See bug #14.
 
 `costs[]` is the per-5% multiplier array from `costs.txt` (our
 `game_ss_costs` table). `charSkillCost` is `race.skill_cost` or
@@ -196,7 +200,6 @@ where Zcreator desktop showed 3.3B). See bug #14.
 n = floor(P / 5)
 exp = sum of (costArray[i] - costArray[i] % 100) for i in 0..n-1
 ```
-Matches `SkillSpell.updateExp()`.
 
 ## Skill / spell effective max per guild pick
 
@@ -208,13 +211,13 @@ for each skill unlock row the character has access to:
     else:
         row.scaled = 5 * floor(scale * row.maxPerGuild / 5)
 ```
-Mirrors `Character.availableSkills` getter. A skill that is unlocked by
-multiple picked guilds takes the highest `maxPerGuild`.
+A skill that is unlocked by multiple picked guilds takes the highest
+`maxPerGuild`.
 
 ## Guild and subguild ordering rules
 
-Per the C# client and the guild file structure (subguilds listed in a
-parent's `Subguilds:` section):
+Per the guild file structure (subguilds listed in a parent's
+`Subguilds:` section):
 
 - A **subguild** is only selectable after its parent guild is picked AND
   sitting at `parent.max_level`. The planner greys out locked subguilds
@@ -225,12 +228,11 @@ parent's `Subguilds:` section):
 - Subguild levels **stack on top** of the parent's full level track; they
   are not a replacement. The summed `guildLevelsSum` feeds both the 120-cap
   check and the level-cost formula.
-- **15-level subguild budget per primary guild.** [Guild.cs:200](file:///tmp/Zcreator-Enhanced/decompiled_source/CharCreator/Guild.cs)
-  initialises every primary guild with `availSubLevels = 15`, and
-  `updateSubLevels` / `updateSubGuildInfo` (lines 213–233, 427–435) draw
-  every subguild level pick down from that pool. The planner enforces
-  the same cap in three places via `subRoomFor(g)` /
-  `subLevelsUnderParent(parentId, excludeSubId)` in
+- **15-level subguild budget per primary guild.** Every primary guild
+  starts with 15 available subguild levels, and each subguild level
+  pick draws down from that pool. The planner enforces the same cap in
+  three places via `subRoomFor(g)` / `subLevelsUnderParent(parentId,
+  excludeSubId)` in
   [Reinc.vue](../www/src/components/Reinc.vue):
   1. `toggleGuild` clamps the initial level when adding a sub and
      refuses to add when the budget is exhausted.
@@ -261,6 +263,27 @@ Seeded by [scripts/seed_wishes_boons.mjs](../scripts/seed_wishes_boons.mjs).
   - `resist` — informational badge list (numeric effect lives in the game
     engine, not the planner).
   - `flag` — cosmetic only; contributes TP cost but no computation.
+
+- **Wish TP cost is progressive for lesser + greater tiers.** Generic,
+  resist, and minor wishes use their flat `game_wishes.tp_cost`. Lesser
+  and Greater wishes ignore that field and instead pay the Nth row of
+  `wishcost.chr` (table `game_wish_costs`):
+  ```
+  lesser: 100, 200, 400, 700, 1100, 1600, 2200, 2900, 3700
+  greater: 200, 350, 650, 1100, 1700, 2450, 3350, 4400, 5600
+  ```
+  The Nth lesser wish selected costs `lesser[N-1]` and likewise for
+  greaters. If selections exceed the array length the last entry
+  repeats. `sumWishEffects(wishes, wishCatalog, wishCosts)` does the
+  count + lookup; `Reinc.vue` carries the parallel `wishTpUsed`
+  computed for the live readout. Bug #32.
+
+- **TPs earned from levels.** Characters auto-gain 5 TPs per level
+  (regular and free alike). The Wishes header shows
+  `(earned from levels: 5 × totalLevels)` next to "TPs spent" so the
+  user can sanity-check their wish budget. There is no longer a
+  manual TP budget input — the old box was removed when the auto
+  formula landed.
 
 - `game_boons` — categories `racial`, `minor`, `preference`, `knowledge`,
   `weapon`, `lesser`, `greater`. Only PP cost is modelled today; detailed

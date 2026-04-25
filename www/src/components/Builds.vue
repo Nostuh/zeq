@@ -29,6 +29,7 @@ export default {
     },
     computed: {
         empty() { return !this.loading && !this.rows.length; },
+        isAdmin() { return !!(this.$root && this.$root.isAdmin); },
     },
     methods: {
         fmtDate(iso) {
@@ -75,6 +76,21 @@ export default {
         // Clicking an already-highlighted arrow clears that vote (value
         // 0). Clicking the other arrow switches sides. The server
         // handles all three cases atomically per (reinc, ip_hash).
+        // Admin-only — nukes a build (and its votes). Used to clear
+        // garbage entries that slipped past the stripHtml filter or
+        // that were submitted before it existed. Bug #31.
+        async adminDelete(r) {
+            if (!this.isAdmin) return;
+            const ok = window.confirm(
+                `Delete build "${r.title}" by ${r.author}?\nThis cannot be undone.`);
+            if (!ok) return;
+            try {
+                await axios.delete('/api/builds/' + r.id);
+                this.rows = this.rows.filter((row) => row.id !== r.id);
+                if (this.expandedId === r.id) this.expandedId = null;
+                this.$root.flashMsg && this.$root.flashMsg('Build deleted');
+            } catch (e) { this.$root.flashError(e); }
+        },
         async vote(r, dir) {
             const current = this.myVoteFor(r.id);
             const next = current === dir ? 0 : dir;
@@ -152,7 +168,6 @@ export default {
             <div class="bl-body">
                 <div class="bl-title-row">
                     <span class="bl-title">{{ r.title }}</span>
-                    <span v-if="r.is_featured" class="badge bg-warning text-dark">Featured</span>
                     <span class="bl-author">by {{ r.author }}</span>
                     <span class="bl-date text-muted">{{ fmtDate(r.created) }}</span>
                 </div>
@@ -183,6 +198,13 @@ export default {
                         class="btn btn-sm btn-primary"
                         @click="openInPlanner(r)">
                     Open in planner
+                </button>
+                <button v-if="isAdmin"
+                        type="button"
+                        class="btn btn-sm btn-outline-danger"
+                        @click="adminDelete(r)"
+                        title="Admin: delete this build">
+                    Delete
                 </button>
             </div>
         </li>

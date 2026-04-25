@@ -95,8 +95,9 @@ every seed against current data and overwrites cached metadata.
 |---|---|---|
 | GET    | `/api/builds?sort=top\|new&q=...` | list rows + per-viewer `myVotes` map |
 | GET    | `/api/builds/:id`                 | full row incl. `state` JSON and `myVote` |
-| POST   | `/api/builds`                     | create `{title, author, description, state, race_name, guild_summary, total_levels, total_exp, gold, hp, sp}` |
+| POST   | `/api/builds`                     | create `{title, author, description, state, race_name, guild_summary, total_levels, total_exp, gold, hp, sp}`. `title`/`author`/`description` are HTML-stripped before insert; empty title or author after stripping is rejected. |
 | POST   | `/api/builds/:id/vote`            | `{value: 1 \| -1 \| 0}` — 0 clears |
+| DELETE | `/api/builds/:id`                 | **admin only** — deletes the build and cascades the vote rows. |
 
 All endpoints are public. Votes are scoped by `sha1(ip + salt)` with a
 single per-instance salt constant in `builds.mjs`; rotating the salt
@@ -113,14 +114,21 @@ CGNAT) without discussing it first.
   /reinc and hit the 💾 Share Build button in the summary bar. This
   means every saved build has a valid state (the modal refuses to
   submit if `character` is null).
-- **No edit, no delete** (for users). The user asked for this
-  explicitly: "once saved, the reinc can't be edited... they would
-  need to go back into their reinc, make updates, and save again for
-  a new instance". If a user wants to update a build they re-save;
-  admin-side deletion is a future addition.
-- **Sort defaults to "Top".** Featured (seeded) builds are pinned
-  above tied scores so the day-one curated set doesn't get buried by
-  a single upvote on a fresh build.
+- **No edit, no user delete.** The user asked for this explicitly:
+  "once saved, the reinc can't be edited... they would need to go back
+  into their reinc, make updates, and save again for a new instance".
+  If a user wants to update a build they re-save. **Admins** see a
+  Delete button on each row (Builds.vue) for clearing garbage entries;
+  it hits `DELETE /api/builds/:id` (admin-only, cascades to votes).
+- **HTML stripping on submit.** `title`, `author`, and `description`
+  are run through a `<…>`-stripping filter on POST before insert, so
+  entries like `<script>alert('x')</script>` save as the empty string
+  (which then bounces with `"title required"`). Bug #31.
+- **Sort defaults to "Top".** Net score `(upvotes - downvotes)` wins
+  outright; ties fall through to `upvotes DESC`, `created DESC`, `id DESC`.
+  There is no curated "featured" pin — bug #31 showed that users read
+  "Top" as literal rank ordering. The `is_featured` column is still in
+  the schema but no longer drives ordering.
 - **Votes are optimistic.** The client highlights the clicked arrow
   immediately and updates `upvotes`/`downvotes` from the server's
   response. Clicking an already-active arrow clears the vote.

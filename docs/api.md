@@ -101,7 +101,7 @@ Admin-editable catalogs the reinc planner consumes. Same shape for both:
 ### Reinc bootstrap (public, fast-path for the planner)
 | Method | Path | Purpose |
 |---|---|---|
-| GET | `/api/game/reinc-bootstrap`  | `{races, guilds, skills, spells, wishes, boons, level_costs, ss_costs}` — one call, returns enabled races only |
+| GET | `/api/game/reinc-bootstrap`  | `{races, guilds, skills, spells, wishes, boons, level_costs, ss_costs, wish_costs}` — one call, enabled races only. `skills`/`spells` rows include `help_text`; `wish_costs` is the progressive lesser/greater scale from `wishcost.chr` (`[{kind, tier, cost}]`). |
 | GET | `/api/game/reinc-guild/:id`  | `{id, bonuses, skills, spells}` — lazy-loaded on first guild pick |
 
 ## Saved reincs (`/api/builds`)
@@ -113,14 +113,15 @@ for the data model + drift-handling rules.
 
 | Method | Path | Purpose |
 |---|---|---|
-| GET    | `/api/builds?sort=top\|new&q=...` | list rows; `data = {rows, myVotes}` where `myVotes` is `{id: 1|-1}` for the caller's IP |
+| GET    | `/api/builds?sort=top\|new&q=...` | list rows; `data = {rows, myVotes}` where `myVotes` is `{id: 1|-1}` for the caller's IP. `Top` sort: net score `(upvotes - downvotes)` desc, then `upvotes`, `created`, `id`. |
 | GET    | `/api/builds/:id`                 | full row including `state` JSON and `myVote` |
-| POST   | `/api/builds`                     | create `{title, author, description?, state, race_name, guild_summary, total_levels, total_exp, gold, hp, sp}`; `state` is the planner snapshot, metadata is trusted for display only |
+| POST   | `/api/builds`                     | create `{title, author, description?, state, race_name, guild_summary, total_levels, total_exp, gold, hp, sp}`; `state` is the planner snapshot, metadata is trusted for display only. `title`, `author`, and `description` are HTML-stripped before insert; an empty title or author after stripping is rejected. |
 | POST   | `/api/builds/:id/vote`            | `{value: 1 \| -1 \| 0}` — 0 clears the caller's existing vote; response is `{id, upvotes, downvotes, myVote}` |
+| DELETE | `/api/builds/:id`                 | **admin only** — removes the build and all its vote rows. Used to clean up garbage entries that slipped past the strip filter. |
 
-There is no edit / delete endpoint. To "update" a build, the user
-reopens it in the planner (`/#/reinc?build=<id>`), makes changes,
-and saves again as a new row.
+There is no user-facing edit endpoint. To "update" a build, the user
+reopens it in the planner (`/#/reinc?build=<id>`), makes changes, and
+saves again as a new row. Admin delete is the only removal path.
 
 ## Bug reports & ideas (`/api/bugs`)
 
@@ -153,6 +154,20 @@ Submission rules:
   `console_log` is an NDJSON tail of the last ~100 console entries.
   All three are optional but strongly recommended — they are how a
   future triage session will reproduce the bug.
+
+## Site updates (`/api/updates`)
+
+Public changelog for user-visible fixes and features; see
+[updates.md](updates.md). Timestamps are stored as naive Eastern
+wall-clock (never UTC) so every viewer sees the same time the entry was
+authored in — client must not coerce through `new Date()`.
+
+| Method | Path | Role | Purpose |
+|---|---|---|---|
+| GET    | `/api/updates`      | public | list newest first; each row joins `bug_reports` for `bug_title`/`bug_status` when `bug_id` is set |
+| POST   | `/api/updates`      | admin  | create `{kind, title, body?, bug_id?, created?}`; `kind` ∈ fix/feature/tweak/content; `created` defaults to now (Eastern) |
+| POST   | `/api/updates/:id`  | admin  | partial update of any of the same fields |
+| DELETE | `/api/updates/:id`  | admin  | delete |
 
 ## EQ Mob Knowledge Base (`/api/mobs`)
 
@@ -187,6 +202,32 @@ EQ role management (admin only, on the users router):
 |---|---|---|
 | GET | `/api/users/:id/eq-roles` | get user's eq roles |
 | POST | `/api/users/:id/eq-roles` | `{roles: ['eq_editor']}` — set eq roles |
+
+## Legacy equipment (`/api/eq`) — deprecated
+
+Backs the original Karran-era Equipment pages
+([Equipment.vue](../www/src/components/Equipment.vue),
+[EquipmentAdd.vue](../www/src/components/EquipmentAdd.vue),
+[EquipmentAll.vue](../www/src/components/EquipmentAll.vue)) against the
+legacy `eq`, `eqmobs`, and `kya_info` tables. New EQ work should land in
+the EQ Mob KB (`/api/mobs`) instead — this router exists only to keep
+the old flow working until its data is migrated.
+
+| Method | Path | Role | Purpose |
+|---|---|---|---|
+| POST | `/api/eq/login`         | public | legacy email+password login against `users.password_hash` (falls back to md5 `users.password` and transparently upgrades to bcrypt); returns the trimmed user row or `false` |
+| GET  | `/api/eq/version`       | public | returns literal `'7'` — used by an older client to force-refresh |
+| POST | `/api/eq/kya`           | public | appends to `kya_info` when body `pw === 'zork'`; otherwise `'fail'` |
+| POST | `/api/eq/eq`            | public | list eq rows joined to `eqmobs.name`; `{user_id: 'all'}` returns every row, otherwise filters by `user_id` |
+| GET  | `/api/eq/eq-mobs`       | public | list `eqmobs` rows |
+| POST | `/api/eq/add`           | public | insert an `eq` row `{info, note, slot, eqmob, user_id}` |
+| POST | `/api/eq/add-mob`       | public | insert into `eqmobs {name}` |
+| POST | `/api/eq/copy_to_user`  | public | copy an existing `eq` row to a new `user_id` |
+
+**None of these endpoints check a session or role** — they rely on the
+legacy `/api/eq/login` response being kept client-side. Do not build new
+features against this router; use `/api/mobs` and the session auth in
+`/api/auth/login` instead.
 
 ## Conventions
 

@@ -546,8 +546,10 @@ router.get('/reinc-bootstrap', async function(req, res) {
              FROM game_guilds g LEFT JOIN game_guilds p ON p.id = g.parent_id
              WHERE g.enabled = 1 AND (p.id IS NULL OR p.enabled = 1)
              ORDER BY COALESCE(p.name, g.name), g.parent_id IS NULL DESC, g.name`);
-        const skills = await zeq.query(`SELECT id, name, start_cost FROM game_skills ORDER BY name`);
-        const spells = await zeq.query(`SELECT id, name, start_cost FROM game_spells ORDER BY name`);
+        const skills = await zeq.query(
+            `SELECT id, name, start_cost, help_text FROM game_skills ORDER BY name`);
+        const spells = await zeq.query(
+            `SELECT id, name, start_cost, help_text FROM game_spells ORDER BY name`);
         const wishes = await zeq.query(
             `SELECT id, name, category, tp_cost, effect_key, effect_value, sort_order
              FROM game_wishes ORDER BY category, sort_order, name`);
@@ -558,7 +560,13 @@ router.get('/reinc-bootstrap', async function(req, res) {
             `SELECT kind, level, cost FROM game_level_costs ORDER BY kind, level`);
         const ss_costs = await zeq.query(
             `SELECT from_pct, to_pct, multiplier FROM game_ss_costs ORDER BY from_pct`);
-        ok(res, { races, guilds, skills, spells, wishes, boons, level_costs, ss_costs });
+        // wishcost.chr — progressive TP cost for the Nth lesser/greater
+        // wish. Generic, resist, and minor wishes use their flat
+        // game_wishes.tp_cost; lesser/greater don't (the in-game cost
+        // ramps with each additional wish in the tier). Bug #32.
+        const wish_costs = await zeq.query(
+            `SELECT kind, tier, cost FROM game_wish_costs ORDER BY kind, tier`);
+        ok(res, { races, guilds, skills, spells, wishes, boons, level_costs, ss_costs, wish_costs });
     } catch (e) { console.error(e); fail(res, String(e)); }
 });
 

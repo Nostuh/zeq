@@ -7,8 +7,7 @@ import {
     MAX_LEVEL,
 } from './reinc/engine.js';
 import TabGeneral from './reinc/TabGeneral.vue';
-import TabSkills from './reinc/TabSkills.vue';
-import TabSpells from './reinc/TabSpells.vue';
+import TabSkillSpells from './reinc/TabSkillSpells.vue';
 import TabExtras from './reinc/TabExtras.vue';
 import TabExport from './reinc/TabExport.vue';
 import SaveBuildModal from './reinc/SaveBuildModal.vue';
@@ -17,7 +16,7 @@ const STATS = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
 
 export default {
     name: 'Reinc',
-    components: { TabGeneral, TabSkills, TabSpells, TabExtras, TabExport, SaveBuildModal },
+    components: { TabGeneral, TabSkillSpells, TabExtras, TabExport, SaveBuildModal },
     // Children inject `reinc` to read shared state and call shared methods.
     // `this` in Vue 3 Options API is a reactive instance proxy, so child
     // templates reading `reinc.character` etc. stay reactive. Keeping all
@@ -33,6 +32,9 @@ export default {
             races: [], guilds: [], skills: [], spells: [],
             wishesCatalog: [], boonsCatalog: [],
             levelCostMap: { level: [], stat: [], quest: [] },
+            // wishcost.chr — progressive lesser/greater wish costs;
+            // see `wishTpUsed` and engine.js sumWishEffects. Bug #32.
+            wishCostMap: { lesser: [], greater: [] },
             ssCosts: [],                    // costs.txt per-5% array, length 20
 
             // per-guild data cache (id -> {bonuses, skills, spells})
@@ -52,7 +54,6 @@ export default {
             // silently growing phantom free levels.
             extraFree: 0,
             quest: 0,
-            tp: 1000,
 
             // skills/spells tabs
             activeSkillId: null,
@@ -76,6 +77,14 @@ export default {
             // the game's `info <category> N` output, seeded into
             // game_boons.description.
             infoBoonId: null,
+
+            // Per-skill / per-spell info modals — bug #33. Opened from
+            // the ℹ️ button on a row in the combined Skills/Spells tab.
+            // Content comes from game_skills.help_text /
+            // game_spells.help_text, seeded by the importer from
+            // help_skill.chr / help_spell.chr.
+            infoSkillId: null,
+            infoSpellId: null,
 
             // "Share Build" modal — posts the current state to /api/builds
             // so it shows up on the /builds page for other visitors to
@@ -158,6 +167,7 @@ export default {
                 boons: this.selectedBoons,
                 wishCatalog: this.wishesCatalog,
                 boonCatalog: this.boonsCatalog,
+                wishCosts: this.wishCostMap,
             });
         },
         // Effective skill/spell max per entity for the current race/wishes/guilds.
@@ -308,11 +318,29 @@ export default {
             for (let j = 0; j < end && j < arr.length; j++) total += arr[j] | 0;
             return total;
         },
+        // Total TPs spent across all selected wishes. Generic, resist,
+        // and minor categories use their flat `tp_cost`; lesser and
+        // greater use the progressive scale from wishcost.chr (Nth
+        // pick costs wishCostMap.lesser[N-1] / .greater[N-1]). Bug #32.
         wishTpUsed() {
             let t = 0;
-            for (const w of this.wishesCatalog) if (this.selectedWishes.has(w.id)) t += w.tp_cost | 0;
+            let lesser = 0, greater = 0;
+            for (const w of this.wishesCatalog) {
+                if (!this.selectedWishes.has(w.id)) continue;
+                if (w.category === 'lesser') lesser++;
+                else if (w.category === 'greater') greater++;
+                else t += w.tp_cost | 0;
+            }
+            const L = this.wishCostMap.lesser, G = this.wishCostMap.greater;
+            for (let i = 0; i < lesser; i++) t += (L[Math.min(i, L.length - 1)] | 0);
+            for (let i = 0; i < greater; i++) t += (G[Math.min(i, G.length - 1)] | 0);
             return t;
         },
+        // Characters auto-gain 5 TPs per level in-game (regular and
+        // free levels alike). Shown next to "TPs spent" so users can
+        // sanity-check their wish budget against what their character
+        // will actually accrue.
+        tpEarnedFromLevels() { return 5 * this.totalLevels; },
         boonPpTotal() {
             let t = 0;
             for (const b of this.boonsCatalog) if (this.selectedBoons.has(b.id)) t += b.pp_cost | 0;
@@ -375,6 +403,14 @@ export default {
         infoBoon() {
             if (!this.infoBoonId) return null;
             return this.boonsCatalog.find((b) => b.id === this.infoBoonId) || null;
+        },
+        infoSkill() {
+            if (!this.infoSkillId) return null;
+            return this.skills.find((s) => s.id === this.infoSkillId) || null;
+        },
+        infoSpell() {
+            if (!this.infoSpellId) return null;
+            return this.spells.find((s) => s.id === this.infoSpellId) || null;
         },
     },
     methods: {
@@ -459,7 +495,6 @@ export default {
                 spell_learned: { ...this.spellLearned },
                 extra_free: this.extraFree | 0,
                 quest: this.quest | 0,
-                tp: this.tp | 0,
             };
             // Compact, human-readable guild list for the builds table:
             // "Fighter 45 / Warlord 25 / Barbarian 10".
@@ -601,7 +636,9 @@ export default {
                 this.spellLearned = spl;
                 this.extraFree = state.extra_free | 0;
                 this.quest = state.quest | 0;
-                if (typeof state.tp === 'number') this.tp = state.tp | 0;
+                // Older builds carry a `tp` field (the personal TP
+                // budget input that was removed for bug #32). Silently
+                // ignore it on restore so old shares keep loading.
             } catch (e) {
                 console.error('applyBuildState failed', e);
                 this.$root.flashMsg('Some parts of that build could not be loaded', 'danger');
@@ -643,6 +680,15 @@ export default {
             const lc = { level: [], stat: [], quest: [] };
             for (const r of d.level_costs) { (lc[r.kind] ||= [])[r.level - 1] = r.cost; }
             this.levelCostMap = lc;
+            // Progressive lesser/greater wish-cost arrays. Indexed at
+            // `tier - 1`; missing entries (older API versions, empty
+            // table) just leave the array empty and wishTpUsed falls
+            // back to flat per-row tp_cost.
+            const wc = { lesser: [], greater: [] };
+            for (const r of (d.wish_costs || [])) {
+                if (wc[r.kind]) wc[r.kind][r.tier - 1] = r.cost;
+            }
+            this.wishCostMap = wc;
             if (this.enabledRaces.length) this.selectedRaceId = this.enabledRaces[0].id;
             this.loaded = true;
         },
@@ -664,6 +710,10 @@ export default {
         closeGuildInfo() { this.infoGuildId = null; },
         openBoonInfo(b) { this.infoBoonId = b.id; },
         closeBoonInfo() { this.infoBoonId = null; },
+        openSkillInfo(s) { this.infoSkillId = s.skill_id || s.id; },
+        closeSkillInfo() { this.infoSkillId = null; },
+        openSpellInfo(s) { this.infoSpellId = s.spell_id || s.id; },
+        closeSpellInfo() { this.infoSpellId = null; },
         // Racial boons are only available to characters of that race.
         // The live `list racial` output names each boon "Boon of <Race>"
         // and the game rejects `select boon of dwarf` unless your race
@@ -1062,8 +1112,7 @@ export default {
          desktop app could save to disk. -->
     <ul class="nav nav-tabs reinc-tabs">
         <li class="nav-item"><a class="nav-link" :class="{active:tab==='general'}" href="#" @click.prevent="tab='general'">General</a></li>
-        <li class="nav-item"><a class="nav-link" :class="{active:tab==='skills'}" href="#" @click.prevent="tab='skills'">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" :class="{active:tab==='spells'}" href="#" @click.prevent="tab='spells'">Spells</a></li>
+        <li class="nav-item"><a class="nav-link" :class="{active:tab==='skillspells'}" href="#" @click.prevent="tab='skillspells'">Skills/Spells</a></li>
         <li class="nav-item"><a class="nav-link" :class="{active:tab==='extras'}" href="#" @click.prevent="tab='extras'">Extras</a></li>
         <li class="nav-item"><a class="nav-link" :class="{active:tab==='export'}" href="#" @click.prevent="tab='export'">Export</a></li>
     </ul>
@@ -1072,8 +1121,7 @@ export default {
          injects the Reinc instance as `reinc` to read shared state and call
          shared methods — keeps this file to the shell + modal + styles. -->
     <TabGeneral v-if="tab==='general'" />
-    <TabSkills v-else-if="tab==='skills'" />
-    <TabSpells v-else-if="tab==='spells'" />
+    <TabSkillSpells v-else-if="tab==='skillspells'" />
     <TabExtras v-else-if="tab==='extras'" />
     <TabExport v-else-if="tab==='export'" />
 
@@ -1143,6 +1191,45 @@ export default {
         </div>
         <pre v-if="infoBoon.description" class="boon-desc">{{ infoBoon.description }}</pre>
         <div v-else class="text-muted small">No description recorded for this boon yet.</div>
+    </div>
+</div>
+
+<!-- Per-skill / per-spell info modal — bug #33. Help text comes from
+     game_skills.help_text / game_spells.help_text, seeded from the
+     in-game `help skill <name>` / `help spell <name>` output. About
+     40% of rows have no help_text yet; for those, point the user at
+     the bug-report path so we can collect the missing entries. -->
+<div v-if="infoSkill" class="reinc-modal-backdrop" @click.self="closeSkillInfo">
+    <div class="reinc-modal-panel">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="m-0">
+                {{ infoSkill.name }}
+                <span class="text-muted small ms-2">skill &middot; start cost: {{ nfmt(infoSkill.start_cost) }}</span>
+            </h5>
+            <button type="button" class="btn-close" aria-label="Close" @click="closeSkillInfo"></button>
+        </div>
+        <pre v-if="infoSkill.help_text" class="boon-desc">{{ infoSkill.help_text }}</pre>
+        <div v-else class="text-muted small">
+            No description recorded for this skill yet — please report
+            it via the 🐞 button so we can fill it in.
+        </div>
+    </div>
+</div>
+
+<div v-if="infoSpell" class="reinc-modal-backdrop" @click.self="closeSpellInfo">
+    <div class="reinc-modal-panel">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="m-0">
+                {{ infoSpell.name }}
+                <span class="text-muted small ms-2">spell &middot; start cost: {{ nfmt(infoSpell.start_cost) }}</span>
+            </h5>
+            <button type="button" class="btn-close" aria-label="Close" @click="closeSpellInfo"></button>
+        </div>
+        <pre v-if="infoSpell.help_text" class="boon-desc">{{ infoSpell.help_text }}</pre>
+        <div v-else class="text-muted small">
+            No description recorded for this spell yet — please report
+            it via the 🐞 button so we can fill it in.
+        </div>
     </div>
 </div>
 </div>
@@ -1311,6 +1398,32 @@ export default {
     opacity: 0.3;
     cursor: not-allowed;
 }
+
+/* Inline info button on each row of the Skills/Spells list. Smaller
+   than the boon `.info-btn` so the row stays one-line on mobile. */
+.ss-info-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+    margin-right: 0.35rem;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: #6c757d;
+    font-size: 0.85rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.12s, color 0.12s;
+}
+.ss-info-btn:hover {
+    color: #0d6efd;
+    background: rgba(13, 110, 253, 0.12);
+}
+[data-bs-theme="dark"] .ss-info-btn { color: #adb5bd; }
+[data-bs-theme="dark"] .ss-info-btn:hover { color: #6ea8fe; background: rgba(110, 168, 254, 0.12); }
 
 /* Per-guild "what does this teach" modal — bug #13.
  * Uses its own classes (not .modal-backdrop) so it doesn't collide with

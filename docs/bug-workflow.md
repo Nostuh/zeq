@@ -17,8 +17,10 @@ decides which ones to act on.
    start of every triage session — it changes as the project grows.
 3. **Always consult the source of truth** for whatever subsystem the
    bug touches:
-   - Reinc / planner math → `/tmp/Zcreator-Enhanced/decompiled_source/CharCreator/`
-     (cite the C# method and line number).
+   - Reinc / planner math → the `.chr` data files in `data/` (e.g.
+     `wishcost.chr`, `levelcosts.chr`, `statcost.chr`), [reinc.md](reinc.md),
+     and the formulas already codified in
+     [www/src/components/reinc/engine.js](../www/src/components/reinc/engine.js).
    - Importer / data shapes → the `.chr` files in `data/` and
      [data-import.md](data-import.md).
    - Schema / constraints → [schema.md](schema.md) and `schema/*.sql`.
@@ -26,9 +28,9 @@ decides which ones to act on.
    - UI layout / responsive behaviour → [testing.md](testing.md) and
      [ui.md](ui.md); reproduce with `scripts/test/responsive.mjs` at
      the reported viewport.
-4. **Never guess.** If the C# or the DB or the responsive harness
-   doesn't confirm the bug, say so. Don't propose a fix based on
-   vibes.
+4. **Never guess.** If the `.chr` data, the DB, or the responsive
+   harness doesn't confirm the bug, say so. Don't propose a fix based
+   on vibes.
 
 ## 1. Query the bug database
 

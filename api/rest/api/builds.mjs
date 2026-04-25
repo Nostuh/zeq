@@ -16,6 +16,7 @@
 import express from 'express';
 import crypto from 'crypto';
 import dbs from '../../db.mjs';
+import { requireAdmin } from './auth.mjs';
 
 const router = express.Router();
 const zeq = dbs.get('zeq');
@@ -40,6 +41,20 @@ function truncate(v, n) {
     if (v == null) return null;
     const s = String(v);
     return s.length > n ? s.slice(0, n) : s;
+}
+// Strip HTML-ish content from user-submitted strings so the list page
+// doesn't render entries like "<script>alert('oh noes')</script>" as
+// their literal text (Vue's `{{ }}` already escapes, so this is an
+// aesthetics / garbage filter, not XSS defence). Drops everything
+// between `<` and `>` plus any stray angle brackets, then collapses
+// whitespace. Bug #31.
+function stripHtml(v) {
+    if (v == null) return '';
+    return String(v)
+        .replace(/<[^>]*>/g, '')
+        .replace(/[<>]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
 }
 function toInt(v) {
     const n = parseInt(v, 10);
@@ -71,13 +86,13 @@ router.get('/', async function(req, res) {
                      OR race_name LIKE @like OR guild_summary LIKE @like`;
             params.like = `%${qRaw}%`;
         }
-        // "Top" = net score (up - down) desc, with featured builds
-        // pinned above tied scores so the hand-curated seeds aren't
-        // buried the moment a fresh build collects a single upvote.
+        // "Top" = net score (up - down) desc. Net score wins outright;
+        // the old `is_featured` pin has been retired — bug #31, users
+        // expected rank 1 to mean literally rank 1.
         if (sort === 'new') {
             sql += ` ORDER BY created DESC, id DESC`;
         } else {
-            sql += ` ORDER BY is_featured DESC, (upvotes - downvotes) DESC,
+            sql += ` ORDER BY (upvotes - downvotes) DESC,
                      upvotes DESC, created DESC, id DESC`;
         }
         sql += ` LIMIT 200`;
@@ -122,8 +137,8 @@ router.get('/:id', async function(req, res) {
 router.post('/', async function(req, res) {
     try {
         const b = req.body || {};
-        const title = (b.title || '').trim();
-        const author = (b.author || '').trim();
+        const title = stripHtml(b.title);
+        const author = stripHtml(b.author);
         if (!title) return fail(res, 'title required');
         if (!author) return fail(res, 'author required');
         if (!b.state) return fail(res, 'state required');
@@ -134,7 +149,7 @@ router.post('/', async function(req, res) {
         const row = {
             title: truncate(title, 128),
             author: truncate(author, 64),
-            description: truncate(b.description || '', 1024),
+            description: truncate(stripHtml(b.description), 1024),
             state,
             race_name: truncate(b.race_name || '', 64),
             guild_summary: truncate(b.guild_summary || '', 255),
@@ -207,5 +222,20 @@ async function voteResult(id, myVote) {
     const r = rows[0] || { upvotes: 0, downvotes: 0 };
     return { id, upvotes: r.upvotes, downvotes: r.downvotes, myVote };
 }
+
+// DELETE /api/builds/:id — admin-only. Cascades to vote rows. Used to
+// nuke spam / garbage entries that the stripHtml filter missed (or
+// that predate it). Bug #31.
+router.delete('/:id', requireAdmin, async function(req, res) {
+    try {
+        const id = toInt(req.params.id);
+        await zeq.query(
+            `DELETE FROM game_saved_reinc_votes WHERE reinc_id = @id`, { id });
+        const r = await zeq.query(
+            `DELETE FROM game_saved_reincs WHERE id = @id`, { id });
+        if (!r.affectedRows) return fail(res, 'not found', 404);
+        ok(res, { id });
+    } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
+});
 
 export const builds = router;
