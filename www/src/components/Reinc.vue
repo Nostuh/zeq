@@ -1059,7 +1059,7 @@ export default {
             <div class="sb-cell sb-cell-secondary" title="Racial skill learning cost"><span class="sb-label">SkCost</span><span class="sb-value">{{ race.skill_cost }}</span></div>
             <div class="sb-cell sb-cell-secondary" title="Racial spell learning cost"><span class="sb-label">SpCost</span><span class="sb-value">{{ race.spell_cost }}</span></div>
             <div class="sb-cell sb-cell-secondary"><span class="sb-label">Exp rate</span><span class="sb-value">{{ race.exp_rate }}%</span></div>
-            <div class="sb-cell"><span class="sb-label">Level</span><span class="sb-value" :title="`${guildLevelsSum} guild + ${freeLevels} free`">{{ guildLevelsSum }}+{{ freeLevels }}/{{ MAX_LEVEL }}</span></div>
+            <div class="sb-cell"><span class="sb-label">Level</span><span class="sb-value" :title="`${guildLevelsSum} guild + ${freeLevels} free`">{{ totalLevels }}/{{ MAX_LEVEL }}</span></div>
             <div class="sb-cell"><span class="sb-label">Total XP</span><span class="sb-value" :title="nfmt(totalExp)">{{ sfmt(totalExp) }}</span></div>
             <div class="sb-cell"><span class="sb-label">Gold</span><span class="sb-value" :title="nfmt(goldRequired)">{{ sfmt(goldRequired) }}</span></div>
             <div class="sb-cell sb-share">

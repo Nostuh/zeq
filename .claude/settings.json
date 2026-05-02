@@ -4,7 +4,10 @@
       "Bash(node -e ' *)",
       "Bash(mysql -u zork -pstarcraft zeq -sN -e ' *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(mysql -uzork -pstarcraft zeq -e ' *)",
+      "Bash(git -C /srv/zeq add www/src/components/Reinc.vue scripts/seed_updates.mjs .claude/settings.json)",
+      "Bash(git -C /srv/zeq commit -m ' *)"
     ]
   }
 }

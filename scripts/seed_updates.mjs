@@ -162,6 +162,11 @@ const SEED = [
         title: 'Compact summary bar on small phones',
         body: 'On viewports under 520px wide, the planner summary bar drops the secondary chips (Size, SkCost, SpCost, Exp rate, and the XP-breakdown row) and the race list shrinks its height cap, so the race picker, guild search, and first guild rows all fit on the initial screen without scrolling. Hidden values are still surfaced via the Extras and Export tabs and on larger viewports.',
     },
+    {
+        created: '2026-05-02 17:21:48', kind: 'tweak', bug_id: 34,
+        title: 'Level readout shows the final level, not the breakdown',
+        body: 'The Level cell in the summary bar used to show guild + free levels split apart (e.g. 45+15/120). It now shows just the final character level (e.g. 60/120). The guild + free split is still available on hover.',
+    },
 ];
 
 async function main() {
