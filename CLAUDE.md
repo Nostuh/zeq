@@ -38,9 +38,10 @@ See [docs/schema.md](docs/schema.md).
 - API shape: `{ok:true,data}` / `{ok:false,error}`; see [docs/api.md](docs/api.md).
 - Reinc planner: public at `/`, targets ZombieMUD. Page locked to
   `100vh` — never add page-level scroll. See [docs/reinc.md](docs/reinc.md), [docs/seo.md](docs/seo.md).
-- Updates feed: every user-visible fix/feature → `site_updates` row (set `bug_id` when from a report). No refactors. See [docs/updates.md](docs/updates.md).
+- Updates feed: **reinc planner only** — public-facing fix/feature → `site_updates` row (set `bug_id` when from a report). No refactors. Internal/admin features (KYA, EQ Mob KB, equipment) do NOT get rows. See [docs/updates.md](docs/updates.md).
 - Saved reincs (`/builds`): state JSON stores `game_*` IDs, so game-data migrations can rot old builds — read drift rules in [docs/saved-reincs.md](docs/saved-reincs.md) before renaming/deleting game rows.
 - EQ Mob KB: `mob_*` tables, `/api/mobs`, eq roles in `user_roles`. [docs/mobs.md](docs/mobs.md).
+- KYA Lookup: read-only `/kya` browses `kya_info` (3 capture formats, name extracted in SQL). Ingest still at `POST /api/eq/kya`. [docs/kya.md](docs/kya.md).
 
 ## Running
 

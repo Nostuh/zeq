@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS mob_resistances (
 CREATE TABLE IF NOT EXISTS mob_prots (
     id        INT NOT NULL AUTO_INCREMENT,
     mob_id    INT NOT NULL,
-    prot_type VARCHAR(32) NOT NULL,
+    prot_type VARCHAR(255) NOT NULL,
     priority  VARCHAR(16) NOT NULL DEFAULT 'required',
     notes     VARCHAR(255) NULL,
     PRIMARY KEY (id),
@@ -140,3 +140,11 @@ CREATE TABLE IF NOT EXISTS mob_history (
     CONSTRAINT fk_mh_mob FOREIGN KEY (mob_id)
         REFERENCES mob_monsters(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ---------- MIGRATIONS ----------
+-- Widen prot_type from VARCHAR(32) so the field can hold the
+-- reinc-planner-flavoured prot recipes the EQ team actually uses
+-- ("G-physical - Lpsionic - Iron will", "Tank Grap/Lcold", etc.).
+-- MODIFY is a no-op when the column is already at the target size,
+-- so this stays idempotent.
+ALTER TABLE mob_prots MODIFY COLUMN prot_type VARCHAR(255) NOT NULL;

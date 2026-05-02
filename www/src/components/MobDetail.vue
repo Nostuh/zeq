@@ -415,7 +415,7 @@ export default {
                 </div>
                 <div v-else class="text-muted small mb-1">Empty</div>
                 <div v-if="showAddProt" class="mt-1">
-                    <input class="form-control form-control-sm mb-1" v-model="newProt.prot_type" placeholder="e.g. cold">
+                    <input class="form-control form-control-sm mb-1" v-model="newProt.prot_type" maxlength="255" placeholder="e.g. cold, or 'G-physical / Lpsionic / Iron will'">
                     <select class="form-select form-select-sm mb-1" v-model="newProt.priority">
                         <option value="required">Required</option>
                         <option value="recommended">Recommended</option>

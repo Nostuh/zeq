@@ -26,6 +26,7 @@ const ROUTE_TITLES = {
     'equipment-add':"Add Equipment — Zorky's",
     mobs:           "EQ Mob Database — Zorky's",
     'mob-detail':   "Mob Detail — Zorky's",
+    kya:            "KYA Lookup — Zorky's",
 };
 const DEFAULT_TITLE = ROUTE_TITLES.home;
 
@@ -278,6 +279,9 @@ export default {
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment'}">My Equipment</router-link></li>
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-all'}">All Equipment</router-link></li>
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-add'}">Add Equipment</router-link></li>
+
+                        <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Lookups</small></li>
+                        <li class="nav-item"><router-link class="nav-link" :to="{name:'kya'}">KYA Lookup</router-link></li>
 
                         <li class="nav-item mt-3" v-if="hasEqAccess"><small class="text-muted ps-2 text-uppercase fw-bold">EQ Mobs</small></li>
                         <li class="nav-item" v-if="hasEqAccess"><router-link class="nav-link" :to="{name:'mobs'}">Mob Database</router-link></li>
