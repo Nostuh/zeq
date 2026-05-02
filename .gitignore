@@ -6,3 +6,8 @@ docs/Zombiemud.pdf
 www/src/dist/
 scripts/test/out/
 api/uploads/
+
+# Track Claude Code workspace settings in this repo. Overrides the
+# global ignore (~/.config/git/ignore) that excludes settings.local.json
+# by default — for zeq we want both shared and local rules versioned.
+!.claude/settings.local.json

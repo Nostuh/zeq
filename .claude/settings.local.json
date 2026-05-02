@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//tmp/Zcreator-Enhanced/Zcreator Updated/data/**)",
+      "Bash(mysql -u zork -pstarcraft zeq -e \"DESCRIBE users\")",
+      "Bash(node import_zcreator.mjs --force)",
+      "Bash(mysql -u zork -pstarcraft zeq)",
+      "Bash(mysql -u zork -pstarcraft zeq -e \"SELECT name, \\(help_text IS NOT NULL\\) as has_help FROM game_races ORDER BY has_help, name\")",
+      "Bash(npm install:*)",
+      "Bash(ZEQ_ADMIN_USER=admin ZEQ_ADMIN_PASS=changeme nohup node api.mjs)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -c /tmp/zeq.cookie -X POST http://localhost:50000/api/auth/login -H \"Content-Type: application/json\" -d '{\"name\":\"admin\",\"password\":\"changeme\"}')",
+      "Bash(curl -s -b /tmp/zeq.cookie http://localhost:50000/api/auth/me)",
+      "Bash(curl -s -b /tmp/zeq.cookie \"http://localhost:50000/api/game/races?q=human\")",
+      "Bash(ps -fp 973)",
+      "Bash(systemctl list-units:*)",
+      "Bash(pm2 list:*)",
+      "Bash(ZEQ_ADMIN_USER=admin ZEQ_ADMIN_PASS=changeme pm2 restart api --update-env)",
+      "Bash(pm2 logs:*)",
+      "Bash(curl -s -b /tmp/zeq.cookie \"http://localhost:50000/api/game/races?q=Human\")",
+      "Bash(curl -s -b /tmp/zeq.cookie \"http://localhost:50000/api/game/skills?q=attack\")",
+      "Bash(curl -s -b /tmp/zeq.cookie http://localhost:50000/api/game/costs)",
+      "Bash(curl -s -b /tmp/zeq.cookie http://localhost:50000/api/users/)",
+      "Bash(curl -s -b /tmp/zeq.cookie \"http://localhost:50000/api/game/guilds\")",
+      "Bash(mysql -u zork -pstarcraft zeq -sN -e \"select id from game_guilds where name='Fighter'\")",
+      "Bash(curl -s -b /tmp/zeq.cookie \"http://localhost:50000/api/game/guilds/$\\(mysql -u zork -pstarcraft zeq -sN -e \"select id from game_guilds where name='Fighter'\"\\)\")",
+      "Bash(npx vite:*)",
+      "Bash(curl -s http://localhost:8081)",
+      "Bash(curl -sI http://localhost/)"
+    ]
+  }
+}
