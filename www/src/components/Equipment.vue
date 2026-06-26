@@ -73,15 +73,26 @@ export default {
                 this.$root.send_global_alert("Failed — re-login?", true);
             }
         },
+        // Fetch + (re)render the table for the current route. /equipment and
+        // /equipment-all share this component, so the router REUSES the
+        // instance on a switch and `mounted` does NOT fire again — the watch
+        // below calls this so the rows, the "Have" column, and the toggles
+        // reload correctly. See the component re-use gotcha in docs/gotchas.md.
+        async load() {
+            if (!this.$root.user) { this.$router.push({ name: "dashboard" }); return; }
+            const url = this.mine ? '/api/equipment/items?mine=1' : '/api/equipment/items';
+            const res = await axios.get(url);
+            const rows = (res.data && res.data.data) || [];
+            this.eq = [];
+            uf.dloop(rows, (i, v) => this.eq.push(this.to_display(v)));
+            this.$refs.zSimpleTableVue.set_table(this.eq, this.get_config(), { display_limit: 500 });
+        },
     },
-    async mounted() {
-        if (!this.$root.user) { this.$router.push({ name: "dashboard" }); return; }
-        const url = this.mine ? '/api/equipment/items?mine=1' : '/api/equipment/items';
-        const res = await axios.get(url);
-        const rows = (res.data && res.data.data) || [];
-        uf.dloop(rows, (i, v) => this.eq.push(this.to_display(v)));
-        this.$refs.zSimpleTableVue.set_table(this.eq, this.get_config(), { display_limit: 500 });
+    watch: {
+        // Reload when switching between the mine/all routes (same component).
+        '$route.name'() { this.load(); },
     },
+    async mounted() { await this.load(); },
 };
 </script>
 

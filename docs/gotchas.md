@@ -56,6 +56,17 @@ purely by reactive state. The reinc guild list (TabGeneral.vue) uses
 this approach after bug #27 proved every native-checkbox pattern
 eventually desyncs.
 
+### Same component on two routes is REUSED — `mounted` won't re-fire
+`Equipment.vue` serves both `/equipment` (mine) and `/equipment-all`
+(catalog). Vue Router reuses the **same instance** when navigating
+between routes backed by one component, so `mounted()` runs only on the
+first visit. The first cut did its fetch + `set_table` in `mounted`, so
+switching My ↔ All kept the stale rows and stale config — the "Have"
+column and its toggles didn't reload. Fix: move the fetch/render into a
+`load()` method, call it from `mounted`, and `watch: { '$route.name'() {
+this.load(); } }`. Any data-driven component mapped to multiple routes
+needs the same pattern (or a `:key` on `<router-view>`).
+
 ### Derived state vs. primary state for totalLevels
 `totalLevels` in the reinc planner is a COMPUTED value derived from
 `guildLevelsSum + freeLevels` where `extraFree` is the only primary
