@@ -243,6 +243,7 @@ export default {
                         <td v-if="display_type(r)=='delete_button'"><button type="button" class="btn btn-danger" @click="callback(r,d)">Delete</button></td>
                         <td v-if="display_type(r)=='view_button'"><button type="button" class="btn btn-primary" @click="callback(r,d)">View</button></td>
                         <td v-if="display_type(r)=='checkbox'"><input type='checkbox' v-model=d[r] :checked="d[r]" @click="callback(r,d)"></td>
+                        <td v-if="display_type(r)=='toggle'" class="text-center"><i class="bi" :class="is_checked(d[r])?'bi-check-square-fill text-success':'bi-square text-secondary'" style="cursor:pointer;font-size:1.2em" @click="callback(r,d)"></i></td>
                         <td v-if="display_type(r)=='image'"><img style="width: 50px;height: 50px;" :src=d[r] /></td>
                         <td v-if="display_type(r)=='int_to_yn'" :style="enabled_color(d[r])">{{int_to_yn(d[r])}}</td>
                         <td v-if="display_type(r)=='enabled'" :style="enabled_color(d[r])">{{int_to_yn(d[r])}}</td>

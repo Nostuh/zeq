@@ -203,6 +203,33 @@ EQ role management (admin only, on the users router):
 | GET | `/api/users/:id/eq-roles` | get user's eq roles |
 | POST | `/api/users/:id/eq-roles` | `{roles: ['eq_editor']}` — set eq roles |
 
+## Equipment catalog (`/api/equipment`)
+
+The redesigned equipment API — structured items (parsed once at add
+time, not re-parsed on read) with ownership as a tag. **Supersedes
+`/api/eq`** (below). All endpoints require an authenticated session
+(`requireAuth` — any viewer/editor/admin); items are shared catalog
+rows, ownership is per user. Backed by `eq_items` / `eq_item_bonuses` /
+`eq_ownership` ([schema.md](schema.md)). Full design in
+[equipment-redesign.md](equipment-redesign.md).
+
+| Method | Path | Purpose |
+|---|---|---|
+| GET    | `/api/equipment/items?q=&mine=1` | list catalog rows (structured columns) with an `owned` flag for the caller; `q` filters by name, `mine=1` restricts to owned |
+| GET    | `/api/equipment/items/:id`       | item detail + `bonuses[]` + `owned`/`own_note` |
+| POST   | `/api/equipment/add`             | `{info, slot, eqmob?, note?}` — parse identify text server-side, **best-of-merge** into the catalog (`UNIQUE(name, wear_slot)`), and tag the caller as an owner. Replaces legacy `/add` + `copy_to_user` |
+| POST   | `/api/equipment/build`           | `{weights:{str:2,con:1,…}, wield?}` — **EQ Builder**: best gear set from the caller's owned items maximizing the weighted stat sum. Per-slot greedy (one item/slot; `finger` & `wield` take 2). `wield` ∈ `dual` (two weapons, default) / `shield` (best weapon + best shield) / `shield_only` (best shield, no weapon) / `none` (skip weapons). Multi-slot items are ignored. Returns `{picks, totals, score, unplaced, owned, multiIgnored, wield}` |
+| POST   | `/api/equipment/items/:id/own`   | `{note?}` — tag ownership (upsert) |
+| DELETE | `/api/equipment/items/:id/own`   | remove the caller's ownership tag |
+| GET    | `/api/equipment/eqmobs`          | list `eqmobs` |
+| POST   | `/api/equipment/eqmobs`          | `{name}` — add an eq mob, **deduped** (no-op if the name exists) |
+
+Parsing is centralized in
+[api/classes/eq_parse.mjs](../api/classes/eq_parse.mjs); the catalog
+upsert/merge in [api/classes/eq_store.mjs](../api/classes/eq_store.mjs)
+(which builds SQL via `zeq.escape()` instead of the `@name` shim to
+avoid the `hp`/`hpr`, `name`/`name_raw` prefix-collision trap).
+
 ## Legacy equipment (`/api/eq`) — deprecated
 
 Backs the original Karran-era Equipment pages
@@ -211,7 +238,9 @@ Backs the original Karran-era Equipment pages
 [EquipmentAll.vue](../www/src/components/EquipmentAll.vue)) against the
 legacy `eq`, `eqmobs`, and `kya_info` tables. New EQ work should land in
 the EQ Mob KB (`/api/mobs`) instead — this router exists only to keep
-the old flow working until its data is migrated.
+the old flow working until its data is migrated. The Vue pages and the
+client-side identify-text parser are documented in
+[equipment.md](equipment.md).
 
 | Method | Path | Role | Purpose |
 |---|---|---|---|
@@ -228,6 +257,12 @@ the old flow working until its data is migrated.
 legacy `/api/eq/login` response being kept client-side. Do not build new
 features against this router; use `/api/mobs` and the session auth in
 `/api/auth/login` instead.
+
+As of the equipment redesign the UI no longer calls the equipment parts
+of this router (`/add`, `/eq`, `/eq-mobs`, `/add-mob`, `/copy_to_user`,
+`/login`) — those are frozen, superseded by `/api/equipment` above. Only
+`POST /api/eq/kya` (KYA ingest) and `GET /api/eq/version` still have live
+in-game callers.
 
 ## Conventions
 

@@ -24,6 +24,7 @@ const ROUTE_TITLES = {
     equipment:      "My Equipment — Zorky's",
     'equipment-all':"All Equipment — Zorky's",
     'equipment-add':"Add Equipment — Zorky's",
+    'equipment-build':"EQ Builder — Zorky's",
     mobs:           "EQ Mob Database — Zorky's",
     'mob-detail':   "Mob Detail — Zorky's",
     kya:            "KYA Lookup — Zorky's",
@@ -271,7 +272,7 @@ export default {
     <div v-if="onReinc" class="reinc-wrap">
         <router-view />
     </div>
-    <div v-else class="container-fluid">
+    <div v-else class="container-fluid app-content">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" v-if="user">
                 <div class="position-sticky pt-3">
@@ -279,6 +280,7 @@ export default {
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment'}">My Equipment</router-link></li>
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-all'}">All Equipment</router-link></li>
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-add'}">Add Equipment</router-link></li>
+                        <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-build'}">EQ Builder</router-link></li>
 
                         <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Lookups</small></li>
                         <li class="nav-item"><router-link class="nav-link" :to="{name:'kya'}">KYA Lookup</router-link></li>
@@ -336,6 +338,11 @@ body.reinc-active #app {
 /* Persistent floating action button — the primary way users submit
    bug reports and ideas. Sits above the planner's locked layout so it
    works even when page scroll is disabled. */
+/* Extra scroll room at the bottom so the fixed Report-Bug FAB never
+   covers the last rows of a page's table. Reinc layout is excluded (it
+   is locked to 100vh and uses .reinc-wrap, not .app-content). */
+.app-content { padding-bottom: 6rem; }
+
 .fab-report {
     position: fixed;
     right: 1rem;

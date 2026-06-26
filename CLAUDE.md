@@ -42,6 +42,7 @@ See [docs/schema.md](docs/schema.md).
 - Saved reincs (`/builds`): state JSON stores `game_*` IDs, so game-data migrations can rot old builds — read drift rules in [docs/saved-reincs.md](docs/saved-reincs.md) before renaming/deleting game rows.
 - EQ Mob KB: `mob_*` tables, `/api/mobs`, eq roles in `user_roles`. [docs/mobs.md](docs/mobs.md).
 - KYA Lookup: read-only `/kya` browses `kya_info` (3 capture formats, name extracted in SQL). Ingest still at `POST /api/eq/kya`. [docs/kya.md](docs/kya.md).
+- Equipment: `/equipment*` + `/api/equipment` over `eq_items` (paste→**server**-parse in [api/classes/eq_parse.mjs](api/classes/eq_parse.mjs), ownership = tag). Legacy `eq`/`/api/eq` frozen. Builder planned. [docs/equipment-redesign.md](docs/equipment-redesign.md).
 
 ## Running
 

@@ -33,17 +33,23 @@ This item loses its magical powers with average speed.
         Multiselect
     },
     methods: {
+        // Paste-to-parse is the ONLY add path: the pasted identify text is
+        // parsed server-side (/api/equipment/add) and the resulting item is
+        // tagged as owned by the caller. See docs/equipment-redesign.md.
         add: async function() {
             if ( this.item_info != "" && this.the_slot != "" && this.selected_eqmob != "" && this.$root.user ) {
-                await axios.post(`/api/eq/add`,
+                const res = await axios.post(`/api/equipment/add`,
                     {
-                        item_info:this.item_info.trim(),
+                        info:this.item_info.trim(),
                         note:this.note.trim(),
                         slot:this.the_slot,
-                        eqmob:this.selected_eqmob.id,
-                        user_id:this.$root.user.id
+                        eqmob:this.selected_eqmob.id
                     }
                 );
+                if ( !res.data || !res.data.ok ) {
+                    this.$root.send_global_alert((res.data && res.data.error) || "Add failed — check the pasted text", true);
+                    return;
+                }
                 this.item_info = "";
                 this.the_slot = "";
                 this.selected_eqmob = "";
@@ -55,7 +61,7 @@ This item loses its magical powers with average speed.
         },
         add_eqmob: async function() {
             if ( this.new_eq_mob != "" ) {
-                await axios.post(`/api/eq/add-mob`,
+                await axios.post(`/api/equipment/eqmobs`,
                     {
                         name:this.new_eq_mob
                     }
@@ -66,10 +72,10 @@ This item loses its magical powers with average speed.
             } else {
                 this.$root.send_global_alert("New EQ Mob NEEDS NAME!",true);
             }
-            
+
         },
         load_eqmobs: async function() {
-            this.eqmobs = (await axios.get(`/api/eq/eq-mobs`)).data;
+            this.eqmobs = (await axios.get(`/api/equipment/eqmobs`)).data.data;
         }
     },
     mounted: async function() {

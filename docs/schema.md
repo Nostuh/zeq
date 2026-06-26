@@ -153,6 +153,42 @@ relative `path`. `ON DELETE CASCADE` on `bug_id` so cleanup is
 automatic. MIME is validated by **sniffing the decoded buffer's first
 bytes**, not the client's claimed mime. See [bugs.mjs](../api/rest/api/bugs.mjs).
 
+## Legacy equipment tables (`eq` / `eqmobs`)
+
+The personal-equipment tracker behind the deprecated Equipment pages
+(see [equipment.md](equipment.md)). Both are legacy **MyISAM** tables,
+not `game_`-prefixed and not defined in `schema/*.sql`; they must never
+be dropped.
+
+- **`eq`** — one row per saved item: `id`, `user_id`, `eqmob` (nullable
+  FK-by-convention to `eqmobs.id`, no real FK), `slot` (varchar — the
+  radio value from EquipmentAdd.vue), `info` (text — the **raw in-game
+  identify text**, parsed into stat columns client-side; nothing is
+  normalized server-side), `note` (text).
+- **`eqmobs`** — `id`, `name`. The source-mob lookup for the
+  `eq.eqmob` column; populated via `POST /api/eq/add-mob`.
+
+## Equipment catalog (`eq_items` / `eq_item_bonuses` / `eq_ownership`)
+
+The redesigned, normalized replacement for the legacy `eq` parse-on-load
+model. DDL in [schema/equipment.sql](../schema/equipment.sql) (InnoDB);
+full rationale + phases in [equipment-redesign.md](equipment-redesign.md).
+
+- **`eq_items`** — one row per *distinct* item, deduped by
+  `UNIQUE(name, wear_slot)` on the normalized name. Stats are parsed
+  once at add time ([api/classes/eq_parse.mjs](../api/classes/eq_parse.mjs))
+  into columns (`str..cha`, `hpr/spr/hp/sp`, nine `r*` resistances, `ac`,
+  `weapon_class_value`, `dmg_pct`/`dmg_type`) so the EQ Builder is a plain
+  `SELECT`. `wear_slot` is the body location; weapons **and** shields use
+  `wield` (two wield slots; `hands=2` marks a two-handed weapon, but how
+  many slots it occupies is the builder's call), `weapon_class` is an
+  attribute. `raw_info` keeps the original text; `needs_review=1` flags
+  ambiguous slots/parses for a human.
+- **`eq_item_bonuses`** — open-ended skill/spell bonus lines that don't
+  fit fixed columns; `(item_id, bonus_name, amount)`, cascade on item.
+- **`eq_ownership`** — "I have this item" as a tag, `UNIQUE(user_id,
+  item_id)`, cascade on item. Replaces the legacy `copy_to_user` row copy.
+
 ## Supplementary roles
 
 ### `user_roles`

@@ -7,8 +7,8 @@ import Spells from './components/Spells.vue';
 import Costs from './components/Costs.vue';
 import Users from './components/Users.vue';
 import Equipment from './components/Equipment.vue';
-import EquipmentAll from './components/EquipmentAll.vue';
 import EquipmentAdd from './components/EquipmentAdd.vue';
+import EquipmentBuild from './components/EquipmentBuild.vue';
 import Reinc from './components/Reinc.vue';
 import Bugs from './components/Bugs.vue';
 import Updates from './components/Updates.vue';
@@ -38,7 +38,8 @@ export const routes = [
     { path: '/mobs', name: 'mobs', component: MobList },
     { path: '/mobs/:id', name: 'mob-detail', component: MobDetail, props: true },
     { path: '/equipment', name: 'equipment', component: Equipment },
-    { path: '/equipment-all', name: 'equipment-all', component: EquipmentAll },
+    { path: '/equipment-all', name: 'equipment-all', component: Equipment },
     { path: '/equipment-add', name: 'equipment-add', component: EquipmentAdd },
+    { path: '/equipment-build', name: 'equipment-build', component: EquipmentBuild },
     { path: '/kya', name: 'kya', component: Kya },
 ];
