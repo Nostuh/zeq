@@ -106,6 +106,19 @@ export default {
     outline: 1px solid;
     outline-offset: -2px;
 }
+
+/* Tighten the dense equipment grid so every stat column fits one screen
+   without horizontal scroll. Scoped to this page only — the shared
+   zSimpleTable used by other admin pages is untouched. Name/Slot/Bonuses
+   keep their default wrapping so the text columns stay narrow. The
+   higher-specificity selector (scope attr + .table) beats Bootstrap's
+   own `.table > :not(caption) > * > *` padding without !important. */
+:deep(table.table) {
+    font-size: 0.78rem;
+}
+:deep(table.table) > :not(caption) > * > * {
+    padding: 0.2rem 0.35rem;
+}
 </style>
 
 <template>
