@@ -37,7 +37,7 @@ const ONLY_FILE = fileArgIdx !== -1 ? process.argv[fileArgIdx + 1] : null;
 
 const STAT_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
     'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold',
-    'racid', 'rasphx', 'ac'];
+    'racid', 'rasphx', 'rshadow', 'ac'];
 const NUM_COLS = [...STAT_COLS, 'weapon_class_value', 'dmg_pct'];
 const WRITE_COLS = ['name', 'name_raw', 'wear_slot', 'weapon_class', 'is_shield',
     'hands', 'slot_raw', 'bound', 'needs_review', ...NUM_COLS, 'dmg_type',
@@ -246,7 +246,7 @@ async function main() {
             } else {
                 const e = catalog.get(key);
                 e.record = mergeRecord(e.record, rec);   // merge same item seen twice in files
-                for (const b of p.bonuses) e.bonuses.set(b.bonus_name, Math.max(e.bonuses.get(b.bonus_name) || 0, b.amount));
+                for (const b of p.bonuses) e.bonuses.set(b.bonus_name, mergeMag(e.bonuses.get(b.bonus_name) || 0, b.amount));
                 for (const c of (p.covers || [])) e.covers.add(c);
                 e.sources.push(rel);
             }
@@ -289,7 +289,7 @@ async function main() {
         for (const [name, amt] of entry.bonuses) {
             const cur = haveB.get(name);
             if (cur === undefined) changed.push(`+bonus ${name}=${amt}`);
-            else if ((Number(amt) || 0) > cur) changed.push(`bonus ${name} ${cur}→${amt}`);
+            else if (Math.abs(Number(amt) || 0) > Math.abs(cur)) changed.push(`bonus ${name} ${cur}→${amt}`);
         }
         const [cRows] = await db.query('SELECT wear_slot FROM eq_item_covers WHERE item_id = ?', [entry.existingId]);
         const haveC = new Set(cRows.map(r => r.wear_slot));
@@ -356,7 +356,9 @@ async function main() {
         if (e.existingId) upd++; else ins++;
 
         for (const [bonus_name, amount] of e.bonuses) {
-            await db.query('INSERT INTO eq_item_bonuses (item_id, bonus_name, amount) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE amount = GREATEST(amount, VALUES(amount))', [id, bonus_name, amount]);
+            // Larger-MAGNITUDE wins (sign preserved) so a penalty isn't lost to
+            // a 0/positive on re-merge — matches mergeMag for numeric stats.
+            await db.query('INSERT INTO eq_item_bonuses (item_id, bonus_name, amount) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE amount = IF(ABS(VALUES(amount)) > ABS(amount), VALUES(amount), amount)', [id, bonus_name, amount]);
             bonusRows++;
         }
         for (const slot of e.covers) {

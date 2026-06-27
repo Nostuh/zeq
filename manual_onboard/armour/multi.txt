@@ -1,4 +1,1224 @@
-# multi armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
 
+*-----------------------------------------------------------------------*
+|                           A Kruse platemail                           |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It has adequate armour class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A battlearmour made from dragon scales                |
+*-----------------------------------------------------------------------*
+It has nice armour class for its type (superb in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A black battlesuit                          |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+*-----------------------------------------------------------------------*
+|                  A black battlesuit of the z'dra race                 |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (low in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                  A black battlesuit of the z'dra race                 |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (low in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|             A black leather battlesuit called 'protector'             |
+*-----------------------------------------------------------------------*
+It increases the users strength phenomenally.
+It increases the users dexterity phenomenally.
+It decreases the users wisdom a tiny bit. (4/20)
+It decreases the users intelligence pathetically. (2/20)
+It has nice armour class for its type (superb in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+It gives decent bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+*-----------------------------------------------------------------------*
+|             A black leather battlesuit called 'protector'             |
+*-----------------------------------------------------------------------*
+It increases the users strength impossibly much.
+It increases the users dexterity phenomenally.
+It decreases the users wisdom a tiny bit. (4/20)
+It decreases the users intelligence pathetically. (2/20)
+It has nice armour class for its type (superb in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+It gives decent bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A black shirt                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+*-----------------------------------------------------------------------*
+|                    A black shirt with many pockets                    |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+*-----------------------------------------------------------------------*
+|                A black shirt with a mark of the thieves               |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                A black shirt with a mark of the thieves               |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A black shirt with many pockets                    |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A black silk shirt                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A black tuxedo                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A blackened heavy cloth robe                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has tiny armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+(Note: This item covers multiple slots: legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A blue field plate                          |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity pathetically. (2/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has superb armour class for its type (superb in general).
+It decreases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'inner strength'.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                              A blue shirt                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A bright steel plate armour                      |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity a bit. (6/20)
+It has tremendous armour class for its type (unbelievable in general).
+This item loses its magical powers with incredible haste.
+It increases the users magical resistance somewhat. (8/20)
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A charred black battlesuit                      |
+*-----------------------------------------------------------------------*
+It has almost non-existent armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A crystalline memory retainer                     |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution a good amount. (12/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has feeble armour class for its type (tiny in general).
+It increases the users spellpoint regeneration impossibly much.
+It increases the users hitpoints somewhat. (8/20)
+It gives great penalty to the skill 'dodge'.
+This item loses its magical powers slowly.
+It gives great bonus to the spell 'restore memory'.
+It increases the users psionic resistance tremendously. (17/20)
+
+- Extra -
+It prevents the exfiltration of memories from the mind.
+
+
+(Note: This item covers multiple slots: head/neck)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A dark red lamellar armour                      |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity unnoticably. (1/20)
+It has superb armour class for its type (awesome in general).
+This item loses its magical powers with average speed.
+It increases the users fire resistance a bit. (6/20)
+
+(Note: This item covers multiple slots: legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|               A dark robe with a red symbol on the back               |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+The wearer would feel very unholy if he'd wear this robe.
+
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|               A deep crimson robe with black rose on it               |
+*-----------------------------------------------------------------------*
+It has tiny armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A dirty shirt                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A fine red robe with silvery seams                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a tiny bit. (4/20)
+It has almost non-existent armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: head/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A fine white dress                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A flamehardened greatcloak                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users wisdom divinely.
+It increases the users intelligence divinely.
+It has low armour class for its type (decent in general).
+It increases the users spellpoint regeneration divinely.
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users fire resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: cloak/head/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A glowing pair of frostburned leggings                |
+*-----------------------------------------------------------------------*
+It decreases the users strength slightly. (7/20)
+It increases the users wisdom divinely.
+It increases the users charisma unbelievably much. (20/20)
+It has nice armour class for its type (low in general).
+It increases the users spellpoint regeneration monumentally.
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users cold resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: belt/feet/legs)
+
+
+
+*-----------------------------------------------------------------------*
+|                  A grand polished adamantite cuirass                  |
+*-----------------------------------------------------------------------*
+It increases the users strength superbly. (16/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution a good amount. (12/20)
+It increases the users wisdom ILLEGALLY.
+It decreases the users intelligence adequately. (10/20)
+It has excellent armour class for its type (superb in general).
+It increases the users spellpoint regeneration phenomenally.
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users physical resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: arms/belt/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A grand spellburned silk robe                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength impressively. (15/20)
+It decreases the users constitution impressively. (15/20)
+It increases the users wisdom impossibly much.
+It increases the users intelligence impossibly much.
+It increases the users charisma impossibly much.
+It has mediocre armour class for its type (adequate in general).
+It increases the users spellpoint regeneration ILLEGALLY.
+This item loses its magical powers somewhat faster than average.
+It increases the users magical resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: head/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A grand voidtouched greatcloak                    |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It increases the users dexterity impressively. (15/20)
+It increases the users constitution impressively. (15/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It decreases the users charisma colossally.
+It has low armour class for its type (average in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+It increases the users hitpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users asphyxiation resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: cloak/head/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                              A grey shirt                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A heavy shockburned full plate                    |
+*-----------------------------------------------------------------------*
+It increases the users strength divinely.
+It increases the users constitution impossibly much.
+It decreases the users wisdom a tiny bit. (4/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It decreases the users charisma a tiny bit. (4/20)
+It has superb armour class for its type (magnificent in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration phenomenally.
+This item loses its magical powers somewhat faster than average.
+It increases the users electric resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: arms/neck/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A leather battlesuit                         |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                            A leather shirt                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A legionnaire's scalemail                       |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution a bit. (6/20)
+It has great armour class for its type (excellent in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+
+(Note: This item covers multiple slots: belt/neck/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A light burnished brigandine                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom magnificently. (18/20)
+It increases the users intelligence divinely.
+It has great armour class for its type (superb in general).
+It increases the users spellpoint regeneration ILLEGALLY.
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users physical resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: belt/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                A light green toxin infused leather hood               |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It increases the users dexterity monumentally.
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence unbelievably much. (20/20)
+It increases the users charisma impossibly much.
+It has excellent armour class for its type (adequate in general).
+It increases the users spellpoint regeneration phenomenally.
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users poison resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: cloak/head/neck)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A massive ice encased chestplate                   |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It increases the users constitution tremendously. (17/20)
+It increases the users wisdom tremendously. (17/20)
+It has superb armour class for its type (awesome in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users cold resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: arms/belt/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                A pair of magic infused grand pauldrons                |
+*-----------------------------------------------------------------------*
+It increases the users strength unbelievably much. (20/20)
+It decreases the users dexterity a good amount. (12/20)
+It increases the users constitution unbelievably much. (20/20)
+It increases the users wisdom unbelievably much. (20/20)
+It has tremendous armour class for its type (unbelievable in general).
+It increases the users spellpoint regeneration divinely.
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users magical resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: arms/head/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of massive voidplate boots                   |
+*-----------------------------------------------------------------------*
+It increases the users strength phenomenally.
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution phenomenally.
+It decreases the users wisdom adequately. (10/20)
+It decreases the users intelligence adequately. (10/20)
+It decreases the users charisma pathetically. (2/20)
+It has nice armour class for its type (low in general).
+It increases the users hitpoint regeneration immensely.
+This item loses its magical powers somewhat faster than average.
+It increases the users asphyxiation resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: belt/feet/legs)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of obsidian plated chausses                  |
+*-----------------------------------------------------------------------*
+It increases the users strength colossally.
+It increases the users dexterity superbly. (16/20)
+It increases the users constitution divinely.
+It decreases the users wisdom adequately. (10/20)
+It decreases the users intelligence adequately. (10/20)
+It decreases the users charisma adequately. (10/20)
+It has excellent armour class for its type (average in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration colossally.
+This item loses its magical powers somewhat faster than average.
+It increases the users fire resistance superbly. (16/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+(Note: This item covers multiple slots: belt/feet/legs)
+
+
+
+*-----------------------------------------------------------------------*
+|        A pitch black full-length armour with a hammer on chest        |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity unbelievably much. (20/20)
+It has excellent armour class for its type (awesome in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A pulsating steel full plate                     |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution phenomenally.
+It decreases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence phenomenally.
+It decreases the users charisma a tiny bit. (4/20)
+It has tremendous armour class for its type (magnificent in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users psionic resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: arms/belt/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A ripped and torn straight jacket                   |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users charisma adequately. (10/20)
+It has average armour class for its type (average in general).
+It decreases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+It decreases the users magical resistance strongly. (14/20)
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A shimmering spidersilk greatrobe                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It increases the users constitution ILLEGALLY.
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence ILLEGALLY.
+It decreases the users charisma a good amount. (12/20)
+It has decent armour class for its type (good in general).
+It increases the users spellpoint regeneration ILLEGALLY.
+It decreases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users psionic resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: arms/neck/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A simple blue cloth robe                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has average armour class for its type (adequate in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+
+- Extra -
+It modifies the user's resistance to physical damage.
+
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A simple looking brown robes                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It increases the users constitution unnoticably. (1/20)
+It increases the users wisdom pitifully. (3/20)
+It has pathetic armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A sinister-looking black platemail                  |
+*-----------------------------------------------------------------------*
+It increases the users strength ILLEGALLY.
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution unbelievably much. (20/20)
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence unbelievably much. (20/20)
+It has awesome armour class for its type (immense in general).
+This item loses its magical powers incredibly slowly.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users fire resistance strongly. (14/20)
+It increases the users magical resistance somewhat. (8/20)
+It decreases the users electric resistance somewhat. (8/20)
+It increases the users acid resistance adequately. (10/20)
+
+- Extra -
+The enchantment of this platemail is more powerful when it is donned by someone
+of evil alignment, and will additionally protect the wearer from the light.
+Seven Shards of Gods can be embedded into this dark artifact.
+
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A sturdy grey robe                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom magnificently. (18/20)
+It increases the users intelligence magnificently. (18/20)
+It has great armour class for its type (impressive in general).
+It allows the user to see in darkness.
+It increases the users spellpoint regeneration impossibly much.
+It increases the users hitpoint regeneration somewhat. (8/20)
+It gives small bonus to the spell 'unholy strength'.
+This item loses its magical powers with average speed.
+It decreases the users fire resistance adequately. (10/20)
+It gives small bonus to the skill 'greater vulnerability'.
+It increases the users asphyxiation resistance adequately. (10/20)
+
+(Note: This item covers multiple slots: head/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A tattered funerary shroud                      |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A tavern wenches dress                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A thunderstruck leather battlesuit                  |
+*-----------------------------------------------------------------------*
+It increases the users strength an average amount. (11/20)
+It increases the users dexterity ILLEGALLY.
+It increases the users constitution an average amount. (11/20)
+It decreases the users wisdom somewhat. (8/20)
+It decreases the users intelligence somewhat. (8/20)
+It decreases the users charisma somewhat. (8/20)
+It has excellent armour class for its type (magnificent in general).
+It increases the users hitpoint regeneration colossally.
+This item loses its magical powers somewhat faster than average.
+It increases the users electric resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A venomtouched leather brigandine                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It increases the users intelligence unbelievably much. (20/20)
+It increases the users charisma divinely.
+It has great armour class for its type (excellent in general).
+It increases the users spellpoint regeneration ILLEGALLY.
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users poison resistance superbly. (16/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+(Note: This item covers multiple slots: belt/cloak/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A white robe with gold linings                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration colossally.
+This item loses its magical powers with incredible haste.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A worn suit of orcish battlearmour                  |
+*-----------------------------------------------------------------------*
+It increases the users strength unbelievably much. (20/20)
+It increases the users dexterity unbelievably much. (20/20)
+It increases the users constitution impressively. (15/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (awesome in general).
+It decreases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/belt/neck/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Aelian leather armour                         |
+*-----------------------------------------------------------------------*
+It has tiny armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                       An Exoskeletal Battlesuit                       |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution impressively. (15/20)
+It has awesome armour class for its type (unbelievable in general).
+It increases the users hitpoint regeneration impressively. (15/20)
+It gives nice bonus to the skill 'dodge'.
+This item loses its magical powers somewhat slower than average.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+(Note: This item covers multiple slots: belt/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                       An acid etched greatplate                       |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It decreases the users dexterity impressively. (15/20)
+It increases the users constitution nicely. (13/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence ILLEGALLY.
+It decreases the users charisma impressively. (15/20)
+It has poor armour class for its type (low in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users acid resistance superbly. (16/20)
+
+(Note: This item covers multiple slots: arms/head/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                        An antique plate armour                        |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution pitifully. (3/20)
+It has tremendous armour class for its type (unbelievable in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+It increases the users cold resistance a bit. (6/20)
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|          An darkened totem adorned with a murkroot toad skull         |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users intelligence a good amount. (12/20)
+It has little armour class for its type (pathetic in general).
+It gives small bonus to the spell 'breath of life'.
+It increases the users spellpoint regeneration monumentally.
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+It gives decent bonus to the skill 'water lore'.
+
+- Extra -
+The murkroot toad skull's mysterious powers change with the world's seasons.
+
+
+(Note: This item covers multiple slots: finger/held)
+
+
+
+*-----------------------------------------------------------------------*
+|                   An entirely white robe with a hood                  |
+*-----------------------------------------------------------------------*
+It has almost non-existent armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/head/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                    An exquisite mithril battlesuit                    |
+*-----------------------------------------------------------------------*
+It increases the users dexterity unbelievably much. (20/20)
+It has excellent armour class for its type (unbelievable in general).
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/neck/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                           An iron battlesuit                          |
+*-----------------------------------------------------------------------*
+It has tiny armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                      Armour of Harmonic Existance                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom magnificently. (18/20)
+It increases the users intelligence adequately. (10/20)
+It has average armour class for its type (good in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'harmony armour'.
+
+- Extra -
+It affects the user's spell knowledge.
+
+
+(Note: This item covers multiple slots: arms/hands/neck/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                        Befouled hand wrappings                        |
+*-----------------------------------------------------------------------*
+It increases the users strength unbelievably much. (20/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom adequately. (10/20)
+It decreases the users charisma impossibly much.
+It has nice armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration an average amount. (11/20)
+This item loses its magical powers very slowly.
+It increases the users physical resistance somewhat. (8/20)
+It gives decent bonus to the skill 'martial arts'.
+It decreases the users fire resistance somewhat. (8/20)
+It decreases the users magical resistance somewhat. (8/20)
+It gives small bonus to the skill 'call for fire'.
+It gives small bonus to the skill 'call for ice'.
+It gives small bonus to the skill 'advanced martial arts'.
+It gives small bonus to the skill 'call for thunder'.
+
+- Extra -
+Stolen from the hands of a mummy these wrappings were then enchanted with dark
+magics to create an artifact that infuses the hands of a monk with elemental
+powers.
+
+
+(Note: This item covers multiple slots: arms/hands)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Black Chain Hauberk                          |
+*-----------------------------------------------------------------------*
+It increases the users constitution pitifully. (3/20)
+It has average armour class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                 Blackstone fullplate of demonic armies                |
+*-----------------------------------------------------------------------*
+It has good armour class for its type (excellent in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|              Bloodstone battlearmour of devilish entities             |
+*-----------------------------------------------------------------------*
+It has decent armour class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Brown robes                              |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+It gives tiny bonus to the skill 'wilderness survival'.
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Fedaykin officer suit                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution pathetically. (2/20)
+It has low armour class for its type (average in general).
+It decreases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It increases the users acid resistance strongly. (14/20)
+
+- Extra -
+It emits darkness.
+It modifies the user's resistance to acid damage.
+
+
+(Note: This item covers multiple slots: feet/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                  Iron bracelets of elemental binding                  |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+(Note: This item covers multiple slots: arms/feet)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Iron chainmail                            |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Jarvisen hiihtohaalari                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It doubles the effect of alcohol.
+
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                Leprachaun Magical Air Armour <rainbow>                |
+*-----------------------------------------------------------------------*
+It increases the users strength phenomenally.
+It increases the users dexterity unbelievably much. (20/20)
+It increases the users constitution unbelievably much. (20/20)
+It has superb armour class for its type (ILLEGAL in general).
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It increases the users magical resistance unearthly.
+
+- Extra -
+Greatly modifies users resistance to damage.
+
+
+(Note: This item covers multiple slots: arms/belt/feet/hands/head/legs/neck/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                        Long flowing black robes                       |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (low in general).
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                 Lorain's white robe with gold linings                 |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration colossally.
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Robes of Jaundice                           |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence phenomenally.
+It decreases the users charisma phenomenally.
+It has excellent armour class for its type (awesome in general).
+It increases the users spellpoint regeneration ILLEGALLY.
+This item loses its magical powers extremely slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance adequately. (10/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+The ample folds of the robes provide room to embed additional shards.
+
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|             Superior Leprechaun Magical Air Armour <black>            |
+*-----------------------------------------------------------------------*
+It increases the users strength ILLEGALLY.
+It increases the users dexterity phenomenally.
+It increases the users constitution phenomenally.
+It has superb armour class for its type (ILLEGAL in general).
+It increases the users hitpoint regeneration impossibly much.
+This item loses its magical powers incredibly slowly.
+It increases the users physical resistance unearthly.
+
+(Note: This item covers multiple slots: arms/belt/feet/hands/head/legs/neck/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|             The Ancient silver Battlesuit of Oda Nobunaga             |
+*-----------------------------------------------------------------------*
+It increases the users strength phenomenally.
+It increases the users dexterity phenomenally.
+It increases the users constitution adequately. (10/20)
+It has tremendous armour class for its type (unbelievable in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance strongly. (14/20)
+It increases the users fire resistance strongly. (14/20)
+
+- Extra -
+It affects the user's cold resistance.
+It affects the user's fire resistance.
+
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                   The Ritual Vestments of Duntrench                   |
+*-----------------------------------------------------------------------*
+It increases the users wisdom divinely.
+It has nice armour class for its type (superb in general).
+It increases the users spellpoint regeneration divinely.
+This item loses its magical powers with average speed.
+It gives nice bonus to the skill 'neptune lore'.
+It increases the users physical resistance somewhat. (8/20)
+It gives nice bonus to the skill 'water lore'.
+It gives nice bonus to the skill 'saturn lore'.
+It gives nice bonus to the skill 'pluto lore'.
+
+(Note: This item covers multiple slots: arms/legs/torso)
+
+
+
+*-----------------------------------------------------------------------*
+|                       The infernal maw of Tethyl                      |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+The maw amplifies the wearer's psionic powers.
+
+
+(Note: This item covers multiple slots: head/neck)
+
+
+
+*-----------------------------------------------------------------------*
+|             The ragged crimson and black tartan of Grimoan            |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence unbelievably much. (20/20)
+It has weak armour class for its type (little in general).
+It increases the users spellpoint regeneration immensely.
+This item loses its magical powers extremely fast.
+
+- Extra -
+The dagger lusts for blood, and it will taste its fill in battle.
+
+
+(Note: This item covers multiple slots: feet/legs)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Troll's chainmail                           |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has adequate armour class for its type (adequate in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+(Note: This item covers multiple slots: neck/torso)
+
+
+You can't find any records about "A Simple cloth robe" in the library.

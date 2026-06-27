@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS eq_items (
     rcold  SMALLINT NOT NULL DEFAULT 0,
     racid  SMALLINT NOT NULL DEFAULT 0,
     rasphx SMALLINT NOT NULL DEFAULT 0,
+    rshadow SMALLINT NOT NULL DEFAULT 0,                 -- shadow damage resistance (library lookup)
     -- combat
     ac                  SMALLINT NOT NULL DEFAULT 0,
     weapon_class_value  SMALLINT NOT NULL DEFAULT 0,     -- replaces the hard-coded 40
@@ -62,6 +63,10 @@ CREATE TABLE IF NOT EXISTS eq_items (
     KEY ix_eqi_slot (wear_slot),
     KEY ix_eqi_eqmob (eqmob_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Idempotent add for already-created eq_items (the CREATE above is a no-op
+-- once the table exists, so new columns need an explicit ADD ... IF NOT EXISTS).
+ALTER TABLE eq_items ADD COLUMN IF NOT EXISTS rshadow SMALLINT NOT NULL DEFAULT 0 AFTER rasphx;
 
 -- ---------- OPEN-ENDED BONUSES ----------
 -- Skill/spell bonus lines ("gives tiny bonus to triple thrust") that

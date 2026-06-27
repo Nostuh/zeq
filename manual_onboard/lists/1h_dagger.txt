@@ -1,3 +1,80 @@
-# Paste the `list <slot>` output for 1h_dagger here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 1h dagger
+
+*-------------------------------------------------------------*
+|                   Weapon type - 1h dagger                   |
+*-------------------------------------------------------------*
+| A carbon-steel dagger                                       |
+| A curved black ritual dagger                                |
+| A curved dagger                                             |
+| A curved skinning knife                                     |
+| A dagger with a golden hilt                                 |
+| A double-edged dagger                                       |
+| A double-edged dagger                                       |
+| A finely-crafted dagger, humming with latent energy         |
+| A flanged dagger                                            |
+| A glimmering opal rapier with serrated edges                |
+| A glossy platinum dagger                                    |
+| A hollow crescent incisor                                   |
+| A jagged opal rapier known as 'Plaguedealer'                |
+| A jeweled dagger known as 'Annihilator'                     |
+| A long butcher knife                                        |
+| A long butcher's knife                                      |
+| A long curved dagger                                        |
+| A nasty curved dagger                                       |
+| A resinous black dirk                                       |
+| A sharp dagger                                              |
+| A sharp dagger                                              |
+| A sharp edged blade                                         |
+| A sharp object                                              |
+| A sharp piece of ice 'frozen tears'                         |
+| A sharp scimitar-like dagger                                |
+| A shimmering copper dagger                                  |
+| A short dagger                                              |
+| A small dagger                                              |
+| A small silvery-bladed knife                                |
+| A spectral, jagged dagger                                   |
+| A steel bladed dagger                                       |
+| A venom-tipped barb                                         |
+| A watery dagger                                             |
+| A whetted voidtouched rondel                                |
+| A wickedly curved assassin's dagger                         |
+| An Arenjun dagger                                           |
+| An expensive dagger forged from gold                        |
+| An expensive dagger forged from silver                      |
+| An exquisite dagger, pulsating with intense, dark power     |
+| An iron dagger                                              |
+| An ivory dagger                                             |
+| An ornate jade-hilted kukri                                 |
+| Assassin's Dirk                                             |
+| Ba'al Verzi dagger                                          |
+| Black dagger                                                |
+| Dagger of the Graveghost                                    |
+| Dagger of the Graveghost                                    |
+| Dagger of the Kyrie                                         |
+| Deathspitter                                                |
+| Ebony Dagger                                                |
+| Henri's Dagger                                              |
+| Long kitchen knife                                          |
+| Onyx dagger                                                 |
+| Onyx dagger                                                 |
+| Onyx dagger                                                 |
+| Onyx dagger                                                 |
+| Onyx dagger                                                 |
+| Onyx dagger                                                 |
+| Orcish dagger                                               |
+| Pizza cutter knife of Oulu Pizzamafia                       |
+| The Fang of Set                                             |
+| The Kestrel dagger of Grimoan                               |
+| The Mindblight Shard                                        |
+| The Sting                                                   |
+| The crysknife of Fremens                                    |
+| The forlorn dagger of the Drixie prince                     |
+| The pitch-black sacrificial dagger of Demon Lord Bal'Sagoth |
+| The silver dagger of rotting                                |
+| Tyririan dagger                                             |
+| Umbral Reaver, the blade of twilight                        |
+| Ur-Vile blade                                               |
+| A rusty butter knife                                        |
+'-------------------------------------------------------------'
 

@@ -1,4 +1,792 @@
-# shield armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
+*-----------------------------------------------------------------------*
+|                          A Black Ankheg Shell                         |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution slightly. (7/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has weak armour class for its type (little in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It gives small bonus to the skill 'berserk'.
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A black shield                            |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution pitifully. (3/20)
+It has poor armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users psionic resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A blackened mithril tower shield                   |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users constitution a good amount. (12/20)
+It has average armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+It gives decent bonus to the skill 'wall of steel'.
+It increases the users fire resistance somewhat. (8/20)
+
+- Extra -
+
+When worn by a dwarf, this shield is rumoured to augment certain immunities.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|               A blood-red shield with a black rose on it              |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users wisdom a bit. (6/20)
+It has average armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases the users poison resistance adequately. (10/20)
+It gives decent bonus to the skill 'weapon skill 1h polearm'.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A bone shield                             |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A bright steel kite shield                      |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pitifully. (3/20)
+It has mediocre armour class for its type (poor in general).
+This item loses its magical powers with incredible haste.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A brightly mirrored shield                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It increases the users dexterity pathetically. (2/20)
+It decreases the users constitution unnoticably. (1/20)
+It increases the users wisdom unnoticably. (1/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|           A broad Ironward shield etched with battle sigils           |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has nice armour class for its type (low in general).
+It increases the users hitpoint regeneration noticably. (9/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A curved voidplate greatshield                    |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom adequately. (10/20)
+It decreases the users intelligence noticably. (9/20)
+It has decent armour class for its type (weak in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoints adequately. (10/20)
+This item loses its magical powers slowly.
+It increases the users asphyxiation resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A dark shield                             |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users constitution pitifully. (3/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence nicely. (13/20)
+It has weak armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A dark shimmering shield                       |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (poor in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+
+- Extra -
+It modifies the user's resistance to physical damage.
+
+
+*-----------------------------------------------------------------------*
+|                       A dark shimmering shield.                       |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (poor in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance to physical damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A dark shimmering shield                       |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (poor in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+
+- Extra -
+It modifies the user's resistance to physical damage.
+
+
+*-----------------------------------------------------------------------*
+|                       A dark shimmering shield.                       |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (poor in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance to physical damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A frigid scale of frostworm chitin                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution a bit. (6/20)
+It has weak armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It gives small bonus to the skill 'parry'.
+It increases the users cold resistance adequately. (10/20)
+It decreases the users fire resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+- Extra -
+The shield has the power to freeze most liquids on contact, assimilating them
+into the icy barrier that surrounds the scale.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A frost-covered heater shield                     |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A frost-covered kite shield                      |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A glossy black shield                         |
+*-----------------------------------------------------------------------*
+It has feeble armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+This is an illithidwrought armour and as such has a measure of awareness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A green mossy shield                         |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A heavy kite shield                          |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users constitution pitifully. (3/20)
+It has average armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                          A heavy kite shield                          |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users constitution pitifully. (3/20)
+It has average armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A heavy tower shield                         |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a bit. (6/20)
+It has average armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|             A large granite shield surrounded by darkness             |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users constitution a good amount. (12/20)
+It has low armour class for its type (feeble in general).
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+It increases the users acid resistance somewhat. (8/20)
+
+- Extra -
+This shield is empowered with raging energies.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                A large metal shield named "Tal Larnin"                |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity adequately. (10/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has average armour class for its type (poor in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'inner strength'.
+It increases the users electric resistance strongly. (14/20)
+
+- Extra -
+Tal Larnin modifies the user's resistance to electricity.
+Tal Larnin modifies the user's skills.
+
+
+*-----------------------------------------------------------------------*
+|            A large metal shield named "Tal Larnin" [fading]           |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity adequately. (10/20)
+It increases the users intelligence pitifully. (3/20)
+It has average armour class for its type (poor in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'inner strength'.
+It increases the users electric resistance strongly. (14/20)
+
+- Extra -
+Tal Larnin modifies the user's resistance to electricity.
+Tal Larnin modifies the user's skills.
+
+
+
+You can't find any records about "A large metal shield named "Tal Larnin" fading" in the library.
+
+*-----------------------------------------------------------------------*
+|                       A large steel round shield                      |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A leather wrapped burnished buckler                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom an average amount. (11/20)
+It increases the users intelligence an average amount. (11/20)
+It has decent armour class for its type (weak in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoints unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+It increases the users physical resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A legionnaire's shield                        |
+*-----------------------------------------------------------------------*
+It increases the users constitution pathetically. (2/20)
+It has poor armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A massive keratinous scale                      |
+*-----------------------------------------------------------------------*
+It increases the users constitution magnificently. (18/20)
+It has average armour class for its type (poor in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+It increases the users hitpoints unbelievably much. (20/20)
+This item loses its magical powers extremely slowly.
+It gives nice bonus to the skill 'parry'.
+It gives nice bonus to the skill 'wall of steel'.
+It gives nice bonus to the skill 'defend'.
+It increases the users psionic resistance adequately. (10/20)
+It increases the users electric resistance adequately. (10/20)
+It increases the users asphyxiation resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A mighty obsidian bulwark                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution impressively. (15/20)
+It has decent armour class for its type (weak in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoints adequately. (10/20)
+This item loses its magical powers slowly.
+It increases the users fire resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pulsating steel tower shield                    |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users constitution a tiny bit. (4/20)
+It increases the users intelligence strongly. (14/20)
+It has decent armour class for its type (weak in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoints adequately. (10/20)
+This item loses its magical powers slowly.
+It increases the users psionic resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A reflective Duskwalker aegis                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has low armour class for its type (feeble in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|           A round wooden shield, reinforced with steel bands          |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A shield named 'Draeke'                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has mediocre armour class for its type (poor in general).
+It increases the users spellpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A stone shield                            |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     An iron-reinforced coffin lid                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users constitution a good amount. (12/20)
+It has average armour class for its type (poor in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers extremely slowly.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            An oaken shield                            |
+*-----------------------------------------------------------------------*
+It has tiny armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          An old dented shield                         |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Battle shield of Towanda                       |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Beaten up old tin trashcan lid                    |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Bright blue crystal shield                      |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution pathetically. (2/20)
+It has low armour class for its type (feeble in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Burning shield of Hell                        |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution somewhat. (8/20)
+It decreases the users wisdom adequately. (10/20)
+It decreases the users intelligence adequately. (10/20)
+It has weak armour class for its type (little in general).
+It decreases the users spellpoint regeneration pitifully. (3/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|                         Burning shield of Hell                        |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Centurion's shield                          |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+You can't find any records about "Dragon scale 0" in the library.
+
+*-----------------------------------------------------------------------*
+|                              Ebon shield                              |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Greenlight shield                           |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Knight's shield                            |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Mithril shield                            |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+It gives small bonus to the skill 'true harmony'.
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+It increases the users magical resistance a bit. (6/20)
+It increases the users acid resistance a bit. (6/20)
+
+*-----------------------------------------------------------------------*
+|                             Mithril shield                            |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pathetically. (2/20)
+It has average armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+You can't find any records about "Polished metal shield Gleaming" in the library.
+
+*-----------------------------------------------------------------------*
+|                     Pulsating shield of Greenlight                    |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom adequately. (10/20)
+It decreases the users intelligence adequately. (10/20)
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+- Extra -
+It modifies it's user's physical resistance.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        Red Shield of the Demon                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence poorly. (5/20)
+It has weak armour class for its type (little in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Round shield                             |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Scale shield                             |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Shield of silver dragon scales                    |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It has weak armour class for its type (little in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It gives small bonus to the skill 'mastery of medicine'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'healing efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The Blighted Bulwark of Vingt Cinq                  |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+It gives awesome bonus to the skill 'parry'.
+It increases the users physical resistance tremendously. (17/20)
+It gives awesome bonus to the skill 'wall of steel'.
+It increases the users cold resistance tremendously. (17/20)
+It increases the users magical resistance tremendously. (17/20)
+
+- Extra -
+The bulwark can be inlaid with up to three shards.
+The bulwark is optimized for jousting and enhances all damage
+done by thrusting polearms.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                The Magical Leprachaun Reflector Shield                |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+This shield has special instrinct powers.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          The Shield of Dreams                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has poor armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+
+- Extra -
+Usage: storehp, storesp, healsp, healhp.
+Min/max amount of stored hps/sps is 400/500.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         The crest of the hive                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution somewhat. (8/20)
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It decreases the users charisma impressively. (15/20)
+It has average armour class for its type (poor in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance adequately. (10/20)
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      The magical Shield of Rohan                      |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users magical resistance strongly. (14/20)
+
+- Extra -
+It modifies the user's resistance to magical damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          The shield, Defender                         |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Thick wooden shield                          |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Tower shield                             |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a tiny bit. (4/20)
+It has average armour class for its type (poor in general).
+This item loses its magical powers with incredible haste.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      Tyririan Castleguard shield                      |
+*-----------------------------------------------------------------------*
+It has feeble armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 Zirconion, Shield of Ultimate Defense                 |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pathetically. (2/20)
+It has weak armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'parry'.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance to cold damage.
+It modifies the user's resistance to electric damage.
+It affects the user's skill knowledge.
+
 

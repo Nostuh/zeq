@@ -1,3 +1,99 @@
-# Paste the `list <slot>` output for neck here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+
+list neck
+
+*-------------------------------------------------------------*
+|                      Armour slot - Neck                     |
+*-------------------------------------------------------------*
+| A Duskwalker pendant of silver and iron entwined            |
+| A beautiful golden necklace with a light blue topaz         |
+| A beautiful pearl necklace                                  |
+| A beautiful sapphire necklace                               |
+| A black obsidian necklace, inlaid with diamonds             |
+| A black stole                                               |
+| A burnt necklace with a charred black stone hanging from it |
+| A copper amplifying coil                                    |
+| A creepy necklace with a green eyeball                      |
+| A creepy necklace with a red eyeball                        |
+| A dark green venomtouched necklace                          |
+| A diamond choker called ‘Constellation’                     |
+| A dozen of grim-looking tentacles                           |
+| A fingerbone necklace                                       |
+| A frostburned cold metal locket                             |
+| A fur collar                                                |
+| A garland of skulls                                         |
+| A glass vial called 'Plague's Breath'                       |
+| A glowing torc                                              |
+| A hammered silver necklet                                   |
+| A heavy brass collar necklace                               |
+| A heavy obsidian necklace, inlaid with diamonds             |
+| A heavy pendant made of jade                                |
+| A holy symbol of the ancient god of battle                  |
+| A large magic infused brass necklace                        |
+| A necklace made of gold and onyx                            |
+| A necklace of sparkling iridium                             |
+| A pair of blood-streaked clavicles                          |
+| A prism of raw aether crystal                               |
+| A reinforced Ironward gorget                                |
+| A ruby necklace with a blue crystal embedded in it          |
+| A silver neck chain                                         |
+| A silver torc fitted with a twinkling stone                 |
+| A small silver pendant                                      |
+| A sparkling black gem in the form of a star                 |
+| A sparkling black gem in the form of a star                 |
+| A string of desiccated eyeballs                             |
+| A sturdy chain necklace                                     |
+| A thick collar of wolven origins                            |
+| A thick leather collar                                      |
+| A wooden tray used for holding unidentifiable meat products |
+| An Aetherweave chain of silver runes                        |
+| An On-call Officer's medal                                  |
+| An adamantite necklace with a cross                         |
+| An ancient necklace called 'Caliga'                         |
+| An ancient sandstone necklace                               |
+| An antique bevor                                            |
+| An assassin's cowl                                          |
+| An emerald encrusted leather collar                         |
+| An exquisite platinum necklace with diamonds                |
+| An incandescent empathy prism                               |
+| Bark necklace                                               |
+| Brimstone Noose                                             |
+| Chain of Domination                                         |
+| Chain of Domination                                         |
+| Circle of Giant Strength                                    |
+| Collar of Constriction                                      |
+| Colourful shawl                                             |
+| Diamond necklace                                            |
+| Falcon necklace                                             |
+| Finely crafted golden necklace                              |
+| Fishercat Torc                                              |
+| Fishercat Torc <retro>                                      |
+| Mixed necklace of the gremlin lord                          |
+| Necklace of Strahd                                          |
+| Necklace of skulls                                          |
+| Pentagram symbol hanging from leather string                |
+| Ragged skull necklace                                       |
+| Rusty iron chain of a fiend                                 |
+| Sea Blue Necklace                                           |
+| Sea blue necklace                                           |
+| Silver Collar                                               |
+| Silver necklace                                             |
+| Spiked wolf collar                                          |
+| Tarnished Brass Choker                                      |
+| The Holy Symbol of Ravenkind                                |
+| The Necklace of the Beast                                   |
+| The black necklace of strangulation                         |
+| The black scarf of mischief                                 |
+| The crescent necklace of the moon                           |
+| The fabled fishercat torc                                   |
+| The grimy chain of Ebath Sabour                             |
+| The insignia of the Guthradal batallion                     |
+| The leeching necklace of the Jell-o (o-1)                   |
+| The necklace of the High Priest                             |
+| The necklace of the high priest Kalidar                     |
+| The necklace of the moon                                    |
+| The silver necklace of the mentat                           |
+| The silver necklace of the mentat [fading]                  |
+'-------------------------------------------------------------'
+
 

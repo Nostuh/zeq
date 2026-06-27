@@ -28,6 +28,12 @@ decreases damage
 # — distinct from an item's own AC tier; single occurrence, ignored for now.
 users armour class
 
+# Vision / utility flags ("It allows the user to see in darkness / magical
+# auras / invisible") — non-numeric properties with no catalog column. Like
+# hit/dmg/crit, a decision: not stats, ignored. Add columns if the builder
+# ever needs to filter on them.
+allows the user to see
+
 # Add your own below. Examples (uncomment / edit as you decide):
 # magical glow
 # It glows

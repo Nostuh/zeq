@@ -1,4 +1,1252 @@
-# arms armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
 
+*-----------------------------------------------------------------------*
+|                        A pair of arm protectors                       |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It has superb armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pair of bronze bangles                       |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of charred iron bracers                    |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a bit. (6/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It increases the users psionic resistance somewhat. (8/20)
+
+- Extra -
+The bracers radiate with magic, alien but powerful. Whatever its purpose is, it cannot be unveiled in this manner.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pair of dried up leeches                      |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'mastery of draining'.
+
+- Extra -
+Leeches can be squeezed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pair of golden armbands                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom magnificently. (18/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers extremely slowly.
+It gives decent bonus to the spell 'dispel magic'.
+It gives decent bonus to the skill 'greater vulnerability'.
+It gives decent bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pair of grey bracelets                       |
+*-----------------------------------------------------------------------*
+It has nice armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A pair of molybdenum bangles                     |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pair of obsidian bracers                      |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution somewhat. (8/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has superb armour class for its type (little in general).
+It decreases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of thunderstruck vambraces                   |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity impressively. (15/20)
+It increases the users constitution a tiny bit. (4/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+It decreases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users electric resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pair of twine bracelets                       |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A pair of voidtouched cloth bracers                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom noticably. (9/20)
+It increases the users intelligence noticably. (9/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It increases the users asphyxiation resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of wrought iron bracers                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It decreases the users intelligence a bit. (6/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'greater vulnerability'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A set of black bracers                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A set of tattooed trollskin armbands                 |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The wearer of the trollskin bracers can 'regenerate'.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A set of wormhide sleeves                       |
+*-----------------------------------------------------------------------*
+It increases the users constitution a good amount. (12/20)
+It increases the users wisdom a bit. (6/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'parry'.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|          A small leather arm wrapping called "Ember" [fading]         |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users dexterity noticably. (9/20)
+It decreases the users constitution poorly. (5/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+
+*-----------------------------------------------------------------------*
+|              A small leather arm wrapping called "Ember"              |
+*-----------------------------------------------------------------------*
+It increases the users strength magnificently. (18/20)
+It increases the users dexterity adequately. (10/20)
+It decreases the users constitution poorly. (5/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'parry'.
+
+
+You can't find any records about "A small leather arm wrapping called "Ember" fading" in the library.
+
+*-----------------------------------------------------------------------*
+|                   A worn leather and tooth bracelet                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'elemental mastery'.
+It gives small bonus to the spell 'conjure greater elemental'.
+It gives small bonus to the skill 'earth lore'.
+It gives small bonus to the skill 'air lore'.
+It gives small penalty to the skill 'water lore'.
+It gives small penalty to the skill 'fire lore'.
+
+- Extra -
+It can occasionally provide healing to earth and air elementals.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Adamant bracers                            |
+*-----------------------------------------------------------------------*
+It has adequate armour class for its type (tiny in general).
+It increases the users hitpoint regeneration pathetically. (2/20)
+It gives tiny bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Arm protectors                            |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution a tiny bit. (4/20)
+It has superb armour class for its type (little in general).
+This item loses its magical powers with incredible haste.
+It increases the users physical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     Black Bracelets of Domination                     |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'focus kungfu attacks'.
+This item loses its magical powers very slowly.
+It increases the users fire resistance somewhat. (8/20)
+It gives small bonus to the skill 'mastery of kungfu'.
+
+*-----------------------------------------------------------------------*
+|                     Black Bracelets of Domination                     |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'focus kungfu attacks'.
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+It gives small bonus to the skill 'mastery of kungfu'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Black dragonskin bracelets                      |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'psychic crush'.
+It gives small bonus to the skill 'mastery of psychokinetics'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Blackened steel bracelets                       |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It decreases the users charisma unbelievably much. (20/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It gives decent bonus to the skill 'shielding of death'.
+This item loses its magical powers extremely slowly.
+It gives decent bonus to the skill 'eternal shielding'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Bloody Armguards                           |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom a good amount. (12/20)
+It increases the users intelligence noticably. (9/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+Bloody armguards are an artifact of the goddess Kirvana.
+Bloody armguards allow you to 'raise' a fallen comrade.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        Bracelets of Refreshing                        |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Bracers of Qen Tie                          |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It gives decent bonus to the skill 'kungfu'.
+
+- Extra -
+It modifies users skills.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Bracers of Wrath                           |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has superb armour class for its type (little in general).
+It decreases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Bracers of the Grizzly                        |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It increases the users constitution pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'grapple'.
+It gives small bonus to the skill 'strangle'.
+
+- Extra -
+The bearer of these bracers will inherit some of the strength of the grizzlies,
+making all attempts of grappling and strangling more efficient.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Bracers of the four winds                       |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It decreases the users constitution adequately. (10/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Bracers of the strangler                       |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+It gives nice bonus to the skill 'strangle'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Bright Yellow Sleeves                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Burnt Bracelets of Underworld                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Burnt armplates of Hell                        |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity slightly. (7/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users hitpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Cat Fur Sleeves                            |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence adequately. (10/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with incredible haste.
+It increases the users cold resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        Charred Black Bracelets                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It gives small bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users spellpoints poorly. (5/20)
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|                        Charred Black Bracelets                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It gives small bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users spellpoints poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Colourful bracelets                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers a bit slower than average.
+
+
+
+*-----------------------------------------------------------------------*
+|              Duskwalker bracers traced with faint sigils              |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|       Eldritch Knight's vambraces, infused with protective magic      |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Fulginous bracelet of Ramasthulbar                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom somewhat. (8/20)
+It decreases the users intelligence somewhat. (8/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'earth lore'.
+It gives small bonus to the skill 'air lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Glowing bracelets of greenlight                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Golden bracelets                           |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users intelligence pitifully. (3/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                Ironward vambraces riveted for strength                |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has unbelievable armour class for its type (feeble in general).
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Ivory bracelets                            |
+*-----------------------------------------------------------------------*
+It increases the users wisdom nicely. (13/20)
+It increases the users intelligence poorly. (5/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'greater vulnerability'.
+It gives small bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|         Myrmidon's armguards, layered for impenetrable defense        |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution impressively. (15/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Painted Armwraps                           |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users dexterity somewhat. (8/20)
+It decreases the users constitution pitifully. (3/20)
+It increases the users wisdom impressively. (15/20)
+It decreases the users intelligence poorly. (5/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Pulsating bracelets of Greenlight                   |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It gives small bonus to the skill 'anatomy'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               Quicksilver plated bracelets of Underworld              |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users spellpoints poorly. (5/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|               Quicksilver plated bracelets of Underworld              |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users spellpoints poorly. (5/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Ravenkall Guard Spaulder                       |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Red Bracers of the Demon                       |
+*-----------------------------------------------------------------------*
+It increases the users constitution unnoticably. (1/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The bracers will make you even more powerful.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Red bracelets of fire                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users intelligence adequately. (10/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'fire preference'.
+
+- Extra -
+A mystical voice fills your mind 'Question us and thou shall get an
+answer from us, the spirits inside these bracelets.'
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Richly jeweled pearl bangles                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers slowly.
+It increases the users magical resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+- Extra -
+The bangles conduct and convert magical energy.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Shadowsilk Sleeves                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity magnificently. (18/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'hiding'.
+It gives decent bonus to the skill 'doublehit'.
+
+- Extra -
+The sleeves are tipped with gnarled spinnerets that can 'enmesh'
+opponents in shadowsilk webs.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Shimmering airsteel armbands                     |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It decreases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'battle tactics'.
+It decreases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      Silver Bracelets of Eternity                     |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|              The Silver Bracelets of Eternity <dark glow>             |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers a bit faster than average.
+It gives tiny bonus to the spell 'magical storm'.
+It gives small bonus to the skill 'conceal spellcasting'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 Silvery bracelets of Mana Channelling                 |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Skylight bracers                           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               Sleeves lined with soft Aetherweave wards               |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Slimy bracelets                            |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Smooth pair of Black Bracelets                    |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It increases the users charisma adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+It gives decent bonus to the skill 'tonal projection'.
+
+*-----------------------------------------------------------------------*
+|                     Smooth pair of Black Bracelets                    |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It increases the users charisma adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'tonal projection'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Spring-loaded Spaulders                        |
+*-----------------------------------------------------------------------*
+It increases the users strength strongly. (14/20)
+It increases the users constitution a good amount. (12/20)
+It increases the users wisdom a good amount. (12/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has excellent armour class for its type (little in general).
+This item loses its magical powers extremely slowly.
+It gives nice bonus to the skill 'smash'.
+
+- Extra -
+The mechanisms within the spaulders are only activated when the
+wearer's arms perform smashing techniques.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Steel bracelets                            |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Stinking Bracelets                          |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users constitution somewhat. (8/20)
+It decreases the users wisdom impressively. (15/20)
+It has awesome armour class for its type (little in general).
+It decreases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Sturdy pair of Mithril Bracelets                   |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'ignore pain'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The Black Bracelets of Underworld                   |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has excellent armour class for its type (little in general).
+This item loses its magical powers very slowly.
+It gives decent bonus to the skill 'parry'.
+
+*-----------------------------------------------------------------------*
+|                   The Black Bracelets of Underworld                   |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has excellent armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'parry'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The Blue Bracelets of Diversity                    |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The Bracelets of Eternal Fire                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom poorly. (5/20)
+It has excellent armour class for its type (little in general).
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                     The Bracelets of Eternal Fire                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom poorly. (5/20)
+It has excellent armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       The Bracers of Yith'Sehta                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The Bracers of Yith'Sehta possess the ability to 'allocate'
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The Corroded Armlet of Vingt Cinq                   |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It increases the users dexterity impressively. (15/20)
+It increases the users constitution impressively. (15/20)
+It has awesome armour class for its type (little in general).
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+The armlet can be inlaid with up to three shards.
+The armlet helps its wearer land more, and more devastating, critical blows.
+The armlet increases its wearer's stamina reserves.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The Periapt of Foul Rotting                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users spellpoints impressively. (15/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+The periapt will steal the wearer's health.
+
+
+*-----------------------------------------------------------------------*
+|                      The Periapt of Foul Rotting                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users spellpoints impressively. (15/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+The periapt will steal the wearer's health.
+
+
+
+
+*-----------------------------------------------------------------------*
+|              The Silver Bracelets of Eternity <dark glow>             |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers a bit faster than average.
+It gives tiny bonus to the spell 'magical storm'.
+It gives small bonus to the skill 'conceal spellcasting'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The armband of the NCO on watch                    |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The bloodred armplates of Hell                    |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity slightly. (7/20)
+It decreases the users intelligence adequately. (10/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The bracelets of quick thoughts                    |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers fast.
+It gives small bonus to the skill 'tonal control'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The bracers of ultimate knowledge                   |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution unbelievably much. (20/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+These bracers can provide information to the user.
+The closer inspection reveals a word on the bracers 'knowledge'.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 The bright red bracelets of Underworld                |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users dexterity impressively. (15/20)
+It increases the users constitution adequately. (10/20)
+It has excellent armour class for its type (little in general).
+It gives decent bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The bronze bracers of Kali                      |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution pitifully. (3/20)
+It increases the users intelligence poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                       The bronze bracers of Kali                      |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution pathetically. (2/20)
+It increases the users intelligence pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The cuffs of the Smothering Embrace                  |
+*-----------------------------------------------------------------------*
+It increases the users strength nicely. (13/20)
+It decreases the users constitution somewhat. (8/20)
+It increases the users wisdom nicely. (13/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It increases the users electric resistance somewhat. (8/20)
+
+- Extra -
+The cuffs may be 'activate'd to provide a smothering effect.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The famed cat fur sleeves                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence adequately. (10/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       The iron bands of Bilarro                       |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The jet black bracers of death                    |
+*-----------------------------------------------------------------------*
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence noticably. (9/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'sense weakness'.
+It gives small bonus to the skill 'spacial manipulation'.
+
+- Extra -
+These bracers enhance the probability of doing death damage.
+These bracers modify the skill 'spacial manipulation'.
+These bracers modify the skill 'sense weakness.'
+These bracers are more powerful when worn by a true spellweaver.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  The vine bracers, bracers of nature                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+These bracers can use the imprisoning forces of nature.
+These bracers are more powerful when worn by people of the forests.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        Tri-Color Snake Armband                        |
+*-----------------------------------------------------------------------*
+It decreases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'strike'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Tungsten bracers                           |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pathetically. (2/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Twin coils of thorn                          |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It decreases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely fast.
+It gives great bonus to the skill 'system shock'.
+It gives great bonus to the skill 'ignore pain'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Voidspawn Vambraces                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence immensely.
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It gives decent bonus to the spell 'choke'.
+It increases the users cold resistance adequately. (10/20)
+It increases the users fire resistance adequately. (10/20)
+It gives nice bonus to the skill 'mastery of psychokinetics'.
+It gives nice bonus to the spell 'cryokinesis'.
+
+- Extra -
+The vambraces help their wearer conjure the cold vacuum of the void.
+They also draw light from their surroundings.

@@ -1,4 +1,1148 @@
-# neck armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
 
+*-----------------------------------------------------------------------*
+|            A Duskwalker pendant of silver and iron entwined           |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|          A beautiful golden necklace with a light blue topaz          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A beautiful pearl necklace                      |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A beautiful sapphire necklace                     |
+*-----------------------------------------------------------------------*
+It increases the users intelligence unbelievably much. (20/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|            A black obsidian necklace, inlaid with diamonds            |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'parry'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A black stole                             |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|      A burnt necklace with a charred black stone hanging from it      |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A copper amplifying coil                       |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It increases the users charisma unbelievably much. (20/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration strongly. (14/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'tonal control'.
+It gives decent bonus to the skill 'tonal projection'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A creepy necklace with a green eyeball                |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution a good amount. (12/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence pathetically. (2/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+It gives small bonus to the skill 'nerve mastery'.
+This item loses its magical powers with average speed.
+It increases the users psionic resistance somewhat. (8/20)
+It gives decent bonus to the spell 'iron will'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A creepy necklace with a red eyeball                 |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom slightly. (7/20)
+It decreases the users intelligence slightly. (7/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'thrust'.
+It gives small bonus to the skill 'double thrust'.
+It gives small bonus to the skill 'backstab'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   A dark green venomtouched necklace                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength noticably. (9/20)
+It increases the users dexterity impressively. (15/20)
+It decreases the users wisdom strongly. (14/20)
+It increases the users intelligence impressively. (15/20)
+It increases the users charisma impressively. (15/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration superbly. (16/20)
+It increases the users hitpoint regeneration an average amount. (11/20)
+This item loses its magical powers slowly.
+It increases the users poison resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+You can't find any records about "A diamond choker called 'Constellation'" in the library.
+
+*-----------------------------------------------------------------------*
+|                   A dozen of grim-looking tentacles                   |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It increases the users constitution impossibly much.
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It decreases the users charisma unbelievably much. (20/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+It increases the users hitpoints unbelievably much. (20/20)
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers incredibly slowly.
+It increases the users shadow resistance adequately. (10/20)
+It gives small bonus to the skill 'parry'.
+It increases the users fire resistance adequately. (10/20)
+It gives great bonus to the skill 'offensive efficiency'.
+It increases the users asphyxiation resistance adequately. (10/20)
+It gives great bonus to the skill 'pick locks'.
+
+- Extra -
+It's OUT of TUNE and that's BAD for you!
+
+
+
+*-----------------------------------------------------------------------*
+|                         A fingerbone necklace                         |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users charisma adequately. (10/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A frostburned cold metal locket                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution impressively. (15/20)
+It increases the users wisdom impressively. (15/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users cold resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              A fur collar                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A garland of skulls                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A glass vial called 'Plague's Breath'                 |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It decreases the users constitution a bit. (6/20)
+It increases the users wisdom noticably. (9/20)
+It increases the users charisma a tiny bit. (4/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It increases the users psionic resistance somewhat. (8/20)
+
+- Extra -
+The vial may be 'uncork'ed to increase the wearers concentration to a nearly unbreakable state.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A glowing torc                            |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A hammered silver necklet                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom strongly. (14/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A heavy brass collar necklace                     |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|            A heavy obsidian necklace, inlaid with diamonds            |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users constitution pitifully. (3/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers extremely fast.
+It gives tiny bonus to the skill 'parry'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A heavy pendant made of jade                     |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers 0.
+
+- Extra -
+The inherent magic of this pendant is ancient. It is of definitive divine
+nature; but of which God's, that is unknown. The enchantment is not unlike
+that of the Shards of Gods. The power is focused on the four sockets on the
+pendant's face. Alas, its exact nature is far beyond this simple divination.
+
+
+
+
+*-----------------------------------------------------------------------*
+|               A holy symbol of the ancient god of battle              |
+*-----------------------------------------------------------------------*
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with incredible haste.
+It gives great bonus to the spell 'cure serious wounds'.
+
+- Extra -
+It modifies user's healing abilities.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  A large magic infused brass necklace                 |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution adequately. (10/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It increases the users charisma impressively. (15/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration astoundingly. (19/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users magical resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A necklace made of gold and onyx                   |
+*-----------------------------------------------------------------------*
+It increases the users wisdom noticably. (9/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users magical resistance somewhat. (8/20)
+
+- Extra -
+The souls of the seven sorcerers bound into the stones of this necklace
+occasionally grant a fraction of their wisdom to the bearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    A necklace of sparkling iridium                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users constitution unnoticably. (1/20)
+It decreases the users intelligence a bit. (6/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of blood-streaked clavicles                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers extremely fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A prism of raw aether crystal                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence adequately. (10/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+Infuses raw aether to enhance spell casting.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A reinforced Ironward gorget                     |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has unbelievable armour class for its type (feeble in general).
+It increases the users hitpoint regeneration magnificently. (18/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|           A ruby necklace with a blue crystal embedded in it          |
+*-----------------------------------------------------------------------*
+It decreases the users strength a bit. (6/20)
+It decreases the users dexterity a bit. (6/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A silver neck chain                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A silver torc fitted with a twinkling stone              |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A small silver pendant                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A sparkling black gem in the form of a star              |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It gives decent bonus to the skill 'dodge'.
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|              A sparkling black gem in the form of a star              |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It gives decent bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A string of desiccated eyeballs                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence adequately. (10/20)
+It decreases the users charisma unbelievably much. (20/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+It increases the users shadow resistance somewhat. (8/20)
+It increases the users poison resistance somewhat. (8/20)
+It gives decent bonus to the spell 'mental glance'.
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+It gives decent bonus to the spell 'sever link'.
+It gives decent bonus to the spell 'mind link'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A sturdy chain necklace                        |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution unbelievably much. (20/20)
+It decreases the users wisdom adequately. (10/20)
+It decreases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'brawl'.
+It gives small bonus to the skill 'dirty blow'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A thick collar of wolven origins                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It decreases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The wolven collar can sometimes protect its wearer from werecurses.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A thick leather collar                        |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+It increases the users magical resistance somewhat. (8/20)
+It gives small bonus to the skill 'hew'.
+
+
+
+*-----------------------------------------------------------------------*
+|      A wooden tray used for holding unidentifiable meat products      |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  An Aetherweave chain of silver runes                 |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                       An On-call Officer's medal                      |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with incredible haste.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                  An adamantite necklace with a cross                  |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a bit. (6/20)
+It increases the users wisdom adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration superbly. (16/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers slowly.
+It increases the users physical resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  An ancient necklace called 'Caliga'                  |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers very fast.
+
+- Extra -
+It emits darkness.
+It offers secret attributes for few selected souls.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     An ancient sandstone necklace                     |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers extremely slowly.
+
+- Extra -
+An ancient armor from a long forgotten civilization.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            An antique bevor                           |
+*-----------------------------------------------------------------------*
+It has nice armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           An assassin's cowl                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a good amount. (12/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It increases the users hitpoints pathetically. (2/20)
+It gives nice bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives nice bonus to the skill 'tumble'.
+It gives nice bonus to the skill 'master tumbler'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  An emerald encrusted leather collar                  |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It gives tiny bonus to the skill 'spiritual link'.
+This item loses its magical powers with average speed.
+It decreases the users magical resistance somewhat. (8/20)
+It gives tiny bonus to the skill 'spiritism'.
+
+
+
+*-----------------------------------------------------------------------*
+|              An exquisite platinum necklace with diamonds             |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                     An incandescent empathy prism                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence superbly. (16/20)
+It increases the users charisma slightly. (7/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration superbly. (16/20)
+It increases the users spellpoints poorly. (5/20)
+It increases the users hitpoints poorly. (5/20)
+It gives decent bonus to the skill 'art of telepathy'.
+It gives decent bonus to the skill 'nerve mastery'.
+This item loses its magical powers very slowly.
+It increases the users psionic resistance strongly. (14/20)
+It gives decent bonus to the spell 'mental illusions'.
+It gives decent bonus to the skill 'psionic efficiency'.
+
+- Extra -
+The facets of the prism can both transmit and record signals.  The crystal
+can be rotated so that a different facet faces forward from the user.  Each
+facet has a subtly distinctive color.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Bark necklace                             |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'barkskin'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Brimstone Noose                            |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution impressively. (15/20)
+It decreases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+The Brimstone Noose is an artifact of Kirvana's.
+The Brimstone Noose can be commanded with 'noose_info'
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Chain of Domination                          |
+*-----------------------------------------------------------------------*
+It decreases the users strength unbelievably much. (20/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom a good amount. (12/20)
+It increases the users intelligence a good amount. (12/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'quick chant'.
+
+*-----------------------------------------------------------------------*
+|                          Chain of Domination                          |
+*-----------------------------------------------------------------------*
+It decreases the users strength unbelievably much. (20/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom a good amount. (12/20)
+It increases the users intelligence a good amount. (12/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Circle of Giant Strength                       |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Collar of Constriction                        |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It decreases the users dexterity unnoticably. (1/20)
+It decreases the users constitution unnoticably. (1/20)
+It decreases the users wisdom unnoticably. (1/20)
+It decreases the users intelligence unnoticably. (1/20)
+It decreases the users charisma unnoticably. (1/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users asphyxiation resistance strongly. (14/20)
+
+- Extra -
+It protects your throat efficiently.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Colourful shawl                            |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It increases the users constitution unnoticably. (1/20)
+It decreases the users wisdom pathetically. (2/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Diamond necklace                           |
+*-----------------------------------------------------------------------*
+It increases the users intelligence pathetically. (2/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Falcon necklace                            |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Finely crafted golden necklace                    |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Fishercat Torc <retro>                        |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                             Fishercat Torc                            |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom pathetically. (2/20)
+It decreases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It gives tiny bonus to the skill 'dodge'.
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Mixed necklace of the gremlin lord                  |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Necklace of Strahd                          |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution nicely. (13/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Necklace of skulls                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              Pentagram symbol hanging from leather string             |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers a bit slower than average.
+
+- Extra -
+It has some unknown protective features.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Ragged skull necklace                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution a bit. (6/20)
+It increases the users intelligence pitifully. (3/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                      Rusty iron chain of a fiend                      |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Sea Blue Necklace                           |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It increases the users intelligence somewhat. (8/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Silver Collar                             |
+*-----------------------------------------------------------------------*
+It increases the users dexterity unnoticably. (1/20)
+It increases the users intelligence unnoticably. (1/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Silver necklace                            |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Spiked wolf collar                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution pathetically. (2/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Tarnished Brass Choker                        |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The Holy Symbol of Ravenkind                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It has some magical properties against vampires.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The Necklace of the Beast                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users wisdom poorly. (5/20)
+It increases the users intelligence somewhat. (8/20)
+It increases the users charisma impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'tonal control'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The black necklace of strangulation                  |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+This item loses its magical powers a bit slower than average.
+
+- Extra -
+Know that this is a dangerous item for one who doesn't own it. The
+demon inside this necklace wants blood. Only the true owner and the
+one who marked the amulet will be spared of his wrath.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The black scarf of mischief                      |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'strangle'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The crescent necklace of the moon                   |
+*-----------------------------------------------------------------------*
+It increases the users intelligence pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The fabled fishercat torc                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution pathetically. (2/20)
+It decreases the users wisdom pathetically. (2/20)
+It decreases the users intelligence poorly. (5/20)
+It has low armour class for its type (pathetic in general).
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The grimy chain of Ebath Sabour                    |
+*-----------------------------------------------------------------------*
+It increases the users dexterity slightly. (7/20)
+It decreases the users intelligence pathetically. (2/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'steal'.
+
+
+
+*-----------------------------------------------------------------------*
+|                The insignia of the Guthradal batallion                |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               The leeching necklace of the Jell-o (o-1)               |
+*-----------------------------------------------------------------------*
+It decreases the users constitution unnoticably. (1/20)
+It increases the users wisdom unnoticably. (1/20)
+It increases the users intelligence unnoticably. (1/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The balance between experience and spellcasting powers can be adjusted with the dial.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The necklace of the High Priest                    |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users constitution unnoticably. (1/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                The necklace of the high priest Kalidar                |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users constitution slightly. (7/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The necklace of the moon                       |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The silver necklace of the mentat                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|               The silver necklace of the mentat [fading]              |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+
+
+You can't find any records about "The silver necklace of the mentat fading" in the library.

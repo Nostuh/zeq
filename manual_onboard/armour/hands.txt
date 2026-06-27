@@ -1,4 +1,1114 @@
-# hands armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
 
+*-----------------------------------------------------------------------*
+|                     A Set of Bronze Kote [fading]                     |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity nicely. (13/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'throw'.
+It gives small bonus to the skill 'slash'.
+It gives small bonus to the skill 'strike'.
+It gives tiny bonus to the skill 'zhinakoku'.
+
+- Extra -
+The Bronze Kote modifies the user's skills.
+
+
+*-----------------------------------------------------------------------*
+|                          A Set of Bronze Kote                         |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity impressively. (15/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence pitifully. (3/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'throw'.
+It gives small bonus to the skill 'slash'.
+It gives small bonus to the skill 'strike'.
+It gives tiny bonus to the skill 'zhinakoku'.
+
+- Extra -
+The Bronze Kote modifies the user's skills.
+
+
+
+You can't find any records about "A Set of Bronze Kote fading" in the library.
+
+*-----------------------------------------------------------------------*
+|          A pair of Aetherweave gloves embroidered with sigils         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|            A pair of Duskwalker gloves balanced for combat            |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|            A pair of Ironward gauntlets scarred from combat           |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has monumental armour class for its type (tiny in general).
+It increases the users hitpoint regeneration noticably. (9/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A pair of black silk gloves                      |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users dexterity unnoticably. (1/20)
+It increases the users constitution unnoticably. (1/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|            A pair of chain gloves known as 'Chilling touch'           |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has excellent armour class for its type (pathetic in general).
+It gives decent bonus to the spell 'preservation'.
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+They feel cold to touch.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pair of feather gloves                       |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of flamehardened gloves                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A pair of heavy black gauntlets                    |
+*-----------------------------------------------------------------------*
+It increases the users strength magnificently. (18/20)
+It decreases the users dexterity slightly. (7/20)
+It increases the users constitution somewhat. (8/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers extremely slowly.
+It increases the users cold resistance adequately. (10/20)
+It increases the users fire resistance adequately. (10/20)
+
+- Extra -
+While worn, these gauntlets increase all magical damage dealt by a substantial amount.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pair of mephitic gloves                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution pathetically. (2/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'herb mixing'.
+
+- Extra -
+The gloves exude a catalytic vapor that potentiates toxins.
+
+
+
+
+*-----------------------------------------------------------------------*
+|         A pair of mithril gauntlets with steel-spiked knuckles        |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'critical'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of radiant white gloves                    |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A pair of shimmering spidersilk gloves                |
+*-----------------------------------------------------------------------*
+It decreases the users strength slightly. (7/20)
+It increases the users constitution poorly. (5/20)
+It increases the users intelligence unbelievably much. (20/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users psionic resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A pair of shockburned plate gauntlets                 |
+*-----------------------------------------------------------------------*
+It increases the users strength strongly. (14/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users electric resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pair of skeletal hands                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users dexterity impressively. (15/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users charisma adequately. (10/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoints adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It gives small bonus to the skill 'throw'.
+It gives small bonus to the skill 'offensive efficiency'.
+It gives small bonus to the skill 'juggling'.
+It gives small bonus to the skill 'acrobatics'.
+
+- Extra -
+The hands assist in the conjuring and handling of magical projectiles.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of smudged gray gloves                     |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of soft buckskin gloves                    |
+*-----------------------------------------------------------------------*
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom an average amount. (11/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance a bit. (6/20)
+It gives tiny bonus to the skill 'healing efficiency'.
+It gives tiny bonus to the skill 'earth lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A pair of supple leather gloves                    |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users dexterity impressively. (15/20)
+It decreases the users constitution poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers somewhat slower than average.
+It gives decent bonus to the skill 'arrow handling'.
+It gives decent bonus to the skill 'marksmanship'.
+It gives decent bonus to the skill 'steady aim'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of voidplate gauntlets                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users asphyxiation resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A pair of white gloves                        |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A worn pair of thick leather gloves                  |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Antique gauntlets                           |
+*-----------------------------------------------------------------------*
+It has excellent armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Black deerhide gloves                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity nicely. (13/20)
+It increases the users constitution pitifully. (3/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'steady aim'.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Black gloves                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             Blood gauntlets of KaziRak < Dripping Blood >             |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution pathetically. (2/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Blue steel gauntlets                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence superbly. (16/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'nerve mastery'.
+This item loses its magical powers with average speed.
+It increases the users magical resistance strongly. (14/20)
+It increases the users electric resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+*-----------------------------------------------------------------------*
+|                          Blue steel gauntlets                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence superbly. (16/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'nerve mastery'.
+This item loses its magical powers with average speed.
+It increases the users magical resistance strongly. (14/20)
+It increases the users electric resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Bright steel gauntlets                        |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pitifully. (3/20)
+It has excellent armour class for its type (pathetic in general).
+This item loses its magical powers with incredible haste.
+It increases the users magical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Cat claws                               |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'sneak'.
+
+- Extra -
+It lessens the user's chance of dying.
+
+
+*-----------------------------------------------------------------------*
+|                         Cat claws < battered >                        |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It lessens the user's chance of dying.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Chainmail Gauntlets                          |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      Decorative silver gauntlets                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence somewhat. (8/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+They might help protect you from the were-curse.
+
+
+
+
+*-----------------------------------------------------------------------*
+|           Eldritch Knight's Gloves, woven with sigil threads          |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution somewhat. (8/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Gaseous Gloves                            |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution pathetically. (2/20)
+It decreases the users wisdom poorly. (5/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It modifies the user's healing rate.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Gauntlets of the Guardian                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity unnoticably. (1/20)
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Gauntlets of the Titans                        |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Gloomy Gloves                             |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pitifully. (3/20)
+It decreases the users constitution unnoticably. (1/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence slightly. (7/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It decreases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Gloves of Mischief                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity slightly. (7/20)
+It decreases the users wisdom unnoticably. (1/20)
+It decreases the users intelligence unnoticably. (1/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'steal'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Gloves of Sorcery                           |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users wisdom unnoticably. (1/20)
+It increases the users intelligence impressively. (15/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'spacial manipulation'.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Gloves of Wizardry                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a tiny bit. (4/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Gloves of concentration                        |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom poorly. (5/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The gloves make their wearer's concentration harder to interrupt and will
+sometimes help them recover from a stun.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Gloves of the Adder                          |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'parry'.
+It increases the users fire resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+- Extra -
+Gloves of the Adder are a holy artifact of the goddess Kirvana.
+The wearer of the gloves could 'grab' another player.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Gloves of the Fates                          |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pitifully. (3/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence a bit. (6/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Gloves of the frost                          |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'call spirit'.
+
+- Extra -
+Strange things are known to happen when the gloves touch a lifeless skin.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Gold embroidered black gloves                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It increases the users magical resistance a bit. (6/20)
+
+- Extra -
+While worn, these gloves will reduce the drain of all spells by a small amount.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        Gravitational Gauntlets                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence monumentally.
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers extremely slowly.
+It gives nice bonus to the spell 'moving mirrors'.
+It gives nice bonus to the skill 'spacial manipulation'.
+It gives nice bonus to the spell 'death wish'.
+
+- Extra -
+The gauntlets convert gravitational force into magical energy.
+The gauntlets' power increases in proportion to the wearer's burden.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Green gloves of Greenlight                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Handwraps of nebular vapor                      |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity noticably. (9/20)
+It increases the users constitution slightly. (7/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has awesome armour class for its type (pathetic in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers slowly.
+It gives small bonus to the skill 'ambidextrous attack'.
+It gives small bonus to the skill 'mastery of kungfu'.
+It gives decent bonus to the skill 'call for thunder'.
+
+- Extra -
+The handwraps reveal new properties when charged with electricity.
+The handwraps' wearer tires less easily.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Large rainbow covered gloves                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence poorly. (5/20)
+It decreases the users charisma ILLEGALLY.
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'prismatic spray'.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Leather gloves                            |
+*-----------------------------------------------------------------------*
+It has adequate armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             Leather gloves                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Magical gloves of Tower                        |
+*-----------------------------------------------------------------------*
+It has adequate armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|              Mithril gauntlets with steel-spiked knuckles             |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity pathetically. (2/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with incredible haste.
+It gives decent bonus to the skill 'critical'.
+
+
+
+*-----------------------------------------------------------------------*
+|            Myrmidon's gloves, crafted for combat resilience           |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution impressively. (15/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Nightblack spiked gloves                       |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Old cloth work gloves                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It decreases the users fire resistance strongly. (14/20)
+It gives small bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Old leather work gloves                        |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It increases the users dexterity pathetically. (2/20)
+It decreases the users wisdom a bit. (6/20)
+It decreases the users intelligence a bit. (6/20)
+It has awesome armour class for its type (pathetic in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It decreases the users fire resistance strongly. (14/20)
+It gives small bonus to the skill 'strike'.
+
+- Extra -
+Affects the user's strike skill.
+Affects the user's fire resistance.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Paws of Interfector                          |
+*-----------------------------------------------------------------------*
+It has excellent armour class for its type (pathetic in general).
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Red gloves with golden decorations                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It decreases the users dexterity unnoticably. (1/20)
+It increases the users wisdom slightly. (7/20)
+It has little armour class for its type (almost non-existent in general).
+It gives tiny bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with incredible haste.
+
+- Extra -
+It modifies the skill: 'Channel power'
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Rosebud Gloves                            |
+*-----------------------------------------------------------------------*
+It increases the users charisma poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  Rustproof studded titanium gauntlets                 |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It has adequate armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'attack'.
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|          Sanctifier's mitts, stitched with benevolent sigils          |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution slightly. (7/20)
+It increases the users wisdom impressively. (15/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Shining gauntlets                           |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution impressively. (15/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has awesome armour class for its type (pathetic in general).
+It decreases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Sigil Covered Gloves                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers extremely fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Single Black Glove                          |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a bit. (6/20)
+It decreases the users constitution a bit. (6/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|                           Single Black Glove                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom a bit. (6/20)
+It decreases the users intelligence a bit. (6/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Starstream Gauntlets                         |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity a good amount. (12/20)
+It increases the users constitution pitifully. (3/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'throw'.
+
+- Extra -
+The rails on the gauntlets allow shurikens to be launched with greater
+force and precision.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 The Ancient Gloves of The Shapeshifter                |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+You sense strong interference in your spell.
+
+
+*-----------------------------------------------------------------------*
+|                 The Ancient Gloves of The Shapeshifter                |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution pathetically. (2/20)
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+You sense strong interference in your spell.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The Gauntlets of Brutality                      |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'hammer'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 The Gloves of High Sorcery <dark glow>                |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It decreases the users wisdom unnoticably. (1/20)
+It increases the users intelligence impressively. (15/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers a bit faster than average.
+It gives tiny bonus to the spell 'daggers of ice'.
+It gives tiny bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Gloves of the Magi                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence a bit. (6/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The cobalt-blue gauntlets of Morin                  |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers somewhat slower than average.
+
+- Extra -
+These gauntlets are a relic of the dwarven hero Morin.
+The wearer of these gauntlets can chant the command word 'urthalin'
+Chanting the command word is known to interrupt spells and skills
+as well as all bard songs in the area of the wearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|           The dark-blue and frost covered gloves of Mephala           |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users dexterity adequately. (10/20)
+It decreases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+It gives great penalty to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives great penalty to the skill 'parry'.
+It increases the users cold resistance a bit. (6/20)
+It decreases the users fire resistance a bit. (6/20)
+It gives tiny bonus to the skill 'mastery of time'.
+It gives small bonus to the skill 'zapping'.
+It gives small bonus to the skill 'earth lore'.
+It gives small bonus to the skill 'pluto lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The gauntlets of the drow guardian                  |
+*-----------------------------------------------------------------------*
+It increases the users dexterity slightly. (7/20)
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users electric resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                  The gloves of life known as 'Sherak'                 |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The gloves of swordsman                        |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users wisdom somewhat. (8/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'slash'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The gloves of the Magi *dark aura*                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution unnoticably. (1/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+It gives small bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers somewhat slower than average.
+It gives small bonus to the skill 'damage analysis'.
+It gives decent bonus to the spell 'summon'.
+
+- Extra -
+They glow with dark aura.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The magical gloves of the tower                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 The silver threadded gloves of Grimoan                |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity a bit. (6/20)
+It decreases the users wisdom pathetically. (2/20)
+It decreases the users intelligence pathetically. (2/20)
+It has excellent armour class for its type (pathetic in general).
+It decreases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers extremely fast.
+
+- Extra -
+In the heat of battle, the alloy which forms the threads within these gloves reacts violently with the friction of the fight. The newborn lightning created thusly must find its way to the ground via a path formed of metals, or it will painfully find its way through a path formed of you.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Working gloves                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+You can't find any records about "A pair of golden cuff studs" in the library.
+You can't find any records about "The Gloves of Withering" in the library.

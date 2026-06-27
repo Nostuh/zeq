@@ -1,3 +1,8 @@
-# Paste the `list <slot>` output for 1h_bow here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
 
+list 1h bow
+
+*-------------------------------------------------------------*
+|                     Weapon type - 1h bow                    |
+*-------------------------------------------------------------*
+| A short bow made from weak looking wood                     |
+'-------------------------------------------------------------'

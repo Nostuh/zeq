@@ -1,3 +1,111 @@
-# Paste the `list <slot>` output for legs here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list legs
+
+*-------------------------------------------------------------*
+|                      Armour slot - Legs                     |
+*-------------------------------------------------------------*
+| A Set of Pitchblack Greaves                                 |
+| A Set of Pitchblack Greaves                                 |
+| A gauze of dark matter                                      |
+| A long bright blue skirt                                    |
+| A pair of Blain's twisted leggings                          |
+| A pair of crimson-colored leggings                          |
+| A pair of crude bone leggings                               |
+| A pair of green leggings                                    |
+| A pair of grey leggings                                     |
+| A pair of grey pants                                        |
+| A pair of iron banded red leather greaves                   |
+| A pair of shimmering semite leggings                        |
+| A pair of thick leather pants                               |
+| A rough-shorn waistcloth                                    |
+| A set of Duskwalker trousers suited for swift movement      |
+| A set of Ironward greaves dented by use                     |
+| A skirt of dangling bones                                   |
+| A sturdy pair of copper leggings                            |
+| A threadbare leather apron                                  |
+| Adamantite leggings                                         |
+| An ordinary looking pair of stone leggings                  |
+| Black pants                                                 |
+| Black silk pants                                            |
+| Black spiked leggings                                       |
+| Bloodred Leggings of Underworld                             |
+| Charred Black Leggings                                      |
+| Charred Black Leggings                                      |
+| Cotton loincloth                                            |
+| Dark silver leggings                                        |
+| Demon skin leggings                                         |
+| Demonscale Leggings                                         |
+| Dirty leather pants                                         |
+| Dirty pants                                                 |
+| Dragonscale leggings of Motion                              |
+| Dragonskin leggings                                         |
+| Dress kilt of Clan MacFaerun                                |
+| Giant leather pants                                         |
+| Green leggings                                              |
+| Green leggings <retro>                                      |
+| Grey pants                                                  |
+| Iron leggings                                               |
+| Iron leggings                                               |
+| Ivory leggings                                              |
+| Karbitsch's pants of Quickness                              |
+| Karbitsch's royal pants of quickness                        |
+| Kha'dra, the leggings of water                              |
+| Kilt of Tara                                                |
+| Kruse leggings                                              |
+| Layered Aetherweave robes trimmed with silver               |
+| Leather Shorts                                              |
+| Leather leggings                                            |
+| Leather leggings                                            |
+| Leather pants                                               |
+| Leather pants                                               |
+| Leggings of Despair                                         |
+| Leggings of Despair                                         |
+| Leggings of Despair                                         |
+| Leggings of needless powers                                 |
+| Legwraps of toughened kelp                                  |
+| Magic Pants                                                 |
+| Moldy leather leggings                                      |
+| Obsidian Leggings                                           |
+| Old leather pants                                           |
+| Padded leggings                                             |
+| Pants made from tree leaves                                 |
+| Patchwork pants                                             |
+| Ragged pants                                                |
+| Red Chain Leggings                                          |
+| Remov                                                       |
+| Short pants                                                 |
+| Spider leggings                                             |
+| Spiked wolf leggings                                        |
+| Spined leg splints                                          |
+| Stained Black Pants                                         |
+| Steel leggings                                              |
+| The Black Leggings of Underworld                            |
+| The Blue Leggings of Diversity                              |
+| The Leggings of Eternal Fire                                |
+| The Leggings of Eternal Fire                                |
+| The Leggings of Rulership (dusty)                           |
+| The Leggings of Yith'Sehta                                  |
+| The arcane leggings of Rulership                            |
+| The arcane leggings of Rulership *dark aura*                |
+| The blood red skirt of Lucifer                              |
+| The blue poisonfang leggings of the plaguegod               |
+| The coils of Tartarus                                       |
+| The damned leggings of Lucifer                              |
+| The green leggings of Greenlight                            |
+| The grey leggings of the ultimate warrior                   |
+| The leggings of Dark Haven                                  |
+| The leggings of ravager                                     |
+| The leggings of unsurpassed speed                           |
+| The mithril leggings of Essence                             |
+| The red leggings of plague rejection                        |
+| The red leggings of power storing                           |
+| The royal kilt of Lucifer                                   |
+| The venomous leggings of the Plaguebringer                  |
+| The woolen leggings of the ancestors                        |
+| Tight brown pants                                           |
+| Twisted leggings                                            |
+| Very rusty leggings                                         |
+| White Loincloth                                             |
+'-------------------------------------------------------------'
+
 

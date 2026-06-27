@@ -1,3 +1,88 @@
-# 2h_dagger weapon (2h, class=dagger) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
+
+*-----------------------------------------------------------------------*
+|                  A black dagger called 'The infector'                 |
+*-----------------------------------------------------------------------*
+It has divine weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It does poison damage superbly. (16/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A bloodstained sacrificial knife                   |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (decent in general).
+It increases the users dexterity adequately. (10/20)
+It gives nice bonus to the skill 'anatomy'.
+This item loses its magical powers extremely slowly.
+It increases damage adequately. (10/20)
+It does electric damage immensely.
+It decreases the users psionic resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A huge icicle                             |
+*-----------------------------------------------------------------------*
+It decreases hit chance pitifully. (3/20)
+It has awesome weapon class for its type (decent in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does cold damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A large, elegant stiletto                       |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         An ornate black dagger                        |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has great weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     Charon's wicked looking dagger                    |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It does asphyxiation damage a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     Flamescythe, Dagger of Torment                    |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (decent in general).
+It gives decent bonus to the skill 'anatomy'.
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'double backstab'.
+It gives small bonus to the skill 'triple backstab'.
+It increases damage adequately. (10/20)
+It does fire damage immensely.
+It gives small bonus to the skill 'thrust'.
+It gives small bonus to the skill 'double thrust'.
+It gives small bonus to the skill 'triple thrust'.
+It gives small bonus to the skill 'backstab'.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Pitch Black Dagger                          |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has great weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
 

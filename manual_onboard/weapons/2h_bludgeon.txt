@@ -1,3 +1,729 @@
-# 2h_bludgeon weapon (2h, class=bludgeon) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
+
+*-----------------------------------------------------------------------*
+|             'Infernal Maul', bludgeon of the Ember Tyrant             |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers very slowly.
+It increases the users cold resistance adequately. (10/20)
+It increases damage impressively. (15/20)
+It does fire damage unbelievably much. (20/20)
+It increases critical chance adequately. (10/20)
+
+- Extra -
+The Infernal Maul can occasionally set its targets on fire.
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A balanced nickel-plated maul                     |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A bent steel maul                           |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A black maul called Demon's fist                   |
+*-----------------------------------------------------------------------*
+It decreases hit chance noticably. (9/20)
+It has tremendous weapon class for its type (tremendous in general).
+It increases the users strength poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom a good amount. (12/20)
+It decreases the users intelligence a good amount. (12/20)
+It decreases the users armour class pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases damage unbelievably much. (20/20)
+It does cold damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A blackened steel hammer                       |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A blackthorn club                           |
+*-----------------------------------------------------------------------*
+It has excellent weapon class for its type (excellent in general).
+This item loses its magical powers with average speed.
+It does poison damage superbly. (16/20)
+
+
+
+*-----------------------------------------------------------------------*
+|              A diamond-crested battlehammer, 'The Siphon'             |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers very slowly.
+It increases damage unbelievably much. (20/20)
+It does magical damage unbelievably much. (20/20)
+
+- Extra -
+The enchantments on the battlehammer are reversed in the hands of
+an ogre, such that they draw life from whomever suffers the
+hammer's blow.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A flawless adamantine maul                      |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+It does asphyxiation damage strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A gleaming abyssal war mallet                     |
+*-----------------------------------------------------------------------*
+It decreases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers incredibly slowly.
+It increases the users poison resistance strongly. (14/20)
+It increases damage unbelievably much. (20/20)
+It does asphyxiation damage immensely.
+It increases critical chance adequately. (10/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A glossy platinum warhammer                      |
+*-----------------------------------------------------------------------*
+It decreases hit chance magnificently. (18/20)
+It has excellent weapon class for its type (excellent in general).
+This item loses its magical powers with average speed.
+It increases damage pathetically. (2/20)
+It does psionic damage a tiny bit. (4/20)
+It increases critical chance poorly. (5/20)
+
+- Extra -
+This is an illithidwrought weapon and as such has a measure of awareness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A gnarled tree stump                         |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has nice weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                          A gnarled tree stump                         |
+*-----------------------------------------------------------------------*
+It decreases hit chance ILLEGALLY.
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A great hammer of war called 'Ravager'                |
+*-----------------------------------------------------------------------*
+It decreases hit chance somewhat. (8/20)
+It has superb weapon class for its type (superb in general).
+This item loses its magical powers with incredible haste.
+It increases damage unbelievably much. (20/20)
+It does electric damage somewhat. (8/20)
+It increases the users magical resistance strongly. (14/20)
+
+- Extra -
+It is magically so powerful that you need the wisdom
+of an old age to control it.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A huge battlehammer                          |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A huge boar tusk                           |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A huge hammer                             |
+*-----------------------------------------------------------------------*
+It decreases hit chance unbelievably much. (20/20)
+It has impressive weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A huge iron hammer                          |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A huge spiked wooden cudgel                      |
+*-----------------------------------------------------------------------*
+It decreases hit chance impossibly much.
+It has awesome weapon class for its type (awesome in general).
+It increases the users strength a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases damage unbelievably much. (20/20)
+It does fire damage superbly. (16/20)
+It increases critical chance unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A knotted ironwood club                        |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A large forging hammer                        |
+*-----------------------------------------------------------------------*
+It decreases hit chance unbelievably much. (20/20)
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A large hammer                            |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has poor weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A mace of coldness                          |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does cold damage a tiny bit. (4/20)
+
+*-----------------------------------------------------------------------*
+|                                 A mace                                |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has poor weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A massive club                            |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers with average speed.
+It increases damage unbelievably much. (20/20)
+It does fire damage an average amount. (11/20)
+
+*-----------------------------------------------------------------------*
+|                             A massive club                            |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has tremendous weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                A massive war-hammer made of shiny steel               |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has nice weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A massive wooden club                         |
+*-----------------------------------------------------------------------*
+It decreases hit chance impressively. (15/20)
+It has average weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A petrified hemlock club                       |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A round wooden stool                         |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has weak weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                                A shovel                               |
+*-----------------------------------------------------------------------*
+It has little weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A small hammer                            |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+It increases damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A steel hammer                            |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             A steel hammer                            |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A yellowed club of bone                        |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 An adamant maul called 'Skullsmasher'                 |
+*-----------------------------------------------------------------------*
+It decreases hit chance somewhat. (8/20)
+It has impressive weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+It increases damage a good amount. (12/20)
+It does asphyxiation damage a good amount. (12/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                An immense war-hammer made of rough iron               |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has nice weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     An ordinary looking stone club                    |
+*-----------------------------------------------------------------------*
+It has pathetic weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Balor's giant maul                          |
+*-----------------------------------------------------------------------*
+It decreases hit chance unbelievably much. (20/20)
+It has tremendous weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage unbelievably much. (20/20)
+It does fire damage a good amount. (12/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Fiery Mace                              |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has nice weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+It does fire damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Giant Club                              |
+*-----------------------------------------------------------------------*
+It decreases hit chance unbelievably much. (20/20)
+It has average weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Giant Maul                              |
+*-----------------------------------------------------------------------*
+It decreases hit chance unbelievably much. (20/20)
+It has adequate weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               HUGE club                               |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has adequate weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                 The HUGE club called 'S'sadabn O'errut                |
+*-----------------------------------------------------------------------*
+It decreases hit chance impressively. (15/20)
+It has superb weapon class for its type (superb in general).
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does magical damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                Hile, the ancient warhammer of crushing                |
+*-----------------------------------------------------------------------*
+It decreases hit chance impressively. (15/20)
+It has great weapon class for its type (great in general).
+This item loses its magical powers with average speed.
+It increases damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            Huge Spiked Club                           |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                            Huge Spiked Club                           |
+*-----------------------------------------------------------------------*
+It has little weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Hule, the ancient warhammer of ice                  |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has tremendous weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+It does cold damage tremendously. (17/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Human Arm                               |
+*-----------------------------------------------------------------------*
+It decreases hit chance unbelievably much. (20/20)
+It has tremendous weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                                Iron bar                               |
+*-----------------------------------------------------------------------*
+It decreases hit chance impossibly much.
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Mace of Misfortune < Cursed >                     |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (average in general).
+It increases the users strength impressively. (15/20)
+It decreases the users dexterity impressively. (15/20)
+It increases the users constitution impressively. (15/20)
+It increases the users wisdom impressively. (15/20)
+It decreases the users intelligence impressively. (15/20)
+This item loses its magical powers with average speed.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Mace of the ancient dragon                      |
+*-----------------------------------------------------------------------*
+It decreases hit chance unnoticably. (1/20)
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers a bit slower than average.
+It increases damage unbelievably much. (20/20)
+It does asphyxiation damage unbelievably much. (20/20)
+
+- Extra -
+This weapon has been saturated by evil through the ages it
+lied next to the great dragon. A part of the chaos known as
+Tiamat still reflects on the weapon as it constantly changes
+between states of flashing with electricity, corroding flesh
+and burning oxygen.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Og's famous Club                           |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has nice weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Old looking bone                           |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has feeble weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Soulcrusher                              |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers with average speed.
+It increases damage magnificently. (18/20)
+It does psionic damage magnificently. (18/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 The Bardsmasher, war mallet of Grimoan                |
+*-----------------------------------------------------------------------*
+It increases hit chance an average amount. (11/20)
+It has tremendous weapon class for its type (tremendous in general).
+This item loses its magical powers very fast.
+It increases damage superbly. (16/20)
+It does asphyxiation damage magnificently. (18/20)
+
+- Extra -
+True to its name, this weapon is a potent hinderance to even the best bard.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 The HUGE club called 'S'sadabn O'errut                |
+*-----------------------------------------------------------------------*
+It decreases hit chance impressively. (15/20)
+It has superb weapon class for its type (superb in general).
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does magical damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       The blackened Morningstar                       |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (awesome in general).
+It increases the users strength slightly. (7/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'damage direction'.
+It decreases the users physical resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases damage unbelievably much. (20/20)
+It does cold damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|              The blackened warhammer of the Four Horsemen             |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (awesome in general).
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It gives decent bonus to the spell 'mark of zomm'.
+It gives decent bonus to the skill 'smash'.
+It increases damage unbelievably much. (20/20)
+It does fire damage immensely.
+It gives decent bonus to the skill 'arcane lore'.
+It gives decent bonus to the skill 'holy might'.
+
+- Extra -
+He who commands the hammer can 'thrash' to damage multiple enemies.
+The weapon does more non-physical damage than expected.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The blue maul of Dazier                        |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (awesome in general).
+It increases the users strength adequately. (10/20)
+This item loses its magical powers with average speed.
+It does electric damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         The dimmed Morningstar                        |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (awesome in general).
+It increases the users strength slightly. (7/20)
+This item loses its magical powers with average speed.
+It decreases the users physical resistance somewhat. (8/20)
+It gives decent bonus to the skill 'smash'.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases damage unbelievably much. (20/20)
+It does cold damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|              The great two-handed hammer named 'Despair'              |
+*-----------------------------------------------------------------------*
+It decreases hit chance somewhat. (8/20)
+It has impressive weapon class for its type (impressive in general).
+This item loses its magical powers somewhat slower than average.
+It increases damage unbelievably much. (20/20)
+It does electric damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                The greathammer of war called 'Ravager'                |
+*-----------------------------------------------------------------------*
+It decreases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (awesome in general).
+This item loses its magical powers with average speed.
+It increases damage unbelievably much. (20/20)
+It does electric damage superbly. (16/20)
+It increases the users magical resistance strongly. (14/20)
+
+- Extra -
+It is magically so powerful that you need the wisdom
+of an old age to control it.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The huge war hammer 'Sturmbringer'                  |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has impressive weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+It does electric damage somewhat. (8/20)
+
+- Extra -
+It emits light.
+It modifies the user's resistance to electric damage.
+It modifies the user's skills.
+It strikes with holy wrath!
+
+
+
+
+*-----------------------------------------------------------------------*
+|               The icy morningstar called 'Frostwhisper'               |
+*-----------------------------------------------------------------------*
+It decreases hit chance a bit. (6/20)
+It has superb weapon class for its type (superb in general).
+This item loses its magical powers with average speed.
+It increases damage nicely. (13/20)
+It does cold damage unbelievably much. (20/20)
+
+- Extra -
+This is the weapon which belonged to the General
+Rhad'ama'ntep, commander of the Third Legion of Dawn.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The large femur of a fire giant                    |
+*-----------------------------------------------------------------------*
+It decreases hit chance unbelievably much. (20/20)
+It has awesome weapon class for its type (awesome in general).
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It decreases the users intelligence unbelievably much. (20/20)
+This item loses its magical powers very slowly.
+It increases damage unbelievably much. (20/20)
+It does fire damage unbelievably much. (20/20)
+
+- Extra -
+This femur is a holy artifact of the Goddess Kirvana.
+
+
 

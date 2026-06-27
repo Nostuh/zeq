@@ -1,3 +1,44 @@
-# Paste the `list <slot>` output for 2h_ancient here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+list 2h ancient
+
+*-------------------------------------------------------------*
+|                   Weapon type - 2h ancient                  |
+*-------------------------------------------------------------*
+| A black Hellspear                                           |
+| A blackened steel kusarigama                                |
+| A huge spear                                                |
+| A leathery cat o'nine shocking tails                        |
+| A lithe, icebound crystalline whip called 'Frostlash'       |
+| A stable fork                                               |
+| A sturdy mining pick                                        |
+| An adamantine pickaxe                                       |
+| An iron edged wooden shovel                                 |
+| An ordinary looking spear with a stone head                 |
+| Claw of Roc                                                 |
+| Claws of Assassination                                      |
+| Claws of the Dragon                                         |
+| Death Scythe                                                |
+| Fishing pole                                                |
+| Gimdori's Glorious Crowbar                                  |
+| Lucifer's pitch fork                                        |
+| Lucifer's pitch fork                                        |
+| Lucifer's pitch fork                                        |
+| Lucifer's pitch fork                                        |
+| Lucifer's pitch fork                                        |
+| Lucifer's pitch fork                                        |
+| Lucifer's pitch fork                                        |
+| Ninjitsa claws                                              |
+| Rusty Sickle                                                |
+| Rusty Sickle                                                |
+| Stone cutter sword                                          |
+| Sword of fire                                               |
+| The Dragons Teeth                                           |
+| The Legendary Sickle of Duremas                             |
+| The claw of Carcuul                                         |
+| The fiery whip of the Balrog                                |
+| The fiery whip of the fearsome Balrog                       |
+| The massive iron flail called 'The Hand of Shadow'          |
+| The scythe of the mist ferryman                             |
+| The spine of a sea serpent                                  |
+| Hand of life                                                |
+'-------------------------------------------------------------'
 

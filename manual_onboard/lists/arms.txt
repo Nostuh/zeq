@@ -1,3 +1,102 @@
-# Paste the `list <slot>` output for arms here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+
+list arms
+
+*-------------------------------------------------------------*
+|                      Armour slot - Arms                     |
+*-------------------------------------------------------------*
+| A pair of arm protectors                                    |
+| A pair of bronze bangles                                    |
+| A pair of charred iron bracers                              |
+| A pair of dried up leeches                                  |
+| A pair of golden armbands                                   |
+| A pair of grey bracelets                                    |
+| A pair of molybdenum bangles                                |
+| A pair of obsidian bracers                                  |
+| A pair of thunderstruck vambraces                           |
+| A pair of twine bracelets                                   |
+| A pair of voidtouched cloth bracers                         |
+| A pair of wrought iron bracers                              |
+| A set of black bracers                                      |
+| A set of tattooed trollskin armbands                        |
+| A set of wormhide sleeves                                   |
+| A small leather arm wrapping called "Ember"                 |
+| A small leather arm wrapping called "Ember" [fading]        |
+| A worn leather and tooth bracelet                           |
+| Adamant bracers                                             |
+| Arm protectors                                              |
+| Black Bracelets of Domination                               |
+| Black Bracelets of Domination                               |
+| Black dragonskin bracelets                                  |
+| Blackened steel bracelets                                   |
+| Bloody Armguards                                            |
+| Bracelets of Refreshing                                     |
+| Bracers of Qen Tie                                          |
+| Bracers of Wrath                                            |
+| Bracers of the Grizzly                                      |
+| Bracers of the four winds                                   |
+| Bracers of the strangler                                    |
+| Bright Yellow Sleeves                                       |
+| Burnt Bracelets of Underworld                               |
+| Burnt armplates of Hell                                     |
+| Cat Fur Sleeves                                             |
+| Charred Black Bracelets                                     |
+| Charred Black Bracelets                                     |
+| Colourful bracelets                                         |
+| Duskwalker bracers traced with faint sigils                 |
+| Eldritch Knight's vambraces, infused with protective magic  |
+| Fulginous bracelet of Ramasthulbar                          |
+| Glowing bracelets of greenlight                             |
+| Golden bracelets                                            |
+| Ironward vambraces riveted for strength                     |
+| Ivory bracelets                                             |
+| Myrmidon's armguards, layered for impenetrable defense      |
+| Painted Armwraps                                            |
+| Pulsating bracelets of Greenlight                           |
+| Quicksilver plated bracelets of Underworld                  |
+| Quicksilver plated bracelets of Underworld                  |
+| Ravenkall Guard Spaulder                                    |
+| Red Bracers of the Demon                                    |
+| Red bracelets of fire                                       |
+| Richly jeweled pearl bangles                                |
+| Shadowsilk Sleeves                                          |
+| Shimmering airsteel armbands                                |
+| Silver Bracelets of Eternity                                |
+| Silvery bracelets of Mana Channelling                       |
+| Skylight bracers                                            |
+| Sleeves lined with soft Aetherweave wards                   |
+| Slimy bracelets                                             |
+| Smooth pair of Black Bracelets                              |
+| Smooth pair of Black Bracelets                              |
+| Spring-loaded Spaulders                                     |
+| Steel bracelets                                             |
+| Stinking Bracelets                                          |
+| Sturdy pair of Mithril Bracelets                            |
+| The Black Bracelets of Underworld                           |
+| The Black Bracelets of Underworld                           |
+| The Blue Bracelets of Diversity                             |
+| The Bracelets of Eternal Fire                               |
+| The Bracelets of Eternal Fire                               |
+| The Bracers of Yith'Sehta                                   |
+| The Corroded Armlet of Vingt Cinq                           |
+| The Periapt of Foul Rotting                                 |
+| The Periapt of Foul Rotting                                 |
+| The Silver Bracelets of Eternity <dark glow>                |
+| The armband of the NCO on watch                             |
+| The bloodred armplates of Hell                              |
+| The bracelets of quick thoughts                             |
+| The bracers of ultimate knowledge                           |
+| The bright red bracelets of Underworld                      |
+| The bronze bracers of Kali                                  |
+| The bronze bracers of Kali                                  |
+| The cuffs of the Smothering Embrace                         |
+| The famed cat fur sleeves                                   |
+| The iron bands of Bilarro                                   |
+| The jet black bracers of death                              |
+| The vine bracers, bracers of nature                         |
+| Tri-Color Snake Armband                                     |
+| Tungsten bracers                                            |
+| Twin coils of thorn                                         |
+| Voidspawn Vambraces                                         |
+'-------------------------------------------------------------'
 

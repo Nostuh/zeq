@@ -10,7 +10,7 @@ import { uf } from '../../utils/tools.mjs';
 // docs/equipment-redesign.md.
 const STAT_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
     'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold',
-    'racid', 'rasphx', 'ac', 'wc', 'dmg_pct'];
+    'racid', 'rasphx', 'rshadow', 'ac', 'wc', 'dmg_pct'];
 
 export default {
     name: "Equipment",
@@ -39,6 +39,7 @@ export default {
                 rphys: { header: "Phys" }, rpsi: { header: "Psi" }, relec: { header: "Elec" },
                 rmag: { header: "Mag" }, rpoi: { header: "Poi" }, rfire: { header: "Fire" },
                 rcold: { header: "Cold" }, racid: { header: "Acid" }, rasphx: { header: "Asph" },
+                rshadow: { header: "Shdw" },
                 eqmob_name: { header: "Eq Mob" },
                 bonus_summary: { header: "Bonuses" },
             };
@@ -57,7 +58,7 @@ export default {
             d.dmg = v.dmg_pct ? `${v.dmg_pct}% ${v.dmg_type || ''}`.trim() : '';
             for (const c of ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
                 'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire',
-                'rcold', 'racid', 'rasphx', 'ac']) d[c] = v[c] || '';
+                'rcold', 'racid', 'rasphx', 'rshadow', 'ac']) d[c] = v[c] || '';
             d.eqmob_name = v.eqmob_name || '';
             d.bonus_summary = v.bonus_summary || '';
             return d;

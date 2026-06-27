@@ -1,3 +1,111 @@
-# Paste the `list <slot>` output for feet here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list feet
+
+*-------------------------------------------------------------*
+|                      Armour slot - Feet                     |
+*-------------------------------------------------------------*
+| A kinky pair of boots named (Nylon) and (Beat)              |
+| A pair black boots with steel heels                         |
+| A pair of Dr. Martens shoes <tm>                            |
+| A pair of black crocodile skin boots                        |
+| A pair of black sandals                                     |
+| A pair of boots made from red dragon scales                 |
+| A pair of brown leather boots                               |
+| A pair of brown leather sandals                             |
+| A pair of fluffy bunny slippers                             |
+| A pair of heavy black sabatons                              |
+| A pair of leather scuffs                                    |
+| A pair of polished adamantite sabatons                      |
+| A pair of purple boots                                      |
+| A pair of sandals                                           |
+| A pair of shockburned plate boots                           |
+| A pair of silver-lined black boots                          |
+| A pair of solid leather boots                               |
+| A pair of standard issue boots                              |
+| A pair of sturdy leather boots                              |
+| A pair of thick leather boots                               |
+| A pair of thick water-proof boots                           |
+| A pair of thick water-proof boots                           |
+| A pair of venomtouched leather moccasins                    |
+| A pair of worn leather boots                                |
+| A pair of yellow wooden clogs                               |
+| Antique sabatons                                            |
+| Beautiful green shoes                                       |
+| Black rubber boots                                          |
+| Blue suede shoes                                            |
+| Boots made of blackened dragon scales                       |
+| Boots of Dancing                                            |
+| Boots of Dancing [fading]                                   |
+| Boots of Death                                              |
+| Boots of Fire                                               |
+| Boots of Ice                                                |
+| Boots of Praetor                                            |
+| Boots of Striding                                           |
+| Boots of Striding < battered >                              |
+| Boots of scarlet color                                      |
+| Boots of terror                                             |
+| Boots of the Seer                                           |
+| Boots of the stratosphere                                   |
+| Bright steel sollerets                                      |
+| Brown leather boots                                         |
+| Cara'zin silk boots                                         |
+| Charon's pair of pitch black boots                          |
+| Common shoes                                                |
+| Dark Boots <*Red Glow*>                                     |
+| Dark red boots of Shrije                                    |
+| Demon skin boots                                            |
+| Eldritch Knight's Boots, stamped with eldritch symbols      |
+| Gold embroidered black high boots                           |
+| Grey boots                                                  |
+| Heavy Ironward boots reinforced with steel caps             |
+| Henri Morgan's blue suede shoes                             |
+| Jander's grey boots                                         |
+| Leather boots                                               |
+| Leather boots of magician                                   |
+| Leather shoes                                               |
+| Light Duskwalker boots that move without sound              |
+| Lizard Skin Boots                                           |
+| Long pointed sabatons                                       |
+| Lorain's white boots with golden decorations                |
+| Moccasins of Whispering                                     |
+| Myrmidon's warboots, designed for steadfast stance          |
+| Pearl-plated sabatons                                       |
+| Red high heeled shoes (pain inducing)                       |
+| Scab-encrusted talons                                       |
+| Shoes with golden buckles                                   |
+| Snowshoes                                                   |
+| Soft leather sandals                                        |
+| Speed shoes of Karbitsch                                    |
+| Spider Fur Slippers                                         |
+| Stardust Boots                                              |
+| Startread Slippers                                          |
+| Steel Boots                                                 |
+| Steel boots                                                 |
+| Stonetalon Sandals                                          |
+| The Boots of Thievery                                       |
+| The Frostshard Sabatons                                     |
+| The Threadbare Slippers of Vingt Cinq                       |
+| The black boots of thievery                                 |
+| The boots of Praetor                                        |
+| The boots of immeasurable heat                              |
+| The boots of the miles walked                               |
+| The boots of the mind master                                |
+| The boots of warping                                        |
+| The brightly shining boots of Yeao                          |
+| The dark red boots of Shrije                                |
+| The green boots of Greenlight                               |
+| The green boots of Lucifer                                  |
+| The leather sandals of Lucifer                              |
+| The massive boots, 'Facetramplers'                          |
+| The royal speed shoes of Karbitsch                          |
+| The shining boots of Yeao                                   |
+| The steel toe boots of Lucifer                              |
+| The timeworn sandals of the wayfarer                        |
+| The winged boots of fury                                    |
+| Tornado Shaped Slippers                                     |
+| Ugly Giant boots (smelling)                                 |
+| White boots with golden decorations                         |
+| Leather boots                                               |
+'-------------------------------------------------------------'
+
 

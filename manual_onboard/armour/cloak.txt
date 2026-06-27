@@ -1,4 +1,1363 @@
-# cloak armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
 
+*-----------------------------------------------------------------------*
+|                         A black and red cloak                         |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom pathetically. (2/20)
+It has nice armour class for its type (tiny in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             A black cloak with a mark of a red hand on it             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                      A black cloak of z'dra race                      |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             A black cloak                             |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It will affect the user's concentration.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A black cloak of z'dra race                      |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             A black cloak with a mark of a red hand on it             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|            A black leather cloak adorned with silver runes            |
+*-----------------------------------------------------------------------*
+It increases the users wisdom unbelievably much. (20/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A black silk cloak of demonic entities                |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              A black toga                             |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A bloodstained apron                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution a tiny bit. (4/20)
+It has low armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A brown cloak of protection                      |
+*-----------------------------------------------------------------------*
+It has excellent armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It is halfling sized cloak.
+It increases its wearer's health.
+It can protect the wearer from magical missiles.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A cloak made from the finest silk                   |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pathetically. (2/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives tiny bonus to the spell 'darkness'.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A cloak of tongues                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a tiny bit. (4/20)
+It increases the users charisma magnificently. (18/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers somewhat slower than average.
+It gives small bonus to the skill 'vocal training'.
+It increases the users fire resistance somewhat. (8/20)
+It gives decent bonus to the skill 'tonal control'.
+It gives small bonus to the skill 'tonal projection'.
+
+
+
+*-----------------------------------------------------------------------*
+|             A dark brown fleece rain cloak with a liripipe            |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A dark cloak shimmering with moonlight                |
+*-----------------------------------------------------------------------*
+It decreases the users constitution unnoticably. (1/20)
+It increases the users wisdom a good amount. (12/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|               A dark cloak with a red symbol on the back              |
+*-----------------------------------------------------------------------*
+It increases the users dexterity unnoticably. (1/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'hiding'.
+
+- Extra -
+It helps the user to hide by increasing the hiding skill for a tiny bit. (4/20)
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A decayed yellow cloak                        |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution pathetically. (2/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (little in general).
+It decreases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+It gives small bonus to the skill 'tumble'.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A defiled human skin                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom unbelievably much. (20/20)
+It decreases the users intelligence adequately. (10/20)
+It decreases the users charisma adequately. (10/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers extremely slowly.
+It gives nice bonus to the skill 'offensive efficiency'.
+It gives nice bonus to the skill 'arcane lore'.
+
+- Extra -
+It imparts dark memories to its wearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            A dim blue cloak                           |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A drow wizard's cloak                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a tiny bit. (4/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+- Extra -
+It protects the user against fire.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                A fanged cloak of the gargantuan jell-o                |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It increases the users charisma impressively. (15/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'visualize act'.
+It increases the users cold resistance strongly. (14/20)
+It gives small bonus to the skill 'allegro con foco'.
+It gives small penalty to the skill 'attack'.
+
+- Extra -
+It will lower the wearers ability to score hits in melee combat.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A flowing Aetherweave mantle                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A glowing black cloak                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A gray shadowy cloak                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity slightly. (7/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'hiding'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A gray tattered cloak                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A hooded cloak of the Black Lotus Clan                |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pitifully. (3/20)
+It has awesome armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A hooded tengu cloak                         |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'hiding'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A light yellow burnished leather cloak                |
+*-----------------------------------------------------------------------*
+It increases the users wisdom noticably. (9/20)
+It increases the users intelligence noticably. (9/20)
+It has superb armour class for its type (little in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A long felt cloak dyed in black                    |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A long thunderstruck leather cape                   |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity impressively. (15/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users electric resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A luxurious looking velvet cloak                   |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A multicolored cloak                         |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It emits darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pair of mechanical wings                      |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It increases the users constitution slightly. (7/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It increases the users charisma slightly. (7/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+The wings actually work. Really!
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pall of grey-green gloom                      |
+*-----------------------------------------------------------------------*
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution unbelievably much. (20/20)
+It has superb armour class for its type (little in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+It gives nice bonus to the skill 'dodge'.
+This item loses its magical powers extremely slowly.
+It increases the users poison resistance adequately. (10/20)
+It increases the users cold resistance somewhat. (8/20)
+It gives nice bonus to the skill 'defend'.
+It increases the users acid resistance adequately. (10/20)
+
+- Extra -
+The gloom can be 'pulled' tighter around the wearer's body to increase
+its abilities of misdirection.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A pitchblack pelerine                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity somewhat. (8/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'sneak'.
+It gives small bonus to the skill 'double backstab'.
+It gives small bonus to the skill 'double thrust'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A red cloak of devils                         |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A serpentskin cloak                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence unbelievably much. (20/20)
+It decreases the users charisma unbelievably much. (20/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It increases the users poison resistance strongly. (14/20)
+It decreases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A set of ragged demon's wings                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers somewhat slower than average.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A shadow-edged Duskwalker cloak                    |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A shimmering silver mantle                      |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It increases the users electric resistance somewhat. (8/20)
+It gives decent bonus to the skill 'mastery of shielding'.
+It gives decent bonus to the skill 'greater vulnerability'.
+
+
+
+*-----------------------------------------------------------------------*
+|                A shiny green cloak with red decorations               |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               A tattered Ironward cloak lined with mail               |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has unbelievable armour class for its type (feeble in general).
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A tattered charnel moth wing                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution a bit. (6/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers a bit faster than average.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            A thick fur coat                           |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pitifully. (3/20)
+It has nice armour class for its type (tiny in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+It increases the users hitpoints pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance strongly. (14/20)
+It gives tiny bonus to the skill 'ignore pain'.
+
+- Extra -
+Thick fur coat affects its user's resistance against cold.
+Thick fur coat affects its user's hit points.
+Thick fur coat affects its user's skills.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           A woolen monk robe                          |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       An ancient sandstone cloak                      |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers extremely slowly.
+
+- Extra -
+An ancient armor from a long forgotten civilization.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      An iridescent feather mantle                     |
+*-----------------------------------------------------------------------*
+It increases the users dexterity phenomenally.
+It has superb armour class for its type (little in general).
+It gives great bonus to the skill 'dodge'.
+This item loses its magical powers incredibly slowly.
+It gives great bonus to the skill 'hiding'.
+
+- Extra -
+The wearer can lighten his burden by 'wafting' the mantle.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Black cloak                              |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users intelligence pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Blood-red robes                            |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Blue robes                              |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Cape of Combat                            |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'attack'.
+It gives small bonus to the skill 'quick chant'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Cloak of Eternal Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         Cloak of Eternal Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         Cloak of Eternal Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        Cloak of Infinite Arcana                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users wisdom noticably. (9/20)
+It increases the users intelligence strongly. (14/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Cloak of Shifting Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It increases the users constitution slightly. (7/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                        Cloak of Shifting Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users constitution slightly. (7/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            Cloak of Spiders                           |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It decreases the users constitution unnoticably. (1/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with incredible haste.
+
+- Extra -
+It modifies the user's resistance against poison.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Cloak of Strahd                            |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence strongly. (14/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     Cloak of everlasting darkness                     |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity a good amount. (12/20)
+It has excellent armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It decreases the users electric resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                     Cloak of everlasting darkness                     |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity a good amount. (12/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers extremely slowly.
+It gives small bonus to the skill 'spot weakness'.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Cloak of souls                            |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users dexterity somewhat. (8/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance superbly. (16/20)
+It increases the users magic resistance superbly. (16/20)
+
+- Extra -
+It makes the user more resistant to magic damage.
+It makes the user more resistant to fire damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Cloak of the Sh'lori                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users constitution pitifully. (3/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'sense weakness'.
+It gives small bonus to the spell 'death wish'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Crimson Red Cape                           |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution a tiny bit. (4/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Dark shadowed cloak                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'quick chant'.
+
+- Extra -
+It affects the user's spell speed.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Dirty cloak                              |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Dragon's wings                            |
+*-----------------------------------------------------------------------*
+It has superb armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Drow cloak                              |
+*-----------------------------------------------------------------------*
+It decreases the users constitution pathetically. (2/20)
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+- Extra -
+It protects the user against fire.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Dusty black cloak                           |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  Gleaming white wings of an archangel                 |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Gleeman's cloak                            |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution poorly. (5/20)
+It increases the users charisma poorly. (5/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It affects the user's appearance.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Golden robes                             |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Grey cloak                              |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with incredible haste.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Hide of a Giant Stag                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution pathetically. (2/20)
+It has nice armour class for its type (tiny in general).
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+It gives great bonus to the skill 'hunting'.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Leather cloak                             |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Legendary burca of Fremens                      |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users psionic resistance a bit. (6/20)
+
+- Extra -
+It emits light.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Long Blue Cloak of Vanaheim                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength impressively. (15/20)
+It decreases the users constitution adequately. (10/20)
+It increases the users intelligence unbelievably much. (20/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with incredible haste.
+It increases the users cold resistance strongly. (14/20)
+It gives small bonus to the spell 'lesser cold invulnerability'.
+It gives small bonus to the spell 'greater cold invulnerability'.
+
+- Extra -
+It modifies the user's resistance to cold.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Monks cloak                              |
+*-----------------------------------------------------------------------*
+It has nice armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Plaid of Frasier                           |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Raver's Cloak                             |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity unnoticably. (1/20)
+It decreases the users wisdom unnoticably. (1/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Star covered robe                           |
+*-----------------------------------------------------------------------*
+It has superb armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The Cape of the Lich King                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'unholy ceremony'.
+It gives small bonus to the skill 'willpower'.
+
+- Extra -
+The Cape of the Lich King gives a bonus to some necromantic abilities.
+
+
+*-----------------------------------------------------------------------*
+|                       The Cape of the Lich King                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'unholy ceremony'.
+It gives small bonus to the skill 'willpower'.
+
+- Extra -
+The Cape of the Lich King gives a bonus to some necromantic abilities.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Cloak of Denethor                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The Cloak of Flames <*blazing*>                    |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It decreases the users dexterity somewhat. (8/20)
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It gives decent bonus to the spell 'fire preference'.
+It decreases the users cold resistance strongly. (14/20)
+It increases the users fire resistance strongly. (14/20)
+
+- Extra -
+You could 'pull' the cloak around you to escape the heat of flames.
+This cloak is blessed by the goddess Kirvana and is an artifact of hers.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          The Gleeman's Cloak                          |
+*-----------------------------------------------------------------------*
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'juggling'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The Mantle of the Rising Sun                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution impressively. (15/20)
+It has nice armour class for its type (tiny in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It increases the users physical resistance somewhat. (8/20)
+
+- Extra -
+The Mantle of the Rising Sun affects its user's physical resistance.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The black cloak of silence                      |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity a good amount. (12/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'sneak'.
+It gives small bonus to the skill 'hiding'.
+It gives tiny bonus to the skill 'pick locks'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The black cloak of vampiric wizardy                  |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity poorly. (5/20)
+It decreases the users constitution unnoticably. (1/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+It gives small bonus to the skill 'attack'.
+
+- Extra -
+It affects the users knowledge of the skill attack.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           The cloak of Hell                           |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It increases the users constitution pathetically. (2/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence pathetically. (2/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The cloak of Kk'ras'hh <Ethereal>                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with incredible haste.
+It gives small bonus to the skill 'mastery of shielding'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+*-----------------------------------------------------------------------*
+|                   The cloak of Kk'ras'hh <Ethereal>                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'mastery of shielding'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The cloak of dark powers                       |
+*-----------------------------------------------------------------------*
+It decreases the users constitution pitifully. (3/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has superb armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'demon and devil lore'.
+It gives tiny bonus to the skill 'soul manipulation'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         The cloak of magicians                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence pitifully. (3/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The cloak of the bat                         |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It allows polymorphing.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The cloak of the black circle                     |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a good amount. (12/20)
+It gives small bonus to the spell 'remove preference'.
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'stunning blow'.
+It gives tiny bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         The cloak of the elves                        |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|    The crimson cloak of Buju, awash with sigils and golden amulets    |
+*-----------------------------------------------------------------------*
+It increases the users constitution somewhat. (8/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives nice bonus to the skill 'chaos from invariance'.
+It gives nice bonus to the skill 'order from chaos'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The dark red cloak of Myastha                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It has superb armour class for its type (little in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The fighter cloak of Hell                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users intelligence pitifully. (3/20)
+It has nice armour class for its type (tiny in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The infernal cloak of the Emberguard                 |
+*-----------------------------------------------------------------------*
+It increases the users strength magnificently. (18/20)
+It increases the users dexterity pathetically. (2/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'parry'.
+It increases the users fire resistance somewhat. (8/20)
+
+- Extra -
+The infernal cloak of the Emberguard hungers to be consumed by fire.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The shining cloak of Yeao                       |
+*-----------------------------------------------------------------------*
+It increases the users constitution somewhat. (8/20)
+It increases the users wisdom somewhat. (8/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with incredible haste.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         The shroud of the Nine                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+The shroud's mystical powers enhance kungfu techniques.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The silvery cloak of spiders                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It increases the users dexterity adequately. (10/20)
+It decreases the users constitution unnoticably. (1/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration slightly. (7/20)
+This item loses its magical powers with incredible haste.
+It increases the users poison resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance against poison.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The sorcerous red cloak of stars                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence slightly. (7/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'soul wrack'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The transparent cloak of water                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength unnoticably. (1/20)
+It increases the users wisdom unnoticably. (1/20)
+It increases the users intelligence magnificently. (18/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+It makes the user one with water.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The wings of the dragon lord                     |
+*-----------------------------------------------------------------------*
+It has superb armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+You can't find any records about "Purple cloak with gold trim" in the library.
+You can't find any records about "Red cloak of stars" in the library.
+You can't find any records about "The Cloak of the Grove" in the library.

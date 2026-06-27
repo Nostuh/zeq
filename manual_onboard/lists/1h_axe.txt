@@ -1,3 +1,45 @@
-# Paste the `list <slot>` output for 1h_axe here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 1h axe
+
+*-------------------------------------------------------------*
+|                     Weapon type - 1h axe                    |
+*-------------------------------------------------------------*
+| A cleaver                                                   |
+| A double-bladed meat cleaver (1h) (balanced)                |
+| A dual-bladed goblin axe                                    |
+| A feathered tomahawk                                        |
+| A frighteningly sharp meat cleaver                          |
+| A glossy platinum axe                                       |
+| A hand axe                                                  |
+| A huge butcher axe                                          |
+| A red handled axe                                           |
+| A sturdy looking stone made butchers axe                    |
+| A tiny axe                                                  |
+| A titanium axe                                              |
+| An antique bearded axe                                      |
+| An antique goosewing axe                                    |
+| An ordinary hand axe                                        |
+| Axe of the Sun                                              |
+| Belinik's battle axe of sharpness                           |
+| Belinik's battle axe of wounding                            |
+| Belinik's battle axe of wounding (rusty)                    |
+| Dirty Goblin axe                                            |
+| Gutripper                                                   |
+| Lumberjacks axe                                             |
+| Onyx hatchet                                                |
+| Onyx hatchet                                                |
+| Onyx hatchet                                                |
+| Onyx hatchet                                                |
+| Orcish axe                                                  |
+| Pickaxe                                                     |
+| The Serpent Axe                                             |
+| The battle axe, 'White Crescent'                            |
+| The dreaded battleaxe of Sintk                              |
+| The mithril throwing axe, 'Ruin's Return'                   |
+| The ranger axe (1h) (balanced)                              |
+| The ranger axe (battered)                                   |
+| Meat cleaver                                                |
+| The Axe of Hurling                                          |
+'-------------------------------------------------------------'
+
 

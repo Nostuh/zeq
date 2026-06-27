@@ -1,3 +1,158 @@
-# 1h_polearm weapon (1h, class=polearm) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
 
+*-----------------------------------------------------------------------*
+|                          A badly decayed arm                          |
+*-----------------------------------------------------------------------*
+It increases hit chance unnoticably. (1/20)
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does magical damage a good amount. (12/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A glossy platinum spear                        |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has decent weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does psionic damage a tiny bit. (4/20)
+It increases critical chance poorly. (5/20)
+
+- Extra -
+This is an illithidwrought weapon and as such has a measure of awareness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A legionnaire's spear                         |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A short spear                             |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has adequate weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does magical damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                A twiggy and well-sharpened wooden spear               |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+It does poison damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            An orcish spear                            |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      An used looking steel spear                      |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Black pole                              |
+*-----------------------------------------------------------------------*
+It decreases hit chance pitifully. (3/20)
+It has decent weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Dark headed spear                           |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does asphyxiation damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            Greenlight spear                           |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Onyx glaive                              |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does cold damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx glaive                              |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does fire damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx glaive                              |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx glaive                              |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does poison damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Spear of the Flame                          |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does fire damage a bit. (6/20)
+
+- Extra -
+It would make a good backstab weapon.
+It has special properties.
+
+The command word to light the spear is: say darkness is evil
+The command word to darken the spear is: say darknezzz
+
+
+
+
+You can't find any records about "Short spear" in the library.

@@ -1,4 +1,1868 @@
-# held armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
+
+*-----------------------------------------------------------------------*
+|                A Duskwalker totem wrapped in dark cords               |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                              A Yule Token                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A ball of regeneration                        |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A banded jade turbo shell                       |
+*-----------------------------------------------------------------------*
+It increases the users constitution nicely. (13/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoints a tiny bit. (4/20)
+This item loses its magical powers somewhat faster than average.
+It gives nice bonus to the skill 'parry'.
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+It increases the users electric resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+It gives nice bonus to the skill 'ignore pain'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A beautiful small black pearl                     |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A big black pearl                           |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity a good amount. (12/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                           A big black pearl                           |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity a good amount. (12/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A black beaded rosary                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It decreases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives tiny bonus to the spell 'mark of zomm'.
+It decreases the users acid resistance somewhat. (8/20)
+It gives tiny bonus to the spell 'harm body'.
+
+- Extra -
+It emits darkness.
+Its powers are greater with the true believers, especially with those
+who are strong in faith.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A blazing ember orb                          |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom a bit. (6/20)
+It decreases the users intelligence a bit. (6/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It increases the users cold resistance adequately. (10/20)
+
+- Extra -
+When held, the blazing ember orb increases fire damage dealt by a good amount. (12/20)
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           A blue lucky charm                          |
+*-----------------------------------------------------------------------*
+It increases the users charisma poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'bargain'.
+
+
+
+*-----------------------------------------------------------------------*
+|                              A brown book                             |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A censer of shadows                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom somewhat. (8/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The censer is meant to be spun, permeating the air with the fragrant
+fumes of shadow. The intoxicating vapor seems to alter your perception.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A crude iron talisman                         |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users intelligence poorly. (5/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It gives decent bonus to the skill 'grim resolve'.
+It gives small bonus to the skill 'parry'.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         A crude iron talisman                         |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users intelligence poorly. (5/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It gives decent bonus to the skill 'grim resolve'.
+It gives small bonus to the skill 'parry'.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A crude stone sundial                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with incredible haste.
+
+- Extra -
+It functions as a magical timepiece, unless broken.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                A crumpled silver wand, covered in runes               |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+
+The wand can be used to 'inflict' curses on enemies. It currently contains:
+0 charges of feeblemind.
+0 charges of terror.
+0 charges of mist haze.
+
+
+
+
+*-----------------------------------------------------------------------*
+|       A crystalline ball embellished with the symbol of infinity      |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity a bit. (6/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users wisdom poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+Shaking this ball will do more for you than just tell your fortune.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A cylinder of blue jasper <inert>                   |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+It increases the users hitpoint regeneration a bit. (6/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'parry'.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It gives decent bonus to the skill 'inner strength'.
+
+*-----------------------------------------------------------------------*
+|                 A cylinder of blue jasper <vibrating>                 |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers very fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A desiccated hand                           |
+*-----------------------------------------------------------------------*
+It decreases the users constitution adequately. (10/20)
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence impressively. (15/20)
+It decreases the users charisma impressively. (15/20)
+It has negative armour class for its type (negative in general).
+It gives small bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration nicely. (13/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers slowly.
+It decreases the users poison resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It decreases the users magical resistance somewhat. (8/20)
+It decreases the users psionic resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+- Extra -
+This foul talisman will assist its owner in the channeling of their magical
+energies, increasing their magical regeneration during combat.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A detoxifying decanter                        |
+*-----------------------------------------------------------------------*
+It increases the users constitution impossibly much.
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration monumentally.
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+The decanter cures many common ailments.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A dull crystal ball                          |
+*-----------------------------------------------------------------------*
+It decreases the users constitution a bit. (6/20)
+It increases the users wisdom somewhat. (8/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'estimate worth'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A feather duster                           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A flask of oil (full)                         |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A fragile hourglass of mercy (full)                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users intelligence ILLEGALLY.
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It gives small bonus to the spell 'hour of mercy'.
+This item loses its magical powers with average speed.
+
+- Extra -
+It needs to be inverted once so often.
+The passage of time defines its superiority.
+It will also enhance magical resistance if worn by an undead being.
+It functions as a magical timepiece.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A frail elven hourglass                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with incredible haste.
+
+- Extra -
+It functions as a magical timepiece, unless broken.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A glimmer scarab staff (inactive)                   |
+*-----------------------------------------------------------------------*
+It decreases the users constitution impossibly much.
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+The staff acts as a divining rod for secrets.
+The staff severely weakens the body while worn.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A golden sceptre                           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A gory black skull                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A grimy black lantern                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It increases the users fire resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A heavy piece of iron                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A large gold coin                           |
+*-----------------------------------------------------------------------*
+It increases the users charisma unbelievably much. (20/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+There is a definite aura of powerful magic around this coin but whatever its
+purpose might be, you cannot divine.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A large shimmering orb                        |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+- Extra -
+This artifact bestows its bearer some of the vitality of the dragonkind, from
+whose essence it was born, increasing his health and stamina in addition of
+granting some resistance against most elements.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A leather covered hymn book                      |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A long venomtouched cobra fang                    |
+*-----------------------------------------------------------------------*
+It increases the users dexterity impressively. (15/20)
+It decreases the users wisdom adequately. (10/20)
+It increases the users charisma impressively. (15/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users poison resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A magical wand of glow restoration <1>                |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+-------------------------------------------------------------------
+This wand can be used to restore an item to brilliant glow. Yet due
+to the chaotic nature of the restore spell you might not always get
+what you wish for, if the item in question happens to have random
+stats.
+-------------------------------------------------------------------
+
+
+*-----------------------------------------------------------------------*
+|           A magical wand of <lower physical resistance> <8>           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It can lower the resistance of an enemy.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 A magical wand of glow restoration <1>                |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+-------------------------------------------------------------------
+This wand can be used to restore an item to brilliant glow. Yet due
+to the chaotic nature of the restore spell you might not always get
+what you wish for, if the item in question happens to have random
+stats.
+-------------------------------------------------------------------
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A milky-white crystal                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers a bit faster than average.
+
+- Extra -
+An alien awareness, that has a strong connection with the mind flayers,
+resides within the crystal.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A miniature silver pocketwatch                    |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely fast.
+
+- Extra -
+It functions as a magical timepiece, unless broken.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A nice walking stick                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pitifully. (3/20)
+It has tiny armour class for its type (almost non-existent in general).
+It gives small bonus to the skill 'fire building'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'camping'.
+It gives small bonus to the skill 'hunting'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A nondescript black box                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A old, battered scroll                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A pearl of protection                         |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It has nice armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance against cold.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A polished bronze sundial                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with incredible haste.
+
+- Extra -
+It functions as a magical timepiece, unless broken.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A polished silver sundial                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with incredible haste.
+
+- Extra -
+It functions as a magical timepiece, unless broken.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    A prayer book with ivory covers                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a good amount. (12/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'prayer'.
+It gives decent bonus to the spell 'resurrect'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A primitive clay idol                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It gives decent bonus to the spell 'creeping doom'.
+It increases the users poison resistance somewhat. (8/20)
+It gives great bonus to the skill 'earth lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A profane canopic jar                         |
+*-----------------------------------------------------------------------*
+It decreases the users charisma unbelievably much. (20/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers extremely slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+
+- Extra -
+
+Defiled by sacrilegious magics this is capable of drawing power from entrails
+placed inside it, bestowing it to anyone who carries it. The exact nature of the
+boon is governed by the composition and the volume of organs inside the jar.
+This magic is more effective for the truly undead.
+
+The jar can be filled with the command: 
+  fill jar with <organ> from <corpse>
+
+Organs that can be harvested from a corpse are: 
+  brain, heart, intestine, kidney, liver, lung and stomach
+
+Fluids will gradually seep from the organs inside the jar and this fluid, in
+addition to a small amount of organs, can be imbibed for physical or magical
+restoration. More fluids may be produced by shaking the jar, although this will
+destroy some of the organs inside. The organs may also be eaten.
+
+The contents of the jar may be dumped with the command:
+  empty jar
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A pulsating voidplate sphere                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users asphyxiation resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A pulsing crystalline awakening stone                 |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A puppet made of twigs and mud                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom unbelievably much. (20/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers extremely fast.
+It gives great bonus to the skill 'earth lore'.
+It gives great bonus to the skill 'water lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A round gray stone                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'pick pockets'.
+It gives decent bonus to the skill 'pick locks'.
+
+- Extra -
+The stone contains a tale:
+
+Please spare a thought for Old Man Jest,
+who spoke a funny gurgle.
+He thought it might be in his interest
+to go about and burgle.
+
+But on one of thieving trips of night,
+he came upon a door;
+A door that caused him too much plight
+and fell him on the floor.
+
+Please spare a thought for Old Man Jest,
+who now is being held;
+In this stone, this thieve's nest;
+forever is he celled.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A shard of milky-white crystal                    |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers a bit faster than average.
+
+- Extra -
+An alien awareness, that has a strong connection with the mind flayers,
+resides within the crystal.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A shard of sunstone                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with incredible haste.
+
+- Extra -
+It functions as a magical timepiece, unless broken.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A shard of the Illearth Stone                     |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'offensive efficiency'.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A shimmering jade sceptre                       |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It increases the users dexterity adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users acid resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A shimmering tail feather                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity impressively. (15/20)
+It increases the users constitution poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+It gives decent bonus to the skill 'dodge'.
+This item loses its magical powers slowly.
+
+- Extra -
+Fanning the feather will activate its magic.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A shining chromed sphere                       |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               A shining silvery eyeball of the Lavaworm               |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+It increases the users magical resistance a bit. (6/20)
+It increases the users psionic resistance a bit. (6/20)
+It increases the users electric resistance a bit. (6/20)
+
+- Extra -
+It can create magical fields which will disrupt all spellcasting in its vicinity.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A silver pocket keg                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A small leather map                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A small light green stone                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users wisdom pitifully. (3/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A sparkling black orb                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity somewhat. (8/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers very fast.
+It increases the users psionic resistance strongly. (14/20)
+
+- Extra -
+The nature of this item is highly chaotic and may change completely at the slighest provocation.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A sparkling sapphire                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers extremely slowly.
+
+- Extra -
+This otherworldly gemstone will occasionally resonate with magical energy,
+lending power to all destructive magics that employ such energy in its
+purest form. During this time, however, the wearer is more susceptible
+to those same forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A sphere shaped stone                         |
+*-----------------------------------------------------------------------*
+It increases the users intelligence somewhat. (8/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users electric resistance adequately. (10/20)
+
+- Extra -
+It will protect the user from electricity.
+It will protect the user with electricity.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  A standard of The Sufferance-legion                  |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   A swirling eyeball of the Lavaworm                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'quick chant'.
+
+- Extra -
+The mist inside the eyeball swirls rapidly making it hard to focus at.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A tarnished brass compass                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a good amount. (12/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers very fast.
+It gives awesome bonus to the skill 'navigators way'.
+
+- Extra -
+The compass allows the user to maintain directional orientation,
+even when cloud cover prevents celestial navigation.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A tattered Duntrench gonfalon                     |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A tattered and torn battleflag                    |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It decreases the users wisdom poorly. (5/20)
+It has low armour class for its type (tiny in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|            An Ironward war standard bound in leather cords            |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has immense armour class for its type (low in general).
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|               An ancient leather-bound book of languages              |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It's full of knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      An ancient leatherbound book                     |
+*-----------------------------------------------------------------------*
+It decreases the users constitution adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+It increases the users spellpoints poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+
+One who is properly educated can sometimes enhance his abilities
+greatly by reading the ciphers of this book.
+
+
+
+*-----------------------------------------------------------------------*
+|                      An ancient leatherbound book                     |
+*-----------------------------------------------------------------------*
+It decreases the users constitution adequately. (10/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+It increases the users spellpoints poorly. (5/20)
+This item loses its magical powers extremely slowly.
+
+- Extra -
+
+One who is properly educated can sometimes enhance his abilities
+greatly by reading the ciphers of this book.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     An antique ashwood puzzle box                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                             An ebony staff                            |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It has average armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         An enchanted gemstone                         |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                          An eternal oil flask                         |
+*-----------------------------------------------------------------------*
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 An inscripted orb with prickly surface                |
+*-----------------------------------------------------------------------*
+It increases the users dexterity magnificently. (18/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance strongly. (14/20)
+
+- Extra -
+A person can 'rub' this orb to reveal important information about
+the direction the person chooses.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      An intact frostburned globe                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution nicely. (13/20)
+It increases the users wisdom nicely. (13/20)
+It has superb armour class for its type (poor in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+It increases the users hitpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         An iron lightning rod                         |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            An obsideon cane                           |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It decreases the users wisdom a good amount. (12/20)
+It increases the users intelligence adequately. (10/20)
+It has tiny armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users acid resistance strongly. (14/20)
+
+- Extra -
+This object has hidden magical properties.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    An obsidian focus of channeling                    |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           An old human skull                          |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users intelligence unbelievably much. (20/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'unholy power'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  An old leather-bound book of scrolls                 |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It's full of knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        An opaline unicorn horn                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers very fast.
+
+- Extra -
+The horn serves as a magical vessel that can 'replenish' other items from
+its magical reserves. It has no energy remaining.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Black Skull                              |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Blood red eye of the Widow Spider                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Bone staff                              |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pitifully. (3/20)
+It increases the users wisdom pathetically. (2/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Book of alteration                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence pitifully. (3/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'ward of steel'.
+
+- Extra -
+It affects the user's spell knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Cube of Eternal Ice <cold>                      |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a tiny bit. (4/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                       Cube of Eternal Ice <dark>                      |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Cube of Power                             |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Dragon tooth                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Ebony Telescope                            |
+*-----------------------------------------------------------------------*
+It has tiny armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'ethereal gate'.
+
+- Extra -
+While worn, increases the maximum radius of the outworld map by 10.
+
+Can be used to find living beings within a radius of 20 rooms with great accuracy.
+Syntax: find <(optional)name>
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Fork of mixing                            |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pitifully. (3/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'herb mixing'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Gem of Strength                            |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Glittering Ruby                            |
+*-----------------------------------------------------------------------*
+It decreases the users strength somewhat. (8/20)
+It decreases the users dexterity somewhat. (8/20)
+It decreases the users constitution somewhat. (8/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence unbelievably much. (20/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers slowly.
+
+- Extra -
+Glittering Ruby is an artifact of the Goddess Kirvana.
+Glittering Ruby can 'rprotect' the wearer from a certain spell.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Grip of the Forest Archer                       |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity a good amount. (12/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom somewhat. (8/20)
+It decreases the users intelligence slightly. (7/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Hastur's Mirror                            |
+*-----------------------------------------------------------------------*
+It increases the users constitution a bit. (6/20)
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence adequately. (10/20)
+It decreases the users charisma adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+It increases the users hitpoints adequately. (10/20)
+This item loses its magical powers very slowly.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+
+- Extra -
+This artifact is granted to those whom Hastur has judged to be loyal.
+Hastur's allies can locate and contact him using the command 'mirror scry'.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Jadrele's wand of firebolts                      |
+*-----------------------------------------------------------------------*
+It increases the users intelligence nicely. (13/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'zapping'.
+
+- Extra -
+It shoots out firebolt when pointed at someone ('point wand at <target>').
+It has 0 charges remaining.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Kz the Crystal of Thunder                       |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It decreases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Kzraxtzt the Crystal of Seeing                    |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                Leprachaun Handheld Mirror of Farseeing                |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It has some instrict special powers.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     Lucifer's copper lightning rod                    |
+*-----------------------------------------------------------------------*
+It increases the users charisma unbelievably much. (20/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It modifies the users charisma.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Old elven staff                            |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Orb of Eternal Sands                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                          Orb of Eternal Sands                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                          Orb of Eternal Sands                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       Orb of the Psychic Torment                      |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a bit. (6/20)
+It increases the users constitution poorly. (5/20)
+It increases the users intelligence magnificently. (18/20)
+It has nice armour class for its type (little in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                                Orcrest                                |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               PK Crystal                              |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It has tiny armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                                Palantir                               |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                              The Palantir                             |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Pearl of Protection                          |
+*-----------------------------------------------------------------------*
+It has nice armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance against cold.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Pink Lipstick                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Ra the Crystal of Fire                        |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It decreases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Rainbow orb                              |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity magnificently. (18/20)
+It increases the users constitution an average amount. (11/20)
+It increases the users wisdom astoundingly. (19/20)
+It increases the users intelligence a good amount. (12/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration noticably. (9/20)
+This item loses its magical powers a bit faster than average.
+
+
+You can't find any records about "Rosewood Staff Pulsating" in the library.
+
+*-----------------------------------------------------------------------*
+|                             Royal Sceptre                             |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Sceptre of harmony                          |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Sceptre of tremors                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Shimmering golden orb                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Soft Sucker of Octopus                        |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It decreases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance to asphyxiation.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Sophia's Crystal Ball                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Staff of Air                             |
+*-----------------------------------------------------------------------*
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom a tiny bit. (4/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'air lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Staff of Might                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Staff of Wisdom                            |
+*-----------------------------------------------------------------------*
+It increases the users wisdom somewhat. (8/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Stone sceptre                             |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has average armour class for its type (tiny in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Tattered old spell book                        |
+*-----------------------------------------------------------------------*
+It increases the users constitution unnoticably. (1/20)
+It increases the users intelligence pathetically. (2/20)
+It has average armour class for its type (tiny in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 The Blazing Banner of Wrath (glowing)                 |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+Once owned by the Warrior-King Sargones III, this banner still
+contains some of his living essence, and such, when waved about,
+can terrify all those who witness it.
+
+
+*-----------------------------------------------------------------------*
+|                 The Blazing Banner of Wrath (glowing)                 |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+Once owned by the Warrior-King Sargones III, this banner still
+contains some of his living essence, and such, when waved about,
+can terrify all those who witness it.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The Chalice of Renunciation                      |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The chalice speaks within your mind as you attempt to scry its
+magical properties: 'Renounce your carnal trappings if you wish
+for true power.'
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Exchequer's quill                         |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a tiny bit. (4/20)
+It increases the users charisma adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'bargain'.
+It gives decent bonus to the skill 'creative accounting'.
+
+
+
+*-----------------------------------------------------------------------*
+|                             The Fell Prism                            |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It gives small bonus to the skill 'alternate magics'.
+It gives small bonus to the spell 'missile storm'.
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'magical lore'.
+It decreases the users magical resistance somewhat. (8/20)
+It gives small bonus to the skill 'chaos theory'.
+It increases the users psionic resistance somewhat. (8/20)
+It gives small bonus to the skill 'magical transformation'.
+It gives small bonus to the skill 'adaption of chaos'.
+It gives small bonus to the skill 'invocation'.
+
+- Extra -
+This is a sinister artifact crafted from the eye of a sorcerer, dug out while
+they were alive and conscious, enchanted with profane rituals.
+The foul magics permeating this artifact not only bestow immense power to any
+sorcerer holding it but will greatly enhance and alter the spell missile storm
+by dividing the energy of the missiles, increasing their number while slightly
+reducing the power of individual missiles.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The Graven Icon of Vingt Cinq                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution phenomenally.
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+It increases the users shadow resistance tremendously. (17/20)
+It increases the users physical resistance tremendously. (17/20)
+
+- Extra -
+The icon can be inlaid with up to three shards.
+The icon is the bane of all undeads.
+The icon imbues its owner with great stamina.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The Great Staff of the Ancient Elf                  |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity unnoticably. (1/20)
+It increases the users constitution pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            The Horn of Sol                            |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+The horn is a fount of knowledge and learning. It facilitates the
+acquisition of experience.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Libram of Torment                         |
+*-----------------------------------------------------------------------*
+It decreases the users constitution adequately. (10/20)
+It decreases the users wisdom impressively. (15/20)
+It increases the users intelligence impossibly much.
+It decreases the users charisma impressively. (15/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers incredibly slowly.
+It increases the users shadow resistance somewhat. (8/20)
+It increases the users magical resistance strongly. (14/20)
+
+- Extra -
+When held, the Libram of Torment channels its owner's lifeforce into any
+offensive spells they may cast, increasing the damage significantly.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The Lizard King's Staff                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
 

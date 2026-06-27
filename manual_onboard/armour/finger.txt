@@ -1,4 +1,1917 @@
-# finger armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
+
+*-----------------------------------------------------------------------*
+|                     A Prismatic Ring [<*magneta*>]                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers very slowly.
+It increases the users magical resistance adequately. (10/20)
+
+- Extra -
+The Prismatic ring alters the wearer's resistances.
+The Prismatic ring will change from resistance to resistance.
+
+
+*-----------------------------------------------------------------------*
+|                      A Prismatic Ring [<*white*>]                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers very slowly.
+It increases the users cold resistance strongly. (14/20)
+
+- Extra -
+The Prismatic ring alters the wearer's resistances.
+The Prismatic ring will change from resistance to resistance.
+
+
+*-----------------------------------------------------------------------*
+|                 A Prismatic Ring [fading] [<*orange*>]                |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users psionic resistance somewhat. (8/20)
+
+- Extra -
+The Prismatic ring alters the wearer's resistances.
+The Prismatic ring will change from resistance to resistance.
+
+
+
+You can't find any records about "A Prismatic Ring fading" in the library.
+
+*-----------------------------------------------------------------------*
+|                           A Ring of Mage <O>                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a good amount. (12/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A bilious amber band                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution a good amount. (12/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+It increases the users hitpoints adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+The ring promotes health and restoration.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A blackened iron ring                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers a bit faster than average.
+
+- Extra -
+This ring has an odd presence to it, something not of this world, warping
+the very laws of nature.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 A bloody black ring called 'Doomring'                 |
+*-----------------------------------------------------------------------*
+It increases the users constitution a tiny bit. (4/20)
+It increases the users intelligence strongly. (14/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              A bone ring                              |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A crudely shaped almandine ring                    |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It increases the users magical resistance a bit. (6/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A dark ring of jet-black stone                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users wisdom pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with incredible haste.
+It gives decent bonus to the skill 'demon control'.
+It gives decent bonus to the spell 'summon demonic guardian'.
+
+- Extra -
+It modifies the user's spell knowledge.
+It emits darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A diamond decorated gold ring                     |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A faintly glowing ring of bone                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users intelligence pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It allows the user to see in darkness.
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with incredible haste.
+It gives decent bonus to the spell 'control'.
+It gives decent bonus to the spell 'chain'.
+
+- Extra -
+It modifies the user's spell knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A flamehardened ring                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution slightly. (7/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence a good amount. (12/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users fire resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A frostburned cold metal ring                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution nicely. (13/20)
+It increases the users wisdom strongly. (14/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers slowly.
+It increases the users cold resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|              A golden ring with a red ruby embedded in it             |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a tiny bit. (4/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|              A golden ring with a diamond embedded in it              |
+*-----------------------------------------------------------------------*
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             A golden ring                             |
+*-----------------------------------------------------------------------*
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                      A golden ring with sapphires                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+While worn, this ring will reduce the drain of all defensive spells cast by the
+wearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|              A golden ring with a diamond embedded in it              |
+*-----------------------------------------------------------------------*
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A golden ring with a red ruby embedded in it             |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a tiny bit. (4/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A golden ring with sapphires                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+While worn, this ring will reduce the drain of all defensive spells cast by the
+wearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A hammered iron ring                         |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+It increases the users psionic resistance a bit. (6/20)
+
+- Extra -
+While worn, this ring will increase its wearer's stamina considerably.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 A heavy electrum ring, with carved ivy                |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a tiny bit. (4/20)
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+It increases the users spellpoints pathetically. (2/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A heavy granite ring                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom adequately. (10/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance adequately. (10/20)
+It decreases the users cold resistance somewhat. (8/20)
+It gives small bonus to the skill 'ignore pain'.
+
+*-----------------------------------------------------------------------*
+|                          A heavy granite ring                         |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution adequately. (10/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+It gives small bonus to the skill 'spiritual link'.
+This item loses its magical powers with average speed.
+It decreases the users psionic resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A heavy mythril ring, with carved ivy                 |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It increases the users hitpoints pathetically. (2/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A heavy ring made out of gold                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution pathetically. (2/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A large flower-shaped ring                      |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users constitution pitifully. (3/20)
+It increases the users intelligence slightly. (7/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|            A large golden ring, embedded with a black oval            |
+*-----------------------------------------------------------------------*
+It increases the users intelligence pathetically. (2/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It modifies the user's intelligence.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 A light mythril ring, with carved ivy                 |
+*-----------------------------------------------------------------------*
+It increases the users charisma a bit. (6/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It increases the users hitpoints pathetically. (2/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A multi-jeweled platinum ring                     |
+*-----------------------------------------------------------------------*
+It increases the users intelligence somewhat. (8/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A nitid spellburned iron ring                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength noticably. (9/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users charisma adequately. (10/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers slowly.
+It increases the users magical resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pale looking silver ring                      |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'tonal control'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pale ring of old dried bones                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It gives small bonus to the spell 'focus dark energies'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'power manipulation'.
+
+*-----------------------------------------------------------------------*
+|                     A pale ring of old dried bones                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It gives small bonus to the spell 'focus dark energies'.
+This item loses its magical powers extremely slowly.
+It gives nice bonus to the skill 'unholy ceremony'.
+It gives small bonus to the skill 'power manipulation'.
+It gives nice bonus to the skill 'willpower'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A pitted coral ring                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It increases the users physical resistance somewhat. (8/20)
+It gives small bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A plain silver ring                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers a bit slower than average.
+It increases the users magical resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+- Extra -
+The ring reacts to the spoken word of the wearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            A platinum ring                            |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity slightly. (7/20)
+It increases the users constitution slightly. (7/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                            A platinum ring                            |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a bit. (6/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers very fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A polished Aetherweave band                      |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A purple mushroom ring <glittering>                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom a good amount. (12/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with incredible haste.
+
+*-----------------------------------------------------------------------*
+|                  A purple mushroom ring <shimmering>                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom a good amount. (12/20)
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               A red ring                              |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A ring made of black mithril                     |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It emits darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A ring of black obsidian                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution somewhat. (8/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users fire resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A ring of conversion                         |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users constitution pathetically. (2/20)
+It increases the users wisdom pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A ring of oozing cysts                        |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It decreases the users charisma impossibly much.
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'fell insights'.
+It gives small bonus to the skill 'ruinous utterance'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A ring of regeneration                        |
+*-----------------------------------------------------------------------*
+It decreases the users intelligence unnoticably. (1/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A rippling aphotic band                        |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution a good amount. (12/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users fire resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+The ring spreads darkness by absorbing nearby light.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A scarlet ring                            |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A shimmering copper ring                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength a bit. (6/20)
+It decreases the users dexterity a bit. (6/20)
+It increases the users constitution adequately. (10/20)
+It increases the users intelligence monumentally.
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers slowly.
+It increases the users psionic resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A signet of knowledge                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration strongly. (14/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+The wearer of the signet learns more from his experiences.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A silver band                             |
+*-----------------------------------------------------------------------*
+It increases the users intelligence unnoticably. (1/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A simple looking gold ring                      |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A small circular ring, made of lead                  |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A small dark grey band                        |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users dexterity poorly. (5/20)
+It decreases the users constitution unnoticably. (1/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with incredible haste.
+It gives decent bonus to the skill 'doublehit'.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A small gold ring                           |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A small ornate golden ring                      |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It increases the users charisma pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'golden arrow'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A small silver ring                          |
+*-----------------------------------------------------------------------*
+It increases the users constitution unnoticably. (1/20)
+It increases the users wisdom unnoticably. (1/20)
+It has adequate armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A small skull-shaped ring                       |
+*-----------------------------------------------------------------------*
+It increases the users constitution unnoticably. (1/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It affects death.
+
+
+
+
+*-----------------------------------------------------------------------*
+|               A smooth Duskwalker band of burnished iron              |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A stained copper ring                         |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It decreases the users dexterity pathetically. (2/20)
+It increases the users constitution a tiny bit. (4/20)
+It has little armour class for its type (almost non-existent in general).
+It decreases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers a bit slower than average.
+It increases the users physical resistance a bit. (6/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|              A tarnished silver ring with nine gemstones              |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers somewhat slower than average.
+
+- Extra -
+The gemstones of this ring contain a volatile enchantment that is empowered
+by the absorbance of hostile magics. This energy can then be 'released' to
+provide a corresponding protection against the ravages of the world.
+The power of the protection is relative to the amount of magic that has been
+absorbed since the last release.
+Once the energy has been released, the resulting protection remains in place
+until it has been completely expelled by subsequent assaults. During this time
+further attempts of release are impossible.
+
+
+
+
+*-----------------------------------------------------------------------*
+|               A thick Ironward band inset with red stone              |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has monumental armour class for its type (tiny in general).
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A thick brass ring                          |
+*-----------------------------------------------------------------------*
+It increases the users strength an average amount. (11/20)
+It increases the users intelligence somewhat. (8/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers extremely slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                  A thick molybdenum ring with agates                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+It increases the users electric resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A thick pewter ring                          |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users psionic resistance adequately. (10/20)
+It increases the users electric resistance somewhat. (8/20)
+It gives decent bonus to the skill 'offensive efficiency'.
+It gives decent bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A thunderstruck brass ring                      |
+*-----------------------------------------------------------------------*
+It increases the users strength unbelievably much. (20/20)
+It increases the users constitution an average amount. (11/20)
+It decreases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration an average amount. (11/20)
+This item loses its magical powers slowly.
+It increases the users electric resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A timeworn sapphire ring                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers slowly.
+It increases the users acid resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                   A timeworn sapphire ring <pitted>                   |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution unnoticably. (1/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers fast.
+
+
+
+*-----------------------------------------------------------------------*
+|           A vivid looking circular piece of blackened metal           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+If properly charged, damaging the ring will make the wearer more resistant.
+The dust surrounding the ring is said to have a special effect when blown at
+someone.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A voidtouched ring with an emerald                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence impressively. (15/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers slowly.
+It increases the users asphyxiation resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A writhing signet of Teros                      |
+*-----------------------------------------------------------------------*
+It increases the users intelligence slightly. (7/20)
+It has non-existent armour class for its type (non-existent in general).
+It gives decent bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration an average amount. (11/20)
+It gives decent bonus to the skill 'shielding of death'.
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'unholy ceremony'.
+It gives decent bonus to the skill 'microclasm'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       An ancient sandstone ring                       |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers extremely slowly.
+
+- Extra -
+An ancient armor from a long forgotten civilization.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         An ancient steel ring                         |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom somewhat. (8/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers somewhat slower than average.
+It increases the users physical resistance adequately. (10/20)
+It gives decent bonus to the skill 'rage'.
+It decreases the users psionic resistance adequately. (10/20)
+It gives decent bonus to the skill 'berserk'.
+It gives small bonus to the skill 'ignore pain'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    An emerald embedded silver ring                    |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It modifies users resistance to certain type of drainage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                An exquisite platinum ring with diamonds               |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It increases the users charisma impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers extremely slowly.
+It increases the users shadow resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+It gives small bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                An exquisite platinum ring with emeralds               |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users charisma adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers extremely slowly.
+It increases the users physical resistance a bit. (6/20)
+It increases the users electric resistance a bit. (6/20)
+It increases the users acid resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 An exquisite platinum ring with rubies                |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It increases the users charisma impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers extremely slowly.
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|               An exquisite platinum ring with sapphires               |
+*-----------------------------------------------------------------------*
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It increases the users charisma adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers extremely slowly.
+It increases the users cold resistance somewhat. (8/20)
+It gives small bonus to the skill 'adaption of balance'.
+It gives small bonus to the skill 'adaption of order'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      An ice encased mithril ring                      |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users wisdom poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration an average amount. (11/20)
+This item loses its magical powers slowly.
+It increases the users cold resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             An ivory ring                             |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'harm body'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Band of haptic enhancement                      |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a bit. (6/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'pick locks'.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Elven ring                              |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users wisdom a tiny bit. (4/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Emerald ring                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It increases the users electric resistance somewhat. (8/20)
+
+- Extra -
+This object has hidden magical properties.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Gargoyle ring                             |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance somewhat. (8/20)
+It decreases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance a bit. (6/20)
+
+- Extra -
+The bearer of this ring will inherit some of the gargoyles' resistive
+capabilities.
+There is a small amount of gargoyle essence trapped within this ring.
+The wearer of this ring becomes resistant to gargoyle-like abilities.
+
+
+*-----------------------------------------------------------------------*
+|                       Gargoyle ring < battered >                      |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+
+- Extra -
+It modifies the users resistance against physical damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Golden ring                              |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                      Golden ring of regeneration                      |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                      Golden ring with a blue gem                      |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      Golden ring of regeneration                      |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      Golden ring with a blue gem                      |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Maelstrom of ages                           |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 Martyn's emerald embedded silver ring                 |
+*-----------------------------------------------------------------------*
+It increases the users constitution unnoticably. (1/20)
+It increases the users intelligence pathetically. (2/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It modifies users resistance to certain type of drainage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Obizuth's black mithril ring                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution somewhat. (8/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+It emits darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Phoenix Spine Ring                          |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom a bit. (6/20)
+It increases the users intelligence adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+It decreases the users cold resistance strongly. (14/20)
+It increases the users fire resistance strongly. (14/20)
+It gives small penalty to the spell 'icebolt'.
+It gives small bonus to the spell 'fire vulnerability'.
+It gives small penalty to the spell 'cold vulnerability'.
+It gives small bonus to the spell 'fire breathing act'.
+It gives small penalty to the spell 'greater cold invulnerability'.
+It gives small bonus to the spell 'firebolt'.
+It gives small penalty to the spell 'ice blade'.
+It gives small bonus to the spell 'fire blade'.
+It gives small penalty to the spell 'cold ray'.
+It gives small bonus to the spell 'flamestrike'.
+
+- Extra -
+This is a blessed artifact of Kirvana.
+This artifact will help protect you from the effects of fire.
+However, due to the fickle nature of the goddess of destruction
+and fire, the protection will sometimes falter, harming those
+around you.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Ring made of emerald                         |
+*-----------------------------------------------------------------------*
+It increases the users intelligence somewhat. (8/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers somewhat faster than average.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Ring of Defender                           |
+*-----------------------------------------------------------------------*
+It increases the users constitution a bit. (6/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Ring of Demons                            |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users magical resistance somewhat. (8/20)
+
+- Extra -
+It is one of the legendary Zi'taq rings.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Ring of Devils                            |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+- Extra -
+It is one of the legendary Zi'taq rings.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Ring of Enlightment                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Ring of Eternal Sands                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         Ring of Eternal Sands                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       Ring of Mmental Fortitude                       |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Ring of Shadows                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+You think that you could 'store' spell points within the ring.
+You could probably also later 'recall' some of them.
+You also feel you could concentrate on the ring for some reason.
+You get the feeling that the more spell points you store in the ring,
+   the less efficient the storage process is.
+
+
+*-----------------------------------------------------------------------*
+|                            Ring of Shadows                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+You think that you could 'store' spell points within the ring.
+You could probably also later 'recall' some of them.
+You also feel you could concentrate on the ring for some reason.
+You get the feeling that the more spell points you store in the ring,
+   the less efficient the storage process is.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Ring of Shifting Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It increases the users constitution slightly. (7/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         Ring of Shifting Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users constitution slightly. (7/20)
+It increases the users wisdom slightly. (7/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Ring of dexterity                           |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Ring of dragons                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Ring of focused powers                        |
+*-----------------------------------------------------------------------*
+It has adequate armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Ring of goblins                            |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Ring of infravision                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It allows the user to see in darkness.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Ring of mana restoration                       |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Ring of the Farshot                          |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom somewhat. (8/20)
+It decreases the users intelligence slightly. (7/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Ring of the Tower                           |
+*-----------------------------------------------------------------------*
+It has adequate armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'essence eye'.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Rotten ring                              |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users wisdom pathetically. (2/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Silver ring of canine dissipation                   |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 Silver ring with a heartshaped diamond                |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with incredible haste.
+It increases the users psionic resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                 Silver ring with a heartshaped diamond                |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users psionic resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Spine ring                              |
+*-----------------------------------------------------------------------*
+It increases the users dexterity nicely. (13/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'steal'.
+It gives small bonus to the skill 'backstab'.
+
+- Extra -
+It modifies the skill steal.
+It modifies the skill backstab.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Cyclops' Left Eye                         |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users constitution somewhat. (8/20)
+It decreases the users intelligence unbelievably much. (20/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+It increases the users physical resistance somewhat. (8/20)
+It decreases the users psionic resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           The Entropic Coil                           |
+*-----------------------------------------------------------------------*
+It decreases the users constitution unbelievably much. (20/20)
+It increases the users intelligence impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+It decreases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It decreases the users poison resistance somewhat. (8/20)
+It decreases the users physical resistance somewhat. (8/20)
+It gives tiny bonus to the skill 'chaos from invariance'.
+It gives small penalty to the skill 'order from chaos'.
+It gives small bonus to the skill 'chaos theory'.
+It increases the users psionic resistance somewhat. (8/20)
+It gives tiny bonus to the skill 'adaption of chaos'.
+It gives small penalty to the skill 'adaption of order'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Grey Tear of Gyges                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom superbly. (16/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration a bit. (6/20)
+It increases the users hitpoints pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+It increases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   The bloodstone ring of punishment                   |
+*-----------------------------------------------------------------------*
+It increases the users constitution a bit. (6/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoints pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'system shock'.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+It increases the users psionic resistance a bit. (6/20)
+It increases the users asphyxiation resistance a bit. (6/20)
+It gives decent bonus to the skill 'ignore pain'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 The copper ceremonial ring of Lucifer                 |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It alters the users visibility
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The ebon ring of the elder serpent                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence noticably. (9/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'soul manipulation'.
+
+- Extra -
+Ring of the Elder Serpent modifies the skill soul manipulation.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  The glimmering ring of bulging mass                  |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                            The loop of fire                           |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   The pewter signet ring of Lucifer                   |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It alters the users visibility
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The ring called Sombaso                        |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It alters the users visibility
+Its effects can not be predicted
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The ring of Brave Deeds                        |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution pathetically. (2/20)
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+This ring will make its wearer ever so brave.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The ring of Rememberance                       |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom a tiny bit. (4/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has non-existent armour class for its type (non-existent in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+This ring will shelter the wearer's memories.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The ring of concealment                        |
+*-----------------------------------------------------------------------*
+It increases the users dexterity impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration slightly. (7/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+This ring can conceal some of the users magical actions.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The ring of godly protection                     |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution impressively. (15/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+This ring can protect the user greatly.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The ring of illusionary protection                  |
+*-----------------------------------------------------------------------*
+It increases the users intelligence somewhat. (8/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'quick shielding'.
+It gives small bonus to the skill 'shielding control'.
+It gives small bonus to the skill 'mastery of illusion'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            The ring of mire                           |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity ILLEGALLY.
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           The ring of souls                           |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The ring of the Mad Architect                     |
+*-----------------------------------------------------------------------*
+It decreases the users constitution adequately. (10/20)
+It decreases the users wisdom unbelievably much. (20/20)
+It increases the users intelligence phenomenally.
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+It gives small bonus to the skill 'magical engineering'.
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'dweomercraft'.
+It gives small bonus to the skill 'order from chaos'.
+It increases the users magical resistance somewhat. (8/20)
+It gives small bonus to the skill 'mathematics'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The ring of the Necromancer                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It allows the user to see in darkness.
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'control'.
+It gives decent bonus to the spell 'chain'.
+
+- Extra -
+It modifies the user's spell knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          The ring of the Oni                          |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a tiny bit. (4/20)
+It decreases the users wisdom a bit. (6/20)
+It decreases the users intelligence a bit. (6/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The ring of the drixies                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         The ring of the tower                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence poorly. (5/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'essence eye'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The ring of the vampiress                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                           The ring of thorns                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The signet of shorn skies                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom an average amount. (11/20)
+It increases the users intelligence pitifully. (3/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers slowly.
+It gives small bonus to the spell 'summon storm'.
+It gives decent bonus to the spell 'skyfire'.
+It gives decent bonus to the skill 'air lore'.
+
+- Extra -
+The signet can be 'rotated' to open up the clouds in the sky.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The signet ring of Torquemada                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom impressively. (15/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers incredibly slowly.
+It gives decent bonus to the skill 'litany'.
+It gives decent bonus to the skill 'rectitude'.
+It gives decent bonus to the skill 'will of god'.
 

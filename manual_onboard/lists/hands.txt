@@ -1,3 +1,94 @@
-# Paste the `list <slot>` output for hands here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list hands
+
+*-------------------------------------------------------------*
+|                     Armour slot - Hands                     |
+*-------------------------------------------------------------*
+| A Set of Bronze Kote                                        |
+| A Set of Bronze Kote [fading]                               |
+| A pair of Aetherweave gloves embroidered with sigils        |
+| A pair of Duskwalker gloves balanced for combat             |
+| A pair of Ironward gauntlets scarred from combat            |
+| A pair of black silk gloves                                 |
+| A pair of chain gloves known as 'Chilling touch'            |
+| A pair of feather gloves                                    |
+| A pair of flamehardened gloves                              |
+| A pair of heavy black gauntlets                             |
+| A pair of mephitic gloves                                   |
+| A pair of mithril gauntlets with steel-spiked knuckles      |
+| A pair of radiant white gloves                              |
+| A pair of shimmering spidersilk gloves                      |
+| A pair of shockburned plate gauntlets                       |
+| A pair of skeletal hands                                    |
+| A pair of smudged gray gloves                               |
+| A pair of soft buckskin gloves                              |
+| A pair of supple leather gloves                             |
+| A pair of voidplate gauntlets                               |
+| A pair of white gloves                                      |
+| A worn pair of thick leather gloves                         |
+| Antique gauntlets                                           |
+| Black deerhide gloves                                       |
+| Black gloves                                                |
+| Blood gauntlets of KaziRak < Dripping Blood >               |
+| Blue steel gauntlets                                        |
+| Blue steel gauntlets                                        |
+| Bright steel gauntlets                                      |
+| Cat claws                                                   |
+| Cat claws < battered >                                      |
+| Chainmail Gauntlets                                         |
+| Decorative silver gauntlets                                 |
+| Eldritch Knight's Gloves, woven with sigil threads          |
+| Gaseous Gloves                                              |
+| Gauntlets of the Guardian                                   |
+| Gauntlets of the Titans                                     |
+| Gloomy Gloves                                               |
+| Gloves of Mischief                                          |
+| Gloves of Sorcery                                           |
+| Gloves of Wizardry                                          |
+| Gloves of concentration                                     |
+| Gloves of the Adder                                         |
+| Gloves of the Fates                                         |
+| Gloves of the frost                                         |
+| Gold embroidered black gloves                               |
+| Gravitational Gauntlets                                     |
+| Green gloves of Greenlight                                  |
+| Handwraps of nebular vapor                                  |
+| Large rainbow covered gloves                                |
+| Leather gloves                                              |
+| Leather gloves                                              |
+| Magical gloves of Tower                                     |
+| Mithril gauntlets with steel-spiked knuckles                |
+| Myrmidon's gloves, crafted for combat resilience            |
+| Nightblack spiked gloves                                    |
+| Old cloth work gloves                                       |
+| Old leather work gloves                                     |
+| Paws of Interfector                                         |
+| Red gloves with golden decorations                          |
+| Rosebud Gloves                                              |
+| Rustproof studded titanium gauntlets                        |
+| Sanctifier's mitts, stitched with benevolent sigils         |
+| Shining gauntlets                                           |
+| Sigil Covered Gloves                                        |
+| Single Black Glove                                          |
+| Single Black Glove                                          |
+| Starstream Gauntlets                                        |
+| The Ancient Gloves of The Shapeshifter                      |
+| The Ancient Gloves of The Shapeshifter                      |
+| The Gauntlets of Brutality                                  |
+| The Gloves of High Sorcery <dark glow>                      |
+| The Gloves of the Magi                                      |
+| The cobalt-blue gauntlets of Morin                          |
+| The dark-blue and frost covered gloves of Mephala           |
+| The gauntlets of the drow guardian                          |
+| The gloves of life known as 'Sherak'                        |
+| The gloves of swordsman                                     |
+| The gloves of the Magi                                      |
+| The gloves of the Magi *dark aura*                          |
+| The magical gloves of the tower                             |
+| The silver threadded gloves of Grimoan                      |
+| Working gloves                                              |
+| A pair of golden cuff studs                                 |
+| The Gloves of Withering                                     |
+'-------------------------------------------------------------'
+
 

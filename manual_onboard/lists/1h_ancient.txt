@@ -1,3 +1,59 @@
-# Paste the `list <slot>` output for 1h_ancient here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 1h ancient
+
+*-------------------------------------------------------------*
+|                   Weapon type - 1h ancient                  |
+*-------------------------------------------------------------*
+|                                                             |
+| A black spiked whip of torment                              |
+| A broken bottle                                             |
+| A festering scalpel                                         |
+| A frostworm's serrated mandible                             |
+| A giant tendril of kelp                                     |
+| A hayfork                                                   |
+| A large icepick                                             |
+| A long leather whip                                         |
+| A mining pick                                               |
+| A mining pick                                               |
+| A pair of steel tongs                                       |
+| A pulsing mystic stone rod                                  |
+| A rawhide whip                                              |
+| A rusty meathook                                            |
+| A sharp looking cleaver                                     |
+| A sharp spear                                               |
+| A sharpened switch                                          |
+| A small Farmer's sickle                                     |
+| A steel chain                                               |
+| A steel crowbar                                             |
+| A strong shovel                                             |
+| A sturdy iron storm lantern                                 |
+| A tarnished iron sickle                                     |
+| A thorn studded bullwhip                                    |
+| A thunderstruck meteoric iron flail                         |
+| An old three-headed flail                                   |
+| An old worn kama                                            |
+| An opalescent talon                                         |
+| Animal handlers whip                                        |
+| Basilisk's claw                                             |
+| Black morning star                                          |
+| Black scythe of the Phantom                                 |
+| Brass knuckles                                              |
+| Flame blade                                                 |
+| Garcan's spoon                                              |
+| Jet black scythe                                            |
+| Metallic claws                                              |
+| Onyx sickle                                                 |
+| Onyx sickle                                                 |
+| Onyx sickle                                                 |
+| Onyx sickle                                                 |
+| Onyx sickle                                                 |
+| Onyx sickle                                                 |
+| Small shovel                                                |
+| Studded whip                                                |
+| The ancient tooth of Dune 'Shay'Hulud' <*humming*>          |
+| The celestial flail, 'Dawnstar'                             |
+| The fang of Kriesha                                         |
+| The skeletal flail called 'The dead man's hand'             |
+| Willbreaker, the whip of submission                         |
+'-------------------------------------------------------------'
 

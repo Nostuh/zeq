@@ -38,6 +38,21 @@ The blade of the talon can be 'transformed' into other shapes.
 
 
 *-----------------------------------------------------------------------*
+|                        A blue steel long sword                        |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does electric damage unbelievably much. (20/20)
+
+- Extra -
+It is especially useful against spellcasters.
+
+
+
+
+*-----------------------------------------------------------------------*
 |                        A bright steel longsword                       |
 *-----------------------------------------------------------------------*
 It increases hit chance a good amount. (12/20)
@@ -365,6 +380,14 @@ It increases hit chance a tiny bit. (4/20)
 It has tremendous weapon class for its type (good in general).
 This item loses its magical powers with average speed.
 It does electric damage strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A shining longsword                          |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
 
 
 
@@ -944,6 +967,19 @@ It increases the users electric resistance somewhat. (8/20)
 
 
 *-----------------------------------------------------------------------*
+|                      The Great Blade of Illusion                      |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (nice in general).
+It increases the users dexterity adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does electric damage magnificently. (18/20)
+It increases the users electric resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
 |                            The Shadowblade                            |
 *-----------------------------------------------------------------------*
 It increases hit chance tremendously. (17/20)
@@ -988,6 +1024,17 @@ This is a special weapon.
 The sword does a great amount of extra dmg against smaller foes than you.
 The sword may rebel if made to fight larger foes.
 
+
+
+
+*-----------------------------------------------------------------------*
+|                            The drow slayer                            |
+*-----------------------------------------------------------------------*
+It increases hit chance unbelievably much. (20/20)
+It has awesome weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does cold damage somewhat. (8/20)
 
 
 

@@ -1,3 +1,387 @@
-# 1h_axe weapon (1h, class=axe) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
 
+*-----------------------------------------------------------------------*
+|                               A cleaver                               |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A double-bladed meat cleaver (1h) (balanced)             |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (adequate in general).
+It increases the users strength impressively. (15/20)
+It increases the users dexterity impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+It gives decent bonus to the skill 'spot weakness'.
+It increases damage impressively. (15/20)
+It does acid damage monumentally.
+It increases critical chance phenomenally.
+It gives great bonus to the skill 'cleave'.
+It gives decent bonus to the skill 'axe fighting style'.
+It gives great bonus to the skill 'hurl axes'.
+It gives decent bonus to the skill 'axe mastery'.
+
+- Extra -
+The cleaver is naturally balanced.
+The cleaver is unsurprisingly excellent at cleaving.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A dual-bladed goblin axe                       |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A feathered tomahawk                         |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   A frighteningly sharp meat cleaver                  |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A glossy platinum axe                         |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has excellent weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does psionic damage a tiny bit. (4/20)
+It increases critical chance poorly. (5/20)
+
+- Extra -
+This is an illithidwrought weapon and as such has a measure of awareness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                               A hand axe                              |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A huge butcher axe                          |
+*-----------------------------------------------------------------------*
+It has tremendous weapon class for its type (decent in general).
+This item loses its magical powers with average speed.
+It does electric damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A red handled axe                           |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It does fire damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                A sturdy looking stone made butchers axe               |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               A tiny axe                              |
+*-----------------------------------------------------------------------*
+It has almost non-existent weapon class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+
+Something is not right about this weapon.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A titanium axe                            |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has superb weapon class for its type (decent in general).
+It increases the users strength poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+
+- Extra -
+It has special powers against undead.
+It modifies the user's strength.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         An antique bearded axe                        |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has tremendous weapon class for its type (decent in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does cold damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        An antique goosewing axe                       |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (decent in general).
+This item loses its magical powers a bit slower than average.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance a bit. (6/20)
+It increases damage a bit. (6/20)
+It does cold damage magnificently. (18/20)
+It increases critical chance pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          An ordinary hand axe                         |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Axe of the Sun                            |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It emits light.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   Belinik's battle axe of sharpness                   |
+*-----------------------------------------------------------------------*
+It decreases hit chance unbelievably much. (20/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It does cold damage superbly. (16/20)
+
+- Extra -
+It is heavily cursed.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                Belinik's battle axe of wounding (rusty)               |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage noticably. (9/20)
+It does cold damage somewhat. (8/20)
+
+- Extra -
+It is cursed.
+
+
+*-----------------------------------------------------------------------*
+|                    Belinik's battle axe of wounding                   |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It decreases damage divinely.
+It does cold damage superbly. (16/20)
+
+- Extra -
+It is heavily cursed.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Dirty Goblin axe                           |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Gutripper                               |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers slowly.
+It increases damage adequately. (10/20)
+It does asphyxiation damage tremendously. (17/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            Lumberjacks axe                            |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Onyx hatchet                             |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage a good amount. (12/20)
+It does cold damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx hatchet                             |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage a good amount. (12/20)
+It does electric damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx hatchet                             |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage a good amount. (12/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx hatchet                             |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage a good amount. (12/20)
+It does psionic damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Orcish axe                              |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                                Pickaxe                                |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            The Serpent Axe                            |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+It does poison damage magnificently. (18/20)
+
+- Extra -
+The serpent axe is able to 'cleave' some types of spacial
+barriers, though in doing so it is known to lower the axe's
+magical abilities and blade sharpness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The battle axe, 'White Crescent'                   |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (adequate in general).
+It increases the users strength adequately. (10/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It increases damage strongly. (14/20)
+It does magical damage unbelievably much. (20/20)
+
+- Extra -
+This axe is more effective against the undead.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The dreaded battleaxe of Sintk                    |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has great weapon class for its type (mediocre in general).
+It increases the users strength poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance a bit. (6/20)
+It increases damage slightly. (7/20)
+It does psionic damage unnoticably. (1/20)
+
+
+
+*-----------------------------------------------------------------------*
+|               The mithril throwing axe, 'Ruin's Return'               |
+*-----------------------------------------------------------------------*
+It has non-existent weapon class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+The axe is perfectly weighted for throwing, dealing more damage and returning
+more quickly to the thrower.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The ranger axe (battered)                       |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage noticably. (9/20)
+It does electric damage poorly. (5/20)
+
+*-----------------------------------------------------------------------*
+|                     The ranger axe (1h) (balanced)                    |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers somewhat slower than average.
+It increases damage magnificently. (18/20)
+It does electric damage an average amount. (11/20)
+
+- Extra -
+A furious ancestor spirit is bound into it.
+
+
+You can't find any records about "Meat cleaver" in the library.
+You can't find any records about "The Axe of Hurling" in the library.

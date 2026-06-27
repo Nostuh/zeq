@@ -1,3 +1,28 @@
 # Paste the `list <slot>` output for 1h_polearm here (the box of | item names |).
 # Then run: node scripts/onboard_eq.mjs --commands
 
+
+
+list 1h polearm
+
+*-------------------------------------------------------------*
+|                   Weapon type - 1h polearm                  |
+*-------------------------------------------------------------*
+| A badly decayed arm                                         |
+| A glossy platinum spear                                     |
+| A legionnaire's spear                                       |
+| A short spear                                               |
+| A twiggy and well-sharpened wooden spear                    |
+| An orcish spear                                             |
+| An used looking steel spear                                 |
+| Black pole                                                  |
+| Dark headed spear                                           |
+| Greenlight spear                                            |
+| Onyx glaive                                                 |
+| Onyx glaive                                                 |
+| Onyx glaive                                                 |
+| Onyx glaive                                                 |
+| Spear of the Flame                                          |
+| Short spear                                                 |
+'-------------------------------------------------------------'
+

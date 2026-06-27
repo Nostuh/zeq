@@ -1,3 +1,441 @@
-# 2h_polearm weapon (2h, class=polearm) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
+
+*-----------------------------------------------------------------------*
+|                          A Recruiter's lance                          |
+*-----------------------------------------------------------------------*
+It has pathetic weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A cloud guards pike                          |
+*-----------------------------------------------------------------------*
+It increases hit chance unnoticably. (1/20)
+It has mediocre weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does asphyxiation damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A double-edged bardiche 'Venomtongue'                 |
+*-----------------------------------------------------------------------*
+It has tremendous weapon class for its type (superb in general).
+This item loses its magical powers with average speed.
+It does poison damage magnificently. (18/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A dual-tipped lance called 'Echotwin'                 |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (tremendous in general).
+It increases the users strength impressively. (15/20)
+It increases the users constitution adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It increases damage adequately. (10/20)
+It does electric damage unbelievably much. (20/20)
+It increases critical chance impressively. (15/20)
+It gives small bonus to the skill 'cavalier's charge'.
+
+- Extra -
+This spear radiates powerful electricity.
+The spear drives true toward its enemy's heart.
+
+
+*-----------------------------------------------------------------------*
+|                 A dual-tipped lance called 'Echotwin'                 |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (tremendous in general).
+It increases the users strength impressively. (15/20)
+It increases the users constitution adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It increases damage adequately. (10/20)
+It does fire damage unbelievably much. (20/20)
+It increases critical chance impressively. (15/20)
+It gives small bonus to the skill 'cavalier's charge'.
+
+- Extra -
+This spear radiates powerful heat.
+The spear drives true toward its enemy's heart.
+
+
+
+
+*-----------------------------------------------------------------------*
+|   A dual-tipped spear, resonating with a harmonious yet deadly aura   |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has superb weapon class for its type (excellent in general).
+It increases the users strength adequately. (10/20)
+It increases the users constitution somewhat. (8/20)
+This item loses its magical powers somewhat slower than average.
+It increases damage a bit. (6/20)
+It does electric damage strongly. (14/20)
+It increases critical chance pitifully. (3/20)
+It gives small bonus to the skill 'cavalier's charge'.
+
+- Extra -
+This spear radiates powerful electricity.
+The spear drives true toward its enemy's heart.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A glossy platinum glaive                       |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has nice weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does psionic damage a tiny bit. (4/20)
+It increases critical chance poorly. (5/20)
+
+- Extra -
+This is an illithidwrought weapon and as such has a measure of awareness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A heavy rune-etched fauchard                     |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has great weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does magical damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A large, slimy troll's penis                     |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A long sparkling steel rod                      |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It emits light.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            A long steel rod                           |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A massive fauchard called 'The Flametongue'              |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (tremendous in general).
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+This item loses its magical powers slowly.
+It increases damage nicely. (13/20)
+It does fire damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|              A massive halberd called 'the solesearcher'              |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has nice weapon class for its type (good in general).
+It increases the users strength a bit. (6/20)
+It increases the users constitution pitifully. (3/20)
+This item loses its magical powers very fast.
+It gives tiny bonus to the skill 'balanced form'.
+It gives tiny bonus to the skill 'blood harvest'.
+It increases damage slightly. (7/20)
+It does asphyxiation damage a good amount. (12/20)
+It gives tiny bonus to the skill 'edged polearms'.
+
+- Extra -
+An imprint on the underside of the haft reads 'Gekko Ind.'
+
+
+
+
+*-----------------------------------------------------------------------*
+|              A massive halberd called 'the soulsearcher'              |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (tremendous in general).
+It increases the users strength adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'balanced form'.
+It gives small bonus to the skill 'blood harvest'.
+It increases damage slightly. (7/20)
+It does asphyxiation damage unbelievably much. (20/20)
+It gives small bonus to the skill 'edged polearms'.
+
+- Extra -
+There is a lifeleeching demon inside the weapon.
+The demon can be fed to give the weapon more power.
+The weapon can be hurled against enemies.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A massive rune-etched lochaber axe                  |
+*-----------------------------------------------------------------------*
+It increases hit chance unnoticably. (1/20)
+It has excellent weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does magical damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A mighty obsidian voulge                       |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has magnificent weapon class for its type (tremendous in general).
+This item loses its magical powers incredibly slowly.
+It increases the users cold resistance strongly. (14/20)
+It increases damage slightly. (7/20)
+It does fire damage immensely.
+It increases critical chance slightly. (7/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A shimmering Halberd                         |
+*-----------------------------------------------------------------------*
+It decreases hit chance pitifully. (3/20)
+It has decent weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A vicious barbed frostburned pike                   |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers incredibly slowly.
+It increases the users fire resistance strongly. (14/20)
+It increases damage adequately. (10/20)
+It does cold damage immensely.
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|             A vile, diseased polearm known as 'Plaguepike'            |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has magnificent weapon class for its type (tremendous in general).
+This item loses its magical powers very slowly.
+It increases damage poorly. (5/20)
+It does poison damage unbelievably much. (20/20)
+It increases critical chance poorly. (5/20)
+It increases the users psionic resistance adequately. (10/20)
+
+- Extra -
+The Plaguepike carries within it potent poison and disease.
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           A winged war spear                          |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has impressive weapon class for its type (great in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does fire damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A wooden spear                            |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|            An ancient silver longspear called 'Bloodspear'            |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has awesome weapon class for its type (superb in general).
+It increases the users strength adequately. (10/20)
+It increases the users armour class a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+It does magical damage tremendously. (17/20)
+
+- Extra -
+It allows the user to walk on water.
+It can perform 'resurrect' once a month.
+It can perform 'cure disease' once a week.
+It can perform 'heal body' once a week.
+Special abilities can used by typing: 'point bloodspear at <target>'.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        Arrakis army battlespear                       |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Bone spear                              |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Halberd of Shining Might                       |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has superb weapon class for its type (impressive in general).
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does fire damage a tiny bit. (4/20)
+
+- Extra -
+It was created especially for Daln.
+It modifies the user's dexterity.
+It modifies the user's constitution.
+It causes special poison damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Hastur's Scythe                            |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers extremely slowly.
+It increases damage impressively. (15/20)
+It does psionic damage unbelievably much. (20/20)
+It increases critical chance unbelievably much. (20/20)
+It gives decent bonus to the skill 'hit placement'.
+It gives decent bonus to the skill 'critical'.
+
+- Extra -
+The weapon provides willing assistance to its wielder, reducing the
+effort expended to swing it.
+The scythe's eye senses openings in its enemy's defenses.
+The scythe helps its wielder create and exploit combat opportunities.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Jet Black Harpoon                           |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has superb weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does cold damage superbly. (16/20)
+
+- Extra -
+Jet Black Harpoon can skewer its enemies on its razor sharp tines.
+Enemies skewered will have their blood turned to ice, causing a
+great deal of delayed damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Rusty short trident                          |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Severance, the sentient voulge                    |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (superb in general).
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+It does acid damage unbelievably much. (20/20)
+It increases critical chance unbelievably much. (20/20)
+
+- Extra -
+A wise and intelligent wielder will have a better chance of taming
+this weapon.  Brute force, grim resolve and the discipline of inner
+strength are also rumored to help.
+
+Those who master the weapon will find it moves effortlessly of its
+own accord.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Sharp Long Spear                           |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Soild steel pike                           |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 The massive glaive called 'Wyrmslayer'                |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has superb weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does cold damage superbly. (16/20)
+
+
+You can't find any records about "Highland pike" in the library.
 

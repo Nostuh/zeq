@@ -1,3 +1,154 @@
-# Paste the `list <slot>` output for head here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list head
+
+*-------------------------------------------------------------*
+|                      Armour slot - Head                     |
+*-------------------------------------------------------------*
+| A Battlemask                                                |
+| A Flaming Halo                                              |
+| A Kruse helmet                                              |
+| A Samurai's Battlemask                                      |
+| A banded jade coronet                                       |
+| A beautiful golden crown                                    |
+| A black helmet                                              |
+| A black steel helmet with copper ornaments                  |
+| A bloody red crown                                          |
+| A blue nightcap                                             |
+| A brass helmet dripping with green ooze                     |
+| A bright steel barbute                                      |
+| A bright-red Visor <tm>                                     |
+| A copper helmet dripping with green ooze                    |
+| A crimson red helmet with a horn                            |
+| A curly white wig                                           |
+| A deep blue headband                                        |
+| A fine spellburned bycocket                                 |
+| A foreboding mask with a sinister, elongated beak           |
+| A formidable helmet, masterfully crafted from the mightiest terracarapid shell|
+| A formidable helmet, masterfully crafted from the mightiest terracarapid shell|
+| A funky-looking mushroom hat                                |
+| A gleaming Aetherweave circlet                              |
+| A green bathing cap                                         |
+| A grey blindfold                                            |
+| A heavy Ironward helm crested with steel                    |
+| A heavy horned barbute                                      |
+| A hideous looking golden mask                               |
+| A hood made from tree leaves                                |
+| A hooded Duskwalker visor of dark weave                     |
+| A large barrel-shaped helmet                                |
+| A large golden crown                                        |
+| A large green pointy hat                                    |
+| A mask of the witch goddess, Rangda                         |
+| A massive black mask                                        |
+| A pair of crooked eyeglasses                                |
+| A pale white gemstone                                       |
+| A polished steel sallet                                     |
+| A pulsating steel great helm                                |
+| A ragged hat                                                |
+| A reaver's mandibles                                        |
+| A set of gilt antlers                                       |
+| A silly-looking mushroom hat                                |
+| A silver headband                                           |
+| A simple platinum headband                                  |
+| A sparkling bronze crown                                    |
+| A visored brass helmet dripping with green ooze             |
+| A visored copper helmet dripping with green ooze            |
+| A whirl of freezing winds                                   |
+| A wicked looking crimson hood                               |
+| A worn black woolly hat                                     |
+| A yellowed reindeer skull                                   |
+| An abalone-shell circlet called 'The Extender'              |
+| An antique burgonet                                         |
+| An exquisite platinum diadem with diamonds                  |
+| An exquisite platinum diadem with emeralds                  |
+| An exquisite platinum diadem with sapphires                 |
+| An opulent golden headdress                                 |
+| An orange hat                                               |
+| An ordinary looking stone helmet                            |
+| An shiny ice encased barbute                                |
+| An umbral veil                                              |
+| An umbral veil < Prismatic >                                |
+| Battered Straw Hat                                          |
+| Black cloth headdress                                       |
+| Black iron helmet of the Balrog                             |
+| Black pointed helmet                                        |
+| Blue hat decorated with yellow stars                        |
+| Bone helmet                                                 |
+| Centurion's helmet                                          |
+| Chrome plated helm                                          |
+| Circlet of clarity                                          |
+| Crown of the Elves                                          |
+| Crown of the Imp King                                       |
+| Crown of the Ringwraith King                                |
+| Crown of the Ringwraith King                                |
+| Cursed Crown                                                |
+| Dark blue Crown of Octopus                                  |
+| Dark silver diadem                                          |
+| Dirty goblin helmet                                         |
+| Druids hat                                                  |
+| Eldritch Knight's Helm, crowned with arcane sigils          |
+| Eye of the Demon King Gyaratkh                              |
+| Golden crown of frogmen                                     |
+| Green Laurels                                               |
+| Hat of the high wizard                                      |
+| Headband of Qen Tie                                         |
+| Headdress of Darkness [Pulsating]                           |
+| Helm of dimensional travel                                  |
+| Helm of light, the unbreakable helm of gods                 |
+| Helmet of the Dead                                          |
+| Hood of Despair                                             |
+| Hood of darkness                                            |
+| Iron helm                                                   |
+| Mitre of Divine Power                                       |
+| Mitre of Divine Power                                       |
+| Myrmidon's helm, fortified with impenetrable dark steel     |
+| Ragged Straw Hat                                            |
+| Red Ribbon                                                  |
+| Sanctifier's diadem, gleaming with healing radiance         |
+| Scaled helmet of Tiamat                                     |
+| Scholar's Cap                                               |
+| Scholar's Cap [fading]                                      |
+| Shadow Helmet                                               |
+| Shiny red devil horns                                       |
+| Silver-rimmed, six-eyed glasses                             |
+| Skullshaped demonhelm                                       |
+| Spiked helm of devils                                       |
+| Steel helm                                                  |
+| Sulfur helmet (anti intelligent)                            |
+| The Bloodstained Crown of Darkness                          |
+| The Bonemask of Disappearence                               |
+| The Crown of Darkness                                       |
+| The Crown of Darkness                                       |
+| The Crown of Gondor                                         |
+| The Dark blue Crown of Octopus                              |
+| The Harbinger's Wanyugo Mask                                |
+| The King's Crown                                            |
+| The Many Jeweled Crown of the King of Aquilonia             |
+| The Pale King's Circlet                                     |
+| The Pointdexter's Magical Leprachaun Hat                    |
+| The Schandmaske of Duntrench                                |
+| The black crown of spiders                                  |
+| The black iron helmet of the Balrog                         |
+| The blackened iron crown of the Wraithlords                 |
+| The bloody red crown                                        |
+| The bone helmet of the demon king Gyaratkh                  |
+| The brightly shining helmet of Yeao                         |
+| The crown of the liches                                     |
+| The crown of visions                                        |
+| The glimmering crown of Gruumsh                             |
+| The gory eye of the demon king Gyaratkh                     |
+| The hat of the burgomaster                                  |
+| The helm of thousand eyes                                   |
+| The helmet of the bears                                     |
+| The helmet of the king of bears                             |
+| The hood of the senses                                      |
+| The horned skull of the dragonking                          |
+| The horns of morbid visions                                 |
+| The mask of the charlatan                                   |
+| The shining helmet of Yeao                                  |
+| The skull of a Lizard                                       |
+| The steel mesh mask of 'The Raven'                          |
+| War mask of the Devils                                      |
+| Warmask of Vision                                           |
+| Warmask of Vision < battered >                              |
+'-------------------------------------------------------------'
 

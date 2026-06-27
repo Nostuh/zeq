@@ -1,3 +1,174 @@
-# Paste the `list <slot>` output for held here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+
+list held
+
+*-------------------------------------------------------------*
+|                      Armour slot - Held                     |
+*-------------------------------------------------------------*
+| A Duskwalker totem wrapped in dark cords                    |
+| A Yule Token                                                |
+| A ball of regeneration                                      |
+| A banded jade turbo shell                                   |
+| A beautiful small black pearl                               |
+| A big black pearl                                           |
+| A big black pearl                                           |
+| A black beaded rosary                                       |
+| A blazing ember orb                                         |
+| A blue lucky charm                                          |
+| A brown book                                                |
+| A censer of shadows                                         |
+| A crude iron talisman                                       |
+| A crude iron talisman                                       |
+| A crude stone sundial                                       |
+| A crumpled silver wand, covered in runes                    |
+| A crystalline ball embellished with the symbol of infinity  |
+| A cylinder of blue jasper <inert>                           |
+| A cylinder of blue jasper <vibrating>                       |
+| A desiccated hand                                           |
+| A detoxifying decanter                                      |
+| A dull crystal ball                                         |
+| A feather duster                                            |
+| A flask of oil (full)                                       |
+| A fragile hourglass of mercy (full)                         |
+| A frail elven hourglass                                     |
+| A glimmer scarab staff (inactive)                           |
+| A golden sceptre                                            |
+| A gory black skull                                          |
+| A grimy black lantern                                       |
+| A heavy piece of iron                                       |
+| A large gold coin                                           |
+| A large shimmering orb                                      |
+| A leather covered hymn book                                 |
+| A long venomtouched cobra fang                              |
+| A magical wand of <lower physical resistance> <8>           |
+| A magical wand of glow restoration <1>                      |
+| A milky-white crystal                                       |
+| A miniature silver pocketwatch                              |
+| A nice walking stick                                        |
+| A nondescript black box                                     |
+| A old, battered scroll                                      |
+| A pearl of protection                                       |
+| A polished bronze sundial                                   |
+| A polished silver sundial                                   |
+| A prayer book with ivory covers                             |
+| A primitive clay idol                                       |
+| A profane canopic jar                                       |
+| A pulsating voidplate sphere                                |
+| A pulsing crystalline awakening stone                       |
+| A puppet made of twigs and mud                              |
+| A round gray stone                                          |
+| A shard of milky-white crystal                              |
+| A shard of sunstone                                         |
+| A shard of the Illearth Stone                               |
+| A shimmering jade sceptre                                   |
+| A shimmering tail feather                                   |
+| A shining chromed sphere                                    |
+| A shining silvery eyeball of the Lavaworm                   |
+| A silver pocket keg                                         |
+| A small leather map                                         |
+| A small light green stone                                   |
+| A sparkling black orb                                       |
+| A sparkling sapphire                                        |
+| A sphere shaped stone                                       |
+| A standard of The Sufferance-legion                         |
+| A swirling eyeball of the Lavaworm                          |
+| A tarnished brass compass                                   |
+| A tattered Duntrench gonfalon                               |
+| A tattered and torn battleflag                              |
+| An Ironward war standard bound in leather cords             |
+| An ancient leather-bound book of languages                  |
+| An ancient leatherbound book                                |
+| An ancient leatherbound book                                |
+| An antique ashwood puzzle box                               |
+| An ebony staff                                              |
+| An enchanted gemstone                                       |
+| An eternal oil flask                                        |
+| An inscripted orb with prickly surface                      |
+| An intact frostburned globe                                 |
+| An iron lightning rod                                       |
+| An obsideon cane                                            |
+| An obsidian focus of channeling                             |
+| An old human skull                                          |
+| An old leather-bound book of scrolls                        |
+| An opaline unicorn horn                                     |
+| Black Skull                                                 |
+| Blood red eye of the Widow Spider                           |
+| Bone staff                                                  |
+| Book of alteration                                          |
+| Cube of Eternal Ice <cold>                                  |
+| Cube of Eternal Ice <dark>                                  |
+| Cube of Power                                               |
+| Dragon tooth                                                |
+| Ebony Telescope                                             |
+| Fork of mixing                                              |
+| Gem of Strength                                             |
+| Glittering Ruby                                             |
+| Grip of the Forest Archer                                   |
+| Hastur's Mirror                                             |
+| Jadrele's wand of firebolts                                 |
+| Kz the Crystal of Thunder                                   |
+| Kzraxtzt the Crystal of Seeing                              |
+| Leprachaun Handheld Mirror of Farseeing                     |
+| Lucifer's copper lightning rod                              |
+| Old elven staff                                             |
+| Orb of Eternal Sands                                        |
+| Orb of Eternal Sands                                        |
+| Orb of Eternal Sands                                        |
+| Orb of the Psychic Torment                                  |
+| Orcrest                                                     |
+| PK Crystal                                                  |
+| Palantir                                                    |
+| Pearl of Protection                                         |
+| Pink Lipstick                                               |
+| Ra the Crystal of Fire                                      |
+| Rainbow orb                                                 |
+| Rosewood Staff [Pulsating]                                  |
+| Royal Sceptre                                               |
+| Sceptre of harmony                                          |
+| Sceptre of tremors                                          |
+| Shimmering golden orb                                       |
+| Soft Sucker of Octopus                                      |
+| Sophia's Crystal Ball                                       |
+| Staff of Air                                                |
+| Staff of Might                                              |
+| Staff of Wisdom                                             |
+| Stone sceptre                                               |
+| Tattered old spell book                                     |
+| The Blazing Banner of Wrath (glowing)                       |
+| The Blazing Banner of Wrath (glowing)                       |
+| The Chalice of Renunciation                                 |
+| The Exchequer's quill                                       |
+| The Fell Prism                                              |
+| The Graven Icon of Vingt Cinq                               |
+| The Great Staff of the Ancient Elf                          |
+| The Horn of Sol                                             |
+| The Libram of Torment                                       |
+| The Lizard King's Staff                                     |
+| The Oculus Stone                                            |
+| The Orb of Health                                           |
+| The Orb of Health [fading]                                  |
+| The Orb of the Elements                                     |
+| The Orb of the Elements [fading]                            |
+| The Palantir                                                |
+| The Runed Staff of Life                                     |
+| The Sceptre of Spells                                       |
+| The Visitor's Passport                                      |
+| The Wand of Necromancy                                      |
+| The Warbanner of Clan Guzan                                 |
+| The black book of the ancients                              |
+| The blind eye of the Lavaworm                               |
+| The eye of the Grand Sultan                                 |
+| The gift of shadow                                          |
+| The heart of Cara'zin Oasis                                 |
+| The rod of Tyrone                                           |
+| The seal of an ancient empire                               |
+| The seal of an ancient empire <pitted>                      |
+| The skull of the Berserker-King                             |
+| The skull of the swamp monster                              |
+| The soft Sucker of Octopus                                  |
+| The white book of languages                                 |
+| Tome of Black Hell                                          |
+| Tome of the Master Scribe                                   |
+| A well crafted fishing rod                                  |
+'-------------------------------------------------------------'
 

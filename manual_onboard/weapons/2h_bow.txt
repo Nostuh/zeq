@@ -1,3 +1,130 @@
-# 2h_bow weapon (2h, class=bow) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
 
+
+*-----------------------------------------------------------------------*
+|                 'Jawellyn' the bow of deadly accuracy                 |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It is very easy to aim.
+It does more damage than class indicates.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A heavy Cantadorian warbow                      |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A heavy crossbow, equipped with a metal prod             |
+*-----------------------------------------------------------------------*
+It has ILLEGAL weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              An arbalest, mounted on the balcony railing              |
+*-----------------------------------------------------------------------*
+It has ILLEGAL weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|            An arbalest, mounted on top of the bastion wall            |
+*-----------------------------------------------------------------------*
+It has ILLEGAL weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           An elvish war bow                           |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+The elven war bow is more effective in he hands of an elf.
+The elven war bow is less powerful in the hands of a dwarf.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  An exquisite stave of a recurve bow                  |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (almost non-existent in general).
+This item loses its magical powers fast.
+
+- Extra -
+This is a divine artifact--known as Atrakis, the Everlasting Wind--graced
+by the touch of Xellios himself.
+As a god-blessed weapon this bow can be used only by those who have accepted
+Xellios as their deity.
+If the archer is seen worthy the bow will manifest a string, and its own
+arrows but their power is always subjective to the piety and the skill of
+the archer. Each manifested arrow will drain a very small amount of magical
+energy from the archer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 Black Hornet, the assassin's shortbow                 |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (almost non-existent in general).
+It increases the users dexterity impressively. (15/20)
+It gives great bonus to the skill 'dodge'.
+This item loses its magical powers incredibly slowly.
+It gives awesome bonus to the skill 'steady aim'.
+
+- Extra -
+The user of the bow can more easily maintain focus while taking damage.
+The size of the bow makes it somewhat quicker to load.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The composite bow, 'Rising Sun'                    |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (almost non-existent in general).
+This item loses its magical powers extremely slowly.
+
+- Extra -
+This bow draws its power from the sun, manifesting arrows of pure light as long
+as it is allowed to periodically recharge under the rays of the sun. While it
+will work in the darkness, it is more powerful if fired in direct sunlight.
+Due to the nature of its arrows, it is more lethal against the undead and those
+allergic to sunlight.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The longbow, 'Quarter of Midnight'                  |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (almost non-existent in general).
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The bow loads and fires quickly.
+The bow is easy to fire and less tiring to use.
+The size of the bow makes it unusable by the weak.
+
+
+
+You can't find any records about "A finely crafted bow of elven design" in the library.
+You can't find any records about "A hunter's bow" in the library.
+You can't find any records about "A long bow" in the library.
+You can't find any records about "An elven bow" in the library.

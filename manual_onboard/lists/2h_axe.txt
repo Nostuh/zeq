@@ -1,3 +1,34 @@
-# Paste the `list <slot>` output for 2h_axe here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 2h axe
+
+*-------------------------------------------------------------*
+|                     Weapon type - 2h axe                    |
+*-------------------------------------------------------------*
+| A Lochaber                                                  |
+| A deadly axe known as the Goblin Slayer                     |
+| A dented great-axe                                          |
+| A double-bladed icy battle axe                              |
+| A double-edged dwarven battle axe                           |
+| A double-edged dwarven battle axe                           |
+| A dwarven war axe with a leather bound handle               |
+| A glossy platinum battleaxe                                 |
+| An old bloody executioners axe                              |
+| Axe of Thunder                                              |
+| Black axe named 'Deathstorm'                                |
+| Dual-Bladed Battleaxe of the Phoenix                        |
+| Ebon Battleaxe                                              |
+| Lucifer's death axe                                         |
+| Lucifer's death axe                                         |
+| Officer's Axe                                               |
+| The Dragon Axe                                              |
+| The Executioner                                             |
+| The coiling axe of deception                                |
+| The famed axe of Thunder                                    |
+| The huge two-handed axe "iron claw"                         |
+| The huge two-handed iron axe "iron claw"                    |
+| The jeweled axe ''Grimrist''                                |
+| The sharp axe of the dragon lord                            |
+| Thunderedge                                                 |
+'-------------------------------------------------------------'
+
 

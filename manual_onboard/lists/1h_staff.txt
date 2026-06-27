@@ -1,3 +1,48 @@
-# Paste the `list <slot>` output for 1h_staff here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+
+list 1h staff
+
+*-------------------------------------------------------------*
+|                    Weapon type - 1h staff                   |
+*-------------------------------------------------------------*
+| A curious wand called 'The Meddler'                         |
+| A dark wooden staff                                         |
+| A flamehardened willow wand                                 |
+| A metal pole                                                |
+| A short, clublike staff                                     |
+| A simple looking wooden cane                                |
+| A simple looking wooden cane                                |
+| A toxin infused yew wand                                    |
+| An ordinary looking wooden stick                            |
+| Elder's Staff of Maps                                       |
+| Elder's Staff of Maps                                       |
+| Elder's Staff of Maps                                       |
+| Hastur's Sceptre                                            |
+| Leprachaun Anti-Gravity Wand                                |
+| Leprachaun Staff of Aggression                              |
+| Lord's Staff                                                |
+| Lumen Spire, the Aetherweaver's focus                       |
+| Onyx staff                                                  |
+| Onyx staff                                                  |
+| Onyx staff                                                  |
+| Onyx staff                                                  |
+| Slimy staff                                                 |
+| Staff of Gondor                                             |
+| Staff of Orcus                                              |
+| Staff of the BattleMage                                     |
+| Talendine's walking stick                                   |
+| The Asklepian Rod                                           |
+| The Cane of Command                                         |
+| The Holy Rod of Blackspawn                                  |
+| The Sceptre of the Prodigy                                  |
+| The Staff of Stirring                                       |
+| The heavy stone staff of Belinik                            |
+| The magical staff of Oda Nobunaga                           |
+| The staff of Denial                                         |
+| Wand of Wizardry                                            |
+| Wand of Wizardry                                            |
+| A runestick                                                 |
+| Staff                                                       |
+'-------------------------------------------------------------'
+
 

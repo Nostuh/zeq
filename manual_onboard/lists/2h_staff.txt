@@ -1,3 +1,56 @@
-# Paste the `list <slot>` output for 2h_staff here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 2h staff
+
+*-------------------------------------------------------------*
+|                    Weapon type - 2h staff                   |
+*-------------------------------------------------------------*
+| A Balanced Alabaster Battlestaff                            |
+| A black staff                                               |
+| A blue oaken staff                                          |
+| A burnished length of whalebone                             |
+| A glossy platinum quarterstaff                              |
+| A gnarled staff                                             |
+| A long shockburned quarterstaff                             |
+| A long staff with a steel tip                               |
+| A long twisted staff                                        |
+| A long wooden bo                                            |
+| A long wooden staff, Quaici                                 |
+| A peculiar looking walking stick made from rowan            |
+| A petrified heartwood staff named 'Driftwood'               |
+| A plain quarterstaff of dark walnut wood                    |
+| A plain-looking wooden staff                                |
+| A rotted oak staff                                          |
+| A scrollwork staff                                          |
+| A serpentine staff of bone                                  |
+| A soot-stained walnut quarterstaff                          |
+| A staff with a pulsing crystalline core                     |
+| A sturdy staff with delicate carvings                       |
+| An elegant whitewood staff                                  |
+| An exquisite whitewood staff                                |
+| An ornate whitewood staff                                   |
+| Ancient Staff of wonder                                     |
+| Brafasta's Icy Staff                                        |
+| Ivory staff                                                 |
+| Oaken staff                                                 |
+| Orcish Shamanic Staff                                       |
+| Pranthos' sceptre of channeling                             |
+| Shimmering Runed Staff                                      |
+| Staff of Grajuul                                            |
+| Staff of Kazlakhor                                          |
+| Staff of Kazlakhor                                          |
+| Staff of destruction                                        |
+| Swampy staff                                                |
+| Sylvan staff, pulsing with nature's venomous essence and vitality|
+| The Ancient Staff of Nate <tm> v1.3                         |
+| The Staff of Kazlakhor <dark glow>                          |
+| The Staff of Law                                            |
+| The black rod of the Soul Wringer                           |
+| The putrid staff of the Magi                                |
+| The rod of the Void Walker                                  |
+| The sceptre of the Deathless Sovereign                      |
+| The sceptre of the Mind Master                              |
+| Twilir the ornate staff of the seer                         |
+| Shepard's staff                                             |
+'-------------------------------------------------------------'
+
 

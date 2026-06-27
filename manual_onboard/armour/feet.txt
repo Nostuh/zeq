@@ -1,4 +1,1320 @@
-# feet armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
 
+*-----------------------------------------------------------------------*
+|             A kinky pair of boots named (Nylon) and (Beat)            |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence unbelievably much. (20/20)
+It increases the users charisma somewhat. (8/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'sneak'.
+It gives small penalty to the skill 'attack'.
+It gives small bonus to the skill 'hiding'.
+It gives small penalty to the skill 'quick chant'.
+
+- Extra -
+It grants resists and shit and other shit and even some jesus-like shit
+and stuff. And it's hardly in tune, but who gives a shit nor a flying fuck
+with a shit like this piece of SHIT!!
+
+
+
+*-----------------------------------------------------------------------*
+|                  A pair black boots with steel heels                  |
+*-----------------------------------------------------------------------*
+It has nice armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'horsemanship'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A pair of Dr. Martens shoes <tm>                   |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity pathetically. (2/20)
+It has awesome armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A pair of black crocodile skin boots                 |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom a good amount. (12/20)
+It increases the users intelligence pitifully. (3/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It decreases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pair of black sandals                        |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It gives decent bonus to the skill 'headcut'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A pair of boots made from red dragon scales              |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution unbelievably much. (20/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+It gives small bonus to the skill 'kick'.
+It gives small bonus to the skill 'flip kick'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of brown leather boots                     |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution pathetically. (2/20)
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A pair of brown leather sandals                    |
+*-----------------------------------------------------------------------*
+It increases the users intelligence unnoticably. (1/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A pair of fluffy bunny slippers                    |
+*-----------------------------------------------------------------------*
+It increases the users constitution unnoticably. (1/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of heavy black sabatons                    |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers extremely slowly.
+It increases the users shadow resistance somewhat. (8/20)
+It increases the users fire resistance adequately. (10/20)
+It gives awesome bonus to the skill 'inner strength'.
+It increases the users acid resistance adequately. (10/20)
+
+- Extra -
+While worn, these sabatons will increase the wearer's stamina considerably.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pair of leather scuffs                       |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a good amount. (12/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A pair of polished adamantite sabatons                |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users wisdom noticably. (9/20)
+It has superb armour class for its type (little in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A pair of purple boots                        |
+*-----------------------------------------------------------------------*
+It decreases the users constitution unnoticably. (1/20)
+It increases the users intelligence unnoticably. (1/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'chaos bolt'.
+
+- Extra -
+It modifies the user's spell knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           A pair of sandals                           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of shockburned plate boots                   |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users electric resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of silver-lined black boots                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users cold resistance somewhat. (8/20)
+
+- Extra -
+The spectral residue lingering around these boots can help keep the cold grasp of death at bay.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of solid leather boots                     |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity adequately. (10/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+Thick leather boots allows the wearer to walk through large puddles with ease.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of standard issue boots                    |
+*-----------------------------------------------------------------------*
+It increases the users constitution pathetically. (2/20)
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'kick'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of sturdy leather boots                    |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of thick leather boots                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+Thick leather boots allows the wearer to walk through large puddles with ease.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of thick water-proof boots                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+Water proof boots allows the wearer to walk through large puddles with ease.
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of thick water-proof boots                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity a bit. (6/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence slightly. (7/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+Water proof boots allows the wearer to walk through large puddles with ease.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                A pair of venomtouched leather moccasins               |
+*-----------------------------------------------------------------------*
+It increases the users dexterity an average amount. (11/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It increases the users charisma an average amount. (11/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A pair of worn leather boots                     |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of yellow wooden clogs                     |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Antique sabatons                           |
+*-----------------------------------------------------------------------*
+It has superb armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Beautiful green shoes                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Black rubber boots                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Blue suede shoes                           |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with incredible haste.
+It gives small bonus to the skill 'backstab'.
+
+
+
+*-----------------------------------------------------------------------*
+|                 Boots made of blackened dragon scales                 |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom a bit. (6/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Boots of Dancing [fading]                       |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity an average amount. (11/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance adequately. (10/20)
+It decreases the users physical resistance adequately. (10/20)
+It increases the users psionic resistance adequately. (10/20)
+
+- Extra -
+The boots aid in dancing skills.
+The boots alter the user's resistances somehow.
+
+
+*-----------------------------------------------------------------------*
+|                            Boots of Dancing                           |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity nicely. (13/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It increases the users cold resistance adequately. (10/20)
+It decreases the users fire resistance adequately. (10/20)
+It increases the users acid resistance adequately. (10/20)
+
+- Extra -
+The boots aid in dancing skills.
+The boots alter the user's resistances somehow.
+
+
+
+You can't find any records about "Boots of Dancing fading" in the library.
+
+*-----------------------------------------------------------------------*
+|                             Boots of Death                            |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It affects the skill 'demon and devil lore'.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Boots of Fire                             |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a tiny bit. (4/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users fire resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Boots of Ice                             |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a tiny bit. (4/20)
+It decreases the users intelligence adequately. (10/20)
+It has adequate armour class for its type (tiny in general).
+It allows the user to see in darkness.
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers very fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Boots of Praetor                           |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Boots of Striding                           |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom poorly. (5/20)
+It increases the users intelligence a bit. (6/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It keeps your feet dry.
+It feeds the undead vampire.
+
+
+*-----------------------------------------------------------------------*
+|                     Boots of Striding < battered >                    |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It keeps your feet dry.
+It feeds the undead vampire.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Boots of scarlet color                        |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Boots of terror                            |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Boots of the Seer                           |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity unnoticably. (1/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Boots of the stratosphere                       |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom poorly. (5/20)
+It increases the users intelligence slightly. (7/20)
+It increases the users charisma impressively. (15/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It gives nice bonus to the skill 'audience awareness'.
+This item loses its magical powers slowly.
+It increases the users asphyxiation resistance strongly. (14/20)
+
+- Extra -
+The wearer of the boots can lift from the ground to 'survey' the
+wearer's surroundings once per week.
+The boots can also 'elevate' the wearer and his or her companions
+once per week.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Bright steel sollerets                        |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pitifully. (3/20)
+It has excellent armour class for its type (little in general).
+This item loses its magical powers with incredible haste.
+It increases the users magical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Brown leather boots                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pitifully. (3/20)
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Cara'zin silk boots                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It increases the users magical resistance a bit. (6/20)
+It increases the users electric resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   Charon's pair of pitch black boots                  |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution somewhat. (8/20)
+It decreases the users wisdom a tiny bit. (4/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Common shoes                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Dark Boots <*Red Glow*>                        |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's healing rate.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        Dark red boots of Shrije                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength a bit. (6/20)
+It increases the users dexterity poorly. (5/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence slightly. (7/20)
+It has superb armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers a bit slower than average.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Demon skin boots                           |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|         Eldritch Knight's Boots, stamped with eldritch symbols        |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has nice armour class for its type (tiny in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Gold embroidered black high boots                   |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers incredibly slowly.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Grey boots                              |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution pathetically. (2/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with incredible haste.
+It increases the users physical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|            Heavy Ironward boots reinforced with steel caps            |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has unbelievable armour class for its type (feeble in general).
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Henri Morgan's blue suede shoes                    |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'backstab'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Jander's grey boots                          |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Leather boots                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                       Leather boots of magician                       |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Leather boots of magician                       |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Leather shoes                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             Light Duskwalker boots that move without sound            |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Lizard Skin Boots                           |
+*-----------------------------------------------------------------------*
+It has excellent armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Long pointed sabatons                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers incredibly slowly.
+It increases the users physical resistance a bit. (6/20)
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+It increases the users magical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|              Lorain's white boots with golden decorations             |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Moccasins of Whispering                        |
+*-----------------------------------------------------------------------*
+It increases the users dexterity somewhat. (8/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'sneak'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|           Myrmidon's warboots, designed for steadfast stance          |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution an average amount. (11/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Pearl-plated sabatons                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+The sabatons provide stability and rotation in the ankles, allowing the
+wearer to stand in place while absorbing and dealing blows with his shield.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 Red high heeled shoes (pain inducing)                 |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+- Extra -
+This object effects the users resistance to physical damage
+This object has hidden magical properties.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Scab-encrusted talons                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity impressively. (15/20)
+It decreases the users constitution poorly. (5/20)
+It decreases the users charisma adequately. (10/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers extremely slowly.
+It gives nice bonus to the skill 'advanced martial arts'.
+It gives nice bonus to the skill 'critical'.
+
+- Extra -
+Wounds made by the talons can easily become infected.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Shoes with golden buckles                       |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Snowshoes                               |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Soft leather sandals                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution unnoticably. (1/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pathetically. (2/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Speed shoes of Karbitsch                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It increases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Spider Fur Slippers                          |
+*-----------------------------------------------------------------------*
+It decreases the users strength a bit. (6/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers a bit slower than average.
+It gives decent bonus to the skill 'focus power'.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Stardust Boots                            |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom pathetically. (2/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'stun'.
+
+- Extra -
+Stardust boots are a holy artifact of the goddess Kirvana.
+Stardust boots cause the wearer to randomly kick in combat.
+Stardust boots allow the wearer to 'warp'
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Startread Slippers                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom immensely.
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It gives small bonus to the skill 'neptune lore'.
+It gives small bonus to the skill 'mercury lore'.
+It gives small bonus to the skill 'jupiter lore'.
+It gives small bonus to the skill 'saturn lore'.
+It gives small bonus to the skill 'pluto lore'.
+It gives small bonus to the skill 'mars lore'.
+It gives small bonus to the skill 'uranus lore'.
+It gives decent bonus to the skill 'sun lore'.
+It gives small bonus to the skill 'venus lore'.
+
+- Extra -
+The slippers attune the wearer to the cosmos, enhancing the effects
+of celestial conjunctions.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Steel Boots                              |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Stonetalon Sandals                          |
+*-----------------------------------------------------------------------*
+It increases the users constitution a bit. (6/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Boots of Thievery                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity slightly. (7/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The Frostshard Sabatons                        |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom a good amount. (12/20)
+It increases the users intelligence a good amount. (12/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It increases the users fire resistance adequately. (10/20)
+
+- Extra -
+While worn, the Frostshard Greaves increase all cold damage dealt by a nice amount.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                 The Threadbare Slippers of Vingt Cinq                 |
+*-----------------------------------------------------------------------*
+It increases the users wisdom phenomenally.
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+The slippers can be inlaid with up to three shards.
+The slippers amplify the weft of healing and protective magics.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The black boots of thievery                      |
+*-----------------------------------------------------------------------*
+It increases the users dexterity slightly. (7/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The boots of Praetor                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The boots of immeasurable heat                    |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It contains a tale:
+These boots will help you through hard times when all is lost. Just
+Knock your heels together.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The boots of the miles walked                     |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'razor edge'.
+It gives small bonus to the spell 'lightsword'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The boots of the mind master                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence pitifully. (3/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The boots of warping                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity impressively. (15/20)
+It decreases the users constitution poorly. (5/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+These boots can memorize locations.
+These boots can transport the user.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The brightly shining boots of Yeao                  |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      The dark red boots of Shrije                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength a bit. (6/20)
+It increases the users dexterity poorly. (5/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence slightly. (7/20)
+It has superb armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers a bit slower than average.
+
+- Extra -
+The past of these boots has strong bonds with the devils.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The green boots of Greenlight                     |
+*-----------------------------------------------------------------------*
+It increases the users dexterity unnoticably. (1/20)
+It increases the users constitution a tiny bit. (4/20)
+It decreases the users wisdom pathetically. (2/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+It gives tiny bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'kick placement'.
+It gives small bonus to the skill 'flip kick'.
+
+- Extra -
+It makes your feet lighter.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The green boots of Lucifer                      |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It decreases the users constitution pathetically. (2/20)
+It decreases the users wisdom pathetically. (2/20)
+It increases the users intelligence adequately. (10/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'tonal control'.
+
+- Extra -
+It affects the skill tonal control.
+They seem to be hot to touch.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The leather sandals of Lucifer                    |
+*-----------------------------------------------------------------------*
+It decreases the users constitution pathetically. (2/20)
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence phenomenally.
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The massive boots, 'Facetramplers'                  |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance somewhat. (8/20)
+
+- Extra -
+The Facetramplers, true to their name, allow their wearer to trample the faces
+of corpses.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The royal speed shoes of Karbitsch                  |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It increases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The shining boots of Yeao                       |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers with incredible haste.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     The steel toe boots of Lucifer                    |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It decreases the users constitution pathetically. (2/20)
+It decreases the users wisdom pathetically. (2/20)
+It has nice armour class for its type (tiny in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'attack'.
+It gives decent bonus to the skill 'critical'.
+
+- Extra -
+It affects the skill attack.
+It affects the skill critical.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  The timeworn sandals of the wayfarer                 |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity noticably. (9/20)
+It increases the users constitution noticably. (9/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'tumble'.
+It gives nice bonus to the skill 'power kick'.
+
+- Extra -
+The sandals grant their wearer additional combat stamina.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The winged boots of fury                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity strongly. (14/20)
+It increases the users constitution pitifully. (3/20)
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers incredibly slowly.
+It increases the users electric resistance a bit. (6/20)
+
+- Extra -
+These boots can take you to the sky.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        Tornado Shaped Slippers                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence unnoticably. (1/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration unnoticably. (1/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+They allow you to fly for some time. But nobody knows how to recharge the
+magic:(
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Ugly Giant boots (smelling)                      |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  White boots with golden decorations                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers with incredible haste.

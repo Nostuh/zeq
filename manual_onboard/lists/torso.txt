@@ -1,3 +1,160 @@
-# Paste the `list <slot>` output for torso here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list torso
+
+*-------------------------------------------------------------*
+|                     Armour slot - Torso                     |
+*-------------------------------------------------------------*
+| A Battlearmour                                              |
+| A Combat weapon belt                                        |
+| A Samurai's Battlearmour                                    |
+| A White Robe of High Enchantress                            |
+| A badly decayed torso                                       |
+| A black breasplate with a white skull on it                 |
+| A black breastplate of dimensional hole                     |
+| A black hooded shirt with no sleeves                        |
+| A black robe                                                |
+| A black shroud made from gauzes known as 'Shadow Veil'      |
+| A bloodied suit of plate mail named 'Doomshell'             |
+| A bloodstained surplice                                     |
+| A bloody leather jacket                                     |
+| A burnished golden chestplate                               |
+| A burnished golden chestplate <pitted>                      |
+| A coal black cloak                                          |
+| A demon breastplate                                         |
+| A dirty apron                                               |
+| A fine leather shirt                                        |
+| A fitted Duskwalker vest reinforced with runic plates       |
+| A footpad's cuirass                                         |
+| A foul black funeral shroud                                 |
+| A frail old breastplate                                     |
+| A frayed black garment                                      |
+| A frost-covered chainmail                                   |
+| A frost-covered lamellar armour                             |
+| A grey armour with a silver cross on chest                  |
+| A leather apron                                             |
+| A leather armour vest                                       |
+| A long and dirty leather apron                              |
+| A long golden robe                                          |
+| A longsleeved grey robe                                     |
+| A metal-reinforced leather cuirass                          |
+| A padded leather jerkin                                     |
+| A patchwork coat of skins                                   |
+| A pitch black breastplate with a red rose on it             |
+| A plain black robe                                          |
+| A pure white robe with shimmering adornments                |
+| A robe of luminous Aetherweave cloth                        |
+| A seafoam green tunic                                       |
+| A set of worm-eaten robes                                   |
+| A shadowy plate cuirass                                     |
+| A shimmering white robe with golden embroidery              |
+| A shining blue breastplate                                  |
+| A shiny metallic scale mail                                 |
+| A simple cotton shirt with rolled-up sleeves                |
+| A small leather apron                                       |
+| A solid Ironward breastplate marked by old strikes          |
+| A standard issue brigandine                                 |
+| A suit of bloody leather armour                             |
+| A worm-eaten set of robes                                   |
+| A yellow robe                                               |
+| Acid-etched black breastplate                               |
+| An acolyte's robe                                           |
+| An ancient breastplate                                      |
+| An armour made of golden dragon scales                      |
+| An elegant white robe with golden runes                     |
+| An enforced pigskin armour                                  |
+| An ordinary looking copper armour                           |
+| Angel's Robe                                                |
+| Astral Chestplate                                           |
+| Battlemail of the Giant Army                                |
+| Black Chain Shirt                                           |
+| Black Leather Breastplate of Xena                           |
+| Black Robes of Kazlakhor                                    |
+| Black padded leather armour                                 |
+| Black thrull armour                                         |
+| Black velvet robes                                          |
+| Black velvet robes [fading]                                 |
+| Blighted Robes                                              |
+| Blightspawn Carapace                                        |
+| Burning Black Plate                                         |
+| Burning Black Plate                                         |
+| Celestial Scalemail                                         |
+| Ceremonial black damask robes                               |
+| Ceremonial lamellar robes                                   |
+| Chain mail                                                  |
+| Charred Black Plate                                         |
+| Copper armour                                               |
+| Crimson coronation robes                                    |
+| Dark green vest                                             |
+| Dark robes                                                  |
+| Dark shadowed breastplate                                   |
+| Death black chainmail                                       |
+| Demon skin armour                                           |
+| Elite Platemail of Angarock                                 |
+| Elmo's Tigersuit                                            |
+| Elven Chainmail                                             |
+| Elven chainmail                                             |
+| Everliving Brigandine                                       |
+| Fire Mail                                                   |
+| Gekko's vest of many pockets                                |
+| Giants breastplate                                          |
+| Glowing Splintmail                                          |
+| Green Plate of Frog King                                    |
+| Greenlight breastplate                                      |
+| Hellcat Leather Armour                                      |
+| Ichor-Covered Platemail                                     |
+| Iron breastplate                                            |
+| Leather apron                                               |
+| Leather breastplate                                         |
+| Long white robes with golden trim                           |
+| Mithril ringmail                                            |
+| Multi-coloured dragon scalemail                             |
+| Multi-coloured dragon scalemail <|Dusty|>                   |
+| Necromancer's Robe                                          |
+| Remnants of a robe                                          |
+| Rindy coat, adorned with leaves                             |
+| Robes of the ArchMage                                       |
+| Rohan armour                                                |
+| Runic robes of the shaman                                   |
+| Shining blue Breastplate                                    |
+| Smelly leather armour                                       |
+| Stained Black Robes                                         |
+| Stonedowner Tunic                                           |
+| The Black Plate of Underworld                               |
+| The Black Robes of Kazlakhor <dark glow>                    |
+| The Blue Plate of Diversity                                 |
+| The Cobalt Robes of Aquaris                                 |
+| The Fathomer's Chasuble                                     |
+| The Golem Cuirass                                           |
+| The Runed Robes of the Sun                                  |
+| The armour of the gods known as 'Grisa'                     |
+| The belly of the Dragon Lord                                |
+| The black plate of Belinik                                  |
+| The blue breastplate of boosted intelligence                |
+| The breastplate of power gathering                          |
+| The crimson robes of Talendine                              |
+| The crimson vestments of Vulcthay                           |
+| The fiery plate of Underworld                               |
+| The fiery plate of Underworld                               |
+| The glimmering robes of Gruumsh                             |
+| The hauberk, 'Shadowscale'                                  |
+| The necrotic raiment of Vulcthay                            |
+| The plate-armour of sole judgement                          |
+| The plated belly of the dragon lord                         |
+| The red breastplate of war provokation                      |
+| The royal plate of Lucifer                                  |
+| The royal shirt of Lucifer                                  |
+| The royal vest of Lucifer                                   |
+| The shimmering breastplate of the leecher                   |
+| The vermillion robes of Vulcthay                            |
+| Threadbare Green Plaid Shirt                                |
+| Threadbare Red Plaid Shirt                                  |
+| Weary plate                                                 |
+| White Monk Robes                                            |
+| White linen robes                                           |
+| Woodhelven Tunic                                            |
+| Battered chainmail                                          |
+| Brown robes                                                 |
+| Hide armour                                                 |
+| Red topcoat                                                 |
+'-------------------------------------------------------------'
 

@@ -1,4 +1,1186 @@
-# belt armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
 
+*-----------------------------------------------------------------------*
+|                            1st Circle Belt                            |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            2nd Circle Belt                            |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It has adequate armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            3rd circle Belt                            |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It has excellent armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             A dusty 4th Circle black battlebelt <-=*O*=->             |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                 4th Circle black battlebelt <-=*O*=->                 |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             A dusty 5th Circle black battlebelt <-=*O*=->             |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                 5th Circle black battlebelt <-=*O*=->                 |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A Divine Multicoloured feather belt                  |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A belt of three clear floating orbs                  |
+*-----------------------------------------------------------------------*
+It decreases the users constitution unnoticably. (1/20)
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A black leather belt                         |
+*-----------------------------------------------------------------------*
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A black obi with crow netsuke                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom a good amount. (12/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It gives small bonus to the skill 'arcane focus'.
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'mark of zomm'.
+It gives small bonus to the skill 'arcane lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A black strip made from gauzes                    |
+*-----------------------------------------------------------------------*
+It increases the users dexterity impressively. (15/20)
+It decreases the users constitution poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It decreases the users physical resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A blood-seeping tourniquet                      |
+*-----------------------------------------------------------------------*
+It increases the users constitution a good amount. (12/20)
+It increases the users wisdom a tiny bit. (4/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+It gives decent bonus to the skill 'mastery of medicine'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A bloody squid-like tentacle                     |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution slightly. (7/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It decreases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+
+- Extra -
+A death in the realm causes changes in its effects.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              A blue belt                              |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance a bit. (6/20)
+
+- Extra -
+It modifies the user's resistance to cold damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           A bonesplint cinch                          |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users constitution a good amount. (12/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers slowly.
+It increases the users poison resistance somewhat. (8/20)
+It gives small bonus to the skill 'rage'.
+It increases the users acid resistance somewhat. (8/20)
+It gives nice bonus to the skill 'battlecry'.
+
+- Extra -
+There is a small mechanism embedded in the cinch that can be activated
+by pressing a button.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A diamond encrusted silk sash                     |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution somewhat. (8/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence somewhat. (8/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|             A dusty 4th Circle black battlebelt <-=*O*=->             |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             A dusty 5th Circle black battlebelt <-=*O*=->             |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A girdle of white marble                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users wisdom somewhat. (8/20)
+It decreases the users intelligence somewhat. (8/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers slowly.
+It gives nice bonus to the skill 'charge'.
+It gives nice bonus to the skill 'hew'.
+
+- Extra -
+The girdle controls the wearer's breathing, slightly curbing exhaustion.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A green squid-like tentacle                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence somewhat. (8/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+
+- Extra -
+A death in the realm causes changes in its effects.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A gunmetal captain's belt                       |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'attack'.
+
+
+
+*-----------------------------------------------------------------------*
+|               A leather belt with a solid mythril buckle              |
+*-----------------------------------------------------------------------*
+It decreases the users constitution pitifully. (3/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence slightly. (7/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'power blast'.
+
+
+
+*-----------------------------------------------------------------------*
+|               A leather belt with a thick mythril buckle              |
+*-----------------------------------------------------------------------*
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'power blast'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A length of putrid moss                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+It increases the users hitpoints adequately. (10/20)
+This item loses its magical powers extremely fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                A light green toxin infused leather belt               |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|               A narrow Duskwalker sash with twin clasps               |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A remarkably lightweight, magical belt                |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity nicely. (13/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers slowly.
+It increases the users fire resistance strongly. (14/20)
+
+- Extra -
+The belt is known to lighten the wearer's load.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A rotten squid-like tentacle                     |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution impressively. (15/20)
+It increases the users wisdom poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+
+- Extra -
+A death in the realm causes changes in its effects.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A rusted steel chain belt                       |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+
+The belt allows the wearer to 'shatter' certain fragile projections.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A sallow yellow sash                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution unbelievably much. (20/20)
+It decreases the users charisma adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers extremely slowly.
+It increases the users poison resistance somewhat. (8/20)
+It gives nice bonus to the skill 'parry'.
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+Gastric fumes rumble within the sash.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A shimmering mithril belt                       |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pathetically. (2/20)
+It increases the users wisdom slightly. (7/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A shimmering spidersilk belt                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users psionic resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A slinky, slimy tentacle                       |
+*-----------------------------------------------------------------------*
+It increases the users intelligence unnoticably. (1/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A small pouch for holding dust of some kind              |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with incredible haste.
+
+- Extra -
+The more dust, the better the mana regeneration bonuses.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            A snakelike belt                           |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A thick leather and gold girdle                    |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It decreases the users constitution pathetically. (2/20)
+It decreases the users wisdom pathetically. (2/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'kick'.
+
+- Extra -
+The Golden Girdle modifies its user's skills.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A thick mithril band                         |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a good amount. (12/20)
+It decreases the users wisdom pathetically. (2/20)
+It decreases the users intelligence pathetically. (2/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers somewhat faster than average.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A thick polished adamantite belt                   |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution a bit. (6/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users physical resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A thief utility belt                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'steal'.
+It gives small bonus to the skill 'pick locks'.
+
+- Extra -
+The user can store/extract lockpicks with a command 'lockpick store'
+and 'lockpick extract'.
+The user can store/extract empty vials with a cmds 'vial store' and
+'vial extract'.
+The user can store/extract mortar with 'mortar store' and 'mortar
+extract.
+The user can store/extract pestle with 'pestle store' and 'pestle
+extract.'
+The user can store/extract wax with 'wax store' and 'wax extract'.
+Due to the magical nature of the belt the items inside become weightless.
+The items inside the belt will save over chesting.
+The belt modifies the skill 'pick locks'.
+The belt modifies the skill 'steal'.
+
+
+
+
+*-----------------------------------------------------------------------*
+|               A wide Ironward girdle with metal fittings              |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has monumental armour class for its type (tiny in general).
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A wide leather belt                          |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A worn toolbelt made of leather                    |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A woven Aetherweave sash                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                       An embroidered cloth belt                       |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Ancient wyvernscale belt                       |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'spot weakness'.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Angarock Loinbelt                           |
+*-----------------------------------------------------------------------*
+It increases the users constitution pathetically. (2/20)
+It decreases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+It gives tiny bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It increases the users physical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      Beaded sash of the quickling                     |
+*-----------------------------------------------------------------------*
+It increases the users dexterity strongly. (14/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers somewhat faster than average.
+It gives nice bonus to the skill 'whirlwind attack'.
+It gives nice bonus to the skill 'doublehit'.
+
+- Extra -
+The sash occasionally quickens the attacks of the wearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Belt of Eternal Sands                         |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         Belt of Eternal Sands                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Belt of Shifting Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It increases the users constitution slightly. (7/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         Belt of Shifting Sands                        |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users constitution slightly. (7/20)
+It increases the users wisdom slightly. (7/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      Belt of Storm Giant Strength                     |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom somewhat. (8/20)
+It decreases the users intelligence somewhat. (8/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                      Belt of Storm Giant Strength                     |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom somewhat. (8/20)
+It decreases the users intelligence somewhat. (8/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Belt of the Shadowkin                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom noticably. (9/20)
+It increases the users intelligence slightly. (7/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance strongly. (14/20)
+It decreases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        Belt of the Swift Arrow                        |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom a bit. (6/20)
+It decreases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Belt of the Widow                           |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It has excellent armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Belt of the Widow                           |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It has excellent armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Belt of the damned                          |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution somewhat. (8/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Blue Belt of the High Seas                      |
+*-----------------------------------------------------------------------*
+It decreases the users constitution unnoticably. (1/20)
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence pitifully. (3/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with incredible haste.
+It gives small bonus to the skill 'quick chant'.
+
+- Extra -
+The belt will make you more powerful.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Charred belt                             |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users dexterity impressively. (15/20)
+It increases the users constitution poorly. (5/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Cincture of the Cosmic Deeps                     |
+*-----------------------------------------------------------------------*
+It increases the users intelligence a good amount. (12/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers extremely slowly.
+
+- Extra -
+The cincture stores a portion of certain offensive energies channeled
+by the wearer. Looking at the cincture will show its current reserves.
+The wearer can 'shoot' energy of a desired color at a target.
+The cincture's reserves leak away over time.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     Cincture of the Thought Siphon                    |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Flowing Red Silk Sash                         |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+The Flowing Red Silk Sash speeds its user's combat.
+The Flowing Red Silk Sash is an artifact of Kirvana.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       Gnaash's Belt of Stupidity                      |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users constitution a tiny bit. (4/20)
+It decreases the users intelligence slightly. (7/20)
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Officer Belt                             |
+*-----------------------------------------------------------------------*
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Purple belt                              |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               Rainbow colored belt with silk decorations              |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Senior officer Belt                          |
+*-----------------------------------------------------------------------*
+It has excellent armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Shimmering mithril belt                        |
+*-----------------------------------------------------------------------*
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Silken cinch cord                           |
+*-----------------------------------------------------------------------*
+It increases the users intelligence strongly. (14/20)
+It has non-existent armour class for its type (non-existent in general).
+It gives small bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers very fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Slimy Tentacle                            |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Black Belt of Ffor                        |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It decreases the users wisdom pathetically. (2/20)
+It has adequate armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           The belt of Gondor                          |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity pitifully. (3/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The belt of the strong mind                      |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence an average amount. (11/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+It strenghtens the mind of the user considerably.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The belt of true harmony                       |
+*-----------------------------------------------------------------------*
+It has adequate armour class for its type (pathetic in general).
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The black belt of thousand skulls                   |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The blue belt of the High Seas                    |
+*-----------------------------------------------------------------------*
+It decreases the users constitution unnoticably. (1/20)
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has low armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'quick chant'.
+
+- Extra -
+The belt will make you more powerful.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The crimson rope of Lucifer                      |
+*-----------------------------------------------------------------------*
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom superbly. (16/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'quick chant'.
+
+- Extra -
+It affects the skill quick chant.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The crimson war sash of Lucifer                    |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'inner strength'.
+
+- Extra -
+It affects the skill inner strength.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The leather belt of Lucifer                      |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'parry'.
+
+- Extra -
+It affects the skill parry.
+
+
+
+
+*-----------------------------------------------------------------------*
+|               The leather belt of unavoidable aggression              |
+*-----------------------------------------------------------------------*
+It increases the users strength impressively. (15/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+It can sometimes make the user extremely aggressive.
+The buckle of this belt has magical properties.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  The prismatic belt of rainbow colors                 |
+*-----------------------------------------------------------------------*
+It has awesome armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+The prismatic belt allows the wearer to 'allocate' stat points.
+The wearer can use 'allocate <stat> <#> to shift the stat
+bonuses of the belt around.  If the wearer wishes to reset the
+maximum stats of the belt, he can grant negative stats.  The belt
+never grants more than 20 in any given stat except strength,
+which has a much lower statmax.   The wearer can 'belt_display'
+to show how many stats the belt is currently granting.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The shadow chameleon belt                       |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The tiny strapping of a small heart                  |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The weapon belt of Gondor                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity pitifully. (3/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Three clear floating orbs                       |
+*-----------------------------------------------------------------------*
+It decreases the users constitution unnoticably. (1/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Translucent belt (anti chastity)                   |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+It increases the users hitpoints pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+This object effects the users hit points
+This object has hidden magical properties.
+
+
+*-----------------------------------------------------------------------*
+|                    Translucent belt (anti chastity)                   |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (almost non-existent in general).
+It increases the users hitpoints pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+This object effects the users hit points
+This object has hidden magical properties.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Wardens noose                             |
+*-----------------------------------------------------------------------*
+It increases the users constitution pathetically. (2/20)
+It has excellent armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               White belt                              |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'stunning blow'.
+
+*-----------------------------------------------------------------------*
+|                               White belt                              |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It decreases the users constitution pathetically. (2/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers fast.
+It gives small bonus to the skill 'stunning blow'.
+
+
+You can't find any records about "An embroidered velvet coin purse" in the library.
+You can't find any records about "Dusty belt" in the library.

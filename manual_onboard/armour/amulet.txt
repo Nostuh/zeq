@@ -1,4 +1,1201 @@
-# amulet armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
 
+*-----------------------------------------------------------------------*
+|                A Duskwalker charm set with twin stones                |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A HUGE banana                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A copper pendant of the flaming sun                  |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The presence of this pendant repels the supreme beings of the deep.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A demure nacre brooch                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution strongly. (14/20)
+It decreases the users wisdom poorly. (5/20)
+It increases the users intelligence strongly. (14/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration tremendously. (17/20)
+This item loses its magical powers a bit faster than average.
+It increases the users psionic resistance somewhat. (8/20)
+It gives decent bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A dimly glowing toxin infused amulet                 |
+*-----------------------------------------------------------------------*
+It decreases the users strength strongly. (14/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom strongly. (14/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users charisma adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers slowly.
+It increases the users poison resistance strongly. (14/20)
+
+- Extra -
+The wearer becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A faintly glowing amulet of pumice                  |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration astoundingly. (19/20)
+It gives great bonus to the spell 'incendiary coating'.
+This item loses its magical powers with average speed.
+It decreases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+
+- Extra -
+Eternal fire burns within the gemstone.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A golden administrators charm                     |
+*-----------------------------------------------------------------------*
+It increases the users charisma poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'leadership'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A golden locket                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               A heavy silver amulet inlaid with iolites               |
+*-----------------------------------------------------------------------*
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration tremendously. (17/20)
+This item loses its magical powers slowly.
+It gives tiny bonus to the spell 'neural internecion'.
+It gives small bonus to the spell 'summon storm'.
+It increases the users electric resistance somewhat. (8/20)
+It gives small bonus to the spell 'skyfire'.
+
+- Extra -
+This amulet will bestow its bearer an affinity with storm and thunder.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A lifelike figurine                          |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A necklace of prayer beads                      |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pulsating steel amulet                       |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence unbelievably much. (20/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users psionic resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A sapphire amulet                           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A shimmering voidtouched amulet                    |
+*-----------------------------------------------------------------------*
+It increases the users intelligence unbelievably much. (20/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users asphyxiation resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                  A shining amulet of mental toughness                 |
+*-----------------------------------------------------------------------*
+It increases the users wisdom unbelievably much. (20/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+It can lessen the mental strain of casting defensive and healing spells.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    A silver talisman with diamonds                    |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers incredibly slowly.
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A small bloodstained cross                      |
+*-----------------------------------------------------------------------*
+It increases the users wisdom unbelievably much. (20/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'arcane lore'.
+It gives small bonus to the spell 'harm body'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A soiled icon of bone                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity unbelievably much. (20/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers extremely fast.
+It gives great bonus to the skill 'whirlwind attack'.
+It gives great bonus to the skill 'critical'.
+It gives great bonus to the skill 'doublehit'.
+
+
+
+*-----------------------------------------------------------------------*
+|         A translucent pendant with a black helm embedded in it        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Amulet of Eternal Fire                        |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It decreases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with incredible haste.
+It increases the users fire resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Amulet of Fire <hot>                         |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution pathetically. (2/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                         Amulet of Fire <dark>                         |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution pathetically. (2/20)
+It has average armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      Amulet of Magic <drizzling>                      |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                         Amulet of Magic <dark>                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Amulet of flame                            |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users intelligence noticably. (9/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Amulet of flame                            |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users intelligence noticably. (9/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers very slowly.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Amulet of seared dragonheart                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom noticably. (9/20)
+It increases the users intelligence noticably. (9/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Amulet of the Dragon-kin                       |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution somewhat. (8/20)
+It has awesome armour class for its type (little in general).
+It decreases the users spellpoint regeneration unbelievably much. (20/20)
+It increases the users hitpoint regeneration impressively. (15/20)
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers somewhat faster than average.
+It gives small bonus to the skill 'parry'.
+It gives small bonus to the skill 'riposte'.
+It gives small bonus to the skill 'whirlwind attack'.
+It gives small bonus to the skill 'attack'.
+It gives small bonus to the skill 'doublehit'.
+
+*-----------------------------------------------------------------------*
+|                    Amulet of the Dragon-kin (dusty)                   |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users intelligence pitifully. (3/20)
+It has average armour class for its type (pathetic in general).
+It decreases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+It gives tiny bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Amulet of the Underworld                       |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       Amulet of the dying winds                       |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It increases the users charisma somewhat. (8/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration tremendously. (17/20)
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'tonal control'.
+
+
+
+*-----------------------------------------------------------------------*
+|         An Aetherweave pendant set with a faintly glowing gem         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impossibly much.
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|              An Ironward medallion bearing a lion's sigil             |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has unbelievable armour class for its type (feeble in general).
+It increases the users hitpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                An amulet made entirely out of emeralds                |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence somewhat. (8/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration superbly. (16/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        An amulet made of guano                        |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  An amulet with a tetrahedral crystal                 |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             An ancient, engraved stone hanging on a chain             |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users constitution somewhat. (8/20)
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers a bit slower than average.
+It decreases the users physical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            An ebony amulet                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       An enameled bodice dagger                       |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity a good amount. (12/20)
+It increases the users constitution poorly. (5/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'enhance criticals'.
+It gives small bonus to the skill 'whirlwind attack'.
+It gives small bonus to the skill 'attack'.
+It gives small bonus to the skill 'critical'.
+It gives small bonus to the skill 'doublehit'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     An ice encased mithril amulet                     |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It decreases the users dexterity slightly. (7/20)
+It increases the users constitution noticably. (9/20)
+It increases the users wisdom noticably. (9/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users cold resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                  An obsidian amulet with an amethyst                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+It increases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         An old mithril amulet                         |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Belinar's Sacred Amulet                        |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+The amulet was made for an ancient cleric named Erevan Belinar.
+The amulet improves the Smash skill for followers of Belinik.
+The amulet's bonus is said to closely tie to the wearer's primary weapon.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The Crystal Amulet of 'Desteros'                   |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             Crystal Amulet                            |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Cyclonic pendant                           |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users constitution superbly. (16/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers slowly.
+It increases the users fire resistance somewhat. (8/20)
+It increases the users magical resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+The pendant spins cyclonic vacuums that disrupt enemy spellcasting.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Faded Green Bandana                          |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity slightly. (7/20)
+It increases the users wisdom unnoticably. (1/20)
+It increases the users intelligence somewhat. (8/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+It decreases the users fire resistance strongly. (14/20)
+It gives tiny bonus to the skill 'interrupting force'.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Faded Red Bandana                           |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution adequately. (10/20)
+It has excellent armour class for its type (little in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It decreases the users fire resistance strongly. (14/20)
+It gives small bonus to the skill 'attack'.
+It gives small bonus to the skill 'ignore pain'.
+
+- Extra -
+Affects the user's attack skill.
+Affects the user's ignore pain skill.
+Affects the user's fire resistance.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Gem of the Gallows                          |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity slightly. (7/20)
+It increases the users constitution a tiny bit. (4/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'enhance criticals'.
+It gives decent bonus to the skill 'critical'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      Glowing amulet of greenlight                     |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance to physical damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Golden amulet                             |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             Golden amulet                             |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It has awesome armour class for its type (little in general).
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Medallion of Mirrors                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Orb of summoning                           |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'summon'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  Physical amulet of the gremlin lord                  |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Royal insignia                            |
+*-----------------------------------------------------------------------*
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration tremendously. (17/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Scale of the Leviathan                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence unbelievably much. (20/20)
+It has adequate armour class for its type (tiny in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+It gives decent bonus to the skill 'art of telepathy'.
+It gives decent bonus to the skill 'nerve mastery'.
+This item loses its magical powers incredibly slowly.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users psionic resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Scarab of Protection                         |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It increases the users poison resistance a bit. (6/20)
+It increases the users physical resistance a bit. (6/20)
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+It increases the users magical resistance a bit. (6/20)
+It increases the users psionic resistance a bit. (6/20)
+It increases the users electric resistance a bit. (6/20)
+It increases the users acid resistance a bit. (6/20)
+It increases the users asphyxiation resistance a bit. (6/20)
+
+- Extra -
+It modifies all the user's resistances.
+
+
+*-----------------------------------------------------------------------*
+|                          Scarab of Protection                         |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It has adequate armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It increases the users poison resistance a bit. (6/20)
+It increases the users physical resistance a bit. (6/20)
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+It increases the users magical resistance a bit. (6/20)
+It increases the users psionic resistance a bit. (6/20)
+It increases the users electric resistance a bit. (6/20)
+It increases the users acid resistance a bit. (6/20)
+It increases the users asphyxiation resistance a bit. (6/20)
+
+- Extra -
+It modifies all the user's resistances.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Silver Pendant                            |
+*-----------------------------------------------------------------------*
+It increases the users constitution pitifully. (3/20)
+It has little armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The Amulet of Yith'Sehta                       |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        The Amulet of the Dragon                       |
+*-----------------------------------------------------------------------*
+It increases the users intelligence somewhat. (8/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The Amulet of the Wolf <tm> (dusty)                  |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity somewhat. (8/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The Crest of Cocytus                         |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence impossibly much.
+It decreases the users charisma unbelievably much. (20/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+It increases the users shadow resistance somewhat. (8/20)
+It increases the users fire resistance adequately. (10/20)
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    The Crystal Amulet of 'Desteros'                   |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           The Eye of Mortis                           |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It decreases the users charisma unbelievably much. (20/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'willpower'.
+It gives small bonus to the skill 'dark ritual'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The Flamecaller's Stone                        |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom impressively. (15/20)
+It decreases the users intelligence poorly. (5/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+The Flamecaller's Stone is an artifact of Kirvana.
+The Flamecaller's Stone makes it possible to 'conjure campfires'.
+The Flamecaller's Stone prevents the wearer from being lit on fire.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Keyholders Amulet                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The Pulsing Amulet of 'Zzzzer'                    |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users constitution pathetically. (2/20)
+It increases the users intelligence a bit. (6/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with incredible haste.
+It increases the users cold resistance somewhat. (8/20)
+It decreases the users magical resistance somewhat. (8/20)
+It gives tiny bonus to the skill 'quick chant'.
+
+- Extra -
+It affects the user's skill knowledge.
+It makes the target more susceptable to magic damage.
+It modifies the users cold resistance.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           The Stone of Tears                          |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users wisdom pitifully. (3/20)
+It increases the users intelligence strongly. (14/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration tremendously. (17/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'quick chant'.
+It gives small bonus to the skill 'essence eye'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The Visitor's Sigil                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+It increases the users hitpoint regeneration magnificently. (18/20)
+This item loses its magical powers extremely slowly.
+It increases the users physical resistance somewhat. (8/20)
+It gives small bonus to the skill 'keen strikes'.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+It gives decent bonus to the skill 'attack'.
+It increases the users acid resistance somewhat. (8/20)
+It gives decent bonus to the skill 'critical'.
+It gives decent bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The amulet of Choking Shadows                     |
+*-----------------------------------------------------------------------*
+It increases the users strength an average amount. (11/20)
+It increases the users dexterity a good amount. (12/20)
+It increases the users constitution slightly. (7/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence slightly. (7/20)
+It has average armour class for its type (pathetic in general).
+It decreases the users spellpoint regeneration unnoticably. (1/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The amulet of stone to flesh                     |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has low armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The amulet of tears                          |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has awesome armour class for its type (little in general).
+It increases the users spellpoint regeneration superbly. (16/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The amulet of the Underworld                     |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It has average armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   The amulet of the Wolf *dark aura*                  |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers somewhat slower than average.
+It gives small bonus to the skill 'attack'.
+It gives small bonus to the skill 'critical'.
+It gives small bonus to the skill 'doublehit'.
+
+- Extra -
+It glows with dark aura.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The ancient amulet of Tythus                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution unbelievably much. (20/20)
+It decreases the users wisdom slightly. (7/20)
+It decreases the users intelligence slightly. (7/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'system shock'.
+It gives small bonus to the skill 'ignore pain'.
+
+- Extra -
+Tythus's amulet is rumored to provide its user with legendary health.
+
+
+*-----------------------------------------------------------------------*
+|                      The ancient amulet of Tythus                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution unbelievably much. (20/20)
+It decreases the users wisdom slightly. (7/20)
+It decreases the users intelligence slightly. (7/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'system shock'.
+It gives small bonus to the skill 'ignore pain'.
+
+- Extra -
+Tythus's amulet is rumored to provide its user with legendary health.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The ancient amulet of the druids                   |
+*-----------------------------------------------------------------------*
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom slightly. (7/20)
+It has low armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+It gives tiny bonus to the skill 'mastery of medicine'.
+This item loses its magical powers with incredible haste.
+It gives tiny bonus to the skill 'mastery of shielding'.
+
+- Extra -
+It affects the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The black amulet of power transfer                  |
+*-----------------------------------------------------------------------*
+It increases the users constitution unbelievably much. (20/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'attack'.
+It gives small bonus to the skill 'slash'.
+
+- Extra -
+It enables the user to give some of his physical energy to others.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The blue amulet of power transfer                   |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+It enables the caster to give some of his magical energy to others.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          The clasp of Lucifer                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It increases the users dexterity impossibly much.
+It decreases the users constitution pathetically. (2/20)
+It decreases the users wisdom pathetically. (2/20)
+It decreases the users intelligence pathetically. (2/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The copper button of Lucifer                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The emerald amulet of 'Desteros'                   |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has nice armour class for its type (tiny in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+Amulet has rune 'crom' in it.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  The platinum amulet of the Magister                  |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+While worn, can be used to 'focus' on a single spell, reducing the casting time
+of that spell to half while doubling the spell's cost.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The sulfur pin of Lucifer                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It increases the users constitution unbelievably much. (20/20)
+It decreases the users wisdom pathetically. (2/20)
+It has little armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Tooth Pendant                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Viper Medallion                            |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity somewhat. (8/20)
+It has awesome armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users poison resistance adequately. (10/20)
+
+- Extra -
+It modifies the user's resistance to poison damage.
+It emits darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|            Zomm's glaring eye, strung on a tarnished chain            |
+*-----------------------------------------------------------------------*
+It decreases the users strength somewhat. (8/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence somewhat. (8/20)
+It has average armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+This item loses its magical powers somewhat faster than average.
+It gives great bonus to the spell 'mark of zomm'.
+
+- Extra -
+Plucked directly from Zomm itself.
+Provides the wearer with the power of Zomm.
+
+
+You can't find any records about "Royal amulet" in the library.

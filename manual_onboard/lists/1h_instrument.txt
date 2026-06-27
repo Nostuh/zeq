@@ -1,3 +1,22 @@
-# Paste the `list <slot>` output for 1h_instrument here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 1h instrument
+
+*-------------------------------------------------------------*
+|                 Weapon type - 1h instrument                 |
+*-------------------------------------------------------------*
+| A beautiful wooden violin                                   |
+| A massive wooden cello                                      |
+| A masterfully crafted golden horn                           |
+| A rich mahogany symphonia                                   |
+| A small brass accordian                                     |
+| An exquisite hammered dulcimer                              |
+| Bagpipes                                                    |
+| Ben's Lute                                                  |
+| Demon's Lyre                                                |
+| The lyre of the Bonesinger                                  |
+| The white rebec of Baron Karlstein                          |
+| A silver flute                                              |
+| Highland bagpipes                                           |
+'-------------------------------------------------------------'
+
 

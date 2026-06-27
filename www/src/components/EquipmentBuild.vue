@@ -13,6 +13,7 @@ const STATS = [
     { key: 'rphys', label: 'Phys' }, { key: 'rpsi', label: 'Psi' }, { key: 'relec', label: 'Elec' },
     { key: 'rmag', label: 'Mag' }, { key: 'rpoi', label: 'Poi' }, { key: 'rfire', label: 'Fire' },
     { key: 'rcold', label: 'Cold' }, { key: 'racid', label: 'Acid' }, { key: 'rasphx', label: 'Asph' },
+    { key: 'rshadow', label: 'Shdw' },
 ];
 
 export default {

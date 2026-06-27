@@ -1,3 +1,73 @@
-# Paste the `list <slot>` output for shield here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list shield
+
+*-------------------------------------------------------------*
+|                     Armour slot - Shield                    |
+*-------------------------------------------------------------*
+| A Black Ankheg Shell                                        |
+| A black shield                                              |
+| A blackened mithril tower shield                            |
+| A blood-red shield with a black rose on it                  |
+| A bone shield                                               |
+| A bright steel kite shield                                  |
+| A brightly mirrored shield                                  |
+| A broad Ironward shield etched with battle sigils           |
+| A curved voidplate greatshield                              |
+| A dark shield                                               |
+| A dark shimmering shield                                    |
+| A dark shimmering shield.                                   |
+| A frigid scale of frostworm chitin                          |
+| A frost-covered heater shield                               |
+| A frost-covered kite shield                                 |
+| A glossy black shield                                       |
+| A green mossy shield                                        |
+| A heavy kite shield                                         |
+| A heavy kite shield                                         |
+| A heavy tower shield                                        |
+| A large granite shield surrounded by darkness               |
+| A large metal shield named "Tal Larnin"                     |
+| A large metal shield named "Tal Larnin" [fading]            |
+| A large steel round shield                                  |
+| A leather wrapped burnished buckler                         |
+| A legionnaire's shield                                      |
+| A massive keratinous scale                                  |
+| A mighty obsidian bulwark                                   |
+| A pulsating steel tower shield                              |
+| A reflective Duskwalker aegis                               |
+| A round wooden shield, reinforced with steel bands          |
+| A shield named 'Draeke'                                     |
+| A stone shield                                              |
+| An iron-reinforced coffin lid                               |
+| An oaken shield                                             |
+| An old dented shield                                        |
+| Battle shield of Towanda                                    |
+| Beaten up old tin trashcan lid                              |
+| Bright blue crystal shield                                  |
+| Burning shield of Hell                                      |
+| Burning shield of Hell                                      |
+| Centurion's shield                                          |
+| Dragon scale [Not tuned]                                    |
+| Ebon shield                                                 |
+| Greenlight shield                                           |
+| Knight's shield                                             |
+| Mithril shield                                              |
+| Mithril shield                                              |
+| Polished metal shield [Gleaming]                            |
+| Pulsating shield of Greenlight                              |
+| Red Shield of the Demon                                     |
+| Round shield                                                |
+| Scale shield                                                |
+| Shield of silver dragon scales                              |
+| The Blighted Bulwark of Vingt Cinq                          |
+| The Magical Leprachaun Reflector Shield                     |
+| The Shield of Dreams                                        |
+| The crest of the hive                                       |
+| The magical Shield of Rohan                                 |
+| The shield, Defender                                        |
+| Thick wooden shield                                         |
+| Tower shield                                                |
+| Tyririan Castleguard shield                                 |
+| Zirconion, Shield of Ultimate Defense                       |
+'-------------------------------------------------------------'
+
 

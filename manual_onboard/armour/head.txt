@@ -1,4 +1,1771 @@
-# head armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
+
+*-----------------------------------------------------------------------*
+|                              A Battlemask                             |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A Flaming Halo                            |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a bit. (6/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence slightly. (7/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+The flaming halo grants spellcasters special properties.
+The flaming halo is a holy artifact of the goddess Kirvana.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A Kruse helmet                            |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It has nice armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A Samurai's Battlemask                        |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A banded jade coronet                         |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users dexterity a good amount. (12/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users intelligence a good amount. (12/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+It gives decent bonus to the skill 'headcut'.
+This item loses its magical powers extremely slowly.
+It gives decent bonus to the skill 'critical'.
+It gives decent bonus to the skill 'doublehit'.
+It gives decent bonus to the skill 'tameshivar'.
+
+- Extra -
+The coronet magically refreshes it's wearer's exhaustion.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A beautiful golden crown                       |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A black helmet                            |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               A black steel helmet with copper ornaments              |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A bloody red crown                          |
+*-----------------------------------------------------------------------*
+It increases the users constitution impressively. (15/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A blue nightcap                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                A brass helmet dripping with green ooze                |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution somewhat. (8/20)
+It has decent armour class for its type (little in general).
+It decreases the users hitpoint regeneration pitifully. (3/20)
+It increases the users hitpoints unbelievably much. (20/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance a bit. (6/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users acid resistance a bit. (6/20)
+
+- Extra -
+It seems to be missing its visor.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A bright steel barbute                        |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pitifully. (3/20)
+It has superb armour class for its type (poor in general).
+This item loses its magical powers with incredible haste.
+It increases the users magical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A bright-red Visor <tm>                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+It allows the user to see in darkness.
+It allows the user to see magical auras.
+It allows the user to see invisible.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                A copper helmet dripping with green ooze               |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has low armour class for its type (tiny in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users spellpoints adequately. (10/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+
+- Extra -
+It seems to be missing its visor.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    A crimson red helmet with a horn                   |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution somewhat. (8/20)
+It decreases the users intelligence unbelievably much. (20/20)
+It has decent armour class for its type (little in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers very fast.
+
+- Extra -
+The past of this helmet has strong bonds with the devils.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           A curly white wig                           |
+*-----------------------------------------------------------------------*
+It increases the users wisdom unnoticably. (1/20)
+It increases the users intelligence unnoticably. (1/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A deep blue headband                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the spell 'channel life'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A fine spellburned bycocket                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom noticably. (9/20)
+It increases the users intelligence noticably. (9/20)
+It increases the users charisma noticably. (9/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It increases the users magical resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|           A foreboding mask with a sinister, elongated beak           |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom a good amount. (12/20)
+It increases the users intelligence a good amount. (12/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It gives small bonus to the spell 'greater elemental shield'.
+It gives small bonus to the skill 'shielding of death'.
+This item loses its magical powers very slowly.
+It gives small bonus to the spell 'unholy courage'.
+It gives small bonus to the skill 'undead surgery'.
+It gives small bonus to the spell 'greater magical shield'.
+It gives small bonus to the skill 'willpower'.
+
+- Extra -
+The macabre mask makes the Necromancer deadlier than ever.
+The macabre mask improves the power of the Necromancer's horde.
+
+
+
+
+*-----------------------------------------------------------------------*
+|A formidable helmet, masterfully crafted from the mightiest terracarapid shell|
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity poorly. (5/20)
+It decreases the users intelligence pitifully. (3/20)
+It has awesome armour class for its type (poor in general).
+This item loses its magical powers extremely slowly.
+
+- Extra -
+The helmet is made from the shell of the mighty Carapaxus.
+The helmet offers superior defense from stuns.
+
+
+*-----------------------------------------------------------------------*
+|A formidable helmet, masterfully crafted from the mightiest terracarapid shell|
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has awesome armour class for its type (poor in general).
+This item loses its magical powers extremely slowly.
+
+- Extra -
+The helmet is made from the shell of the mighty Carapaxus.
+The helmet offers great defense from stuns.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A funky-looking mushroom hat                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a good amount. (12/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has little armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A gleaming Aetherweave circlet                    |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A green bathing cap                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A grey blindfold                           |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity impressively. (15/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases the users psionic resistance somewhat. (8/20)
+It gives small bonus to the spell 'harm body'.
+
+
+
+*-----------------------------------------------------------------------*
+|                A heavy Ironward helm crested with steel               |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has immense armour class for its type (low in general).
+It increases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A heavy horned barbute                        |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users constitution a bit. (6/20)
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers a bit slower than average.
+It increases the users cold resistance adequately. (10/20)
+It gives decent bonus to the skill 'inner strength'.
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A hideous looking golden mask                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength somewhat. (8/20)
+It decreases the users constitution somewhat. (8/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+- Extra -
+
+It allows the user to sometimes 'disrupt' nearby magical fields.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A hood made from tree leaves                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                A hooded Duskwalker visor of dark weave                |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A large barrel-shaped helmet                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+It increases the users hitpoints adequately. (10/20)
+It gives great penalty to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A large golden crown                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence poorly. (5/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A large green pointy hat                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'skyfire'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A mask of the witch goddess, Rangda                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It gives small bonus to the skill 'nerve mastery'.
+This item loses its magical powers with average speed.
+
+- Extra -
+The mask strikes terror in the hearts of onlookers, making them
+more susceptible to psionic forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A massive black mask                         |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It has little armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A pair of crooked eyeglasses                     |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A pale white gemstone                         |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom unbelievably much. (20/20)
+It increases the users intelligence phenomenally.
+It decreases the users charisma impossibly much.
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It gives decent bonus to the skill 'art of telepathy'.
+This item loses its magical powers somewhat slower than average.
+It increases the users magical resistance somewhat. (8/20)
+It decreases the users psionic resistance somewhat. (8/20)
+It gives small bonus to the skill 'psionic efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A polished steel sallet                        |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution a good amount. (12/20)
+It has awesome armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+
+- Extra -
+
+It constricts the wearers casting abilities.
+
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      A pulsating steel great helm                     |
+*-----------------------------------------------------------------------*
+It increases the users constitution noticably. (9/20)
+It increases the users intelligence noticably. (9/20)
+It has tremendous armour class for its type (poor in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases the users psionic resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              A ragged hat                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A reaver's mandibles                         |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity nicely. (13/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'critical'.
+
+- Extra -
+When threatened, the mandibles respond by spraying a numbing toxin.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A set of gilt antlers                         |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users dexterity unnoticably. (1/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A silly-looking mushroom hat                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a good amount. (12/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has little armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A silver headband                           |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers very fast.
+It gives tiny bonus to the skill 'spot weakness'.
+It gives tiny bonus to the skill 'slash'.
+
+- Extra -
+It emits light.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A simple platinum headband                      |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution pitifully. (3/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users magical resistance adequately. (10/20)
+It increases the users electric resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A sparkling bronze crown                       |
+*-----------------------------------------------------------------------*
+It decreases the users strength slightly. (7/20)
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom slightly. (7/20)
+It increases the users intelligence slightly. (7/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+It decreases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|            A visored brass helmet dripping with green ooze            |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution somewhat. (8/20)
+It has adequate armour class for its type (little in general).
+It allows the user to see in darkness.
+It allows the user to see magical auras.
+It allows the user to see invisible.
+It decreases the users hitpoint regeneration pitifully. (3/20)
+It increases the users hitpoints unbelievably much. (20/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance a bit. (6/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users acid resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|            A visored copper helmet dripping with green ooze           |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has low armour class for its type (tiny in general).
+It allows the user to see in darkness.
+It allows the user to see magical auras.
+It allows the user to see invisible.
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users spellpoints adequately. (10/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A whirl of freezing winds                       |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users intelligence pathetically. (2/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A wicked looking crimson hood                     |
+*-----------------------------------------------------------------------*
+It increases the users dexterity impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+It gives decent bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It increases the users psionic resistance strongly. (14/20)
+
+- Extra -
+This hood is rumoured to be able to clear persons mind if they happen to be
+stunned. It is also said that this hood can strengthen one's mind to be more
+resistant to such occurrences.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A worn black woolly hat                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A yellowed reindeer skull                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom magnificently. (18/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers extremely fast.
+
+- Extra -
+Increases the wearer's regeneration in combat.
+
+
+
+
+*-----------------------------------------------------------------------*
+|             An abalone-shell circlet called 'The Extender'            |
+*-----------------------------------------------------------------------*
+It increases the users constitution impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+It is a relic of the First Expedition.
+Its power could be greatly enhanced through embedding.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          An antique burgonet                          |
+*-----------------------------------------------------------------------*
+It has superb armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               An exquisite platinum diadem with diamonds              |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It increases the users charisma adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers extremely slowly.
+It increases the users psionic resistance somewhat. (8/20)
+It gives small bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|               An exquisite platinum diadem with emeralds              |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users charisma adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers extremely slowly.
+It increases the users asphyxiation resistance somewhat. (8/20)
+It gives small bonus to the skill 'arcane lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|              An exquisite platinum diadem with sapphires              |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence poorly. (5/20)
+It increases the users charisma impressively. (15/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers extremely slowly.
+It increases the users cold resistance somewhat. (8/20)
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      An opulent golden headdress                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users wisdom a good amount. (12/20)
+It increases the users charisma pitifully. (3/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers slowly.
+It gives decent bonus to the skill 'flow of life'.
+It increases the users magical resistance adequately. (10/20)
+It gives decent bonus to the skill 'healing efficiency'.
+
+- Extra -
+The headdress quickens and sharpens the mind of the wearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             An orange hat                             |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    An ordinary looking stone helmet                   |
+*-----------------------------------------------------------------------*
+It increases the users constitution pathetically. (2/20)
+It has low armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      An shiny ice encased barbute                     |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It decreases the users dexterity a good amount. (12/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+It has tremendous armour class for its type (poor in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             An umbral veil                            |
+*-----------------------------------------------------------------------*
+It increases the users dexterity slightly. (7/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+It gives decent bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It increases the users cold resistance adequately. (10/20)
+It increases the users psionic resistance adequately. (10/20)
+It gives decent bonus to the skill 'hiding'.
+
+- Extra -
+The thin tissue of shadow makes it possible to view objects that
+might otherwise blind the wearer.
+
+
+*-----------------------------------------------------------------------*
+|                      An umbral veil < Prismatic >                     |
+*-----------------------------------------------------------------------*
+It increases the users dexterity a good amount. (12/20)
+It has poor armour class for its type (pathetic in general).
+It allows the user to see in darkness.
+It allows the user to see magical auras.
+It allows the user to see invisible.
+It increases the users hitpoint regeneration somewhat. (8/20)
+It gives nice bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It increases the users cold resistance adequately. (10/20)
+It increases the users psionic resistance adequately. (10/20)
+It gives decent bonus to the skill 'hiding'.
+
+- Extra -
+The thin tissue of shadow allows the wearer to safely look through
+the prismatic lens, revealing previously unseen dimensions of the
+physical world.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Battered Straw Hat                          |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom an average amount. (11/20)
+It decreases the users intelligence noticably. (9/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+It decreases the users fire resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Black cloth headdress                         |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Black iron helmet of the Balrog                    |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pitifully. (3/20)
+It decreases the users intelligence nicely. (13/20)
+It has awesome armour class for its type (poor in general).
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Black pointed helmet                         |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  Blue hat decorated with yellow stars                 |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence pitifully. (3/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Bone helmet                              |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users constitution slightly. (7/20)
+It has low armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Centurion's helmet                          |
+*-----------------------------------------------------------------------*
+It has decent armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Chrome plated helm                          |
+*-----------------------------------------------------------------------*
+It has low armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Circlet of clarity                          |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers somewhat faster than average.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Crown of the Elves                          |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a bit. (6/20)
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom adequately. (10/20)
+It has low armour class for its type (tiny in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Crown of the Imp King                         |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom poorly. (5/20)
+It decreases the users charisma adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases the users physical resistance somewhat. (8/20)
+It gives decent bonus to the spell 'cure undead'.
+
+- Extra -
+It is an artifact of imps.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Crown of the Ringwraith King                     |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a tiny bit. (4/20)
+It has decent armour class for its type (little in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                      Crown of the Ringwraith King                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence poorly. (5/20)
+It has negative armour class for its type (negative in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Cursed Crown                             |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has negative armour class for its type (negative in general).
+It decreases the users spellpoint regeneration impressively. (15/20)
+It decreases the users hitpoint regeneration impressively. (15/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Dark blue Crown of Octopus                      |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution a tiny bit. (4/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                     The Dark blue Crown of Octopus                    |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers very fast.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Dark silver diadem                          |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It affects user's mana regeneration rate.
+It affects user's intelligence.
+It affects user's strength.
+It affects user's constitution.
+It is evil.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Dirty goblin helmet                          |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Druids hat                              |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'teleport without error'.
+
+
+
+*-----------------------------------------------------------------------*
+|           Eldritch Knight's Helm, crowned with arcane sigils          |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Eye of the Demon King Gyaratkh                    |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It increases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        Golden crown of frogmen                        |
+*-----------------------------------------------------------------------*
+It increases the users strength unnoticably. (1/20)
+It increases the users constitution unnoticably. (1/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Green Laurels                             |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Hat of the high wizard                        |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Headband of Qen Tie                          |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution a tiny bit. (4/20)
+It has nice armour class for its type (little in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'focus kungfu attacks'.
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+It modifies users skills.
+
+
+
+You can't find any records about "Headdress of Darkness Pulsating" in the library.
+
+*-----------------------------------------------------------------------*
+|                       Helm of dimensional travel                      |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence a good amount. (12/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+The wearer of this helm can sense all incoming dimensional travel,
+and is able to construct dimensional portals as long as the helm
+if the necessary magical energy.
+To open a dimensional gate: 'dgate <target>'
+To open a dimension door: 'ddoor'
+
+
+
+
+*-----------------------------------------------------------------------*
+|              Helm of light, the unbreakable helm of gods              |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Helmet of the Dead                          |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It has nice armour class for its type (little in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            Hood of Despair                            |
+*-----------------------------------------------------------------------*
+It increases the users constitution pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Hood of darkness                           |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom somewhat. (8/20)
+It increases the users intelligence superbly. (16/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It emits darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                               Iron helm                               |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Mitre of Divine Power                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|                         Mitre of Divine Power                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers very slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|        Myrmidon's helm, fortified with impenetrable dark steel        |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Ragged Straw Hat                           |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence a bit. (6/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers with average speed.
+It decreases the users fire resistance strongly. (14/20)
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Red Ribbon                              |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom a good amount. (12/20)
+It has decent armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|          Sanctifier's diadem, gleaming with healing radiance          |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution slightly. (7/20)
+It increases the users wisdom a good amount. (12/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Scaled helmet of Tiamat                        |
+*-----------------------------------------------------------------------*
+It has awesome armour class for its type (poor in general).
+It allows the user to see in darkness.
+It allows the user to see magical auras.
+It allows the user to see invisible.
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers a bit slower than average.
+
+- Extra -
+It enhances your vision greatly.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Scholar's Cap                             |
+*-----------------------------------------------------------------------*
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'offensive control'.
+It gives tiny bonus to the skill 'upper hand'.
+
+- Extra -
+Cap of the Scholar seems to modify the wearer's skills.
+
+
+*-----------------------------------------------------------------------*
+|                         Scholar's Cap [fading]                        |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity a bit. (6/20)
+It decreases the users constitution a tiny bit. (4/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'offensive control'.
+It gives tiny bonus to the skill 'upper hand'.
+
+- Extra -
+Cap of the Scholar seems to modify the wearer's skills.
+
+
+
+You can't find any records about "Scholar's Cap fading" in the library.
+
+*-----------------------------------------------------------------------*
+|                             Shadow Helmet                             |
+*-----------------------------------------------------------------------*
+It has nice armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It affects the skill 'demon and devil lore'.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Shiny red devil horns                         |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Silver-rimmed, six-eyed glasses                    |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Skullshaped demonhelm                         |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Spiked helm of devils                         |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Steel helm                              |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity unnoticably. (1/20)
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Sulfur helmet (anti intelligent)                   |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It decreases the users intelligence poorly. (5/20)
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+This object effects the users intelligence
+This object effects the users strength
+This object has hidden magical properties.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The Bloodstained Crown of Darkness                  |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence a bit. (6/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It gives small bonus to the spell 'asphyxiation preference'.
+It gives small bonus to the spell 'poison preference'.
+It increases the users asphyxiation resistance somewhat. (8/20)
+It gives small bonus to the spell 'venom fend'.
+It gives small bonus to the spell 'poison fend'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The Bonemask of Disappearence                     |
+*-----------------------------------------------------------------------*
+It decreases the users strength slightly. (7/20)
+It decreases the users constitution slightly. (7/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+It gives small bonus to the spell 'greater invisibility'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'spacial manipulation'.
+
+- Extra -
+It affects the user's skill knowledge.
+It affects the user's spell knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Crown of Darkness                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence a bit. (6/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+It increases the users poison resistance somewhat. (8/20)
+It gives small bonus to the spell 'asphyxiation preference'.
+It gives small bonus to the spell 'poison preference'.
+It increases the users asphyxiation resistance somewhat. (8/20)
+It gives small bonus to the spell 'venom fend'.
+It gives small bonus to the spell 'poison fend'.
+
+*-----------------------------------------------------------------------*
+|                         The Crown of Darkness                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence a bit. (6/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It gives small bonus to the spell 'asphyxiation preference'.
+It gives small bonus to the spell 'poison preference'.
+It increases the users asphyxiation resistance somewhat. (8/20)
+It gives small bonus to the spell 'venom fend'.
+It gives small bonus to the spell 'poison fend'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The Crown of Gondor                          |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users wisdom poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The Dark blue Crown of Octopus                    |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It decreases the users wisdom poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers very fast.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      The Harbinger's Wanyugo Mask                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom magnificently. (18/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+It gives nice bonus to the skill 'arcane lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            The King's Crown                           |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|            The Many Jeweled Crown of the King of Aquilonia            |
+*-----------------------------------------------------------------------*
+It increases the users constitution magnificently. (18/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The Pale King's Circlet                        |
+*-----------------------------------------------------------------------*
+It increases the users dexterity nicely. (13/20)
+It increases the users intelligence nicely. (13/20)
+It decreases the users charisma adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+It gives nice bonus to the skill 'anatomy'.
+This item loses its magical powers extremely slowly.
+It increases the users electric resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+It gives decent bonus to the skill 'leadership'.
+
+- Extra -
+The circlet contains an aspect of Hastur's immeasurable genius.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                The Pointdexter's Magical Leprachaun Hat               |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The Schandmaske of Duntrench                     |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It increases the users charisma impossibly much.
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers extremely slowly.
+It gives decent bonus to the spell 'leomund's lament'.
+It gives decent bonus to the spell 'dirge of despair'.
+It gives decent bonus to the skill 'impart knowledge'.
+It gives decent bonus to the skill 'impart lore'.
+
+- Extra -
+The Schandmaske remembers and recalls malicious songs.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The black crown of spiders                      |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with incredible haste.
+It gives small bonus to the skill 'quick_chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The black iron helmet of the Balrog                  |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution a tiny bit. (4/20)
+It decreases the users intelligence nicely. (13/20)
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              The blackened iron crown of the Wraithlords              |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It increases the users shadow resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+This crown will, if donned by someone of evil alignment, protect the wearer
+from the light.
+The enchantment of this crown is more powerful if it is donned by a dread wraith.
+Three Shards of Gods can be embedded into this dark artifact.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          The bloody red crown                         |
+*-----------------------------------------------------------------------*
+It increases the users constitution unbelievably much. (20/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers extremely fast.
+It increases the users poison resistance a bit. (6/20)
+It increases the users physical resistance a bit. (6/20)
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+It increases the users magical resistance a bit. (6/20)
+It increases the users psionic resistance a bit. (6/20)
+It increases the users electric resistance a bit. (6/20)
+It increases the users acid resistance a bit. (6/20)
+It increases the users asphyxiation resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|               The bone helmet of the demon king Gyaratkh              |
+*-----------------------------------------------------------------------*
+It decreases the users strength adequately. (10/20)
+It decreases the users constitution slightly. (7/20)
+It increases the users intelligence strongly. (14/20)
+It has low armour class for its type (tiny in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The brightly shining helmet of Yeao                  |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users wisdom a bit. (6/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers somewhat slower than average.
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        The crown of the liches                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence nicely. (13/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'sense weakness'.
+It gives small bonus to the skill 'stunning force'.
+It gives small bonus to the skill 'sensory overload'.
+It gives small bonus to the spell 'death wish'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The crown of visions                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence somewhat. (8/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+It contains a tale: Many battles has crown viewed from far away, yet
+there is much more to see.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The glimmering crown of Gruumsh                    |
+*-----------------------------------------------------------------------*
+It increases the users strength slightly. (7/20)
+It increases the users wisdom adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+It gives decent bonus to the skill 'weapon skill 1h bludgeon'.
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'weapon skill 2h bludgeon'.
+
+
+
+*-----------------------------------------------------------------------*
+|                The gory eye of the demon king Gyaratkh                |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+It increases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       The hat of the burgomaster                      |
+*-----------------------------------------------------------------------*
+It increases the users wisdom pathetically. (2/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The helm of thousand eyes                       |
+*-----------------------------------------------------------------------*
+It increases the users intelligence adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
 

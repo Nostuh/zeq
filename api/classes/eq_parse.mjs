@@ -21,7 +21,15 @@ const AMOUNT_SCALE = [
     ['an average amount', 11], ['a good amount', 12], ['nicely', 13],
     ['strongly', 14], ['impressively', 15], ['superbly', 16],
     ['tremendously', 17], ['magnificantly', 18], ['magnificently', 18],
-    ['astoundingly', 19], ['unbelievably much', 20], ['impossibly much', 30],
+    ['astoundingly', 19], ['unbelievably much', 20],
+    // Superlatives ABOVE the /20 band — surfaced by library armour/jewellery
+    // data, printed with NO "(n/20)" annotation, so their exact magnitude is
+    // unknown. Values are ESTIMATES (ascending, slotted into the 20..30 gap)
+    // flagged for review, same convention as the AC_SCALE weapon-tier
+    // estimates above. Correct the integers if the real ladder surfaces.
+    // See docs/manual-onboard.md "Open follow-ups".
+    ['monumentally', 22], ['colossally', 24], ['unearthly', 26], ['divinely', 28],
+    ['impossibly much', 30],
     ['immensely', 31], ['phenomenally', 33], ['ILLEGALLY', 50],
 ];
 
@@ -57,11 +65,13 @@ const STAT_PATTERNS = [
     ["user's electric resistance", 'relec'],
     ["user's psionic resistance", 'rpsi'],
     ["user's magical resistance", 'rmag'],
+    ["user's magic resistance", 'rmag'],   // game prints both phrasings
     ["user's acid resistance", 'racid'],
     ["user's poison resistance", 'rpoi'],
     ["user's fire resistance", 'rfire'],
     ["user's cold resistance", 'rcold'],
     ["user's asphyxiation resistance", 'rasphx'],
+    ["user's shadow resistance", 'rshadow'],  // shadow is a known damage element (DMG_TYPES)
 ];
 
 const DMG_TYPES = [
@@ -72,7 +82,7 @@ const DMG_TYPES = [
 
 // Skill/spell bonus magnitude in the library "lookup" format
 // ("It gives <quality> bonus to the skill 'X'."). The in-game scale is a
-// 6-step quality ladder (see eq_to_parse/commands.txt) — DISTINCT from the
+// 6-step quality ladder (see docs/manual-onboard.md) — DISTINCT from the
 // stat adverbs above and shown with no number. Stored ordinally 1..6;
 // order is all the builder ranks on, so swap in real values if they
 // ever surface. Identify text uses the older "bonus to user's X" line,
@@ -187,7 +197,7 @@ export function parseIdentify(text, slotRaw = '') {
         str: 0, con: 0, dex: 0, int: 0, wis: 0, cha: 0,
         hpr: 0, spr: 0, hp: 0, sp: 0,
         rphys: 0, rpsi: 0, relec: 0, rmag: 0, rpoi: 0,
-        rfire: 0, rcold: 0, racid: 0, rasphx: 0,
+        rfire: 0, rcold: 0, racid: 0, rasphx: 0, rshadow: 0,
         ac: 0,
     };
     let weapon_class_value = 0;
@@ -249,12 +259,19 @@ export function parseIdentify(text, slotRaw = '') {
             continue;
         }
 
-        // Skill/spell bonus, library format: "gives <quality> bonus to the
-        // skill 'X'." / "the spell 'X'." (quality ladder, no number).
-        const sb = line.match(/gives\s+(\w+)\s+bonus to the (skill|spell)\s+'([^']+)'/i);
+        // Skill/spell bonus OR penalty, library format: "gives <quality>
+        // bonus/penalty to the skill 'X'." / "the spell 'X'." (quality ladder,
+        // no number). A penalty is the negative twin of a bonus — same ladder,
+        // stored as a negative amount (SMALLINT, sign preserved).
+        const sb = line.match(/gives\s+(\w+)\s+(bonus|penalty) to the (skill|spell)\s+'([^']+)'/i);
         if (sb) {
-            bonuses.push({ bonus_name: sb[3].trim(), kind: sb[2].toLowerCase(),
-                amount: SKILL_MAP[sb[1].toLowerCase()] ?? 0 });
+            const mag = SKILL_MAP[sb[1].toLowerCase()] ?? 0;
+            // Normalize the skill/spell name: some lookup text has an underscore
+            // typo ('quick_chant' vs 'quick chant') — fold to spaces so it can't
+            // become a duplicate bonus row.
+            const bonus_name = sb[4].trim().replace(/_/g, ' ').replace(/\s+/g, ' ');
+            bonuses.push({ bonus_name, kind: sb[3].toLowerCase(),
+                amount: sb[2].toLowerCase() === 'penalty' ? -mag : mag });
             continue;
         }
 

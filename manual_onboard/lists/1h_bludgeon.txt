@@ -1,3 +1,55 @@
-# Paste the `list <slot>` output for 1h_bludgeon here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 1h bludgeon
+
+*-------------------------------------------------------------*
+|                  Weapon type - 1h bludgeon                  |
+*-------------------------------------------------------------*
+| A brutish, rusty iron maul                                  |
+| A cloth wrapped branch                                      |
+| A coal black club                                           |
+| A copper maul                                               |
+| A devastating troll hammer                                  |
+| A diamond mace                                              |
+| A glossy platinum flanged mace                              |
+| A heavy hammer made of steel                                |
+| A heavy iron hammer                                         |
+| A huge staff                                                |
+| A large bone club                                           |
+| A leg of a chair                                            |
+| A mace of coldness                                          |
+| A metal reinforced mace                                     |
+| A mithril smithing hammer                                   |
+| A reinforced mace                                           |
+| A small mace                                                |
+| A solid oak mace with a reinforced steel head               |
+| A steel hammer                                              |
+| A sturdy wooden truncheon                                   |
+| A troll club                                                |
+| A wooden club                                               |
+| A wooden rolling pin                                        |
+| A wooden truncheon                                          |
+| A yellowed humerus                                          |
+| An ornate club                                              |
+| Aurora Prism, the Aetherweaver's conduit                    |
+| Carpenter's hammer                                          |
+| Ghost club                                                  |
+| Gnarled wooden staff (glowing dimly)                        |
+| Hammer                                                      |
+| Hobgoblin mace                                              |
+| Huge Spiked Club                                            |
+| Mace of Pain                                                |
+| Nasty looking whip                                          |
+| Old wooden stick                                            |
+| Orcish mace                                                 |
+| The Grog Mug (filled with beer) (dusty)                     |
+| The Grog Mug O' Death <tm> (dusty)                          |
+| The Hammer of the Last Forge                                |
+| The hammer of the blacksmith                                |
+| The venomous warhammer of spiders                           |
+| Tyririan morningstar                                        |
+| Vendetta                                                    |
+| Yekki's paddle                                              |
+| A sturdy, iron-headed mace                                  |
+| Stone club                                                  |
+'-------------------------------------------------------------'
 

@@ -1,3 +1,42 @@
-# Paste the `list <slot>` output for 2h_polearm here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 2h polearm
+
+*-------------------------------------------------------------*
+|                   Weapon type - 2h polearm                  |
+*-------------------------------------------------------------*
+| A Recruiter's lance                                         |
+| A cloud guards pike                                         |
+| A double-edged bardiche 'Venomtongue'                       |
+| A dual-tipped lance called 'Echotwin'                       |
+| A dual-tipped lance called 'Echotwin'                       |
+| A dual-tipped spear, resonating with a harmonious yet deadly aura|
+| A glossy platinum glaive                                    |
+| A heavy rune-etched fauchard                                |
+| A large, slimy troll's penis                                |
+| A long sparkling steel rod                                  |
+| A long steel rod                                            |
+| A massive fauchard called 'The Flametongue'                 |
+| A massive halberd called 'the solesearcher'                 |
+| A massive halberd called 'the soulsearcher'                 |
+| A massive rune-etched lochaber axe                          |
+| A mighty obsidian voulge                                    |
+| A shimmering Halberd                                        |
+| A vicious barbed frostburned pike                           |
+| A vile, diseased polearm known as 'Plaguepike'              |
+| A winged war spear                                          |
+| A wooden spear                                              |
+| An ancient silver longspear called 'Bloodspear'             |
+| Arrakis army battlespear                                    |
+| Bone spear                                                  |
+| Halberd of Shining Might                                    |
+| Hastur's Scythe                                             |
+| Jet Black Harpoon                                           |
+| Rusty short trident                                         |
+| Severance, the sentient voulge                              |
+| Sharp Long Spear                                            |
+| Soild steel pike                                            |
+| The massive glaive called 'Wyrmslayer'                      |
+| Highland pike                                               |
+'-------------------------------------------------------------'
+
 

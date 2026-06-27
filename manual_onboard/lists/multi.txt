@@ -1,3 +1,92 @@
-# Paste the `list <slot>` output for multi here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+
+list multi
+
+*-------------------------------------------------------------*
+|                     Armour slot - Multi                     |
+*-------------------------------------------------------------*
+| A Kruse platemail                                           |
+| A battlearmour made from dragon scales                      |
+| A black battlesuit                                          |
+| A black battlesuit of the z'dra race                        |
+| A black leather battlesuit called 'protector'               |
+| A black leather battlesuit called 'protector'               |
+| A black shirt                                               |
+| A black shirt with a mark of the thieves                    |
+| A black shirt with many pockets                             |
+| A black silk shirt                                          |
+| A black tuxedo                                              |
+| A blackened heavy cloth robe                                |
+| A blue field plate                                          |
+| A blue shirt                                                |
+| A bright steel plate armour                                 |
+| A charred black battlesuit                                  |
+| A crystalline memory retainer                               |
+| A dark red lamellar armour                                  |
+| A dark robe with a red symbol on the back                   |
+| A deep crimson robe with black rose on it                   |
+| A dirty shirt                                               |
+| A fine red robe with silvery seams                          |
+| A fine white dress                                          |
+| A flamehardened greatcloak                                  |
+| A glowing pair of frostburned leggings                      |
+| A grand polished adamantite cuirass                         |
+| A grand spellburned silk robe                               |
+| A grand voidtouched greatcloak                              |
+| A grey shirt                                                |
+| A heavy shockburned full plate                              |
+| A leather battlesuit                                        |
+| A leather shirt                                             |
+| A legionnaire's scalemail                                   |
+| A light burnished brigandine                                |
+| A light green toxin infused leather hood                    |
+| A massive ice encased chestplate                            |
+| A pair of magic infused grand pauldrons                     |
+| A pair of massive voidplate boots                           |
+| A pair of obsidian plated chausses                          |
+| A pitch black full-length armour with a hammer on chest     |
+| A pulsating steel full plate                                |
+| A ripped and torn straight jacket                           |
+| A shimmering spidersilk greatrobe                           |
+| A simple blue cloth robe                                    |
+| A simple looking brown robes                                |
+| A sinister-looking black platemail                          |
+| A sturdy grey robe                                          |
+| A tattered funerary shroud                                  |
+| A tavern wenches dress                                      |
+| A thunderstruck leather battlesuit                          |
+| A venomtouched leather brigandine                           |
+| A white robe with gold linings                              |
+| A worn suit of orcish battlearmour                          |
+| Aelian leather armour                                       |
+| An Exoskeletal Battlesuit                                   |
+| An acid etched greatplate                                   |
+| An antique plate armour                                     |
+| An darkened totem adorned with a murkroot toad skull        |
+| An entirely white robe with a hood                          |
+| An exquisite mithril battlesuit                             |
+| An iron battlesuit                                          |
+| Armour of Harmonic Existance                                |
+| Befouled hand wrappings                                     |
+| Black Chain Hauberk                                         |
+| Blackstone fullplate of demonic armies                      |
+| Bloodstone battlearmour of devilish entities                |
+| Brown robes                                                 |
+| Fedaykin officer suit                                       |
+| Iron bracelets of elemental binding                         |
+| Iron chainmail                                              |
+| Jarvisen hiihtohaalari                                      |
+| Leprachaun Magical Air Armour <rainbow>                     |
+| Long flowing black robes                                    |
+| Lorain's white robe with gold linings                       |
+| Robes of Jaundice                                           |
+| Superior Leprechaun Magical Air Armour <black>              |
+| The Ancient silver Battlesuit of Oda Nobunaga               |
+| The Ritual Vestments of Duntrench                           |
+| The infernal maw of Tethyl                                  |
+| The ragged crimson and black tartan of Grimoan              |
+| Troll's chainmail                                           |
+| A Simple cloth robe                                         |
+'-------------------------------------------------------------'
+
 

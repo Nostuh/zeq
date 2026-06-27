@@ -1,3 +1,117 @@
-# Paste the `list <slot>` output for cloak here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list cloak
+
+*-------------------------------------------------------------*
+|                     Armour slot - Cloak                     |
+*-------------------------------------------------------------*
+| A black and red cloak                                       |
+| A black cloak                                               |
+| A black cloak of z'dra race                                 |
+| A black cloak with a mark of a red hand on it               |
+| A black leather cloak adorned with silver runes             |
+| A black silk cloak of demonic entities                      |
+| A black toga                                                |
+| A bloodstained apron                                        |
+| A brown cloak of protection                                 |
+| A cloak made from the finest silk                           |
+| A cloak of tongues                                          |
+| A dark brown fleece rain cloak with a liripipe              |
+| A dark cloak shimmering with moonlight                      |
+| A dark cloak with a red symbol on the back                  |
+| A decayed yellow cloak                                      |
+| A defiled human skin                                        |
+| A dim blue cloak                                            |
+| A drow wizard's cloak                                       |
+| A fanged cloak of the gargantuan jell-o                     |
+| A flowing Aetherweave mantle                                |
+| A glowing black cloak                                       |
+| A gray shadowy cloak                                        |
+| A gray tattered cloak                                       |
+| A hooded cloak of the Black Lotus Clan                      |
+| A hooded tengu cloak                                        |
+| A light yellow burnished leather cloak                      |
+| A long felt cloak dyed in black                             |
+| A long thunderstruck leather cape                           |
+| A luxurious looking velvet cloak                            |
+| A multicolored cloak                                        |
+| A pair of mechanical wings                                  |
+| A pall of grey-green gloom                                  |
+| A pitchblack pelerine                                       |
+| A red cloak of devils                                       |
+| A serpentskin cloak                                         |
+| A set of ragged demon's wings                               |
+| A shadow-edged Duskwalker cloak                             |
+| A shimmering silver mantle                                  |
+| A shiny green cloak with red decorations                    |
+| A tattered Ironward cloak lined with mail                   |
+| A tattered charnel moth wing                                |
+| A thick fur coat                                            |
+| A woolen monk robe                                          |
+| An ancient sandstone cloak                                  |
+| An iridescent feather mantle                                |
+| Black cloak                                                 |
+| Blood-red robes                                             |
+| Blue robes                                                  |
+| Cape of Combat                                              |
+| Cloak of Eternal Sands                                      |
+| Cloak of Eternal Sands                                      |
+| Cloak of Eternal Sands                                      |
+| Cloak of Infinite Arcana                                    |
+| Cloak of Shifting Sands                                     |
+| Cloak of Shifting Sands                                     |
+| Cloak of Spiders                                            |
+| Cloak of Strahd                                             |
+| Cloak of everlasting darkness                               |
+| Cloak of everlasting darkness                               |
+| Cloak of souls                                              |
+| Cloak of the Sh'lori                                        |
+| Crimson Red Cape                                            |
+| Dark shadowed cloak                                         |
+| Dirty cloak                                                 |
+| Dragon's wings                                              |
+| Drow cloak                                                  |
+| Dusty black cloak                                           |
+| Gleaming white wings of an archangel                        |
+| Gleeman's cloak                                             |
+| Golden robes                                                |
+| Grey cloak                                                  |
+| Hide of a Giant Stag                                        |
+| Leather cloak                                               |
+| Legendary burca of Fremens                                  |
+| Long Blue Cloak of Vanaheim                                 |
+| Monks cloak                                                 |
+| Plaid of Frasier                                            |
+| Raver's Cloak                                               |
+| Star covered robe                                           |
+| The Cape of the Lich King                                   |
+| The Cape of the Lich King                                   |
+| The Cloak of Denethor                                       |
+| The Cloak of Flames <*blazing*>                             |
+| The Gleeman's Cloak                                         |
+| The Mantle of the Rising Sun                                |
+| The black cloak of silence                                  |
+| The black cloak of vampiric wizardy                         |
+| The cloak of Hell                                           |
+| The cloak of Kk'ras'hh <Ethereal>                           |
+| The cloak of Kk'ras'hh <Ethereal>                           |
+| The cloak of dark powers                                    |
+| The cloak of hell                                           |
+| The cloak of magicians                                      |
+| The cloak of the bat                                        |
+| The cloak of the black circle                               |
+| The cloak of the elves                                      |
+| The crimson cloak of Buju, awash with sigils and golden amulets|
+| The dark red cloak of Myastha                               |
+| The fighter cloak of Hell                                   |
+| The infernal cloak of the Emberguard                        |
+| The shining cloak of Yeao                                   |
+| The shroud of the Nine                                      |
+| The silvery cloak of spiders                                |
+| The sorcerous red cloak of stars                            |
+| The transparent cloak of water                              |
+| The wings of the dragon lord                                |
+| Purple cloak with gold trim                                 |
+| Red cloak of stars                                          |
+| The Cloak of the Grove                                      |
+'-------------------------------------------------------------'
 

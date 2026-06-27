@@ -1,3 +1,141 @@
-# 1h_instrument weapon (1h, class=instrument) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
 
+*-----------------------------------------------------------------------*
+|                       A beautiful wooden violin                       |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         A massive wooden cello                        |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   A masterfully crafted golden horn                   |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A rich mahogany symphonia                       |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+It decreases the users dexterity poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It increases the users charisma impressively. (15/20)
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+It gives great bonus to the skill 'instrumentation'.
+It decreases damage poorly. (5/20)
+It gives great bonus to the skill 'tonal control'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A small brass accordian                        |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     An exquisite hammered dulcimer                    |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+It increases the users intelligence impressively. (15/20)
+It increases the users charisma a good amount. (12/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers incredibly slowly.
+It decreases damage poorly. (5/20)
+
+- Extra -
+It is a relic of the First Expedition.
+
+Turning a knob on the side of the box causes the dulcimer to play
+itself, much like a music box. The dulcimer's tune is a song unknown
+to even gifted minstrels.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                                Bagpipes                               |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                               Ben's Lute                              |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Demon's Lyre                             |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       The lyre of the Bonesinger                      |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+It increases the users intelligence impressively. (15/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+It decreases damage poorly. (5/20)
+It increases the users magical resistance somewhat. (8/20)
+
+- Extra -
+The magic of this instrument is strengthened if played by a necromancer or an undead.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The white rebec of Baron Karlstein                  |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has weak weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+- Extra -
+When the last remaining strings break, this instrument has only
+sentimenal value left.
+
+
+
+You can't find any records about "A silver flute" in the library.
+You can't find any records about "Highland bagpipes" in the library.

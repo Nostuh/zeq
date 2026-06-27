@@ -1,3 +1,17 @@
-# Paste the `list <slot>` output for 2h_dagger here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 2h dagger
+
+*-------------------------------------------------------------*
+|                   Weapon type - 2h dagger                   |
+*-------------------------------------------------------------*
+| A black dagger called 'The infector'                        |
+| A bloodstained sacrificial knife                            |
+| A huge icicle                                               |
+| A large, elegant stiletto                                   |
+| An ornate black dagger                                      |
+| Charon's wicked looking dagger                              |
+| Flamescythe, Dagger of Torment                              |
+| Pitch Black Dagger                                          |
+'-------------------------------------------------------------'
+
 

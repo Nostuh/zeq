@@ -1,3 +1,546 @@
-# 1h_ancient weapon (1h, class=ancient) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
+
+*-----------------------------------------------------------------------*
+|                     A black spiked whip of torment                    |
+*-----------------------------------------------------------------------*
+It has almost non-existent weapon class for its type (almost non-existent in general).
+It gives small penalty to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives small penalty to the skill 'parry'.
+It decreases the users physical resistance adequately. (10/20)
+It does poison damage unnoticably. (1/20)
+It gives small bonus to the skill 'attack'.
+
+- Extra -
+It seems to have a pitch-black aura surrounding it.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            A broken bottle                            |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A festering scalpel                          |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It does acid damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    A frostworm's serrated mandible                    |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (decent in general).
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution adequately. (10/20)
+It gives decent bonus to the skill 'anatomy'.
+This item loses its magical powers with average speed.
+It increases damage a tiny bit. (4/20)
+It does cold damage unbelievably much. (20/20)
+It increases critical chance colossally.
+
+- Extra -
+The serrated blade more easily inflicts grievous wounds.
+The tip of the blade serves as a focal point for intense cold.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A giant tendril of kelp                        |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               A hayfork                               |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A large icepick                            |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A long leather whip                          |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has impressive weapon class for its type (average in general).
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does magical damage a good amount. (12/20)
+
+- Extra -
+This weapon will increase the users power.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A mining pick                             |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             A mining pick                             |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A pair of steel tongs                         |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A pulsing mystic stone rod                      |
+*-----------------------------------------------------------------------*
+It decreases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers very fast.
+
+- Extra -
+This is one of the few artifacts, which can alter the
+time itself. These artifacts are guarded by order of
+the time lore. This rod has slow person spell stored
+within. To fully master the spell, you need the skill
+mastery of time.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A rawhide whip                            |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A rusty meathook                           |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A sharp looking cleaver                        |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A sharp spear                             |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A sharpened switch                          |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It does poison damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A small Farmer's sickle                        |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has adequate weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A steel chain                             |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A steel crowbar                            |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A strong shovel                            |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A sturdy iron storm lantern                      |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with incredible haste.
+It increases damage adequately. (10/20)
+It increases critical chance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A tarnished iron sickle                        |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A thorn studded bullwhip                       |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It does poison damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                  A thunderstruck meteoric iron flail                  |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has divine weapon class for its type (tremendous in general).
+This item loses its magical powers incredibly slowly.
+It increases damage poorly. (5/20)
+It does electric damage immensely.
+It increases critical chance impressively. (15/20)
+It increases the users asphyxiation resistance strongly. (14/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       An old three-headed flail                       |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has impressive weapon class for its type (average in general).
+It increases the users strength a tiny bit. (4/20)
+It increases the users dexterity pathetically. (2/20)
+This item loses its magical powers somewhat slower than average.
+It increases damage adequately. (10/20)
+It does psionic damage magnificently. (18/20)
+It increases critical chance adequately. (10/20)
+It increases the users magical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            An old worn kama                           |
+*-----------------------------------------------------------------------*
+It increases hit chance nicely. (13/20)
+It has nice weapon class for its type (low in general).
+This item loses its magical powers somewhat slower than average.
+It increases the users poison resistance a bit. (6/20)
+It increases the users cold resistance a bit. (6/20)
+It increases damage a tiny bit. (4/20)
+It does cold damage astoundingly. (19/20)
+It increases critical chance impossibly much.
+
+
+
+*-----------------------------------------------------------------------*
+|                          An opalescent talon                          |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (low in general).
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers very slowly.
+It gives decent bonus to the spell 'channel life'.
+It does magical damage a good amount. (12/20)
+It increases the users magical resistance somewhat. (8/20)
+
+- Extra -
+The hollow shaft of the talon is an ideal conduit for channeling energy.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Animal handlers whip                         |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Basilisk's claw                            |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Black morning star                          |
+*-----------------------------------------------------------------------*
+It decreases hit chance a bit. (6/20)
+It has good weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      Black scythe of the Phantom                      |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Brass knuckles                            |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (decent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Flame blade                              |
+*-----------------------------------------------------------------------*
+It has non-existent weapon class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+It does fire damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Garcan's spoon                            |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Jet black scythe                           |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has adequate weapon class for its type (weak in general).
+It increases the users wisdom impressively. (15/20)
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does acid damage a bit. (6/20)
+
+- Extra -
+It emits darkness.
+It modifies the user's wisdom.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Metallic claws                            |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does magical damage a tiny bit. (4/20)
+
+- Extra -
+
+It may modify the user's resistance to fire damage.
+It may modify the user's dexterity.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Onyx sickle                              |
+*-----------------------------------------------------------------------*
+It increases hit chance nicely. (13/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage nicely. (13/20)
+It does acid damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx sickle                              |
+*-----------------------------------------------------------------------*
+It increases hit chance nicely. (13/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage nicely. (13/20)
+It does cold damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx sickle                              |
+*-----------------------------------------------------------------------*
+It increases hit chance nicely. (13/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage nicely. (13/20)
+It does electric damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx sickle                              |
+*-----------------------------------------------------------------------*
+It increases hit chance nicely. (13/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage nicely. (13/20)
+It does fire damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx sickle                              |
+*-----------------------------------------------------------------------*
+It increases hit chance nicely. (13/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage nicely. (13/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx sickle                              |
+*-----------------------------------------------------------------------*
+It increases hit chance nicely. (13/20)
+It has awesome weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage nicely. (13/20)
+It does psionic damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Small shovel                             |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Studded whip                             |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+It does acid damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|           The ancient tooth of Dune 'Shay'Hulud' <*humming*>          |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It does asphyxiation damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    The celestial flail, 'Dawnstar'                    |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has tremendous weapon class for its type (decent in general).
+It increases the users strength adequately. (10/20)
+It increases the users wisdom adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It increases the users fire resistance strongly. (14/20)
+It increases damage adequately. (10/20)
+It does fire damage unbelievably much. (20/20)
+It increases the users magical resistance somewhat. (8/20)
+It gives decent bonus to the skill 'holy might'.
+
+- Extra -
+The flail, Dawnstar, is a bane of the undead.
+If used to smite the undead with skills, its divine power will leap forth to burn them.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          The fang of Kriesha                          |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (adequate in general).
+It increases the users dexterity adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance strongly. (14/20)
+It decreases the users fire resistance strongly. (14/20)
+It increases damage adequately. (10/20)
+It does cold damage unbelievably much. (20/20)
+It increases the users magical resistance somewhat. (8/20)
+
+- Extra -
+It carries godly essence inside it.
+
+
+
+
+*-----------------------------------------------------------------------*
+|            The skeletal flail called 'The dead man's hand'            |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (adequate in general).
+It increases the users strength a bit. (6/20)
+It increases the users constitution a good amount. (12/20)
+It decreases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers very slowly.
+It increases damage adequately. (10/20)
+It does psionic damage unbelievably much. (20/20)
+It increases critical chance impressively. (15/20)
+It increases the users magical resistance somewhat. (8/20)
+It increases the users psionic resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                  Willbreaker, the whip of submission                  |
+*-----------------------------------------------------------------------*
+It has tremendous weapon class for its type (decent in general).
+This item loses its magical powers with average speed.
+It does psionic damage superbly. (16/20)
+It gives great bonus to the skill 'dirty blow'.
+
+- Extra -
+The whip ensnares its victims, causing damage and distraction.
+
 

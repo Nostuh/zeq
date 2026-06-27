@@ -1,3 +1,101 @@
-# Paste the `list <slot>` output for belt here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list belt
+
+*-------------------------------------------------------------*
+|                      Armour slot - Belt                     |
+*-------------------------------------------------------------*
+| 1st Circle Belt                                             |
+| 2nd Circle Belt                                             |
+| 3rd circle Belt                                             |
+| 4th Circle black battlebelt <-=*O*=->                       |
+| 5th Circle black battlebelt <-=*O*=->                       |
+| A Divine Multicoloured feather belt                         |
+| A belt of three clear floating orbs                         |
+| A black leather belt                                        |
+| A black obi with crow netsuke                               |
+| A black strip made from gauzes                              |
+| A blood-seeping tourniquet                                  |
+| A bloody squid-like tentacle                                |
+| A blue belt                                                 |
+| A bonesplint cinch                                          |
+| A diamond encrusted silk sash                               |
+| A dusty 4th Circle black battlebelt <-=*O*=->               |
+| A dusty 5th Circle black battlebelt <-=*O*=->               |
+| A girdle of white marble                                    |
+| A green squid-like tentacle                                 |
+| A gunmetal captain's belt                                   |
+| A leather belt with a solid mythril buckle                  |
+| A leather belt with a thick mythril buckle                  |
+| A length of putrid moss                                     |
+| A light green toxin infused leather belt                    |
+| A narrow Duskwalker sash with twin clasps                   |
+| A remarkably lightweight, magical belt                      |
+| A rotten squid-like tentacle                                |
+| A rusted steel chain belt                                   |
+| A sallow yellow sash                                        |
+| A shimmering mithril belt                                   |
+| A shimmering spidersilk belt                                |
+| A slinky, slimy tentacle                                    |
+| A small pouch for holding dust of some kind                 |
+| A snakelike belt                                            |
+| A thick leather and gold girdle                             |
+| A thick mithril band                                        |
+| A thick polished adamantite belt                            |
+| A thief utility belt                                        |
+| A wide Ironward girdle with metal fittings                  |
+| A wide leather belt                                         |
+| A worn toolbelt made of leather                             |
+| A woven Aetherweave sash                                    |
+| An embroidered cloth belt                                   |
+| Ancient wyvernscale belt                                    |
+| Angarock Loinbelt                                           |
+| Beaded sash of the quickling                                |
+| Belt of Eternal Sands                                       |
+| Belt of Eternal Sands                                       |
+| Belt of Shifting Sands                                      |
+| Belt of Shifting Sands                                      |
+| Belt of Storm Giant Strength                                |
+| Belt of Storm Giant Strength                                |
+| Belt of the Shadowkin                                       |
+| Belt of the Swift Arrow                                     |
+| Belt of the Widow                                           |
+| Belt of the Widow                                           |
+| Belt of the damned                                          |
+| Blue Belt of the High Seas                                  |
+| Charred belt                                                |
+| Cincture of the Cosmic Deeps                                |
+| Cincture of the Thought Siphon                              |
+| Flowing Red Silk Sash                                       |
+| Gnaash's Belt of Stupidity                                  |
+| Officer Belt                                                |
+| Purple belt                                                 |
+| Rainbow colored belt with silk decorations                  |
+| Senior officer Belt                                         |
+| Shimmering mithril belt                                     |
+| Silken cinch cord                                           |
+| Slimy Tentacle                                              |
+| The Black Belt of Ffor                                      |
+| The belt of Gondor                                          |
+| The belt of the strong mind                                 |
+| The belt of true harmony                                    |
+| The black belt of thousand skulls                           |
+| The blue belt of the High Seas                              |
+| The crimson rope of Lucifer                                 |
+| The crimson war sash of Lucifer                             |
+| The leather belt of Lucifer                                 |
+| The leather belt of unavoidable aggression                  |
+| The prismatic belt of rainbow colors                        |
+| The shadow chameleon belt                                   |
+| The tiny strapping of a small heart                         |
+| The weapon belt of Gondor                                   |
+| Three clear floating orbs                                   |
+| Translucent belt (anti chastity)                            |
+| Translucent belt (anti chastity)                            |
+| Wardens noose                                               |
+| White belt                                                  |
+| White belt                                                  |
+| An embroidered velvet coin purse                            |
+| Dusty belt                                                  |
+'-------------------------------------------------------------'
+
 

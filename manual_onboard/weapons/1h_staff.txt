@@ -1,3 +1,734 @@
-# 1h_staff weapon (1h, class=staff) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
+
+*-----------------------------------------------------------------------*
+|                  A curious wand called 'The Meddler'                  |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (little in general).
+It increases the users constitution unbelievably much. (20/20)
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It increases the users physical resistance somewhat. (8/20)
+It increases the users magical resistance adequately. (10/20)
+
+- Extra -
+Tapping the wand unleashes its powers - though the results vary
+wildly with the number of times it is tapped.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A dark wooden staff                          |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A flamehardened willow wand                      |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (pathetic in general).
+It decreases the users strength a tiny bit. (4/20)
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence a bit. (6/20)
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers slowly.
+It increases the users fire resistance strongly. (14/20)
+It does fire damage a tiny bit. (4/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              A metal pole                             |
+*-----------------------------------------------------------------------*
+It has ILLEGAL weapon class for its type (incredible in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A short, clublike staff                        |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A simple looking wooden cane                     |
+*-----------------------------------------------------------------------*
+It has ILLEGAL weapon class for its type (awesome in general).
+It increases the users intelligence unbelievably much. (20/20)
+This item loses its magical powers with average speed.
+It does magical damage unbelievably much. (20/20)
+
+*-----------------------------------------------------------------------*
+|                      A simple looking wooden cane                     |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (low in general).
+It increases the users intelligence unbelievably much. (20/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A toxin infused yew wand                       |
+*-----------------------------------------------------------------------*
+It has magnificent weapon class for its type (low in general).
+It increases the users intelligence adequately. (10/20)
+It increases the users charisma adequately. (10/20)
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoints poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It does poison damage unbelievably much. (20/20)
+It increases the users asphyxiation resistance strongly. (14/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    An ordinary looking wooden stick                   |
+*-----------------------------------------------------------------------*
+It decreases hit chance unnoticably. (1/20)
+It has almost non-existent weapon class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+It decreases damage unnoticably. (1/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Elder's Staff of Maps                         |
+*-----------------------------------------------------------------------*
+It has immense weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does electric damage unbelievably much. (20/20)
+
+*-----------------------------------------------------------------------*
+|                         Elder's Staff of Maps                         |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It does electric damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         Elder's Staff of Maps                         |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It does electric damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            Hastur's Sceptre                           |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (feeble in general).
+It increases the users wisdom a good amount. (12/20)
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely slowly.
+It does psionic damage superbly. (16/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+- Extra -
+The ancient wisdom of the sceptre helps its wielder create and exploit
+combat opportunities.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      Leprachaun Anti-Gravity Wand                     |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (feeble in general).
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+It modifies the user's mana regeneration.
+It modifies the users stats.
+It has special instrict powers.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     Leprachaun Staff of Aggression                    |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (low in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It does poison damage adequately. (10/20)
+
+- Extra -
+The wand can drive those struct with it mad.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Lord's Staff                             |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 Lumen Spire, the Aetherweaver's focus                 |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has incredible weapon class for its type (mediocre in general).
+This item loses its magical powers incredibly slowly.
+It increases damage adequately. (10/20)
+It does magical damage immensely.
+It increases critical chance an average amount. (11/20)
+It gives nice bonus to the skill 'offensive efficiency'.
+
+- Extra -
+Three Shards of the Gods may be imbued in this ancient artifact.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                               Onyx staff                              |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does cold damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                               Onyx staff                              |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does electric damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                               Onyx staff                              |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does fire damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                               Onyx staff                              |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Slimy staff                              |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (little in general).
+It decreases the users strength adequately. (10/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Staff of Gondor                            |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage pathetically. (2/20)
+
+- Extra -
+It emits light.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Staff of Orcus                            |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (low in general).
+It increases the users intelligence adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does asphyxiation damage somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        Staff of the BattleMage                        |
+*-----------------------------------------------------------------------*
+It decreases hit chance impressively. (15/20)
+It has awesome weapon class for its type (low in general).
+It increases the users intelligence slightly. (7/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Talendine's walking stick                       |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has impressive weapon class for its type (poor in general).
+It increases the users wisdom noticably. (9/20)
+It increases the users spellpoint regeneration a bit. (6/20)
+This item loses its magical powers very fast.
+It increases damage a tiny bit. (4/20)
+It does magical damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           The Asklepian Rod                           |
+*-----------------------------------------------------------------------*
+It has tremendous weapon class for its type (weak in general).
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It increases the users spellpoint regeneration pitifully. (3/20)
+It gives great bonus to the spell 'true transfer'.
+This item loses its magical powers with average speed.
+It does magical damage tremendously. (17/20)
+It gives great bonus to the spell 'true distant transfer'.
+It gives great bonus to the spell 'true transfer damage'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The Cane of Command                          |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (little in general).
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It increases the users charisma a good amount. (12/20)
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It does psionic damage adequately. (10/20)
+It gives awesome bonus to the skill 'bargain'.
+It gives awesome bonus to the skill 'negotiate'.
+It gives awesome bonus to the skill 'leadership'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The Holy Rod of Blackspawn                      |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has superb weapon class for its type (weak in general).
+It increases the users wisdom a bit. (6/20)
+It decreases the users intelligence a bit. (6/20)
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'smash'.
+It increases damage a bit. (6/20)
+It does asphyxiation damage strongly. (14/20)
+It gives small bonus to the skill 'bless'.
+It gives small bonus to the skill 'arcane lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The Sceptre of the Prodigy                      |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (little in general).
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration slightly. (7/20)
+This item loses its magical powers with average speed.
+It does poison damage a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Staff of Stirring                         |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It does poison damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    The heavy stone staff of Belinik                   |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has superb weapon class for its type (weak in general).
+It increases the users strength poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+This item loses its magical powers very fast.
+It increases damage somewhat. (8/20)
+It does psionic damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                   The magical staff of Oda Nobunaga                   |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The staff of Denial                          |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It does cold damage a good amount. (12/20)
+
+- Extra -
+A legend says that this weapon was crafted by Daemon Lord
+Aldinachs' court smith. It is said that the staff is made out of
+the coldest iron which was hardened in the river Styx. To bind
+enchantments into the staff, the smith massacred a village of Dauers
+and enslaved peoples' souls into the staff.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Wand of Wizardry                           |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has mediocre weapon class for its type (little in general).
+It increases the users intelligence impressively. (15/20)
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the spell 'fire preference'.
+It gives decent bonus to the spell 'cold preference'.
+It increases damage pitifully. (3/20)
+It does fire damage a bit. (6/20)
+
+*-----------------------------------------------------------------------*
+|                            Wand of Wizardry                           |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has superb weapon class for its type (weak in general).
+It increases the users intelligence impressively. (15/20)
+It gives decent bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers extremely slowly.
+It gives nice bonus to the spell 'fire preference'.
+It gives decent bonus to the skill 'intentionality'.
+It gives nice bonus to the spell 'cold preference'.
+It increases damage poorly. (5/20)
+It does fire damage astoundingly. (19/20)
+It gives decent bonus to the skill 'gestalt conjuration'.
+It gives decent bonus to the skill 'microclasm'.
+It gives decent bonus to the skill 'power blast'.
+
+
+You can't find any records about "A runestick" in the library.
+
+*-----------------------------------------------------------------------*
+|                           Staff of Kazlakhor                          |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has impressive weapon class for its type (mediocre in general).
+It decreases the users strength unnoticably. (1/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It does magical damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                           Staff of Kazlakhor                          |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has impressive weapon class for its type (mediocre in general).
+It decreases the users strength unnoticably. (1/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+It does magical damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                     Leprachaun Staff of Aggression                    |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (low in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It does poison damage adequately. (10/20)
+
+- Extra -
+The wand can drive those struct with it mad.
+
+
+*-----------------------------------------------------------------------*
+|                   The Staff of Kazlakhor <dark glow>                  |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (average in general).
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users intelligence magnificently. (18/20)
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers a bit faster than average.
+It gives tiny bonus to the spell 'neural internecion'.
+It does magical damage unbelievably much. (20/20)
+It gives tiny bonus to the skill 'quick chant'.
+
+*-----------------------------------------------------------------------*
+|                             Staff of Orcus                            |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (low in general).
+It increases the users intelligence adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does asphyxiation damage somewhat. (8/20)
+It increases the users asphyxiation resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                              Staff of Air                             |
+*-----------------------------------------------------------------------*
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom a tiny bit. (4/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'air lore'.
+
+*-----------------------------------------------------------------------*
+|                            Staff of Gondor                            |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage pathetically. (2/20)
+
+- Extra -
+It emits light.
+
+
+*-----------------------------------------------------------------------*
+|                            The Staff of Law                           |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (average in general).
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+
+- Extra -
+It emits light.
+
+
+*-----------------------------------------------------------------------*
+|                              Lord's Staff                             |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                        Ancient Staff of wonder                        |
+*-----------------------------------------------------------------------*
+It increases hit chance unnoticably. (1/20)
+It has awesome weapon class for its type (average in general).
+It increases the users intelligence adequately. (10/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases damage pathetically. (2/20)
+It does magical damage a tiny bit. (4/20)
+
+- Extra -
+It may be set to emit light or dark.
+
+
+*-----------------------------------------------------------------------*
+|                             Staff of Might                            |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                            Staff of Grajuul                           |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (mediocre in general).
+It decreases the users constitution adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                         Orcish Shamanic Staff                         |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (little in general).
+It increases the users intelligence pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                        The Runed Staff of Life                        |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution noticably. (9/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users physical resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                         The Staff of Stirring                         |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (tiny in general).
+This item loses its magical powers with average speed.
+It does poison damage poorly. (5/20)
+
+*-----------------------------------------------------------------------*
+|                         Shimmering Runed Staff                        |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (low in general).
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives ILLEGAL bonus to the skill 'poison enchanting'.
+It does magical damage strongly. (14/20)
+It gives ILLEGAL bonus to the skill 'fire enchanting'.
+It gives ILLEGAL bonus to the spell 'enchant arrow'.
+It gives ILLEGAL bonus to the skill 'electric enchanting'.
+It gives ILLEGAL bonus to the skill 'magical enchanting'.
+
+- Extra -
+The staff is engraved with four notches, each of which could fit
+a shard.
+
+
+*-----------------------------------------------------------------------*
+|                         Elder's Staff of Maps                         |
+*-----------------------------------------------------------------------*
+It has immense weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does electric damage unbelievably much. (20/20)
+
+*-----------------------------------------------------------------------*
+|                   The Great Staff of the Ancient Elf                  |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity unnoticably. (1/20)
+It increases the users constitution pitifully. (3/20)
+It decreases the users intelligence pitifully. (3/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                            Staff of Wisdom                            |
+*-----------------------------------------------------------------------*
+It increases the users wisdom somewhat. (8/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                       Rosewood Staff [Pulsating]                      |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution adequately. (10/20)
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence pathetically. (2/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+- Extra -
+staff can create a thorny wall around the caster.
+
+
+*-----------------------------------------------------------------------*
+|                         Elder's Staff of Maps                         |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It does electric damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                        Staff of the BattleMage                        |
+*-----------------------------------------------------------------------*
+It decreases hit chance impressively. (15/20)
+It has awesome weapon class for its type (low in general).
+It increases the users intelligence slightly. (7/20)
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                          Staff of destruction                         |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does electric damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                  The Ancient Staff of Nate <tm> v1.3                  |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (average in general).
+It increases the users intelligence unbelievably much. (20/20)
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does cold damage a tiny bit. (4/20)
+
+*-----------------------------------------------------------------------*
+|                         Elder's Staff of Maps                         |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It does electric damage poorly. (5/20)
+
+*-----------------------------------------------------------------------*
+|                          Brafasta's Icy Staff                         |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (weak in general).
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+It does cold damage somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance to fire damage.
+
+
+*-----------------------------------------------------------------------*
+|                        The Lizard King's Staff                        |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
 

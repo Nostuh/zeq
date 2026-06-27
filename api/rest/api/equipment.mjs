@@ -101,7 +101,7 @@ router.delete('/items/:id/own', async function(req, res) {
 // Numeric columns a build can weight / total.
 const NUM_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
     'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold',
-    'racid', 'rasphx', 'ac', 'weapon_class_value', 'dmg_pct'];
+    'racid', 'rasphx', 'rshadow', 'ac', 'weapon_class_value', 'dmg_pct'];
 
 // One item per wear slot, except finger (2) and wield (2). A two-handed
 // weapon is NOT assumed to fill both wield slots — slots are independent.

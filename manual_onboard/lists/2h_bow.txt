@@ -1,3 +1,22 @@
-# Paste the `list <slot>` output for 2h_bow here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 2h bow
+
+*-------------------------------------------------------------*
+|                     Weapon type - 2h bow                    |
+*-------------------------------------------------------------*
+| 'Jawellyn' the bow of deadly accuracy                       |
+| A heavy Cantadorian warbow                                  |
+| A heavy crossbow, equipped with a metal prod                |
+| An arbalest, mounted on the balcony railing                 |
+| An arbalest, mounted on top of the bastion wall             |
+| An elvish war bow                                           |
+| An exquisite stave of a recurve bow                         |
+| Black Hornet, the assassin's shortbow                       |
+| The composite bow, 'Rising Sun'                             |
+| The longbow, 'Quarter of Midnight'                          |
+| A finely crafted bow of elven design                        |
+| A hunter's bow                                              |
+| A long bow                                                  |
+| An elven bow                                                |
+'-------------------------------------------------------------'
 

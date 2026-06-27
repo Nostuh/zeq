@@ -1,3 +1,449 @@
-# 2h_ancient weapon (2h, class=ancient) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
 
+*-----------------------------------------------------------------------*
+|                           A black Hellspear                           |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (great in general).
+This item loses its magical powers with average speed.
+It does psionic damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A blackened steel kusarigama                     |
+*-----------------------------------------------------------------------*
+It increases hit chance a good amount. (12/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage a good amount. (12/20)
+It does poison damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              A huge spear                             |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A leathery cat o'nine shocking tails                 |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does electric damage unbelievably much. (20/20)
+
+- Extra -
+It drains the wielders mental energy to charge up.
+It can easily entangle with whips alike.
+One should be careful when using it close to water.
+
+
+
+
+*-----------------------------------------------------------------------*
+|         A lithe, icebound crystalline whip called 'Frostlash'         |
+*-----------------------------------------------------------------------*
+It increases hit chance an average amount. (11/20)
+It has magnificent weapon class for its type (tremendous in general).
+This item loses its magical powers very slowly.
+It increases the users fire resistance adequately. (10/20)
+It increases damage an average amount. (11/20)
+It does cold damage unbelievably much. (20/20)
+It increases critical chance an average amount. (11/20)
+It gives decent bonus to the skill 'brawl'.
+It gives decent bonus to the skill 'dirty blow'.
+
+- Extra -
+The Frostlash can occasionally hinder the concentration of its targets.
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A stable fork                             |
+*-----------------------------------------------------------------------*
+It has pathetic weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A sturdy mining pick                         |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         An adamantine pickaxe                         |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has awesome weapon class for its type (tremendous in general).
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It gives great bonus to the skill 'ferocious swing'.
+This item loses its magical powers incredibly slowly.
+It gives decent bonus to the skill 'spot weakness'.
+It increases damage somewhat. (8/20)
+It does acid damage immensely.
+It increases critical chance nicely. (13/20)
+It gives decent bonus to the skill 'brawl'.
+It gives decent bonus to the skill 'dirty blow'.
+
+- Extra -
+The pickaxe is a favored weapon of elite brawlers.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      An iron edged wooden shovel                      |
+*-----------------------------------------------------------------------*
+It decreases hit chance adequately. (10/20)
+It has little weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              An ordinary looking spear with a stone head              |
+*-----------------------------------------------------------------------*
+It has little weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Claw of Roc                              |
+*-----------------------------------------------------------------------*
+It decreases hit chance pathetically. (2/20)
+It has decent weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Claws of Assassination                        |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does electric damage strongly. (14/20)
+
+- Extra -
+It modifies the user's constitution.
+It modifies the user's Intelligence.
+IT modifies the user's skill knowledge.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Claws of the Dragon                          |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has awesome weapon class for its type (tremendous in general).
+It increases the users strength poorly. (5/20)
+It increases the users dexterity adequately. (10/20)
+This item loses its magical powers very slowly.
+It increases damage adequately. (10/20)
+It does fire damage unbelievably much. (20/20)
+
+- Extra -
+The Dragon's Claws are a holy artifact of the goddess Kirvana.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Death Scythe                             |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (great in general).
+This item loses its magical powers with average speed.
+It does cold damage somewhat. (8/20)
+
+- Extra -
+User must be evil aligned.
+It emits darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Fishing pole                             |
+*-----------------------------------------------------------------------*
+It has pathetic weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Gimdori's Glorious Crowbar                      |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has magnificent weapon class for its type (awesome in general).
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+It increases the users hitpoints unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+It increases the users shadow resistance adequately. (10/20)
+It gives great bonus to the skill 'battle tactics'.
+It increases damage impressively. (15/20)
+It does acid damage monumentally.
+It increases critical chance impressively. (15/20)
+It increases the users magical resistance adequately. (10/20)
+It gives great bonus to the skill 'brawl'.
+It increases the users electric resistance adequately. (10/20)
+It gives great bonus to the skill 'offensive efficiency'.
+It gives great bonus to the skill 'leadership'.
+
+- Extra -
+While wielded, this mythical weapon is a proverbial banner, rallying the
+troops with its glorious visage, shimmering across the battlefield. Not
+only does it enhance the wielder's ability to lead, it will also allow him
+to properly 'motivate' the followers when all methods of diplomacy fail.
+On the downside, anyone wielding this weapon will become convinced of their
+own invincibility at the expense of self-defense, and healthy common sense,
+as well being afflicted with an overpowering need for posturing that would be
+more fitting on some parade rather than in battle. Then again, this is the
+Glorious Crowbar.
+It should also be noted that it would be ridiculously easy to open a manhole
+with this particular crowbar since it is, after all, THE Crowbar.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Lucifer's pitch fork                         |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage strongly. (14/20)
+It does asphyxiation damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                          Lucifer's pitch fork                         |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage strongly. (14/20)
+It does cold damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                          Lucifer's pitch fork                         |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage strongly. (14/20)
+It does electric damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                          Lucifer's pitch fork                         |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage strongly. (14/20)
+It does fire damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                          Lucifer's pitch fork                         |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage strongly. (14/20)
+
+*-----------------------------------------------------------------------*
+|                          Lucifer's pitch fork                         |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage strongly. (14/20)
+It does poison damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                          Lucifer's pitch fork                         |
+*-----------------------------------------------------------------------*
+It increases hit chance strongly. (14/20)
+It has awesome weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage strongly. (14/20)
+It does psionic damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Ninjitsa claws                            |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (decent in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does acid damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Rusty Sickle                             |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has superb weapon class for its type (impressive in general).
+It increases the users strength pathetically. (2/20)
+It increases the users dexterity pathetically. (2/20)
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+It does asphyxiation damage unbelievably much. (20/20)
+It gives small bonus to the skill 'brawl'.
+It gives small bonus to the skill 'critical'.
+
+- Extra -
+This weapon can strangle an opponent.
+
+
+*-----------------------------------------------------------------------*
+|                              Rusty Sickle                             |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (little in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'offensive efficiency'.
+
+- Extra -
+Occasionally leeches health and mana from the opponent.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Stone cutter sword                          |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Sword of fire                             |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It does fire damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           The Dragons Teeth                           |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has superb weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does acid damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                    The Legendary Sickle of Duremas                    |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has superb weapon class for its type (impressive in general).
+It increases the users strength poorly. (5/20)
+It increases the users dexterity poorly. (5/20)
+This item loses its magical powers with incredible haste.
+It increases damage somewhat. (8/20)
+It does acid damage strongly. (14/20)
+It gives decent bonus to the skill 'brawl'.
+It gives small bonus to the skill 'attack'.
+It gives decent bonus to the skill 'dirty blow'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          The claw of Carcuul                          |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has magnificent weapon class for its type (awesome in general).
+This item loses its magical powers incredibly slowly.
+It increases damage adequately. (10/20)
+It does acid damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      The fiery whip of the Balrog                     |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (great in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 The fiery whip of the fearsome Balrog                 |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (superb in general).
+This item loses its magical powers with average speed.
+It does fire damage superbly. (16/20)
+
+
+
+*-----------------------------------------------------------------------*
+|           The massive iron flail called 'The Hand of Shadow'          |
+*-----------------------------------------------------------------------*
+It decreases hit chance poorly. (5/20)
+It has awesome weapon class for its type (tremendous in general).
+It increases the users strength adequately. (10/20)
+It increases the users constitution poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It increases the users shadow resistance somewhat. (8/20)
+It increases damage impressively. (15/20)
+It does shadow damage unbelievably much. (20/20)
+It increases the users psionic resistance somewhat. (8/20)
+
+- Extra -
+Great strength is required to wield this enormous weapon efficiently.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The scythe of the mist ferryman                    |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does magical damage strongly. (14/20)
+
+- Extra -
+It carries a disease.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The spine of a sea serpent                      |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has superb weapon class for its type (impressive in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does poison damage superbly. (16/20)
+
+
+You can't find any records about "Hand of life" in the library.

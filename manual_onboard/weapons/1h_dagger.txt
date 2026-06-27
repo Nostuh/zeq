@@ -1,3 +1,793 @@
-# 1h_dagger weapon (1h, class=dagger) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
 
+*-----------------------------------------------------------------------*
+|                         A carbon-steel dagger                         |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has good weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A curved black ritual dagger                     |
+*-----------------------------------------------------------------------*
+It increases hit chance unnoticably. (1/20)
+It has mediocre weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A curved dagger                            |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A curved skinning knife                        |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A dagger with a golden hilt                      |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A double-edged dagger                         |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                         A double-edged dagger                         |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|          A finely-crafted dagger, humming with latent energy          |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has immense weapon class for its type (average in general).
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It gives small bonus to the skill 'anatomy'.
+This item loses its magical powers somewhat slower than average.
+It gives tiny bonus to the skill 'double backstab'.
+It gives tiny bonus to the skill 'triple backstab'.
+It increases damage somewhat. (8/20)
+It does poison damage strongly. (14/20)
+It increases critical chance poorly. (5/20)
+It gives small bonus to the skill 'thrust'.
+It gives tiny bonus to the skill 'double thrust'.
+It gives tiny bonus to the skill 'triple thrust'.
+It gives small bonus to the skill 'backstab'.
+
+- Extra -
+This dagger radiates poison.
+The dagger yearns to plunge itself in an enemy's back.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            A flanged dagger                           |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|              A glimmering opal rapier with serrated edges             |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (little in general).
+It decreases the users constitution poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It does magical damage strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A glossy platinum dagger                       |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does psionic damage a tiny bit. (4/20)
+It increases critical chance poorly. (5/20)
+
+- Extra -
+This is an illithidwrought weapon and as such has a measure of awareness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A hollow crescent incisor                       |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It does acid damage magnificently. (18/20)
+
+- Extra -
+The incisor sometimes steals blood from its victims.
+
+
+
+
+*-----------------------------------------------------------------------*
+|              A jagged opal rapier known as 'Plaguedealer'             |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (low in general).
+It increases the users dexterity impressively. (15/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It does poison damage unbelievably much. (20/20)
+It increases critical chance adequately. (10/20)
+
+- Extra -
+When piercing enemys flesh, this rapier has a chance make the enemy more vulnerable to poison.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                A jeweled dagger known as 'Annihilator'                |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has awesome weapon class for its type (low in general).
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity a bit. (6/20)
+It gives tiny bonus to the skill 'anatomy'.
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'triple backstab'.
+It increases damage somewhat. (8/20)
+It gives tiny bonus to the skill 'triple thrust'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A long butcher knife                         |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A long butcher's knife                        |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A long curved dagger                         |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A nasty curved dagger                         |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A resinous black dirk                         |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has good weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+It does poison damage a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             A sharp dagger                            |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             A sharp dagger                            |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A sharp edged blade                          |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A sharp object                            |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A sharp piece of ice 'frozen tears'                  |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has impressive weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does cold damage tremendously. (17/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A sharp scimitar-like dagger                     |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A shimmering copper dagger                      |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has awesome weapon class for its type (low in general).
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+It increases damage poorly. (5/20)
+It does psionic damage immensely.
+It increases critical chance poorly. (5/20)
+It increases the users acid resistance strongly. (14/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A short dagger                            |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A small dagger                            |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A small silvery-bladed knife                     |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+It does magical damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A spectral, jagged dagger                       |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A steel bladed dagger                         |
+*-----------------------------------------------------------------------*
+It has incredible weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A venom-tipped barb                          |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (low in general).
+It gives nice bonus to the skill 'anatomy'.
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does poison damage unbelievably much. (20/20)
+
+- Extra -
+The barb reveals unforeseen power when used with stabbing maneuvers.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            A watery dagger                            |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A whetted voidtouched rondel                     |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers incredibly slowly.
+It increases damage adequately. (10/20)
+It does asphyxiation damage immensely.
+It increases critical chance adequately. (10/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  A wickedly curved assassin's dagger                  |
+*-----------------------------------------------------------------------*
+It has tremendous weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It does poison damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           An Arenjun dagger                           |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  An expensive dagger forged from gold                 |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (little in general).
+This item loses its magical powers very fast.
+It gives tiny bonus to the skill 'sneak'.
+It increases the users physical resistance a bit. (6/20)
+It gives tiny penalty to the skill 'double backstab'.
+It gives tiny bonus to the skill 'triple backstab'.
+It does asphyxiation damage pathetically. (2/20)
+It increases critical chance adequately. (10/20)
+It gives tiny bonus to the skill 'attack'.
+It gives tiny bonus to the skill 'backstab'.
+It gives tiny penalty to the skill 'disguise'.
+
+- Extra -
+It is forged by the Scourge.
+It dissipates light.
+It seeks critical veins of its target.
+
+
+
+*-----------------------------------------------------------------------*
+|                 An expensive dagger forged from silver                |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (tiny in general).
+This item loses its magical powers very fast.
+It does magical damage poorly. (5/20)
+It increases critical chance poorly. (5/20)
+
+- Extra -
+It is forged by the Scourge.
+It has a pale glow.
+It seeks critical veins of its target.
+
+
+
+*-----------------------------------------------------------------------*
+|        An exquisite dagger, pulsating with intense, dark power        |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (low in general).
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It gives small bonus to the skill 'anatomy'.
+This item loses its magical powers extremely slowly.
+It gives small bonus to the skill 'double backstab'.
+It gives small bonus to the skill 'triple backstab'.
+It increases damage somewhat. (8/20)
+It does poison damage unbelievably much. (20/20)
+It increases critical chance adequately. (10/20)
+It gives decent bonus to the skill 'thrust'.
+It gives small bonus to the skill 'double thrust'.
+It gives small bonus to the skill 'triple thrust'.
+It gives decent bonus to the skill 'backstab'.
+
+- Extra -
+This dagger radiates powerful poison.
+The dagger yearns to ember itself in an enemy's spine.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             An iron dagger                            |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            An ivory dagger                            |
+*-----------------------------------------------------------------------*
+It has incredible weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      An ornate jade-hilted kukri                      |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has impressive weapon class for its type (poor in general).
+This item loses its magical powers somewhat slower than average.
+It increases the users poison resistance somewhat. (8/20)
+It increases damage pathetically. (2/20)
+It does acid damage magnificently. (18/20)
+It increases critical chance poorly. (5/20)
+It decreases the users psionic resistance a bit. (6/20)
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            Assassin's Dirk                            |
+*-----------------------------------------------------------------------*
+It decreases hit chance a tiny bit. (4/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers very fast.
+It increases damage adequately. (10/20)
+It does cold damage superbly. (16/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Ba'al Verzi dagger                          |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has superb weapon class for its type (weak in general).
+It decreases the users strength slightly. (7/20)
+It increases the users dexterity adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does magical damage adequately. (10/20)
+It increases the users magical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Black dagger                             |
+*-----------------------------------------------------------------------*
+It decreases hit chance pitifully. (3/20)
+It has adequate weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        Dagger of the Graveghost                       |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                        Dagger of the Graveghost                       |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Dagger of the Kyrie                          |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+It does asphyxiation damage a good amount. (12/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Deathspitter                             |
+*-----------------------------------------------------------------------*
+It decreases hit chance pathetically. (2/20)
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+It does poison damage a bit. (6/20)
+
+- Extra -
+This weapon drips with corrossive venom.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Ebony Dagger                             |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has mediocre weapon class for its type (little in general).
+It increases the users dexterity pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'backstab'.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Henri's Dagger                            |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Long kitchen knife                          |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Onyx dagger                              |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does cold damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx dagger                              |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does electric damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx dagger                              |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does fire damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx dagger                              |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx dagger                              |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does magical damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                              Onyx dagger                              |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does psionic damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Orcish dagger                             |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 Pizza cutter knife of Oulu Pizzamafia                 |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It does acid damage magnificently. (18/20)
+
+- Extra -
+The knife unleashes a death rain of caustic cheese shrapnel upon its victims.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            The Fang of Set                            |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has good weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+It increases the users poison resistance strongly. (14/20)
+It does poison damage strongly. (14/20)
+
+- Extra -
+It modifies the user's resistance to poison damage.
+It modifies the user's ability to hit.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The Kestrel dagger of Grimoan                     |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has incredible weapon class for its type (mediocre in general).
+This item loses its magical powers very fast.
+It increases damage a tiny bit. (4/20)
+It does psionic damage strongly. (14/20)
+
+- Extra -
+It draws all light into itself, leaving only darkness behind.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          The Mindblight Shard                         |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has awesome weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage impressively. (15/20)
+It does psionic damage unbelievably much. (20/20)
+
+- Extra -
+The shard weakens the minds of its victims.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                               The Sting                               |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has superb weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does magical damage superbly. (16/20)
+
+- Extra -
+It has a pale glow.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        The crysknife of Fremens                       |
+*-----------------------------------------------------------------------*
+It has incredible weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It does electric damage a tiny bit. (4/20)
+
+- Extra -
+It emits light.
+A players under level 25 are forbidden to use this weapon.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                The forlorn dagger of the Drixie prince                |
+*-----------------------------------------------------------------------*
+It has incredible weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It does psionic damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|      The pitch-black sacrificial dagger of Demon Lord Bal'Sagoth      |
+*-----------------------------------------------------------------------*
+It decreases hit chance pathetically. (2/20)
+It has poor weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+It decreases damage unnoticably. (1/20)
+It does acid damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      The silver dagger of rotting                     |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (low in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does magical damage magnificently. (18/20)
+It increases critical chance slightly. (7/20)
+
+- Extra -
+Rotting can cause wounds of various types.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Tyririan dagger                            |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                  Umbral Reaver, the blade of twilight                 |
+*-----------------------------------------------------------------------*
+It increases hit chance a good amount. (12/20)
+It has incredible weapon class for its type (mediocre in general).
+It gives nice bonus to the skill 'anatomy'.
+This item loses its magical powers incredibly slowly.
+It increases damage a good amount. (12/20)
+It does shadow damage immensely.
+It increases critical chance magnificently. (18/20)
+
+- Extra -
+Three Shards of the Gods may be imbued in this ancient artifact.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Ur-Vile blade                             |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+You can't find any records about "A rusty butter knife" in the library.

@@ -1,4 +1,1171 @@
-# legs armour — paste `lookup <name>` output blocks below this line.
-# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
-# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
+
+*-----------------------------------------------------------------------*
+|                      A Set of Pitchblack Greaves                      |
+*-----------------------------------------------------------------------*
+It increases the users strength strongly. (14/20)
+It increases the users dexterity an average amount. (11/20)
+It decreases the users constitution poorly. (5/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has great armour class for its type (feeble in general).
+It decreases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It gives great bonus to the spell 'darkness'.
+
+- Extra -
+Black Greaves make it easier to call for darkness.
+
+
+*-----------------------------------------------------------------------*
+|                      A Set of Pitchblack Greaves                      |
+*-----------------------------------------------------------------------*
+It increases the users strength superbly. (16/20)
+It increases the users dexterity an average amount. (11/20)
+It decreases the users constitution poorly. (5/20)
+It decreases the users wisdom pitifully. (3/20)
+It decreases the users intelligence a tiny bit. (4/20)
+It has great armour class for its type (feeble in general).
+It decreases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers very slowly.
+It gives great bonus to the spell 'darkness'.
+
+- Extra -
+Black Greaves make it easier to call for darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A gauze of dark matter                        |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers extremely slowly.
+
+- Extra -
+The leggings may occasionally mimic the wearer's actions.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A long bright blue skirt                       |
+*-----------------------------------------------------------------------*
+It increases the users intelligence poorly. (5/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration a bit. (6/20)
+It decreases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'create illusion'.
+It gives small bonus to the skill 'mastery of illusions'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of Blain's twisted leggings                  |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pitifully. (3/20)
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence pitifully. (3/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   A pair of crimson-colored leggings                  |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases the users cold resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of crude bone leggings                     |
+*-----------------------------------------------------------------------*
+It has tiny armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pair of green leggings                       |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity pathetically. (2/20)
+It increases the users wisdom pitifully. (3/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A pair of grey leggings                        |
+*-----------------------------------------------------------------------*
+It has superb armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A pair of grey pants                         |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               A pair of iron banded red leather greaves               |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity impressively. (15/20)
+It has great armour class for its type (feeble in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers a bit slower than average.
+
+
+
+*-----------------------------------------------------------------------*
+|                  A pair of shimmering semite leggings                 |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a good amount. (12/20)
+It decreases the users intelligence pitifully. (3/20)
+It has great armour class for its type (feeble in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers very slowly.
+It gives small bonus to the skill 'earth lore'.
+It gives small bonus to the skill 'air lore'.
+It gives small bonus to the skill 'water lore'.
+It gives small bonus to the skill 'fire lore'.
+
+- Extra -
+Semite leggings help you attune more to the world around you.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A pair of thick leather pants                     |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It decreases the users constitution a tiny bit. (4/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A rough-shorn waistcloth                       |
+*-----------------------------------------------------------------------*
+It has nice armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|         A set of Duskwalker trousers suited for swift movement        |
+*-----------------------------------------------------------------------*
+It increases the users strength a bit. (6/20)
+It increases the users dexterity a bit. (6/20)
+It increases the users constitution a bit. (6/20)
+It increases the users charisma a bit. (6/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                A set of Ironward greaves dented by use                |
+*-----------------------------------------------------------------------*
+It increases the users strength noticably. (9/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution noticably. (9/20)
+It has immense armour class for its type (low in general).
+It increases the users hitpoint regeneration magnificently. (18/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A skirt of dangling bones                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence immensely.
+It has nice armour class for its type (little in general).
+It increases the users spellpoint regeneration magnificently. (18/20)
+This item loses its magical powers incredibly slowly.
+It gives nice bonus to the skill 'offensive efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A sturdy pair of copper leggings                   |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It decreases the users dexterity poorly. (5/20)
+It has great armour class for its type (feeble in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A threadbare leather apron                      |
+*-----------------------------------------------------------------------*
+It has tiny armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Adamantite leggings                          |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               An ordinary looking pair of stone leggings              |
+*-----------------------------------------------------------------------*
+It increases the users constitution unnoticably. (1/20)
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Black pants                              |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Black silk pants                           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Black spiked leggings                         |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution unnoticably. (1/20)
+It increases the users wisdom pathetically. (2/20)
+It increases the users intelligence somewhat. (8/20)
+It has nice armour class for its type (little in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Bloodred Leggings of Underworld                    |
+*-----------------------------------------------------------------------*
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It gives decent bonus to the skill 'mastery of medicine'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Charred Black Leggings                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers very slowly.
+It gives decent bonus to the skill 'mastery of shielding'.
+
+*-----------------------------------------------------------------------*
+|                         Charred Black Leggings                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'mastery of shielding'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Cotton loincloth                           |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Dark silver leggings                         |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It has nice armour class for its type (little in general).
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Demon skin leggings                          |
+*-----------------------------------------------------------------------*
+It increases the users strength somewhat. (8/20)
+It increases the users dexterity somewhat. (8/20)
+It has nice armour class for its type (little in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Demonscale Leggings                          |
+*-----------------------------------------------------------------------*
+It increases the users strength an average amount. (11/20)
+It increases the users dexterity somewhat. (8/20)
+It increases the users constitution noticably. (9/20)
+It decreases the users wisdom slightly. (7/20)
+It decreases the users intelligence slightly. (7/20)
+It has non-existent armour class for its type (non-existent in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers somewhat faster than average.
+It increases the users physical resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Dirty leather pants                          |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Dirty pants                              |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Dragonscale leggings of Motion                    |
+*-----------------------------------------------------------------------*
+It increases the users dexterity poorly. (5/20)
+It has awesome armour class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+It allows you to 'relocate to player' though it might be painful experience.
+'
+
+
+
+*-----------------------------------------------------------------------*
+|                          Dragonskin leggings                          |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers very fast.
+It increases the users cold resistance a bit. (6/20)
+It increases the users fire resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      Dress kilt of Clan MacFaerun                     |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Giant leather pants                          |
+*-----------------------------------------------------------------------*
+It has average armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Green leggings <retro>                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence impressively. (15/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration strongly. (14/20)
+It gives small bonus to the skill 'nerve mastery'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'psionic efficiency'.
+It gives small bonus to the skill 'offensive efficiency'.
+It gives small bonus to the skill 'focus power'.
+
+*-----------------------------------------------------------------------*
+|                             Green leggings                            |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Grey pants                              |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Iron leggings                             |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             Iron leggings                             |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Ivory leggings                            |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users dexterity a good amount. (12/20)
+It decreases the users constitution poorly. (5/20)
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Karbitsch's pants of Quickness                    |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has little armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                  Karbitsch's royal pants of quickness                 |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has little armour class for its type (pathetic in general).
+It increases the users hitpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     Kha'dra, the leggings of water                    |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Kilt of Tara                             |
+*-----------------------------------------------------------------------*
+It has poor armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Kruse leggings                            |
+*-----------------------------------------------------------------------*
+It increases the users constitution adequately. (10/20)
+It has nice armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|             Layered Aetherweave robes trimmed with silver             |
+*-----------------------------------------------------------------------*
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence impressively. (15/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Leather Shorts                            |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users intelligence a good amount. (12/20)
+It has nice armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Leather leggings                           |
+*-----------------------------------------------------------------------*
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                            Leather leggings                           |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Leather pants                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             Leather pants                             |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Leggings of Despair                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence somewhat. (8/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers very slowly.
+It increases the users electric resistance somewhat. (8/20)
+It gives decent bonus to the skill 'quick chant'.
+
+*-----------------------------------------------------------------------*
+|                          Leggings of Despair                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence somewhat. (8/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It increases the users electric resistance somewhat. (8/20)
+It gives decent bonus to the skill 'quick chant'.
+
+*-----------------------------------------------------------------------*
+|                          Leggings of Despair                          |
+*-----------------------------------------------------------------------*
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence somewhat. (8/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It increases the users electric resistance somewhat. (8/20)
+It gives decent bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      Leggings of needless powers                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users dexterity pathetically. (2/20)
+It decreases the users constitution pathetically. (2/20)
+It decreases the users wisdom pathetically. (2/20)
+It increases the users intelligence adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It decreases the users hitpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'dodge'.
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'parry'.
+It increases the users physical resistance strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       Legwraps of toughened kelp                      |
+*-----------------------------------------------------------------------*
+It increases the users constitution a good amount. (12/20)
+It has nice armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It increases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers very slowly.
+It gives decent bonus to the skill 'parry'.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users acid resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Magic Pants                              |
+*-----------------------------------------------------------------------*
+It decreases the users strength poorly. (5/20)
+It decreases the users dexterity poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration noticably. (9/20)
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Moldy leather leggings                        |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution pitifully. (3/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Obsidian Leggings                           |
+*-----------------------------------------------------------------------*
+It increases the users strength pathetically. (2/20)
+It has adequate armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Old leather pants                           |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Padded leggings                            |
+*-----------------------------------------------------------------------*
+It has great armour class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      Pants made from tree leaves                      |
+*-----------------------------------------------------------------------*
+It increases the users strength pitifully. (3/20)
+It increases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+It has adequate armour class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Patchwork pants                            |
+*-----------------------------------------------------------------------*
+It increases the users dexterity somewhat. (8/20)
+It has little armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Ragged pants                             |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Red Chain Leggings                          |
+*-----------------------------------------------------------------------*
+It increases the users strength unbelievably much. (20/20)
+It increases the users constitution adequately. (10/20)
+It decreases the users wisdom adequately. (10/20)
+It has tremendous armour class for its type (poor in general).
+It increases the users hitpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+
+- Extra -
+Red Chain leggings are an artifact of the goddess Kirvana.
+Red Chain leggings can sometimes prevent relocations when 'activate'ed.
+Red Chain leggings can be 'deactivate'd to allow relocations.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                                 Remov                                 |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers somewhat slower than average.
+
+- Extra -
+The leggings may occasionally mimic the wearer's actions.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Short pants                              |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Spider leggings                            |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity adequately. (10/20)
+It increases the users intelligence poorly. (5/20)
+It has weak armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Spiked wolf leggings                         |
+*-----------------------------------------------------------------------*
+It increases the users strength a tiny bit. (4/20)
+It has average armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Spined leg splints                          |
+*-----------------------------------------------------------------------*
+It increases the users dexterity adequately. (10/20)
+It has nice armour class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases the users electric resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Stained Black Pants                          |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Steel leggings                            |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The Black Leggings of Underworld                   |
+*-----------------------------------------------------------------------*
+It increases the users wisdom noticably. (9/20)
+It increases the users intelligence somewhat. (8/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'greater vulnerability'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The Blue Leggings of Diversity                    |
+*-----------------------------------------------------------------------*
+It increases the users intelligence impressively. (15/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'spacial manipulation'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      The Leggings of Eternal Fire                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It gives small bonus to the skill 'optimize transfer'.
+This item loses its magical powers very slowly.
+
+*-----------------------------------------------------------------------*
+|                      The Leggings of Eternal Fire                     |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has pathetic armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration adequately. (10/20)
+It gives small bonus to the skill 'optimize transfer'.
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The Leggings of Rulership (dusty)                   |
+*-----------------------------------------------------------------------*
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers fast.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The Leggings of Yith'Sehta                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength somewhat. (8/20)
+It increases the users constitution superbly. (16/20)
+It has excellent armour class for its type (feeble in general).
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'inner strength'.
+
+- Extra -
+The leggings of Yith'Sehta lends superior healing to the wearer.
+The leggings of Yith'Sehta add stability to the wearer.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    The arcane leggings of Rulership                   |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence somewhat. (8/20)
+It has nice armour class for its type (little in general).
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'arcane lore'.
+
+*-----------------------------------------------------------------------*
+|              The arcane leggings of Rulership *dark aura*             |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users constitution pitifully. (3/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence adequately. (10/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers somewhat slower than average.
+It gives small bonus to the skill 'arcane lore'.
+It gives small bonus to the spell 'immolate'.
+
+- Extra -
+They glow with dark aura.
+
+
+
+*-----------------------------------------------------------------------*
+|              The arcane leggings of Rulership *dark aura*             |
+*-----------------------------------------------------------------------*
+It decreases the users strength pathetically. (2/20)
+It decreases the users constitution pitifully. (3/20)
+It increases the users wisdom impressively. (15/20)
+It increases the users intelligence adequately. (10/20)
+It has excellent armour class for its type (feeble in general).
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers somewhat slower than average.
+It gives small bonus to the skill 'arcane lore'.
+It gives small bonus to the spell 'immolate'.
+
+- Extra -
+They glow with dark aura.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The blood red skirt of Lucifer                    |
+*-----------------------------------------------------------------------*
+It decreases the users dexterity poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom immensely.
+It has average armour class for its type (tiny in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It gives decent bonus to the skill 'mastery of medicine'.
+This item loses its magical powers with average speed.
+
+- Extra -
+It affects the skill mastery of medicine.
+
+
+
+
+*-----------------------------------------------------------------------*
+|             The blue poisonfang leggings of the plaguegod             |
+*-----------------------------------------------------------------------*
+It increases the users dexterity unbelievably much. (20/20)
+It has awesome armour class for its type (poor in general).
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+These leggings can cause great pain.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         The coils of Tartarus                         |
+*-----------------------------------------------------------------------*
+It has non-existent armour class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     The damned leggings of Lucifer                    |
+*-----------------------------------------------------------------------*
+It increases the users strength unbelievably much. (20/20)
+It increases the users dexterity poorly. (5/20)
+It decreases the users intelligence poorly. (5/20)
+It has superb armour class for its type (poor in general).
+It decreases the users spellpoint regeneration pathetically. (2/20)
+It increases the users hitpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'overhead swing'.
+It gives small bonus to the skill 'strike mighty blow'.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The green leggings of Greenlight                   |
+*-----------------------------------------------------------------------*
+It decreases the users wisdom pathetically. (2/20)
+It increases the users intelligence poorly. (5/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It decreases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives tiny bonus to the skill 'vocal training'.
+It gives tiny bonus to the skill 'tonal projection'.
+
+- Extra -
+It makes your singing louder.
+It reduces the strain on your singing voice.
+
+
+
+
+*-----------------------------------------------------------------------*
+|               The grey leggings of the ultimate warrior               |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It has little armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       The leggings of Dark Haven                      |
+*-----------------------------------------------------------------------*
+It decreases the users strength pitifully. (3/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users intelligence a tiny bit. (4/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration an average amount. (11/20)
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        The leggings of ravager                        |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has excellent armour class for its type (feeble in general).
+It decreases the users spellpoint regeneration poorly. (5/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'fell warding'.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The leggings of unsurpassed speed                   |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It increases the users dexterity adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    The mithril leggings of Essence                    |
+*-----------------------------------------------------------------------*
+It decreases the users strength slightly. (7/20)
+It increases the users dexterity a tiny bit. (4/20)
+It decreases the users constitution pitifully. (3/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It has tiny armour class for its type (almost non-existent in general).
+It increases the users spellpoint regeneration slightly. (7/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with incredible haste.
+
+
+
+*-----------------------------------------------------------------------*
+|                  The red leggings of plague rejection                 |
+*-----------------------------------------------------------------------*
+It increases the users strength adequately. (10/20)
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   The red leggings of power storing                   |
+*-----------------------------------------------------------------------*
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence impressively. (15/20)
+It has decent armour class for its type (little in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+This item loses its magical powers incredibly slowly.
+
+- Extra -
+These leggings contain a powerword 'rhudaur'.
+These leggings can restore some magical power to the user.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The royal kilt of Lucifer                       |
+*-----------------------------------------------------------------------*
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It has poor armour class for its type (pathetic in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It decreases the users hitpoint regeneration pathetically. (2/20)
+This item loses its magical powers with average speed.
+It gives decent bonus to the skill 'stunning blow'.
+
+- Extra -
+It affects the skill stunning blow.
+
+
+
+
+*-----------------------------------------------------------------------*
+|               The venomous leggings of the Plaguebringer              |
+*-----------------------------------------------------------------------*
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration impressively. (15/20)
+It increases the users hitpoint regeneration adequately. (10/20)
+This item loses its magical powers extremely slowly.
+
+- Extra -
+The powers of the venomous leggings can be increased still through embedding.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                  The woolen leggings of the ancestors                 |
+*-----------------------------------------------------------------------*
+It increases the users strength poorly. (5/20)
+It increases the users dexterity adequately. (10/20)
+It has awesome armour class for its type (poor in general).
+It increases the users spellpoint regeneration somewhat. (8/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+It gives small bonus to the skill 'focus kungfu attacks'.
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases the users electric resistance somewhat. (8/20)
+It gives small bonus to the skill 'advanced martial arts'.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Tight brown pants                           |
+*-----------------------------------------------------------------------*
+It has pathetic armour class for its type (almost non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Twisted leggings                           |
+*-----------------------------------------------------------------------*
+It has weak armour class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Very rusty leggings                          |
+*-----------------------------------------------------------------------*
+It increases the users strength a good amount. (12/20)
+It increases the users dexterity unnoticably. (1/20)
+It increases the users constitution poorly. (5/20)
+It decreases the users wisdom pathetically. (2/20)
+It decreases the users intelligence poorly. (5/20)
+It has awesome armour class for its type (poor in general).
+It decreases the users spellpoint regeneration a bit. (6/20)
+It decreases the users hitpoint regeneration a bit. (6/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            White Loincloth                            |
+*-----------------------------------------------------------------------*
+It increases the users dexterity pitifully. (3/20)
+It increases the users wisdom poorly. (5/20)
+It has low armour class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
 

@@ -1,3 +1,155 @@
-# Paste the `list <slot>` output for finger here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list finger
+
+*-------------------------------------------------------------*
+|                     Armour slot - Finger                    |
+*-------------------------------------------------------------*
+| A Prismatic Ring [<*magneta*>]                              |
+| A Prismatic Ring [<*white*>]                                |
+| A Prismatic Ring [fading] [<*orange*>]                      |
+| A Ring of Mage <O>                                          |
+| A bilious amber band                                        |
+| A blackened iron ring                                       |
+| A bloody black ring called 'Doomring'                       |
+| A bone ring                                                 |
+| A crudely shaped almandine ring                             |
+| A dark ring of jet-black stone                              |
+| A diamond decorated gold ring                               |
+| A faintly glowing ring of bone                              |
+| A flamehardened ring                                        |
+| A frostburned cold metal ring                               |
+| A golden ring                                               |
+| A golden ring with a diamond embedded in it                 |
+| A golden ring with a red ruby embedded in it                |
+| A golden ring with sapphires                                |
+| A hammered iron ring                                        |
+| A heavy electrum ring, with carved ivy                      |
+| A heavy granite ring                                        |
+| A heavy granite ring                                        |
+| A heavy mythril ring, with carved ivy                       |
+| A heavy ring made out of gold                               |
+| A large flower-shaped ring                                  |
+| A large golden ring, embedded with a black oval             |
+| A light mythril ring, with carved ivy                       |
+| A multi-jeweled platinum ring                               |
+| A nitid spellburned iron ring                               |
+| A pale looking silver ring                                  |
+| A pale ring of old dried bones                              |
+| A pale ring of old dried bones                              |
+| A pitted coral ring                                         |
+| A plain silver ring                                         |
+| A platinum ring                                             |
+| A platinum ring                                             |
+| A polished Aetherweave band                                 |
+| A purple mushroom ring <glittering>                         |
+| A purple mushroom ring <shimmering>                         |
+| A red ring                                                  |
+| A ring made of black mithril                                |
+| A ring of black obsidian                                    |
+| A ring of conversion                                        |
+| A ring of oozing cysts                                      |
+| A ring of regeneration                                      |
+| A rippling aphotic band                                     |
+| A scarlet ring                                              |
+| A shimmering copper ring                                    |
+| A signet of knowledge                                       |
+| A silver band                                               |
+| A simple looking gold ring                                  |
+| A small circular ring, made of lead                         |
+| A small dark grey band                                      |
+| A small gold ring                                           |
+| A small ornate golden ring                                  |
+| A small silver ring                                         |
+| A small skull-shaped ring                                   |
+| A smooth Duskwalker band of burnished iron                  |
+| A stained copper ring                                       |
+| A tarnished silver ring with nine gemstones                 |
+| A thick Ironward band inset with red stone                  |
+| A thick brass ring                                          |
+| A thick molybdenum ring with agates                         |
+| A thick pewter ring                                         |
+| A thunderstruck brass ring                                  |
+| A timeworn sapphire ring                                    |
+| A timeworn sapphire ring <pitted>                           |
+| A vivid looking circular piece of blackened metal           |
+| A voidtouched ring with an emerald                          |
+| A writhing signet of Teros                                  |
+| An ancient sandstone ring                                   |
+| An ancient steel ring                                       |
+| An emerald embedded silver ring                             |
+| An exquisite platinum ring with diamonds                    |
+| An exquisite platinum ring with emeralds                    |
+| An exquisite platinum ring with rubies                      |
+| An exquisite platinum ring with sapphires                   |
+| An ice encased mithril ring                                 |
+| An ivory ring                                               |
+| Band of haptic enhancement                                  |
+| Elven ring                                                  |
+| Emerald ring                                                |
+| Gargoyle ring                                               |
+| Gargoyle ring < battered >                                  |
+| Golden ring                                                 |
+| Golden ring of regeneration                                 |
+| Golden ring with a blue gem                                 |
+| Maelstrom of ages                                           |
+| Martyn's emerald embedded silver ring                       |
+| Obizuth's black mithril ring                                |
+| Phoenix Spine Ring                                          |
+| Ring made of emerald                                        |
+| Ring of Defender                                            |
+| Ring of Demons                                              |
+| Ring of Devils                                              |
+| Ring of Enlightment                                         |
+| Ring of Eternal Sands                                       |
+| Ring of Eternal Sands                                       |
+| Ring of Mmental Fortitude                                   |
+| Ring of Shadows                                             |
+| Ring of Shadows                                             |
+| Ring of Shifting Sands                                      |
+| Ring of Shifting Sands                                      |
+| Ring of dexterity                                           |
+| Ring of dragons                                             |
+| Ring of focused powers                                      |
+| Ring of goblins                                             |
+| Ring of infravision                                         |
+| Ring of mana restoration                                    |
+| Ring of the Farshot                                         |
+| Ring of the Tower                                           |
+| Rotten ring                                                 |
+| Silver ring of canine dissipation                           |
+| Silver ring with a heartshaped diamond                      |
+| Silver ring with a heartshaped diamond                      |
+| Spine ring                                                  |
+| The Cyclops' Left Eye                                       |
+| The Entropic Coil                                           |
+| The Grey Tear of Gyges                                      |
+| The bloodstone ring of punishment                           |
+| The copper ceremonial ring of Lucifer                       |
+| The ebon ring of the elder serpent                          |
+| The glimmering ring of bulging mass                         |
+| The loop of fire                                            |
+| The pewter signet ring of Lucifer                           |
+| The ring called Sombaso                                     |
+| The ring of Brave Deeds                                     |
+| The ring of Rememberance                                    |
+| The ring of concealment                                     |
+| The ring of godly protection                                |
+| The ring of illusionary protection                          |
+| The ring of mire                                            |
+| The ring of souls                                           |
+| The ring of the Mad Architect                               |
+| The ring of the Necromancer                                 |
+| The ring of the Oni                                         |
+| The ring of the drixies                                     |
+| The ring of the tower                                       |
+| The ring of the vampiress                                   |
+| The ring of thorns                                          |
+| The signet of shorn skies                                   |
+| The signet ring of Torquemada                               |
+| The signet ring of the Psion                                |
+| The silvery white molybdenum ring of Grimoan                |
+| Trollring                                                   |
+| Wooden ring                                                 |
+'-------------------------------------------------------------'
+
 

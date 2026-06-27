@@ -32,6 +32,8 @@ two can't drift:
 | Stat phrasing | `the user's strength` | `the users strength` (no apostrophe) | normalized `the users`→`the user's`; one `STAT_PATTERNS` table |
 | Magnitude | adverb only | adverb **+** a client-added `(n/20)` | adverb is authoritative (`AMOUNT_SCALE`); the `(n/20)` is the operator's MUD client annotation, **ignored** |
 | Skill/spell | `bonus to user's X` | `gives <quality> bonus to the skill 'X'` | new pattern; quality ladder `tiny..awesome` → `SKILL_MAP` 1..6 |
+| Skill/spell **penalty** | — | `gives <quality> penalty to the skill 'X'` | same rule, stored as a **negative** `eq_item_bonuses.amount` (sign-preserving merge) |
+| Vision flags | — | `allows the user to see in darkness / magical auras / invisible` | ignored (non-numeric, no column) — `ignore.txt` |
 | Decay | — | `loses its magical powers ...` | ignored (no stat) |
 | Flavor | — | `- Extra -` block | ignored (everything under it) |
 | Multi | — | `(Note: ... covers multiple slots: a/b/c)` | parsed → `wear_slot='multi'` + `covers[]` (checked *before* the Extra block, since the game prints it after) |
@@ -148,9 +150,20 @@ shown; no new/changed diff, no apply).
 - **Estimated AC/WC tier values.** `weak`/`great`/`tremendous` `in general`
   appeared only in weapon data; their `AC_SCALE` values are interpolated
   estimates (flagged in [eq_parse.mjs](../api/classes/eq_parse.mjs)) so
-  `weapon_class_value` stops silently being 0. The adverb `monumentally`
-  occurs only on an ignored hit-chance line, so it was left out. Correct the
+  `weapon_class_value` stops silently being 0. Correct the
   integers if the real scale surfaces.
+- **Estimated top-end stat adverbs.** `monumentally`/`colossally`/`unearthly`/
+  `divinely` surface on real stats (str/int/regen/resistances) in the library
+  data, printed with **no** `(n/20)`, so they sit above the /20 band and their
+  exact magnitude is unknown. `AMOUNT_SCALE` carries them as ascending
+  ESTIMATES in the 20..30 gap (flagged in `eq_parse.mjs`). Correct if the real
+  ladder surfaces.
+- **`rshadow` (shadow resistance) — fully wired.** Parses into the new
+  `eq_items.rshadow` column (`gives ... shadow resistance`; `shadow` was already
+  a `DMG_TYPES` element), served via `SELECT *`, shown as the "Shdw" column in
+  `Equipment.vue`, and weightable in `EquipmentBuild.vue` + the `/api/equipment`
+  build endpoint. (The dead, unrouted `EquipmentAll.vue` was intentionally left
+  alone.)
 - **`--commands` skips items already in the catalog** (by normalized name +
   slot) and now prints what it skipped. It never re-captures existing rows;
   run `--commands --all` to re-look-up everything (best-of merge only adds).

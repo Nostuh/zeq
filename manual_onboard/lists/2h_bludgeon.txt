@@ -1,3 +1,70 @@
-# Paste the `list <slot>` output for 2h_bludgeon here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+list 2h bludgeon
+
+*-------------------------------------------------------------*
+|                  Weapon type - 2h bludgeon                  |
+*-------------------------------------------------------------*
+| 'Infernal Maul', bludgeon of the Ember Tyrant               |
+| A balanced nickel-plated maul                               |
+| A bent steel maul                                           |
+| A black maul called Demon's fist                            |
+| A blackened steel hammer                                    |
+| A blackthorn club                                           |
+| A diamond-crested battlehammer, 'The Siphon'                |
+| A flawless adamantine maul                                  |
+| A gleaming abyssal war mallet                               |
+| A glossy platinum warhammer                                 |
+| A gnarled tree stump                                        |
+| A gnarled tree stump                                        |
+| A great hammer of war called 'Ravager'                      |
+| A huge battlehammer                                         |
+| A huge boar tusk                                            |
+| A huge hammer                                               |
+| A huge iron hammer                                          |
+| A huge spiked wooden cudgel                                 |
+| A knotted ironwood club                                     |
+| A large forging hammer                                      |
+| A large hammer                                              |
+| A mace                                                      |
+| A massive club                                              |
+| A massive club                                              |
+| A massive war-hammer made of shiny steel                    |
+| A massive wooden club                                       |
+| A petrified hemlock club                                    |
+| A round wooden stool                                        |
+| A shovel                                                    |
+| A small hammer                                              |
+| A steel hammer                                              |
+| A yellowed club of bone                                     |
+| An adamant maul called 'Skullsmasher'                       |
+| An immense war-hammer made of rough iron                    |
+| An ordinary looking stone club                              |
+| Balor's giant maul                                          |
+| Fiery Mace                                                  |
+| Giant Club                                                  |
+| Giant Maul                                                  |
+| HUGE club                                                   |
+| Hile, the ancient warhammer of crushing                     |
+| Huge Spiked Club                                            |
+| Hule, the ancient warhammer of ice                          |
+| Human Arm                                                   |
+| Iron bar                                                    |
+| Mace of Misfortune < Cursed >                               |
+| Mace of the ancient dragon                                  |
+| Og's famous Club                                            |
+| Old looking bone                                            |
+| Soulcrusher                                                 |
+| The Bardsmasher, war mallet of Grimoan                      |
+| The HUGE club called 'S'sadabn O'errut                      |
+| The blackened Morningstar                                   |
+| The blackened warhammer of the Four Horsemen                |
+| The blue maul of Dazier                                     |
+| The dimmed Morningstar                                      |
+| The great two-handed hammer named 'Despair'                 |
+| The greathammer of war called 'Ravager'                     |
+| The huge war hammer 'Sturmbringer'                          |
+| The icy morningstar called 'Frostwhisper'                   |
+| The large femur of a fire giant                             |
+'-------------------------------------------------------------'
+
 

@@ -18,7 +18,7 @@ const zeq = dbs.get('zeq');
 // Numeric columns merged by "keep the larger magnitude" (best-of).
 const NUM_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
     'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold',
-    'racid', 'rasphx', 'ac', 'weapon_class_value', 'dmg_pct'];
+    'racid', 'rasphx', 'rshadow', 'ac', 'weapon_class_value', 'dmg_pct'];
 
 // Every column we write (in a stable order). `int` is reserved → backtick.
 const WRITE_COLS = ['name', 'name_raw', 'wear_slot', 'weapon_class',
@@ -41,7 +41,7 @@ function flatten(p, rawInfo, eqmobId) {
     };
     for (const c of ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
         'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire',
-        'rcold', 'racid', 'rasphx', 'ac']) r[c] = p.stats[c];
+        'rcold', 'racid', 'rasphx', 'rshadow', 'ac']) r[c] = p.stats[c];
     return r;
 }
 
@@ -94,11 +94,12 @@ export async function upsertItemFromText(text, slotRaw = '', eqmobId = null) {
         id = idRow[0].id;
     }
 
-    // Merge bonuses (keep the larger amount per bonus name).
+    // Merge bonuses (keep the larger-MAGNITUDE amount per bonus name, sign
+    // preserved — a penalty must not be lost to a 0/positive; matches stats).
     for (const b of p.bonuses) {
         await zeq.query(
             `INSERT INTO eq_item_bonuses (item_id, bonus_name, amount) VALUES (@iid, @bn, @amt)
-             ON DUPLICATE KEY UPDATE amount = GREATEST(amount, VALUES(amount))`,
+             ON DUPLICATE KEY UPDATE amount = IF(ABS(VALUES(amount)) > ABS(amount), VALUES(amount), amount)`,
             { iid: id, bn: b.bonus_name, amt: b.amount });
     }
 

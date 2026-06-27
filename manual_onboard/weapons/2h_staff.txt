@@ -1,3 +1,668 @@
-# 2h_staff weapon (2h, class=staff) — paste `lookup <name>` output blocks below this line.
-# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
 
+*-----------------------------------------------------------------------*
+|                    A Balanced Alabaster Battlestaff                   |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has awesome weapon class for its type (average in general).
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users wisdom somewhat. (8/20)
+It increases the users intelligence somewhat. (8/20)
+It gives small bonus to the skill 'magus'.
+It gives small bonus to the skill 'volo'.
+This item loses its magical powers extremely slowly.
+It increases damage a bit. (6/20)
+It does cold damage unbelievably much. (20/20)
+It increases critical chance somewhat. (8/20)
+It gives small bonus to the skill 'pon deila'.
+It gives small bonus to the skill 'pra evaleo'.
+
+- Extra -
+The finely balanced staff uses its own momentum to reduce exertion.
+The battlestaff has a strong affinity with elven magic.
+The battlestaff may be enhanced by certain Spellblade techniques.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A black staff                             |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does fire damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A blue oaken staff                          |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has impressive weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It does electric damage a bit. (6/20)
+
+- Extra -
+This weapon is easy to use.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    A burnished length of whalebone                    |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (weak in general).
+It decreases the users strength poorly. (5/20)
+It increases the users constitution poorly. (5/20)
+It increases the users wisdom monumentally.
+It increases the users spellpoint regeneration a good amount. (12/20)
+It gives nice bonus to the skill 'mastery of medicine'.
+This item loses its magical powers extremely slowly.
+It increases the users cold resistance strongly. (14/20)
+It does magical damage somewhat. (8/20)
+It gives nice bonus to the skill 'healing efficiency'.
+It increases the users asphyxiation resistance strongly. (14/20)
+It gives nice bonus to the skill 'water lore'.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A glossy platinum quarterstaff                    |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has excellent weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does psionic damage a tiny bit. (4/20)
+It increases critical chance poorly. (5/20)
+
+- Extra -
+This is an illithidwrought weapon and as such has a measure of awareness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            A gnarled staff                            |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (average in general).
+This item loses its magical powers very slowly.
+It increases damage somewhat. (8/20)
+It does fire damage unbelievably much. (20/20)
+
+- Extra -
+The gnarled staff can set its opponents on fire.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                    A long shockburned quarterstaff                    |
+*-----------------------------------------------------------------------*
+It has magnificent weapon class for its type (decent in general).
+This item loses its magical powers incredibly slowly.
+It increases damage adequately. (10/20)
+It does electric damage immensely.
+It increases critical chance adequately. (10/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A long staff with a steel tip                     |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A long twisted staff                         |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has impressive weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It decreases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            A long wooden bo                           |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A long wooden staff, Quaici                      |
+*-----------------------------------------------------------------------*
+It has adequate weapon class for its type (poor in general).
+It increases the users dexterity pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases the users magical resistance a bit. (6/20)
+
+- Extra -
+It has a strong sense of power inside it.
+
+
+
+
+*-----------------------------------------------------------------------*
+|            A peculiar looking walking stick made from rowan           |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has nice weapon class for its type (weak in general).
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence slightly. (7/20)
+This item loses its magical powers fast.
+It increases damage pathetically. (2/20)
+It does poison damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|             A petrified heartwood staff named 'Driftwood'             |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has tremendous weapon class for its type (average in general).
+This item loses its magical powers incredibly slowly.
+It increases damage somewhat. (8/20)
+It does asphyxiation damage unbelievably much. (20/20)
+It increases critical chance adequately. (10/20)
+
+- Extra -
+The staff's powers flourish in the hands of a Maredien.
+Reflecting on the staff through the Loc Turan further hones its abilities.
+
+
+
+*-----------------------------------------------------------------------*
+|                A plain quarterstaff of dark walnut wood               |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (average in general).
+It increases the users constitution a tiny bit. (4/20)
+It increases the users wisdom a tiny bit. (4/20)
+It increases the users intelligence a tiny bit. (4/20)
+It increases the users spellpoint regeneration poorly. (5/20)
+It gives tiny bonus to the skill 'nerve mastery'.
+This item loses its magical powers a bit slower than average.
+It increases damage a tiny bit. (4/20)
+It does psionic damage tremendously. (17/20)
+It increases critical chance pitifully. (3/20)
+It increases the users psionic resistance a bit. (6/20)
+It gives tiny bonus to the skill 'psionic efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      A plain-looking wooden staff                     |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A rotted oak staff                          |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (mediocre in general).
+It increases the users wisdom pitifully. (3/20)
+It increases the users intelligence pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A scrollwork staff                          |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (little in general).
+It increases the users wisdom a good amount. (12/20)
+It increases the users intelligence immensely.
+It gives great bonus to the skill 'channel power'.
+It increases the users spellpoint regeneration a good amount. (12/20)
+This item loses its magical powers incredibly slowly.
+It gives great bonus to the skill 'intentionality'.
+It does magical damage superbly. (16/20)
+It gives great bonus to the skill 'gestalt conjuration'.
+It gives great bonus to the spell 'power blast'.
+It gives great bonus to the skill 'microclasm'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A serpentine staff of bone                      |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (little in general).
+It decreases the users strength pitifully. (3/20)
+It decreases the users constitution adequately. (10/20)
+It increases the users intelligence a good amount. (12/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers somewhat slower than average.
+It does psionic damage slightly. (7/20)
+
+- Extra -
+This staff is occasionally able to 'drain' a magical field.
+All the leeched power can then be 'salvaged' to replenish one's own
+magical power, or it can also be 'discharged' at someone in a burst
+of psionic force.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   A soot-stained walnut quarterstaff                  |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has low weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+It increases damage pathetically. (2/20)
+It does fire damage a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                A staff with a pulsing crystalline core                |
+*-----------------------------------------------------------------------*
+It has excellent weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                 A sturdy staff with delicate carvings                 |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has incredible weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       An elegant whitewood staff                      |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has average weapon class for its type (feeble in general).
+It increases the users wisdom impressively. (15/20)
+It increases the users charisma adequately. (10/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+It gives small bonus to the skill 'mastery of medicine'.
+It gives small bonus to the skill 'optimize transfer'.
+This item loses its magical powers extremely slowly.
+It does magical damage adequately. (10/20)
+It gives small bonus to the skill 'healing resonance'.
+It gives small bonus to the skill 'healing efficiency'.
+
+
+
+*-----------------------------------------------------------------------*
+|                      An exquisite whitewood staff                     |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has average weapon class for its type (feeble in general).
+It increases the users wisdom a bit. (6/20)
+It increases the users intelligence a good amount. (12/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+It gives small bonus to the skill 'transmutation'.
+This item loses its magical powers extremely slowly.
+It gives small bonus to the skill 'order from chaos'.
+It does magical damage adequately. (10/20)
+It gives small bonus to the skill 'ordered mind'.
+
+
+
+*-----------------------------------------------------------------------*
+|                       An ornate whitewood staff                       |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has average weapon class for its type (feeble in general).
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users charisma poorly. (5/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers extremely slowly.
+It does magical damage adequately. (10/20)
+It gives decent bonus to the skill 'mastery of shielding'.
+It gives decent bonus to the skill 'greater vulnerability'.
+
+
+
+*-----------------------------------------------------------------------*
+|                        Ancient Staff of wonder                        |
+*-----------------------------------------------------------------------*
+It increases hit chance unnoticably. (1/20)
+It has awesome weapon class for its type (average in general).
+It increases the users intelligence adequately. (10/20)
+It increases the users hitpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users poison resistance somewhat. (8/20)
+It increases damage pathetically. (2/20)
+It does magical damage a tiny bit. (4/20)
+
+- Extra -
+It may be set to emit light or dark.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          Brafasta's Icy Staff                         |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (weak in general).
+It decreases the users strength poorly. (5/20)
+It increases the users wisdom poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases the users fire resistance somewhat. (8/20)
+It does cold damage somewhat. (8/20)
+
+- Extra -
+It modifies the user's resistance to fire damage.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                              Ivory staff                              |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has impressive weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Oaken staff                              |
+*-----------------------------------------------------------------------*
+It has little weapon class for its type (pathetic in general).
+It decreases the users strength a tiny bit. (4/20)
+It decreases the users dexterity a tiny bit. (4/20)
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It gives small bonus to the skill 'mastery of shielding'.
+
+- Extra -
+It affects the skill mastery of shielding.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Orcish Shamanic Staff                         |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (little in general).
+It increases the users intelligence pitifully. (3/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    Pranthos' sceptre of channeling                    |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (mediocre in general).
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration poorly. (5/20)
+This item loses its magical powers with average speed.
+It does magical damage impressively. (15/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Shimmering Runed Staff                        |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (low in general).
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers with average speed.
+It gives ILLEGAL bonus to the skill 'poison enchanting'.
+It does magical damage strongly. (14/20)
+It gives ILLEGAL bonus to the skill 'fire enchanting'.
+It gives ILLEGAL bonus to the spell 'enchant arrow'.
+It gives ILLEGAL bonus to the skill 'electric enchanting'.
+It gives ILLEGAL bonus to the skill 'magical enchanting'.
+
+- Extra -
+The staff is engraved with four notches, each of which could fit
+a shard.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Staff of Grajuul                           |
+*-----------------------------------------------------------------------*
+It has impressive weapon class for its type (mediocre in general).
+It decreases the users constitution adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Staff of Kazlakhor                          |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has impressive weapon class for its type (mediocre in general).
+It decreases the users strength unnoticably. (1/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers with average speed.
+It does magical damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                           Staff of Kazlakhor                          |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has impressive weapon class for its type (mediocre in general).
+It decreases the users strength unnoticably. (1/20)
+It decreases the users dexterity adequately. (10/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration somewhat. (8/20)
+This item loses its magical powers very slowly.
+It does magical damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                   The Staff of Kazlakhor <dark glow>                  |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (average in general).
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users intelligence magnificently. (18/20)
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers a bit faster than average.
+It gives tiny bonus to the spell 'neural internecion'.
+It does magical damage unbelievably much. (20/20)
+It gives tiny bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Staff of destruction                         |
+*-----------------------------------------------------------------------*
+It increases hit chance somewhat. (8/20)
+It has awesome weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does electric damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Swampy staff                             |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does acid damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|   Sylvan staff, pulsing with nature's venomous essence and vitality   |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (average in general).
+This item loses its magical powers somewhat faster than average.
+It increases damage slightly. (7/20)
+It does poison damage superbly. (16/20)
+
+
+You can't find any records about "The Ancient Staff of Nate v1.3" in the library.
+
+*-----------------------------------------------------------------------*
+|                   The Staff of Kazlakhor <dark glow>                  |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (average in general).
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users intelligence magnificently. (18/20)
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers a bit faster than average.
+It gives tiny bonus to the spell 'neural internecion'.
+It does magical damage unbelievably much. (20/20)
+It gives tiny bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                            The Staff of Law                           |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (average in general).
+It decreases the users strength pitifully. (3/20)
+It decreases the users dexterity pitifully. (3/20)
+It increases the users constitution pitifully. (3/20)
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence poorly. (5/20)
+It increases the users spellpoint regeneration a tiny bit. (4/20)
+This item loses its magical powers with average speed.
+It increases the users cold resistance somewhat. (8/20)
+
+- Extra -
+It emits light.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                   The black rod of the Soul Wringer                   |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has low weapon class for its type (little in general).
+It decreases the users wisdom impressively. (15/20)
+It increases the users intelligence phenomenally.
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'eldritch weave'.
+It does magical damage superbly. (16/20)
+It gives small bonus to the skill 'fell insights'.
+It gives small bonus to the skill 'ruinous utterance'.
+
+- Extra -
+The black rod of the Soul Wringer emits darkness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                      The putrid staff of the Magi                     |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has low weapon class for its type (little in general).
+It decreases the users strength poorly. (5/20)
+It decreases the users constitution poorly. (5/20)
+It decreases the users wisdom impressively. (15/20)
+It increases the users intelligence phenomenally.
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It gives small bonus to the skill 'sense weakness'.
+It does acid damage superbly. (16/20)
+It gives small bonus to the skill 'offensive efficiency'.
+It gives small bonus to the skill 'upper hand'.
+
+- Extra -
+Increases the damage of disruption and death wish considerably while wielded.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       The rod of the Void Walker                      |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has low weapon class for its type (little in general).
+It decreases the users wisdom adequately. (10/20)
+It increases the users intelligence impossibly much.
+It increases the users spellpoint regeneration adequately. (10/20)
+This item loses its magical powers incredibly slowly.
+It increases the users poison resistance somewhat. (8/20)
+It does asphyxiation damage superbly. (16/20)
+It increases the users psionic resistance somewhat. (8/20)
+It increases the users asphyxiation resistance adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 The sceptre of the Deathless Sovereign                |
+*-----------------------------------------------------------------------*
+It decreases hit chance a tiny bit. (4/20)
+It has awesome weapon class for its type (average in general).
+It increases the users wisdom poorly. (5/20)
+It increases the users intelligence adequately. (10/20)
+It increases the users spellpoint regeneration noticably. (9/20)
+This item loses its magical powers incredibly slowly.
+It increases the users cold resistance somewhat. (8/20)
+It increases the users fire resistance somewhat. (8/20)
+It increases damage somewhat. (8/20)
+It does cold damage unbelievably much. (20/20)
+It increases critical chance unbelievably much. (20/20)
+
+- Extra -
+While wielded, this staff will slightly increase the damage of all sorcerers'
+spells cast by the wielder. It will also increase all magical and cold damage
+dealt by the wielder's spells, even in addition to the bonus bestowed to
+sorcerers' spells.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     The sceptre of the Mind Master                    |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has low weapon class for its type (little in general).
+It increases the users wisdom adequately. (10/20)
+It increases the users intelligence unbelievably much. (20/20)
+It increases the users spellpoint regeneration adequately. (10/20)
+It gives small bonus to the skill 'nerve mastery'.
+This item loses its magical powers incredibly slowly.
+It does psionic damage superbly. (16/20)
+It increases the users psionic resistance somewhat. (8/20)
+It gives small bonus to the skill 'psionic efficiency'.
+It gives small bonus to the skill 'quick chant'.
+
+
+
+*-----------------------------------------------------------------------*
+|                  Twilir the ornate staff of the seer                  |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has adequate weapon class for its type (poor in general).
+It increases the users spellpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It decreases damage a bit. (6/20)
+It does fire damage poorly. (5/20)
+It gives great bonus to the skill 'essence eye'.
+
+
+You can't find any records about "Shepard's staff" in the library.

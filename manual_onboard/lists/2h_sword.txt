@@ -1,3 +1,91 @@
-# Paste the `list <slot>` output for 2h_sword here (the box of | item names |).
-# Then run: node scripts/onboard_eq.mjs --commands
+
+
+list 2h sword
+
+*-------------------------------------------------------------*
+|                    Weapon type - 2h sword                   |
+*-------------------------------------------------------------*
+| A beautiful sword's hilt                                    |
+| A black matte two-handed sword                              |
+| A black obsidian sword with a spike                         |
+| A bloodred curved scimitar of the z'dra race                |
+| A bloody red sword                                          |
+| A brightsteel greatsword                                    |
+| A dark charred blade                                        |
+| A dark charred blade                                        |
+| A dark charred blade                                        |
+| A dark metal blade, radiating an otherworldly heat          |
+| A dark obsidian sword called 'The Soulshard Blade'          |
+| A gleaming claymore                                         |
+| A glossy platinum greatsword                                |
+| A huge claymore                                             |
+| A huge giant sword                                          |
+| A huge two-handed sword                                     |
+| A large two-handed sword                                    |
+| A large, two-handed scimitar                                |
+| A legendary Vorpal Blade radiating an aura of cold          |
+| A lightsabre                                                |
+| A long efreeti fireblade                                    |
+| A long steel sword                                          |
+| A massive sword made from reddened steel                    |
+| A razorsharp greatsword                                     |
+| A red two-handed sword called 'The blooddrainer'            |
+| A runesword                                                 |
+| A rusted, bent claymore                                     |
+| A sentry's claymore                                         |
+| A shining spellburned claymore                              |
+| A slender, elegant sword, aglow with an otherworldly aura   |
+| A steel broadsword                                          |
+| A steel sword                                               |
+| A sword                                                     |
+| A twisted sabre (rusty)                                     |
+| A two-handed sword called 'the Sentinel'                    |
+| An enormous blackened flambard called 'Wailing Death'       |
+| Ascalon, the crystal sword                                  |
+| Berserk sword                                               |
+| Blackened Iron Broadsword                                   |
+| Corroding discourager                                       |
+| Corroding scourager                                         |
+| Corroding scourager <fading>                                |
+| Earthsplitter, the shaper of dimensions                     |
+| Glimmer Blade                                               |
+| Heavy Claymore                                              |
+| Huge black sword                                            |
+| Long desert sword                                           |
+| Loremaster's Blade                                          |
+| Mardaukaretha sword                                         |
+| Rauzgnagli, the mighty demonsword                           |
+| Shinny troll sword                                          |
+| Shitty looking sword                                        |
+| Short desert sword                                          |
+| Souldrainer, the taker of souls                             |
+| Sword of Crushing                                           |
+| Sword of Savin                                              |
+| Sword of Thunder                                            |
+| Sword of frost                                              |
+| Sword of the Elves                                          |
+| Sword of the Protector                                      |
+| Sword of the planes                                         |
+| The Broadsword, Sunbringer                                  |
+| The Greatsword of Drayl Grathar                             |
+| The HUGE two-handed sword named 'Zarcuthra'                 |
+| The Rendovoa, sword of pure light                           |
+| The Saw of Death [Dripping blood]                           |
+| The Vigil of the Forgemaster                                |
+| The demonblade                                              |
+| The devilblade                                              |
+| The famed sword of Thunder                                  |
+| The famous Mardaukaretha sword                              |
+| The flaming sword of Gondor                                 |
+| The flaming sword of Gondor                                 |
+| The flaming sword of spirits                                |
+| The golden sword called 'Ffor'                              |
+| The heavy claymore called 'The Frostbrand'                  |
+| The mighty greatsword of Drayl Grathar                      |
+| The rune blade                                              |
+| Tsunami, the sword of watery death                          |
+| Twisted Sabre (rusty and dented)                            |
+| Tyririan sword                                              |
+| Xsandar, the jagged stone sword.                            |
+'-------------------------------------------------------------'
 
