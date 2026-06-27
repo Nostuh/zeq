@@ -1,0 +1,95 @@
+list amulet
+*-------------------------------------------------------------*
+|                     Armour slot - Amulet                    |
+*-------------------------------------------------------------*
+| A Duskwalker charm set with twin stones |
+| A HUGE banana |
+| A copper pendant of the flaming sun |
+| A demure nacre brooch |
+| A dimly glowing toxin infused amulet |
+| A faintly glowing amulet of pumice |
+| A golden administrators charm |
+| A golden locket |
+| A heavy silver amulet inlaid with iolites |
+| A lifelike figurine |
+| A necklace of prayer beads |
+| A pulsating steel amulet |
+| A sapphire amulet |
+| A shimmering voidtouched amulet |
+| A shining amulet of mental toughness |
+| A silver talisman with diamonds |
+| A small bloodstained cross |
+| A soiled icon of bone |
+| A translucent pendant with a black helm embedded in it |
+| Amulet of Eternal Fire |
+| Amulet of Fire <dark> |
+| Amulet of Fire <hot> |
+| Amulet of Magic <dark> |
+| Amulet of Magic <drizzling> |
+| Amulet of flame |
+| Amulet of flame |
+| Amulet of seared dragonheart |
+| Amulet of the Dragon-kin |
+| Amulet of the Dragon-kin (dusty) |
+| Amulet of the Underworld |
+| Amulet of the dying winds |
+| An Aetherweave pendant set with a faintly glowing gem |
+| An Ironward medallion bearing a lion's sigil |
+| An amulet made entirely out of emeralds |
+| An amulet made of guano |
+| An amulet with a tetrahedral crystal |
+| An ancient, engraved stone hanging on a chain |
+| An ebony amulet |
+| An enameled bodice dagger |
+| An ice encased mithril amulet |
+| An obsidian amulet with an amethyst |
+| An old mithril amulet |
+| Belinar's Sacred Amulet |
+| Crystal Amulet |
+| Cyclonic pendant |
+| Faded Green Bandana |
+| Faded Red Bandana |
+| Gem of the Gallows |
+| Glowing amulet of greenlight |
+| Golden amulet |
+| Golden amulet |
+| Medallion of Mirrors |
+| Orb of summoning |
+| Physical amulet of the gremlin lord |
+| Royal insignia |
+| Scale of the Leviathan |
+| Scarab of Protection |
+| Scarab of Protection |
+| Silver Pendant |
+| The Amulet of Yith'Sehta |
+| The Amulet of the Dragon |
+| The Amulet of the Wolf <tm> (dusty) |
+| The Crest of Cocytus |
+| The Crystal Amulet of 'Desteros' |
+| The Eye of Mortis |
+| The Flamecaller's Stone |
+| The Keyholders Amulet |
+| The Pulsing Amulet of 'Zzzzer' |
+| The Stone of Tears |
+| The Visitor's Sigil |
+| The amulet of Choking Shadows |
+| The amulet of stone to flesh |
+| The amulet of tears |
+| The amulet of the Underworld |
+| The amulet of the Wolf |
+| The amulet of the Wolf *dark aura* |
+| The ancient amulet of Tythus |
+| The ancient amulet of Tythus |
+| The ancient amulet of the druids |
+| The black amulet of power transfer |
+| The blue amulet of power transfer |
+| The clasp of Lucifer |
+| The copper button of Lucifer |
+| The emerald amulet of 'Desteros' |
+| The platinum amulet of the Magister |
+| The sulfur pin of Lucifer |
+| Tooth Pendant |
+| Viper Medallion |
+| Zomm's glaring eye, strung on a tarnished chain |
+| Royal amulet |
+'-------------------------------------------------------------'

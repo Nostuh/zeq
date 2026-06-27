@@ -178,14 +178,15 @@ Per-slot optimization over the caller's owned items only.
 
 ## Open follow-ups
 
-- **Multi-slot items need a covered-slots model.** A `multi` item
-  occupies several wear slots, but we don't store which, the identify
-  text doesn't say, and the parser can't infer it — so the builder
-  **ignores** `wear_slot = 'multi'` (returns `multiIgnored` count only).
-  To support them we must (1) add a way to declare each multi item's
-  covered slots (new data we don't have — needs collection) and (2) let
-  the builder weigh a multi item against the *sum* of the single-slot
-  picks it would displace (turns greedy into a comparison/ILP).
+- **Multi-slot items: covered slots now collectible (builder TODO).** The
+  identify text never says which slots a `multi` item covers, but the
+  in-game Trader's Library `lookup` does (`covers multiple slots: a/b/c`).
+  The manual-onboard path now parses that note into `eq_item_covers`
+  (`schema/equipment.sql`); see [manual-onboard.md](manual-onboard.md). What
+  remains: (2) let the builder weigh a multi item against the *sum* of the
+  single-slot picks it would displace (turns greedy into a comparison/ILP),
+  and surface `covers` in `Equipment.vue`. Until then the builder still
+  returns `multiIgnored` only.
 - Slot independence is the v1 assumption. Set bonuses, dual-wield/guild
   rules, or "a 2h weapon frees the second wield slot" would also push
   this toward a small ILP — revisit when those rules are pinned down.

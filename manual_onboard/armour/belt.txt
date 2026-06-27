@@ -1,0 +1,4 @@
+# belt armour — paste `lookup <name>` output blocks below this line.
+# Slot is taken from this filename. Lines outside the *---* boxes are ignored.
+# (Multi items auto-detect from their "covers multiple slots" note, wherever pasted.)
+

@@ -1,0 +1,3 @@
+# Paste the `list <slot>` output for 2h_bludgeon here (the box of | item names |).
+# Then run: node scripts/onboard_eq.mjs --commands
+

@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS eq_items (
     name               VARCHAR(191) NOT NULL,           -- normalized (noise stripped)
     name_raw           VARCHAR(255) NULL,               -- original first line as captured
     wear_slot          VARCHAR(16) NOT NULL,            -- head..feet, held, finger, wield
-    weapon_class       VARCHAR(16) NULL,                -- sword/dagger/axe/bow/polearm/bludgeon/staff/ancient (NOT multi)
+    weapon_class       VARCHAR(16) NULL,                -- sword/dagger/axe/bow/polearm/bludgeon/staff/ancient/instrument (NOT multi)
     is_shield          TINYINT(1) NOT NULL DEFAULT 0,
     hands              TINYINT NOT NULL DEFAULT 1,       -- 2 = two-handed (builder decides slot occupancy)
     slot_raw           VARCHAR(64) NULL,                -- legacy slot value, for audit
@@ -74,6 +74,25 @@ CREATE TABLE IF NOT EXISTS eq_item_bonuses (
     PRIMARY KEY (id),
     UNIQUE KEY uk_eqib (item_id, bonus_name),
     CONSTRAINT fk_eqib_item FOREIGN KEY (item_id)
+        REFERENCES eq_items(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ---------- MULTI-SLOT COVERAGE ----------
+-- Which wear slots a `multi` item occupies (battlesuits, robes that cover
+-- arms/legs/torso at once). The ONLY source for this is the library
+-- "lookup" note "(Note: This item covers multiple slots: arms/legs/torso)"
+-- — the plain identify text never says, which is why the builder ignored
+-- multi items until now. One row per (item, covered slot). See
+-- docs/manual-onboard.md and the multi follow-up in
+-- docs/equipment-redesign.md.
+CREATE TABLE IF NOT EXISTS eq_item_covers (
+    id         INT NOT NULL AUTO_INCREMENT,
+    item_id    INT NOT NULL,
+    wear_slot  VARCHAR(16) NOT NULL,            -- a concrete slot: head..feet, finger, ...
+    PRIMARY KEY (id),
+    UNIQUE KEY uk_eqic (item_id, wear_slot),
+    KEY ix_eqic_slot (wear_slot),
+    CONSTRAINT fk_eqic_item FOREIGN KEY (item_id)
         REFERENCES eq_items(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 

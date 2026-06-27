@@ -1,0 +1,118 @@
+
+list 1h sword
+
+*-------------------------------------------------------------*
+|                    Weapon type - 1h sword                   |
+*-------------------------------------------------------------*
+| A Katana                                                    |
+| A battered falchion                                         |
+| A bladed talon called 'Cloudrender'                         |
+| A blue steel long sword                                     |
+| A bright steel longsword                                    |
+| A broad bladed longsword                                    |
+| A bronze longsword                                          |
+| A brutal looking orc sword                                  |
+| A corroded blacksteel scimitar                              |
+| A crude long sword                                          |
+| A crystalline voidblade                                     |
+| A curved black blade                                        |
+| A curved black longsword                                    |
+| A dark charred blade                                        |
+| A demon sword                                               |
+| A gaudy looking shortsword                                  |
+| A glittering longsword                                      |
+| A glossy platinum broadsword                                |
+| A goblin blade                                              |
+| A heavy scimitar                                            |
+| A large steel katana                                        |
+| A long Katana                                               |
+| A long Katana of Samurai                                    |
+| A long sword                                                |
+| A longsword                                                 |
+| A military sword                                            |
+| A pitted longsword                                          |
+| A rather shiny cutlass                                      |
+| A rusty longsword                                           |
+| A sharp flamehardened shortsword                            |
+| A sharp looking guardsword                                  |
+| A shining blue longsword                                    |
+| A shining longsword                                         |
+| A shining silver longsword                                  |
+| A short and slightly curved wakizashi                       |
+| A slender venomtouched rapier                               |
+| A slender white sword                                       |
+| A slim rapier                                               |
+| A small orc sword                                           |
+| A small shortsword                                          |
+| A steel sword                                               |
+| A sword of spirits                                          |
+| A vibrant bloody crystal sword                              |
+| A vibrant looking broken blade                              |
+| A wicked longsword                                          |
+| A wide bladed sword                                         |
+| A wolven scimitar                                           |
+| A wooden toy sword                                          |
+| Ambrosial Sword of Bellona                                  |
+| An antique longsword                                        |
+| An antique schiavona                                        |
+| An iron longsword                                           |
+| An iron shortsword                                          |
+| An old longsword                                            |
+| An orcish sword                                             |
+| Araman, the godslayer                                       |
+| Aranam, the godslayer                                       |
+| Black demon blade                                           |
+| Black longsword                                             |
+| Black sabre                                                 |
+| Bronze shortsword                                           |
+| Ebon sword                                                  |
+| Elven Blade                                                 |
+| Elven scimitar                                              |
+| Ghost blade                                                 |
+| Greenlight sword                                            |
+| Lizard guard sword                                          |
+| Long sword                                                  |
+| Long sword                                                  |
+| Night's Edge, twin fang of the Duskwalker                   |
+| Onyx sword                                                  |
+| Onyx sword                                                  |
+| Onyx sword                                                  |
+| Onyx sword                                                  |
+| Onyx sword                                                  |
+| Onyx sword                                                  |
+| Orcish Battle Sword                                         |
+| Scythesong, the sibilant scimitar                           |
+| Senior Officer's Sword                                      |
+| Shadowblade                                                 |
+| Sharp Scimitar                                              |
+| Sharp longsword                                             |
+| Shining longsword                                           |
+| Short sword                                                 |
+| Small Scimitar                                              |
+| Sword of Enfall                                             |
+| The Blade of Illusion                                       |
+| The Great Blade of Illusion                                 |
+| The Shadowblade                                             |
+| The Sword of Might                                          |
+| The captain's bastard sword                                 |
+| The cowardly sword                                          |
+| The drow slayer                                             |
+| The legendary Blade known as the 'Bloodhunter'              |
+| The legendary Blade known as the 'Bloodhunter'              |
+| The legendary Tri-Blade known as 'Bloodhunter' <tm>         |
+| The legendary Tri-Blade known as 'Heartseeker'              |
+| The legendary Tri-Blade known as 'Heartseeker'              |
+| The legendary sword known as 'The Mortal Splitter'          |
+| The ranger blade                                            |
+| Toadman Sword                                               |
+| Tyririan long sword                                         |
+| Tyririan short sword                                        |
+| Uruk-Hai sword                                              |
+| A curved sword                                              |
+| A large curved sword                                        |
+| Beautiful broadsword                                        |
+| Fine broadsword                                             |
+| Iron shortsword                                             |
+'-------------------------------------------------------------'
+
+

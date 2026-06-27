@@ -1,0 +1,3 @@
+# 1h_dagger weapon (1h, class=dagger) — paste `lookup <name>` output blocks below this line.
+# Hands + weapon class come from this filename; wear_slot = wield. Lines outside *---* boxes are ignored.
+

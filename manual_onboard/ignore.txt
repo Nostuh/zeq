@@ -1,0 +1,34 @@
+# manual_onboard/ignore.txt — lines the onboard parser may safely skip.
+#
+# When onboard_eq.mjs hits a body line inside an item that no parse rule
+# recognized, it reports it as a CALLOUT (a new line that might carry a
+# stat we don't yet handle). To silence a callout you have decided is not
+# a stat, add a substring of it here (one pattern per line, case-insensitive).
+# `#` lines and blank lines are comments.
+#
+# The parser already ignores these structurally (no entry needed):
+#   - the *---* box rules and the | name | header line
+#   - the decay line "... loses its magical powers ..."
+#   - everything under a "- Extra -" heading (freeform flavor text)
+#   - the "(Note: This item covers multiple slots: ...)" line (parsed as covers)
+#
+# Failed library lookups ("You can't find any records about "X" in the
+# library.") — not item data, ignore.
+can't find any records
+
+# Weapon combat stats with NO catalog column yet — DEFERRED by decision
+# (see the "hit/dmg/crit" follow-up in docs/manual-onboard.md). Remove
+# these lines + add columns/parse rules if/when this data becomes relevant.
+hit chance
+critical chance
+increases damage
+decreases damage
+
+# Wearer armour-class modifier ("It decreases the users armour class ...")
+# — distinct from an item's own AC tier; single occurrence, ignored for now.
+users armour class
+
+# Add your own below. Examples (uncomment / edit as you decide):
+# magical glow
+# It glows
+# seems to vibrate

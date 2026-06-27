@@ -1,0 +1,1133 @@
+
+*-----------------------------------------------------------------------*
+|                                A Katana                               |
+*-----------------------------------------------------------------------*
+It increases hit chance unnoticably. (1/20)
+It has decent weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A battered falchion                          |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has excellent weapon class for its type (decent in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does cold damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                  A bladed talon called 'Cloudrender'                  |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has awesome weapon class for its type (nice in general).
+It increases the users dexterity impressively. (15/20)
+This item loses its magical powers very slowly.
+It gives decent bonus to the skill 'spot weakness'.
+It increases damage adequately. (10/20)
+It does electric damage unbelievably much. (20/20)
+It increases critical chance impressively. (15/20)
+
+- Extra -
+The blade of the talon can be 'transformed' into other shapes.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                        A bright steel longsword                       |
+*-----------------------------------------------------------------------*
+It increases hit chance a good amount. (12/20)
+It has superb weapon class for its type (adequate in general).
+This item loses its magical powers with incredible haste.
+It increases damage pathetically. (2/20)
+It does magical damage adequately. (10/20)
+It increases the users magical resistance a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A broad bladed longsword                       |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It does poison damage a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A bronze longsword                          |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has superb weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage a bit. (6/20)
+It does electric damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A brutal looking orc sword                      |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A corroded blacksteel scimitar                    |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A crude long sword                          |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A crystalline voidblade                        |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A curved black blade                         |
+*-----------------------------------------------------------------------*
+It has tremendous weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A curved black longsword                       |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A dark charred blade                         |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has nice weapon class for its type (nice in general).
+It increases the users constitution adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does fire damage magnificently. (18/20)
+It increases the users magical resistance strongly. (14/20)
+
+- Extra -
+It emits darkness.
+It modifies resistance to magical damage.
+It modifies the wielders constitution.
+
+
+*-----------------------------------------------------------------------*
+|                          A dark charred blade                         |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has tremendous weapon class for its type (tremendous in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does fire damage superbly. (16/20)
+
+- Extra -
+
+This blade is augmented by a powerful enchantment, woven with the
+greatest care from the essence of Fire and the signs of natural fate.
+It has become attached to the destiny of Devils, tied to their greatness.
+Should it ever lose its power to contamination, only He who first gave it
+its enchantments, could ever hope to awaken the residing power.
+
+
+
+*-----------------------------------------------------------------------*
+|                          A dark charred blade                         |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has nice weapon class for its type (nice in general).
+It increases the users constitution adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does fire damage magnificently. (18/20)
+It increases the users magical resistance strongly. (14/20)
+
+- Extra -
+It emits darkness.
+It modifies resistance to magical damage.
+It modifies the wielders constitution.
+
+
+*-----------------------------------------------------------------------*
+|                          A dark charred blade                         |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (nice in general).
+It increases the users constitution adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does fire damage magnificently. (18/20)
+It increases the users magical resistance strongly. (14/20)
+
+- Extra -
+It emits darkness.
+It modifies resistance to magical damage.
+It modifies the wielders constitution.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A demon sword                             |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       A gaudy looking shortsword                      |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A glittering longsword                        |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does magical damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      A glossy platinum broadsword                     |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It does psionic damage a tiny bit. (4/20)
+It increases critical chance poorly. (5/20)
+
+- Extra -
+This is an illithidwrought weapon and as such has a measure of awareness.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             A goblin blade                            |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A heavy scimitar                           |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does cold damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          A large steel katana                         |
+*-----------------------------------------------------------------------*
+It increases hit chance a bit. (6/20)
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A long Katana                             |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                        A long Katana of Samurai                       |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                        A long Katana of Samurai                       |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              A long sword                             |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              A longsword                              |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            A military sword                           |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A pitted longsword                          |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         A rather shiny cutlass                        |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A rusty longsword                           |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                    A sharp flamehardened shortsword                   |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has magnificent weapon class for its type (nice in general).
+This item loses its magical powers incredibly slowly.
+It increases the users cold resistance strongly. (14/20)
+It increases damage adequately. (10/20)
+It does fire damage immensely.
+It increases critical chance poorly. (5/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                       A sharp looking guardsword                      |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                        A shining blue longsword                       |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has tremendous weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It does electric damage strongly. (14/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                       A shining silver longsword                      |
+*-----------------------------------------------------------------------*
+It has poor weapon class for its type (little in general).
+This item loses its magical powers with incredible haste.
+It does shadow damage pitifully. (3/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                 A short and slightly curved wakizashi                 |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A slender venomtouched rapier                     |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has magnificent weapon class for its type (nice in general).
+It increases the users dexterity unbelievably much. (20/20)
+This item loses its magical powers incredibly slowly.
+It increases damage adequately. (10/20)
+It does poison damage immensely.
+It increases critical chance adequately. (10/20)
+It increases the users asphyxiation resistance strongly. (14/20)
+
+- Extra -
+The wielder becomes more attuned to the elemental forces.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         A slender white sword                         |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has mediocre weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A slim rapier                             |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A small orc sword                           |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A small shortsword                          |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             A steel sword                             |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                             A steel sword                             |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A sword of spirits                          |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                     A vibrant bloody crystal sword                    |
+*-----------------------------------------------------------------------*
+It increases hit chance pathetically. (2/20)
+It has nice weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does magical damage superbly. (16/20)
+
+- Extra -
+It modifies the user's resistance to magical damage.
+It modifies the user's constitution.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                     A vibrant looking broken blade                    |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (nice in general).
+It increases the users dexterity impressively. (15/20)
+It decreases the users constitution poorly. (5/20)
+This item loses its magical powers with average speed.
+It increases damage a bit. (6/20)
+It does asphyxiation damage unbelievably much. (20/20)
+It increases critical chance adequately. (10/20)
+It increases the users asphyxiation resistance strongly. (14/20)
+
+- Extra -
+In the heat of the battle this blade can sometimes release a pulse of energy.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           A wicked longsword                          |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (mediocre in general).
+It increases the users dexterity adequately. (10/20)
+This item loses its magical powers with average speed.
+It does magical damage unbelievably much. (20/20)
+
+- Extra -
+It modifies the wielders dexterity.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                          A wide bladed sword                          |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           A wolven scimitar                           |
+*-----------------------------------------------------------------------*
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It does magical damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           A wooden toy sword                          |
+*-----------------------------------------------------------------------*
+It has non-existent weapon class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                       Ambrosial Sword of Bellona                      |
+*-----------------------------------------------------------------------*
+It has tremendous weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It does cold damage a good amount. (12/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          An antique longsword                         |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has superb weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does magical damage a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          An antique schiavona                         |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has nice weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does cold damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           An iron longsword                           |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has superb weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           An iron shortsword                          |
+*-----------------------------------------------------------------------*
+It increases hit chance noticably. (9/20)
+It has nice weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage noticably. (9/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            An old longsword                           |
+*-----------------------------------------------------------------------*
+It has superb weapon class for its type (adequate in general).
+This item loses its magical powers with average speed.
+It does magical damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            An orcish sword                            |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                         Araman, the godslayer                         |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+It does acid damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         Aranam, the godslayer                         |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (average in general).
+This item loses its magical powers very fast.
+It does acid damage a good amount. (12/20)
+
+- Extra -
+An imprint on the underside of the haft reads 'Gekko Ind.'
+
+
+
+
+*-----------------------------------------------------------------------*
+|                           Black demon blade                           |
+*-----------------------------------------------------------------------*
+It has nice weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does magical damage a tiny bit. (4/20)
+
+- Extra -
+It is evil.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Black longsword                            |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Black sabre                              |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Bronze shortsword                           |
+*-----------------------------------------------------------------------*
+It has low weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Ebon sword                              |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Elven Blade                              |
+*-----------------------------------------------------------------------*
+It decreases hit chance impressively. (15/20)
+It has poor weapon class for its type (little in general).
+It decreases the users dexterity pitifully. (3/20)
+It decreases the users constitution pitifully. (3/20)
+It increases the users intelligence a tiny bit. (4/20)
+It decreases the users armour class pathetically. (2/20)
+It increases the users spellpoint regeneration nicely. (13/20)
+This item loses its magical powers with average speed.
+It increases damage unnoticably. (1/20)
+It gives decent bonus to the spell 'psychic crush'.
+
+- Extra -
+It modifies your armour class.
+It modifies the wielder's constitution.
+It modifies the wielder's dexterity.
+It modifies the wielder's intelligence.
+It modifies the wielder's mana regeneration.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                             Elven scimitar                            |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Ghost blade                              |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has awesome weapon class for its type (nice in general).
+This item loses its magical powers with average speed.
+It increases damage a bit. (6/20)
+It does magical damage adequately. (10/20)
+
+- Extra -
+It has special properties.
+It can steal the soul from its target.
+It might enhance your strength.
+It might enhance your dexterity.
+It might enhance your healing rate.
+It might enhance your protection.
+It might enhance your hitpoints.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                            Greenlight sword                           |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                           Lizard guard sword                          |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (little in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                               Long sword                              |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+*-----------------------------------------------------------------------*
+|                               Long sword                              |
+*-----------------------------------------------------------------------*
+It has average weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|               Night's Edge, twin fang of the Duskwalker               |
+*-----------------------------------------------------------------------*
+It increases hit chance monumentally.
+It has incredible weapon class for its type (great in general).
+This item loses its magical powers incredibly slowly.
+It gives nice bonus to the skill 'spot weakness'.
+It increases damage a good amount. (12/20)
+It does shadow damage immensely.
+It increases critical chance phenomenally.
+
+- Extra -
+Three Shards of the Gods may be imbued in this ancient artifact.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                               Onyx sword                              |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has awesome weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does cold damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                               Onyx sword                              |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has awesome weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does electric damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                               Onyx sword                              |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has awesome weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does fire damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                               Onyx sword                              |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has awesome weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+
+*-----------------------------------------------------------------------*
+|                               Onyx sword                              |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has awesome weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does poison damage adequately. (10/20)
+
+*-----------------------------------------------------------------------*
+|                               Onyx sword                              |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has awesome weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage somewhat. (8/20)
+It does psionic damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                          Orcish Battle Sword                          |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has low weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                   Scythesong, the sibilant scimitar                   |
+*-----------------------------------------------------------------------*
+It has non-existent weapon class for its type (non-existent in general).
+This item loses its magical powers with average speed.
+
+- Extra -
+Its wielder strikes more blows in melee combat.
+
+
+
+
+*-----------------------------------------------------------------------*
+|                         Senior Officer's Sword                        |
+*-----------------------------------------------------------------------*
+It increases hit chance nicely. (13/20)
+It has impressive weapon class for its type (decent in general).
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                              Shadowblade                              |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has tremendous weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+It does asphyxiation damage unbelievably much. (20/20)
+
+*-----------------------------------------------------------------------*
+|                            The Shadowblade                            |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has tremendous weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+It does shadow damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                             Sharp Scimitar                            |
+*-----------------------------------------------------------------------*
+It increases hit chance pitifully. (3/20)
+It has mediocre weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Sharp longsword                            |
+*-----------------------------------------------------------------------*
+It increases hit chance unnoticably. (1/20)
+It has average weapon class for its type (weak in general).
+This item loses its magical powers with average speed.
+It increases damage pathetically. (2/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           Shining longsword                           |
+*-----------------------------------------------------------------------*
+It increases hit chance a tiny bit. (4/20)
+It has good weapon class for its type (mediocre in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                              Short sword                              |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Small Scimitar                            |
+*-----------------------------------------------------------------------*
+It has mediocre weapon class for its type (poor in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                            Sword of Enfall                            |
+*-----------------------------------------------------------------------*
+It increases hit chance unbelievably much. (20/20)
+It has awesome weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It does electric damage somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                         The Blade of Illusion                         |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (nice in general).
+It increases the users dexterity adequately. (10/20)
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does electric damage strongly. (14/20)
+It increases the users electric resistance somewhat. (8/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            The Shadowblade                            |
+*-----------------------------------------------------------------------*
+It increases hit chance tremendously. (17/20)
+It has tremendous weapon class for its type (good in general).
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+It does shadow damage unbelievably much. (20/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           The Sword of Might                          |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does magical damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                      The captain's bastard sword                      |
+*-----------------------------------------------------------------------*
+It increases hit chance poorly. (5/20)
+It has nice weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It increases damage poorly. (5/20)
+It does fire damage a bit. (6/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                           The cowardly sword                          |
+*-----------------------------------------------------------------------*
+It increases hit chance impressively. (15/20)
+It has tremendous weapon class for its type (good in general).
+This item loses its magical powers very slowly.
+It increases damage poorly. (5/20)
+It does psionic damage magnificently. (18/20)
+
+- Extra -
+This is a special weapon.
+The sword does a great amount of extra dmg against smaller foes than you.
+The sword may rebel if made to fight larger foes.
+
+
+
+
+*-----------------------------------------------------------------------*
+|             The legendary Blade known as the 'Bloodhunter'            |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (nice in general).
+It increases the users strength a bit. (6/20)
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does magical damage strongly. (14/20)
+
+- Extra -
+This weapon will increase the users strength.
+This weapon will increase the ability to hit
+This weapon does more damage than usual
+This weapon will increase the users power.
+
+
+*-----------------------------------------------------------------------*
+|             The legendary Blade known as the 'Bloodhunter'            |
+*-----------------------------------------------------------------------*
+It increases hit chance adequately. (10/20)
+It has awesome weapon class for its type (nice in general).
+It increases the users strength a bit. (6/20)
+This item loses its magical powers with average speed.
+It increases damage adequately. (10/20)
+It does magical damage strongly. (14/20)
+
+- Extra -
+This weapon will increase the users strength.
+This weapon will increase the ability to hit
+This weapon does more damage than usual
+This weapon will increase the users power.
+
+
+
+
+*-----------------------------------------------------------------------*
+|          The legendary Tri-Blade known as 'Bloodhunter' <tm>          |
+*-----------------------------------------------------------------------*
+It increases hit chance slightly. (7/20)
+It has awesome weapon class for its type (nice in general).
+It increases the users strength a bit. (6/20)
+This item loses its magical powers with average speed.
+It increases damage slightly. (7/20)
+It does magical damage a good amount. (12/20)
+
+- Extra -
+This weapon will increase the users strength.
+This weapon will increase the ability to hit
+This weapon does more damage than usual
+This weapon will increase the users power.
+
+
+
+
+*-----------------------------------------------------------------------*
+|             The legendary Tri-Blade known as 'Heartseeker'            |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (nice in general).
+It decreases the users strength pathetically. (2/20)
+It increases the users dexterity pathetically. (2/20)
+It increases the users constitution somewhat. (8/20)
+This item loses its magical powers with average speed.
+It increases damage pitifully. (3/20)
+It does magical damage a bit. (6/20)
+
+- Extra -
+This weapon will increase the users constitution
+This weapon will increase the ability to hit
+This weapon does more damage than usual
+This weapon will increase the users power.
+
+
+*-----------------------------------------------------------------------*
+|             The legendary Tri-Blade known as 'Heartseeker'            |
+*-----------------------------------------------------------------------*
+It has awesome weapon class for its type (nice in general).
+It decreases the users strength pathetically. (2/20)
+It increases the users dexterity a tiny bit. (4/20)
+It increases the users constitution somewhat. (8/20)
+It increases the users hitpoint regeneration pitifully. (3/20)
+This item loses its magical powers with average speed.
+It increases damage a tiny bit. (4/20)
+It does magical damage adequately. (10/20)
+
+
+
+*-----------------------------------------------------------------------*
+|           The legendary sword known as 'The Mortal Splitter'          |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+It does poison damage a tiny bit. (4/20)
+
+
+
+*-----------------------------------------------------------------------*
+|                            The ranger blade                           |
+*-----------------------------------------------------------------------*
+It has great weapon class for its type (average in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Toadman Sword                             |
+*-----------------------------------------------------------------------*
+It has tiny weapon class for its type (pathetic in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Tyririan long sword                          |
+*-----------------------------------------------------------------------*
+It has decent weapon class for its type (low in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                          Tyririan short sword                         |
+*-----------------------------------------------------------------------*
+It has feeble weapon class for its type (tiny in general).
+This item loses its magical powers with average speed.
+
+
+
+*-----------------------------------------------------------------------*
+|                             Uruk-Hai sword                            |
+*-----------------------------------------------------------------------*
+It has weak weapon class for its type (feeble in general).
+This item loses its magical powers with average speed.
+
+
+You can't find any records about "A curved sword" in the library.
+You can't find any records about "A large curved sword" in the library.
+You can't find any records about "Beautiful broadsword" in the library.
+You can't find any records about "Fine broadsword" in the library.
+You can't find any records about "Iron shortsword" in the library.

@@ -35,6 +35,13 @@ const AC_SCALE = [
     ['average in general', 11], ['good in general', 12], ['nice in general', 13],
     ['excellent in general', 14], ['superb in general', 15],
     ['unbelievable in general', 16],
+    // Tiers surfaced by real WEAPON data (the armour-only scale above never
+    // saw them). Values are ESTIMATES — flagged for review; the exact game
+    // numbers are unknown, these only need to rank weapon_class_value
+    // sensibly. weak≈low end; great/tremendous≈high end (great from the
+    // top "incredible" per-type rating). Correct the integers if the real
+    // scale surfaces. See docs/manual-onboard.md "Open follow-ups".
+    ['weak in general', 5], ['great in general', 14], ['tremendous in general', 15],
 ];
 
 // Substring → stat column. ORDER MATTERS: longer/more-specific phrases
@@ -60,8 +67,20 @@ const STAT_PATTERNS = [
 const DMG_TYPES = [
     ['psionic', 'psi'], ['electric', 'elec'], ['acid', 'acid'],
     ['cold', 'cold'], ['fire', 'fire'], ['poison', 'poi'],
-    ['asphyxiation', 'asph'], ['magical', 'mag'],
+    ['asphyxiation', 'asph'], ['magical', 'mag'], ['shadow', 'shadow'],
 ];
+
+// Skill/spell bonus magnitude in the library "lookup" format
+// ("It gives <quality> bonus to the skill 'X'."). The in-game scale is a
+// 6-step quality ladder (see eq_to_parse/commands.txt) — DISTINCT from the
+// stat adverbs above and shown with no number. Stored ordinally 1..6;
+// order is all the builder ranks on, so swap in real values if they
+// ever surface. Identify text uses the older "bonus to user's X" line,
+// still handled separately below.
+const SKILL_MAP = { tiny: 1, small: 2, decent: 3, nice: 4, great: 5, awesome: 6 };
+
+// A library "lookup" box rule line: `*-----...-----*`.
+const RULE_RE = /^\*-{2,}\*$/;
 
 function scaleLookup(table, line) {
     for (const [needle, val] of table) {
@@ -79,7 +98,7 @@ function scaleLookup(table, line) {
 const BODY_SLOTS = new Set(['head', 'neck', 'cloak', 'amulet', 'torso',
     'arms', 'hands', 'belt', 'legs', 'feet', 'held', 'finger']);
 const WEAPON_CLASSES = new Set(['axe', 'sword', 'dagger', 'bow', 'ancient',
-    'polearm', 'bludgeon', 'staff']);
+    'polearm', 'bludgeon', 'staff', 'instrument']);
 
 export function classifySlot(slotRaw) {
     const s = (slotRaw || '').trim().toLowerCase();
@@ -120,11 +139,47 @@ export function normalizeName(firstLine) {
     return { name: n, name_raw, bound, hands };
 }
 
-// Parse one full identify block. `slotRaw` is the slot the user tagged
-// it with (radio button); the text itself does not name the slot.
+// Split a "lookup" capture that holds MANY items (one `manual_onboard`
+// drop file = a pile of pasted `lookup <name>` blocks) into one text per
+// item. A block is the box header `*--*` / `| name |` / `*--*` plus the
+// body up to the next header. Anything before the first header (command
+// echoes, blank lines) is discarded. Each returned chunk starts at its
+// rule line, so parseIdentify() lifts the name from the box. A single
+// identify paste (no box) yields []; feed those straight to parseIdentify.
+export function splitLibraryBlocks(text) {
+    const src = String(text || '');
+    const headerRe = /(^|\n)[ \t]*\*-{2,}\*[ \t]*\n[ \t]*\|[^\n]*\|[ \t]*\n[ \t]*\*-{2,}\*[ \t]*(?=\n|$)/g;
+    const starts = [];
+    let m;
+    while ((m = headerRe.exec(src)) !== null) starts.push(m.index + (m[1] ? 1 : 0));
+    if (!starts.length) return [];
+    const blocks = [];
+    for (let i = 0; i < starts.length; i++) {
+        const end = i + 1 < starts.length ? starts[i + 1] : src.length;
+        const block = src.slice(starts[i], end).trim();
+        if (block) blocks.push(block);
+    }
+    return blocks;
+}
+
+// Parse one full item block — either a paste-in identify (name = first
+// line) OR a single library "lookup" box (name in the `| ... |` header).
+// `slotRaw` is the slot the block was tagged with (radio button for live
+// add; drop-file name for the onboard); the text itself names the slot
+// only for multi items (the "covers multiple slots" note).
 export function parseIdentify(text, slotRaw = '') {
     const lines = String(text || '').split('\n').map(l => l.trim());
-    const first = lines.find(l => l.length) || '';
+
+    // Name: a library box puts the name in the `| ... |` line after the
+    // first rule; a plain identify uses the first non-empty line.
+    let first = '';
+    const idx0 = lines.findIndex(l => l.length);
+    if (idx0 !== -1 && RULE_RE.test(lines[idx0])) {
+        const nameLine = lines.slice(idx0 + 1).find(l => l.length) || '';
+        first = nameLine.replace(/^\|/, '').replace(/\|$/, '').trim();
+    } else {
+        first = lines.find(l => l.length) || '';
+    }
     const { name, name_raw, bound, hands } = normalizeName(first);
     const slot = classifySlot(slotRaw);
 
@@ -138,10 +193,33 @@ export function parseIdentify(text, slotRaw = '') {
     let weapon_class_value = 0;
     let dmg_pct = 0;
     let dmg_type = null;
+    let covers = null;
     const bonuses = [];
+    const unparsed = [];      // body lines no rule consumed (onboard callouts)
+    let inExtra = false;      // inside the freeform "- Extra -" description
 
-    for (const line of lines) {
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
         if (!line) continue;
+        if (i === idx0 && !RULE_RE.test(line)) continue;           // identify name line
+        if (RULE_RE.test(line)) continue;                          // box rule
+        if (line.startsWith('|') && line.endsWith('|')) continue;  // box name line
+
+        // Multi-slot coverage note — the ONLY signal for which wear slots a
+        // multi item occupies. Checked BEFORE the Extra block because the
+        // game prints it AFTER "- Extra -".
+        const cov = line.match(/covers multiple slots:\s*([a-z/ ]+)\)/i);
+        if (cov) {
+            covers = cov[1].split('/').map(s => s.trim().toLowerCase()).filter(Boolean);
+            continue;
+        }
+
+        if (/^-{1,}\s*extra\s*-{1,}$/i.test(line)) { inExtra = true; continue; }
+        if (inExtra) continue;                                     // freeform description
+
+        // Decay rate ("loses its magical powers ...") — no stat, ignored.
+        if (/loses its magical powers/i.test(line)) continue;
+
         const neg = /\bdecreases\b/.test(line);
 
         // Elemental damage: "It does fire damage." + magnitude elsewhere.
@@ -171,35 +249,58 @@ export function parseIdentify(text, slotRaw = '') {
             continue;
         }
 
-        // Open-ended skill/spell bonus lines.
+        // Skill/spell bonus, library format: "gives <quality> bonus to the
+        // skill 'X'." / "the spell 'X'." (quality ladder, no number).
+        const sb = line.match(/gives\s+(\w+)\s+bonus to the (skill|spell)\s+'([^']+)'/i);
+        if (sb) {
+            bonuses.push({ bonus_name: sb[3].trim(), kind: sb[2].toLowerCase(),
+                amount: SKILL_MAP[sb[1].toLowerCase()] ?? 0 });
+            continue;
+        }
+
+        // Open-ended skill/spell bonus, identify format: "bonus to user's X".
         if (line.includes("bonus to user's")) {
             const m = line.match(/bonus to user's\s+(.+?)\.?\s*$/i);
             if (m) bonuses.push({ bonus_name: m[1].trim(), amount: scaleLookup(AMOUNT_SCALE, line) || 0 });
             continue;
         }
 
-        // Fixed stat columns.
-        const stat = scaleLookup(STAT_PATTERNS, line);
-        if (!stat) continue;
-        let amt = scaleLookup(AMOUNT_SCALE, line);
-        if (amt === null) continue;
+        // Fixed stat columns. Library text says "the users X" (no
+        // apostrophe); normalize so one STAT_PATTERNS table serves both
+        // formats. The trailing "(n/20)" is the user's client annotation,
+        // not game data — left untouched; magnitude comes from the adverb.
+        const nline = line.replace(/\bthe users\b/gi, "the user's");
+        const stat = scaleLookup(STAT_PATTERNS, nline);
+        if (!stat) { unparsed.push(line); continue; }
+        let amt = scaleLookup(AMOUNT_SCALE, nline);
+        if (amt === null) { unparsed.push(line); continue; }
         if (stat === 'hp' || stat === 'sp') amt *= 10; // scale is in tens
         stats[stat] = neg ? -amt : amt;
     }
 
+    // A covered-slots note makes this a multi item regardless of which
+    // drop file it came from: wear_slot becomes 'multi', weapon_class drops.
+    let wear_slot = slot.wear_slot;
+    let weapon_class = slot.weapon_class;
+    let is_shield = slot.is_shield;
+    let needs_review = slot.needs_review;
+    if (covers && covers.length) {
+        wear_slot = 'multi'; weapon_class = null; is_shield = 0; needs_review = 0;
+    }
+
     return {
         name, name_raw, bound,
-        wear_slot: slot.wear_slot,
-        weapon_class: slot.weapon_class,
-        is_shield: slot.is_shield,
+        wear_slot, weapon_class, is_shield,
         hands,
         slot_raw: slotRaw,
-        needs_review: slot.needs_review,
+        needs_review,
         stats,
         weapon_class_value,
         dmg_pct,
         dmg_type,
         bonuses,
+        covers,
+        unparsed,
     };
 }
 
