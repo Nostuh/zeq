@@ -460,6 +460,32 @@ export default {
             this.spellLearned = out;
         },
         zeroAllSpells() { this.spellLearned = {}; },
+        // Max a single skill/spell row in place — used by double-click on a
+        // list row (#38). Single-click still just selects for the detail view.
+        maxSkillRow(r) {
+            if (!r) return;
+            this.skillLearned = { ...this.skillLearned, [r.skill_id]: r.scaled };
+        },
+        maxSpellRow(r) {
+            if (!r) return;
+            this.spellLearned = { ...this.spellLearned, [r.spell_id]: r.scaled };
+        },
+        // Max every row whose id is in `ids` — used by "Max Selected" (#37).
+        // Reads each row's char-scaled max from skillRows/spellRows so the
+        // applied value matches Max All / setMaxSkill, and leaves unselected
+        // rows untouched.
+        maxSkillIds(ids) {
+            const want = new Set(ids);
+            const out = { ...this.skillLearned };
+            for (const r of this.skillRows) if (want.has(r.skill_id)) out[r.skill_id] = r.scaled;
+            this.skillLearned = out;
+        },
+        maxSpellIds(ids) {
+            const want = new Set(ids);
+            const out = { ...this.spellLearned };
+            for (const r of this.spellRows) if (want.has(r.spell_id)) out[r.spell_id] = r.scaled;
+            this.spellLearned = out;
+        },
         setTotalLevels(v) {
             // The "Total Levels" input writes through to `extraFree`.
             // target = clamp(0..MAX_LEVEL); extraFree = target - guildSum
@@ -1424,6 +1450,28 @@ export default {
 }
 [data-bs-theme="dark"] .ss-info-btn { color: #adb5bd; }
 [data-bs-theme="dark"] .ss-info-btn:hover { color: #6ea8fe; background: rgba(110, 168, 254, 0.12); }
+/* Multi-select checkbox on each skill/spell row (#37). Same metrics as the
+   info button; a Bootstrap-icon toggle driven purely by reactive state —
+   NOT a native checkbox (see docs/gotchas.md "Vue checkbox desync"). */
+.ss-sel-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+    margin-right: 0.1rem;
+    background: transparent;
+    border: 0;
+    color: #6c757d;
+    font-size: 0.85rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.12s;
+}
+.ss-sel-btn:hover { color: #0d6efd; }
+[data-bs-theme="dark"] .ss-sel-btn { color: #adb5bd; }
+[data-bs-theme="dark"] .ss-sel-btn:hover { color: #6ea8fe; }
 
 /* Per-guild "what does this teach" modal — bug #13.
  * Uses its own classes (not .modal-backdrop) so it doesn't collide with
@@ -1490,6 +1538,8 @@ export default {
 .skill-row { display: flex; padding: 0.1rem 0.5rem; cursor: pointer; }
 .skill-row:hover { background: #f1f5f9; }
 .skill-row.active { background: #cfe2ff; }
+.skill-row.selected .ss-sel-btn { color: #0d6efd; }
+[data-bs-theme="dark"] .skill-row.selected .ss-sel-btn { color: #6ea8fe; }
 .desc-box { border: 1px solid #dee2e6; min-height: 7rem; padding: 0.5rem; border-radius: 0.25rem; background: #fafafa; }
 .cost-table { width: 100%; font-family: monospace; border-collapse: separate; border-spacing: 0; }
 .cost-table th, .cost-table td { padding: 0.1rem 0.4rem; }
@@ -1647,6 +1697,15 @@ export default {
     .col-skill-list, .col-skill-detail { overflow: visible; }
     .guild-list, .skill-list, .cost-table-wrap { max-height: none; }
     .general-grid, .skills-grid { flex: 0 0 auto; }
+}
+/* Bug #36: at short-but-wide viewports the two-column skills layout stays,
+   but the short-height block above scrolls the whole .tab-body, so the
+   detail column's Max button / description scroll away while the (now
+   full-height) list is scrolled. Pin the detail column to the top of the
+   scroll area so Max stays reachable. Scoped to min-width:801px so it does
+   NOT apply to the stacked single-column mobile layout (max-width:800). */
+@media (max-height: 720px) and (min-width: 801px) {
+    .col-skill-detail { position: sticky; top: 0; align-self: start; }
 }
 @media (max-width: 520px) {
     .summary-bar { font-size: 0.7rem; padding: 0.3rem 0.45rem; }

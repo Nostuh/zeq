@@ -167,6 +167,26 @@ const SEED = [
         title: 'Level readout shows the final level, not the breakdown',
         body: 'The Level cell in the summary bar used to show guild + free levels split apart (e.g. 45+15/120). It now shows just the final character level (e.g. 60/120). The guild + free split is still available on hover.',
     },
+    {
+        created: '2026-06-29 20:15:00', kind: 'content', bug_id: 35,
+        title: 'Skill and spell descriptions filled in (acrobatics + ~300 more)',
+        body: 'The info (ⓘ) button on the Skills/Spells tab showed "No description recorded yet" for a lot of entries — acrobatics among them. We pulled the in-game help text and filled in descriptions for roughly 300 more skills and spells. A handful are still blank where the game itself has no help entry.',
+    },
+    {
+        created: '2026-06-29 20:15:01', kind: 'feature', bug_id: 38,
+        title: 'Double-click a skill or spell to max it',
+        body: 'On the Skills/Spells tab you can now double-click any row in the list to instantly train it to its character maximum — no need to select it and reach for the Max button.',
+    },
+    {
+        created: '2026-06-29 20:15:02', kind: 'feature', bug_id: 37,
+        title: 'Select multiple skills/spells and max them together',
+        body: 'Each skill/spell row now has a checkbox. Tick the ones you want, then click "Max Selected" to train them all to their maximum at once, leaving everything you did not pick untouched. "Clear" deselects them.',
+    },
+    {
+        created: '2026-06-29 20:15:03', kind: 'fix', bug_id: 36,
+        title: 'Skill/spell Max button stays put on short screens',
+        body: 'On shorter screens the skill/spell list shares the page scroll, so the description box and its Max button used to scroll out of view as you went down the list. The description panel is now pinned in place, so the selected skill’s details and Max button stay reachable while you scroll.',
+    },
 ];
 
 async function main() {

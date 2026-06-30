@@ -9,7 +9,7 @@ export default {
     name: 'ReincTabSkillSpells',
     inject: ['reinc'],
     data() {
-        return { mode: 'skills' };
+        return { mode: 'skills', selSkills: new Set(), selSpells: new Set() };
     },
     computed: {
         isSkills() { return this.mode === 'skills'; },
@@ -21,6 +21,10 @@ export default {
         totalExp() { return this.isSkills ? this.reinc.skillExpTotal : this.reinc.spellExpTotal; },
         listLabel() { return this.isSkills ? 'Available Skills' : 'Available Spells'; },
         detailLabel() { return this.isSkills ? 'Skill' : 'Spell'; },
+        // Per-mode multi-select set (#37); switching Skills↔Spells keeps each
+        // side's selection independent.
+        selSet() { return this.isSkills ? this.selSkills : this.selSpells; },
+        selCount() { return this.selSet.size; },
     },
     methods: {
         selectRow(r) {
@@ -54,6 +58,30 @@ export default {
             if (this.isSkills) this.reinc.openSkillInfo(r);
             else this.reinc.openSpellInfo(r);
         },
+        // Double-click a row to max it (#38). Single-click (selectRow) still
+        // just selects it for the detail/cost pane.
+        maxRow(r) {
+            if (this.isSkills) this.reinc.maxSkillRow(r);
+            else this.reinc.maxSpellRow(r);
+        },
+        // Multi-select (#37): the per-row checkbox toggles membership in the
+        // current mode's selection set; "Max Selected" maxes every checked
+        // row at once and clears the set. State-driven Bootstrap icon — never
+        // a native checkbox (see docs/gotchas.md "Vue checkbox desync").
+        isSelected(r) { return this.selSet.has(this.rowKey(r)); },
+        toggleSelect(r) {
+            const k = this.rowKey(r);
+            if (this.selSet.has(k)) this.selSet.delete(k);
+            else this.selSet.add(k);
+        },
+        maxSelected() {
+            const ids = Array.from(this.selSet);
+            if (!ids.length) return;
+            if (this.isSkills) this.reinc.maxSkillIds(ids);
+            else this.reinc.maxSpellIds(ids);
+            this.selSet.clear();
+        },
+        clearSelection() { this.selSet.clear(); },
     },
 };
 </script>
@@ -74,14 +102,24 @@ export default {
         <div class="d-flex align-items-center mb-1 gap-2 flex-wrap">
             <h6 class="m-0 flex-grow-1">{{ listLabel }} ({{ rows.length }})</h6>
             <button class="btn btn-sm btn-outline-success" @click="maxAll" :disabled="!rows.length">Max All</button>
+            <button class="btn btn-sm btn-outline-success" @click="maxSelected" :disabled="!selCount">Max Selected{{ selCount ? ` (${selCount})` : '' }}</button>
+            <button v-if="selCount" class="btn btn-sm btn-outline-secondary" @click="clearSelection">Clear</button>
             <button class="btn btn-sm btn-outline-secondary" @click="zeroAll" :disabled="!rows.length">Zero All</button>
         </div>
         <div class="skill-list">
             <div v-for="s in rows" :key="rowKey(s)"
-                 class="skill-row" :class="{active: rowIsActive(s)}"
-                 @click="selectRow(s)">
+                 class="skill-row" :class="{active: rowIsActive(s), selected: isSelected(s)}"
+                 @click="selectRow(s)" @dblclick.prevent="maxRow(s)">
+                <button type="button" class="ss-sel-btn"
+                        @click.stop.prevent="toggleSelect(s)"
+                        @dblclick.stop.prevent
+                        :title="isSelected(s) ? 'Unselect' : 'Select for Max Selected'"
+                        :aria-label="isSelected(s) ? 'Unselect' : 'Select'">
+                    <i class="bi" :class="isSelected(s) ? 'bi-check-square-fill' : 'bi-square'"></i>
+                </button>
                 <button type="button" class="ss-info-btn"
                         @click.stop.prevent="openInfo(s)"
+                        @dblclick.stop.prevent
                         :title="`What does ${s.name} do?`"
                         aria-label="Show description">
                     <i class="bi bi-info-circle"></i>
