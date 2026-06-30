@@ -1,6 +1,11 @@
 <script>
 import axios from 'axios';
 import Multiselect from "@vueform/multiselect";
+// The @vueform/multiselect component ships its own theme; without it the
+// dropdown has no styles and never hides (the eqmob picker rendered as an
+// unstyled, always-open stack of options). Theme colors are mapped to the
+// dark palette via --ms-* overrides in scss/styles.scss.
+import "@vueform/multiselect/themes/default.css";
 
 export default {    
     name: "Equipment Add",

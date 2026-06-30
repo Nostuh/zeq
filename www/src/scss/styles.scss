@@ -193,6 +193,23 @@ tr.guild-closed-row > * {
     .diff-old { background: #3d1f1f; }
     .diff-new { background: #1f3d1f; }
     .mob-image-thumb img { border-color: #2a2f36; }
+
+    /* @vueform/multiselect (Equipment Add → eqmob picker). The theme ships
+       light hex defaults via --ms-* custom properties; remap them to the
+       dark palette so the picker isn't white-on-light text in dark mode. */
+    .multiselect {
+        --ms-bg: #1b1f23;
+        --ms-border-color: #2a2f36;
+        --ms-dropdown-bg: #1b1f23;
+        --ms-dropdown-border-color: #2a2f36;
+        --ms-option-bg-pointed: #23303e;
+        --ms-option-color-pointed: #dbeafe;
+        --ms-placeholder-color: #8a939c;
+        --ms-caret-color: #8a939c;
+        --ms-clear-color: #8a939c;
+        --ms-clear-color-hover: #e9ecef;
+        color: #e9ecef;
+    }
 }
 
 /* ===== EQ Mob Knowledge Base ===== */

@@ -132,10 +132,19 @@ export function normalizeName(firstLine) {
     const timur = n.match(/can find on\s+"(.+?)"/i);
     if (timur) n = timur[1];
 
+    // Equip-location prefix: pasting a worn/wielded item (e.g. straight from
+    // the in-game equipment screen) prefixes the name with where it sits,
+    // "Wielded in right hand: <name>" / "Wielded in both hands: <name>". Strip
+    // it so the item dedups against its plain identify instead of spawning a
+    // second catalog row; "both hands" also implies a two-hander. (Bug: these
+    // leaked through, see docs/equipment-redesign.md "Phase 2" known edge.)
+    const wield = n.match(/^\s*Wielded in (right hand|left hand|both hands)\s*:\s*/i);
+    if (wield) n = n.slice(wield[0].length);
+
     n = n.replace(/\s*seems to vibrate rapidly\.?\s*$/i, '');
 
     const bound = /<bound>/i.test(n) ? 1 : 0;
-    const hands = /\(2h\)/i.test(n) ? 2 : 1;
+    const hands = (/\(2h\)/i.test(n) || (wield && /both/i.test(wield[1]))) ? 2 : 1;
 
     // Remove angle-bracket tags (<Bound>, <tm>, ...).
     n = n.replace(/<[^>]*>/g, ' ');

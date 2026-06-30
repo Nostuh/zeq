@@ -141,10 +141,12 @@ Per-slot optimization over the caller's owned items only.
      to one row (427 JS keys → 426 DB rows). For such a pair the second
      write wins via `ON DUPLICATE KEY UPDATE` rather than best-of merge —
      affects ~1 item today, acceptable.
-   - A few identifies use other capture formats the name normalizer
-     doesn't strip yet (e.g. `Wielded in right hand: <name>`), so they
-     won't dedup against the plain identify. Extend `normalizeName()`
-     when these matter.
+   - `normalizeName()` now strips the wielded-location prefix
+     (`Wielded in right hand:/left hand:/both hands: <name>`, the last
+     also implying a two-hander) so those dedup against the plain
+     identify. The worn-armour variants (`Worn on head:` etc.) are not
+     stripped yet — none have surfaced in the data; extend the same regex
+     if they ever do.
 3. **Repoint API** — new `/api/equipment` router. ✅ **done**
    ([api/rest/api/equipment.mjs](../api/rest/api/equipment.mjs),
    [api/classes/eq_store.mjs](../api/classes/eq_store.mjs)). Server-side
