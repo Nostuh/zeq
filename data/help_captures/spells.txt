@@ -1,0 +1,3153 @@
+
+Help on spell: Absent mind
+Casting time:  8 rounds
+Spell cost:    388 SPs
+Spell type:    heal
+Spell words:   Mhael
+
+A skilled priest can divide his/her mind and thus be able to control a
+spell while casting another. This isn't as easy as it sounds though and
+many things are known to affect it. Creating this link between the caster
+and another target is known to be less effective. The link can be broken by
+either the caster or the target at any time. It will automatically wear off
+when it can no longer be upkeeped.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+help spell mental vision
+help spell mental watch
+help spell metamorphosis
+help spell mind control
+help spell mind tempest
+help spell missile storm
+help spell mist haze
+help spell moaning laughter
+help spell money is power
+help spell mystic vision
+help spell neural internecion
+help spell optimize energy consumption
+help spell pain
+help spell paranoia
+help spell phantom armour
+help spell phantom sickle
+help spell phantom steed
+help spell pigeon melody
+help spell planar rescue
+help spell poison cloud
+help spell poison vulnerability
+help spell power transfer
+help spell power word
+help spell prismatic spray
+help spell protection from evil
+help spell protection from good
+help spell psionic vulnerability
+help spell rain dance
+help spell random reincarnation
+help spell recall hunter
+help spell recognize pattern
+help spell reflector shield
+help spell restore
+help spell reverie shadow
+help spell riddle
+help spell rock to mud
+help spell score of the steadfast
+help spell screaming mind
+help spell seedling
+help spell sensory overload
+help spell shadow shield
+help spell sharp nails
+help spell shatter limb
+help spell shriek
+help spell silence
+help spell sleight of hand
+help spell slow person
+help spell snail shell
+help spell snowstorm
+help spell song of david
+help spell song of glory
+help spell song of samson
+help spell song of satan
+help spell song of woe
+help spell soulsuck
+help spell spiritual hammer
+help spell staff light
+help spell stone to flesh
+help spell stonefist
+help spell stoneshoes
+help spell suffocation
+help spell summon animus
+help spell summon demonic guardian
+help spell summon greater hunter
+help spell summon greater spores
+help spell summon icicles
+
+Help on spell:  Acid blast
+Casting time:   2 rounds
+Spell cost:     222 SPs
+Spell type:     attack
+Damage type:    acid
+Maximum damage: 1000
+Spell words:    raza suoruflus
+
+0
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Acid rain
+Casting time:   4 rounds
+Spell cost:     169 SPs
+Spell type:     area attack
+Damage type:    acid
+Maximum damage: 1080
+Spell words:    Stelm suoreflus umb enog
+
+An old legend tells of a mage, who while performing a quest
+saw a god crying - weeping the death of her mortal mate.
+So strong was the rain of sorrow, that it melted her godly
+spirit, and she became a mortal. The mage captured the essence
+of the spell and twisted it into a powerful weapon. This
+spell creates a downpour of acid in the vicinity of the caster.
+The caster and his comrades are not harmed by the magic.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Acid vulnerability
+Casting time:  4 rounds
+Spell cost:    191 SPs
+Spell type:    attack
+Damage type:   acid
+Spell words:   norbitz burnn arse
+
+This help spell summon lesser hunter
+help spell summon lesser spores
+help spell summon minions
+help spell summon minor hunter
+spell will decrease the target's
+resistance to acid damage.  The degree of vulnerability
+of this spell is based on your spell % and your
+percent in greater vulnerability.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Agility boost
+Casting time:  5 rounds
+Spell cost:    81 SPs
+Spell type:    neutral
+Spell words:   ZipZap
+
+This spell raises the target's dexterity for an amount
+of time depending on the caster's level.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: All pain
+Casting time:  6 rounds
+Spell cost:    355 SPs
+Spell type:    neutral
+Spell words:   Erofeb Naht Ssel
+
+This spell acts to lower the hps of everyone in the room.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Amorphic armour
+Casting time:  3 rounds
+Spell cost:    98 SPs
+Spell type:    defensive
+Spell words:   YaaaaAAAA Zhu
+
+With this spell, the Samurai is able to connect with the Spirit World through
+its blade spirit, and invite the protection of other weaker spirits to these
+Realms. The weaker spirits are unable to take constant form, but shall form a
+transparent, amorphic barrier around the protected target.
+The protection ohelp spell summon orb of reflection
+help spell summon phantom sickle
+help spell summon shadow
+help spell summon swarm
+help spell swords to plowshares
+help spell symmetry in body
+f the barrier depends on the Samurai's spell
+proficiency. This spell is stackable.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Animate dead
+Casting time:  7 rounds
+Spell cost:    133 SPs
+Spell type:    neutral
+Spell words:   Aduraa rais rais undeadis
+
+With this spell the knight can animate a corpse into an undead creature
+which can be then charmed with charm undead-spell. When the undead has
+been animated it has no understanding, it's only kept together by the
+knights willpower. Knight needs to charm the creature before it decides
+to return to the ground. All animated undeads have a decay time which is
+determined by the animators spell %, wisdom and the level of the corpse
+which is being animated. How powerful corpses the knight can animate
+depends on the intelligence, spell % and skill % of focus death magic.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Asphyxiation vulnerability
+Casting time:  4 rounds
+Spell cost:    191 SPs
+Spell type:    attack
+Damage type:   asphyxiation
+Spell words:   norbitz gag gag
+
+This spell will decrease the target's
+resisthelp spell tale of the owl
+help spell tale of the thief
+help spell thermal drain
+help spell thorn spray
+help spell tortoise nervosa
+help spell touch of darkness
+ance to asphyxiation damage.  The degree of vulnerability
+of this spell is based on your spell % and your
+percent in greater vulnerability.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Billow of miasma
+Casting time:    4 rounds
+Spell cost:      126 SPs
+Spell type:      area attack
+Damage type:     asphyxiation
+Spell damage:    50 - 400
+Spell words:     Ffulf fo lluf
+Affecting stats: intelligence and spell percent
+
+With this spell the caster summons a thick cloud of miasma in the room.
+The miasma is so thick and suffocating that it makes all the caster's
+foes have breathing difficulties, while the experienced caster and his
+party of immediate friends are immune to the smoke. In order to make
+this spell work, the caster must gather all the filth from the air
+and transform it into suffocating miasma. But still after dozens of
+hours spent studying this spell the mages have not found how to make
+this spell incessant. The suffocating billow of miasma disappears as
+fast as it was created, leaving the stronger enemies only slightly
+hurt but the weakest might have taken more permanent damage. It is
+said that the knowledge of this spell enhances the amount of time
+the billow deals damage.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Helhelp spell touch of death
+help spell touch of judas
+help spell transformation
+help spell true distant blizzard storm
+help spell unhinge door
+help spell unholy absolution
+help spell unholy gift
+p on song: Bitter apathy.
+Singing time: 4 rounds.
+Song cost: 280 SPs.
+Song type: area attack.
+Damage type: acid.
+Maximum damage: 1120.
+When surrounded by men without purpose who care
+little about the ways of the world or their own salvation.  A
+bard can bring such a sense of regret as to create bitterness
+in ones heart.
+
+Last line: Too late you realize life has past you by, so feel the pain.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Blizzard
+Casting time:   5 rounds
+Spell cost:     311 SPs
+Spell type:     area attack
+Damage type:    cold
+Maximum damage: 1400
+Spell words:    cie tylscars
+Affecting stat: level
+
+This spell creates a biting cold wind, chilling everyone
+in the area to the bone unless they bundle up or are naturally
+resistant to cold.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Blizzard storm
+Casting time:   2 rounds
+Spell cost:     1782 SPs
+Spell type:     area attack
+Damage type:    cold
+Maximum damage: 3247
+Spell words:    BurrR froost vycolDd
+Affecting stat: level and int
+
+This spehelp spell viscous flesh
+help spell voids of life
+help spell vortex magica
+help spell war song
+help spell warriors bane
+help spell watery breath
+help spell weary arms
+ll causes a strong winter snow storm to surround the targets.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Bonded spirits
+Casting time:  5 rounds
+Spell cost:    379 SPs
+Spell type:    neutral
+Spell words:   Spiritus releasi manr
+
+This spell will allow the death knight's spirit to enter the body
+of another man for a short while, whilst the spirit of the target
+will move inside the knight's corpse. The duration of the link between
+these two will last until either of them decides to end it with a command
+'restore_body' or either of the two leaves the realm. The target must
+accept the link before it is possible to form it. Password can't be
+set nor chests opened while the switch is running. The duration of the
+link depends on spell %, wisdom and skill % mastery of death protection.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Bone shatter
+Casting time:   3 rounds
+Spell cost:     150 SPs
+Spell type:     attack
+Damage type:    magical
+Maximum damage: 508
+Spell words:    sochani CRACK
+
+A nasty evocation spell that calls magical forces into the
+target'help spell wildfire
+help spell wither
+s body, causing his bones to twist and begin to snap
+and shatter.  Those highly skilled in evocation can cause
+several bones to shatter and crack, inflicting massive amounts
+of damage.  It is known that some types of creatures are
+immune to this spell.  Powerful golems, slimes and ghosts, for
+instance, cannot be bone shattered.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Call lightning
+Casting time:   2 rounds
+Spell cost:     79 SPs
+Spell type:     attack
+Damage type:    electric
+Maximum damage: 700
+Spell words:    URIKA!!
+
+This spell allows the caster to call down a powerful bolt of lightning
+from the sky onto one target.  Because of varying weather conditions,
+the damage from this spell is very random.  This spell will not work indoors,
+and is more effective in areas with water.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Cat eyes
+Casting time:  5 rounds
+Spell cost:    86 SPs
+Spell type:    neutral
+Spell words:   pur purrrrr purrrrrrr
+
+With this spell the caster grants a target a superior form of vision
+with which one can see the heat radiating from 'living' things, as well
+as some of the residual heat within the surroundings. When in dimly lit
+locations, the target experiences the darkness of the environment as a
+reduction of colours rather than a change in distance vision. This spell
+does not hinder the target if she enters a brightly lit location, for its
+true use is to 'see' within the darkness and detecting things within it.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Cause despair
+Casting time:  5 rounds
+Spell cost:    314 SPs
+Spell type:    neutral
+Spell words:   Ur laif saxs an it das it veery baadly
+
+The target of this spell will feel utterly hopeless. This spell
+can only be cast at players. Duration of this spell is dependant
+on caster's int.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Celestial disposition
+Casting time:  10 rounds
+Spell cost:    153 SPs
+Spell type:    neutral
+Spell words:   quidaes lauruvitum cruoris divinae
+
+With this spell it is possible to gain insight into the ever raging
+war between good and evil, Cruoris Divinae. The caster can enlighten
+himself about which side is currently dominating the battle. If the
+caster is a devout person he can also discover how the passed victories
+and defeats are currently affecting his own powers.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Chant of death
+Casting time:  5 rounds
+Spell cost:    286 SPs
+Spell type:    attack
+Spell words:   Death death death...aragaraum death esheer
+
+With this spell the death knight can demolish the will to live of
+any good monster. The effectiveness of the spell depends on casters int,
+wis, spell %, skill % of mastery of death illusions and the total amount
+of death points the knight possesses. If the spell is succesful the target
+will get very depressed about the state of its life and become much more
+willing to die, hence easier to hit with spells and skills. This spell
+can't be stacked and the knight has to recover from the previous cast
+before he can cast it again. The recovery time depends on the power of
+the previous chant of death the knight casted.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Chaos bolt
+Casting time:   3 rounds
+Spell cost:     79 SPs
+Spell type:     attack
+Damage type:    random
+Spell words:    SUMANI BUUM
+Affecting stat: int
+
+This spell will send an uncontrolled bolt of energy
+at the target, causing variable types and amounts of
+damage.  The sp cost of this spell is
+also known to vary randomly.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Chaos cube
+Casting time:  6 rounds
+Spell cost:    168 SPs
+Spell type:    neutral
+Spell words:   Kaei aradus siirwe
+
+Using this spell the knight can create a cube of pure chaos energy
+which will be impassable from both sides to everyone else but the
+knight who can exit it from the inside. This spell has two uses, it
+can be used as a refuge place for the knight or it can be used to imprison
+creatures inside the cube. The target, if not knight, has a saving throw
+according to its intelligence and level. The duration of the cube depends
+on wis, spell % and skill % of mastery of death protection. The cube can be
+broken at any time by the caster with a command 'break_cube'. Due to
+the heavy stress caused by handling large amounts of chaos materia this
+spell can't be casted all the time. The investigations of chaos materia
+suggest that all materia of another type except living or dead tissue
+will be destroyed if in contact with the materia when the cube collapses,
+hence the cube shouldn't be used as a weapon/armour storage.
+Note: certain monsters with special teleportation abilities are known
+have escaped the chaos cubes.
+Additional note: Very large monsters are almost immune to cubing.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Chaos immolation
+Casting time:  3 rounds
+Spell cost:    194 SPs
+Spell type:    neutral
+Spell words:   Ultimatum chaosium orbeee
+
+This spell will create a orb of pure chaos energy around the death
+knight which will constantly set aflame small parts of the bodies
+of the good aligned monsters near the knight, causing continuous
+damage. The orb will follow its creator everywhere and drain the
+creators spell points in order to maintain itself. The knight can
+banish the orb at any time with 'banish_orb'
+Note: Due to the chaotic nature of this spell the orb will explode
+violently if it becomes in contact with another chaos orb causing
+great damage to its surroundings. The damage caused by the orb is
+determined by casters intelligence, wisdom and level. It is also
+rumoured that members of the high council are favoured by the
+gods with extra damage.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Chaos wall
+Casting time:  3 rounds
+Spell cost:    107 SPs
+Spell type:    defensive
+Spell words:   Illus wallis
+
+Using this spell the knight can fashion a piece of wall from chaos
+materia which looks exactly like the walls near it. Only death knights,
+necromancers and monsters over level 70 can see through the illusion. The
+knight can remove the wall at any time with command 'disrupt_wall'. It
+can also be destroyed by a certain amount of any damagetype. Those who
+don't see the actual nature of the chaos wall only see a dead end where
+it stands. The duration of the spell depends on mastery of death illusion,
+wisdom and amount of death points the knight possesses.
+Note: if the wall comes into contact with any other chaos materia it
+will instantly collapse.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Charm undead
+Casting time:  6 rounds
+Spell cost:    343 SPs
+Spell type:    special
+Spell words:   Undeadis meerk follo
+
+This spell is one of the most sophisticated ones of the death magic.
+It will allow the knight to charm other undeads to serve and follow
+him. Controlling undeads drains magical energy all the time though
+so it's not wise to keep many undeads at once. If the knight runs
+out of magical energy the undeads will become mindless creatures again
+and attack the knight. The spellcost of this spell is highly dependant
+on wis and the skill % of focus death magic.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Chill touch
+Casting time:  2 rounds
+Spell type:    attack
+Damage type:   cold
+Spell words:   Dhzethandz
+
+An advanced priest of evil can summon a pair of ethereal hands that
+will proceed to strangle their target. Because of the ethereal nature
+of the hands the victim won't be suffocated but the hands are from the
+plane of dead and thus will cause the victim's body to freeze.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Circle of darkness
+Casting time:  5 rounds
+Spell cost:    191 SPs
+Spell type:    defensive
+Spell words:   Dras dark circulos
+
+This spell will summon a circle of ultimate darkness, the essence of
+the darkness itself. Everyone else but the servants of death will be
+completely blind inside this circle. This spell is best for clouding
+your presence from your enemies. The duration of the circle is dependant
+on casters wis, spell % and skill % of mastery of death protection.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Circle of protection
+Casting time:  3 rounds
+Spell cost:    97 SPs
+Spell type:    defensive
+Spell words:   Circulos aras protecto
+
+This spell will allow the death knight to protect someone with a circle
+which can fend off some of the damage of any damagetype specified by
+the knight. The protection value can also be specified by the knight
+by a number from one to ten. The circle will drain knights spellpoints
+in order to maintain itself every time the target inside the circle
+takes damage. The circle will disappear if the target dies, leaves the
+realm or if the knight runs out of sp. This spell can not be stacked
+with any major nonknight-protections like abjurer prots. It also isn't
+as powerful as abjurer prots, death knights are not abjurers.
+How many targets the knight can protect simultaneously depends on his
+dk-rank. The highest protection amount the knight can use depend on
+spell %, skill % of mastery of death protection and wisdom.
+Syntax: cast circle of protection at <target>,<type>,<amount>.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Cold vulnerability
+Casting time:  4 rounds
+Spell cost:    191 SPs
+Spell type:    attack
+Damage type:   cold
+Spell words:   norbitz antifreez merc
+
+This spell will decrease the target's
+resistance to cold damage.  The degree of vulnerability
+of this spell is based on your spell % and your
+percent in greater vulnerability.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Colored lights
+Casting time:   4 rounds
+Spell cost:     137 SPs
+Spell type:     attack
+Damage type:    magical
+Maximum damage: 380
+Spell words:    ahction Kamera lIGhts
+
+This spell causes your victim's skin to burn.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Colourful berry
+Casting time:    10 rounds
+Spell cost:      174 SPs
+Spell type:      summoning
+Spell words:     inionican revibalana colour
+Affecting stats: dex and int
+
+The good berry is back, but this time it comes in colours.
+Different coloured berries give various effects which can only be
+figured out by using them.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Confusion
+Casting time:   1 round
+Spell cost:     262 SPs
+Spell type:     attack
+Damage type:    magical
+Maximum damage: 531
+Spell words:    Confuzess skerg
+
+With this spell a skilled caster can confuse the enemy seriously
+making him stop casting spells and useing skills. The target gets
+a saving throw based on int.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Conjure earth elemental
+Casting time:    12 rounds
+Spell cost:      365 SPs
+Spell type:      neutral
+Spell words:     aym u tounniam alfl nupo oyu
+Affecting stats: wisdom and level and spell percent
+
+This spell summons an Elemental from the Elemental Plane of Earth.
+These beings are extremely passionate and tempramental creatures
+and should be treated with caution as they sometimes resent being
+summoned into our airy world.  Their time in our world is severely
+limited due to its air and water filled environment.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Conjure fire elemental
+Casting time:    12 rounds
+Spell cost:      249 SPs
+Spell type:      neutral
+Spell words:     ruyeo yagnilp tihw ifre
+Affecting stats: wisdom and level and spell percent
+
+This spell summons an Elemental from the Elemental Plane of Fire.
+These beings are extremely passionate and temperamental creatures
+and should be treated with caution as they sometimes resent being
+summoned into our icy cold world.  Their time in our world is
+severely limited due to its cold nature.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Corrosive wind
+Casting time:   5 rounds
+Spell cost:     310 SPs
+Spell type:     area attack
+Damage type:    acid
+Maximum damage: 1358
+Spell words:    Hzzzt shhhh ocrrode
+
+This spell creates an extremely corrosive wall of acid which sweeps
+through the room, covering everyone except the caster with deadly acid.
+This spell is very difficult, various mages have tried to learn it
+throughout their lives and failed.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Crash all in mud
+Casting time:  30 rounds
+Spell cost:    48040 SPs
+Spell type:    unknown
+Spell words:   Hahahacacklesnickermuahneener
+
+This spell will disable crash recovery from all the players in
+the mud and dest them. This spell can only be casted by arches.
+Info: Only to be used when eq-purge is needed.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Create clone
+Casting time:  5 rounds
+Spell cost:    219 SPs
+Spell type:    neutral
+Spell words:   Il'a goaer mahdos
+
+When this spell is cast a clone of the caster will appear. The clone
+is mindless, unable to speak, move or cast spells but it can do some
+melee damage if attacked. The clone can fool monsters or other people
+into attacking them instead of the real target. If the clone is extremely
+well made it can also sometimes fool magical spells like relocate. The
+affecting stats are int, wis, spell %, skill % of mastery of death illusions
+and the amount of death points the knight possesses. The targets level
+affects the level and weapon class of the clone.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Dark embryo
+Casting time:  15 rounds
+Spell cost:    620 SPs
+Spell type:    attack
+Spell words:   Argames wharas st'rak
+
+With this spell the death knight can implant an evil embryo into
+someone's stomach where it will grow into a small undead creature.
+The time it takes for the embryo to grow to its full size is approximately
+a week and the target might notice the embryos movement or feel some pain
+when the creature digests small parts of his stomach. When the creature
+has grown to full size it will burst through the targets stomach,
+usually causing great deal of damage, maybe even death. The target gets
+a saving throw based on his strength. The strength and the size of the
+embryo depends on the int, wis, spell % and amount of death points the
+knight possesses. The size of the embryo is critical to the amount of
+damage it does when it 'hatches'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Dark teach
+Casting time:  40 rounds
+Spell cost:    209 SPs
+Spell type:    neutral
+Spell words:   Arak rakma lleps wohwonk
+
+With this spell death knights and warlocks can learn to cast spells
+of their opposite guilds. Once the spell is cast target will know
+how to cast a spell defined by the caster, but only to a certain degree
+depending on the int, wis, spell % and warlock rank/dk overall death
+points. After one cast the target will lose knowledge of the spell.
+Caster can gain knowledge of possible spells which can be taught by
+casting this spell with a target 'list'.  Due to demanding nature of
+this twisted form of education the target can not grasp the basics
+of this dark teaching more than once within timespan of a day.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Death armour
+Casting time:  4 rounds
+Spell cost:    109 SPs
+Spell type:    defensive
+Spell words:   damaa bounchiii
+
+This spell surrounds the target with a magical armour.
+The armour is known to bounce some of the possible
+attackers damage back to the attacker.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Death defying feat.
+Singing time: 5 rounds.
+Song cost: 400 SPs.
+Song type: area attack.
+Damage type: asphyxiation.
+Maximum damage: 640.
+Bards have long been known for their ability to wow their
+audience with their numerous skills and pranks, but the bard
+that performed this act unfortunately sometimes gave his audience
+a heart attack.  Numerous bards have also been known to die while
+performing this act though.
+
+Last line: I fell of the rope and only managed to grab
+it with my pinky finger..
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Death fog
+Casting time:   5 rounds
+Spell cost:     290 SPs
+Spell type:     area attack
+Damage type:    acid
+Maximum damage: 1730
+Spell words:    fwlat phsulfur ackid
+Affecting stat: int
+
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Death sanctification
+Casting time:  4 rounds
+Spell cost:    286 SPs
+Spell type:    neutral
+Spell words:   Death sanctorium regeneratum
+
+With this spell the death knight can sanctify the ground he is standing
+on to the gods of death, disabling the regeneration of all living forms
+standing on that spot. The time which the ground will stay sanctified
+depends on the spell % and intelligence of the caster.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Deathslash
+Casting time:   4 rounds
+Spell cost:     222 SPs
+Spell type:     area attack
+Damage type:    magical
+Maximum damage: 2600
+Spell words:    shish boom bah
+Affecting stat: wis
+
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Devastating hate
+Casting time:   6 rounds
+Spell cost:     891 SPs
+Spell type:     attack
+Damage type:    magical
+Maximum damage: 10
+Spell words:    Hazteedhz
+
+A priest can magically anger a creature thus making it unable to concentrate
+normally. The angered creature will be physically stronger and of course it
+will strongly dislike the caster. The duration is dependant on the spell
+percent of the caster and the level of the monster. The power of this spell is
+dependant on casters level and knowledge of arcane lore. Saving throw is
+based on the casters spell percent.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Dispel magic
+Casting time:    6 rounds
+Spell cost:      352 SPs
+Spell type:      neutral
+Spell words:     negatus arcanis
+Affecting stats: intelligence, wisdom and spellpercent
+
+This spell is used to remove a number of harmful or beneficial enchantments
+from the target. The exact number of enchantments dispelled depends on the
+caster's intelligence, wisdom and spellpercent.
+The spell can also be used to attempt the removal of a specific enchantment,
+the chance of removal determined by the caster's intelligence, wisdom and
+spellpercent. In both cases the knowledge of individual spells improves the
+odds of a successful dispel.
+Some enchantments may be harder to dispel than others.
+This spell cannot be used to dispel major enchantments, like for example the
+invulnerability spells, forget or greater curses, or physical afflictions
+caused by spells like blindness or poison.
+
+Usage:
+  cast dispel magic at <target>
+  cast dispel magic at <target> dispel harmful
+  cast dispel magic at <target> dispel beneficial
+  cast dispel magic at <target> dispel <spell>
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Dissolve
+Casting time:  4 rounds
+Spell cost:    178 SPs
+Spell type:    neutral
+Spell words:   Joor feet ar nou longr stuk to da graund
+
+This spell neutralizes the effect of the evil spell called glue.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Divine aura.
+Singing time: 5 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+Some say that beauty is only skin deep but,
+those who know better, know that beauty can
+not only change the way you interact with others,
+but also your future.
+
+Last line: Leper may be pretty, But YOU are the fairest of the ball.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Divorce
+Casting time:  30 rounds
+Spell cost:    437 SPs
+Spell type:    neutral
+Spell words:   Nyt loppu lautasten heittely ja riitojen peittely!
+
+With this spell a cleric can break the bond between a married couple
+and relieve them of the pain of a relationship gone bad.
+Usage: cast divorce at <player1> and <player2>
+You need 500 000 gold as a material component for the spell.
+The spell will also divide evenly the gold owned by the target players.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Dragon breath
+Casting time:   7 rounds
+Spell cost:     342 SPs
+Spell type:     area attack
+Damage type:    fire
+Maximum damage: 1540
+Spell words:    Roarrrrrrrin RRRRRRROASTIM
+Affecting stat: int
+
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Drain power
+Casting time:  1 round
+Spell cost:    349 SPs
+Spell type:    neutral
+Spell words:   TAP the waters to drain away their resolve and hate!
+
+This spell drains a player of some available spell points.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Draining mine
+Casting time:  5 rounds
+Spell cost:    23 SPs
+Spell type:    neutral
+Spell words:   Driel amuras drakka
+
+This spell will summon a highly unstable and partly organic concentration
+of chaos magic which will drain magical and physical energy from living
+creatures around it. When the mine reaches it maximum draining capacity
+it will self-destruct and move all the energy it has accumulated to the
+knight, if the knight is still in the realm. Mine can also be released
+instantly by knight and used (for example) as a direct assault tool.
+Wisdom, spell percent and amount of death points affect the speed of
+the draining. The amount the mine can drain before it comes too unstable
+to stay in this realm is dependant on the knights wis, spell %, amount
+of death points and mastery of draining.
+Note: if the knight isn't in the realm when the mine discharges he
+wont gain any energy. Those who serve the greater plan of the
+God of death (death knights and necromancers) have a greater chance
+of seeing the mine. Exceptionally, this type of illusion can also
+occasionally be seen by a sorcerer, due to its partly organic nature.
+
+Note: Not more than one of these mines can be placed in a room and not
+more than one casted by the same knight can exist simultaneously. The
+mine will try to survive, so it will fight if attacked by someone.
+There are some unknown complications on trying to kill organically
+evolving centers of chaos magic. For example, they are sometimes known
+to spawn supracreatures of themselves when under stress. These supracreatures
+exhibit evolved behaviour. Draining mines can be attacked by anyone
+even if not seen, but this can sometimes prove difficult to some as
+draining mines seem to learn.
+
+Note: Mastery of death illusions vs the comparing mastery of death
+illusions affects the chance that others than the knight who casted
+the spell will see the draining mine.
+
+Note: Due to the partly organic nature of mines, they evolve and
+multiply over time. Mines that are grouped close to each other tend
+to migrate to one spot due to group mentality. In some cases they
+acquire advanced behaviour due to grouping. When they migrate to one spot,
+they also multiply faster. This can cause an overload of chaos magic in an
+area, which leads to self-destruction of draining mines in an chaos
+magic explosion, which has unknown effects.
+Note: The knight has a chance of estimating the release time of the
+mine. The accuracy of the estimation depends on his mastery of draining.
+
+Note: Those who are drained will receive no information that their
+energy is sapped due to death illusionic nature of the spell. It will
+seem to those who are drained that they are losing no energy at all
+and their true condition will be revealed to them only at a later date
+when they move far enough from the concentration of the illusion. This
+fact makes it extremely hard to predict the location of a draining mine(s).
+Mastery of death illusions affects the length of time it takes for an
+illusion of this sort to lift from those, who have been in contact with a
+mine or a group of mines. Also longer exposure times can cause a considerable
+loss of energy, which in turn leads to a extended period of illness in those
+who fail a saving throw against them.
+
+Note: Mines also have unpredictable behaviour, which chaos theorians of
+death knights have been unable to model although this has been studied
+to great extent. New properties which arise seems to be of emergent sort
+and this causes the mines to exhibit advanced behaviour under different laws
+of higher energy. These emergent properties show across new concentrations,
+meaning that previous concentrations seem to 'transfer' some of their knowledge
+to new concentrations before they self-destruct, are drained by the
+knight who created them or are otherwise destroyed. According to chaos
+theorists, this means that chaos concentrations are evolving over time.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Electric vulnerability
+Casting time:  4 rounds
+Spell cost:    191 SPs
+Spell type:    attack
+Damage type:   electric
+Spell words:   norbitz AC/DC
+
+This spell will decrease the target's
+resistance to electric damage.  The degree of vulnerability
+of this spell is based on your spell % and your
+percent in greater vulnerability.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Electro-crush
+Casting time:   3 rounds
+Spell cost:     523 SPs
+Spell type:     attack
+Damage type:    electric
+Maximum damage: 2350
+Spell words:    Elur ynoga fo efiL
+
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Elemental disarray
+Casting time:  8 rounds
+Spell cost:    307 SPs
+Spell type:    attack
+Spell words:   nequam victus confundo mentis
+
+Abjuration has come a long way since the first days of trial
+and error with vulnerability magic. Research has yielded
+a potentially more efficient way to use time and mana to
+weaken a foe. Created by the elite of the Abjurers, this
+spell involves manipulating the essence in a living being. At
+first painstaking experiments in this form of magic were an
+utter failure, but through a significant breakthrough in
+sorcery brought about by the second coming of the Sorcerers,
+a series of successful invocations were made. With this spell,
+the abjurer uses runic magic to disturb the elements of the
+victim, causing increased susceptability against cold,
+magical, fire, physical and asphyxiating attacks.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Enchant item
+Casting time:  4 rounds
+Spell cost:    273 SPs
+Spell type:    neutral
+Spell words:   Qwitem mazicous emfeb phiturez
+
+This spell allows the caster to embed desired magical properties in
+one non-magical item. The effects of this spell are permanent.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Enchanted blast
+Casting time:   4 rounds
+Spell cost:     239 SPs
+Spell type:     attack
+Damage type:    electric
+Maximum damage: 680
+Spell words:    tsalb meht
+
+This spell creates a great blast of light. The damage type varies
+from time to time. The advanced magic skill is essential for studying
+this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Enslavement
+Casting time:  1 round
+Spell cost:    7 SPs
+Spell type:    neutral
+Spell words:   Undeadis controlla
+
+This spell is another version of the necromancer spell known as
+control, but it only works on animated undeads. This spell allows
+the knight to order one of his otherwise mindless re-animated
+minions to attack a target in the same room.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Eye for an eye
+Casting time:   9 rounds
+Spell cost:     2228 SPs
+Spell type:     attack
+Maximum damage: 6000
+Spell words:    TAP the plains to bring retribution to mine enemies
+
+Returns all damage dealt to a target, back to dealer of damage.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Eye of otus
+Casting time:  7 rounds
+Spell cost:    582 SPs
+Spell type:    neutral
+Spell words:   Seeeeeeeeee thiiiiiiiiiiings
+
+With this spell caster can summon an eye
+which is controllable. Duration depends of
+spell percent and level.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Feminist chant.
+Singing time: 4 rounds.
+Song cost: 50 SPs.
+Song type: area attack.
+Damage type: acid.
+Maximum damage: 100.
+A motivational song for the woman in you, but known
+to offend non females around you.
+
+Last line: You must have oraphice envy..
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Fire vulnerability
+Casting time:  4 rounds
+Spell cost:    191 SPs
+Spell type:    attack
+Damage type:   fire
+Spell words:   norbitz burn unres
+
+This spell will decrease the target's
+resistance to fire damage.  The degree of vulnerability
+of this spell is based on your spell % and your
+percent in greater vulnerability.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Flaming pestilence
+Casting time:   5 rounds
+Spell type:     attack
+Damage type:    fire
+Spell words:    rife orf het esmsas
+Affecting stat: level
+
+This spell conjures up hundreds of tiny fire nymphs and casts
+them at the target where they burn and harrass their victim
+causing him or her to fight them off exclusively.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Flash of power
+Casting time:  10 rounds
+Spell cost:    1782 SPs
+Spell type:    attack
+Spell words:   Magica fulminatus!
+
+This spell cannot be tumbled.
+
+
+The high mages of old have long known the existance of Shards. Likewise,
+they are aware of the Shards' tendency to appear where a great power leaves
+this plane of existance. According to the bibliographical information
+gathered by Cemreet from the last hundred and fifty years, the chance of
+discovering a Shard of the Gods is much greater when the magical items of
+the deceased have had their bonds unspooled before the owner dies.
+
+The precise reason for this is unknown, but the Council of the Mage Guild
+speculates that the alteration of powerful magical equipment releases
+awesome amounts of magical energy. This energy then attracts more power to
+the site of combat.
+
+Flash of Power is relatively crude spell designed to boost this effect. The
+combined power of three mages is used to overload the magical equipment
+carried by a creature. The process replaces the magical bonds that would
+otherwise create an affinity between these objects and their owners with a
+powerful negative energy that repels these individuals instead. In so doing,
+it displaces a large amount of magical energy, greatly increasing the chance
+and power, and even affecting the type, of an appearing Shard. This usually
+angers the target, and unleashes a cloud of fractured magical energy that
+has unpredictable effects.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Flesh rot
+Casting time:  4 rounds
+Spell cost:    329 SPs
+Spell type:    attack
+Damage type:   magical
+Spell words:   Plaguras zaram death shakaram
+
+With this spell the death knight calls the forces of death and plague
+over the enemy, virtually making the targets flesh rot instantly and
+causing great pain. If the knight eats the pieces of flesh from the
+targets body he will gain some of the lifeforce stored in them.
+This spell can restore a greater deal of the knights lifeforce than
+suffocation, but its ability to replenish vigour or mana is weaker.
+If either of the two (target/caster) move, the bond between them will
+be broken. The damage this spell does to the target and the amount of
+lifeforce the knight will gain depends on the spell %, mastery of draining %,
+intelligence and amount of death points the knight possesses. It is possible
+for the bond to stay on even after it no longer provides the knight for
+additional power.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Flesh to stone
+Casting time:  5 rounds
+Spell cost:    742 SPs
+Spell type:    special
+Spell words:   muudubba zzztouunnddiiiks
+
+The target of this spell will be stoned, thus killing him immediately.
+The target is given a saving throw based on int.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Freezing wind
+Casting time:    5 rounds
+Spell cost:      130 SPs
+Spell type:      area attack
+Damage type:     cold
+Maximum damage:  450
+Spell words:     tulipa kylyma
+Affecting stats: int, wis and spell percent
+
+With this spell the magician is able to summon a wintry blast of freezing
+wind which will strike everyone in the vicinity of the caster. Those
+who are susceptible to cold and frost, will surely suffer under this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Frost arrow
+Casting time:   2 rounds
+Spell cost:     61 SPs
+Spell type:     attack
+Damage type:    cold
+Maximum damage: 170
+Spell words:    fraz frizz
+
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Gaseous form
+Casting time:  8 rounds
+Spell cost:    248 SPs
+Spell type:    neutral
+Spell words:   faaaaaaaaarrrrrttttttt
+
+This spell will transform the target into a gaseous cloud.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Ghost story.
+Singing time: 5 rounds.
+Song cost: 540 SPs.
+Song type: area attack.
+Damage type: cold.
+Maximum damage: 760.
+A tale of most dreaded terror sure to chill your audience.
+
+Last line: I opened the door to see the dreaded Innoz.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Giant strength
+Casting time:  5 rounds
+Spell cost:    81 SPs
+Spell type:    neutral
+Spell words:   soooooooooo strong
+
+This spell raises the target's strength for an amount
+of time depending on the caster's level.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Globes of death
+Casting time:    5 rounds
+Spell cost:      335 SPs
+Spell type:      area attack
+Damage type:     asphyxiation
+Maximum damage:  1112
+Spell words:     Gkhrak Sum Sebolg
+Affecting stats: int, level and spell percent
+
+With this spell mage can summon explosive globes of energy and direct
+them against the enemy. When globes and enemies come in contact with
+eachother, the globes explode causing massive damage.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Glue
+Casting time:  6 rounds
+Spell cost:    204 SPs
+Spell type:    neutral
+Spell words:   Joor feet ar stuk to da graund
+
+This spell will 'glue' the target to the ground, thus disabling
+movement.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Good berry
+Casting time:  7 rounds
+Spell cost:    104 SPs
+Spell type:    heal
+Spell words:   inionican revibalana
+
+This spell summons many berries which can heal you when they are eaten.
+The number of berries depends on the casters spell percentage.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Grave stench
+Casting time:  4 rounds
+Spell cost:    81 SPs
+Spell type:    neutral
+Spell words:   Hcnets u'h horr
+
+This spell can only be casted on objects. When cast it will form a
+powerful illusion around the object. The illusion will not affect
+on how the item appears, but instead it will affect the smell of the
+item. Everyone but the caster of the spell will perceive the smell as
+a horrible stench of rotten flesh and blood, hence being unable to go
+near the item, much less pick it up. The duration of the illusion depends
+on wisdom, spell % and mastery of death illusions.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Greater acid invulnerability
+Casting time:  8 rounds
+Spell cost:    268 SPs
+Spell type:    defensive
+Spell words:   klizu burnn arse
+
+This spell will greatly increase the target's
+resistance to acid damage.  The duration of
+this spell is based on your wisdom, spell percent
+and skill mastery of shielding. Spell percent and
+mastery of shielding also have some effect on power
+of this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Greater asphyxiation invulnerability
+Casting time:  8 rounds
+Spell cost:    268 SPs
+Spell type:    defensive
+Spell words:   major gag gag
+
+This spell will greatly increase the target's
+resistance to asphyxiation damage.  The duration of
+this spell is based on your wisdom, spell percent
+and skill mastery of shielding. Spell percent and
+mastery of shielding also have some effect on power
+of this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Greater fire invulnerability
+Casting time:  8 rounds
+Spell cost:    268 SPs
+Spell type:    defensive
+Spell words:   major burn res
+
+This spell will greatly increase the target's
+resistance to fire damage.  The duration of
+this spell is based on your wisdom, spell percent
+and skill mastery of shielding. Spell percent and
+mastery of shielding also have some effect on power
+of this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Greater phantom summoning
+Casting time:  16 rounds
+Spell cost:    141 SPs
+Spell type:    attack
+Spell words:   smacking duck
+
+This spell summon a greater phantom monster that attacks the target.
+The size and power of the particular monster depends on the caster level
+and knowledge of illusions.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Greater physical invulnerability
+Casting time:  8 rounds
+Spell cost:    268 SPs
+Spell type:    defensive
+Spell words:   resistin lotsa phys
+
+This spell will greatly increase the target's
+resistance to physical damage.  The duration of
+this spell is based on your wisdom, spell percent
+and skill mastery of shielding. Spell percent and
+mastery of shielding also have some effect on power
+of this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Greater sphere of protection
+Casting time:  35 rounds
+Spell cost:    985 SPs
+Spell type:    defensive
+Spell words:   orbis protectus magnus
+
+The Greater Sphere of Protection is a highly advanced defensive spell that
+harnesses the caster's wisdom and knowledge to shield their entire party.
+Depending on the type of protection chosen this spell provides a shimmering
+barrier around all party members. Wiser and more skilled abjurers can
+enhance the potency and duration of the protection. The spell's
+effectiveness also depends on the caster's familiarity with the chosen
+protection type and mastery of shielding techniques. Casting this spell is
+a testament to the caster's dedication to safeguarding their companions.
+
+Syntax: cast greater sphere of protection at <type>
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Haste
+Casting time:  4 rounds
+Spell cost:    273 SPs
+Spell type:    neutral
+Spell words:   Daaa defeaat av EWIL LAGG!
+
+This spell will hopefully remove all unnatural lag effects.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this spell is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Howl from beyond
+Casting time:    4 rounds
+Spell cost:      349 SPs
+Spell type:      area
+Damage type:     magical
+Spell words:     ZHOOOOooooooooooiiiii
+Affecting stats: alignment and level
+
+This is very complex spell. Howl from beyond will drain
+life away from opponents with the good alignment. It will give
+some life power to the evil forces. You need also 40 soul
+points to cast this spell. NOTE: this spell dosen't affect at
+neutral targets
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Hurricane
+Casting time:   8 rounds
+Spell cost:     1411 SPs
+Spell type:     area attack
+Damage type:    magic
+Maximum damage: 6000
+Spell words:    TAP the forests to blow away my enemies with wind!
+Affecting stat: int
+
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Hypnotic gaze
+Casting time:  4 rounds
+Spell cost:    59 SPs
+Spell type:    neutral
+Spell words:   leeeewwwwk iiiintoo miii eeeeeeeeeeyezzzz
+
+This spell will hypnotize the target disallowing skill use,
+spellcasting, movement or initiation combat.  It lasts a limited
+time and will be ended prematurely if the caster breaks his
+concentration.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Ice storm
+Casting time:   3 rounds
+Spell cost:     161 SPs
+Spell type:     area attack
+Damage type:    cold
+Maximum damage: 667
+Spell words:    Friozes iazes brr
+
+This spell benefits from the fact that death knights have a body
+temperature of 0C. The casting of this spell requires the body of
+the caster to reach the temperature of -10C temporarily in order to
+enhance the amount of damage it does. When the spell is cast an extremely
+cold mist appears in front of the caster and everyone caught inside
+the mist suffer cold damage. Those inside the mist can get partially
+frozen and therefore be unable to act for few seconds. The affecting
+stats are int, wis, spell percent, skill percent of channel death magic and
+amount of death points the knight possesses. Targets get a saving throw
+against the freezing affect according to their constitution.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Insect plague
+Casting time:  2 rounds
+Spell cost:    160 SPs
+Spell type:    attack
+Damage type:   Poison
+Spell words:   Beeezzzsss
+
+This spell will summon a huge swarm of insects, stinging and annoying
+the target. Due to the poison of the insects the strength of the victim
+may decrease. The many small stinging insects might distract the victim
+long enough to interupt it.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Insect plaque
+Casting time:  2 rounds
+Spell cost:    160 SPs
+Spell type:    attack
+Damage type:   Poison
+Spell words:   Beeezzzsss
+
+This spell will summon a huge swarm of insects, stinging and annoying
+the target. Due to the poison of the insects the strength of the victim
+may decrease. The many small stinging insects might distract the victim
+long enough to interupt it.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Jolts
+Casting time:  10 rounds
+Spell cost:    199 SPs
+Spell type:    attack
+Spell words:   ostunna ostunna
+
+If successful, the caster stuns the target for a variable
+duration. Level affects the duration of the stun effect.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Lava storm
+Casting time:   4 rounds
+Spell cost:     302 SPs
+Spell type:     area attack
+Damage type:    fire
+Maximum damage: 1110
+Spell words:    helvetin hornaan
+Affecting stat: int
+
+This is one of the few spells arcane spells which is not purely
+based on magic, but also calls upon nature. When successful, the caster
+creates a portal into the ground, reaching a nearby active volcano.
+With a sudden burst a stream of hot lava, glowing rocks and ash erupts
+from the portal. Pity your foe, for it is about to be hit by glowing
+magma which is filling up the whole area very quickly. Once hit the
+lava begins to dissolve your enemy, setting it alight and finally
+incinerating it. You would propably share its fait, but luckily you
+create a very powerful shield that protects you and your allies from
+this ferocius spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Lesser acid invulnerability
+Casting time:  8 rounds
+Spell cost:    114 SPs
+Spell type:    defensive
+Spell words:   lexa burnn arse
+
+This spell will increase the target's
+resistance to acid damage.  The duration of
+this spell is based on your wisdom, spell percent
+and skill mastery of shielding. Spell percent and
+mastery of shielding also have some effect on power
+of this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Lesser asphyxiation invulnerability
+Casting time:  8 rounds
+Spell cost:    114 SPs
+Spell type:    defensive
+Spell words:   minor gag gag
+
+This spell will increase the target's
+resistance to asphyxiation damage.  The duration of
+this spell is based on your wisdom, spell percent
+and skill mastery of shielding. Spell percent and
+mastery of shielding also have some effect on power
+of this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Lesser physical invulnerability
+Casting time:  8 rounds
+Spell cost:    114 SPs
+Spell type:    defensive
+Spell words:   resistin phys
+
+This spell will increase the target's
+resistance to physical damage.  The duration of
+this spell is based on your wisdom, spell percent
+and skill mastery of shielding. Spell percent and
+mastery of shielding also have some effect on power
+of this spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Lesser sphere of protection
+Casting time:  30 rounds
+Spell cost:    683 SPs
+Spell type:    defensive
+Spell words:   orbis protectus minor
+
+The Lesser Sphere of Protection is a defensive spell that shields an entire
+party with a moderate barrier against a specific type of damage. It is less
+potent than the greater sphere but still invaluable in protecting companions.
+The spell cannot overlap with other protective spells of the same type.
+Skilled abjurers can enhance the protection's strength and duration within
+its designated limits.
+
+Syntax: cast lesser sphere of protection at <type>
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Life leech
+Casting time:    6 rounds
+Spell type:      attack
+Damage type:     magical
+Spell words:     evaw to rouy htlaeh
+Affecting stats: int and wis
+
+This spell is a combination of all the harm spells. Using the skill arcane
+lore and various other skills/spells an evil priest can drain the health
+of his/her opponent. Wide knowledge of clerical spells/skills is essential
+for this spell to work properly. The savingthrow of this spell is dependant
+on level.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Lullaby.
+Singing time: 6 rounds.
+Song cost: 220 SPs.
+Song type: heal.
+Maximum healing: 220.
+Nothing helps a weary heart like a soothing song.
+
+Last line: and tomorrow will be fine.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Mabanon's whip
+Casting time:  4 rounds
+Spell cost:    262 SPs
+Spell type:    neutral
+Spell words:   Masticanus Mephistophalus
+
+This spell summons a flaming whip
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Macho mosh.
+Singing time: 4 rounds.
+Song cost: 50 SPs.
+Song type: area attack.
+Damage type: acid.
+Maximum damage: 100.
+A motivational song for the man in you, but known
+to offend non males around you.
+
+Last line: I even have an extra long extra appendage..
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Magical vestment
+Casting time:  6 rounds
+Spell cost:    279 SPs
+Spell type:    defensive
+Spell words:   Tu est nunc in fide TEMPUS!
+
+This spell summons magical clothing to a target to protect it
+from an amount of physical harm. The duration that the spell
+remains in effect, is dependant on the caster's level.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Magical vulnerability
+Casting time:  4 rounds
+Spell cost:    191 SPs
+Spell type:    attack
+Damage type:   magical
+Spell words:   norbitz merlin merc
+
+This spell will decrease the target's
+resistance to magical damage.  The degree of vulnerability
+of this spell is based on your spell % and your
+percent in greater vulnerability.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Magical wave
+Casting time:   5 rounds
+Spell cost:     296 SPs
+Spell type:     area attack
+Damage type:    magical
+Maximum damage: 1573
+Spell words:    Majiik mgeer wdin
+
+This spell creates a cloud of concentrated magical energy which sweeps
+through the room hitting everyone near by.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Major energy drain
+Casting time:  3 rounds
+Spell cost:    450 SPs
+Spell type:    area attack
+Damage type:   magical
+Spell words:   Azrahas grand suuuuck suuuuck
+
+This spell can drain up to 100,000 experience points from all the
+people in the room where the caster is. Casting this spell is considered
+so evil that those above the demonic alignment usually fail to cast
+this spell, or if they success the spell usually backfires.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Major life leech
+Casting time:  3 rounds
+Spell cost:    219 SPs
+Spell type:    area attack
+Damage type:   magical
+Spell words:   Adrin corpus suuuck suuck burp
+
+This spell drains some hp from all the people near the caster and
+heals the caster by a certain percentage of the leeched hp's based
+on casters intelligence, wisdom and spell percentage. The casting of
+this spell is considered extremely evil.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Major magical resistance
+Casting time:  10 rounds
+Spell cost:    131 SPs
+Spell type:    defensive
+Spell words:   resistin lotsa maagi
+
+0
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Mana short
+Casting time:  3 rounds
+Spell cost:    349 SPs
+Spell type:    neutral
+Spell words:   TAP the boundless seas to give ALL their energy to ME!!
+
+This spell empties all of a player's available spell points.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Mark of cain
+Casting time:  4 rounds
+Spell cost:    277 SPs
+Spell type:    special
+Spell words:   Dza s'hra evilum
+
+This spell will make the target appear evil in the eyes of all good
+creatures, making them aggressive towards the target. The amount of
+time the illusion will last depends on the knight's spell %, wis and
+the alignment of the target. If the target is very good it can break
+the illusion very quickly.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Mental vision
+Casting time:  50 rounds
+Spell cost:    109 SPs
+Spell type:    neutral
+Spell words:   vaxtextraktdryck
+
+This spell allows you to view the actions of another player.  The target
+need not be present.  The target can feel that someone is viewing him, but
+usually doesn't know who.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Mental watch
+Casting time:  2 rounds
+Spell cost:    57 SPs
+Spell type:    neutral
+Spell words:   hiiiiiii hiiii hi
+
+This spell will leave a mental watch in the current room you are in.
+All actions that players make in that room will automatically be told
+to you via a mental link.  This spell lasts your level minutes, or until
+you return to the room and type: remove watch.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Metamorphosis
+Casting time:    8 rounds
+Spell type:      neutral
+Spell words:     blurin blorin
+Affecting stats: level, con, spell percent and nerve mastery
+
+With this spell the psionicist can change himself into anything in the same
+room with him. The target can be either living or non-living object. Caster
+retains his own abilities, but may gain some abilities of the new form. Like
+any massive change of shape, metamorphosis causes great physical stress, which
+effects can vary time to time.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Mind control
+Casting time:  9 rounds
+Spell cost:    699 SPs
+Spell type:    neutral
+Spell words:   WORDISBOND
+
+This spell allows a Psionicist to bully the
+brains of others and force them to do things
+they would not normally do.
+
+Usage: cast mind control at <target> to <command>
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Mind tempest
+Casting time:   5 rounds
+Spell cost:     347 SPs
+Spell type:     area attack
+Damage type:    electric
+Maximum damage: 3180
+Spell words:    Knarf appaz ZAP!
+Affecting stat: wis
+
+This spell is an electrical areaspell, which fries the brains of the poor
+bastards you zap with it.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Mist haze
+Casting time:  2 rounds
+Spell cost:    218 SPs
+Spell type:    attack
+Spell words:   fizzzmo h2o
+
+This spell summons water out of the air and surrounds the target
+with an annoying misty haze. The spellcaster may enhance the effects
+of this spell by including illusions. Duration and effectiveness are
+dependent on casters wisdom, knowledge of spell and illusionary skills.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Money is power
+Casting time:  12 rounds
+Spell cost:    74 SPs
+Spell type:    neutral
+Spell words:   $$$$$$$$$$$$$$$$$$$$$
+
+This spell is used to convert money to experience.  All money carried
+by the target will be converted to experience.  The amount of experience
+given depends on the caster's knowledge of this spell.  The caster will
+get a better money:exp ratio when casting them spell on themself.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Mystic vision
+Casting time:  5 rounds
+Spell cost:    109 SPs
+Spell type:    neutral
+Spell words:   vaxtextraktdryck
+
+This spell allows you to view the actions of another player.  The target
+need not be present.  The target can feel that someone is viewing him, but
+doesn't know who.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Pain
+Casting time:  4 rounds
+Spell cost:    183 SPs
+Spell type:    neutral
+Spell words:   nwod animatsi
+
+This spell will decrease the target's
+number of hit points.  The duration of
+this spell is based on your wisdom.  The
+strength and mana cost of the pain
+is dependent on level.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:   Paranoia
+Casting time:    5 rounds
+Spell cost:      202 SPs
+Spell type:      special
+Spell words:     Diordna dionarap
+Affecting stats: intelligence, spellpercent and art of telepathy
+
+This spell cannot be tumbled.
+
+This spell clouds the mind of the target, making him believe that
+everyone is out to get him. If the caster is very powerful the
+target might have various hallucinations about people attacking
+or trying to kill him. He might be too afraid to be near other people
+because he believes they are going to attack him.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Phantom armour
+Casting time:  4 rounds
+Spell cost:    219 SPs
+Spell type:    defensive
+Spell words:   phho samani
+
+This protection spell involves the creation of a quasi-real
+suit of plate armour that covers the targets regular armour.
+The protection from this spell depends on casters int/wis and
+knowledge of illusions. Level affects duration.
+This spell is stackable.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Summon phantom sickle
+Casting time:  18 rounds
+Spell cost:    117 SPs
+Spell type:    neutral
+Spell words:   aAl-louchszz mme to wriip phleeshhhh
+
+This use of this spell enables the sorcerer to focus his mental energy to
+summon a quasi-real phantom sickle.  The sickle is formed purely of various
+magic types,  and may also be enhanced by knowledge of illusionary magic.
+To specify the size of the phantom sickle,  cast the spell at '1h' or '2h'.
+If you do not specify a size, it will default to a two handed weapon.
+The quality of the sickle you create depends mostly on your level and is
+also somewhat effected by your knowledge of illusions.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Pigeon melody.
+Singing time: 3 rounds.
+Song cost: 1 SPs.
+Song type: neutral.
+This song will call a flock of pigeons from your pigeon roost
+to do your bidding.
+
+Last line: come fluffy fellows and away this loot.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Poison cloud
+Casting time:  3 rounds
+Spell cost:    95 SPs
+Spell type:    neutral
+Spell words:   SAUGIII nyt mua pierettaa
+
+This spell will create a poisoness cloud that will randomly
+poison those present.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Poison vulnerability
+Casting time:  4 rounds
+Spell cost:    191 SPs
+Spell type:    attack
+Damage type:   poison
+Spell words:   norbitz snake biit
+
+This spell will decrease the target's
+resistance to poison damage.  The degree of vulnerability
+of this spell is based on your spell % and your
+percent in greater vulnerability.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Power transfer
+Casting time:  4 rounds
+Spell cost:    71 SPs
+Spell type:    special
+Spell words:   Transferum undeadis poweras
+
+With this spell the death knight can transfer some of his health to an
+undead which has been animated by him. The amount which the undead will
+gain is dependant on the spell %, int and wis of the knight. The alignment
+of the knight also affects.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Power word
+Casting time:   4 rounds
+Spell cost:     226 SPs
+Spell type:     attack
+Damage type:    cold
+Maximum damage: 667
+Spell words:    Ch'ra smarai deathhh
+
+This extremely difficult spell can only be casted by the most skilled
+death knights with a rank of bloodletter or higher. When the knight casts this
+spell he concentrates all of his powers over death and creates a black
+bolt of death energy which shoots toward the target. When the target
+is hit he will suffer a great amount of death or cold damage which will
+drain his powers. The target is allowed a saving throw against the shock
+the spell causes to nervous system according to its intelligence and level.
+If the target fails the saving throw it will be unable to cast spells for a
+short while. The amount of damage this spell does depends on int, wis,
+spell %, skill % of channel death magic and the total amount of death
+points the knight possesses.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Prismatic spray
+Casting time:   4 rounds
+Spell cost:     96 SPs
+Spell type:     attack
+Damage type:    acid
+Maximum damage: 480
+Spell words:    caa cai cyyrola
+
+Bringing forth the elements of a total illusion, the sorcerer
+forces his adverssary to be immersed in a universe of changing
+time, light and sound. This sudden change of enviroment overwhelms
+the auditory and visual senses reducing the attacking and skills.
+At higher levels this spell may also stun.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Protection from evil
+Casting time:  9 rounds
+Spell cost:    253 SPs
+Spell type:    defensive
+Spell words:   FAEON PHAXIUS
+
+This spell will reduce the damage done by evil attackers.
+The quality of this spell's protective properties is dependant
+upon the alignment of the caster.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Psionic vulnerability
+Casting time:  4 rounds
+Spell cost:    191 SPs
+Spell type:    attack
+Damage type:   psionic
+Spell words:   norbitz psycho nydleihs
+
+This spell will decrease the target's
+resistance to psionic damage.  The degree of vulnerability
+of this spell is based on your spell % and your
+percent in greater vulnerability.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Rain dance.
+Singing time: 4 rounds.
+Song cost: 515 SPs.
+Song type: attack.
+Damage type: electric.
+Maximum damage: 1000.
+This song is known for its ability to conjure the god of
+thunder.  His wrath has been known to be quite severe.
+
+Last line: Ayyyyyoooooooo BOOOM BOOM rumblebleble BANG!.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Random reincarnation
+Casting time:  20 rounds
+Spell cost:    240 SPs
+Spell type:    neutral
+Spell words:   lihaa satunnaisesti lakoon
+
+This spell works just like the spell 'reincarnation', but the race and the guild of the target will be selected randomly. The exp-cost is little lower than in the normal reinc.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Reflector shield
+Casting time:  9 rounds
+Spell cost:    393 SPs
+Spell type:    defensive
+Spell words:   BOING booooooiiiiiiing
+
+This spell summons a powerful magical shield that
+is capable of returning some of the damage taken by
+the target onto its attacker.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Restore
+Casting time:  4 rounds
+Spell cost:    48 SPs
+Spell type:    neutral
+Spell words:   kaorc kaorc
+
+This spell will remove a cursed player's frog form.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Riddle.
+Singing time: 5 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+Bards were always well known for their riddles
+Those that manage to figure them out often found
+that they performed better in in the mental challenges
+of life.
+
+Last line: A.  So they can stamp out the flaming ducks..
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Rock to mud
+Casting time:   5 rounds
+Spell cost:     132 SPs
+Spell type:     neutral
+Spell words:    yast lstli ro ide
+Affecting stat: wisdom
+
+This spell converts the ground in a room to a pool of clinging
+mud that may suck down and drown anyone strugling to escape it.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Score of the steadfast
+Casting time:  5 rounds
+Spell cost:    148 SPs
+Spell type:    enchantment
+Spell words:   They'll never take... our FREEDOM!
+
+Most armies have at least one skilled bard to lead them into
+combat against oncoming enemies.  These bards sing of the
+battle prowess and courage of their armies, thereby granting
+such attributes onto those who can hear them.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Seedling
+Casting time:  7 rounds
+Spell cost:    699 SPs
+Spell type:    neutral
+Spell words:   musonm rofth rofuoy tokwon! lesidneg gwor lesidneg gwor!
+
+This nasty piece of work was concocted by a druid centuries ago
+who sought to turn his powers of life and subvert them to kill.
+The spell summons forth a seedling that takes root in the current
+room and quickly sprouts forth into a nasty strangler vine.
+The downside, however, is that the strangler vine often does not
+stop attacking its creator, as the evil druid found out.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Sensory overload
+Casting time:   5 rounds
+Spell cost:     137 SPs
+Spell type:     attack
+Damage type:    magical
+Maximum damage: 350
+Spell words:    zsucker puunch
+
+This spell overwhelms the victim with a massive barrage of colors
+and sounds. This massive onslaught on the victims brain might cause
+the halting of spells and skills.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Shadow shield
+Casting time:  3 rounds
+Spell cost:    142 SPs
+Spell type:    defensive
+Spell words:   Driadran shadowee shadowee s'dras
+
+Using this spell the knight can create shadows which hide parts of
+his body from the attacker, making it harder for it to hit the knight.
+The power of this spell depends on wis, spell % and skill % of mastery
+of death illusions. The duration of the spell depends on wis and
+mastery of death protection.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Shriek
+Casting time:   5 rounds
+Spell cost:     53 SPs
+Spell type:     area attack
+Maximum damage: 390
+Spell words:    ARRRRRRRRRRRRRGGGGGGHHHHH!!!
+
+The caster of this spell will let out a loud
+shriek that will physically harm his targets.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Sleight of hand.
+Singing time: 6 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+A little magic trick to lighten your spectators.
+
+Last line: At no time do my hands leave your sight..
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Slow person
+Casting time:  7 rounds
+Spell cost:    582 SPs
+Spell type:    neutral
+Spell words:   Eat lag muthafuck!
+
+This spell simulates the well known 'lag' effect.
+This spell can only be cast at players.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Snail shell.
+Singing time: 5 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+Bards often sang songs about wildlife.  A few of these
+would inspire people to do things for the 'Cause of Nature'
+Others would only feel guilt.
+
+Last line: You just ate fresh escargot?.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Snowstorm
+Casting time:   3 rounds
+Spell cost:     96 SPs
+Spell type:     area attack
+Damage type:    cold
+Maximum damage: 520
+Spell words:    DAMN ITS COLD!
+Affecting stat: int
+
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Song of david.
+Singing time: 5 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+Many people know of the story of David and
+Golliath, but what few people know is about
+the bard that encouraged David in his
+astounding victory.
+
+Last line: The harder they fall..
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Song of glory.
+Singing time: 10 rounds.
+Song cost: 250 SPs.
+Song type: heal.
+When heading off into battle little helps more then
+a little song about your up coming victory.
+
+Last line: We fight for what is right!.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Song of samson.
+Singing time: 5 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+Bards who sing the song of Samson have been known
+to attract audiences with long hair.  Some audiences
+even grow long hair on the spot.
+
+Last line: Those pillars did he topple with his strength.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Song of satan.
+Singing time: 4 rounds.
+Song cost: 320 SPs.
+Song type: area attack.
+Damage type: fire.
+Maximum damage: 1280.
+The Song of Satan is a song of the purest, blackest evil.
+When this song is sung, evil claims the upper hand and fear strikes
+those in it's path.
+
+Last line: A saviour come too late.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Song of woe.
+Singing time: 5 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+A beggar once sat by the road quietly singing a song.
+about his life.  Those that gathered were so profoundly
+effected by his song that they lacked the physical strength
+to go on with their normal routine.
+
+Last line: Why do I still manage to live..
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Soulsuck
+Casting time:   2 rounds
+Spell cost:     130 SPs
+Spell type:     attack
+Damage type:    magical
+Maximum damage: 560
+Spell words:    Sssuuuck soulis
+
+This spell is a basic attack spell of the death knights. It assaults
+the targets soul, causing massive pain. The amount of damage this spell
+causes to the target depends on the caster's intelligence, spell % and
+skill % of channel death magic. This spell is less effective against most
+undeads, since they tend to have less of a soul. Death knights themselves
+are equally affected with the living, for their soul is still fully present
+in this realm.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Spiritual hammer
+Casting time:   3 rounds
+Spell cost:     128 SPs
+Spell type:     attack
+Damage type:    magical
+Maximum damage: 250
+Spell words:    Decha powella invirtis lucerne
+
+This spell creates an ethereal hammer and hurls it towards a target.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Staff light
+Casting time:  1 round
+Spell cost:    8 SPs
+Spell type:    neutral
+Spell words:   ne lux HOL
+
+This spell makes a staff emit light.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Stone to flesh
+Casting time:  13 rounds
+Spell cost:    1346 SPs
+Spell type:    special
+Spell words:   Juu aar nou longer zztoned
+
+This spell will cancel the effects of the spell flesh to stone. Casting this
+spell on a stone that has no soul inside it might be dangerous.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Stonefist
+Casting time:  5 rounds
+Spell cost:    38 SPs
+Spell type:    neutral
+Spell words:   ommm morin granitia
+
+This spell will increase the target's ability
+to cause damage, among other things.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Stoneshoes
+Casting time:  3 rounds
+Spell cost:    87 SPs
+Spell type:    neutral
+Spell words:   leeadd iinnn yyyrrr sshhoooeeezz
+
+This spell will make the target magically heavier, causing one to be
+immune to teleportation spells and making it impossible for the target to
+fly.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Suffocation
+Casting time:  4 rounds
+Spell cost:    282 SPs
+Spell type:    attack
+Damage type:   asphyxiation
+Spell words:   Haer haer sharakam dasta
+
+This spell is often used by death knights who wish to strenghten
+themselves with the lifeforce of other people. It will form a magical
+band around the targets neck which will then keep draining his magical
+and physical energy, transfering it to the knight and at the same time
+tightening around the targets neck, choking him. The bond between the
+target and the knight will last until the target chokes and dies,
+target moves too far from the knight for the knight to be able to
+maintain the bond, the knight moves or the bond runs out of power. The
+damage this spell does to the target and the amount of magical and
+physical energy which the knight will gain depend on int, wis spell %,
+skill % of mastery of draining and the amount of death points the
+knight possesses. The amount of magical energy contained in the armour
+worn by the death knight also affects the power of the spell to a
+great degree. The targets resistance to asphyxiation also affects the
+amount of power actually granted to the death knight from the drains.
+The amount of rooms the target needs to move before he is free from
+the bond depends on the wisdom of the knight. This spell works
+differently on monsters and players. It is possible for the bond to
+stay on even after it no longer provides the knight for additional
+power.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Summon animus
+Casting time:  10 rounds
+Spell cost:    390 SPs
+Spell type:    teleport
+Spell words:   loky leky laky
+
+This spell is used to summon a lost Animated Weapon back
+to you, as well as force it to recall its own master.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Summon greater spores
+Casting time:   5 rounds
+Spell cost:     150 SPs
+Spell type:     area attack
+Damage type:    acid
+Maximum damage: 400
+Spell words:    shroom vacuum
+
+It causes 3d15*10+5d10 damage.
+This spell will surround the target in a searing swarm of spores.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Summon icicles
+Casting time:   5 rounds
+Spell cost:     306 SPs
+Spell type:     area attack
+Damage type:    cold
+Maximum damage: 1179
+Spell words:    Iiaca brr amny icem
+
+The casting of this spell is very dangerous to the caster. In order
+to succeed the casters' body needs to reach a temperature so low that
+it can actually harm him. That is probably why only certain ice demons,
+few intelligent yetis and few other creatures of cold terrains have
+been known to cast this spell. When succesful the spell will create
+what appears as icicles on the tips of the casters' fingers and then
+a magical force will shoot these icicles towards the targets with
+incredible speed. What a non-magical people won't see though is that
+these icicles are actually very powerful rays of cold which will freeze
+important bodyparts on the designated targets.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Summon lesser spores
+Casting time:   4 rounds
+Spell cost:     116 SPs
+Spell type:     attack
+Damage type:    acid
+Maximum damage: 350
+Spell words:    shroom broom
+
+It causes 2d16*10+4d5 damage.
+This spell will surround the target in a searing swarm of spores.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Summon minions
+Casting time:  1 round
+Spell cost:    59 SPs
+Spell type:    teleport
+Spell words:   teletapit kotiin, teletapit kotiin!
+
+This spell transfers all the casters minions to him.
+The minions and the caster need to be in a teleport area.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Summon orb of reflection
+Casting time:  5 rounds
+Spell cost:    287 SPs
+Spell type:    defensive
+Spell words:   Kra's dras shaidon
+
+This spell will allow the death knight to call forth a orb of reflection
+from the chaos-continuum. The orb will sometimes reflect offensive spells
+directed at the knight at a random person in the room of the knight. The
+effectiveness of this spell depends on int, spell %, skill % of mastery
+of death protection and total amount of death points the knight possesses.
+The duration of the orb is dependant on wis of the caster.
+Important side note from many esteemed death knights suggest that due
+to the chaotic nature of the orb it will violently explode if it comes
+into contact with other materia from the chaos-continuum. The orb will
+drain mental energy from its master in order to maintain itself.
+The caster can banish the orb with a command 'banish_orb'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Summon shadow
+Casting time:  4 rounds
+Spell cost:    67 SPs
+Spell type:    defensive
+Spell words:   A'rdas shadowas rais
+
+This spell will summon a creature called shadow lurker which can't be
+seen by anyone except the servants of death, i.e necromancers and death
+knights. When casting this spell the knight will specify a direction
+and a password to the lurker. The lurker will guard the way to that
+direction and if someone passes to that direction it will alert its
+master, unless the password is spoken in the same room with the lurker.
+The duration the lurker will guard the way is dependant on casters wis,
+spell % and skill % of mastery of death protection.
+Note: The lurker can be attacked by others even if it can't be seen.
+If the lurker takes damage from the attack it will turn visible and
+try to save itself before it is killed by sinking through the ground
+back to its realm. The knight can dismiss the lurker at any given time
+with a command 'dismiss_lurker'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Summon swarm
+Casting time:  6 rounds
+Spell cost:    219 SPs
+Spell type:    attack
+Damage type:   poison
+Spell damage:  100 - 200
+Spell words:   tge em meso dira
+
+Afecting stats: wis, spell %, mastery, creeping doom and earth lore.
+This spell calls up a huge swarm of biting and stinging insects
+overwhelm a target.  The insects only do the smallest amount of
+damage to the victim, but cause a serious distraction, interfering
+with its combat abilities and inner strength.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Swords to plowshares
+Casting time:  1 round
+Spell cost:    262 SPs
+Spell type:    neutral
+Spell words:   TAP the wide open plains to stop the folly of war!
+
+This spell removes a combatant from combat.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Tale of the owl.
+Singing time: 5 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+A wise old Owl sat in an oak.  The more
+he heard the less he spoke.  The less he spoke
+The more he heard, now you can be like that
+wise old bird.
+
+Last line: whoot whoot whoot.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: Tale of the thief.
+Singing time: 5 rounds.
+Song cost: 60 SPs.
+Song type: neutral.
+One day a bard wrote a song about the
+famous antics of the thief Jack Hood.
+His audience was so inspired by the song
+they inherited some of the characteristics
+of the famous Jack Hood himself.
+
+Last line: Now Jack is the man I would like to know..
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Thorn spray
+Casting time:   1 round
+Spell cost:     35 SPs
+Spell type:     attack
+Maximum damage: 200
+Spell words:    racha on pun lon cordso jompon
+
+This spell attacks the target with a spray of thorns.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Tortoise nervosa
+Casting time:  4 rounds
+Spell cost:    355 SPs
+Spell type:    attack
+Spell words:   Uoy Eltrut
+
+This spell acts to slow the regeneration of any player in.
+the room.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  Touch of darkness
+Casting time:   2 rounds
+Spell cost:     124 SPs
+Spell type:     attack
+Damage type:    magical
+Maximum damage: 500
+Spell words:    Darkenna soulus
+
+This basic offensive spell causes darkness to shroud the targets soul.
+It will drain some magical energy from the target and transfer it to
+the knight unless the target makes a succesful saving throw against
+the effect. Due to the weakness of this spell it wont restore much of
+magical energy though, the amount can't be more than 50% of the spcost.
+of the spell. The damage and the amount of drained mana depends on the
+intelligence and spell % of the knight.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Touch of death
+Casting time:  4 rounds
+Spell cost:    338 SPs
+Spell type:    special
+Spell words:   Dazidarom deathee gradas
+
+Upon success the death knight will draw the powers of death over the
+target, creating an illusion which is almost perfect. The illusion can
+actually make the target believe that it is dead, allowing the knight
+to freely assault the enemy before it realizes what has happened. The
+effectiveness of the illusion depends on the wisdom, intelligence,
+spell %, skill % of the mastery of death illusions and amount of death
+points the knight possesses.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Touch of judas
+Casting time:  2 rounds
+Spell cost:    17 SPs
+Spell type:    neutral
+
+Unfinished spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell:  True distant blizzard storm
+Casting time:   2 rounds
+Spell cost:     1782 SPs
+Spell type:     area attack
+Damage type:    cold
+Maximum damage: 6500
+Spell words:    BurrR froost vycolDd in a distance!
+Affecting stat: level and int
+
+This spell causes a strong winter snow storm to surround the targets.
+This is more effective than normal blizzard storm and does more damage.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Unholy absolution
+Casting time:  10 rounds
+Spell cost:    1136 SPs
+Spell type:    neutral
+Spell words:   Merciah
+
+A priestly way to communicate with evil gods. Using this spell an evil
+priest might be able to explain his plans to the gods perhaps getting
+some mercy. Duration is dependant on level.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Unholy gift
+Casting time:  5 rounds
+Spell cost:    402 SPs
+Spell type:    special
+Spell words:   Blesiorum death chantee ivyle
+
+This spell bestows the blessing of the gods of the death upon the room
+where the spell is cast, adding to the regeneration of every evil
+creature in the room. This spell is very difficult to cast and it
+can't be casted all the time because of the great deal of strain it
+causes to the knight. The amount of time the ground will stay blessed
+depends on the spell %, int, amount of death points and wis of the caster.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+Help on song: War song.
+Singing time: 10 rounds.
+Song cost: 160 SPs.
+Song type: neutral.
+The Song of War is a song of Crusades, of past battles won.
+It is used to help bolster courage in the worst of times.
+
+Last line: And only those deserving die.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known spell. Check 'all spells'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on spell: Wither
+Casting time:  4 rounds
+Spell cost:    151 SPs
+Spell type:    neutral
+Spell words:   Undarus sam hades
+
+This powerful curse will lower all the stats of the target for a duration
+depending on casters wisdom and spell %. The strength of the spell is
+determined according to casters int, spell % and skill % of channel
+death magic. However this spell does not affect targets size and it
+only works on players. The target gets a saving throw according to its
+intelligence.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527

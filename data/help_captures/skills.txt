@@ -1,0 +1,2280 @@
+
+Help on skill:     Acrobatics
+Usage duration:    automatic
+Skill type:        special
+Affecting stat(s): str and dex
+
+High training in this skill adds a flashy touch to many of the
+bard's normal acts and skills like flip kick, for example.
+The bard receives training in how to tumble, jump and spin in
+air, which allows her to entertain her audience a great deal.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+help skill power manipulation
+help skill prayer to gods
+help skill prepare enchantment
+help skill primal scream
+help skill produce light
+help skill protective sphere
+help skill pummel
+help skill purse evaluation
+help skill quick thrusts
+help skill quick-thrusts
+help skill rend
+help skill revitalize
+help skill rites of the grave
+help skill ritual of black eternity
+help skill running red
+help skill sacrifice of extended life
+help skill sang froid
+help skill sense living
+help skill sense resistances
+help skill sense stats
+help skill senseliving
+help skill sentience
+help skill sharpen
+help skill shrapnel
+help skill skewer
+help skill skill that removes user from location of origin and places user in location of destination
+help skill skill where a fighter using battlecry and peaople in party can us there attack as soon as use beast speech goes
+help skill sleight
+help skill slip
+help skill smoke bomb
+help skill sneak
+help skill soul manipulation
+help skill spellcraft
+help skill steal
+help skill sting
+help skill stupify
+help skill stupor stagger
+help skill suicide
+help skill summon mastery
+help skill sweep
+help skill symmetry recognition
+help skill synaptic currents
+help skill target
+help skill thieves kiss poison
+help skill thrust
+help skill thrusting polearms
+help skill toxic disposition
+help skill transmutation
+help skill transpierce
+help skill transposition
+help skill trapping
+help skill triple backstab
+help skill triple thrust
+help skill tumbling
+help skill unfreeze
+help skill unhallowed magic
+help skill vampiric touch
+help skill warcry
+help skill warding
+help skill weaponsmithing
+help skill whirlwind
+help skill wild blow
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Adrenal surge
+Usage duration: 2 rounds
+Skill type:     neutral
+
+The user of this skill has developed enough control
+over their bodies that they can force the pumping of
+adrenaline into their system, causing enhanced physical
+characteristics. These enhancements last only a short
+while, and it is difficult to summon the strength to
+do it again quickly.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Animal summoning
+Usage duration: 7 rounds
+Skill type:     neutral
+
+This skill allows you to summon an animal from the wild to come to your
+aid.  Obviously, it won't work indoors.  To attempt and control the
+animal you must use the animal handling skill.  The animal that you summon
+is dependant upon your level and skill knowledge.  The amount of time the
+animal remains by your side is also dependant upon your skill knowledge.
+If your animal is killed you will lose 1/5 of your experience, so be careful
+with how you handle your animal friends.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+No such known skill.  Check 'all skills'.
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Archery
+Usage duration: automatic
+Skill type:     special
+
+This skill is used when firing bows.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Armour piercing
+Usage duration: automatic
+Skill type:     special
+
+The skill grants a skilled polearm fighter knowledge on the various
+types of armours and their weak spots.  This skill is automatically
+in use, and when a successful proficiency check is made, the warrior
+has successfully found a weak spot in his opponent's armour, allowing
+him to deal a wicked blow.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Artistic license
+Usage duration: automatic
+Skill type:     special
+
+The creation of jewelry is as much an art as it is a science.  Some of most valuable jewlery has been created by those whom throw out the conventional rules of jewelry making.  This skills allows one to carve one's gems into new, 'special' shapes that normally would never be done.  However it must be noted it that if one trains this skill, he is even more likely to produce utter garbage rather than world-reknown jewelry.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Assess quality
+Usage duration: automatic
+Skill type:     special
+
+With this skill, the skilled jeweler can find small flaws in gems that are normally hidden to the untrained eye.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Balanced form
+Usage duration:    automatic
+Skill type:        special
+Affecting stat(s): 7th attack, unshakable, knowledge of ranged fighting, weapon
+                   skill and fatigue
+
+To a layman the flowing series of attacks performed by a skilled polearm fighter
+may seem simple. This apparent ease does not come from the training of the
+individual techniques but the countless hours spent training the perfect form,
+the ability to maintain such a poise as to easily shift from one maneuver to the
+next, be it defensive or offensive. This training does in fact bear some
+resemblance to the techniques of the martial artists.
+
+While a skilled warrior may perform these techniques while wearing a shield,
+sometimes even using the shield in attack, the additional protection may throw
+off the warrior's balance enough to ruin some the maneuvers or at the very least
+take the best edge off them.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Barbs
+Usage duration: 3 rounds
+Skill type:     neutral
+
+This skill allows a monster to fill a room with deadly barbs,
+harming all players in the area.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Batter
+Usage duration:    random
+Fatigue:           minimal
+Skill type:        attack
+Affecting stat(s): strength, constitution and dexterity
+
+This skill is stronger when leading a party (3+).
+
+This skill is designed for warriors who fight with a shield and a bludgeon
+combination. With an arming like this is clear that the warrior cannot use
+both of his hands in guiding of his weapon therefore a skill that bases
+entirely on one handed attack moves was created. The warrior is taught how
+to use his weapon to launch powerful attack moves from the safety of his
+shield. Without knowledge where to strike the warrior will however always
+be incomplete. The perfect executing of this skill requires that the warrior
+has also gathered knowledge from a skill called 'combat sense'. It is also
+noteworthy that the speed of this skill depends heavily from the size of
+the used weapon.
+
+Batter has a chance to do additional damage, and apply various negative effects,
+if used while fighting from a defensive stance behind a wall of steel. The user's
+mastery of shield-fighting techniques, and concentration on parrying, determines
+the likelihood of these additional effects. Moreso than other Myrmidon skills,
+batter is especially effective at creating opportunities to strike with the shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Battle stamina
+Usage duration: automatic
+Skill type:     special
+
+This skill measures a polearm fighter's ability to keep up with an execute
+many of the bizarre attack combinations possible with his various skills.
+The more skilled that the warrior is in this skill, the less likely he will
+have to stop between skills to "take a breather", thereby ruining his chance
+at scoring some of the more potent hits available to him.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Bear hug
+Usage duration:    random
+Skill type:        attack
+Affecting stat(s): str
+
+This skill allows you to hug your opponent.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Benediction of embedding
+Usage duration: random
+Skill type:     neutral
+
+Benediction of embedding is a delicate prayer, taught only to members
+of the clergy. While the reasons for performing vary from one faith to
+another, this is a ritual that has but one goal. To harness the dormant
+powers of the godly fragments known simply as Shards in a manner that
+entwines their power permanently to a piece of armour or a weapon. Once
+the Shard has been properly embedded, it will grant to its host item
+mystical powers that vary greatly from one Shard to another, due to
+multiple forms and sizes the Shards take.
+Syntax: use benediction of embedding at <item> and <shard>
+        Both the item and the shard must be on the ground.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Benumb
+Usage duration: 3 rounds
+Skill type:     neutral
+
+This skill allows a monster to stun a person to such an extent that they
+drop everything and drool.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Blade parry
+Usage duration: automatic
+Skill type:     defensive
+
+This skill allows you to parry hits in combat
+using a sword in your leftwield.  It requires
+knowledge of regular parry.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Body control
+Usage duration: automatic
+Skill type:     automatic
+
+During the years of vigorous training of mind and body the death knights
+learn this skill which gives them a better control of their own bodies.
+Knowing how ones body works makes the knight better prepared
+to face sudden changes in his body functions which he might face in the
+field of battle, for example stun. Knowing this skill very well sometimes
+gives the knight a chance to gain back the control of his body a bit
+faster than those who are not trained thus.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Body_slam
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows a monster to eject an opponent from its room.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Breathless brilliance
+Usage duration: automatic
+Skill type:     special
+
+Through training in this skill, a master magician will be better able to
+harness his studies in asphyxiation attack spells when casting 'power blast'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Build body
+Usage duration: 2 rounds
+Skill type:     neutral
+
+With this skill the death knight can attach the parts of the body into a
+form he wants. Different races require different parts for the body, for
+example some races need only bones, not the flesh. This skill requires
+spell points according to the amount of body parts the knight needs to
+attach to each other in order to form the body. The outcome of the succesful
+use of this skill is a new body which can be stored in the death room.
+The knight gets feedback on how well he made the corpse, 100% is a perfect
+body, 0% is a total failure. The affecting stats are skill %, wisdom,
+skill % of focus death magic and the quality of the bodyparts which are used.
+When the knight wants to actually make the body he needs to have all the parts
+needed for a body of the target race. The syntax is: use build body at
+<race name>,<part1>,<part2>,<part n>.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Caustic wit
+Usage duration: automatic
+Skill type:     special
+
+Through training in this skill, a master magician will be better able to
+harness his studies in acid attack spells when casting 'power blast'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Channel death magic
+Usage duration: automatic
+Skill type:     automatic
+
+This skill enhances the effects of various damage spells which the
+death knights use. It allows the knight to channel death magic with
+greater skill, thus allowing a greater amount of concentrated energy
+in the damage spells.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Concentration
+Usage duration: random
+Skill type:     neutral
+
+This skill is used to store some raw energy into the
+sorcerer's aura.  Your skill percent affects what portion of the
+spell points you use during this skill actually get stored.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+No such known skill.  Check 'all skills'.
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Control transfer
+Usage duration:    automatic
+Skill type:        special
+Affecting stat(s): int
+
+This skill is checked every time you cast a transfer
+damage spell.  It helps increase the damage done with the spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Convert damage
+Usage duration:    0 round
+Skill type:        neutral
+Affecting stat(s): wis
+
+Converts the damage done to you to physical damage.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Create pitfall
+Usage duration: 15 rounds
+Skill type:     neutral
+
+This skill allows you create a trap that will
+cause anyone entering the room to fall and take
+damage from.  This skill may only be used outdoors
+and requires a shovel.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Cripple
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows a monster to cripple an opponent.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Cross slash
+Usage duration:    random
+Fatigue:           low
+Skill type:        attack
+Affecting stat(s): dexterity and strength
+
+An efficient polearm fighting technique where the warrior attempts to slash
+their opponent twice in rapid succession across the mid-riff. While potentially
+very powerful, this technique is also quite unreliable due to its inherent
+simplicity: the quick slashes are relatively easy to block or deflect aside.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Cut gem
+Usage duration:    random
+Skill type:        Special
+Affecting stat(s): dex and wis
+
+This skill allows a skilled jeweler to cut his/her gems with utmost precision, allowing him/her to remove small flaws while cutting the stone to the proper shape and proportion to be set into an item.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Damage awareness
+Usage duration:    0 round
+Skill type:        neutral
+Affecting stat(s): wis
+
+Tells you what damagetypes they have done to you.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Death blow
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows a monster to do MASSIVE damage with
+but a light touch.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Deceitful blow
+Usage duration:    random
+Fatigue:           low
+Skill type:        attack
+Affecting stat(s): dexterity and strength
+
+This clever attack, which is derived from the cross slash technique, involves
+a deceptive attack intended to miss, with the goal of creating an opening for
+a powerful follow-up slash. Not only has this devious attack the potential to
+inflict severe injuries, but it may also throw the opponent off balance.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Desecrate corpse
+Usage duration: automatic
+Skill type:     neutral
+
+Desecrating a corpse allows a priest to channel the corpse's life force
+into useable energy. The shadow sceptre is needed in this process.
+
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Desensitization
+Usage duration: 5 rounds
+Skill type:     neutral
+
+By focusing on killing his opponent, to the detriment of
+all else, users of this skill can actually take more
+damage than they otherwise are capable of sustaining.
+This has drawbacks, however, since when the skill wears
+off, they may find that they are thrown into shock due
+to damage they took but ignored.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Dimensional awareness
+Usage duration: automatic
+Skill type:     special
+
+This skill allows the navigator to sense disturbances in the
+ethereal dimension, which usually indicates that teleportation
+magic is being directed to the location of the navigator. The
+skill navigators way greatly increases the chance of detection.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Disarm
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows a monster to disarm an opponent.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Disembowel
+Usage duration:    random
+Fatigue:           mediocre
+Skill type:        attack
+Affecting stat(s): strength and dexterity
+
+A brutally efficient technique that outright discards all pretense of finesse,
+relying on sheer force and surprise. With this attack the warrior attempts to
+plunge their polearm into their opponent's gut with the intent of causing as
+much internal damage as possible. However, a wild attack such as this is likely
+to fail should the opponent be aware.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Dismember
+Usage duration:    random
+Fatigue:           mediocre
+Skill type:        attack
+Affecting stat(s): strength and dexterity
+
+This technique is the pinnacle of training for a polearm fighter. The attack
+entails a series of strikes with the ultimate goal of cutting the opponent
+literally into pieces. While effective in its own right, it becomes truly
+devastating when performed as the finishing move of a longer sequence of
+attacks.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Divine guidance
+Usage duration:    automatic
+Skill type:        special
+Affecting stat(s): wisdom and skill percent
+
+The war of faiths is a neverending struggle and clerics fighting for their God
+must be tireless in their efforts. To this end some clerics are able to draw
+divine guidance from their Gods, reducing fatigue and allowing them to carry
+fighting for longer.
+The cleric's standing in the church of their chosen deity has a pronounced
+effect on the magnitude of the boon they are granted, as does the cleric's
+wisdom.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Double backstab
+Usage duration:    automatic
+Skill type:        attack
+Affecting stat(s): str and dex
+
+This skill will allow you to augment the damage of a backstab.
+You must first succeed with your backstab.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Downward strike
+Usage duration:    random
+Fatigue:           very low
+Skill type:        attack
+Affecting stat(s): strength, constitution and dexterity
+
+A potentially devastating maneuver that consists of a single powerful slash,
+directed downwards, or diagonally downwards, at the opponent. In addition of the
+grievous injuries this attack may cause, it may also knock the opponent severely
+off balance.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Dragon lore
+Usage duration: automatic
+Skill type:     Knowledge
+
+This skill increases the strength and size of the dragon
+that a ranger can possibly summon.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Drain vigour
+Usage duration: automatic
+Skill type:     automatic
+
+This skill allows the skilled grim reapers to drain vigour from the
+enemy they are draining with the spell suffocation or flesh rot. It
+allows the knight to redirect the draining powers of the spell into the
+enemy so that the vigour will flow to the knight and replenish his energy
+and lifeforce, at the same time making the target exhausted.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Edged polearms
+Usage duration: automatic
+Skill type:     special
+
+This skill measures a polearm fighter's ability to handle the massive edged
+weapons such as the halberd, bardiche, voulge and glaive. Edged polearms are
+known to generally cause more damage than their thrusting cousins, but also
+seem to miss quite a bit more.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Engrave message
+Usage duration:    0 round
+Skill type:        Special
+Affecting stat(s): dex
+
+This skill allows a skilled jeweler to engrave a short message somewhere on the piece, useful for adding a personal touch to gifts and whatnot.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Enhance criticals
+Usage duration: automatic
+Skill type:     special
+
+This skill can greatly enhance the frequency and strength of impact
+of critical strikes. The enhancement is most potent when wielding a
+dagger-type weapon.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Enhance tracking
+Usage duration: automatic
+Skill type:     special
+
+This skill enhances the tracking-skill's effects.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Essence attunement
+Usage duration: automatic
+Skill type:     special
+
+Through training in this skill, a master magician will be better able to
+harness his studies in magical attack spells when casting 'power blast'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Establish roost
+Usage duration: 51 rounds
+Skill type:     neutral
+
+This skill allows you to establish a pigeon roost.  The
+higher your skill percent the shorter the time it will
+take to establish your roost.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Evaluate corpse
+Usage duration: 0 round
+Skill type:     neutral
+
+Using this skill the knight can evaluate the quality of different parts
+of the body which the target has. The accuracy of the information
+knight gains on the value of different parts of the body is dependant
+on the skill % and wisdom of the user. This skill only works on monsters.
+If the knight doesn't recognize the race of the target the target can
+not be evaluated. Also only living targets can be evaluated, a dead
+body of a foe is often so messed that the parts can't be evaluated
+precisely. A body of the creature must be evaluated in order to be
+able to use extract bodypart after the foe has died.
+Note: All evaluated parts get an extra 20% bonus in quality if the
+race of the target is same as the race of the user, 15% bonus if the
+race is very close to the one of the user and 10% bonus if the race of
+the target is any of the death knight races.
+The knight can use this skill with a target 'list' if he needs to see
+the creatures which have bodies similiar to his own.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Good omens
+Usage duration: automatic
+Skill type:     neutral
+
+Being a master of evil an advanced evil cleric can predict
+the changes in magic and use a beneficial change in his/her
+spells to make them work more efficiently. This is known to be
+-very- difficult skill to master and thus it might not always work
+like you would expect it to.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Exsanguination
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows a monster to induce dibilitating bleeding in a victim.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Extract bodypart
+Usage duration: 0 round
+Skill type:     neutral
+
+With this skill the knight can extract a well preserved part from a
+corpse. How skillfully the knight can extract the part and if the part
+gets damaged in the process or not depends on the skill % and the wisdom
+of the knight. Usage: use extract bodypart at corpse extract <part name>
+or use extract bodypart at corpse list. When using the target 'list' the
+knight can get a list of the parts evaluated earlier.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Fake death
+Usage duration: 2 rounds
+Skill type:     neutral
+
+With this skill the death knight can make the people around him
+believe that he is dead, allowing the knight to make a preliminary
+strike. How easily others around the knight are fooled depends on
+the skill percent of fake death, skill percent of mastery of death
+illusions, wisdom and intelligence of the knight.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Fake guilt
+Usage duration: automatic
+Skill type:     knowledge
+
+Knowledge in this skill will allow the thief to fake his failed
+stealing skills to be made by someone else in the room.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Fatal blow
+Usage duration:    random
+Fatigue:           mediocre
+Skill type:        attack
+Affecting stat(s): dexterity and strength
+
+One of the most difficult techniques that a polearm fighter may learn, as well
+as one of the most devastating. With this maneuver the warrior seeks to exploit
+the weaknesses in their opponent's defenses with a single attack of precision.
+The crux of this technique is its precision, for a warrior performing this kind
+attack must not only possess the necessary agility to take advantage of a weakness,
+but also the keenness of mind to recognize those weaknesses.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Firevision
+Usage duration: 2 rounds
+Mental Cost:    150 SPs
+Skill type:     neutral
+
+With skilled manipulation of the elemental fire, can
+monks simulate the effects of the infravision.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Flying
+Usage duration: automatic
+Skill type:     Special
+
+Those people adept in this skill are better at flying whether they have
+wings or fly using a spell. Being better means that you are less likely
+to be swept away even in strong wind. You are also able to make a
+better landing from free fall thus reducing the damage taken.
+This skill is automatically in use.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Flying tackle
+Usage duration:    2 rounds
+Skill type:        attack
+Affecting stat(s): str, dex and con
+
+This skill allows the user to jump and tackle his opponent, doing
+some damage and keeping himself and his opponent from attacking quickly.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Flying toss
+Usage duration:    2 rounds
+Skill type:        attack
+Affecting stat(s): str and siz
+
+Users of this skill can grab their opponent during combat
+and toss them bodily through the air, causing damage and
+disorienting the opponent. Heavier opponents are, obviously
+more difficult to toss.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Focus death magic
+Usage duration: automatic
+Skill type:     automatic
+
+This skill allows the knight to better direct and use his knowledge
+over death magic. The knight can direct his power to a smaller parts
+of the targets body with the help of this skill.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Following
+Usage duration:    1 round
+Skill type:        neutral
+Affecting stat(s): level and con
+
+This skill allows you to follow other players without being in a party
+with them when they are walking outdoors. The better your constitution,
+level and the skill percent are, the longer you can follow your target.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Forcepush
+Usage duration:    2 rounds
+Skill type:        attack
+Affecting stat(s): str
+
+This skill is very nice for arch's.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Gem placement
+Usage duration: automatic
+Skill type:     special
+
+Even if a jeweler has an exact idea of where he wants to place a gem, it requires steady hands to get the placement exactly right.  In a task where a few millimeters in any general direction determines the difference between a masterpiece and disaster, precise gem placement is crucial.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Gestalt conjuration
+Usage duration: automatic
+Skill type:     special
+
+Training in this skill allows master magicians to draw greater insight
+from the teachings of the mage guild when conjuring a power blast. Only
+through an intuitive grasp of this body of knowledge as a whole, may a
+mage realize the full potential of this spell. The more vast and diverse
+the mage's knowledge of underlying mage guild spells, the greater the
+benefit conferred by this skill.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Good omens
+Usage duration: automatic
+Skill type:     neutral
+
+Being a master of evil an advanced evil cleric can predict
+the changes in magic and use a beneficial change in his/her
+spells to make them work more efficiently. This is known to be
+-very- difficult skill to master and thus it might not always work
+like you would expect it to.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Greater illusion control
+Usage duration: automatic
+Skill type:     special
+
+This skill allows the sorcerer to direct summoned monsters forward
+forcing them to fight for him/her. This skill only works on greater
+forms of summoned phantoms.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Hack-n-slash
+Usage duration: random
+Skill type:     attack
+
+This skill is used for devastating attack maneuvers with
+axes.  This skill is based upon knowledge of the art of
+bladed fury.  With this skill you can use your axes to
+butcher your opponent so badly, his own mother will not
+recognize him.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Healing resonance
+Usage duration: automatic
+Skill type:     special
+
+Most magic induced healing within the realm is done by manipulating the
+flow of life in and around a being. This manipulation is has been known
+to cause strange resonance, much like a musical note, within the very bones
+and sinew of those hurt souls, and this fact has not been lost upon the true
+healers of the realm. Knowing how to control this reverberation and mold it
+into further healing is an art, and only the best healers in the land ever
+manage to perfect it, though many try. Oddly enough, it has been noted that
+no healer, not even Vorth, has ever managed to control this resonance upon
+their own body. Only from one soul to another can the reverberation be even
+remotely controlled; never in multiple heals. Even when artful with the skill,
+it has been noted that for the most powerful of heal spells, resonance is
+nigh impossible to achieve.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Herb mixing
+Usage duration: random
+Skill type:     neutral
+
+This skill is used to make different types of herbal mixtures.
+  Usage: use herb mixing at <what>
+    <what> is the mixture you want to make (for example thieves kiss
+    poison. The skill checks the needed herbs automatically.
+    You need a mortar and pestle for this skill (and herbs of course.)
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Herbal food poison
+Usage duration: automatic
+Skill type:     knowledge
+
+This skill is used to create herbal mixture that can be used to poison
+food. The effectiveness of the poison is heavily dependent on the users
+level. This skill is used in conjunction with the skill herb mixing.
+Using this skill will show you the correct reagents.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Heroic charge
+Usage duration: 3 rounds
+Skill type:     attack
+
+This skill is used for a powerful battle maneuver that
+can cause considerable damage, but it also will leave you
+wide open for attacks. Affecting stats: Dexterity and Strength.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Hiding
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows you to hide somewhere and not be noticed by other
+players. If there are people in the same room at the time you use this
+skill and they have noticed you, they have a quite good possibility
+to see you trying to hide. This skill is especially effective when used
+with backstab. The smaller you are, the easier time you have finding good
+hiding places.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Hit placement
+Usage duration:    automatic
+Skill type:        special
+Affecting stat(s): dex, int, organ knowledge, knowledge of ranged fighting,
+                   critical and weapon skill
+
+This skill measures the polearm fighter's discipline and ability to
+carefully aim where he wants his polearm attacks to land, allowing him
+critically wound his opponent.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Idling
+Usage duration:    automatic
+Skill type:        very special
+Affecting stat(s): wis and dex
+
+This skill allows Del to perform his duties more efficiantly.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Ignore zarch whines
+Usage duration: automatic
+Skill type:     automatic
+
+With this skill the arch in question can ignore all the whines coming
+from a player called Zarch, since all the whines are complete bs
+anyway.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+No such known skill.  Check 'all skills'.
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+No such known skill.  Check 'all skills'.
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Incendiary instincts
+Usage duration: automatic
+Skill type:     special
+
+Through training in this skill, a master magician will be better able to
+harness his studies in fire attack spells when casting 'power blast'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Intentionality
+Usage duration: automatic
+Skill type:     special
+
+The power blast spell represents the pinnacle of the mage guild's teachings,
+drawing from the caster's knowledge in a wide variety of offensive spells to
+deal unrivaled damage. While the force of an uncontrolled power blast is
+impressive, the essence of the spell is unpredictable, making it difficult
+to strike an enemy's weaknesses.
+
+A more selective mage may study a smaller selection of underlying spells
+and apply a damage preference to achieve greater consistency in his damage
+output. Training in intentionality enhances this focus even further,
+helping the mage conjure stronger and more reliable blasts in his chosen
+damage type. If the mage has pursued a more generalized course of study,
+this skill will yield fewer benefits, but will reduce randomness somewhat,
+and will lessen the odds of doing physical damage.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Kick placement
+Usage duration:    automatic
+Skill type:        special
+Affecting stat(s): dex
+
+This skill is checked every time you use the skill.
+Flip kick.  It helps amplify the effects of the skill
+and can even induce special properties.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Adrenal surge
+Usage duration: 2 rounds
+Skill type:     neutral
+
+The user of this skill has developed enough control
+over their bodies that they can force the pumping of
+adrenaline into their system, causing enhanced physical
+characteristics. These enhancements last only a short
+while, and it is difficult to summon the strength to
+do it again quickly.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Knowledge of omens
+Usage duration: automatic
+Skill type:     neutral
+
+Knowledge of omens is a skill often practiced by neutral clerics. Some
+of them are known to have taken the skill a step further by studying the
+omens more carefully. This has divided the clerics into many different
+groups that all have their own specialities. The skill will help a cleric
+to predict the changes of casting conditions -during- their spellcasting.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Life of the mind
+Usage duration: automatic
+Skill type:     special
+
+Through training in this skill, a master magician will be better able to
+harness his studies in psionic attack spells when casting 'power blast'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Locking
+Usage duration:    2 rounds
+Skill type:        neutral
+Affecting stat(s): str and level
+
+This skill allows you to lock your enemy's limbs with your own, therefore reducing the attacks your opponent (and you) get. The user of this skill can't use other skills while locking someone.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Low blow
+Usage duration:    automatic
+Skill type:        attack
+Affecting stat(s): str and dex
+
+This skill will allow you to disable your opponent with
+the skill mutilate.  You must first succeed with mutilate.
+It also can augment the damage done by mutilate.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Lunge
+Usage duration:    random
+Fatigue:           very low
+Skill type:        attack
+Affecting stat(s): constitution, dexterity and strength
+
+As its name implies this technique is essentially a quick lunge forwards,
+weapon ready to impale the opponent. While in itself a very simple maneuver,
+the movement will give the weapon increased momentum which in turn increases
+the potential damage caused by the attack. The lack of finesse often proves to
+be the attempt's downfall, however, as a hurried leap at an enemy is easily
+recognized and countered.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Make bumerang
+Usage duration: 3 rounds
+Skill type:     neutral
+
+This skill allows a samurai to create a special bumerang for
+use in combat.  Its rather difficult so you may need to practice
+this a lot.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Make shuriken
+Usage duration: 1 round
+Skill type:     neutral
+
+A part of the samurai arts is the creation of the deadly battlestars
+known as shuriken. As a samurai reaches a higher circle in his studies,
+he obtains the techniques necessary to treat his weapons, both his blade
+and the shuriken, with various enchanting properties that modify the type
+of damage they inflict. While the blade requires a magical blessing to
+inflict other damage types beyond the physical, the shurikens can be created
+in select types directly. Many aspects of the samurai's talents aid in the
+construction of these special weapons. Skill knowledge in making the type
+of shuriken used, the art of Zhinakoku, and the mastery in making shuriken,
+that can only be obtained through practice and devotion, all further develop
+this aspect of the samurai arts.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Mastery of death illusions
+Usage duration: automatic
+Skill type:     automatic
+
+This skill enhances the effects of many death illusions which the
+knights use, both the skills/spells directed at knight by himself
+and the skills/spells directed at others, like paranoia.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Mastery of death protection
+Usage duration: automatic
+Skill type:     automatic
+
+This skill enhances the effects of various protective spells which
+the death knights use. It also makes the chaos-materia easier to
+handle as a part of the protective spells. It also affects few
+half-protective spells like chaos cube and some bonding spells like
+bonded spirits.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Mastery of draining
+Usage duration: automatic
+Skill type:     automatic
+
+This skill enhances the effects of draining spells and skills which
+the death knights use.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Mastery of farfetching
+Usage duration: automatic
+Skill type:     automatic
+
+This skill is suitable for leaders who want to astonish arches
+with weird and funny ideas on how to kill eq monsters. It is
+rumored that Vili is one of the few masters of this skill.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Mastery of idling
+Usage duration: automatic
+Skill type:     automatic
+
+Only arches can fully understand the meaning of this great skill and
+it can only be trained to 100% by them. It allows the arch in question
+to completely ignore all whines and continue the recordbreaking attempt
+of 5k days of idling.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Mastery of time
+Usage duration: automatic
+Skill type:     automatic
+
+For centuries men have tried to fully understand the metaphysics of time.
+Some have gone even further by trying to harness timeflows under their command.
+Few are those who have a slightest grasp of this skill. Those are known as
+Keepers of chronology. Last remnants of this knowledge is stored in ten
+sacred time tomes.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Mastery of war
+Usage duration: automatic
+Skill type:     automatic
+
+Knowledge of this skill gives the leader of the troops more control
+over them and keeps the morale of the troops higher since they acknowledge
+the skills of their master. This can prove useful in dangerous situations
+like retreating or ambushes and lessen the loss of men.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Microclasm
+Usage duration: automatic
+Skill type:     special
+
+A mage who wishes to master area of effect spells must learn to focus
+a devastating gout of magical energy within a discrete and controlled
+space. Training in this skill assists in the process, increasing damage
+done by area attack spells.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Modify bodypart
+Usage duration: 1 round
+Skill type:     neutral
+
+Using this skill the knight can modify a bodypart to be more suitable
+for his chosen race. Nonmodified parts can not be attached to a body
+made by the knight. How well the knight can modify the part depends on
+the race of the corpse from which the part has been taken from, the
+knights wisdom, the skill % of focus death magic and the skill % of
+modify bodypart. The knight gets feedback how well he made the modification
+and this modification % affects the chance of succesful attachment of
+the part to the knights body when using build body skill. This skill
+uses mental energy in order to modify the part to correct shape. If
+the part is from a race which is same as the body which the knight intends
+to build it doesn't need to be modified. There are 4 modification classes
+and when using extract bodypart the knight will get feedback on the
+class of the part. The lower the modification class the more the knight
+needs sp to modify the bodypart. Class zero bodyparts need great modification,
+class three bodyparts need no modification. Usage: use modify bodypart at
+<part> modify towards <race>.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Munch magic item
+Usage duration: 0 round
+Skill type:     neutral
+
+This skill allows the death knight to drain some of the magical powers
+stored inside a magical item, usually detoriating the item into a pile
+of dust. The amount of magical power restored depends on the skill %,
+int, wis, skill % of the mastery of draining and the magical value of
+the item in question.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Mutilate
+Usage duration: random
+Skill type:     attack
+
+This skill is used for powerful attack maneuvers
+with bludgeons.  The damage caused by this
+skill is based on your weapon, stats and skill
+knowledge.  In addition knowledge of strike may help
+make this skill work better.
+This skill takes into account different
+weapon damage types.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Overload
+Usage duration:    automatic
+Skill type:        special
+Affecting stat(s): int and lvl
+
+This skill is checked every time a sorcerer casts a
+spell it will occasional channel some of the sorcerer's
+raw energy back into the spell.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Personalize
+Usage duration:    0 round
+Skill type:        Special
+Affecting stat(s): dex
+
+This skill allows a skilled jeweler to personalize an item such that only the assigne owner will be able to read it.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Piercing blows
+Usage duration:    random
+Fatigue:           very low
+Skill type:        attack
+Affecting stat(s): dexterity and strength
+
+This particular maneuver entails a pair of strong jabs executed in rapid
+succession. As such it is not the most powerful but neither it is the weakest
+in the selection of a polearm fighter - a reliable attack that performs well
+all-around.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Piercing-blows
+Usage duration: 0 round
+Skill type:     Attack
+
+Much like the polearm skill transpierce, a warrior using this
+technique attempts to thrust his weapon into an opponent, causing
+a puncture wound. However, unlike the transpierce skill, the warrior
+attempts to follow up their first strike with another piercing
+attack, to increase the effect.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Prayer to gods
+Usage duration: 1 round
+Skill type:     defensive
+
+When all hope is lost and death is coming for you, this skill might
+be your last chance. It will allow you to perform a quick prayer to
+to the god of death to save you from the throes of hell. This skill is
+not to be used carelessly, god of death doesn't take lightly to being
+disturbed. Your chances of survival depend on your wisdom, skill % and
+skill % of mastery of death protection. If you fail, you will die.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Prepare enchantment
+Usage duration: automatic
+Skill type:     neutral
+
+This skill prepares an item to be enchanted. This skill can only
+be used at non-magical weapons and armours.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Primal scream
+Usage duration:    3 rounds
+Skill type:        attack
+Affecting stat(s): str and dex
+
+When a berserker uses this skill, they put themselves into a
+sub-human state, into an animal-like rage. Issuing a scream of
+rage, they become spurred into doing an incredible amount of
+damage to their combatant without regard for personal safety.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Pummel
+Usage duration:    1 round
+Skill type:        attack
+Affecting stat(s): str, dex, siz and skill percent
+
+This skill is best suited for barehanded fighting. The attacker pummels
+the enemy with series of fast punches, sometimes making the enemy get
+stunned by excruciating pain.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Quick thrusts
+Usage duration:    random
+Fatigue:           minimal
+Skill type:        attack
+Affecting stat(s): dexterity, constitution and strength
+
+This is perhaps the fastest of polearm fighting techniques but unfortunately,
+what it gains in speed it tends to lose in both accuracy and power. However, the
+purpose of this maneuver is not to inflict severe injuries but rather to provide
+openings for more powerful follow-up attacks.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Quick-thrusts
+Usage duration: 0 round
+Skill type:     Attack
+
+Quick-thrusts is perhaps one of the fastest lancer skills available to
+a skilled polearm fighter, but in the need for speed, it tends to miss
+slightly more than other skills as well as doing a bit less damage.
+The purpose of the skill is to cause a minor wounds by thrusting your
+polearm at your enemy as quickly as possible, thereby opening up the
+possibility of scoring hits with more devastating skills.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Rend
+Usage duration: 2 rounds
+Skill type:     attack
+
+This skill allows a monster to do signifigant damage with its bare claws.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Revitalize
+Usage duration:    random
+Skill type:        neutral
+Affecting stat(s): skill percent and wisdom
+
+By undergoing an arduous process of transference, those sufficiently trained
+in healing arts are capable of using their excess stamina reserves to recovering
+a portion of their mental reserves. Because of the demanding nature of this technique
+it cannot be performed unless three conditions are met: the user is in peak physical
+condition, the user has a large enough deficiency in their mental reserves and third,
+enough time has passed since the last process.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Rites of the grave
+Usage duration: automatic
+Skill type:     knowledge
+
+Much of the magic of the death knights tap into the essence of the undead or
+death itself - such spells have been dubbed 'rites of the grave'. While these
+spells may differ greatly from each other in purpose and complexity they all
+share the same source. Through this general aptitude into wielding such power
+is each individual spell, or a rite of the grave, improved.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Sacrifice of extended life
+Usage duration: 10 rounds
+Skill type:     neutral
+
+This skill can only be used in the fortress, in the vicinity of the
+ritualistic altar of death knights. When using this skill the knight
+will offer a corpse (the bigger the better) to the god of death and
+as reward the knight will gain a greater chance to avoid the clutches
+of death the next time they meet. The effectiveness of this skill
+depends on the power of the corpse sacrificed, the skill % and the wisdom
+of the knight. The blessing will disappear if the knight in question
+avoids death.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Sang froid
+Usage duration: automatic
+Skill type:     special
+
+This skill increases the influence of the mage's studies in cold damage
+spells when casting 'power blast.'
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Sense living
+Usage duration:    random
+Skill type:        neutral
+Affecting stat(s): skill percent
+
+For the death knights the presence of life is as distinctive as it is offensive -
+not unlike a putrid stench - and they can sense it from a great distance.
+They can often pick up the presence of living beings unconsciously but only in
+the immediate vicinity when the sensation is overwhelming.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Sense resistances
+Usage duration: 1 round
+Skill type:     neutral
+
+This skill shows you some info about target resistances.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Sense stats
+Usage duration: 1 round
+Skill type:     neutral
+
+This skill shows you some info about target stats.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+No such known skill.  Check 'all skills'.
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Sharpen
+Usage duration: 10 rounds
+Skill type:     neutral
+
+This skill can be used to increase a weapon's WC.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Shrapnel
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows a monster to fill a room with deadly shrapnel,
+harming all players in the area.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Skewer
+Usage duration:    random
+Fatigue:           very low
+Skill type:        attack
+Affecting stat(s): constitution and strength
+
+This technique lives up to its name when performed properly: a single strong
+thrust of a polearm aimed at the torso of the opponent. This type of a maneuver
+performs very well in general, even though it may not be the most damaging in
+the selection of a polearm fighter. This attack may very well be lethal, but
+it is powerful enough to knock the opponent off balance, interfering with their
+own maneuvers.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Skill that removes user from location of origin and places
+                   user in location of destination
+Usage duration:    15 rounds
+Skill type:        teleport
+Affecting stat(s): skillpercent
+
+By using this 'skill that removes user from location of origin and places user in
+location of destination', the user will be removed from the location of his, her
+or its origin, i.e. the location in which the user used the skill, and, after being
+removed from this location, will be placed in a second location which, because it
+is the location that results from the successful use of this skill, is known as the
+location of destination, and is usually a different place than the place where the
+skill was used, a/k/a the 'location of origin,' ipso facto.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Skill where a fighter using battlecry and peaople in party can
+                   us there attack as soon as use beast speech goes
+Usage duration:    1 round
+Fatigue:           minimal
+Skill type:        attack
+Affecting stat(s): strength and dexterity
+
+This skill which increases the chances of them from more generally following
+carrying additional quantities of items can easily make your character stay
+totally clear of these magical powers entering your heroes and then stomping
+about it (in order primarily used by warrior builds it might trigger interpretation
+of your enemies) and protect against monsters that might possibly give you some
+trouble not always worth sacrificing essentially a couple gems like crystals
+from shopkeepers guarding every character in melee weapon skills inside your
+arms power experience entrepreneurs likely won't accept your choice of damage
+(primarily you can afford transport to start now immortal animals and keep killing
+enemies)
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Dark powers cloud your mind.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Sting
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows a monster to poison an opponent.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Stupify
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill allows a monster to stun an opponent.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Stupor stagger
+Usage duration: random
+Skill type:     defensive
+
+This skill allows you to use a drunken stupor to your
+advantage by allowing your staggering to confuse
+the enemy.  The advantage is dependent on your skill
+percent and the duration is dependent on your
+your intoxication.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+No such known skill.  Check 'all skills'.
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Sweep
+Usage duration:    random
+Fatigue:           very low
+Skill type:        attack
+Affecting stat(s): strength and dexterity
+
+A technique of polearm fighting that is not aimed to injure the opponent, but
+to either trip the opponent or at the very least put them off balance, granting
+the attacker the upper hand for the next technique or an immediate follow-up
+strike of this maneuver.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Symmetry recognition
+Usage duration: automatic
+Skill type:     special
+
+Since the early times, people have acknowledged that things arranged in certain symmetries bring to it an astetic pleasure.  Mastery in this skill allows the jeweler to be able to recognize these astetically pleasing patterns, and arrange his/her gems in a way  maximize the effectiveness of his/her creation.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Synaptic currents
+Usage duration: automatic
+Skill type:     special
+
+Through training in this skill, a master magician will be better able to
+harness his studies in electric attack spells when casting 'power blast'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Target
+Usage duration: 5 rounds
+Skill type:     neutral
+
+With this skill you are able to aim your ranged weapon for a better
+chance of hitting the target. After using this skill you only have
+to type 'fire' to shoot at the target. Subsequent uses may have some
+effect.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Thrusting polearms
+Usage duration: automatic
+Skill type:     special
+
+This skill is a measure of a polearm fighter's ability to handle thrusting
+polearms such as the lance, spear and pike. A polearm of this type relies on a
+strong, thrusting motion and a sharp point to cause damage to the enemy.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Toxic disposition
+Usage duration: automatic
+Skill type:     special
+
+Through training in this skill, a master magician will be better able to
+harness his studies in poison attack spells when casting 'power blast'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Transpierce
+Usage duration:    random
+Fatigue:           minimal
+Skill type:        attack
+Affecting stat(s): dexterity and strength
+
+A fairly basic maneuver of polearm fighting - a quick, strong jab with the weapon,
+basically an attack of opportunity, aimed at an available bodypart. This type of
+attack is not really spectacular in any way, but it is highly reliable making
+it very valuable especially when used in a sequence of attacks.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+No such known skill. Check 'all skills'.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Triple backstab
+Usage duration:    automatic
+Skill type:        attack
+Affecting stat(s): str and dex
+
+This skill will allow you to augment the damage of a backstab.
+You must first succeed with double backstab.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+The information about this skill is classified.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Unfreeze
+Usage duration: 2 rounds
+Skill type:     neutral
+
+This skill is used in the freezetag event to unfreeze a frozen teammate.
+All players may use it during the game.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Unhallowed magic
+Usage duration: automatic
+Skill type:     knowledge
+
+The magic of the death knights is very different from any other: they use
+themselves as the source and the focus of their magic, channeling the deathless
+within, making their spells seem much like natural abilities rather than
+constructions of the arcane. To master these unhallowed magics one must first
+grasp the fundamental, the theory of invocation.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Vampiric touch
+Usage duration:    0 round
+Skill type:        Attack
+Affecting stat(s): str, con and skill percentage
+
+This brutal skill is used by many of the realm's undead to draw
+sustanance from a living soul, thereby prolonging their own vile
+existance.  The target of such an attack will be leeched of some
+of his health, which in turn will be given to the undead.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Adrenal surge
+Usage duration: 2 rounds
+Skill type:     neutral
+
+The user of this skill has developed enough control
+over their bodies that they can force the pumping of
+adrenaline into their system, causing enhanced physical
+characteristics. These enhancements last only a short
+while, and it is difficult to summon the strength to
+do it again quickly.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Warding
+Usage duration:    automatic
+Fatigue:           minimal
+Skill type:        Bludgeon fighting technique
+Affecting stat(s): dex, con and str
+
+The Royal Company of Warders has held the traditional position of
+His Majesty's Royal Household Guard for over two centuries. During
+this time, assuring the untouchability of the Royal Persons has been the
+first and foremost duty of the Guard. The two centuries the Warders have
+held this position have slowly obscured the fact that the Warders were an
+ordinary military unit once. As such, their thankless task was to ward off
+the approaching enemy infantry by creating a veritable wall of whirling and
+spinning cudgels and mauls, blocking any attempt to approach and even some
+of the bowfire. This gave the other units time to reorganize and pull back
+if necessary.
+
+This technique requires the user to spin his mauls quickly, in precise
+patterns, and for long periods. Consequently, the duration and defensive
+benefit of this skill are a function of the user's dexterity, constitution
+and momentum. Using this skill can also help to generate momentum, though
+the gain depends largely on the user's strength.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Weaponsmithing
+Usage duration: 8 rounds
+Skill type:     neutral
+
+This skill allows the player to perform the difficult and
+highly exacting work involved in making metal weapons.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:  Whirlwind
+Usage duration: 0 round
+Skill type:     Defensive
+
+This skill creates a local weather disturbance that can be directed
+at one's enemies, forcing them from the current room.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+Help on skill:     Wild blow
+Usage duration:    random
+Fatigue:           minimal
+Skill type:        attack
+Affecting stat(s): strength and constitution
+
+The most basic technique of polearm fighting with which the weapon is swung
+quickly about in an attempt to slash or thrust the opponent. The main purpose
+of this maneuver is not to truly injure the opponent but to lay the groundwork
+for the incricate series of attacks the polearm fighter may perform. True to its
+name this maneuver relies more on blind luck than on pure skill, and as such is
+prone to fail.
+This maneuver requires a polearm wielded either in the main hand or both hands,
+and the offhand either empty or carrying a shield.
+
+q: You feel fully rested.
+p: Not in battle 22462500 10453200 0 8610643 0 1906 1841 3527 3527
+
+q: You feel fully rested.

@@ -58,4 +58,4 @@ this CLAUDE.md and the subsystem's source of truth (`.chr` /
 
 ## Before touching code
 
-**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us (Vue checkbox desync, int32 wrap, `.tab-body`+grid trap, `totalLevels` direction, mysql `@name`-only, param prefix collisions). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), [docs/mobs.md](docs/mobs.md).
+**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us (Vue checkbox desync, int32 wrap, `.tab-body`+grid trap, `totalLevels` direction, mysql `@name`-only, param prefix collisions). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), [docs/mobs.md](docs/mobs.md), [docs/help-text.md](docs/help-text.md).

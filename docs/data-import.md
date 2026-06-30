@@ -54,6 +54,10 @@ the field order.
 - Matching is case-insensitive; unmatched blocks are logged.
 - Subraces are intentionally not matched — only top-level race names
   appear in `help_races.chr`.
+- These `.chr` files are incomplete (~40% of skills had no entry). The
+  gaps are backfilled separately from **live in-game `help` captures**
+  via [scripts/seed_help_text.mjs](../scripts/seed_help_text.mjs) — see
+  [help-text.md](help-text.md) before mass-updating descriptions.
 
 ### `guilds.chr` — `loadGuilds()`
 - One line per top-level guild: `GuildName maxLevel`. Guild names use

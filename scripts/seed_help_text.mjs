@@ -4,10 +4,14 @@
 //
 // Usage:
 //   node scripts/seed_help_text.mjs <capture.txt> [more.txt ...] [flags]
+// The canonical captures live in data/help_captures/{skills,spells}.txt:
+//   node scripts/seed_help_text.mjs data/help_captures/skills.txt data/help_captures/spells.txt
 // Flags:
 //   --dry-run     parse + report, write nothing
 //   --overwrite   replace help_text even if a row already has one
 //                 (default: only fill rows whose help_text is NULL/empty)
+//
+// Full process (find missing -> capture in-game -> seed): docs/help-text.md
 //
 // Why a bespoke parser instead of reusing import_zcreator's splitHelpBlocks:
 // the .chr files separate entries with `-----` rules, but a LIVE client
