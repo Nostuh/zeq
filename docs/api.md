@@ -25,11 +25,11 @@ Session-cookie-based. See [auth.md](auth.md) for the full model.
 | POST   | `/api/users/:id/password` | `{password}` — also invalidates the target's sessions |
 | DELETE | `/api/users/:id`          | rejects self-delete & last-admin delete |
 
-## Game data (**reads are public**, `editor` required for writes)
+## Game data (**reads are public**, `planner_admin` required for writes)
 
 GET endpoints on `/api/game/*` are public — the reinc planner at `/`
-is accessible without signing in. Mutations (POST/DELETE) still
-require editor or admin.
+is accessible without signing in. Mutations (POST/DELETE) require the
+`planner_admin` capability flag (or admin).
 
 ### Races
 | Method | Path | Purpose |
@@ -171,44 +171,45 @@ authored in — client must not coerce through `new Date()`.
 
 ## EQ Mob Knowledge Base (`/api/mobs`)
 
-Login-gated by eq roles. Full documentation in [mobs.md](mobs.md).
+Gated by the `eqmobs` / `eqmobs_edit` capability flags. Full documentation in [mobs.md](mobs.md).
 
 | Method | Path | Role | Purpose |
 |---|---|---|---|
-| GET | `/api/mobs?q=...` | eq_viewer | list/search mobs |
-| GET | `/api/mobs/:id` | eq_viewer | full mob detail (all sub-resources joined) |
-| POST | `/api/mobs` | eq_editor | create mob |
-| POST | `/api/mobs/:id` | eq_editor | update mob (requires `version` for optimistic lock) |
-| DELETE | `/api/mobs/:id` | eq_editor | delete mob + cascade + disk cleanup |
-| POST | `/api/mobs/:id/resistances` | eq_editor | bulk set all 9 damage types |
-| POST | `/api/mobs/:id/prots` | eq_editor | add/upsert protection |
-| DELETE | `/api/mobs/:id/prots/:pid` | eq_editor | remove protection |
-| POST | `/api/mobs/:id/guilds` | eq_editor | add guild role |
-| POST | `/api/mobs/:id/guilds/:gid` | eq_editor | update guild role |
-| DELETE | `/api/mobs/:id/guilds/:gid` | eq_editor | remove guild |
-| POST | `/api/mobs/:id/loot` | eq_editor | add loot |
-| POST | `/api/mobs/:id/loot/:lid` | eq_editor | update loot |
-| DELETE | `/api/mobs/:id/loot/:lid` | eq_editor | remove loot |
-| POST | `/api/mobs/:id/images` | eq_editor | upload images (base64 array) |
-| GET | `/api/mobs/:id/images/:iid` | eq_viewer | serve image binary |
-| DELETE | `/api/mobs/:id/images/:iid` | eq_editor | remove image |
-| POST | `/api/mobs/:id/maps` | eq_editor | create/update ASCII map |
-| DELETE | `/api/mobs/:id/maps/:mid` | eq_editor | remove map |
-| GET | `/api/mobs/:id/history?page=N` | eq_viewer | paginated edit history |
+| GET | `/api/mobs?q=...` | eqmobs | list/search mobs |
+| GET | `/api/mobs/:id` | eqmobs | full mob detail (all sub-resources joined) |
+| POST | `/api/mobs` | eqmobs_edit | create mob |
+| POST | `/api/mobs/:id` | eqmobs_edit | update mob (requires `version` for optimistic lock) |
+| DELETE | `/api/mobs/:id` | eqmobs_edit | delete mob + cascade + disk cleanup |
+| POST | `/api/mobs/:id/resistances` | eqmobs_edit | bulk set all 9 damage types |
+| POST | `/api/mobs/:id/prots` | eqmobs_edit | add/upsert protection |
+| DELETE | `/api/mobs/:id/prots/:pid` | eqmobs_edit | remove protection |
+| POST | `/api/mobs/:id/guilds` | eqmobs_edit | add guild role |
+| POST | `/api/mobs/:id/guilds/:gid` | eqmobs_edit | update guild role |
+| DELETE | `/api/mobs/:id/guilds/:gid` | eqmobs_edit | remove guild |
+| POST | `/api/mobs/:id/loot` | eqmobs_edit | add loot |
+| POST | `/api/mobs/:id/loot/:lid` | eqmobs_edit | update loot |
+| DELETE | `/api/mobs/:id/loot/:lid` | eqmobs_edit | remove loot |
+| POST | `/api/mobs/:id/images` | eqmobs_edit | upload images (base64 array) |
+| GET | `/api/mobs/:id/images/:iid` | eqmobs | serve image binary |
+| DELETE | `/api/mobs/:id/images/:iid` | eqmobs_edit | remove image |
+| POST | `/api/mobs/:id/maps` | eqmobs_edit | create/update ASCII map |
+| DELETE | `/api/mobs/:id/maps/:mid` | eqmobs_edit | remove map |
+| GET | `/api/mobs/:id/history?page=N` | eqmobs | paginated edit history |
 
-EQ role management (admin only, on the users router):
+Capability-flag management (admin only, on the users router):
 
 | Method | Path | Purpose |
 |---|---|---|
-| GET | `/api/users/:id/eq-roles` | get user's eq roles |
-| POST | `/api/users/:id/eq-roles` | `{roles: ['eq_editor']}` — set eq roles |
+| GET | `/api/users/:id/flags` | get a user's capability flags |
+| POST | `/api/users/:id/flags` | `{flags: ['eqmobs','eqmobs_edit',…]}` — replace the user's flag set (validated against `FLAGS`) |
 
 ## Equipment catalog (`/api/equipment`)
 
 The redesigned equipment API — structured items (parsed once at add
 time, not re-parsed on read) with ownership as a tag. **Supersedes
-`/api/eq`** (below). All endpoints require an authenticated session
-(`requireAuth` — any viewer/editor/admin); items are shared catalog
+`/api/eq`** (below). Reads require the `equipment` flag; catalog/ownership
+writes (`/add`, `/items/:id/own`, `/eqmobs` POST) require `equipment_edit`;
+the compute-only `/build` stays at view level. Items are shared catalog
 rows, ownership is per user. Backed by `eq_items` / `eq_item_bonuses` /
 `eq_ownership` ([schema.md](schema.md)). Full design in
 [equipment-redesign.md](equipment-redesign.md).
@@ -276,4 +277,4 @@ in-game callers.
 - All mutation handlers wrap their body in try/catch and return
   `{ok:false, error}` on any exception — never leak stack traces.
 - Errors use HTTP status 400 for input/business errors, 401 for
-  missing session, 403 for wrong role, 404 for missing resources.
+  missing session, 403 for insufficient role/flag, 404 for missing resources.

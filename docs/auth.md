@@ -1,38 +1,75 @@
 # Auth and role system
 
-zeq uses a server-side session model with three roles: **admin**,
-**editor**, and **viewer**. All middleware lives in
+zeq uses a server-side session model. Access is **capability-flag based**:
+`users.role = 'admin'` is a master switch that implies every flag; every
+other account is a plain `viewer` whose access is granted through flags in
+the `user_roles` table. All middleware lives in
 [api/rest/api/auth.mjs](../api/rest/api/auth.mjs); all user-management
 endpoints live in [api/rest/api/users.mjs](../api/rest/api/users.mjs).
 
-## Roles
+## Capability flags
 
-| Role    | Read game data | Modify game data | Manage users |
-|---------|:-:|:-:|:-:|
-| viewer  | ✓ |   |   |
-| editor  | ✓ | ✓ |   |
-| admin   | ✓ | ✓ | ✓ |
+Each functional area has a **view** flag and, where it makes sense, a
+companion **`_edit`** flag that implies its view flag. Flags are rows in
+`user_roles (user_id, role)` — the same table the old eq roles used.
 
-The UI mirrors this: viewers see every page but no edit controls; the
-Users nav link only appears for admins; the server enforces all of it
-regardless of the UI state.
+| Flag | Grants | Nav section | Endpoints |
+|---|---|---|---|
+| `equipment` | view catalog / My & All Equipment / EQ Builder | Equipment | `/api/equipment` GET + `/build` |
+| `equipment_edit` | add/edit items, tag ownership (implies `equipment`) | Equipment (Add) | `/api/equipment` POST/DELETE |
+| `lookups` | KYA lookup (read-only) | Lookups | `/api/kya` |
+| `eqmobs` | view the EQ Mob KB | EQ Mobs | `/api/mobs` GET |
+| `eqmobs_edit` | edit the EQ Mob KB (implies `eqmobs`) | EQ Mobs | `/api/mobs` POST/DELETE |
+| `planner_admin` | view + edit Races/Guilds/Skills/Spells/Costs | Planner Admin | `/api/game/*` mutations |
+| `admin` (role) | everything above **plus** Users + Bug Reports | Admin | `/api/users`, `/api/bugs`, `/api/updates` |
 
-Middleware exports:
-- `requireAuth` — any authenticated active user (viewer+).
-- `requireEditor` — editor or admin.
-- `requireAdmin` — admin only.
-- `requireEqViewer` — has `eq_viewer` or `eq_editor` in `user_roles`, or is admin.
-- `requireEqEditor` — has `eq_editor` in `user_roles`, or is admin.
+Notes:
+- **admin implies all** — an admin needs no `user_roles` rows.
+- `planner_admin` and `lookups` are single flags (no view/edit split):
+  game data is already public in the planner so a read-only admin view is
+  pointless, and KYA has no edit UI.
+- Reads of `/api/game/*` are **public** (the reinc planner is anonymous);
+  only mutations require `planner_admin`.
 
-The eq roles are supplementary — stored in `user_roles` table, not
-`users.role`. `loadUser()` queries both tables and returns `eqRoles: [...]`
-on the user object. The `/api/auth/me` response includes `eqRoles`.
-Admins get eq roles via `user_roles` or automatically (middleware checks
-`role === 'admin'`). `eq_editor` implies `eq_viewer`.
+`FLAGS` (the canonical list) and `FLAG_IMPLIES` live in auth.mjs.
+`effectiveFlags(user)` expands a user's raw `user_roles` into the full set
+(admin → all, `*_edit` → its view flag). `loadUser()` returns `flags: [...]`
+on the user object; `/api/auth/me` and the login response both include it.
 
-Each GET endpoint on `/api/game/*` uses `requireAuth`; every mutation
-(POST/DELETE) uses `requireEditor`; every `/api/users/*` endpoint uses
-`requireAdmin`.
+## Middleware
+
+- `requireAuth` — any authenticated active user, regardless of flags.
+- `requireAdmin` — `role === 'admin'`.
+- `requireFlag(...names)` — passes if the user is an admin **or** holds any
+  of the named flags (edit implies view via `effectiveFlags`). This is the
+  workhorse: `requireFlag('equipment')`, `requireFlag('equipment_edit')`,
+  `requireFlag('planner_admin')`, etc.
+- `requireEqViewer` / `requireEqEditor` — thin aliases kept for the EQ Mob
+  KB router: `requireFlag('eqmobs','eqmobs_edit')` / `requireFlag('eqmobs_edit')`.
+
+`game.mjs` defines a local `const requireEditor = requireFlag('planner_admin')`
+so its many call sites did not have to change.
+
+## Users admin UI
+
+The Users page ([Users.vue](../www/src/components/Users.vue)) renders a
+matrix: an **Admin** checkbox (role admin↔viewer) plus a checkbox per
+view/edit flag. Toggling posts the full desired set to
+`POST /api/users/:id/flags` (validated against `FLAGS`); ticking an `_edit`
+box auto-ticks its view box and vice-versa. Admin rows show every box
+ticked+disabled (implicit all). `GET /api/users/` returns `flags: [...]`
+per user.
+
+## Migration from the old role model
+
+The legacy model was `users.role ∈ {viewer,editor,admin}` +
+`user_roles ∈ {eq_viewer,eq_editor}`. [scripts/migrate_roles.mjs](../scripts/migrate_roles.mjs)
+(idempotent, dry-run by default, `--apply` to write, snapshots pristine
+state into `*_premigration` tables first) maps, preserving access:
+`editor → planner_admin` (role downgraded to viewer), `eq_viewer → eqmobs`,
+`eq_editor → eqmobs + eqmobs_edit`, and grants `equipment + equipment_edit +
+lookups` to every active non-admin (anyone who could already reach those
+areas). Admins are untouched.
 
 ## Sessions
 

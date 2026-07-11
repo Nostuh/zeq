@@ -243,7 +243,7 @@ export default {
 .upd-list { list-style: none; padding: 0; margin: 0; }
 .upd-item {
     display: grid;
-    grid-template-columns: 7.5rem 5rem 1fr auto;
+    grid-template-columns: 7.5rem 5rem minmax(0, 1fr) auto;
     gap: 0.75rem;
     align-items: start;
     padding: 0.6rem 0;

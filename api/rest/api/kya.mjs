@@ -2,12 +2,14 @@
 // Ingest still lives at POST /api/eq/kya for backward compat with the
 // in-game trigger; everything new lives here. See docs/kya.md.
 //
-// All reads gated to any authenticated user (requireAuth) — same level
-// as the legacy "My Equipment" page.
+// All reads gated on the `lookups` capability flag (admins implicit).
 
 import express from 'express';
 import dbs from '../../db.mjs';
-import { requireAuth } from './auth.mjs';
+import { requireFlag } from './auth.mjs';
+
+// KYA is read-only, so a single access flag covers the whole area.
+const requireLookups = requireFlag('lookups');
 
 const router = express.Router();
 const zeq = dbs.get('zeq');
@@ -40,7 +42,7 @@ const EXTRACT_SQL = `
 
 // Distinct mob names matching the search. Aggregates entry counts by
 // pattern so the UI can show "Watcher — 12 kya, 8 consider" etc.
-router.get('/mobs', requireAuth, async function(req, res) {
+router.get('/mobs', requireLookups, async function(req, res) {
     try {
         const q = String(req.query.q || '').trim();
         const params = { q: `%${q}%` };
@@ -71,7 +73,7 @@ router.get('/mobs', requireAuth, async function(req, res) {
 // All raw entries for one mob (case-insensitive exact match on the
 // extracted name). Returns id, pattern, info — the client parses
 // buckets / consider phrases for display.
-router.get('/by-mob', requireAuth, async function(req, res) {
+router.get('/by-mob', requireLookups, async function(req, res) {
     try {
         const name = String(req.query.name || '').trim();
         if (!name) return fail(res, 'name required');

@@ -25,9 +25,11 @@ export default {
         add_eq() { this.$router.push({ name: "equipment-add" }); },
         get_config() {
             const cfg = {
-                // "Have" toggle only on the All Equipment view — on My
-                // Equipment every row is owned, so the column is noise.
-                ...(this.mine ? {} : { owned: { header: "Have", display_type: "toggle", callback: this.toggle_owned } }),
+                // "Have" toggle only on the All Equipment view (on My
+                // Equipment every row is owned, so the column is noise) AND
+                // only for users who can edit — tagging ownership is an
+                // equipment_edit write, so view-only users don't get it.
+                ...(!this.mine && this.$root.canEquipmentEdit ? { owned: { header: "Have", display_type: "toggle", callback: this.toggle_owned } } : {}),
                 name: { header: "Name" },
                 slot_disp: { header: "Slot" },
                 wc: { header: "WpnCls" },
@@ -119,12 +121,20 @@ export default {
 :deep(table.table) > :not(caption) > * > * {
     padding: 0.2rem 0.35rem;
 }
+/* The 24-stat-column catalog is intrinsically wide — wider than the main
+   content column once the sidebar is present, and far wider than a phone.
+   Contain it in its own horizontal-scroll region so the page itself never
+   scrolls sideways on tablet/mobile/laptop. */
+:deep(.zSimpleTable) {
+    overflow-x: auto;
+    max-width: 100%;
+}
 </style>
 
 <template>
     <div>
         <h2>{{ mine ? 'My Equipment' : 'All Equipment' }}</h2>
-        <button class="btn btn-primary" type="button" @click="add_eq">Add Item</button>
+        <button v-if="$root.canEquipmentEdit" class="btn btn-primary" type="button" @click="add_eq">Add Item</button>
         <br><br><br>
         <zSimpleTableVue ref="zSimpleTableVue"></zSimpleTableVue>
     </div>

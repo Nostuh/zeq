@@ -1,14 +1,15 @@
 // Game-data API: races, guilds, skills, spells, costs.
-// GET endpoints: require viewer+ (any authenticated user).
-// Mutations: require editor+.
+// GET endpoints: public (the reinc planner needs them).
+// Mutations: require the `planner_admin` capability flag.
 
 import express from 'express';
 import dbs from '../../db.mjs';
-import { requireEditor } from './auth.mjs';
+import { requireFlag } from './auth.mjs';
 
 // GET endpoints on game data are public — the reinc planner at `/reinc`
-// is available to anonymous visitors. Mutations still require editor+.
+// is available to anonymous visitors. Mutations require planner_admin.
 const requireAuth = (req, res, next) => next();
+const requireEditor = requireFlag('planner_admin');
 
 const router = express.Router();
 const zeq = dbs.get('zeq');

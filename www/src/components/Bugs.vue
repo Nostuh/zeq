@@ -62,6 +62,7 @@ export default {
             <option value="wontfix">Won't fix</option>
         </select>
     </div>
+    <div class="table-responsive">
     <table class="table table-sm table-striped align-middle">
         <thead><tr><th>#</th><th>Title</th><th>Status</th><th>Reporter</th><th>Page</th><th>When</th><th style="width:22em;"></th></tr></thead>
         <tbody>
@@ -125,6 +126,7 @@ export default {
             </template>
         </tbody>
     </table>
+    </div>
 </div>
 </template>
 <style scoped>

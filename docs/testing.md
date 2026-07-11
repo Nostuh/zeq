@@ -1,14 +1,41 @@
 # Responsive / usability testing
 
 A headless-browser harness lives at [scripts/test/responsive.mjs](../scripts/test/responsive.mjs).
-It drives Puppeteer (bundled Chromium) against the locally-served build,
-loads each page at a matrix of viewport sizes, and fails the run if any
-breakpoint has a layout issue that would affect real users.
+It drives Puppeteer (bundled Chromium) against the served build, loads
+**every page** — public and login-gated — at a matrix of viewport sizes,
+and fails the run if any breakpoint has a layout issue that would affect
+real users.
 
 The harness exists because "the site is responsive" was asserted several
 times before anyone actually verified a 360px phone viewport. This is
 the canonical way to verify a UI change works at every breakpoint —
 prefer it over eyeballing.
+
+## When to run — ON DEMAND ONLY
+
+**Run this harness only when the user explicitly asks for it.** It is a
+saved, on-demand mobile/tablet/desktop gate — not part of the normal
+build or commit flow. A full run drives Chromium over every page × 8
+viewports and is slow on this host (1 CPU, ~756MB RAM + swap; the harness
+sets generous launch/navigation timeouts and `--disable-dev-shm-usage` to
+cope). Do not kick it off unprompted. See CLAUDE.md ("only runs when
+asked").
+
+## Authenticated pages
+
+Most routes (equipment, mobs, planner-admin, users, bugs) are
+login-gated, so the harness authenticates. Rather than drive the login
+form — or create a throwaway account, which would burn a `users.id` and
+clutter the Users list — `ensureAuthSession()` **borrows an existing
+active admin** and mints only a short-lived `sessions` row for it (random
+hex PK, nothing auto-increments; `last_login` untouched), then injects the
+`zeq_sid` cookie into an isolated browser context. Authed cases run there;
+public cases (reinc, login) run anonymously. The session is deleted when
+the run ends. This needs DB access via `api/classes/config.json`; if that
+fails the authed cases are skipped and the public ones still run. Detail routes (`mob-detail`,
+`guild-detail`) resolve a real id from the API before navigating. The
+harness never submits forms or clicks destructive buttons — it only opens
+overlays and clicks tabs, so it is safe to run against production.
 
 ## Running
 
@@ -71,23 +98,40 @@ Append an entry to `CASES` in `responsive.mjs`:
 
 ```js
 {
-    route: '/#/races',
-    label: 'races-admin',
-    mustBeVisibleOnLoad: ['h2', 'table thead'],
-    mustExist: ['table tbody tr', 'button.btn-outline-primary'],
+    route: '/#/races', label: 'races', auth: true,
+    waitFor: 'table.table-hover tbody tr',   // waited for after network-idle
+    mustBeVisibleOnLoad: ['.app-content main h2'],
+    mustExist: ['.app-content main h2', 'input.form-control', 'table.table'],
+    modals: [BUG_MODAL],                     // sweep the global report modal
     // expectNoPageScroll is false (omitted) because the admin tables
     // are long and legitimately scroll the page.
 },
 ```
 
-A case should either assert no page scroll OR scroll freely — don't mix
-semantics. The reinc planner is the only "locked viewport" route today;
-every admin page and the login page scroll normally.
+Add `auth: true` for a login-gated route (runs in the injected-session
+context). Use `.app-content main h2` for the page heading — a bare `h2`
+also matches the visually-hidden SEO block. `waitFor` is a selector the
+harness waits for after network-idle (a data-loaded marker). `detail:
+'mob' | 'guild'` turns the case into a detail page whose id is resolved
+from the API at runtime. A case should either assert no page scroll OR
+scroll freely — don't mix semantics. The reinc planner is the only
+"locked viewport" route; every admin page and the login page scroll
+normally. Elements inside a horizontal-scroll wrapper (wide tables) are
+allowed to extend past the viewport — only page-level horizontal overflow
+fails a case.
 
 ## Modal sweep
 
-After the tab walk, the harness opens every planner modal via real DOM
-clicks and checks each panel fits the viewport:
+The only true overlay in the SPA is the global **Report-Bug/Idea** modal
+(App.vue, opened by the persistent `.fab-report` FAB) — every page's
+"edit/add/import" affordance is an inline `v-if` reveal, not a modal, and
+deletes use native `confirm()`. So the harness sweeps that one global
+modal on **every authed page** (confirming it fits over each layout) plus
+the reinc planner's own modals. `sweepTabs: true` cases (Costs,
+GuildDetail) click through each tab by index and re-check overflow.
+
+On the reinc planner, after the tab walk, the harness opens every planner
+modal via real DOM clicks and checks each panel fits the viewport:
 
 - **bug-report** — opens via the `.fab-report` FAB (always visible,
   including at <560px where the header Report button hides). Asserts
@@ -129,10 +173,14 @@ dnf install -y nss atk at-spi2-atk cups-libs libdrm gtk3 \
 2. `cd ../../scripts/test && node responsive.mjs`
 3. Fix any failures. Look at the corresponding `_initial.png` screenshot
    to understand *why* a breakpoint failed.
-4. Re-run until all 16 cases (2 routes × 8 viewports) are green.
+4. Re-run until every case (each route × 8 viewports) is green.
 
 This is a hard gate for any responsive-design work per
-[CLAUDE.md](../CLAUDE.md).
+[CLAUDE.md](../CLAUDE.md). Wide data tables (equipment, users, races,
+guilds) must scroll inside a `.table-responsive` wrapper (or, for the
+shared `zSimpleTable`, an `overflow-x: auto` container) so the page body
+never scrolls sideways; the header nav wraps rather than overflow. These
+were the fixes the authed-page coverage first surfaced.
 
 # Engine math audit
 

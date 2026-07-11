@@ -85,6 +85,7 @@ export default {
         </div>
     </div></div>
 
+    <div class="table-responsive">
     <table class="table table-sm table-striped table-hover">
         <thead><tr><th>Name</th><th>File</th><th>Max level</th><th>Status</th><th></th></tr></thead>
         <tbody>
@@ -118,5 +119,6 @@ export default {
             </template>
         </tbody>
     </table>
+    </div>
 </div>
 </template>

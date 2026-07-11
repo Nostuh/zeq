@@ -60,12 +60,41 @@ export async function loadUser(req) {
         { sid });
     if (!rows[0]) return null;
     const user = rows[0];
-    // Load supplementary roles from user_roles table.
-    const eqRows = await zeq.query(
+    // Capability flags live in the user_roles table (supplementary to
+    // users.role). See FLAGS below and docs/auth.md.
+    const flagRows = await zeq.query(
         `SELECT role FROM user_roles WHERE user_id = @uid`,
         { uid: user.id });
-    user.eqRoles = eqRows.map(r => r.role);
+    user.flags = flagRows.map(r => r.role);
     return user;
+}
+
+// ---- Capability flags (access control) ----------------------------------
+// Access is flag-based. `users.role = 'admin'` is the master switch and
+// implies every flag. Each area has a view flag and, where useful, a
+// companion `*_edit` flag that implies its view flag. Flags are stored as
+// rows in user_roles. See docs/auth.md.
+export const FLAGS = [
+    'equipment', 'equipment_edit',   // Equipment catalog + EQ Builder
+    'lookups',                       // KYA lookup (read-only)
+    'eqmobs', 'eqmobs_edit',         // EQ Mob Knowledge Base
+    'planner_admin',                 // Races/Guilds/Skills/Spells/Costs admin
+];
+const FLAG_IMPLIES = {
+    equipment_edit: ['equipment'],
+    eqmobs_edit: ['eqmobs'],
+};
+
+// Expand a user's raw user_roles into the effective flag set, honouring
+// admin-implies-all and edit-implies-view.
+export function effectiveFlags(user) {
+    if (user && user.role === 'admin') return new Set(FLAGS);
+    const s = new Set();
+    for (const f of (user && user.flags) || []) {
+        s.add(f);
+        for (const imp of (FLAG_IMPLIES[f] || [])) s.add(imp);
+    }
+    return s;
 }
 
 export function requireRole(...roles) {
@@ -80,26 +109,29 @@ export function requireRole(...roles) {
     };
 }
 
-// Any authenticated user (viewer, editor, admin)
+// Any authenticated active user, regardless of flags.
 export const requireAuth = requireRole('viewer', 'editor', 'admin');
-export const requireEditor = requireRole('editor', 'admin');
 export const requireAdmin = requireRole('admin');
 
-// EQ Mob Knowledge Base roles — checked against user_roles table.
-// Admins automatically have access to everything.
-export function requireEqRole(...eqRoles) {
+// Gate a route on one or more capability flags. Passes if the user is an
+// admin (implicit all) or holds any of the named flags (edit implies view).
+export function requireFlag(...need) {
     return async function(req, res, next) {
         const u = await loadUser(req);
         if (!u) return res.status(401).json({ ok: false, error: 'not authenticated' });
-        if (u.role === 'admin' || eqRoles.some(r => u.eqRoles.includes(r))) {
+        const eff = effectiveFlags(u);
+        if (u.role === 'admin' || need.some(f => eff.has(f))) {
             req.user = u;
             return next();
         }
         return res.status(403).json({ ok: false, error: 'forbidden' });
     };
 }
-export const requireEqViewer = requireEqRole('eq_viewer', 'eq_editor');
-export const requireEqEditor = requireEqRole('eq_editor');
+
+// Back-compat aliases used by the EQ Mob KB router (mobs.mjs); the KB is
+// now gated on the eqmobs / eqmobs_edit flags.
+export const requireEqViewer = requireFlag('eqmobs', 'eqmobs_edit');
+export const requireEqEditor = requireFlag('eqmobs_edit');
 
 // --- routes ---
 router.post('/login', async function(req, res) {
@@ -150,11 +182,11 @@ router.post('/login', async function(req, res) {
             path: '/',
             maxAge: SESSION_DAYS * 86400,
         }));
-        // Load eqRoles for the login response.
-        const eqRows = await zeq.query(
+        // Capability flags for the SPA to gate nav/controls.
+        const flagRows = await zeq.query(
             `SELECT role FROM user_roles WHERE user_id = @uid`, { uid: u.id });
-        const eqRoles = eqRows.map(r => r.role);
-        res.json({ ok: true, data: { id: u.id, name: u.name, role: u.role, eqRoles } });
+        const flags = flagRows.map(r => r.role);
+        res.json({ ok: true, data: { id: u.id, name: u.name, role: u.role, flags } });
     } catch (e) {
         console.error(e);
         res.status(500).json({ ok: false, error: 'server error' });
@@ -174,7 +206,7 @@ router.post('/logout', async function(req, res) {
 router.get('/me', async function(req, res) {
     const u = await loadUser(req);
     if (!u) return res.json({ ok: true, data: null });
-    res.json({ ok: true, data: { id: u.id, name: u.name, role: u.role, eqRoles: u.eqRoles || [] } });
+    res.json({ ok: true, data: { id: u.id, name: u.name, role: u.role, flags: u.flags || [] } });
 });
 
 export const auth = router;

@@ -11,9 +11,8 @@ export default {
                 if (r.data.ok) {
                     this.$root.user = r.data.data;
                     this.$root.flashMsg('Logged in');
-                    const role = r.data.data.role;
-                    const dest = (role === 'admin' || role === 'editor') ? 'races' : 'home';
-                    this.$router.push({ name: dest });
+                    // Land on the first area this user's flags allow.
+                    this.$router.push({ name: this.$root.landingRoute() });
                 } else {
                     this.err = r.data.error || 'login failed';
                 }

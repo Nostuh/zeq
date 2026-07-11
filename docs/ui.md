@@ -18,10 +18,12 @@ is [www/src/main.js](../www/src/main.js); the root component is
   change at ~360px (mobile), ~800px (tablet), and ≥1280px (desktop).
   Desktop layouts should fill the available viewport width — avoid
   narrow `max-width` constraints on the main planner/admin pages.
-- **Role-aware rendering.** Edit controls are hidden (not just
-  disabled) when `$root.canEdit === false`. The Users nav link is
-  hidden when `$root.isAdmin === false`. The server enforces the same
-  rules regardless, so the UI check is purely ergonomic.
+- **Flag-aware rendering.** Every sidebar section and edit control is
+  gated on a capability flag (see [auth.md](auth.md)). Edit controls are
+  hidden (not just disabled) when the matching `_edit` capability is
+  false; whole sections/links are hidden when the view capability is
+  false. The server enforces the same rules regardless, so the UI check
+  is purely ergonomic.
 - **Fetch, not reload.** Every mutation is an `axios.post`/`.delete`
   followed by a local data refresh and a flash message via
   `$root.flashMsg(msg)` or `$root.flashError(e)`.
@@ -33,8 +35,15 @@ is [www/src/main.js](../www/src/main.js); the root component is
 `App.vue` is the owner of auth state and flash state. Components read
 and call via `$root`:
 
-- `$root.user` — `{id, name, role}` or `null`.
-- `$root.isAuthed` / `$root.isAdmin` / `$root.isEditor` / `$root.canEdit`.
+- `$root.user` — `{id, name, role, flags: [...]}` or `null`.
+- `$root.isAuthed` / `$root.isAdmin`.
+- Capability computeds (all admin-implied): `canEquipment` /
+  `canEquipmentEdit`, `canLookups`, `canEqmobs` / `canEqmobsEdit`,
+  `canPlannerAdmin`. Back-compat aliases still used by page components:
+  `canEdit` (= `canPlannerAdmin`), `canEditEq` (= `canEqmobsEdit`),
+  `hasEqAccess` (= `canEqmobs`). `hasAnySection` gates the "no access" hint.
+- `$root.routeAllowed(name)` / `$root.landingRoute()` — the per-route flag
+  gate and the post-login landing target.
 - `$root.flashMsg(msg, type = 'success')` — green/red toast top-right.
 - `$root.flashError(e)` — extracts `e.response.data.error` and shows it.
 - `$root.loadMe()` — re-hydrates `user` from `/api/auth/me`.
@@ -43,10 +52,14 @@ and call via `$root`:
 `$root` is also the correct place to stash any small global that a
 handful of components need; don't reach for Vuex or Pinia for this.
 
-On every route change, `App.vue`'s `watch: $route` re-checks the
-session (`loadMe()` if `user` is null) and kicks unauthenticated users
-back to `dashboard` (the login page). It also redirects non-admins
-off the users page.
+On every route change (and on mount), `App.vue`'s `enforceRouteAccess`
+re-checks the session (`loadMe()` if `user` is null), kicks
+unauthenticated users to `login`, and redirects any user lacking the
+route's required flag back to `home` (the public planner). The
+`routeAllowed(name)` switch is the single source of truth for which flag
+each route needs — keep it in sync with the sidebar `v-if`s. The sidebar
+is organised into flag-gated sections: **Equipment**, **Lookups**,
+**EQ Mobs**, **Planner Admin**, **Admin** (Users + Bug Reports).
 
 ## Component layout
 
@@ -116,12 +129,12 @@ right (~220px sticky). Components:
   right. Auto-strips non-7-bit ASCII on paste. Line/col counter.
 
 Route guard: `/mobs` and `/mobs/:id` redirect to home if
-`$root.hasEqAccess` is false. Sidebar nav "EQ Mobs" section is between
-Equipment and Admin, gated on `hasEqAccess`.
+`$root.hasEqAccess` (= `canEqmobs`) is false. Sidebar "EQ Mobs" section
+is gated on the same, between Lookups and Planner Admin.
 
-New `$root` computed properties:
-- `hasEqAccess` — user has eq_viewer or eq_editor, or is admin
-- `canEditEq` — user has eq_editor, or is admin
+Relevant `$root` computeds (see the Global-state section above):
+- `canEqmobs` (alias `hasEqAccess`) — has `eqmobs` or `eqmobs_edit`, or admin
+- `canEqmobsEdit` (alias `canEditEq`) — has `eqmobs_edit`, or admin
 
 ## Avoid
 

@@ -278,7 +278,8 @@ export default {
     <div v-if="!selected">
         <div v-if="loading" class="text-muted">Loading…</div>
         <div v-else-if="!mobs.length" class="text-muted">No matches.</div>
-        <table v-else class="table table-sm table-striped table-hover">
+        <div v-else class="table-responsive">
+        <table class="table table-sm table-striped table-hover">
             <thead>
                 <tr>
                     <th>Mob</th>
@@ -298,6 +299,7 @@ export default {
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
 
     <!-- Detail view -->

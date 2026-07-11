@@ -45,19 +45,25 @@ export default {
     },
     computed: {
         isAuthed() { return !!this.user; },
-        isAdmin() { return this.user && this.user.role === 'admin'; },
-        isEditor() { return this.user && (this.user.role === 'admin' || this.user.role === 'editor'); },
-        canEdit() { return this.isEditor; },
-        hasEqAccess() {
-            if (!this.user) return false;
-            if (this.user.role === 'admin') return true;
-            const eq = this.user.eqRoles || [];
-            return eq.includes('eq_viewer') || eq.includes('eq_editor');
-        },
-        canEditEq() {
-            if (!this.user) return false;
-            if (this.user.role === 'admin') return true;
-            return (this.user.eqRoles || []).includes('eq_editor');
+        isAdmin() { return !!(this.user && this.user.role === 'admin'); },
+        // Raw capability flags from the server (user_roles rows). Admins
+        // hold every flag implicitly via the isAdmin short-circuits below.
+        // Mirrors effectiveFlags() in api/rest/api/auth.mjs.
+        userFlags() { return new Set((this.user && this.user.flags) || []); },
+        canPlannerAdmin()  { return this.isAdmin || this.userFlags.has('planner_admin'); },
+        canEquipment()     { return this.isAdmin || this.userFlags.has('equipment') || this.userFlags.has('equipment_edit'); },
+        canEquipmentEdit() { return this.isAdmin || this.userFlags.has('equipment_edit'); },
+        canLookups()       { return this.isAdmin || this.userFlags.has('lookups'); },
+        canEqmobs()        { return this.isAdmin || this.userFlags.has('eqmobs') || this.userFlags.has('eqmobs_edit'); },
+        canEqmobsEdit()    { return this.isAdmin || this.userFlags.has('eqmobs_edit'); },
+        // Back-compat aliases consumed by existing page components so their
+        // `$root.canEdit` / `$root.canEditEq` references keep working.
+        canEdit()     { return this.canPlannerAdmin; },  // Races/Guilds/Skills/Spells/Costs edit controls
+        canEditEq()   { return this.canEqmobsEdit; },    // Mob KB edit controls
+        hasEqAccess() { return this.canEqmobs; },        // EQ Mobs nav/route gate
+        hasAnySection() {
+            return this.canEquipment || this.canLookups || this.canEqmobs
+                || this.canPlannerAdmin || this.isAdmin;
         },
         onReinc() { return this.$route && ['home','reinc','dashboard'].includes(this.$route.name); },
     },
@@ -72,6 +78,47 @@ export default {
             try { await axios.post('/api/auth/logout'); } catch (e) {}
             this.user = null;
             this.$router.push({ name: 'home' });
+        },
+        // Capability required to VIEW a given route. Public/unlisted routes
+        // return true. The server enforces the same rules regardless — this
+        // is ergonomic routing only. Keep in sync with the sidebar v-ifs.
+        routeAllowed(name) {
+            switch (name) {
+                case 'equipment': case 'equipment-all': case 'equipment-build':
+                    return this.canEquipment;
+                case 'equipment-add':
+                    return this.canEquipmentEdit;
+                case 'kya':
+                    return this.canLookups;
+                case 'mobs': case 'mob-detail':
+                    return this.canEqmobs;
+                case 'races': case 'guilds': case 'guild-detail':
+                case 'skills': case 'spells': case 'costs':
+                    return this.canPlannerAdmin;
+                case 'users': case 'bugs':
+                    return this.isAdmin;
+                default:
+                    return true; // public or unguarded
+            }
+        },
+        // Where to send a user after login / from the header "enter app"
+        // link — the first area they can actually reach.
+        landingRoute() {
+            if (this.canPlannerAdmin) return 'races';
+            if (this.canEquipment) return 'equipment';
+            if (this.canEqmobs) return 'mobs';
+            if (this.canLookups) return 'kya';
+            if (this.isAdmin) return 'users';
+            return 'home';
+        },
+        enforceRouteAccess(to) {
+            const name = to && to.name;
+            const isPublic = PUBLIC_ROUTES.includes(name);
+            if (!this.user) {
+                if (!isPublic) this.$router.push({ name: 'login' });
+                return;
+            }
+            if (!this.routeAllowed(name)) this.$router.push({ name: 'home' });
         },
         flashMsg(msg, type = 'success') {
             this.flash = { msg, type };
@@ -159,22 +206,14 @@ export default {
         this.ready = true;
         this.syncReincBodyClass();
         this.syncDocumentTitle();
+        this.enforceRouteAccess(this.$route);
     },
     watch: {
         onReinc() { this.syncReincBodyClass(); },
         async $route(to) {
             this.syncDocumentTitle();
             if (!this.user) await this.loadMe();
-            const isPublic = PUBLIC_ROUTES.includes(to.name);
-            if (!this.user && !isPublic) {
-                this.$router.push({ name: 'login' });
-            }
-            if (to.name === 'users' && !this.isAdmin) {
-                this.$router.push({ name: 'home' });
-            }
-            if ((to.name === 'mobs' || to.name === 'mob-detail') && !this.hasEqAccess) {
-                this.$router.push({ name: 'home' });
-            }
+            this.enforceRouteAccess(to);
         },
     },
 };
@@ -237,8 +276,10 @@ export default {
             <router-link class="nav-link text-light me-3" :to="{name:'home'}">Planner</router-link>
             <router-link class="nav-link text-light me-3" :to="{name:'builds'}">Builds</router-link>
             <router-link class="nav-link text-light me-3" :to="{name:'updates'}">Updates</router-link>
-            <router-link v-if="isEditor" class="nav-link text-light me-3" :to="{name:'races'}">Admin</router-link>
-            <router-link v-else-if="isAuthed" class="nav-link text-light me-3" :to="{name:'equipment'}">My Equipment</router-link>
+            <router-link v-if="canPlannerAdmin" class="nav-link text-light me-3" :to="{name:'races'}">Planner Admin</router-link>
+            <router-link v-else-if="canEquipment" class="nav-link text-light me-3" :to="{name:'equipment'}">My Equipment</router-link>
+            <router-link v-else-if="canEqmobs" class="nav-link text-light me-3" :to="{name:'mobs'}">EQ Mobs</router-link>
+            <router-link v-else-if="canLookups" class="nav-link text-light me-3" :to="{name:'kya'}">Lookups</router-link>
             <button class="btn btn-sm btn-outline-warning me-3 report-btn" @click="openBug">Report Bug / Idea</button>
             <button class="btn btn-sm btn-outline-light me-3 theme-toggle"
                     @click="toggleTheme"
@@ -277,25 +318,44 @@ export default {
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" v-if="user">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment'}">My Equipment</router-link></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-all'}">All Equipment</router-link></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-add'}">Add Equipment</router-link></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-build'}">EQ Builder</router-link></li>
+                        <!-- Sidebar sections are gated by capability flag; the
+                             server enforces the same access regardless. -->
+                        <template v-if="canEquipment">
+                            <li class="nav-item"><small class="text-muted ps-2 text-uppercase fw-bold">Equipment</small></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment'}">My Equipment</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-all'}">All Equipment</router-link></li>
+                            <li class="nav-item" v-if="canEquipmentEdit"><router-link class="nav-link" :to="{name:'equipment-add'}">Add Equipment</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-build'}">EQ Builder</router-link></li>
+                        </template>
 
-                        <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Lookups</small></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'kya'}">KYA Lookup</router-link></li>
+                        <template v-if="canLookups">
+                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Lookups</small></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'kya'}">KYA Lookup</router-link></li>
+                        </template>
 
-                        <li class="nav-item mt-3" v-if="hasEqAccess"><small class="text-muted ps-2 text-uppercase fw-bold">EQ Mobs</small></li>
-                        <li class="nav-item" v-if="hasEqAccess"><router-link class="nav-link" :to="{name:'mobs'}">Mob Database</router-link></li>
+                        <template v-if="canEqmobs">
+                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">EQ Mobs</small></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'mobs'}">Mob Database</router-link></li>
+                        </template>
 
-                        <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Admin</small></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'races'}">Races</router-link></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'guilds'}">Guilds</router-link></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'skills'}">Skills</router-link></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'spells'}">Spells</router-link></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'costs'}">Costs</router-link></li>
-                        <li class="nav-item" v-if="isAdmin"><router-link class="nav-link" :to="{name:'users'}">Users</router-link></li>
-                        <li class="nav-item" v-if="isAdmin"><router-link class="nav-link" :to="{name:'bugs'}">Bug Reports</router-link></li>
+                        <template v-if="canPlannerAdmin">
+                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Planner Admin</small></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'races'}">Races</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'guilds'}">Guilds</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'skills'}">Skills</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'spells'}">Spells</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'costs'}">Costs</router-link></li>
+                        </template>
+
+                        <template v-if="isAdmin">
+                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Admin</small></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'users'}">Users</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'bugs'}">Bug Reports</router-link></li>
+                        </template>
+
+                        <li class="nav-item" v-if="!hasAnySection">
+                            <small class="text-muted ps-2">No sections enabled — ask an admin for access.</small>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -397,16 +457,26 @@ body.reinc-active #app {
    button hides on mobile because the red FAB bottom-right is the
    primary entry point on a phone anyway. */
 .zeq-navbar .brand-short { display: none; }
+/* Never let the header force horizontal page scroll: allow the right-hand
+   nav to wrap to a second line whenever the links + user controls don't fit
+   (authed views on tablets especially, where the old fixed row overflowed).
+   Wide desktop still renders everything on one line. */
+.zeq-navbar .navbar-nav { flex-wrap: wrap; row-gap: 0.15rem; justify-content: flex-end; }
 @media (max-width: 560px) {
     .zeq-navbar .navbar-brand { padding-left: 0.6rem; padding-right: 0.6rem; }
     .zeq-navbar .brand-full { display: none; }
     .zeq-navbar .brand-short { display: inline; }
+    /* Let the links wrap to a second row rather than force horizontal page
+       scroll, and drop the logged-in username badge (informational only —
+       the Log out link already signals the session). Without this the authed
+       header (Planner Admin link + long usernames) overflowed narrow phones. */
     .zeq-navbar .navbar-nav { padding-right: 0.5rem !important; }
     .zeq-navbar .navbar-nav .nav-link,
     .zeq-navbar .navbar-nav .theme-toggle,
     .zeq-navbar .navbar-nav .navbar-text { margin-right: 0.4rem !important; }
     .zeq-navbar .navbar-nav .nav-link { padding-left: 0.25rem; padding-right: 0.25rem; font-size: 0.85rem; }
     .zeq-navbar .report-btn { display: none; }
+    .zeq-navbar .navbar-text { display: none; }
 }
 
 .reinc-wrap {

@@ -89,6 +89,7 @@ export default {
         </div>
     </div></div>
 
+    <div class="table-responsive">
     <table class="table table-sm table-striped table-hover align-middle">
         <thead><tr>
             <th>On</th><th>Name</th><th>Str</th><th>Dex</th><th>Con</th><th>Int</th><th>Wis</th><th>Cha</th>
@@ -136,5 +137,6 @@ export default {
             </template>
         </tbody>
     </table>
+    </div>
 </div>
 </template>

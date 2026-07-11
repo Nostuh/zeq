@@ -1,6 +1,7 @@
 // EQ Mob Knowledge Base API.
-// All reads require eq_viewer (or eq_editor or admin).
-// All writes require eq_editor (or admin).
+// All reads require the `eqmobs` flag (or eqmobs_edit, or admin).
+// All writes require the `eqmobs_edit` flag (or admin).
+// requireEqViewer/requireEqEditor are thin flag aliases — see auth.mjs.
 
 import express from 'express';
 import fs from 'node:fs';

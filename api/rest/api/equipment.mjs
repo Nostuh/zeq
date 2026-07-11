@@ -5,7 +5,7 @@
 
 import express from 'express';
 import dbs from '../../db.mjs';
-import { requireAuth } from './auth.mjs';
+import { requireFlag } from './auth.mjs';
 import { upsertItemFromText } from '../../classes/eq_store.mjs';
 
 const router = express.Router();
@@ -14,12 +14,15 @@ const zeq = dbs.get('zeq');
 const fail = (res, msg, code = 400) => res.status(code).json({ ok: false, error: msg });
 const ok = (res, data) => res.json({ ok: true, data });
 
-// Every authenticated user has their own equipment + builder.
-router.use(requireAuth);
+// Reads require the `equipment` flag; catalog/ownership writes require
+// `equipment_edit` (which implies `equipment`). Admins get both. The
+// EQ Builder (/build) is compute-only, so it stays at view level.
+const viewEq = requireFlag('equipment');
+const editEq = requireFlag('equipment_edit');
 
 // List catalog items. `?q=` filters by name, `?mine=1` restricts to the
 // caller's owned items. Each row carries an `owned` flag for the caller.
-router.get('/items', async function(req, res) {
+router.get('/items', viewEq, async function(req, res) {
     try {
         const uid = req.user.id;
         const conds = [];
@@ -41,7 +44,7 @@ router.get('/items', async function(req, res) {
 });
 
 // Item detail incl. open-ended bonuses + the caller's ownership flag.
-router.get('/items/:id', async function(req, res) {
+router.get('/items/:id', viewEq, async function(req, res) {
     try {
         const id = parseInt(req.params.id, 10);
         if (!id) return fail(res, 'bad id');
@@ -60,7 +63,7 @@ router.get('/items/:id', async function(req, res) {
 
 // Paste identify text → parse + best-of-merge into the catalog, then tag
 // the caller as an owner. Replaces the legacy /api/eq/add + copy_to_user.
-router.post('/add', async function(req, res) {
+router.post('/add', editEq, async function(req, res) {
     try {
         const { info, slot, eqmob, note } = req.body || {};
         if (!info || !slot) return fail(res, 'info and slot are required');
@@ -74,7 +77,7 @@ router.post('/add', async function(req, res) {
 });
 
 // Tag / untag ownership of an existing catalog item.
-router.post('/items/:id/own', async function(req, res) {
+router.post('/items/:id/own', editEq, async function(req, res) {
     try {
         const id = parseInt(req.params.id, 10);
         if (!id) return fail(res, 'bad id');
@@ -88,7 +91,7 @@ router.post('/items/:id/own', async function(req, res) {
     } catch (e) { console.error('[equipment/own]', e); fail(res, 'tag failed', 500); }
 });
 
-router.delete('/items/:id/own', async function(req, res) {
+router.delete('/items/:id/own', editEq, async function(req, res) {
     try {
         const id = parseInt(req.params.id, 10);
         if (!id) return fail(res, 'bad id');
@@ -117,7 +120,7 @@ const scoreItem = (item, weights) =>
 // maximizes a weighted sum of stats. Per-slot greedy (take the top-N by
 // score for each slot's capacity) — optimal while slots are independent.
 // Body: { weights: { str: 2, con: 1, ... } }. See docs/equipment-redesign.md.
-router.post('/build', async function(req, res) {
+router.post('/build', viewEq, async function(req, res) {
     try {
         const raw = (req.body && req.body.weights) || {};
         const weights = {};
@@ -186,13 +189,13 @@ router.post('/build', async function(req, res) {
 
 // EQ mob lookup (still backed by the legacy `eqmobs` table; the catalog
 // references it via eq_items.eqmob_id).
-router.get('/eqmobs', async function(req, res) {
+router.get('/eqmobs', viewEq, async function(req, res) {
     try {
         ok(res, await zeq.query('SELECT id, name FROM eqmobs ORDER BY name'));
     } catch (e) { console.error('[equipment/eqmobs]', e); fail(res, 'list failed', 500); }
 });
 
-router.post('/eqmobs', async function(req, res) {
+router.post('/eqmobs', editEq, async function(req, res) {
     try {
         const name = (req.body && req.body.name || '').trim();
         if (!name) return fail(res, 'name is required');

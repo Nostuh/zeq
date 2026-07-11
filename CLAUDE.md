@@ -28,7 +28,7 @@ See [docs/schema.md](docs/schema.md).
 - SQL: `@name` placeholders via [api/classes/mysql.mjs](api/classes/mysql.mjs); never hand-interpolate user input.
 - New endpoints: one file in `api/rest/api/*.mjs`, `export const <name>`
   matching the filename; auto-mounted at `/api/<filename>`.
-- Auth: session cookie + roles `admin`/`editor`/`viewer`; see [docs/auth.md](docs/auth.md).
+- Auth: session cookie + **flag-based access** — `admin` role = all; else capability flags in `user_roles` (equipment/lookups/eqmobs/planner_admin, +`_edit`) via `requireFlag`. [docs/auth.md](docs/auth.md).
 - Vue: components in `www/src/components/`; ignore `old_components/`.
 - UI: dense Bootstrap tables; viewers see data, no edit controls; responsive
   via CSS grid + `@media` (no fixed px). Every new style MUST work in BOTH

@@ -14,25 +14,26 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
 import dbs from '../../db.mjs';
-import { requireAdmin } from './auth.mjs';
+import { requireAdmin, FLAGS } from './auth.mjs';
 
 const router = express.Router();
 const zeq = dbs.get('zeq');
 
-const ROLES = ['admin', 'editor', 'viewer'];
-const EQ_ROLES = ['eq_editor', 'eq_viewer'];
+// `admin` is the master role (implies every flag); everyone else is a
+// plain `viewer` whose access is granted through capability flags.
+const ROLES = ['admin', 'viewer'];
 
 function fail(res, msg, code = 400) { res.status(code).json({ ok: false, error: msg }); }
 
 router.get('/', requireAdmin, async function(req, res) {
     const rows = await zeq.query(
         `SELECT id, name, role, active, last_login, created FROM users ORDER BY name`);
-    // Attach eq roles for each user
+    // Attach capability flags for each user.
     if (rows.length) {
-        const allEq = await zeq.query(`SELECT user_id, role FROM user_roles ORDER BY user_id`);
+        const allFlags = await zeq.query(`SELECT user_id, role FROM user_roles ORDER BY user_id`);
         const byUser = {};
-        for (const r of allEq) (byUser[r.user_id] ||= []).push(r.role);
-        for (const row of rows) row.eqRoles = byUser[row.id] || [];
+        for (const r of allFlags) (byUser[r.user_id] ||= []).push(r.role);
+        for (const row of rows) row.flags = byUser[row.id] || [];
     }
     res.json({ ok: true, data: rows });
 });
@@ -130,31 +131,33 @@ router.delete('/:id', requireAdmin, async function(req, res) {
     res.json({ ok: true });
 });
 
-// --- EQ roles (supplementary roles from user_roles table) ---
+// --- Capability flags (supplementary access, from user_roles table) ---
 
-router.get('/:id/eq-roles', requireAdmin, async function(req, res) {
+router.get('/:id/flags', requireAdmin, async function(req, res) {
     const id = parseInt(req.params.id, 10);
     const rows = await zeq.query(
         `SELECT role FROM user_roles WHERE user_id = @id`, { id });
     res.json({ ok: true, data: rows.map(r => r.role) });
 });
 
-router.post('/:id/eq-roles', requireAdmin, async function(req, res) {
+// Replace a user's capability flags wholesale. The Users admin UI sends
+// the full desired set; we validate against FLAGS and rewrite. Admins
+// implicitly hold every flag, so their stored rows are cosmetic.
+router.post('/:id/flags', requireAdmin, async function(req, res) {
     const id = parseInt(req.params.id, 10);
-    const roles = req.body && Array.isArray(req.body.roles) ? req.body.roles : [];
-    // Validate all roles
-    for (const r of roles) {
-        if (!EQ_ROLES.includes(r)) return fail(res, `invalid eq role: ${r}`);
+    const flags = req.body && Array.isArray(req.body.flags) ? req.body.flags : [];
+    const clean = [...new Set(flags)];
+    for (const f of clean) {
+        if (!FLAGS.includes(f)) return fail(res, `invalid flag: ${f}`);
     }
     try {
-        // Delete existing eq roles for this user and re-insert
         await zeq.query(`DELETE FROM user_roles WHERE user_id = @id`, { id });
-        for (const r of roles) {
+        for (const f of clean) {
             await zeq.query(
                 `INSERT INTO user_roles (user_id, role) VALUES (@id, @role)`,
-                { id, role: r });
+                { id, role: f });
         }
-        res.json({ ok: true, data: roles });
+        res.json({ ok: true, data: clean });
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
 

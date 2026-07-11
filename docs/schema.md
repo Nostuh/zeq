@@ -72,7 +72,8 @@ percent range (`from_pct`, `to_pct`, `multiplier`).
 
 ### `users` (legacy + extensions)
 The legacy `users` table is preserved byte-for-byte. Added columns:
-`role` (`admin`/`editor`/`viewer`, default `viewer`), `active`
+`role` (`admin` or `viewer` — `editor` is retired in favour of the
+`planner_admin` flag; default `viewer`), `active`
 (tinyint, default 1), `password_hash` (bcrypt), `created`. The legacy
 md5 `password` column is left in place; on successful login against the
 legacy column, the password is re-hashed into `password_hash`
@@ -189,14 +190,14 @@ full rationale + phases in [equipment-redesign.md](equipment-redesign.md).
 - **`eq_ownership`** — "I have this item" as a tag, `UNIQUE(user_id,
   item_id)`, cascade on item. Replaces the legacy `copy_to_user` row copy.
 
-## Supplementary roles
+## Capability flags
 
 ### `user_roles`
-Additional roles beyond `users.role`. Keyed by `(user_id, role)`.
-Currently holds `eq_viewer` and `eq_editor` for the mob knowledge base.
-No FK to `users` (MyISAM legacy table). Admins assign from the Users
-page; the main `admin` role implicitly grants all eq access without
-needing rows here.
+Capability flags beyond `users.role`. Keyed by `(user_id, role)`. Holds
+`equipment`, `equipment_edit`, `lookups`, `eqmobs`, `eqmobs_edit`, and
+`planner_admin` (see [auth.md](auth.md)). No FK to `users` (MyISAM legacy
+table). Admins assign from the Users page; the main `admin` role
+implicitly grants every flag without needing rows here.
 
 ## EQ Mob Knowledge Base tables
 

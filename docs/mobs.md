@@ -5,26 +5,29 @@ Login-gated; access controlled by supplementary eq roles.
 
 ## Access control
 
-Two supplementary roles stored in `user_roles` table (not the main
-`users.role` column):
+Gated by two capability flags in the `user_roles` table (part of the
+app-wide flag model — see [auth.md](auth.md)):
 
-| Role | Access |
+| Flag | Access |
 |---|---|
-| `eq_viewer` | Read-only access to all mob data |
-| `eq_editor` | Full CRUD (implies eq_viewer) |
-| `admin` (main role) | Automatic full access — no user_roles entry needed |
+| `eqmobs` | Read-only access to all mob data |
+| `eqmobs_edit` | Full CRUD (implies `eqmobs`) |
+| `admin` (main role) | Automatic full access — no `user_roles` entry needed |
 
-Admins assign eq roles from the Users admin page (EQ Access column).
-Middleware: `requireEqViewer`, `requireEqEditor` in
-[auth.mjs](../api/rest/api/auth.mjs). The `/api/auth/me` response
-includes `eqRoles: [...]` so the SPA can gate nav/controls.
+Admins tick these from the Users admin page (EQ Mobs View/Edit columns).
+Middleware: `requireEqViewer` / `requireEqEditor` in
+[auth.mjs](../api/rest/api/auth.mjs) are thin aliases over
+`requireFlag('eqmobs','eqmobs_edit')` / `requireFlag('eqmobs_edit')`. The
+`/api/auth/me` response includes `flags: [...]`; the SPA gates nav/controls
+with `$root.canEqmobs` / `$root.canEqmobsEdit`.
 
 ## Tables (schema in [schema/mobs.sql](../schema/mobs.sql))
 
 All prefixed `mob_` except `user_roles`.
 
-- **`user_roles`** — `(user_id, role)` PK. Supplementary roles beyond
-  `users.role`. Currently only `eq_viewer` and `eq_editor`.
+- **`user_roles`** — `(user_id, role)` PK. Holds the app-wide capability
+  flags (`equipment`, `equipment_edit`, `lookups`, `eqmobs`, `eqmobs_edit`,
+  `planner_admin`); the EQ Mob KB uses the `eqmobs*` ones. See [auth.md](auth.md).
 - **`mob_monsters`** — core mob record. Has `version` column for
   optimistic locking. `notes` is the primary content field — the PDF
   importer puts ALL text here.
@@ -46,8 +49,8 @@ All prefixed `mob_` except `user_roles`.
 
 ## API ([api/rest/api/mobs.mjs](../api/rest/api/mobs.mjs))
 
-Mounted at `/api/mobs`. All reads require `eq_viewer`; all writes
-require `eq_editor`.
+Mounted at `/api/mobs`. All reads require the `eqmobs` flag; all writes
+require `eqmobs_edit`.
 
 Key endpoints:
 - `GET /` — list mobs, `?q=` search
