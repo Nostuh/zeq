@@ -41,6 +41,11 @@ export default {
             flash: { msg: '', type: '' },
             showBugModal: false,
             theme: 'light',
+            // Mobile-only: the sidebar carries Bootstrap's `collapse` class and
+            // is only shown at >=md via `d-md-block`. Below md it is hidden and
+            // the hamburger toggles this flag (adds `.show`) to reveal it. Reset
+            // on every route change so tapping a link closes the menu.
+            sidebarOpen: false,
         };
     },
     computed: {
@@ -212,6 +217,7 @@ export default {
         onReinc() { this.syncReincBodyClass(); },
         async $route(to) {
             this.syncDocumentTitle();
+            this.sidebarOpen = false; // tapping a sidebar link closes the mobile menu
             if (!this.user) await this.loadMe();
             this.enforceRouteAccess(to);
         },
@@ -268,6 +274,20 @@ export default {
              the FAB on the right, and gaps shrink to `me-1` so the
              remaining Planner/Builds/Updates + theme toggle + Sign in
              fit on one row. All scoped to `<560px` via `.zeq-navbar`. -->
+        <!-- Mobile nav toggle: the flag-gated sidebar sections (Equipment,
+             Lookups, EQ Mobs, Planner Admin, Admin) live in #sidebarMenu,
+             which is hidden below md. Without this button a phone user could
+             reach only the single section link in the header row. Shown only
+             on authed, non-reinc pages (reinc has no sidebar). -->
+        <button v-if="user && !onReinc"
+                class="navbar-toggler d-md-none border-0 px-3"
+                type="button"
+                @click="sidebarOpen = !sidebarOpen"
+                :aria-expanded="sidebarOpen ? 'true' : 'false'"
+                aria-controls="sidebarMenu"
+                aria-label="Toggle navigation menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <router-link :to="{name:'home'}" class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-decoration-none">
             <span class="brand-full">Zorky's — Reinc Planner</span>
             <span class="brand-short">Zorky's</span>
@@ -315,7 +335,7 @@ export default {
     </div>
     <div v-else class="container-fluid app-content">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" v-if="user">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" :class="{ show: sidebarOpen }" v-if="user">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <!-- Sidebar sections are gated by capability flag; the
