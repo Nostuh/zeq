@@ -379,14 +379,8 @@ export default {
 </script>
 
 <style scoped>
-:deep(th) {
-    position: sticky;
-    z-index: 999999;
-    top: 65px;
-    border: 0 !important;
-    outline: 1px solid;
-    outline-offset: -2px;
-}
+/* Sticky header + horizontal-scroll containment live in the shared
+   zSimpleTable component (.zst-scroll) — see there. */
 </style>
 
 <template>

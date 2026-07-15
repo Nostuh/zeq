@@ -226,6 +226,7 @@ export default {
 
 
 
+        <div class="zst-scroll">
         <table class="table table-bordered table-striped table-condensed">
             <thead>
                 <tr class="table-header">
@@ -252,6 +253,7 @@ export default {
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
 </template>
 
@@ -281,5 +283,23 @@ div.zSimpleTable > table > thead > tr > th:last-child,div.zSimpleTable > table >
 div.zSimpleTable > table > tbody > tr:last-child > td {
     border-bottom: 0;
     border-radius: 5px;
+}
+
+/* Wide, dense catalog tables scroll inside their OWN pane (both axes) so the
+   page never scrolls sideways and the header can stick reliably. A page-level
+   sticky header broke once the table had an overflow-x container (overflow-x
+   forces overflow-y, which re-parents the sticky context) and left ghost rows
+   bleeding above the header. Here the header sticks to the top of THIS pane. */
+div.zSimpleTable .zst-scroll {
+    overflow: auto;
+    max-width: 100%;
+    max-height: calc(100vh - var(--zeq-navh, 65px) - 1.5rem);
+}
+div.zSimpleTable .zst-scroll > table > thead > tr > th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    /* Opaque so tbody rows scrolling underneath never show through. */
+    background-color: var(--bs-body-bg);
 }
 </style>

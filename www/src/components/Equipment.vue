@@ -100,34 +100,16 @@ export default {
 </script>
 
 <style scoped>
-:deep(th) {
-    position: sticky;
-    z-index: 999999;
-    top: 65px;
-    border: 0 !important;
-    outline: 1px solid;
-    outline-offset: -2px;
-}
-
-/* Tighten the dense equipment grid so every stat column fits one screen
-   without horizontal scroll. Scoped to this page only — the shared
-   zSimpleTable used by other admin pages is untouched. Name/Slot/Bonuses
-   keep their default wrapping so the text columns stay narrow. The
-   higher-specificity selector (scope attr + .table) beats Bootstrap's
-   own `.table > :not(caption) > * > *` padding without !important. */
+/* Sticky header + horizontal-scroll containment now live in the shared
+   zSimpleTable component (.zst-scroll) so the header pins reliably without the
+   ghost-row bleed. Here we only tighten the dense 24-stat-column grid so more
+   columns fit at once. The higher-specificity selector (scope attr + .table)
+   beats Bootstrap's own `.table > :not(caption) > * > *` padding. */
 :deep(table.table) {
     font-size: 0.78rem;
 }
 :deep(table.table) > :not(caption) > * > * {
     padding: 0.2rem 0.35rem;
-}
-/* The 24-stat-column catalog is intrinsically wide — wider than the main
-   content column once the sidebar is present, and far wider than a phone.
-   Contain it in its own horizontal-scroll region so the page itself never
-   scrolls sideways on tablet/mobile/laptop. */
-:deep(.zSimpleTable) {
-    overflow-x: auto;
-    max-width: 100%;
 }
 </style>
 

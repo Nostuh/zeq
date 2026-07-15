@@ -258,6 +258,32 @@ const CASES = [
         label: 'login',
         mustExist: ['input[type="text"]', 'input[type="password"]', 'button[type="submit"]'],
     },
+    {
+        // Public Misc tool. Load the built-in sample and open the header "Misc"
+        // dropdown, so the checks exercise the populated two-column grid AND
+        // confirm the dropdown is anchored in-viewport (the menu-position fix).
+        route: '/#/chest-sorter',
+        label: 'chest-sorter',
+        waitFor: '.chest-input',
+        setupSrc: `(async () => {
+            const btns = [...document.querySelectorAll('.chest-page button')];
+            const load = btns.find((b) => b.textContent.trim() === 'Load sample');
+            if (load) load.click();
+            await new Promise((r) => setTimeout(r, 200));
+            const misc = document.querySelector('.misc-menu .nav-link');
+            if (misc) misc.click();
+            return true;
+        })()`,
+        mustBeVisibleOnLoad: ['.chest-page h2', '.chest-input'],
+        mustExist: [
+            '.chest-grid',
+            'th.sortable',
+            '.chest-pill',
+            '.chest-col-head button',
+            '.misc-menu .dropdown-menu.show .dropdown-item',
+        ],
+        modals: [BUG_MODAL],
+    },
 
     // ---- Authenticated pages (session injected; see ensureAuthSession) ----
     // Every authed page sweeps the global BUG_MODAL to confirm the overlay
@@ -359,6 +385,13 @@ async function runCase(ctx, vp, tc, cookie) {
         await new Promise((r) => setTimeout(r, 600));
         // Wait for the page's data-loaded marker if declared (non-fatal).
         if (tc.waitFor) await page.waitForSelector(tc.waitFor, { timeout: 12000 }).catch(() => {});
+
+        // Optional per-case interaction before the checks (e.g. load sample
+        // data, open a header menu). Runs in-page; return value ignored.
+        if (tc.setupSrc) {
+            await page.evaluate(tc.setupSrc).catch(() => {});
+            await new Promise((r) => setTimeout(r, 250));
+        }
 
         // 1) Horizontal overflow at body/html level.
         const dims = await page.evaluate(() => ({

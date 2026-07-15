@@ -7,6 +7,36 @@ import express from 'express';
 import dbs from '../../db.mjs';
 import { requireFlag } from './auth.mjs';
 import { upsertItemFromText } from '../../classes/eq_store.mjs';
+import { normalizeName } from '../../classes/eq_parse.mjs';
+
+// Loose matching for /import (mirrors the Chest Sorter's client grouping so a
+// pasted STACK/plural form matches the catalog's singular name). We strip a
+// leading count word, run the same name normalisation the catalog used at store
+// time, then compute a "loose key": drop a leading article and de-pluralise
+// every word (the game pluralises the head noun anywhere, sometimes doubled).
+// Applied to BOTH the pasted name and the catalog name so they meet in the
+// middle: "Two Bracerses of Wrath" and "Bracers of Wrath" → "bracer of wrath".
+const IMPORT_NUMBER_RE = /^(two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)\s+/i;
+function depluralWord(w) {
+    let x = w;
+    for (let i = 0; i < 3; i++) {
+        if (x.length > 3 && /ies$/i.test(x)) { x = x.slice(0, -3) + 'y'; continue; }
+        if (x.length > 3 && /(ses|xes|zes|ches|shes)$/i.test(x)) { x = x.slice(0, -2); continue; }
+        if (x.length > 2 && /[^s]s$/i.test(x)) { x = x.slice(0, -1); continue; }
+        break;
+    }
+    return x;
+}
+function looseKey(name) {
+    return String(name).toLowerCase()
+        .replace(/^(a|an|the)\s+/, '')
+        .split(/\s+/).map(depluralWord).join(' ')
+        .replace(/\s+/g, ' ').trim();
+}
+// Loose key for a raw pasted item name (strip count word, normalise, loosen).
+function pasteLooseKey(raw) {
+    return looseKey(normalizeName(String(raw || '').replace(IMPORT_NUMBER_RE, '')).name);
+}
 
 const router = express.Router();
 const zeq = dbs.get('zeq');
@@ -65,7 +95,14 @@ router.get('/items/:id', viewEq, async function(req, res) {
 // the caller as an owner. Replaces the legacy /api/eq/add + copy_to_user.
 router.post('/add', editEq, async function(req, res) {
     try {
-        const { info, slot, eqmob, note } = req.body || {};
+        const body = req.body || {};
+        // Trim first so a whitespace-only paste is rejected here with a clear
+        // message rather than falling through to the parser. upsertItemFromText
+        // additionally throws if the text yields no item name, so an "empty
+        // item" cannot be created by either path.
+        const info = (body.info || '').trim();
+        const slot = (body.slot || '').trim();
+        const { eqmob, note } = body;
         if (!info || !slot) return fail(res, 'info and slot are required');
         const id = await upsertItemFromText(info, slot, eqmob ?? null);
         await zeq.query(
@@ -74,6 +111,62 @@ router.post('/add', editEq, async function(req, res) {
             { uid: req.user.id, id, note: (note || '').trim() || null });
         ok(res, { id });
     } catch (e) { console.error('[equipment/add]', e); fail(res, e.message || 'add failed'); }
+});
+
+// Bulk-own from pasted chest contents (Import Equipment page). Takes a list of
+// item names, matches each against the catalog by normalised name, and tags the
+// caller as an owner of every match. Requires VIEW access (equipment) — tagging
+// what YOU have is a personal action, not a catalog edit. Returns which items
+// were newly tagged, which were already owned, and which names weren't found.
+router.post('/import', viewEq, async function(req, res) {
+    try {
+        const uid = req.user.id;
+        const names = Array.isArray(req.body && req.body.names) ? req.body.names.slice(0, 5000) : [];
+        if (!names.length) return fail(res, 'names is required');
+
+        // Index the catalog by loose key (first row wins per key).
+        const catalog = await zeq.query('SELECT id, name FROM eq_items');
+        const byLoose = new Map();
+        for (const row of catalog) { const k = looseKey(row.name); if (k && !byLoose.has(k)) byLoose.set(k, row); }
+
+        // Resolve each unique pasted item to a catalog row (or not-found).
+        const seen = new Set();
+        const matches = [];
+        const notFound = [];
+        for (const raw of names) {
+            const k = pasteLooseKey(raw);
+            if (!k || seen.has(k)) continue;
+            seen.add(k);
+            const row = byLoose.get(k);
+            if (row) matches.push(row); else notFound.push(raw);
+        }
+
+        // Which of the matched item ids does the caller already own?
+        let owned = new Set();
+        if (matches.length) {
+            const op = { uid };
+            const oph = matches.map((r, i) => { const p = 'oid' + String(i).padStart(4, '0'); op[p] = r.id; return '@' + p; });
+            const have = await zeq.query(
+                `SELECT item_id FROM eq_ownership WHERE user_id = @uid AND item_id IN (${oph.join(',')})`, op);
+            owned = new Set(have.map((h) => h.item_id));
+        }
+
+        let added = 0;
+        for (const r of matches) {
+            if (owned.has(r.id)) continue;
+            await zeq.query(
+                `INSERT IGNORE INTO eq_ownership (user_id, item_id, note, created)
+                 VALUES (@uid, @id, NULL, NOW())`, { uid, id: r.id });
+            added += 1;
+        }
+
+        ok(res, {
+            matched: [...new Set(matches.map((r) => r.name))].sort(),
+            added,
+            alreadyOwned: matches.length - added,
+            notFound: notFound.sort(),
+        });
+    } catch (e) { console.error('[equipment/import]', e); fail(res, 'import failed', 500); }
 });
 
 // Tag / untag ownership of an existing catalog item.

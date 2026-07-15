@@ -2,7 +2,7 @@
 import axios from 'axios';
 import BugReportModal from './components/BugReportModal.vue';
 
-const PUBLIC_ROUTES = ['home', 'reinc', 'login', 'dashboard', 'updates', 'builds'];
+const PUBLIC_ROUTES = ['home', 'reinc', 'login', 'dashboard', 'updates', 'builds', 'chest-sorter'];
 
 // Per-route <title> strings. Keep the ZombieMUD + reinc keyword prefix
 // in each one so Google's result snippets anchor on the same brand.
@@ -24,10 +24,12 @@ const ROUTE_TITLES = {
     equipment:      "My Equipment — Zorky's",
     'equipment-all':"All Equipment — Zorky's",
     'equipment-add':"Add Equipment — Zorky's",
+    'equipment-import':"Import Equipment — Zorky's",
     'equipment-build':"EQ Builder — Zorky's",
     mobs:           "EQ Mob Database — Zorky's",
     'mob-detail':   "Mob Detail — Zorky's",
     kya:            "KYA Lookup — Zorky's",
+    'chest-sorter': "Chest Sorter — Zorky's ZombieMUD Tools",
 };
 const DEFAULT_TITLE = ROUTE_TITLES.home;
 
@@ -46,6 +48,10 @@ export default {
             // the hamburger toggles this flag (adds `.show`) to reveal it. Reset
             // on every route change so tapping a link closes the menu.
             sidebarOpen: false,
+            // Public "Misc" dropdown in the header (Chest Sorter, etc.).
+            // Vue-controlled so it works without Bootstrap's dropdown JS and
+            // resets on every route change like the mobile sidebar.
+            miscOpen: false,
         };
     },
     computed: {
@@ -90,6 +96,7 @@ export default {
         routeAllowed(name) {
             switch (name) {
                 case 'equipment': case 'equipment-all': case 'equipment-build':
+                case 'equipment-import':
                     return this.canEquipment;
                 case 'equipment-add':
                     return this.canEquipmentEdit;
@@ -175,6 +182,24 @@ export default {
             // NDJSON — easy to read later with `jq -R 'fromjson'`.
             return buf.map((e) => JSON.stringify(e)).join('\n');
         },
+        // Close the Vue-controlled Misc dropdown on any click outside it. The
+        // toggle itself lives inside `.misc-menu`, so clicking it (which sets
+        // miscOpen=true during bubbling) is treated as "inside" and stays open;
+        // clicking a menu link navigates and the $route watcher closes it.
+        onDocClick(e) {
+            if (this.miscOpen && !e.target.closest('.misc-menu')) this.miscOpen = false;
+        },
+        // Publish the sticky navbar's real height as `--zeq-navh` so page-level
+        // sticky headers (e.g. the equipment table) can pin FLUSH beneath it.
+        // A hardcoded offset left a gap the navbar didn't cover, through which
+        // scrolling rows peeked as a ghost line — and it broke when the navbar
+        // wrapped taller on mobile. Re-measured on mount, resize, and route
+        // change (authed vs anon nav differ in height).
+        syncNavHeight() {
+            const nav = document.querySelector('header.zeq-navbar');
+            const h = nav ? Math.ceil(nav.getBoundingClientRect().height) : 56;
+            document.documentElement.style.setProperty('--zeq-navh', h + 'px');
+        },
         openBug() { this.showBugModal = true; },
         closeBug() { this.showBugModal = false; },
         syncReincBodyClass() {
@@ -212,12 +237,21 @@ export default {
         this.syncReincBodyClass();
         this.syncDocumentTitle();
         this.enforceRouteAccess(this.$route);
+        document.addEventListener('click', this.onDocClick);
+        this.$nextTick(this.syncNavHeight);
+        window.addEventListener('resize', this.syncNavHeight);
+    },
+    beforeUnmount() {
+        document.removeEventListener('click', this.onDocClick);
+        window.removeEventListener('resize', this.syncNavHeight);
     },
     watch: {
         onReinc() { this.syncReincBodyClass(); },
         async $route(to) {
             this.syncDocumentTitle();
             this.sidebarOpen = false; // tapping a sidebar link closes the mobile menu
+            this.miscOpen = false;    // and closes the Misc dropdown
+            this.$nextTick(this.syncNavHeight); // nav height can differ per layout
             if (!this.user) await this.loadMe();
             this.enforceRouteAccess(to);
         },
@@ -296,6 +330,16 @@ export default {
             <router-link class="nav-link text-light me-3" :to="{name:'home'}">Planner</router-link>
             <router-link class="nav-link text-light me-3" :to="{name:'builds'}">Builds</router-link>
             <router-link class="nav-link text-light me-3" :to="{name:'updates'}">Updates</router-link>
+            <div class="nav-item dropdown misc-menu me-3">
+                <a class="nav-link text-light dropdown-toggle" href="#"
+                   @click.prevent="miscOpen = !miscOpen"
+                   :aria-expanded="miscOpen ? 'true' : 'false'">Misc</a>
+                <!-- data-bs-popper=static so Bootstrap's CSS anchors the menu
+                     below the toggle (we drive open state in Vue, not its JS). -->
+                <ul class="dropdown-menu dropdown-menu-end" data-bs-popper="static" :class="{ show: miscOpen }">
+                    <li><router-link class="dropdown-item" :to="{name:'chest-sorter'}">Chest Sorter</router-link></li>
+                </ul>
+            </div>
             <router-link v-if="canPlannerAdmin" class="nav-link text-light me-3" :to="{name:'races'}">Planner Admin</router-link>
             <router-link v-else-if="canEquipment" class="nav-link text-light me-3" :to="{name:'equipment'}">My Equipment</router-link>
             <router-link v-else-if="canEqmobs" class="nav-link text-light me-3" :to="{name:'mobs'}">EQ Mobs</router-link>
@@ -338,13 +382,19 @@ export default {
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" :class="{ show: sidebarOpen }" v-if="user">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
+                        <!-- Public Misc tools — always shown to signed-in users
+                             (also reachable from the header "Misc" menu). -->
+                        <li class="nav-item"><small class="text-muted ps-2 text-uppercase fw-bold">Misc</small></li>
+                        <li class="nav-item"><router-link class="nav-link" :to="{name:'chest-sorter'}">Chest Sorter</router-link></li>
+
                         <!-- Sidebar sections are gated by capability flag; the
                              server enforces the same access regardless. -->
                         <template v-if="canEquipment">
-                            <li class="nav-item"><small class="text-muted ps-2 text-uppercase fw-bold">Equipment</small></li>
+                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Equipment</small></li>
                             <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment'}">My Equipment</router-link></li>
                             <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-all'}">All Equipment</router-link></li>
                             <li class="nav-item" v-if="canEquipmentEdit"><router-link class="nav-link" :to="{name:'equipment-add'}">Add Equipment</router-link></li>
+                            <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-import'}">Import Equipment</router-link></li>
                             <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-build'}">EQ Builder</router-link></li>
                         </template>
 
@@ -498,6 +548,16 @@ body.reinc-active #app {
     .zeq-navbar .report-btn { display: none; }
     .zeq-navbar .navbar-text { display: none; }
 }
+
+/* Public "Misc" dropdown in the header. `.dropdown` gives it the relative
+   positioning the absolute menu anchors to; we only nudge the toggle so it
+   matches the plain nav-links beside it. */
+.misc-menu { position: relative; }
+.misc-menu .nav-link { padding-left: 0.25rem; padding-right: 0.25rem; cursor: pointer; }
+/* Anchor the menu just below the toggle, right-aligned to it. Explicit so it
+   doesn't depend on Bootstrap's Popper JS (we open/close it from Vue). */
+.misc-menu .dropdown-menu { top: 100%; right: 0; left: auto; margin-top: 0.35rem; }
+.misc-menu .dropdown-menu.show { z-index: 1001; }
 
 .reinc-wrap {
     flex: 1 1 auto;

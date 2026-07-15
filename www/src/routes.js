@@ -9,6 +9,7 @@ import Users from './components/Users.vue';
 import Equipment from './components/Equipment.vue';
 import EquipmentAdd from './components/EquipmentAdd.vue';
 import EquipmentBuild from './components/EquipmentBuild.vue';
+import ImportEquipment from './components/ImportEquipment.vue';
 import Reinc from './components/Reinc.vue';
 import Bugs from './components/Bugs.vue';
 import Updates from './components/Updates.vue';
@@ -16,6 +17,7 @@ import Builds from './components/Builds.vue';
 import MobList from './components/MobList.vue';
 import MobDetail from './components/MobDetail.vue';
 import Kya from './components/Kya.vue';
+import ChestSorter from './components/ChestSorter.vue';
 
 export const routes = [
     // Public landing: the reinc planner is the homepage.
@@ -40,6 +42,9 @@ export const routes = [
     { path: '/equipment', name: 'equipment', component: Equipment },
     { path: '/equipment-all', name: 'equipment-all', component: Equipment },
     { path: '/equipment-add', name: 'equipment-add', component: EquipmentAdd },
+    { path: '/equipment-import', name: 'equipment-import', component: ImportEquipment },
     { path: '/equipment-build', name: 'equipment-build', component: EquipmentBuild },
     { path: '/kya', name: 'kya', component: Kya },
+    // Public Misc tools — client-side only, no auth.
+    { path: '/chest-sorter', name: 'chest-sorter', component: ChestSorter },
 ];
