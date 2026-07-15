@@ -123,6 +123,21 @@ wishes/boons grids, the mobile tab-body) handle their own overflow.
 Do not add `overflow-y: auto` to anything that would compete with
 `.tab-body` on mobile — it already scrolls there.
 
+### `overflow-x: auto` forces `overflow-y: auto` and breaks a sticky header
+Per CSS spec, if one overflow axis is `visible` and the other isn't, the
+`visible` one computes to `auto` — so `overflow-x: auto` on a table wrapper
+silently makes it a **scroll container on both axes**. A `position: sticky`
+header inside then sticks to *that* container, not the viewport, so a
+viewport-relative `top` (e.g. matching the navbar height) is measured against
+the wrong box and data rows bleed *above* the header as a "ghost" row. This bit
+the wide equipment catalog. Fix: give the table its own bounded scroll pane
+(`.zst-scroll` in [zSimpleTable.vue](../www/src/components/tools/zSimpleTable.vue),
+`overflow:auto; max-height: calc(100vh - var(--zeq-navh) - …)`) and stick the
+header at `top: 0` inside it, with an **opaque** `background` (a transparent
+sticky header lets rows show through). App.vue publishes `--zeq-navh` (measured
+navbar height) for the max-height sum. Don't reach for a page-level sticky header
+above a horizontal-scroll table — it can't work.
+
 ## API / backend
 
 ### Pool connection MUST force `charset: 'utf8mb4'`

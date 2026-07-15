@@ -12,8 +12,7 @@ spill detail to `docs/*.md`.**
   [App.vue](www/src/App.vue), [routes.js](www/src/routes.js).
 - `data/` — Zcreator `.chr`/`.txt` source for the importer.
 - `schema/` — Idempotent DDL: [zeq.sql](schema/zeq.sql), [auth.sql](schema/auth.sql).
-- `scripts/` — [import_zcreator.mjs](scripts/import_zcreator.mjs),
-  [test/responsive.mjs](scripts/test/responsive.mjs).
+- `scripts/` — [import_zcreator.mjs](scripts/import_zcreator.mjs), [test/responsive.mjs](scripts/test/responsive.mjs).
 - `docs/` — Everything bigger than this file.
 
 ## DB
@@ -42,6 +41,7 @@ See [docs/schema.md](docs/schema.md).
 - Saved reincs (`/builds`): state JSON stores `game_*` IDs, so game-data migrations can rot old builds — read drift rules in [docs/saved-reincs.md](docs/saved-reincs.md) before renaming/deleting game rows.
 - EQ Mob KB: `mob_*` tables, `/api/mobs`, eq roles in `user_roles`. [docs/mobs.md](docs/mobs.md).
 - KYA Lookup: read-only `/kya` browses `kya_info` (3 capture formats, name extracted in SQL). Ingest still at `POST /api/eq/kya`. [docs/kya.md](docs/kya.md).
+- Chest Sorter + Import Equipment: public `/chest-sorter` parses pasted chest contents (shared parser [www/src/lib/chestParser.js](www/src/lib/chestParser.js); stat lookup `POST /api/chestlookup`, public). `/equipment-import` (equipment flag) reuses it to bulk-tag ownership via `POST /api/equipment/import` (loose plural matching). [docs/chest-sorter.md](docs/chest-sorter.md).
 - Equipment: `/equipment*` + `/api/equipment` over `eq_items` (paste→**server**-parse in [api/classes/eq_parse.mjs](api/classes/eq_parse.mjs) — reads identify + library `lookup` text; ownership = tag). Legacy `eq`/`/api/eq` frozen. Bulk-load from in-game library via [manual_onboard/](manual_onboard/) + [scripts/onboard_eq.mjs](scripts/onboard_eq.mjs). External in-game (zmud) lookup: `POST /api/eqlookup` (plain-text out, `secretpw` gate, NOT auth/JSON). [docs/equipment-redesign.md](docs/equipment-redesign.md), [docs/manual-onboard.md](docs/manual-onboard.md), [docs/eqlookup.md](docs/eqlookup.md).
 
 ## Running
@@ -58,4 +58,4 @@ this CLAUDE.md and the subsystem's source of truth (`.chr` /
 
 ## Before touching code
 
-**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us (Vue checkbox desync, int32 wrap, `.tab-body`+grid trap, `totalLevels` direction, mysql `@name`-only, param prefix collisions). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), [docs/mobs.md](docs/mobs.md), [docs/help-text.md](docs/help-text.md).
+**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us (Vue checkbox desync, int32 wrap, `.tab-body`+grid trap, `overflow-x`→sticky-header ghost, `totalLevels` direction, mysql `@name`-only, param prefix collisions). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), [docs/mobs.md](docs/mobs.md), [docs/help-text.md](docs/help-text.md).
