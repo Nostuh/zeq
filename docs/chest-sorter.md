@@ -74,8 +74,11 @@ The final `" and "` is always a `sep`. Then:
    lowercase-led item (`hand of life (2h)`, `the Cloak of the Grove`).
 3. **Reverse-merge** (over-split): if we're *over* `declared`, an item is *named*
    with an embedded `, ProperName` (`The Broadsword, Sunbringer`,
-   `witch goddess, Rangda`, `The shield, Defender`). Undo `sep` cuts whose
-   trailing piece is a lone proper noun until the count matches again.
+   `witch goddess, Rangda`, `The shield, Defender`) or `, 'Quoted Name'`
+   (`The longbow, 'Quarter of Midnight' (2h)`). Undo `sep` cuts whose trailing
+   piece is a lone proper noun **or a quoted name** (optionally + a hand marker)
+   until the count matches. Only runs when over-split, so standalone quoted-name
+   items (`'Jawellyn' the bow of deadly accuracy`) in correct chests are safe.
 
 Quantities come from `stackQty(entry)` (leading number word `two`…`twenty`,
 requiring whitespace so `Two-handed` is NOT a count). The left-table count and
@@ -91,7 +94,17 @@ same item. `groupKey(name)` normalises both: drop a leading article, then
 **de-pluralise every word** (`depluralWord` peels `s`/`es`/`ies`, keeping `ss`;
 handles the head-noun-anywhere and double-plural cases). The rest of the name is
 identical between forms, so de-pluralising it too is harmless. The index shows
-the nicest label (prefers the singular article form) and the summed quantity.
+the nicest label (prefers a real single form seen in the paste) and the summed
+quantity.
+
+**Display vs matching de-pluralisation.** `groupKey`/`depluralWord` LOOP to fully
+flatten a word — right for *matching* (`Bracerses`, `Bracers` and `Bracer` all
+collapse). But if only a STACK form was seen, showing that fully-flattened key is
+wrong (`Bracers`→`Bracer`). So the index/import display uses `singularizeDisplay`
+= `depluralOnce` per word, which removes exactly ONE plural level (the game's
+stacking artifact): `Two ring mades of black mithril` → `ring made of black
+mithril`, `Bracerses of Wrath` → `Bracers of Wrath`, `bootses` → `boots`. Only
+applied when no genuine single form was available to prefer.
 
 ## Endpoints
 
@@ -122,6 +135,30 @@ the nicest label (prefers the singular article form) and the summed quantity.
 - The Chest Sorter has a case in the [responsive harness](../scripts/test/responsive.mjs)
   (`--only=chest-sorter`) that loads the sample and opens the Misc dropdown,
   checking layout + the dropdown anchor across 8 viewports.
+
+## Operational notes / gotchas
+
+- **Import tags the *currently logged-in* user.** `POST /api/equipment/import`
+  writes `eq_ownership` for `req.user.id`. If you're logged in as the wrong user
+  (e.g. impersonating for testing), you'll tag *their* account. This happened
+  repeatedly during development — double-check who you are before importing.
+- **Undoing a mis-import** (no UI for it yet). Every import inserts its rows with
+  `created = NOW()`, so a run is a tight timestamp cluster. Find it and delete
+  just that batch — never blanket-delete a real user's ownership:
+  ```sql
+  -- find the batches
+  SELECT DATE_FORMAT(created,'%Y-%m-%d %H:%i:%s') ts, COUNT(*)
+  FROM eq_ownership WHERE user_id = :uid GROUP BY ts ORDER BY ts DESC;
+  -- back up first, then delete only the accidental cluster
+  DELETE FROM eq_ownership WHERE user_id = :uid AND created = '<ts>';
+  ```
+  Back the rows up to a file before deleting (the batch is not otherwise
+  recoverable). A future improvement: record an `import_batch` id so a run can be
+  reverted from the UI, and/or an "undo last import" button.
+- **The `≠` badge is expected, not a bug**, on a chest whose count still can't
+  reconcile after both oracle passes — that's a genuinely ambiguous item name
+  (an unquoted `, Capitalized` mid-name the reverse-merge can't safely rejoin).
+  Rare; surface it, don't silently "fix" it.
 
 ## Not in the Updates feed
 
