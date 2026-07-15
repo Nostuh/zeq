@@ -98,12 +98,30 @@ export default {
 
     <!-- Results -->
     <div v-if="result" class="mt-4">
-        <div class="alert alert-success py-2">
+        <div class="alert alert-success py-2 mb-3">
             <strong>{{ result.added }}</strong> new item{{ result.added === 1 ? '' : 's' }} marked as owned.
             <span v-if="result.alreadyOwned" class="text-muted">
                 ({{ result.alreadyOwned }} already owned)
             </span>
         </div>
+
+        <div v-if="result.addedItems && result.addedItems.length" class="card mb-3 border-success">
+            <div class="card-header bg-success text-white py-2">
+                Newly marked as owned ({{ result.addedItems.length }})
+            </div>
+            <div class="card-body py-2">
+                <ul class="notfound-list mb-0">
+                    <li v-for="(n, i) in result.addedItems" :key="i">{{ n }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <details v-if="result.alreadyOwnedItems && result.alreadyOwnedItems.length" class="mb-3">
+            <summary class="text-muted small">Already owned ({{ result.alreadyOwnedItems.length }})</summary>
+            <ul class="notfound-list mt-2 mb-0">
+                <li v-for="(n, i) in result.alreadyOwnedItems" :key="i">{{ n }}</li>
+            </ul>
+        </details>
 
         <div v-if="result.notFound.length" class="card mb-3 border-warning">
             <div class="card-header bg-warning text-dark py-2">
@@ -120,13 +138,6 @@ export default {
             </div>
         </div>
         <div v-else class="text-muted small">Every parsed item was found in the catalog. 🎉</div>
-
-        <details v-if="result.matched.length" class="mt-2">
-            <summary class="text-muted small">Matched &amp; tagged ({{ result.matched.length }})</summary>
-            <ul class="notfound-list mt-2 mb-0">
-                <li v-for="(n, i) in result.matched" :key="i">{{ n }}</li>
-            </ul>
-        </details>
     </div>
 </div>
 </template>

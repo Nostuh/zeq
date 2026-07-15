@@ -151,19 +151,21 @@ router.post('/import', viewEq, async function(req, res) {
             owned = new Set(have.map((h) => h.item_id));
         }
 
-        let added = 0;
+        const addedItems = [];
+        const alreadyOwnedItems = [];
         for (const r of matches) {
-            if (owned.has(r.id)) continue;
+            if (owned.has(r.id)) { alreadyOwnedItems.push(r.name); continue; }
             await zeq.query(
                 `INSERT IGNORE INTO eq_ownership (user_id, item_id, note, created)
                  VALUES (@uid, @id, NULL, NOW())`, { uid, id: r.id });
-            added += 1;
+            addedItems.push(r.name);
         }
 
         ok(res, {
-            matched: [...new Set(matches.map((r) => r.name))].sort(),
-            added,
-            alreadyOwned: matches.length - added,
+            added: addedItems.length,
+            addedItems: [...new Set(addedItems)].sort(),
+            alreadyOwned: alreadyOwnedItems.length,
+            alreadyOwnedItems: [...new Set(alreadyOwnedItems)].sort(),
             notFound: notFound.sort(),
         });
     } catch (e) { console.error('[equipment/import]', e); fail(res, 'import failed', 500); }
