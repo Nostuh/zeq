@@ -8,7 +8,7 @@
 // the item index to CSV posts the item names to /api/chestlookup to enrich
 // them with equipment-catalog stats (blank when an item isn't in the DB).
 import axios from 'axios';
-import { parseChests, stackQty, stripQty, groupKey } from '../lib/chestParser.js';
+import { parseChests, stackQty, stripQty, groupKey, singularizeDisplay } from '../lib/chestParser.js';
 
 // Stat columns appended to the item-index CSV, in order, with CSV headers.
 const STAT_COLUMNS = [
@@ -122,7 +122,10 @@ export default {
             for (const g of groups.values()) {
                 const chests = [...g.chests.values()];
                 const count = chests.reduce((n, x) => n + x.qty, 0);
-                rows.push({ item: g.display, chests, count });
+                // rank 2 = only a stack form was seen, so its noun is still
+                // pluralised ("ring mades…") — show the singular for display.
+                const item = g.rank === 2 ? singularizeDisplay(g.display) : g.display;
+                rows.push({ item, chests, count });
             }
             rows.sort((a, b) => b.count - a.count || a.item.localeCompare(b.item));
             return rows;

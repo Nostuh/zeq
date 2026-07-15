@@ -6,7 +6,7 @@
 // ownership tag via POST /api/equipment/import. Items not in the catalog are
 // reported back so you know what still needs adding.
 import axios from 'axios';
-import { parseChests, stackQty, stripQty, groupKey } from '../lib/chestParser.js';
+import { parseChests, stackQty, stripQty, groupKey, singularizeDisplay } from '../lib/chestParser.js';
 
 export default {
     name: 'ImportEquipment',
@@ -31,7 +31,9 @@ export default {
                     g.qty += q;
                 }
             }
-            return [...map.values()].sort((a, b) => a.display.localeCompare(b.display));
+            return [...map.values()]
+                .map((g) => ({ ...g, display: g.rank === 2 ? singularizeDisplay(g.display) : g.display }))
+                .sort((a, b) => a.display.localeCompare(b.display));
         },
     },
     methods: {

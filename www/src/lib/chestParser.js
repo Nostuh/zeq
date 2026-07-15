@@ -45,6 +45,24 @@ export function depluralWord(w) {
     return x;
 }
 
+// Remove ONE plural level from a word, for DISPLAY. The game double-pluralises
+// ("Bracers"->"Bracerses", "boots"->"bootses", "ring made"->"ring mades"), so a
+// single removal recovers the real singular/catalog form. (depluralWord/groupKey
+// LOOP to fully flatten — right for MATCHING, but would turn "Bracers" into
+// "Bracer" for display.)
+export function depluralOnce(w) {
+    if (w.length > 3 && /ies$/i.test(w)) return w.slice(0, -3) + 'y';
+    if (w.length > 3 && /(ses|xes|zes|ches|shes)$/i.test(w)) return w.slice(0, -2);
+    if (w.length > 2 && /[^s]s$/i.test(w)) return w.slice(0, -1);
+    return w;
+}
+// De-pluralise an item name once per word — used to show a STACK-only item under
+// its singular name ("Two ring mades of black mithril" -> "ring made of black
+// mithril") when no genuine single form was seen to prefer instead.
+export function singularizeDisplay(name) {
+    return String(name).split(/\s+/).map(depluralOnce).join(' ');
+}
+
 // Grouping key so a STACK form and its SINGLE form collapse together: drop the
 // leading article and de-pluralise EVERY word (the pluralised head noun can be
 // anywhere). The rest of the name is identical between the two forms, so
@@ -106,9 +124,14 @@ export function splitItems(listStr, declared) {
         chosen.add(promote[i]); i += 1;
     }
 
-    // Reverse pass — over-split. Undo separator cuts whose trailing piece is a
-    // lone proper noun ("The Broadsword, Sunbringer", "witch goddess, Rangda").
-    const LONE_NAME = /^[A-Z][\w'’-]*(?:\s*\((?:1h|2h)\))?$/;
+    // Reverse pass — over-split. Undo separator cuts whose trailing piece is the
+    // tail of a NAMED item split at an embedded comma: either a lone proper noun
+    // ("The Broadsword, Sunbringer", "witch goddess, Rangda") OR a quoted name
+    // ("The longbow, 'Quarter of Midnight' (2h)", "…, 'the Sentinel' (2h)"),
+    // each optionally followed by a hand marker. Only consulted when we
+    // over-split, so standalone quoted-name items (e.g. "'Jawellyn' the bow of
+    // deadly accuracy") in correctly-counted chests are never touched.
+    const LONE_NAME = /^(?:[A-Z][\w'’-]*|['"][^'"]*['"])(?:\s*\((?:1h|2h)\))?$/;
     const nextChosenAfter = (idx) => {
         let best = null;
         for (const c of cuts) if (chosen.has(c) && c.index > idx && (!best || c.index < best.index)) best = c;
