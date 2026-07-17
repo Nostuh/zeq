@@ -32,7 +32,8 @@ export default {
             showAddLoot: false,
             newProt: { prot_type: '', priority: 'required', notes: '' },
             newGuild: { guild_name: '', role: '', notes: '' },
-            newLoot: { item_name: '', slot: '' },
+            newLoot: { item_name: '', slot: '', equipment_id: null },
+            newLootResults: [],
             // Equipment cross-link state: the item detail modal + the
             // per-loot-row binder typeahead (link a free-text loot row to a
             // catalog item without leaving the page).
@@ -175,11 +176,33 @@ export default {
             if (!this.newLoot.item_name) return;
             try {
                 await axios.post('/api/mobs/' + this.mob.id + '/loot', this.newLoot);
-                this.$root.flashMsg('Added');
-                this.newLoot = { item_name: '', slot: '' };
+                this.$root.flashMsg(this.newLoot.equipment_id ? 'Added + linked to catalog' : 'Added (free text — not in catalog)');
+                this.newLoot = { item_name: '', slot: '', equipment_id: null };
+                this.newLootResults = [];
                 this.showAddLoot = false;
                 await this.load();
             } catch (e) { this.$root.flashError(e); }
+        },
+        // Add-form typeahead: typing searches the equipment catalog; picking
+        // a result fills the name AND links the new loot row to that item.
+        // Typing again after a pick clears the link (the text no longer
+        // matches a catalog row we chose).
+        async searchNewLoot() {
+            this.newLoot.equipment_id = null;
+            const q = this.newLoot.item_name.trim();
+            if (!q) { this.newLootResults = []; return; }
+            const seq = (this._newLootSeq = (this._newLootSeq || 0) + 1);
+            try {
+                const r = await axios.get('/api/mobs/eq-items', { params: { q } });
+                if (seq !== this._newLootSeq) return;
+                this.newLootResults = (r.data && r.data.data) || [];
+            } catch (e) { if (seq === this._newLootSeq) this.newLootResults = []; }
+        },
+        pickNewLoot(it) {
+            this.newLoot.item_name = it.name;
+            this.newLoot.equipment_id = it.id;
+            if (!this.newLoot.slot) this.newLoot.slot = it.wear_slot || '';
+            this.newLootResults = [];
         },
         async deleteLoot(l) {
             if (!confirm('Remove "' + l.item_name + '"?')) return;
@@ -197,12 +220,19 @@ export default {
         async searchLootItems() {
             const q = this.lootQuery.trim();
             if (!q) { this.lootResults = []; return; }
+            // Guard against out-of-order responses: only the latest
+            // keystroke's results may land (same pattern in searchNewLoot).
+            const seq = (this._lootSeq = (this._lootSeq || 0) + 1);
             try {
                 const r = await axios.get('/api/mobs/eq-items', { params: { q } });
+                if (seq !== this._lootSeq) return;
                 this.lootResults = (r.data && r.data.data) || [];
-            } catch (e) { this.lootResults = []; }
+            } catch (e) { if (seq === this._lootSeq) this.lootResults = []; }
         },
         async setLootLink(l, item) {
+            // Unlink is confirmable — a linked row silently degrading back to
+            // free text on a stray click was too easy to hit.
+            if (!item && !confirm('Unlink "' + (l.eq_name || l.item_name) + '" from the equipment catalog?\nThe loot row stays as plain text.')) return;
             try {
                 await axios.post('/api/mobs/' + this.mob.id + '/loot/' + l.id, {
                     item_name: l.item_name, slot: l.slot, sort_order: l.sort_order,
@@ -507,10 +537,10 @@ export default {
                                 <span v-if="l.slot" class="text-muted"> ({{ l.slot }})</span>
                             </span>
                             <i v-if="canEdit && !l.equipment_id" class="bi bi-link-45deg text-primary me-1"
-                               style="cursor:pointer" title="Link to a catalog item"
+                               style="cursor:pointer" title="Link this text to an equipment catalog item"
                                @click="linkingLootId === l.id ? cancelLinkLoot() : startLinkLoot(l)"></i>
-                            <i v-if="canEdit && l.equipment_id" class="bi bi-link-45deg text-warning me-1"
-                               style="cursor:pointer" title="Unlink from the catalog (keeps the text row)"
+                            <i v-if="canEdit && l.equipment_id" class="bi bi-x-diamond text-warning me-1"
+                               style="cursor:pointer" title="Unlink from the equipment catalog (keeps the text row)"
                                @click="setLootLink(l, null)"></i>
                             <span v-if="canEdit" class="text-danger" style="cursor:pointer;" @click="deleteLoot(l)">&times;</span>
                         </div>
@@ -529,9 +559,25 @@ export default {
                     </div>
                 </div>
                 <div v-else class="text-muted small mb-1">Empty</div>
-                <div v-if="showAddLoot" class="mt-1">
-                    <input class="form-control form-control-sm mb-1" v-model="newLoot.item_name" placeholder="Item name">
-                    <input class="form-control form-control-sm mb-1" v-model="newLoot.slot" placeholder="Slot">
+                <div v-if="showAddLoot" class="mt-1 mob-loot-binder">
+                    <input class="form-control form-control-sm mb-1" v-model="newLoot.item_name"
+                           @input="searchNewLoot" placeholder="Type to search the catalog…">
+                    <div v-if="newLootResults.length" class="mob-loot-results small mb-1">
+                        <a v-for="it in newLootResults" :key="it.id" href="#" class="d-block px-1"
+                           @click.prevent="pickNewLoot(it)">
+                            {{ it.name }} <span class="text-muted">({{ it.wear_slot }}<template v-if="it.weapon_class"> {{ it.weapon_class }}</template>)</span>
+                        </a>
+                    </div>
+                    <div class="small mb-1">
+                        <template v-if="newLoot.equipment_id">
+                            <i class="bi bi-box-seam text-success"></i> Will be linked to this catalog item.
+                        </template>
+                        <template v-else-if="newLoot.item_name.trim()">
+                            <span class="text-muted">No catalog pick — will be added as plain text.</span>
+                        </template>
+                    </div>
+                    <!-- No slot input: a catalog pick brings its own wear slot
+                         (auto-filled in pickNewLoot); free-text rows don't need one. -->
                     <button class="btn btn-sm btn-primary me-1" @click="addLoot">Add</button>
                     <button class="btn btn-sm btn-secondary" @click="showAddLoot = false">X</button>
                 </div>

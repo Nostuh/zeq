@@ -81,6 +81,7 @@ async function main() {
     const unmatchedEqmobs = new Map();   // eqmob_name → item count
     const perMobLinked = new Map();      // mob_id → [item names] (for one history row per mob)
     const counts = { aExists: 0, aReused: 0, aInserted: 0 };
+    const aConflicts = [];               // single-source rule: never steal a link
 
     for (const row of labeled) {
         const mob = mobByName.get(row.eqmob_name.trim().toLowerCase());
@@ -93,13 +94,23 @@ async function main() {
                 'SELECT id FROM mob_loot WHERE mob_id = @vm AND equipment_id = @vi',
                 { vm: mob.id, vi: row.id });
             if (linked[0]) { counts.aExists++; continue; }
+            const elsewhere = await q.query(
+                `SELECT m.name FROM mob_loot l JOIN mob_monsters m ON m.id = l.mob_id
+                 WHERE l.equipment_id = @vi LIMIT 1`, { vi: row.id });
+            if (elsewhere[0]) { aConflicts.push(`${row.name} — already sourced from ${elsewhere[0].name}, label says ${row.eqmob_name}`); continue; }
             counts.aInserted++;
             (perMobLinked.get(mob.id) || perMobLinked.set(mob.id, []).get(mob.id)).push(row.name);
             continue;
         }
+        // onConflict 'skip': one source mob per item — the migration never
+        // steals a link that already exists on another mob.
         const r = await bindLootToItem(q,
             { mobId: mob.id, item: { id: row.id, name: row.name, wear_slot: row.wear_slot } },
-            { history: false });
+            { history: false, onConflict: 'skip' });
+        if (r.action === 'conflict') {
+            aConflicts.push(`${row.name} — already sourced from ${r.linked_mob}, label says ${row.eqmob_name}`);
+            continue;
+        }
         counts['a' + r.action[0].toUpperCase() + r.action.slice(1)]++;
         if (r.action !== 'exists') {
             (perMobLinked.get(mob.id) || perMobLinked.set(mob.id, []).get(mob.id)).push(row.name);
@@ -107,21 +118,30 @@ async function main() {
     }
 
     // ---------- Pass B: unlinked loot free text → catalog items ----------
+    // Single-source rule: an item already linked ANYWHERE is never linked
+    // again — first match wins, later text matches are reported as
+    // conflicts for a human to sort out.
+    const alreadyLinked = new Set(
+        (await q.query('SELECT DISTINCT equipment_id FROM mob_loot WHERE equipment_id IS NOT NULL'))
+            .map(r => r.equipment_id));
     const unlinked = await q.query(
         'SELECT id, mob_id, item_name FROM mob_loot WHERE equipment_id IS NULL');
     const bLinked = [];
     const bAmbiguous = [];
     const bUnmatched = [];
+    const bConflicts = [];
     for (const l of unlinked) {
         const k = lootLooseKey(l.item_name);
         if (!k) { bUnmatched.push(l.item_name); continue; }
         if (ambiguousKeys.has(k)) { bAmbiguous.push(l.item_name); continue; }
         const it = itemByLoose.get(k);
         if (!it) { bUnmatched.push(l.item_name); continue; }
+        if (alreadyLinked.has(it.id)) { bConflicts.push(`${l.item_name} — ${it.name} (#${it.id}) already has a source mob`); continue; }
         if (!DRY) {
             await q.query('UPDATE mob_loot SET equipment_id = @vi WHERE id = @vl AND equipment_id IS NULL',
                 { vi: it.id, vl: l.id });
         }
+        alreadyLinked.add(it.id);
         bLinked.push(`${l.item_name}  →  ${it.name} (#${it.id})`);
         (perMobLinked.get(l.mob_id) || perMobLinked.set(l.mob_id, []).get(l.mob_id)).push(it.name);
     }
@@ -150,13 +170,22 @@ async function main() {
         }
     }
 
+    if (aConflicts.length) {
+        console.log(`\nsingle-source conflicts (label disagrees with an existing link — fix by hand):`);
+        for (const s of aConflicts) console.log(`  ! ${s}`);
+    }
+
     console.log('\n-- Pass B (loot free text → catalog) --');
     console.log(`unlinked loot rows scanned: ${unlinked.length}`);
-    console.log(`  linked: ${bLinked.length}, ambiguous (skipped): ${bAmbiguous.length}, no match: ${bUnmatched.length}`);
+    console.log(`  linked: ${bLinked.length}, ambiguous (skipped): ${bAmbiguous.length}, conflicts (skipped): ${bConflicts.length}, no match: ${bUnmatched.length}`);
     for (const s of bLinked) console.log(`  + ${s}`);
     if (bAmbiguous.length) {
         console.log('\nambiguous loot names (same loose key maps to >1 catalog item):');
         for (const s of [...new Set(bAmbiguous)]) console.log(`  ? ${s}`);
+    }
+    if (bConflicts.length) {
+        console.log('\nsingle-source conflicts (text matches an item already sourced elsewhere):');
+        for (const s of [...new Set(bConflicts)]) console.log(`  ! ${s}`);
     }
 
     console.log(`\nmobs touched: ${perMobLinked.size}${DRY ? ' (dry run — nothing written)' : ''}`);

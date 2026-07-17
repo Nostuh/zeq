@@ -34,6 +34,14 @@ adds an item detail view that shows the raw text every parse came from.
    rows — a typo ("Alminah"/"Aliminah") and a new mob are
    indistinguishable; the KB stays curated. Unmatched legacy names are
    reported with near-miss suggestions and cleaned up by hand.
+6. **One source mob per item** (game rule). Binding an item to a mob
+   MOVES it: `unlinkItemElsewhere` in mob_kb.mjs nulls the link on every
+   other mob (rows survive as free text, history + version bump each).
+   Applies to both bind directions; the migration never steals — it
+   skips and reports conflicts. Data cleanup 2026-07-16: 35 double-links
+   against the "Wiki - eq page" pseudo-mob (id 841) were unlinked (real
+   mob wins); one genuine double remains for a human call:
+   "A funky-looking mushroom hat" (Myconid King vs Fearful myconid king).
 
 ## What shipped
 
@@ -91,16 +99,23 @@ the report's "did you mean" suggestions guide manual cleanup.
   classes (never `.modal-backdrop`), z-index 2050, themed via
   `--bs-body-bg`/`--bs-body-color`.
 - **Equipment.vue** — name column opens the modal (`zSimpleTable` gained
-  a `link` display_type); "Eq Mob" column = `mob_names` or
-  `legacy: <eqmob_name>`; `?mob=` deep-link filter with a dismissible
-  chip; route watch widened to `$route.fullPath` (component-reuse gotcha).
+  `link` and `links` display types; `links` cells are `{label,id}[]`,
+  sort/search array-safe); "Eq Mob" column links to the mob page when the
+  user has `eqmobs` access (API `mob_links` = `name|id||…`), else plain
+  `mob_names` / `legacy: <eqmob_name>`; `?mob=` deep-link filter with a
+  dismissible chip; route watch widened to `$route.fullPath`
+  (component-reuse gotcha).
 - **EquipmentBuild.vue** — pick names open the modal.
 - **MobDetail.vue** — linked loot rows render `bi-box-seam` + a link into
-  the modal; editors get per-row link/unlink (`bi-link-45deg`) with an
-  inline typeahead over `GET /api/mobs/eq-items`; "Browse in Equipment →"
-  (`/equipment-all?mob=`) and "KYA Lookup (N) →" (`/kya?name=`) jumps;
-  header now shows `aka <short_name>` (nickname = `short_name`, real
-  name = `name`; both editable in the Edit Info form).
+  the modal; editors get per-row link (`bi-link-45deg`) / unlink
+  (`bi-x-diamond`, confirm dialog) with an inline typeahead over
+  `GET /api/mobs/eq-items`; the `+` Add-loot form is a catalog typeahead
+  (pick → adds linked + auto slot; no pick → explicit "plain text" note;
+  no slot input); "Browse in Equipment →" (`/equipment-all?mob=`) and
+  "KYA Lookup (N) →" (`/kya?name=`) jumps; header shows
+  `aka <short_name>` (nickname = `short_name`, real name = `name`; both
+  editable in the Edit Info form). All typeaheads carry an out-of-order
+  response guard (latest keystroke wins).
 - **EquipmentAdd.vue** — legacy eqmob Multiselect + "Add New Eq Mob"
   replaced by an optional Mob KB picker (`GET /api/equipment/mobs`);
   mob no longer required; eqmobs_edit users get a "create it in the

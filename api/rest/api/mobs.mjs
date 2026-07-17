@@ -9,7 +9,7 @@ import path from 'node:path';
 import crypto from 'crypto';
 import dbs from '../../db.mjs';
 import { requireEqViewer, requireEqEditor } from './auth.mjs';
-import { recordMobHistory, bumpMobVersion } from '../../classes/mob_kb.mjs';
+import { recordMobHistory, bumpMobVersion, unlinkItemElsewhere } from '../../classes/mob_kb.mjs';
 import { kyaCountsByNames, kyaCandidateName } from '../../classes/kya_extract.mjs';
 
 const router = express.Router();
@@ -383,7 +383,7 @@ async function resolveEquipmentRef(equipmentId) {
     if (!eqId) return { eqId: null, label: null };
     const rows = await zeq.query('SELECT id, name FROM eq_items WHERE id = @id', { id: eqId });
     if (!rows[0]) return { error: 'equipment_id does not reference a catalog item' };
-    return { eqId, label: `${rows[0].name} (#${eqId})` };
+    return { eqId, name: rows[0].name, label: `${rows[0].name} (#${eqId})` };
 }
 
 router.post('/:id/loot', requireEqEditor, async function(req, res) {
@@ -393,6 +393,9 @@ router.post('/:id/loot', requireEqEditor, async function(req, res) {
         if (!b.item_name) return fail(res, 'item_name required');
         const ref = await resolveEquipmentRef(b.equipment_id);
         if (ref.error) return fail(res, ref.error);
+        // One source mob per item — linking here moves the item off any
+        // other mob's loot list (their rows stay as free text).
+        if (ref.eqId) await unlinkItemElsewhere(zeq, { id: ref.eqId, name: ref.name }, id, req.user);
         const r = await zeq.query(
             `INSERT INTO mob_loot (mob_id, item_name, slot, equipment_id, sort_order)
              VALUES (@id, @item, @slot, @veq, @sort)`,
@@ -417,6 +420,10 @@ router.post('/:id/loot/:lid', requireEqEditor, async function(req, res) {
         let ref;
         if (b.equipment_id === undefined) ref = { eqId: old[0].equipment_id, label: undefined };
         else { ref = await resolveEquipmentRef(b.equipment_id); if (ref.error) return fail(res, ref.error); }
+        // Single-source rule (see POST /:id/loot above).
+        if (ref.eqId && ref.eqId !== old[0].equipment_id) {
+            await unlinkItemElsewhere(zeq, { id: ref.eqId, name: ref.name }, id, req.user);
+        }
         await zeq.query(
             `UPDATE mob_loot SET item_name = @item, slot = @slot, equipment_id = @veq, sort_order = @sort
              WHERE id = @lid AND mob_id = @id`,

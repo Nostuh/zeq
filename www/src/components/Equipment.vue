@@ -50,7 +50,12 @@ export default {
                 rmag: { header: "Mag" }, rpoi: { header: "Poi" }, rfire: { header: "Fire" },
                 rcold: { header: "Cold" }, racid: { header: "Acid" }, rasphx: { header: "Asph" },
                 rshadow: { header: "Shdw" },
-                mob_disp: { header: "Eq Mob" },
+                // Mob names link to the mob's KB page for users with mob
+                // access; plain text (or "legacy: X") otherwise.
+                mob_disp: {
+                    header: "Eq Mob", display_type: "links",
+                    callback: (d, e) => { if (e && e.id) this.$router.push({ name: 'mob-detail', params: { id: e.id } }); },
+                },
                 bonus_summary: { header: "Bonuses" },
             };
             return cfg;
@@ -71,7 +76,16 @@ export default {
                 'rcold', 'racid', 'rasphx', 'rshadow', 'ac']) d[c] = v[c] || '';
             // Prefer the Mob KB link(s); fall back to the frozen legacy
             // eqmob label until every item is linked through mob_loot.
-            d.mob_disp = v.mob_names || (v.eqmob_name ? `legacy: ${v.eqmob_name}` : '');
+            // With mob access the names become links ({label,id} array →
+            // zSimpleTable 'links' cells); plain text otherwise.
+            if (v.mob_links && this.$root.canEqmobs) {
+                d.mob_disp = String(v.mob_links).split('||').map(s => {
+                    const cut = s.lastIndexOf('|');
+                    return { label: s.slice(0, cut), id: parseInt(s.slice(cut + 1), 10) };
+                });
+            } else {
+                d.mob_disp = v.mob_names || (v.eqmob_name ? `legacy: ${v.eqmob_name}` : '');
+            }
             d.bonus_summary = v.bonus_summary || '';
             return d;
         },

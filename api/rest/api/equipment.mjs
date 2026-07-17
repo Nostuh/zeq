@@ -50,6 +50,10 @@ router.get('/items', viewEq, async function(req, res) {
                     (SELECT GROUP_CONCAT(DISTINCT m2.name ORDER BY m2.name SEPARATOR ', ')
                      FROM mob_loot l2 JOIN mob_monsters m2 ON m2.id = l2.mob_id
                      WHERE l2.equipment_id = i.id) AS mob_names,
+                    (SELECT GROUP_CONCAT(DISTINCT CONCAT(m3.name, '|', m3.id)
+                            ORDER BY CONCAT(m3.name, '|', m3.id) SEPARATOR '||')
+                     FROM mob_loot l3 JOIN mob_monsters m3 ON m3.id = l3.mob_id
+                     WHERE l3.equipment_id = i.id) AS mob_links,
                     (SELECT GROUP_CONCAT(b.bonus_name SEPARATOR ', ')
                      FROM eq_item_bonuses b WHERE b.item_id = i.id) AS bonus_summary
              FROM eq_items i

@@ -137,22 +137,24 @@ export default {
             }
         },
         the_sort(val,that) {
+            // 'links' cells hold arrays of {label} — sort/search by the
+            // joined labels so the column behaves like its text.
+            const norm = (v) => Array.isArray(v) ? v.map(x => x && x.label != null ? x.label : '').join(', ') : v;
             return function(a,b) {
-                // if ( b['enabled'] != undefined && b['enabled'] == 0 ) {
-                //     return -1;
-                // } else
-                 if ( typeof a[val] == "number" && typeof b[val] == "number" && that.sort_toggles[val] ) {
-                    return a[val]-b[val];
-                } else if ( typeof a[val] == "number" && typeof b[val] == "number" ) {
-                    return b[val]-a[val];
-                } else if ( a[val] == "" || a[val] == null || a[val] == undefined ) {
+                const av = norm(a[val]);
+                const bv = norm(b[val]);
+                 if ( typeof av == "number" && typeof bv == "number" && that.sort_toggles[val] ) {
+                    return av-bv;
+                } else if ( typeof av == "number" && typeof bv == "number" ) {
+                    return bv-av;
+                } else if ( av == "" || av == null || av == undefined ) {
                     return 1;
-                } else if ( b[val] == "" || b[val] == null || b[val] == undefined ) {
+                } else if ( bv == "" || bv == null || bv == undefined ) {
                     return -1;
                 } else if ( that.sort_toggles[val] ) {
-                    return a[val].localeCompare(b[val]);
+                    return av.localeCompare(bv);
                 } else {
-                    return b[val].localeCompare(a[val]);
+                    return bv.localeCompare(av);
                 }
             }
         },
@@ -171,6 +173,11 @@ export default {
                         if ( m[check].toLowerCase().includes(that.search_value.toLowerCase()) ) {
                             return true;
                         }
+                    } else if ( Array.isArray(m[check]) ) {
+                        // 'links' cells: match against their labels.
+                        if ( m[check].some(x => String(x && x.label || '').toLowerCase().includes(that.search_value.toLowerCase())) ) {
+                            return true;
+                        }
                     }
                 }
             });
@@ -184,9 +191,9 @@ export default {
                 return "normal";
             }
         },
-        callback(index,d) {
+        callback(index,d,extra) {
             let callback = this.config_raw[index].callback;
-            callback(d);
+            callback(d,extra);
         },
         is_checked(d) {
             if ( d == true || d == 1 ) {
@@ -240,6 +247,12 @@ export default {
                     <template v-for="r in rows" :key="r.id">
                         <td v-if="display_type(r)=='normal'">{{d[r]}}</td>
                         <td v-if="display_type(r)=='link'"><a href="#" @click.prevent="callback(r,d)">{{d[r]}}</a></td>
+                        <td v-if="display_type(r)=='links'">
+                            <template v-if="Array.isArray(d[r])">
+                                <template v-for="(e,j) in d[r]" :key="j"><a href="#" @click.prevent="callback(r,d,e)">{{e.label}}</a><span v-if="j<d[r].length-1">, </span></template>
+                            </template>
+                            <template v-else>{{d[r]}}</template>
+                        </td>
                         <td v-if="display_type(r)=='edit_button'"><button type="button" class="btn btn-success" @click="callback(r,d)">Edit</button></td>
                         <td v-if="display_type(r)=='copy_button'"><button type="button" class="btn btn-success" @click="callback(r,d)">Copy</button></td>
                         <td v-if="display_type(r)=='delete_button'"><button type="button" class="btn btn-danger" @click="callback(r,d)">Delete</button></td>

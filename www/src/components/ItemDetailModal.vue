@@ -151,10 +151,14 @@ export default {
         async searchMobs() {
             const q = this.mobQuery.trim();
             if (!q) { this.mobResults = []; return; }
+            // Only the latest keystroke's results may land (out-of-order
+            // response guard).
+            const seq = (this._mobSeq = (this._mobSeq || 0) + 1);
             try {
                 const r = await axios.get('/api/equipment/mobs', { params: { q } });
+                if (seq !== this._mobSeq) return;
                 this.mobResults = (r.data && r.data.data) || [];
-            } catch (e) { this.mobResults = []; }
+            } catch (e) { if (seq === this._mobSeq) this.mobResults = []; }
         },
         async linkMob(mob) {
             if (this.linking) return;
@@ -286,10 +290,11 @@ export default {
                        title="Unlink this mob (the mob keeps the loot row as free text)"
                        @click="unlinkMob(d)"></i>
                 </div>
-                <!-- Editor: attach a mob -->
+                <!-- Editor: set the source mob (one per item — picking a new
+                     mob MOVES the item; the old mob keeps a free-text row) -->
                 <div v-if="canEdit" class="mt-1 itemdm-binder">
                     <input v-model="mobQuery" @input="searchMobs" class="form-control form-control-sm"
-                           placeholder="Attach mob — type to search the Mob KB…" />
+                           :placeholder="item.dropped_by.length ? 'Change source mob — replaces the current one…' : 'Set source mob — type to search the Mob KB…'" />
                     <div v-if="mobResults.length" class="itemdm-typeahead">
                         <a v-for="m in mobResults" :key="m.id" href="#" class="d-block px-2 py-1"
                            @click.prevent="linkMob(m)">
