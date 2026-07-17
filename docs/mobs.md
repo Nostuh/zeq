@@ -128,8 +128,28 @@ inside `@directions_back`, leaving `NULL_back` in the SQL). This bit
 us twice — once in the importer, once in the API. See
 [gotchas.md](gotchas.md) for the general rule.
 
-### Future equipment link
-`mob_loot.equipment_id` is a NULL placeholder FK. The current equipment
-section (`eq`/`eqmobs` tables) is NOT compatible — do not wire it in.
-The data model is ready to accept an equipment relationship later
-without a rewrite.
+### Equipment link (live)
+`mob_loot.equipment_id` now references the **new catalog** `eq_items.id`
+(FK `fk_ml_item`, `ON DELETE SET NULL` — deleting a catalog item degrades
+the loot row back to free text; `item_name` is preserved). The legacy
+`eq`/`eqmobs` tables remain NOT wired in.
+
+- `GET /:id` joins loot to `eq_items` (`eq_name`, `eq_wear_slot`) and adds
+  a `kya: {matched_name, count}` summary (name-string match against
+  `kya_info`, trailing `NN%` stripped, `short_name` tried too).
+- `POST /:id/loot` and `POST /:id/loot/:lid` accept an optional validated
+  `equipment_id` (absent = keep, null = clear). History diffs record the
+  linked item as `"Name (#id)"`.
+- `GET /eq-items?q=` (editor) feeds the loot binder typeahead. It is
+  registered ABOVE `GET /:id` — Express matches in registration order and
+  `/:id` would swallow it.
+- The equipment side binds/unbinds through `POST/DELETE
+  /api/equipment/items/:id/mobs*` using the shared primitives in
+  [api/classes/mob_kb.mjs](../api/classes/mob_kb.mjs) (`bindLootToItem`
+  reuse-or-insert, history + version bump).
+- Bootstrap linking was done by
+  [scripts/migrate_mob_links.mjs](../scripts/migrate_mob_links.mjs)
+  (idempotent, `--dry-run`; report lists unmatched/ambiguous names).
+- UI: MobDetail loot rows with a link open the shared ItemDetailModal;
+  editors get an inline link/unlink typeahead; "Browse in Equipment →"
+  jumps to `/equipment-all?mob=<id>`.

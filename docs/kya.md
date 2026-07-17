@@ -122,6 +122,20 @@ Empty `q` returns all distinct mobs (capped at 500 in the SQL
 `LIMIT`). Search hits both the display-name (B/C) and the keyword
 (A) — they live in the same column.
 
+## Deep-linking + cross-links (July 2026)
+
+`/kya?name=<mob_name>` auto-selects that mob (Kya.vue `applyRouteName`:
+watch on `$route.query.name` because the component is reused; selection
+also `router.replace`s the query so it's shareable). The Mob KB detail
+page and the equipment ItemDetailModal link here when captures exist —
+correlation is name-string only (`kya_info` has no FKs): KB names are
+tried verbatim and with a trailing ` NN%` suffix stripped, plus
+`short_name`. The extraction SQL (`EXTRACT_SQL`) moved to
+[api/classes/kya_extract.mjs](../api/classes/kya_extract.mjs) (shared
+with `kyaCountsByNames()` used by the mob/item detail summaries);
+`/api/kya/*` behavior is unchanged and the ingest alias `POST /api/eq/kya`
+is untouched.
+
 ## Aggregation
 
 Pattern B and pattern C are two displays of the *same* in-game state

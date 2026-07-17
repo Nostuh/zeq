@@ -148,3 +148,12 @@ CREATE TABLE IF NOT EXISTS mob_history (
 -- MODIFY is a no-op when the column is already at the target size,
 -- so this stays idempotent.
 ALTER TABLE mob_prots MODIFY COLUMN prot_type VARCHAR(255) NOT NULL;
+
+-- Equipment link goes live: mob_loot.equipment_id → eq_items.id
+-- (the NEW catalog, NOT the legacy `eq` table). ON DELETE SET NULL:
+-- deleting a catalog item degrades the loot row back to free text
+-- (item_name preserved) instead of losing KB data.
+-- NOTE: requires schema/equipment.sql applied first on a fresh DB.
+ALTER TABLE mob_loot ADD INDEX IF NOT EXISTS ix_ml_item (equipment_id);
+ALTER TABLE mob_loot ADD CONSTRAINT fk_ml_item
+    FOREIGN KEY IF NOT EXISTS (equipment_id) REFERENCES eq_items(id) ON DELETE SET NULL;

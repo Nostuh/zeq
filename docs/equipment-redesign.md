@@ -195,3 +195,44 @@ Per-slot optimization over the caller's owned items only.
 - The 27 `needs_review` items (generic `wield`, empty/`wand` slots) won't
   place in the builder until a human assigns a concrete `wear_slot` /
   `weapon_class`; the builder reports them as `unplaced`.
+
+## Cross-linking (Mob KB + KYA) — July 2026
+
+Equipment, the Mob KB, and KYA are now linked. Full design + status in
+[linking-plan.md](linking-plan.md); the mob-side details are in
+[mobs.md](mobs.md) "Equipment link (live)".
+
+- **Source of truth for "who drops what": `mob_loot.equipment_id` →
+  `eq_items.id`** (FK `fk_ml_item`, `ON DELETE SET NULL`). The legacy
+  `eqmob` picker is retired: `GET/POST /api/equipment/eqmobs` are gone,
+  `POST /add` takes an optional `mob_id` (Mob KB) instead of `eqmob`, and
+  `eq_items.eqmob_id` is frozen provenance (never written by new code,
+  still displayed as a "legacy:" fallback until items are linked).
+- **`GET /items/:id` is the shared detail payload behind the item modal**
+  and accepts ANY of `equipment/equipment_edit/eqmobs/eqmobs_edit` — a
+  Mob-KB viewer clicking a linked loot item must be able to read it.
+  Flags gate screens and jump buttons, not read-only modal context. The
+  response adds `covers`, `dropped_by` (mobs + per-mob `kya_count`/
+  `kya_name`), and `siblings` (everything those mobs drop).
+- **Item-side binder**: `POST /items/:id/mobs` {mob_id} binds via the
+  shared `bindLootToItem` (reuse a loose-matching unlinked loot row, else
+  insert); `DELETE /items/:id/mobs/:loot_id` UNLINKS ONLY — the loot row
+  survives as free text (the KB owns the loot list). `POST /items/:id/note`
+  edits the catalog note; notes/links/re-paste are the only edit surface —
+  parsed stats stay parser-owned (`raw_info` is the source of truth).
+- **`GET /items` additions**: `?mob=<mob_monsters.id>` filter (deep-linked
+  as `/equipment-all?mob=`) and a `mob_names` GROUP_CONCAT column.
+- **`GET /mobs?q=`** (equipment-flag) feeds the mob pickers here so an
+  equipment editor without `eqmobs` can still bind.
+- **UI**: [ItemDetailModal.vue](../www/src/components/ItemDetailModal.vue)
+  (stats, bonuses, covers, `raw_info` in a `<pre>`, ownership, note,
+  dropped-by with KYA jump, sibling drops with in-modal navigation,
+  editor bind/unbind + re-paste). Opened from the Equipment list name
+  column, EQ Builder picks, and MobDetail loot rows.
+- **Name matching** lives in [api/classes/eq_match.mjs](../api/classes/eq_match.mjs)
+  (`looseKey`/`pasteLooseKey`/`lootLooseKey`); KYA correlation in
+  [api/classes/kya_extract.mjs](../api/classes/kya_extract.mjs).
+- **Bootstrap migration**: [scripts/migrate_mob_links.mjs](../scripts/migrate_mob_links.mjs)
+  (idempotent, `--dry-run`). First live run: 36 legacy labels + 111
+  loose-matched loot rows linked; unmatched names stay legacy-labeled and
+  are cleaned up via the inline binders.

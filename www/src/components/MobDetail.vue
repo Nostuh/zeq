@@ -2,6 +2,7 @@
 import axios from 'axios';
 import MobHistory from './MobHistory.vue';
 import MobAsciiEditor from './MobAsciiEditor.vue';
+import ItemDetailModal from './ItemDetailModal.vue';
 
 const DAMAGE_TYPES = ['physical', 'magical', 'fire', 'cold', 'electric', 'poison', 'acid', 'asphyxiation', 'psionic'];
 const DAMAGE_LABELS = {
@@ -12,7 +13,7 @@ const DAMAGE_LABELS = {
 
 export default {
     name: 'MobDetail',
-    components: { MobHistory, MobAsciiEditor },
+    components: { MobHistory, MobAsciiEditor, ItemDetailModal },
     props: ['id'],
     data() {
         return {
@@ -32,6 +33,13 @@ export default {
             newProt: { prot_type: '', priority: 'required', notes: '' },
             newGuild: { guild_name: '', role: '', notes: '' },
             newLoot: { item_name: '', slot: '' },
+            // Equipment cross-link state: the item detail modal + the
+            // per-loot-row binder typeahead (link a free-text loot row to a
+            // catalog item without leaving the page).
+            modalItemId: null,
+            linkingLootId: null,
+            lootQuery: '',
+            lootResults: [],
             editingMap: null,
             DAMAGE_TYPES,
             DAMAGE_LABELS,
@@ -179,6 +187,32 @@ export default {
             this.$root.flashMsg('Removed');
             await this.load();
         },
+        // --- Loot ↔ equipment binder ---
+        startLinkLoot(l) {
+            this.linkingLootId = l.id;
+            this.lootQuery = l.item_name;
+            this.searchLootItems();
+        },
+        cancelLinkLoot() { this.linkingLootId = null; this.lootQuery = ''; this.lootResults = []; },
+        async searchLootItems() {
+            const q = this.lootQuery.trim();
+            if (!q) { this.lootResults = []; return; }
+            try {
+                const r = await axios.get('/api/mobs/eq-items', { params: { q } });
+                this.lootResults = (r.data && r.data.data) || [];
+            } catch (e) { this.lootResults = []; }
+        },
+        async setLootLink(l, item) {
+            try {
+                await axios.post('/api/mobs/' + this.mob.id + '/loot/' + l.id, {
+                    item_name: l.item_name, slot: l.slot, sort_order: l.sort_order,
+                    equipment_id: item ? item.id : null,
+                });
+                this.$root.flashMsg(item ? 'Linked to ' + item.name : 'Unlinked');
+                this.cancelLinkLoot();
+                await this.load();
+            } catch (e) { this.$root.flashError(e); }
+        },
         async deleteMob() {
             if (!confirm('Delete mob "' + this.mob.name + '"? This cannot be undone.')) return;
             await axios.delete('/api/mobs/' + this.mob.id);
@@ -247,7 +281,9 @@ export default {
     <!-- Header -->
     <div class="d-flex align-items-center mb-3 flex-wrap gap-2">
         <router-link :to="{name:'mobs'}" class="btn btn-sm btn-outline-secondary">&larr; Back</router-link>
-        <h2 class="mb-0 flex-grow-1">{{ mob.name }}</h2>
+        <h2 class="mb-0 flex-grow-1">{{ mob.name }}
+            <small v-if="mob.short_name" class="text-muted fs-6">aka {{ mob.short_name }}</small>
+        </h2>
         <span v-if="mob.is_aggro" class="badge bg-danger">AGR</span>
         <span v-if="mob.is_undead" class="badge bg-secondary">UND</span>
         <span v-if="mob.exp_value" class="badge bg-info text-dark">{{ fmtExp(mob.exp_value) }} xp</span>
@@ -398,6 +434,12 @@ export default {
                         <span class="resist-val">{{ resistMap[dt] && resistMap[dt].value != null ? resistMap[dt].value : '-' }}</span>
                     </div>
                 </div>
+                <!-- Raw KYA captures for this mob (name-string match) -->
+                <router-link v-if="mob.kya && mob.kya.count && $root.canLookups"
+                             class="small d-block mt-1"
+                             :to="{ name: 'kya', query: { name: mob.kya.matched_name } }">
+                    KYA Lookup ({{ mob.kya.count }} raw entr{{ mob.kya.count > 1 ? 'ies' : 'y' }}) &rarr;
+                </router-link>
             </div>
 
             <!-- Protections -->
@@ -453,9 +495,37 @@ export default {
                     <button v-if="canEdit" class="btn btn-sm btn-outline-primary py-0 px-1" @click="showAddLoot = !showAddLoot">+</button>
                 </div>
                 <div v-if="mob.loot.length">
-                    <div v-for="l in mob.loot" :key="l.id" class="small d-flex align-items-center mb-1">
-                        <span class="me-auto">{{ l.item_name }} <span v-if="l.slot" class="text-muted">({{ l.slot }})</span></span>
-                        <span v-if="canEdit" class="text-danger" style="cursor:pointer;" @click="deleteLoot(l)">&times;</span>
+                    <div v-for="l in mob.loot" :key="l.id" class="small mb-1">
+                        <div class="d-flex align-items-center">
+                            <span class="me-auto">
+                                <!-- Linked to the equipment catalog → open the item modal -->
+                                <template v-if="l.equipment_id">
+                                    <i class="bi bi-box-seam text-success me-1" title="In equipment catalog"></i><a
+                                        href="#" @click.prevent="modalItemId = l.equipment_id">{{ l.eq_name || l.item_name }}</a>
+                                </template>
+                                <template v-else>{{ l.item_name }}</template>
+                                <span v-if="l.slot" class="text-muted"> ({{ l.slot }})</span>
+                            </span>
+                            <i v-if="canEdit && !l.equipment_id" class="bi bi-link-45deg text-primary me-1"
+                               style="cursor:pointer" title="Link to a catalog item"
+                               @click="linkingLootId === l.id ? cancelLinkLoot() : startLinkLoot(l)"></i>
+                            <i v-if="canEdit && l.equipment_id" class="bi bi-link-45deg text-warning me-1"
+                               style="cursor:pointer" title="Unlink from the catalog (keeps the text row)"
+                               @click="setLootLink(l, null)"></i>
+                            <span v-if="canEdit" class="text-danger" style="cursor:pointer;" @click="deleteLoot(l)">&times;</span>
+                        </div>
+                        <!-- Inline binder typeahead -->
+                        <div v-if="linkingLootId === l.id" class="mob-loot-binder mt-1">
+                            <input class="form-control form-control-sm mb-1" v-model="lootQuery"
+                                   @input="searchLootItems" placeholder="Search catalog items…">
+                            <div v-if="lootResults.length" class="mob-loot-results">
+                                <a v-for="it in lootResults" :key="it.id" href="#" class="d-block px-1"
+                                   @click.prevent="setLootLink(l, it)">
+                                    {{ it.name }} <span class="text-muted">({{ it.wear_slot }}<template v-if="it.weapon_class"> {{ it.weapon_class }}</template>)</span>
+                                </a>
+                            </div>
+                            <div v-else-if="lootQuery.trim()" class="text-muted">No catalog match.</div>
+                        </div>
                     </div>
                 </div>
                 <div v-else class="text-muted small mb-1">Empty</div>
@@ -465,6 +535,12 @@ export default {
                     <button class="btn btn-sm btn-primary me-1" @click="addLoot">Add</button>
                     <button class="btn btn-sm btn-secondary" @click="showAddLoot = false">X</button>
                 </div>
+                <!-- Jump to the equipment list filtered to this mob's drops -->
+                <router-link v-if="$root.canEquipment && mob.loot.some(l => l.equipment_id)"
+                             class="small d-block mt-1"
+                             :to="{ name: 'equipment-all', query: { mob: mob.id } }">
+                    Browse in Equipment &rarr;
+                </router-link>
             </div>
 
         </div><!-- /sidebar -->
@@ -472,5 +548,7 @@ export default {
 
     <MobHistory v-if="showHistory" :mob-id="mob.id" />
     </template>
+
+    <ItemDetailModal :item-id="modalItemId" @close="modalItemId = null" @changed="load()" />
 </div>
 </template>

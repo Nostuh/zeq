@@ -239,6 +239,7 @@ export default {
                 <tr v-for="(d,i) in data_filter" :key="i">
                     <template v-for="r in rows" :key="r.id">
                         <td v-if="display_type(r)=='normal'">{{d[r]}}</td>
+                        <td v-if="display_type(r)=='link'"><a href="#" @click.prevent="callback(r,d)">{{d[r]}}</a></td>
                         <td v-if="display_type(r)=='edit_button'"><button type="button" class="btn btn-success" @click="callback(r,d)">Edit</button></td>
                         <td v-if="display_type(r)=='copy_button'"><button type="button" class="btn btn-success" @click="callback(r,d)">Copy</button></td>
                         <td v-if="display_type(r)=='delete_button'"><button type="button" class="btn btn-danger" @click="callback(r,d)">Delete</button></td>

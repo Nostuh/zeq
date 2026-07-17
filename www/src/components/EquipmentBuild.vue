@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import ItemDetailModal from './ItemDetailModal.vue';
 
 // EQ Builder: weight some stats, get the best gear set from the items you
 // own. Backed by POST /api/equipment/build (per-slot greedy). See
@@ -18,6 +19,7 @@ const STATS = [
 
 export default {
     name: "EquipmentBuild",
+    components: { ItemDetailModal },
     data() {
         return {
             stats: STATS,
@@ -26,6 +28,7 @@ export default {
             result: null,
             loading: false,
             showHelp: true,
+            modalItemId: null,
         };
     },
     computed: {
@@ -154,7 +157,7 @@ export default {
                 <tbody>
                     <tr v-for="p in result.picks" :key="p.wear_slot + p.slot_index">
                         <td>{{ p.wear_slot }}<span v-if="p.slot_index > 1" class="text-muted"> #{{ p.slot_index }}</span></td>
-                        <td>{{ p.name }}</td>
+                        <td><a href="#" @click.prevent="modalItemId = p.id">{{ p.name }}</a></td>
                         <td class="text-muted small">{{ typeOf(p) }}</td>
                         <td v-for="s in activeStats" :key="s.key" class="text-end">{{ fmt(p[s.key]) }}</td>
                         <td class="text-end">{{ p.item_score }}</td>
@@ -169,6 +172,7 @@ export default {
                 </tfoot>
             </table>
         </div>
+        <ItemDetailModal :item-id="modalItemId" @close="modalItemId = null" />
     </div>
 </template>
 

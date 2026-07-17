@@ -7,6 +7,10 @@
 import express from 'express';
 import dbs from '../../db.mjs';
 import { requireFlag } from './auth.mjs';
+// The pattern/mob_name extraction SQL lives in kya_extract.mjs so the
+// cross-linking summaries (mob detail, item detail) share it. See the
+// format documentation there and in docs/kya.md.
+import { EXTRACT_SQL } from '../../classes/kya_extract.mjs';
 
 // KYA is read-only, so a single access flag covers the whole area.
 const requireLookups = requireFlag('lookups');
@@ -16,29 +20,6 @@ const zeq = dbs.get('zeq');
 
 const fail = (res, msg, code = 400) => res.status(code).json({ ok: false, error: msg });
 const ok = (res, data) => res.json({ ok: true, data });
-
-// SQL fragment that derives `pattern` (A/B/C/X) and `mob_name` from
-// `info`. Three capture formats exist in kya_info — see docs/kya.md.
-//   A: "<target> at <hp%>" (oldest, 5 rows). mob_name = first word.
-//   B: "<Caster>'s\n<target> at <hp%>\n..." (the bulk).
-//      mob_name = first line minus trailing 's.
-//   C: "<Subject>'s gender is: ...|..." (consider output, pipe-joined).
-//      mob_name = substring before "'s gender is:".
-//   X: bad/incomplete row (id 405 only). mob_name = NULL, skipped.
-const EXTRACT_SQL = `
-  CASE
-    WHEN info LIKE '%\\'s gender is:%' THEN 'C'
-    WHEN info REGEXP '^[A-Z][^\\n]*\\'s\\n' THEN 'B'
-    WHEN info REGEXP '^[a-zA-Z]+ at ' THEN 'A'
-    ELSE 'X'
-  END AS pattern,
-  CASE
-    WHEN info LIKE '%\\'s gender is:%' THEN SUBSTRING_INDEX(info, '\\'s gender is:', 1)
-    WHEN info REGEXP '^[A-Z][^\\n]*\\'s\\n' THEN TRIM(TRAILING '\\'s' FROM SUBSTRING_INDEX(info, '\\n', 1))
-    WHEN info REGEXP '^[a-zA-Z]+ at ' THEN LOWER(SUBSTRING_INDEX(SUBSTRING_INDEX(info, '\\n', 1), ' at ', 1))
-    ELSE NULL
-  END AS mob_name
-`;
 
 // Distinct mob names matching the search. Aggregates entry counts by
 // pattern so the UI can show "Watcher — 12 kya, 8 consider" etc.

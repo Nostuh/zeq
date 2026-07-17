@@ -202,6 +202,11 @@ export default {
             this.selected = m;
             this.entries = [];
             this.entriesLoading = true;
+            // Keep the selection shareable / deep-linkable (?name=…) without
+            // adding history entries for every click.
+            if ((this.$route.query.name || '') !== m.mob_name) {
+                this.$router.replace({ name: 'kya', query: { name: m.mob_name } });
+            }
             try {
                 const r = await axios.get('/api/kya/by-mob', { params: { name: m.mob_name } });
                 const raw = (r.data && r.data.data) || [];
@@ -218,6 +223,18 @@ export default {
         clearSelection() {
             this.selected = null;
             this.entries = [];
+            if (this.$route.query.name) this.$router.replace({ name: 'kya', query: {} });
+        },
+        // ?name= deep-link (mob detail + item modal link here). Prefer the
+        // real list row (it carries the per-pattern counts for the header);
+        // fall back to a synthetic row — pickMob only needs mob_name.
+        async applyRouteName() {
+            const name = (this.$route.query.name || '').trim();
+            if (!name || (this.selected && this.selected.mob_name === name)) return;
+            this.q = name;
+            await this.loadMobs();
+            const hit = this.mobs.find(m => (m.mob_name || '').toLowerCase() === name.toLowerCase());
+            this.pickMob(hit || { mob_name: name, a_count: 0, b_count: 0, c_count: 0, total: 0 });
         },
         bucketColor(avg) {
             // Bucket scale: 0 = completely vulnerable (red), 7 = invulnerable
@@ -261,7 +278,15 @@ export default {
             return `kya bucket ${bBucket}`;
         },
     },
-    mounted() { this.loadMobs(); },
+    watch: {
+        // In-app navigation to /kya?name=X while already mounted (e.g. from
+        // the item modal) — same-component reuse, mounted won't re-fire.
+        '$route.query.name'() { if (this.$route.name === 'kya') this.applyRouteName(); },
+    },
+    mounted() {
+        if (this.$route.query.name) this.applyRouteName();
+        else this.loadMobs();
+    },
 };
 </script>
 

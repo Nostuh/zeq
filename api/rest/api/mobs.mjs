@@ -9,6 +9,8 @@ import path from 'node:path';
 import crypto from 'crypto';
 import dbs from '../../db.mjs';
 import { requireEqViewer, requireEqEditor } from './auth.mjs';
+import { recordMobHistory, bumpMobVersion } from '../../classes/mob_kb.mjs';
+import { kyaCountsByNames, kyaCandidateName } from '../../classes/kya_extract.mjs';
 
 const router = express.Router();
 const zeq = dbs.get('zeq');
@@ -48,22 +50,11 @@ function computeDiff(oldObj, newObj, fields) {
     return Object.keys(diff).length ? diff : null;
 }
 
-async function recordHistory(mobId, user, action, section, diffJson, snapshot) {
-    const userName = user ? user.name : 'init';
-    const userId = user ? user.id : null;
-    await zeq.query(
-        `INSERT INTO mob_history (mob_id, user_name, user_id, action, section, diff_json, snapshot, created)
-         VALUES (@mob_id, @user_name, @user_id, @action, @section, @diff_json, @snapshot, NOW())`,
-        {
-            mob_id: mobId,
-            user_name: userName,
-            user_id: userId,
-            action,
-            section,
-            diff_json: diffJson ? JSON.stringify(diffJson) : null,
-            snapshot: snapshot ? JSON.stringify(snapshot) : null,
-        });
-}
+// History + version-bump primitives are shared with the equipment-side
+// binder — see api/classes/mob_kb.mjs. Thin local aliases keep call sites
+// short.
+const recordHistory = (mobId, user, action, section, diffJson, snapshot) =>
+    recordMobHistory(zeq, mobId, user, action, section, diffJson, snapshot);
 
 // --- LIST ---
 router.get('/', requireEqViewer, async function(req, res) {
@@ -93,6 +84,20 @@ router.get('/', requireEqViewer, async function(req, res) {
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
 
+// --- EQ ITEM TYPEAHEAD (for the loot binder) ---
+// MUST be registered before GET /:id — Express matches in registration
+// order and /:id would swallow /eq-items otherwise.
+router.get('/eq-items', requireEqEditor, async function(req, res) {
+    try {
+        const q = (req.query.q || '').trim();
+        const params = {};
+        let where = '';
+        if (q) { where = 'WHERE name LIKE @q'; params.q = '%' + q + '%'; }
+        ok(res, await zeq.query(
+            `SELECT id, name, wear_slot, weapon_class FROM eq_items ${where} ORDER BY name LIMIT 20`, params));
+    } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
+});
+
 // --- DETAIL ---
 router.get('/:id', requireEqViewer, async function(req, res) {
     try {
@@ -104,7 +109,11 @@ router.get('/:id', requireEqViewer, async function(req, res) {
             zeq.query(`SELECT * FROM mob_resistances WHERE mob_id = @id ORDER BY FIELD(damage_type, 'physical','magical','fire','cold','electric','poison','acid','asphyxiation','psionic')`, { id }),
             zeq.query(`SELECT * FROM mob_prots WHERE mob_id = @id ORDER BY priority, prot_type`, { id }),
             zeq.query(`SELECT * FROM mob_guilds WHERE mob_id = @id ORDER BY id`, { id }),
-            zeq.query(`SELECT * FROM mob_loot WHERE mob_id = @id ORDER BY sort_order, id`, { id }),
+            // Linked loot rows carry the catalog item's name/slot so the UI
+            // can render them as links into the item detail modal.
+            zeq.query(`SELECT l.*, i.name AS eq_name, i.wear_slot AS eq_wear_slot
+                       FROM mob_loot l LEFT JOIN eq_items i ON i.id = l.equipment_id
+                       WHERE l.mob_id = @id ORDER BY l.sort_order, l.id`, { id }),
             zeq.query(`SELECT id, mob_id, section, filename, mime_type, size_bytes, caption, sort_order, created FROM mob_images WHERE mob_id = @id ORDER BY sort_order, id`, { id }),
             zeq.query(`SELECT * FROM mob_maps WHERE mob_id = @id ORDER BY id`, { id }),
         ]);
@@ -114,6 +123,19 @@ router.get('/:id', requireEqViewer, async function(req, res) {
         mob.loot = loot;
         mob.images = images;
         mob.maps = maps;
+        // KYA availability (name-string correlation; kya_info has no FKs).
+        mob.kya = { matched_name: null, count: 0 };
+        try {
+            const counts = await kyaCountsByNames(zeq, [mob.name, mob.short_name].filter(Boolean));
+            for (const cand of [mob.name, mob.short_name]) {
+                if (!cand) continue;
+                const key = kyaCandidateName(cand).toLowerCase();
+                if (counts.get(key)) {
+                    mob.kya = { matched_name: kyaCandidateName(cand), count: counts.get(key) };
+                    break;
+                }
+            }
+        } catch (e) { console.error('[mobs/:id kya summary]', e); }
         ok(res, mob);
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -263,7 +285,7 @@ router.post('/:id/resistances', requireEqEditor, async function(req, res) {
             await recordHistory(id, req.user, 'update', 'resistances', diff, null);
         }
         // Bump version
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -290,7 +312,7 @@ router.post('/:id/prots', requireEqEditor, async function(req, res) {
         }
         await recordHistory(id, req.user, existing.length ? 'update' : 'create', 'prots',
             { [b.prot_type]: { priority: b.priority || 'required' } }, null);
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -303,7 +325,7 @@ router.delete('/:id/prots/:pid', requireEqEditor, async function(req, res) {
         if (!old.length) return fail(res, 'not found', 404);
         await zeq.query(`DELETE FROM mob_prots WHERE id = @pid`, { pid });
         await recordHistory(id, req.user, 'delete', 'prots', { removed: old[0].prot_type }, null);
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -320,7 +342,7 @@ router.post('/:id/guilds', requireEqEditor, async function(req, res) {
             { id, gn: b.guild_name, role: b.role || null, notes: b.notes || null });
         await recordHistory(id, req.user, 'create', 'guilds', null,
             { guild_name: b.guild_name, role: b.role });
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, { id: r.insertId });
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -334,7 +356,7 @@ router.post('/:id/guilds/:gid', requireEqEditor, async function(req, res) {
             `UPDATE mob_guilds SET guild_name = @gn, role = @role, notes = @notes WHERE id = @gid AND mob_id = @id`,
             { gid, id, gn: b.guild_name, role: b.role || null, notes: b.notes || null });
         await recordHistory(id, req.user, 'update', 'guilds', { guild_name: b.guild_name, role: b.role }, null);
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -347,24 +369,37 @@ router.delete('/:id/guilds/:gid', requireEqEditor, async function(req, res) {
         if (!old.length) return fail(res, 'not found', 404);
         await zeq.query(`DELETE FROM mob_guilds WHERE id = @gid`, { gid });
         await recordHistory(id, req.user, 'delete', 'guilds', { removed: old[0].guild_name }, null);
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
 
 // --- LOOT ---
+// Loot rows can carry an optional equipment_id → eq_items link (the Mob KB
+// side of the equipment cross-link). Validated here; the DB enforces it
+// too (fk_ml_item, ON DELETE SET NULL).
+async function resolveEquipmentRef(equipmentId) {
+    const eqId = parseInt(equipmentId, 10);
+    if (!eqId) return { eqId: null, label: null };
+    const rows = await zeq.query('SELECT id, name FROM eq_items WHERE id = @id', { id: eqId });
+    if (!rows[0]) return { error: 'equipment_id does not reference a catalog item' };
+    return { eqId, label: `${rows[0].name} (#${eqId})` };
+}
+
 router.post('/:id/loot', requireEqEditor, async function(req, res) {
     try {
         const id = parseInt(req.params.id, 10);
         const b = req.body || {};
         if (!b.item_name) return fail(res, 'item_name required');
+        const ref = await resolveEquipmentRef(b.equipment_id);
+        if (ref.error) return fail(res, ref.error);
         const r = await zeq.query(
-            `INSERT INTO mob_loot (mob_id, item_name, slot, sort_order)
-             VALUES (@id, @item, @slot, @sort)`,
-            { id, item: b.item_name, slot: b.slot || null, sort: b.sort_order || 0 });
+            `INSERT INTO mob_loot (mob_id, item_name, slot, equipment_id, sort_order)
+             VALUES (@id, @item, @slot, @veq, @sort)`,
+            { id, item: b.item_name, slot: b.slot || null, veq: ref.eqId, sort: b.sort_order || 0 });
         await recordHistory(id, req.user, 'create', 'loot', null,
-            { item_name: b.item_name, slot: b.slot });
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+            { item_name: b.item_name, slot: b.slot, equipment: ref.label });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, { id: r.insertId });
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -374,12 +409,24 @@ router.post('/:id/loot/:lid', requireEqEditor, async function(req, res) {
         const id = parseInt(req.params.id, 10);
         const lid = parseInt(req.params.lid, 10);
         const b = req.body || {};
+        const old = await zeq.query(
+            `SELECT item_name, slot, sort_order, equipment_id FROM mob_loot WHERE id = @lid AND mob_id = @id`,
+            { lid, id });
+        if (!old.length) return fail(res, 'not found', 404);
+        // equipment_id: absent → keep current link; null → clear; number → set.
+        let ref;
+        if (b.equipment_id === undefined) ref = { eqId: old[0].equipment_id, label: undefined };
+        else { ref = await resolveEquipmentRef(b.equipment_id); if (ref.error) return fail(res, ref.error); }
         await zeq.query(
-            `UPDATE mob_loot SET item_name = @item, slot = @slot, sort_order = @sort
+            `UPDATE mob_loot SET item_name = @item, slot = @slot, equipment_id = @veq, sort_order = @sort
              WHERE id = @lid AND mob_id = @id`,
-            { lid, id, item: b.item_name, slot: b.slot || null, sort: b.sort_order || 0 });
-        await recordHistory(id, req.user, 'update', 'loot', { item_name: b.item_name, slot: b.slot }, null);
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+            { lid, id, item: b.item_name, slot: b.slot || null, veq: ref.eqId, sort: b.sort_order || 0 });
+        const diff = { item_name: b.item_name, slot: b.slot };
+        if (ref.label !== undefined && ref.eqId !== old[0].equipment_id) {
+            diff.equipment = ref.eqId ? { linked: ref.label } : { unlinked: old[0].equipment_id };
+        }
+        await recordHistory(id, req.user, 'update', 'loot', diff, null);
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -392,7 +439,7 @@ router.delete('/:id/loot/:lid', requireEqEditor, async function(req, res) {
         if (!old.length) return fail(res, 'not found', 404);
         await zeq.query(`DELETE FROM mob_loot WHERE id = @lid`, { lid });
         await recordHistory(id, req.user, 'delete', 'loot', { removed: old[0].item_name }, null);
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -442,7 +489,7 @@ router.post('/:id/images', requireEqEditor, async function(req, res) {
         if (inserted.length) {
             await recordHistory(id, req.user, 'create', 'images', null,
                 { count: inserted.length, files: inserted.map(i => i.filename) });
-            await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+            await bumpMobVersion(zeq, id, req.user.id);
         }
         ok(res, inserted);
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
@@ -481,7 +528,7 @@ router.delete('/:id/images/:iid', requireEqEditor, async function(req, res) {
         if (fs.existsSync(abs)) fs.unlinkSync(abs);
         await zeq.query(`DELETE FROM mob_images WHERE id = @iid`, { iid });
         await recordHistory(id, req.user, 'delete', 'images', { removed: rows[0].filename }, null);
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -512,7 +559,7 @@ router.post('/:id/maps', requireEqEditor, async function(req, res) {
                 { id, area: b.area_name || null, title: b.title, content: clean, notes: b.notes || null, uid: req.user.id });
             await recordHistory(id, req.user, 'create', 'maps', null, { title: b.title, id: r.insertId });
         }
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });
@@ -525,7 +572,7 @@ router.delete('/:id/maps/:mid', requireEqEditor, async function(req, res) {
         if (!old.length) return fail(res, 'not found', 404);
         await zeq.query(`DELETE FROM mob_maps WHERE id = @mid`, { mid });
         await recordHistory(id, req.user, 'delete', 'maps', { removed: old[0].title }, null);
-        await zeq.query(`UPDATE mob_monsters SET version = version + 1, updated_by = @uid, updated = NOW() WHERE id = @id`, { id, uid: req.user.id });
+        await bumpMobVersion(zeq, id, req.user.id);
         ok(res, {});
     } catch (e) { console.error(e); fail(res, e.sqlMessage || String(e)); }
 });

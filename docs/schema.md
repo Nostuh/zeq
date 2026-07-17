@@ -189,6 +189,12 @@ full rationale + phases in [equipment-redesign.md](equipment-redesign.md).
   fit fixed columns; `(item_id, bonus_name, amount)`, cascade on item.
 - **`eq_ownership`** — "I have this item" as a tag, `UNIQUE(user_id,
   item_id)`, cascade on item. Replaces the legacy `copy_to_user` row copy.
+- **Mob link**: `mob_loot.equipment_id` → `eq_items.id` (FK `fk_ml_item`
+  in [schema/mobs.sql](../schema/mobs.sql), `ON DELETE SET NULL` — a
+  deleted catalog item degrades the loot row to free text). This is the
+  live "who drops what" relation; `eq_items.eqmob_id` (→ legacy `eqmobs`)
+  is frozen provenance, no longer written. See
+  [equipment-redesign.md](equipment-redesign.md) "Cross-linking".
 
 ## Capability flags
 

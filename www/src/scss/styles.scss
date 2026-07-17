@@ -252,6 +252,22 @@ tr.guild-closed-row > * {
     border-bottom: 1px solid #dee2e6;
 }
 
+/* Loot → equipment inline binder (MobDetail). Bootstrap body vars keep it
+   legible in both themes. */
+.mob-loot-binder .mob-loot-results {
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0.25rem;
+    background: var(--bs-body-bg);
+    max-height: 10rem;
+    overflow-y: auto;
+}
+.mob-loot-binder .mob-loot-results a {
+    text-decoration: none;
+}
+.mob-loot-binder .mob-loot-results a:hover {
+    background: var(--bs-tertiary-bg);
+}
+
 .mob-ascii-map, .mob-ascii-preview {
     font-family: 'Courier New', Courier, monospace;
     white-space: pre;

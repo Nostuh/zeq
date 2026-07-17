@@ -7,36 +7,11 @@ import express from 'express';
 import dbs from '../../db.mjs';
 import { requireFlag } from './auth.mjs';
 import { upsertItemFromText } from '../../classes/eq_store.mjs';
-import { normalizeName } from '../../classes/eq_parse.mjs';
-
-// Loose matching for /import (mirrors the Chest Sorter's client grouping so a
-// pasted STACK/plural form matches the catalog's singular name). We strip a
-// leading count word, run the same name normalisation the catalog used at store
-// time, then compute a "loose key": drop a leading article and de-pluralise
-// every word (the game pluralises the head noun anywhere, sometimes doubled).
-// Applied to BOTH the pasted name and the catalog name so they meet in the
-// middle: "Two Bracerses of Wrath" and "Bracers of Wrath" → "bracer of wrath".
-const IMPORT_NUMBER_RE = /^(two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty)\s+/i;
-function depluralWord(w) {
-    let x = w;
-    for (let i = 0; i < 3; i++) {
-        if (x.length > 3 && /ies$/i.test(x)) { x = x.slice(0, -3) + 'y'; continue; }
-        if (x.length > 3 && /(ses|xes|zes|ches|shes)$/i.test(x)) { x = x.slice(0, -2); continue; }
-        if (x.length > 2 && /[^s]s$/i.test(x)) { x = x.slice(0, -1); continue; }
-        break;
-    }
-    return x;
-}
-function looseKey(name) {
-    return String(name).toLowerCase()
-        .replace(/^(a|an|the)\s+/, '')
-        .split(/\s+/).map(depluralWord).join(' ')
-        .replace(/\s+/g, ' ').trim();
-}
-// Loose key for a raw pasted item name (strip count word, normalise, loosen).
-function pasteLooseKey(raw) {
-    return looseKey(normalizeName(String(raw || '').replace(IMPORT_NUMBER_RE, '')).name);
-}
+// Loose matching for /import (chest pastes) + the mob-loot linker; shared
+// with scripts/migrate_mob_links.mjs. See eq_match.mjs for the rules.
+import { looseKey, pasteLooseKey } from '../../classes/eq_match.mjs';
+import { bindLootToItem, recordMobHistory, bumpMobVersion } from '../../classes/mob_kb.mjs';
+import { kyaCountsByNames, kyaCandidateName } from '../../classes/kya_extract.mjs';
 
 const router = express.Router();
 const zeq = dbs.get('zeq');
@@ -49,9 +24,15 @@ const ok = (res, data) => res.json({ ok: true, data });
 // EQ Builder (/build) is compute-only, so it stays at view level.
 const viewEq = requireFlag('equipment');
 const editEq = requireFlag('equipment_edit');
+// Item DETAIL is the shared payload behind the cross-link modal: a Mob KB
+// viewer clicking a linked loot item must be able to read it. Flags gate
+// the SCREENS and jump buttons, not the read-only context inside the
+// modal — so detail accepts any equipment OR eqmobs flag.
+const viewAny = requireFlag('equipment', 'equipment_edit', 'eqmobs', 'eqmobs_edit');
 
 // List catalog items. `?q=` filters by name, `?mine=1` restricts to the
-// caller's owned items. Each row carries an `owned` flag for the caller.
+// caller's owned items, `?mob=<mob_monsters.id>` to items that mob drops.
+// Each row carries an `owned` flag for the caller.
 router.get('/items', viewEq, async function(req, res) {
     try {
         const uid = req.user.id;
@@ -59,11 +40,16 @@ router.get('/items', viewEq, async function(req, res) {
         const params = { uid };
         if (req.query.q) { conds.push('i.name LIKE @q'); params.q = '%' + req.query.q + '%'; }
         if (req.query.mine === '1') conds.push('EXISTS (SELECT 1 FROM eq_ownership o WHERE o.item_id = i.id AND o.user_id = @uid)');
+        const mobId = parseInt(req.query.mob, 10);
+        if (mobId) { conds.push('EXISTS (SELECT 1 FROM mob_loot l WHERE l.equipment_id = i.id AND l.mob_id = @mob)'); params.mob = mobId; }
         const where = conds.length ? 'WHERE ' + conds.join(' AND ') : '';
         const rows = await zeq.query(
             `SELECT i.*,
                     EXISTS (SELECT 1 FROM eq_ownership o WHERE o.item_id = i.id AND o.user_id = @uid) AS owned,
                     em.name AS eqmob_name,
+                    (SELECT GROUP_CONCAT(DISTINCT m2.name ORDER BY m2.name SEPARATOR ', ')
+                     FROM mob_loot l2 JOIN mob_monsters m2 ON m2.id = l2.mob_id
+                     WHERE l2.equipment_id = i.id) AS mob_names,
                     (SELECT GROUP_CONCAT(b.bonus_name SEPARATOR ', ')
                      FROM eq_item_bonuses b WHERE b.item_id = i.id) AS bonus_summary
              FROM eq_items i
@@ -73,8 +59,11 @@ router.get('/items', viewEq, async function(req, res) {
     } catch (e) { console.error('[equipment/items]', e); fail(res, 'list failed', 500); }
 });
 
-// Item detail incl. open-ended bonuses + the caller's ownership flag.
-router.get('/items/:id', viewEq, async function(req, res) {
+// Item detail — the single payload behind the item modal. Bonuses, covers,
+// the caller's ownership, PLUS cross-link context: which Mob KB mobs drop
+// this item (dropped_by), everything else those mobs drop (siblings), and
+// per-mob KYA capture counts so the UI can offer a KYA jump.
+router.get('/items/:id', viewAny, async function(req, res) {
     try {
         const id = parseInt(req.params.id, 10);
         if (!id) return fail(res, 'bad id');
@@ -83,16 +72,139 @@ router.get('/items/:id', viewEq, async function(req, res) {
         const item = rows[0];
         item.bonuses = await zeq.query(
             'SELECT bonus_name, amount FROM eq_item_bonuses WHERE item_id = @id ORDER BY amount DESC, bonus_name', { id });
+        item.covers = (await zeq.query(
+            'SELECT wear_slot FROM eq_item_covers WHERE item_id = @id ORDER BY wear_slot', { id }))
+            .map(r => r.wear_slot);
         const own = await zeq.query(
             'SELECT note FROM eq_ownership WHERE item_id = @id AND user_id = @uid', { id, uid: req.user.id });
         item.owned = own.length > 0;
         item.own_note = own[0] ? own[0].note : null;
+
+        // Legacy source-mob label (eq_items.eqmob_id → eqmobs) — display
+        // fallback until every item is linked through mob_loot.
+        item.eqmob_name = null;
+        if (item.eqmob_id) {
+            const em = await zeq.query('SELECT name FROM eqmobs WHERE id = @id', { id: item.eqmob_id });
+            item.eqmob_name = em[0] ? em[0].name : null;
+        }
+
+        // Mob KB links.
+        item.dropped_by = await zeq.query(
+            `SELECT l.id AS loot_id, l.slot AS loot_slot,
+                    m.id AS mob_id, m.name AS mob_name, m.short_name, m.area
+             FROM mob_loot l JOIN mob_monsters m ON m.id = l.mob_id
+             WHERE l.equipment_id = @id ORDER BY m.name`, { id });
+
+        item.siblings = [];
+        if (item.dropped_by.length) {
+            const sp = {};
+            const sph = item.dropped_by.map((d, i) => {
+                const p = 'sm' + String(i).padStart(4, '0');
+                sp[p] = d.mob_id;
+                return '@' + p;
+            });
+            item.siblings = await zeq.query(
+                `SELECT l.mob_id, l.id AS loot_id, l.item_name, l.slot, l.equipment_id
+                 FROM mob_loot l WHERE l.mob_id IN (${sph.join(',')})
+                 ORDER BY l.mob_id, l.sort_order, l.id`, sp);
+
+            // KYA availability per dropping mob (name-string correlation).
+            const kyaCounts = await kyaCountsByNames(zeq,
+                item.dropped_by.flatMap(d => [d.mob_name, d.short_name].filter(Boolean)));
+            for (const d of item.dropped_by) {
+                const nameKey = kyaCandidateName(d.mob_name).toLowerCase();
+                const shortKey = d.short_name ? kyaCandidateName(d.short_name).toLowerCase() : null;
+                if (kyaCounts.get(nameKey)) {
+                    d.kya_count = kyaCounts.get(nameKey);
+                    d.kya_name = kyaCandidateName(d.mob_name);
+                } else if (shortKey && kyaCounts.get(shortKey)) {
+                    d.kya_count = kyaCounts.get(shortKey);
+                    d.kya_name = kyaCandidateName(d.short_name);
+                } else {
+                    d.kya_count = 0;
+                    d.kya_name = null;
+                }
+            }
+        }
         ok(res, item);
     } catch (e) { console.error('[equipment/items/:id]', e); fail(res, 'detail failed', 500); }
 });
 
+// Update an item's note. Notes and links are the only editable fields —
+// parsed stats stay parser-owned (raw_info is the source of truth).
+router.post('/items/:id/note', editEq, async function(req, res) {
+    try {
+        const id = parseInt(req.params.id, 10);
+        if (!id) return fail(res, 'bad id');
+        const r = await zeq.query(
+            `UPDATE eq_items SET note = @vn, version = version + 1, updated = NOW() WHERE id = @vh`,
+            { vn: (req.body && req.body.note || '').trim() || null, vh: id });
+        if (!r.affectedRows) return fail(res, 'not found', 404);
+        ok(res, {});
+    } catch (e) { console.error('[equipment/note]', e); fail(res, 'note failed', 500); }
+});
+
+// Bind this item into a mob's loot list (the item-side quick-link).
+router.post('/items/:id/mobs', editEq, async function(req, res) {
+    try {
+        const id = parseInt(req.params.id, 10);
+        const mobId = parseInt(req.body && req.body.mob_id, 10);
+        if (!id || !mobId) return fail(res, 'id and mob_id are required');
+        const items = await zeq.query('SELECT id, name, wear_slot FROM eq_items WHERE id = @id', { id });
+        if (!items[0]) return fail(res, 'item not found', 404);
+        const mobsR = await zeq.query('SELECT id FROM mob_monsters WHERE id = @id', { id: mobId });
+        if (!mobsR[0]) return fail(res, 'mob not found', 404);
+        const result = await bindLootToItem(zeq, {
+            mobId, item: items[0],
+            slot: (req.body && req.body.slot || '').trim() || null,
+            user: req.user,
+        });
+        ok(res, result);
+    } catch (e) { console.error('[equipment/items/mobs]', e); fail(res, 'link failed', 500); }
+});
+
+// Unbind from the item side: null the loot row's equipment_id but KEEP the
+// row as free text — the Mob KB owns the loot list; the item side only
+// manages the link.
+router.delete('/items/:id/mobs/:loot_id', editEq, async function(req, res) {
+    try {
+        const id = parseInt(req.params.id, 10);
+        const lootId = parseInt(req.params.loot_id, 10);
+        if (!id || !lootId) return fail(res, 'bad id');
+        const rows = await zeq.query(
+            `SELECT l.mob_id, l.item_name, i.name AS eq_name
+             FROM mob_loot l JOIN eq_items i ON i.id = l.equipment_id
+             WHERE l.id = @vl AND l.equipment_id = @vi`, { vl: lootId, vi: id });
+        if (!rows[0]) return fail(res, 'link not found', 404);
+        await zeq.query(
+            `UPDATE mob_loot SET equipment_id = NULL WHERE id = @vl AND equipment_id = @vi`,
+            { vl: lootId, vi: id });
+        await recordMobHistory(zeq, rows[0].mob_id, req.user, 'update', 'loot',
+            { unlinked: `${rows[0].eq_name} (#${id})` }, null);
+        await bumpMobVersion(zeq, rows[0].mob_id, req.user.id);
+        ok(res, {});
+    } catch (e) { console.error('[equipment/items/unlink]', e); fail(res, 'unlink failed', 500); }
+});
+
+// Mob KB picker feed for the item-side binder + Add Equipment. Lives HERE
+// (not /api/mobs) so it's gated by the SOURCE screen's flag — an equipment
+// editor without `eqmobs` can still pick a mob to bind against.
+router.get('/mobs', viewEq, async function(req, res) {
+    try {
+        const q = (req.query.q || '').trim();
+        const params = {};
+        let where = '';
+        if (q) { where = 'WHERE name LIKE @q OR short_name LIKE @q'; params.q = '%' + q + '%'; }
+        ok(res, await zeq.query(
+            `SELECT id, name, area FROM mob_monsters ${where} ORDER BY name LIMIT 50`, params));
+    } catch (e) { console.error('[equipment/mobs]', e); fail(res, 'list failed', 500); }
+});
+
 // Paste identify text → parse + best-of-merge into the catalog, then tag
 // the caller as an owner. Replaces the legacy /api/eq/add + copy_to_user.
+// Optional `mob_id` (Mob KB) binds the item into that mob's loot list;
+// the legacy `eqmob` label is retired — new adds never write eqmob_id
+// (existing rows keep theirs through the merge).
 router.post('/add', editEq, async function(req, res) {
     try {
         const body = req.body || {};
@@ -102,13 +214,21 @@ router.post('/add', editEq, async function(req, res) {
         // item" cannot be created by either path.
         const info = (body.info || '').trim();
         const slot = (body.slot || '').trim();
-        const { eqmob, note } = body;
+        const { note } = body;
         if (!info || !slot) return fail(res, 'info and slot are required');
-        const id = await upsertItemFromText(info, slot, eqmob ?? null);
+        const id = await upsertItemFromText(info, slot, null);
         await zeq.query(
             `INSERT IGNORE INTO eq_ownership (user_id, item_id, note, created)
              VALUES (@uid, @id, @note, NOW())`,
             { uid: req.user.id, id, note: (note || '').trim() || null });
+        const mobId = parseInt(body.mob_id, 10);
+        if (mobId) {
+            const mobsR = await zeq.query('SELECT id FROM mob_monsters WHERE id = @id', { id: mobId });
+            if (mobsR[0]) {
+                const items = await zeq.query('SELECT id, name, wear_slot FROM eq_items WHERE id = @id', { id });
+                await bindLootToItem(zeq, { mobId, item: items[0], user: req.user });
+            }
+        }
         ok(res, { id });
     } catch (e) { console.error('[equipment/add]', e); fail(res, e.message || 'add failed'); }
 });
@@ -282,25 +402,8 @@ router.post('/build', viewEq, async function(req, res) {
     } catch (e) { console.error('[equipment/build]', e); fail(res, 'build failed', 500); }
 });
 
-// EQ mob lookup (still backed by the legacy `eqmobs` table; the catalog
-// references it via eq_items.eqmob_id).
-router.get('/eqmobs', viewEq, async function(req, res) {
-    try {
-        ok(res, await zeq.query('SELECT id, name FROM eqmobs ORDER BY name'));
-    } catch (e) { console.error('[equipment/eqmobs]', e); fail(res, 'list failed', 500); }
-});
-
-router.post('/eqmobs', editEq, async function(req, res) {
-    try {
-        const name = (req.body && req.body.name || '').trim();
-        if (!name) return fail(res, 'name is required');
-        // Dedup without a schema change to the legacy MyISAM table.
-        await zeq.query(
-            `INSERT INTO eqmobs (name) SELECT @name FROM DUAL
-             WHERE NOT EXISTS (SELECT 1 FROM eqmobs WHERE name = @name)`, { name });
-        const row = await zeq.query('SELECT id, name FROM eqmobs WHERE name = @name', { name });
-        ok(res, row[0]);
-    } catch (e) { console.error('[equipment/eqmobs add]', e); fail(res, 'add failed', 500); }
-});
+// The legacy /eqmobs picker endpoints are retired — source mobs now come
+// from the Mob KB via GET /mobs above. The legacy `eqmobs` table itself is
+// untouched (no-drop rule); eq_items.eqmob_id remains as frozen provenance.
 
 export const equipment = router;

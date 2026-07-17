@@ -7,7 +7,7 @@ import Multiselect from "@vueform/multiselect";
 // dark palette via --ms-* overrides in scss/styles.scss.
 import "@vueform/multiselect/themes/default.css";
 
-export default {    
+export default {
     name: "Equipment Add",
     data() {
         return {
@@ -16,9 +16,12 @@ export default {
             the_slot: "",
             item_info: "",
             note:"",
-            eqmobs:['zork','is','mon'],
-            selected_eqmob:"",
-            new_eq_mob: "",
+            // Source mob comes from the Mob KB (mob_monsters), replacing the
+            // legacy eqmobs label list. Optional — items with an unknown
+            // source are legal; picking one binds the item into that mob's
+            // loot list (mob_loot.equipment_id).
+            mobs: [],
+            selected_mob: null,
             example: `
 A jeweled dagger known as 'Annihilator' (1h) <Bound> seems to vibrate rapidly.
 It increases user's strength pitifully. (3/20)
@@ -42,13 +45,13 @@ This item loses its magical powers with average speed.
         // parsed server-side (/api/equipment/add) and the resulting item is
         // tagged as owned by the caller. See docs/equipment-redesign.md.
         add: async function() {
-            if ( this.item_info != "" && this.the_slot != "" && this.selected_eqmob != "" && this.$root.user ) {
+            if ( this.item_info != "" && this.the_slot != "" && this.$root.user ) {
                 const res = await axios.post(`/api/equipment/add`,
                     {
                         info:this.item_info.trim(),
                         note:this.note.trim(),
                         slot:this.the_slot,
-                        eqmob:this.selected_eqmob.id
+                        mob_id:this.selected_mob ? this.selected_mob.id : null
                     }
                 );
                 if ( !res.data || !res.data.ok ) {
@@ -57,34 +60,20 @@ This item loses its magical powers with average speed.
                 }
                 this.item_info = "";
                 this.the_slot = "";
-                this.selected_eqmob = "";
+                this.selected_mob = null;
                 this.note = "";
                 this.$root.send_global_alert("Added Successfully!");
             } else {
                 this.$root.send_global_alert("Fill all fields! // RE-LOGIN",true);
             }
         },
-        add_eqmob: async function() {
-            if ( this.new_eq_mob != "" ) {
-                await axios.post(`/api/equipment/eqmobs`,
-                    {
-                        name:this.new_eq_mob
-                    }
-                )
-                await this.load_eqmobs();
-                this.new_eq_mob = "";
-                this.$root.send_global_alert("Added Successfully!");
-            } else {
-                this.$root.send_global_alert("New EQ Mob NEEDS NAME!",true);
-            }
-
-        },
-        load_eqmobs: async function() {
-            this.eqmobs = (await axios.get(`/api/equipment/eqmobs`)).data.data;
+        load_mobs: async function() {
+            // ~150 mobs — load once, let Multiselect's search filter locally.
+            this.mobs = (await axios.get(`/api/equipment/mobs`)).data.data;
         }
     },
     mounted: async function() {
-        this.load_eqmobs();
+        this.load_mobs();
     }
 }
 </script>
@@ -131,27 +120,28 @@ button.filter {
             <textarea class="form-control" id="exampleFormControlTextarea2" v-model=note rows="2"></textarea>
         </div>
         <br><br>
-        <div class="row">
-            <div class="col-2">
+        <div class="row align-items-center">
+            <div class="col-md-3">
                             <Multiselect
-                            v-model="selected_eqmob"
+                            v-model="selected_mob"
                             class="filter"
-                            :options="eqmobs"
+                            :options="mobs"
                             :object="true"
                             value="name"
                             label="name"
                             valueProp="id"
                             track-by="name"
                             :searchable="true"
-                            placeholder="EQ Mobs.."
-                            ref="eqmob_selector"
+                            placeholder="Source mob (optional).."
+                            ref="mob_selector"
                             />
             </div>
-            <div class="col-2">
-                <button class="btn btn-primary" style="float:right" type="button" @click="add_eqmob">Add New Eq Mob</button>
-            </div>
-            <div class="col-2">
-                <input type="text" class="form-control" v-model="new_eq_mob" placeholder="New Eq Mob Name..." />
+            <div class="col-md-5 small text-muted">
+                Picking a mob links the item into that mob's loot list.
+                <template v-if="$root.canEqmobsEdit">
+                    Mob missing?
+                    <router-link :to="{ name: 'mob-detail', params: { id: 'new' } }">Create it in the Mob KB</router-link>.
+                </template>
             </div>
         </div>
         <br><br>

@@ -1,5 +1,6 @@
 <script>
 import zSimpleTableVue from "./tools/zSimpleTable.vue";
+import ItemDetailModal from "./ItemDetailModal.vue";
 import axios from 'axios';
 import { uf } from '../../utils/tools.mjs';
 
@@ -15,11 +16,16 @@ const STAT_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
 export default {
     name: "Equipment",
     data() {
-        return { eq: [] };
+        return {
+            eq: [],
+            modalItemId: null,
+            mobFilterName: null,   // chip label when ?mob= is active
+        };
     },
-    components: { zSimpleTableVue },
+    components: { zSimpleTableVue, ItemDetailModal },
     computed: {
         mine() { return this.$route.name === 'equipment'; },
+        mobFilterId() { return parseInt(this.$route.query.mob, 10) || null; },
     },
     methods: {
         add_eq() { this.$router.push({ name: "equipment-add" }); },
@@ -30,7 +36,9 @@ export default {
                 // only for users who can edit — tagging ownership is an
                 // equipment_edit write, so view-only users don't get it.
                 ...(!this.mine && this.$root.canEquipmentEdit ? { owned: { header: "Have", display_type: "toggle", callback: this.toggle_owned } } : {}),
-                name: { header: "Name" },
+                // Name opens the item detail modal (stats + raw identify
+                // text + mob links).
+                name: { header: "Name", display_type: "link", callback: (d) => { this.modalItemId = d.id; } },
                 slot_disp: { header: "Slot" },
                 wc: { header: "WpnCls" },
                 dmg: { header: "Dmg" },
@@ -42,7 +50,7 @@ export default {
                 rmag: { header: "Mag" }, rpoi: { header: "Poi" }, rfire: { header: "Fire" },
                 rcold: { header: "Cold" }, racid: { header: "Acid" }, rasphx: { header: "Asph" },
                 rshadow: { header: "Shdw" },
-                eqmob_name: { header: "Eq Mob" },
+                mob_disp: { header: "Eq Mob" },
                 bonus_summary: { header: "Bonuses" },
             };
             return cfg;
@@ -61,7 +69,9 @@ export default {
             for (const c of ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
                 'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire',
                 'rcold', 'racid', 'rasphx', 'rshadow', 'ac']) d[c] = v[c] || '';
-            d.eqmob_name = v.eqmob_name || '';
+            // Prefer the Mob KB link(s); fall back to the frozen legacy
+            // eqmob label until every item is linked through mob_loot.
+            d.mob_disp = v.mob_names || (v.eqmob_name ? `legacy: ${v.eqmob_name}` : '');
             d.bonus_summary = v.bonus_summary || '';
             return d;
         },
@@ -76,6 +86,11 @@ export default {
                 this.$root.send_global_alert("Failed — re-login?", true);
             }
         },
+        clearMobFilter() {
+            const query = { ...this.$route.query };
+            delete query.mob;
+            this.$router.push({ name: this.$route.name, query });
+        },
         // Fetch + (re)render the table for the current route. /equipment and
         // /equipment-all share this component, so the router REUSES the
         // instance on a switch and `mounted` does NOT fire again — the watch
@@ -83,17 +98,38 @@ export default {
         // reload correctly. See the component re-use gotcha in docs/gotchas.md.
         async load() {
             if (!this.$root.user) { this.$router.push({ name: "dashboard" }); return; }
-            const url = this.mine ? '/api/equipment/items?mine=1' : '/api/equipment/items';
-            const res = await axios.get(url);
+            const params = new URLSearchParams();
+            if (this.mine) params.set('mine', '1');
+            if (this.mobFilterId) params.set('mob', String(this.mobFilterId));
+            const qs = params.toString();
+            const res = await axios.get('/api/equipment/items' + (qs ? '?' + qs : ''));
             const rows = (res.data && res.data.data) || [];
             this.eq = [];
             uf.dloop(rows, (i, v) => this.eq.push(this.to_display(v)));
             this.$refs.zSimpleTableVue.set_table(this.eq, this.get_config(), { display_limit: 500 });
+            // Chip label for the active mob filter (from the rows if
+            // possible; else look the mob up).
+            this.mobFilterName = null;
+            if (this.mobFilterId) {
+                const withMob = rows.find(r => r.mob_names);
+                if (withMob) this.mobFilterName = withMob.mob_names.split(', ')[0];
+                else {
+                    try {
+                        const m = await axios.get('/api/equipment/mobs');
+                        const hit = ((m.data && m.data.data) || []).find(x => x.id === this.mobFilterId);
+                        this.mobFilterName = hit ? hit.name : `mob #${this.mobFilterId}`;
+                    } catch (e) { this.mobFilterName = `mob #${this.mobFilterId}`; }
+                }
+            }
         },
     },
     watch: {
-        // Reload when switching between the mine/all routes (same component).
-        '$route.name'() { this.load(); },
+        // Reload when switching mine/all routes OR when the ?mob= query
+        // changes (same component instance both times — fullPath, not name;
+        // see the component re-use gotcha in docs/gotchas.md).
+        '$route.fullPath'() {
+            if (['equipment', 'equipment-all'].includes(this.$route.name)) this.load();
+        },
     },
     async mounted() { await this.load(); },
 };
@@ -117,7 +153,14 @@ export default {
     <div>
         <h2>{{ mine ? 'My Equipment' : 'All Equipment' }}</h2>
         <button v-if="$root.canEquipmentEdit" class="btn btn-primary" type="button" @click="add_eq">Add Item</button>
-        <br><br><br>
+        <div v-if="mobFilterId" class="mt-2">
+            <span class="badge text-bg-primary">
+                Drops from: {{ mobFilterName || '…' }}
+                <i class="bi bi-x-lg ms-1" style="cursor:pointer" @click="clearMobFilter"></i>
+            </span>
+        </div>
+        <br><br>
         <zSimpleTableVue ref="zSimpleTableVue"></zSimpleTableVue>
+        <ItemDetailModal :item-id="modalItemId" @close="modalItemId = null" @changed="load()" />
     </div>
 </template>
