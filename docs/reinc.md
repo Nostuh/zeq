@@ -230,23 +230,69 @@ Per the guild file structure (subguilds listed in a parent's
   check and the level-cost formula.
 - **15-level subguild budget per primary guild.** Every primary guild
   starts with 15 available subguild levels, and each subguild level
-  pick draws down from that pool. The planner enforces the same cap in
-  three places via `subRoomFor(g)` / `subLevelsUnderParent(parentId,
-  excludeSubId)` in
+  pick draws down from that pool. The budget is pooled at the **primary**
+  guild (the depth-0 root), not at the immediate parent — see the
+  three-deep tree below, where Balance 5 + Chaos 10 share one pool and
+  sum to exactly 15. The planner enforces the same cap in three places
+  via `subRoomFor(g)` / `subLevelsUnderRoot(rootId, excludeSubId)` in
   [Reinc.vue](../www/src/components/Reinc.vue):
   1. `toggleGuild` clamps the initial level when adding a sub and
      refuses to add when the budget is exhausted.
   2. `setPickLevel` clamps in-place edits against the remaining budget,
      excluding the sub's own current level so an in-place change can
      re-use its own headroom.
-  3. The saved-build restore loop walks parents first, tracks
-     `subBudgetByParent`, and clamps (or drops) over-quota subs at load
-     time so an old build authored before this rule existed cannot
-     re-import an illegal state. Clamped subs flash a warning so the
-     user knows the loaded state isn't literally the saved state.
+  3. The saved-build restore loop walks picks **shallowest-first (by
+     depth)**, tracks `subBudgetByRoot`, and clamps (or drops) over-quota
+     subs at load time so an old build authored before this rule existed
+     cannot re-import an illegal state. Clamped subs flash a warning so
+     the user knows the loaded state isn't literally the saved state.
   Bug #21 was filed exactly because the planner was missing this rule
   (a Bard 45 + Actors/Gallants/Minstrels/Troubadours @5 each = 20
   sub-levels build was accepted).
+
+### The tree is THREE deep, not two (bug #41)
+
+Almost every guild is `primary → subguild`, but **Sorcerers is not**:
+
+```
+Sorcerers            45   (guilds.chr)
+└─ Faction of Balance 5   (sorcerers.chr        `Subguilds:`)
+   ├─ Faction of Chaos 10 (faction_of_balance.chr `Subguilds:`)
+   └─ Faction of Order 10 (faction_of_balance.chr `Subguilds:`)
+```
+
+5 + 10 = the 15-level budget exactly. The importer already recursed
+correctly (`importGuildFile` re-enters on each `Subguilds:` section), so
+`game_guilds.parent_id` has always been right — it was the **picker**
+that only rendered primaries plus their direct children, leaving the two
+factions unreachable. Anything that walks the guild tree must therefore
+handle arbitrary depth:
+
+- `guildTree` recurses instead of doing one `subMap[primary.id]` lookup,
+  and emits `depth` (0/1/2) for indentation (`.guild-row.sub` /
+  `.sub2`).
+- `rootGuildOf(g)` / `guildDepthOf(g)` / `descendantIdsOf(id)` are the
+  shared walkers; all three guard against a malformed parent chain.
+- `dropDependentsOf(g)` removes descendants at **any** depth and is
+  called unconditionally — dropping or un-maxing a *middle* tier
+  (Balance) has to take Chaos/Order with it. The old `!g.parent_id`
+  guard silently left orphaned grandchild picks behind.
+- `isLocked(g)` is unchanged: the **immediate** parent must be picked at
+  its own `max_level`. Chaos needs Balance at 5, which needs Sorcerers
+  at 45.
+
+Regression test:
+[scripts/test/repro_bug41_sorc_subs.mjs](../scripts/test/repro_bug41_sorc_subs.mjs)
+drives the whole chain in a browser (render depth, lock/unlock, the
+pooled 15-level budget, and both cascade directions).
+
+**Known gap, not yet fixed:** `faction_of_balance.chr` also lists
+*itself* — `Faction_of_Balance 10` — in its own `Subguilds:` section,
+i.e. a sorcerer who stays balanced takes 10 further Balance levels for
+15 total, which is why `game_guild_bonuses` carries Balance rows up to
+level 15. The importer's cycle guard (`seen`) drops that self-reference,
+so `game_guilds.max_level` for Balance is 5 and the planner caps it
+there. Chaos/Order are unaffected.
 
 ## Wishes and boons
 

@@ -48,7 +48,7 @@ export default {
         <div class="guild-list">
             <div v-if="reinc.guildTree.length === 0" class="small text-muted p-2">No guilds match “{{ reinc.guildSearch }}”.</div>
             <div v-for="g in reinc.guildTree" :key="g.id" class="guild-row"
-                 :class="{ picked: reinc.isPicked(g), sub: g.depth, locked: reinc.isLocked(g) }"
+                 :class="{ picked: reinc.isPicked(g), sub: g.depth === 1, sub2: g.depth >= 2, locked: reinc.isLocked(g) }"
                  :title="reinc.isLocked(g) ? 'Select the parent guild at max level to unlock this subguild' : ''">
                 <!-- Bug #27 — native <input checkbox> desync is unfixable
                      in Vue 3: `:checked` + `@click.prevent` still drifts
@@ -66,7 +66,7 @@ export default {
                          each row's ceiling without picking it or opening the
                          unlock modal. Picked rows already display "/max" as
                          part of the level input on the right. -->
-                    <span :class="{ 'text-muted': g.depth || reinc.isLocked(g) }">{{ g.depth ? '- ' : '' }}{{ g.name }}<small v-if="!reinc.isPicked(g)" class="text-muted ms-1">/{{ g.max_level }}</small></span>
+                    <span :class="{ 'text-muted': g.depth || reinc.isLocked(g) }">{{ '- '.repeat(g.depth) }}{{ g.name }}<small v-if="!reinc.isPicked(g)" class="text-muted ms-1">/{{ g.max_level }}</small></span>
                     <span v-if="reinc.isLocked(g)" class="ms-2 small text-muted">🔒</span>
                 </div>
                 <input v-if="reinc.isPicked(g)" type="number" class="form-control form-control-sm level-input"

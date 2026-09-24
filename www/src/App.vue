@@ -531,7 +531,12 @@ body.reinc-active #app {
    nav to wrap to a second line whenever the links + user controls don't fit
    (authed views on tablets especially, where the old fixed row overflowed).
    Wide desktop still renders everything on one line. */
-.zeq-navbar .navbar-nav { flex-wrap: wrap; row-gap: 0.15rem; justify-content: flex-end; }
+/* `align-self: stretch` so the nav row spans the navbar's full height rather
+   than sitting centred at its own 40px content height. The children stay
+   centred (the row keeps `align-items: center`), but the Misc dropdown can
+   now anchor `top: 100%` to the navbar's bottom edge instead of opening
+   part-way up inside the bar. */
+.zeq-navbar .navbar-nav { flex-wrap: wrap; row-gap: 0.15rem; justify-content: flex-end; align-self: stretch; }
 @media (max-width: 560px) {
     .zeq-navbar .navbar-brand { padding-left: 0.6rem; padding-right: 0.6rem; }
     .zeq-navbar .brand-full { display: none; }
@@ -549,14 +554,24 @@ body.reinc-active #app {
     .zeq-navbar .navbar-text { display: none; }
 }
 
-/* Public "Misc" dropdown in the header. `.dropdown` gives it the relative
-   positioning the absolute menu anchors to; we only nudge the toggle so it
-   matches the plain nav-links beside it. */
-.misc-menu { position: relative; }
+/* Public "Misc" dropdown in the header. `position: relative` is what the
+   absolute menu anchors to. It also stretches to the full height of the nav
+   row so the menu's `top: 100%` lands on the navbar's bottom edge — left at
+   its natural 40px the toggle sits centred in a 65px bar and the menu opened
+   ~7px UP inside the navbar. The inner flex keeps the link centred, and the
+   padding just matches the plain nav-links beside it. */
+.misc-menu { position: relative; align-self: stretch; display: flex; align-items: center; }
 .misc-menu .nav-link { padding-left: 0.25rem; padding-right: 0.25rem; cursor: pointer; }
 /* Anchor the menu just below the toggle, right-aligned to it. Explicit so it
-   doesn't depend on Bootstrap's Popper JS (we open/close it from Vue). */
-.misc-menu .dropdown-menu { top: 100%; right: 0; left: auto; margin-top: 0.35rem; }
+   doesn't depend on Bootstrap's Popper JS (we open/close it from Vue).
+   `position: absolute` is REQUIRED, not decorative: this header is a bare
+   `.navbar` with no `navbar-expand-*` class, so Bootstrap's unconditional
+   `.navbar-nav .dropdown-menu { position: static }` applies and is never
+   restored to absolute (that only happens under `.navbar-expand-*`). Left
+   static, the opened menu joins the flex flow, grows the navbar's height and
+   — with `.navbar-nav { flex-wrap: wrap }` above — reflows every nav item, so
+   "Misc" visibly jumped to its own line whenever you opened it. */
+.misc-menu .dropdown-menu { position: absolute; top: 100%; right: 0; left: auto; margin-top: 0.35rem; }
 .misc-menu .dropdown-menu.show { z-index: 1001; }
 
 .reinc-wrap {

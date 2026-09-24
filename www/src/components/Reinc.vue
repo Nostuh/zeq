@@ -105,26 +105,36 @@ export default {
     computed: {
         enabledRaces() { return this.races.filter((r) => r.enabled); },
         race() { return this.races.find((r) => r.id === this.selectedRaceId) || null; },
+        // Flattened, depth-annotated guild picker rows.
+        //
+        // The tree is NOT uniformly two levels deep. Sorcerers nest three
+        // deep — Sorcerers → Faction of Balance → Faction of Chaos /
+        // Faction of Order (sorcerers.chr `Subguilds:` → Faction_of_Balance 5,
+        // then faction_of_balance.chr `Subguilds:` → Chaos 10 / Order 10).
+        // The first cut only ever read `subMap[<primary>.id]`, so guilds
+        // whose parent was itself a subguild were unreachable and the two
+        // sorcerer factions never rendered. Bug #41. Walk to arbitrary
+        // depth instead of hard-coding two levels.
         guildTree() {
             const q = (this.guildSearch || '').trim().toLowerCase();
-            const parents = this.guilds.filter((g) => !g.parent_id);
             const subMap = {};
             for (const g of this.guilds) if (g.parent_id) (subMap[g.parent_id] ||= []).push(g);
-            // Filter: a parent is included if it matches OR any of its subguilds does;
-            // a subguild is included if it matches OR its parent does. Picked guilds
-            // are always visible so the user doesn't lose a selection behind a search.
+            // Filter: a node is shown if it matches, OR an ancestor matches
+            // (so picking a parent reveals its whole subtree), OR a
+            // descendant matches (so searching a leaf reveals the path to
+            // it). Picked guilds are always visible so the user doesn't
+            // lose a selection behind a search.
             const matches = (g) => !q || g.name.toLowerCase().includes(q) || this.isPicked(g);
+            const subtreeMatches = (g) =>
+                matches(g) || (subMap[g.id] || []).some(subtreeMatches);
             const out = [];
-            for (const p of parents) {
-                const kids = (subMap[p.id] || []);
-                const parentMatches = matches(p);
-                const anyKidMatches = kids.some(matches);
-                if (!parentMatches && !anyKidMatches) continue;
-                out.push({ ...p, depth: 0 });
-                for (const s of kids) {
-                    if (parentMatches || matches(s)) out.push({ ...s, depth: 1 });
-                }
-            }
+            const walk = (g, depth, ancestorMatched) => {
+                if (!ancestorMatched && !subtreeMatches(g)) return;
+                out.push({ ...g, depth });
+                const showAll = ancestorMatched || matches(g);
+                for (const s of (subMap[g.id] || [])) walk(s, depth + 1, showAll);
+            };
+            for (const g of this.guilds) if (!g.parent_id) walk(g, 0, false);
             return out;
         },
         pickedGuildSummaries() {
@@ -565,48 +575,55 @@ export default {
                 // the UI lock) can contain an outright invalid subguild.
                 // Drop those picks at load time and flash a warning so
                 // the user knows the state they see isn't literally the
-                // saved state. Parents are walked first so every
-                // subguild has its parent state visible in the same loop.
+                // saved state. Picks are walked shallowest-first so every
+                // subguild sees its parent's resolved state in one pass —
+                // by DEPTH, not "primary vs sub", because the sorcerer
+                // tree is three deep (Sorcerers → Faction of Balance →
+                // Chaos / Order) and a two-bucket sort could visit Chaos
+                // before Balance. Bug #41.
                 const rawPicks = Array.isArray(state.guild_picks) ? state.guild_picks : [];
                 const resolved = [];
                 for (const p of rawPicks) {
                     const g = this.guilds.find((x) => x.id === (p.guild_id | 0));
                     if (!g) continue;
                     const lvl = Math.max(1, Math.min(g.max_level | 0, p.level | 0));
-                    resolved.push({ guild: g, level: lvl });
+                    resolved.push({ guild: g, level: lvl, depth: this.guildDepthOf(g) });
                 }
-                // Parents first so subguild checks can look up the
-                // parent's selected level in one pass.
-                resolved.sort((a, b) => {
-                    const ap = a.guild.parent_id ? 1 : 0;
-                    const bp = b.guild.parent_id ? 1 : 0;
-                    return ap - bp;
-                });
-                const parentLevelById = new Map();
-                const subBudgetByParent = new Map();
+                resolved.sort((a, b) => a.depth - b.depth);
+                // Level of every pick kept so far, keyed by guild id — a
+                // subguild's parent may itself be a subguild, so this can't
+                // be limited to primary guilds. A parent that was dropped
+                // never lands here, which cascades the drop to its children.
+                const keptLevelById = new Map();
+                const subBudgetByRoot = new Map();
                 const validPicks = [];
                 const droppedSubs = [];
                 const clampedSubs = [];
                 for (const r of resolved) {
                     const g = r.guild;
                     if (g.parent_id) {
-                        const parentLvl = parentLevelById.get(g.parent_id);
                         const parent = this.guilds.find((x) => x.id === g.parent_id);
+                        const parentLvl = keptLevelById.get(g.parent_id);
                         if (!parent || parentLvl == null || parentLvl < (parent.max_level | 0)) {
                             droppedSubs.push(g.name);
                             continue;
                         }
                         // Guild.cs:200 — 15 sub levels per primary guild.
-                        const used = subBudgetByParent.get(g.parent_id) || 0;
+                        // Pooled at the ROOT so Balance + Chaos share one
+                        // 15-level budget under Sorcerers.
+                        const root = this.rootGuildOf(g);
+                        const rootId = root ? root.id : g.parent_id;
+                        const used = subBudgetByRoot.get(rootId) || 0;
                         const room = 15 - used;
                         if (room <= 0) { droppedSubs.push(g.name); continue; }
                         let lvl = r.level;
                         if (lvl > room) { lvl = room; clampedSubs.push(g.name); }
-                        subBudgetByParent.set(g.parent_id, used + lvl);
+                        subBudgetByRoot.set(rootId, used + lvl);
+                        keptLevelById.set(g.id, lvl);
                         validPicks.push({ guildId: g.id, level: lvl });
                         continue;
                     }
-                    parentLevelById.set(g.id, r.level);
+                    keptLevelById.set(g.id, r.level);
                     validPicks.push({ guildId: g.id, level: r.level });
                 }
                 if (clampedSubs.length) {
@@ -758,6 +775,46 @@ export default {
         parentOf(g) {
             return g && g.parent_id ? this.guilds.find((x) => x.id === g.parent_id) : null;
         },
+        // Walk up to the PRIMARY (depth-0) guild. The 15-level subguild
+        // budget is per primary guild, not per immediate parent — with the
+        // three-deep sorcerer tree those differ: Faction of Balance 5 +
+        // Faction of Chaos 10 both draw from the Sorcerers pool and sum to
+        // exactly 15. Bug #41. Guarded against a malformed parent chain.
+        rootGuildOf(g) {
+            let cur = g;
+            for (let hops = 0; cur && cur.parent_id && hops < 16; hops++) {
+                const next = this.guilds.find((x) => x.id === cur.parent_id);
+                if (!next) break;
+                cur = next;
+            }
+            return cur || null;
+        },
+        // 0 for a primary guild, 1 for a subguild, 2 for a sub-subguild.
+        guildDepthOf(g) {
+            let depth = 0;
+            let cur = g;
+            while (cur && cur.parent_id && depth < 16) {
+                const next = this.guilds.find((x) => x.id === cur.parent_id);
+                if (!next) break;
+                cur = next;
+                depth++;
+            }
+            return depth;
+        },
+        // Every guild below `rootId` in the tree, at any depth.
+        descendantIdsOf(rootId) {
+            const out = new Set();
+            const stack = [rootId];
+            while (stack.length) {
+                const id = stack.pop();
+                for (const g of this.guilds) {
+                    if (g.parent_id !== id || out.has(g.id)) continue;
+                    out.add(g.id);
+                    stack.push(g.id);
+                }
+            }
+            return out;
+        },
         // A subguild is only available once its parent guild is selected and
         // sitting at the parent's max_level. The desktop client enforces this
         // because guild-level bonuses flow: parent_max + subguild_levels.
@@ -768,14 +825,12 @@ export default {
             if (!pick) return true;
             return (pick.level | 0) < (parent.max_level | 0);
         },
-        // Hard cap from Guild.cs:200 — `availSubLevels = 15` per primary
-        // guild. Sums currently-picked subguild levels under `parentId`,
-        // optionally excluding one sub (so an in-place edit can compute
-        // remaining headroom for itself).
-        subLevelsUnderParent(parentId, excludeSubId = null) {
-            const subIds = new Set(
-                this.guilds.filter((x) => x.parent_id === parentId).map((x) => x.id),
-            );
+        // Hard cap from Guild.cs:200 — `availSubLevels = 15` per PRIMARY
+        // guild. Sums every currently-picked subguild level anywhere below
+        // `rootId` (at any depth), optionally excluding one sub so an
+        // in-place edit can compute remaining headroom for itself.
+        subLevelsUnderRoot(rootId, excludeSubId = null) {
+            const subIds = this.descendantIdsOf(rootId);
             let sum = 0;
             for (const p of this.guildPicks) {
                 if (!subIds.has(p.guildId)) continue;
@@ -785,17 +840,20 @@ export default {
             return sum;
         },
         subRoomFor(g) {
-            // Returns remaining sub-level headroom under g's parent if g is
-            // a subguild, else Infinity. Excludes g's own current pick so
-            // editing in place sees its own room.
+            // Returns remaining sub-level headroom under g's PRIMARY guild
+            // if g is a subguild, else Infinity. Excludes g's own current
+            // pick so editing in place sees its own room.
             if (!g.parent_id) return Infinity;
-            const used = this.subLevelsUnderParent(g.parent_id, g.id);
+            const root = this.rootGuildOf(g);
+            if (!root) return Infinity;
+            const used = this.subLevelsUnderRoot(root.id, g.id);
             return Math.max(0, 15 - used);
         },
+        // Remove every selected guild BELOW `parentGuild` in the tree, at
+        // any depth — dropping (or un-maxing) Faction of Balance has to
+        // take Chaos/Order with it, not just Balance's immediate children.
         dropDependentsOf(parentGuild) {
-            // Remove any selected subguilds whose parent is no longer valid.
-            const subs = this.guilds.filter((x) => x.parent_id === parentGuild.id);
-            const subIds = new Set(subs.map((x) => x.id));
+            const subIds = this.descendantIdsOf(parentGuild.id);
             this.guildPicks = this.guildPicks.filter((p) => !subIds.has(p.guildId));
         },
         // Click handler for guild rows. We intercept the click rather than
@@ -814,7 +872,10 @@ export default {
             const i = this.guildPicks.findIndex((p) => p.guildId === g.id);
             if (i >= 0) {
                 this.guildPicks.splice(i, 1);
-                if (!g.parent_id) this.dropDependentsOf(g);
+                // Cascade unconditionally: a subguild can itself have
+                // subguilds (Faction of Balance → Chaos / Order), so the
+                // old `!g.parent_id` guard left orphaned picks behind.
+                this.dropDependentsOf(g);
                 return;
             }
             // Adding: refuse if there's no room in the 120-level budget.
@@ -848,7 +909,9 @@ export default {
             const subRoom = this.subRoomFor(g);
             const newLevel = Math.max(1, Math.min(g.max_level, globalRoom, subRoom, parseInt(v, 10) || 0));
             p.level = newLevel;
-            if (!g.parent_id && newLevel < g.max_level) this.dropDependentsOf(g);
+            // Any guild dropping below its max unlocks nothing beneath it —
+            // including a mid-tree subguild like Faction of Balance.
+            if (newLevel < g.max_level) this.dropDependentsOf(g);
         },
         reset() {
             if (!confirm('Reset all selections?')) return;
@@ -1389,6 +1452,9 @@ export default {
 }
 .guild-row { display: flex; align-items: center; padding: 0.1rem 0.25rem; }
 .guild-row.sub { padding-left: 1rem; }
+/* Third tier — only the sorcerer factions today (Sorcerers → Faction of
+   Balance → Chaos / Order). Bug #41. */
+.guild-row.sub2 { padding-left: 2rem; }
 .guild-row.picked { background: #e7f1ff; }
 .guild-row.locked { opacity: 0.55; }
 .guild-check { font-size: 1rem; line-height: 1; flex-shrink: 0; }

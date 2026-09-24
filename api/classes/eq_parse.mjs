@@ -330,4 +330,4 @@ export function parseIdentify(text, slotRaw = '') {
     };
 }
 
-export const _scales = { AMOUNT_SCALE, AC_SCALE, STAT_PATTERNS };
+export const _scales = { AMOUNT_SCALE, AC_SCALE, STAT_PATTERNS, SKILL_MAP };

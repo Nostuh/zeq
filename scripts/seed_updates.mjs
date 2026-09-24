@@ -187,6 +187,16 @@ const SEED = [
         title: 'Skill/spell Max button stays put on short screens',
         body: 'On shorter screens the skill/spell list shares the page scroll, so the description box and its Max button used to scroll out of view as you went down the list. The description panel is now pinned in place, so the selected skill’s details and Max button stay reachable while you scroll.',
     },
+    {
+        created: '2026-08-27 10:30:00', kind: 'fix', bug_id: 41,
+        title: 'Sorcerer factions (Order and Chaos) now show up',
+        body: 'Sorcerers are the only guild with a third tier: Sorcerers, then Faction of Balance, then Faction of Order or Faction of Chaos under that. The guild picker only ever drew two levels deep, so Order and Chaos were impossible to select. All three now appear, unlock in order (Sorcerers at 45 unlocks Balance, Balance at 5 unlocks Order/Chaos), and share the usual 15 subguild levels — Balance 5 plus Order or Chaos 10.',
+    },
+    {
+        created: '2026-08-27 10:30:01', kind: 'fix',
+        title: 'The Misc menu no longer jumps around when you open it',
+        body: 'Opening the "Misc" menu in the top bar pushed the whole row of links onto a second line and shoved "Misc" out from under your cursor, which made Chest Sorter awkward to click. The menu now drops down cleanly below the bar and nothing else moves.',
+    },
 ];
 
 async function main() {

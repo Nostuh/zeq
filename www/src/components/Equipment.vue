@@ -1,6 +1,7 @@
 <script>
 import zSimpleTableVue from "./tools/zSimpleTable.vue";
 import ItemDetailModal from "./ItemDetailModal.vue";
+import EqScoringHelp from "./EqScoringHelp.vue";
 import axios from 'axios';
 import { uf } from '../../utils/tools.mjs';
 
@@ -13,19 +14,44 @@ const STAT_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
     'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold',
     'racid', 'rasphx', 'rshadow', 'ac', 'wc', 'dmg_pct'];
 
+// Every resistance column, summed into the ΣRes total column. Shadow is
+// included: it is a real resist and on most items it is 0 anyway, so
+// leaving it out would only hide the handful of items that carry it.
+// Bug #43.
+const RESIST_COLS = ['rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire',
+    'rcold', 'racid', 'rasphx', 'rshadow'];
+
+// Label for items whose wear_slot is blank in the catalog (a small number
+// of rows the parser could not classify).
+const NO_SLOT = '(unslotted)';
+
 export default {
     name: "Equipment",
     data() {
         return {
             eq: [],
+            allRows: [],           // every loaded row, pre slot-filter
+            slotFilter: [],        // selected wear_slots; empty = show all
             modalItemId: null,
             mobFilterName: null,   // chip label when ?mob= is active
         };
     },
-    components: { zSimpleTableVue, ItemDetailModal },
+    components: { zSimpleTableVue, ItemDetailModal, EqScoringHelp },
     computed: {
         mine() { return this.$route.name === 'equipment'; },
         mobFilterId() { return parseInt(this.$route.query.mob, 10) || null; },
+        // Slots actually present in the loaded rows, with counts, so the
+        // filter never offers an option that would return nothing.
+        slotOptions() {
+            const counts = new Map();
+            for (const r of this.allRows) {
+                const s = r.wear_slot || NO_SLOT;
+                counts.set(s, (counts.get(s) || 0) + 1);
+            }
+            return [...counts.entries()]
+                .map(([slot, count]) => ({ slot, count }))
+                .sort((a, b) => b.count - a.count || a.slot.localeCompare(b.slot));
+        },
     },
     methods: {
         add_eq() { this.$router.push({ name: "equipment-add" }); },
@@ -50,6 +76,10 @@ export default {
                 rmag: { header: "Mag" }, rpoi: { header: "Poi" }, rfire: { header: "Fire" },
                 rcold: { header: "Cold" }, racid: { header: "Acid" }, rasphx: { header: "Asph" },
                 rshadow: { header: "Shdw" },
+                // Sum of every resist column — kept adjacent to the block it
+                // totals. Numeric (not blanked to '') when non-zero so the
+                // table sorts it numerically. Bug #43.
+                rtot: { header: "ΣRes" },
                 // Mob names link to the mob's KB page for users with mob
                 // access; plain text (or "legacy: X") otherwise.
                 mob_disp: {
@@ -64,6 +94,14 @@ export default {
         // dense table stays readable, and build the composite columns.
         to_display(v) {
             const d = { id: v.id, name: v.name, owned: !!v.owned };
+            // Raw slot is kept for the slot filter (slot_disp carries the
+            // weapon-class suffix, so it can't be matched exactly).
+            d.wear_slot = v.wear_slot || '';
+            // Total resists — summed from the API row BEFORE the loop below
+            // blanks zeros out, and left blank when the item has none so the
+            // dense table stays readable.
+            const rtot = RESIST_COLS.reduce((a, c) => a + (Number(v[c]) || 0), 0);
+            d.rtot = rtot || '';
             let slot = v.wear_slot || '';
             if (v.weapon_class) slot += ` (${v.weapon_class}${v.hands == 2 ? ' 2h' : ''})`;
             else if (v.is_shield) slot += ' (shield)';
@@ -105,6 +143,33 @@ export default {
             delete query.mob;
             this.$router.push({ name: this.$route.name, query });
         },
+        // --- Slot filter (bug #40) -------------------------------------
+        // Multi-select: pick any combination of slots, e.g. just amulets,
+        // or amulets + neck, and then sort/search within that subset.
+        // Driven by reactive state on plain buttons rather than native
+        // <input> elements — see the checkbox-desync gotcha in
+        // docs/gotchas.md.
+        isSlotOn(slot) { return this.slotFilter.includes(slot); },
+        toggleSlot(slot) {
+            const i = this.slotFilter.indexOf(slot);
+            if (i >= 0) this.slotFilter.splice(i, 1);
+            else this.slotFilter.push(slot);
+            this.render();
+        },
+        clearSlots() {
+            if (!this.slotFilter.length) return;
+            this.slotFilter = [];
+            this.render();
+        },
+        // Apply the slot filter to the loaded rows and (re)draw the table.
+        // Empty filter = show everything.
+        render() {
+            const on = new Set(this.slotFilter);
+            this.eq = on.size
+                ? this.allRows.filter((r) => on.has(r.wear_slot || NO_SLOT))
+                : this.allRows.slice();
+            this.$refs.zSimpleTableVue.set_table(this.eq, this.get_config(), { display_limit: 500 });
+        },
         // Fetch + (re)render the table for the current route. /equipment and
         // /equipment-all share this component, so the router REUSES the
         // instance on a switch and `mounted` does NOT fire again — the watch
@@ -118,9 +183,14 @@ export default {
             const qs = params.toString();
             const res = await axios.get('/api/equipment/items' + (qs ? '?' + qs : ''));
             const rows = (res.data && res.data.data) || [];
-            this.eq = [];
-            uf.dloop(rows, (i, v) => this.eq.push(this.to_display(v)));
-            this.$refs.zSimpleTableVue.set_table(this.eq, this.get_config(), { display_limit: 500 });
+            this.allRows = [];
+            uf.dloop(rows, (i, v) => this.allRows.push(this.to_display(v)));
+            // Drop any selected slot that this route's rows don't contain,
+            // so switching My ↔ All can't leave an empty table behind an
+            // invisible filter.
+            const present = new Set(this.allRows.map((r) => r.wear_slot || NO_SLOT));
+            this.slotFilter = this.slotFilter.filter((s) => present.has(s));
+            this.render();
             // Chip label for the active mob filter (from the rows if
             // possible; else look the mob up).
             this.mobFilterName = null;
@@ -161,19 +231,65 @@ export default {
 :deep(table.table) > :not(caption) > * > * {
     padding: 0.2rem 0.35rem;
 }
+
+/* Slot filter bar — wraps freely so 14 slot chips fit any viewport without a
+   fixed px breakpoint. Colours come from Bootstrap button variants, so both
+   themes are covered. */
+.eq-slotbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+}
+.eq-slotbar .btn {
+    padding: 0.1rem 0.45rem;
+    font-size: 0.78rem;
+}
+.eq-slotbar-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--bs-secondary-color);
+    margin-right: 0.15rem;
+}
+.eq-slotbar-count {
+    font-size: 0.78rem;
+    margin-left: 0.35rem;
+}
 </style>
 
 <template>
     <div>
-        <h2>{{ mine ? 'My Equipment' : 'All Equipment' }}</h2>
-        <button v-if="$root.canEquipmentEdit" class="btn btn-primary" type="button" @click="add_eq">Add Item</button>
+        <div class="d-flex flex-wrap align-items-center gap-3">
+            <h2 class="m-0">{{ mine ? 'My Equipment' : 'All Equipment' }}</h2>
+            <EqScoringHelp />
+        </div>
+        <button v-if="$root.canEquipmentEdit" class="btn btn-primary mt-2" type="button" @click="add_eq">Add Item</button>
         <div v-if="mobFilterId" class="mt-2">
             <span class="badge text-bg-primary">
                 Drops from: {{ mobFilterName || '…' }}
                 <i class="bi bi-x-lg ms-1" style="cursor:pointer" @click="clearMobFilter"></i>
             </span>
         </div>
-        <br><br>
+
+        <!-- Slot filter (bug #40): narrow the catalog to one or more slots,
+             then sort/search inside that subset. -->
+        <div v-if="slotOptions.length > 1" class="eq-slotbar mt-2">
+            <span class="eq-slotbar-label">Slot:</span>
+            <button type="button" class="btn btn-sm"
+                    :class="slotFilter.length ? 'btn-outline-secondary' : 'btn-secondary'"
+                    @click="clearSlots">All</button>
+            <button v-for="o in slotOptions" :key="o.slot" type="button" class="btn btn-sm"
+                    :class="isSlotOn(o.slot) ? 'btn-primary' : 'btn-outline-secondary'"
+                    @click="toggleSlot(o.slot)">
+                {{ o.slot }} <span class="opacity-75">{{ o.count }}</span>
+            </button>
+            <span class="eq-slotbar-count text-muted">
+                {{ eq.length }}<template v-if="eq.length !== allRows.length"> of {{ allRows.length }}</template> items
+            </span>
+        </div>
+
+        <br>
         <zSimpleTableVue ref="zSimpleTableVue"></zSimpleTableVue>
         <ItemDetailModal :item-id="modalItemId" @close="modalItemId = null" @changed="load()" />
     </div>

@@ -11,6 +11,7 @@
 // Props: itemId (null = hidden). Emits: close, changed (parent should
 // refetch its list after ownership/link/note edits).
 import axios from 'axios';
+import EqScoringHelp from './EqScoringHelp.vue';
 
 const STAT_LABELS = [
     ['str', 'Str'], ['con', 'Con'], ['dex', 'Dex'], ['int', 'Int'],
@@ -23,6 +24,7 @@ const STAT_LABELS = [
 
 export default {
     name: 'ItemDetailModal',
+    components: { EqScoringHelp },
     props: {
         itemId: { type: Number, default: null },
     },
@@ -248,6 +250,9 @@ export default {
                 <span v-if="item.weapon_class_value" class="itemdm-stat"><b>WpnCls</b> {{ item.weapon_class_value }}</span>
                 <span v-if="item.dmg_pct" class="itemdm-stat"><b>Dmg</b> {{ item.dmg_pct }}% {{ item.dmg_type || '' }}</span>
             </div>
+            <!-- These are adjective scores, not the bonus the item actually
+                 grants — the explainer says why. Bug #43. -->
+            <div class="mb-2"><EqScoringHelp small /></div>
 
             <!-- Bonuses -->
             <div v-if="item.bonuses && item.bonuses.length" class="mb-2">

@@ -105,6 +105,27 @@ level on add), `setPickLevel` (in-place edits), and the saved-build
 restore loop (so re-importing an old state cannot resurrect an illegal
 build). See [reinc.md](reinc.md#guild-and-subguild-ordering-rules).
 
+### A bare `.navbar` forces `position: static` on its dropdown menus
+Bootstrap ships an unconditional `.navbar-nav .dropdown-menu { position:
+static; }` (for the collapsed mobile navbar) and only restores
+`position: absolute` inside the `.navbar-expand-*` media queries. Our
+header is a plain `.navbar` with **no** `navbar-expand-*` class, so the
+static rule always won: opening the Misc dropdown put the `<ul>` into the
+flex flow, grew the navbar's height, and — because
+`.zeq-navbar .navbar-nav` sets `flex-wrap: wrap` — reflowed every nav
+item, so "Misc" visibly jumped to its own line on each open. The CSS
+comment even said "the absolute menu" while nothing set it. Any custom
+dropdown in this header MUST declare `position: absolute` itself.
+
+Second half of the same fix: `top: 100%` anchors to the *toggle's*
+box, and the nav row is 40px centred inside a 65px navbar, so the menu
+opened ~7px **up inside** the bar. Both `.zeq-navbar .navbar-nav` and
+`.misc-menu` now carry `align-self: stretch` (children stay centred), so
+`top: 100%` lands on the navbar's real bottom edge. Verified by the
+navbar section of
+[repro_bug40_43_equipment.mjs](../scripts/test/repro_bug40_43_equipment.mjs),
+which asserts the navbar height is byte-identical open vs closed.
+
 ### `100vw` includes the vertical scrollbar
 Any `max-width: 100vw` or similar on a page-level container overflows
 horizontally as soon as the content generates a vertical scrollbar.

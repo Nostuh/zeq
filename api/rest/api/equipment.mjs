@@ -7,6 +7,7 @@ import express from 'express';
 import dbs from '../../db.mjs';
 import { requireFlag } from './auth.mjs';
 import { upsertItemFromText } from '../../classes/eq_store.mjs';
+import { _scales } from '../../classes/eq_parse.mjs';
 // Loose matching for /import (chest pastes) + the mob-loot linker; shared
 // with scripts/migrate_mob_links.mjs. See eq_match.mjs for the rules.
 import { looseKey, pasteLooseKey } from '../../classes/eq_match.mjs';
@@ -29,6 +30,24 @@ const editEq = requireFlag('equipment_edit');
 // the SCREENS and jump buttons, not the read-only context inside the
 // modal — so detail accepts any equipment OR eqmobs flag.
 const viewAny = requireFlag('equipment', 'equipment_edit', 'eqmobs', 'eqmobs_edit');
+
+// The adjective ladders the parser scores items with, straight out of
+// eq_parse.mjs so the "how scoring works" panel can never drift from the
+// parser itself. Every number in the equipment tables is one of these
+// ordinal scores — NOT the actual in-game bonus, which also depends on
+// race multipliers, bound vs unbound, and the MUD's own rounding.
+// Static reference data, so view-level access is enough.
+router.get('/scales', viewEq, function(req, res) {
+    const pairs = (t) => t.map(([label, value]) => ({ label, value }));
+    ok(res, {
+        // Ascending so the UI can render them as a ladder.
+        amount: pairs(_scales.AMOUNT_SCALE).sort((a, b) => a.value - b.value),
+        ac: pairs(_scales.AC_SCALE).sort((a, b) => a.value - b.value),
+        skill: Object.entries(_scales.SKILL_MAP)
+            .map(([label, value]) => ({ label, value }))
+            .sort((a, b) => a.value - b.value),
+    });
+});
 
 // List catalog items. `?q=` filters by name, `?mine=1` restricts to the
 // caller's owned items, `?mob=<mob_monsters.id>` to items that mob drops.

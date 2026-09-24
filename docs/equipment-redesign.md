@@ -236,3 +236,55 @@ Equipment, the Mob KB, and KYA are now linked. Full design + status in
   (idempotent, `--dry-run`). First live run: 36 legacy labels + 111
   loose-matched loot rows linked; unmatched names stay legacy-labeled and
   are cleaned up via the inline binders.
+
+## Catalog table: totals, slot filter, scoring explainer — Aug 2026
+
+Three changes to the shared [Equipment.vue](../www/src/components/Equipment.vue)
+list (it serves both `/equipment` and `/equipment-all`), from bug reports
+#43 and #40.
+
+- **`ΣRes` total-resist column** (#43). Sums all **ten** resist columns —
+  `rphys rpsi relec rmag rpoi rfire rcold racid rasphx rshadow`. Shadow is
+  deliberately included: it's a real resist and is 0 on nearly every item,
+  so excluding it would only hide the few that carry it. Computed in
+  `to_display()` from the API row **before** the zero-blanking loop, and
+  left as a **number** (blank only when the total is 0) so `zSimpleTable`'s
+  `the_sort` sorts it numerically rather than lexically. No API or schema
+  change — it is derived per row at render time.
+
+- **Slot multiselect filter** (#40). A chip bar above the table filters the
+  loaded rows to any combination of `wear_slot` values, so you can pull
+  "just amulets" and then sort/search within that subset. `allRows` holds
+  everything fetched; `render()` applies the filter and re-runs
+  `set_table`, so search and sort keep working unchanged inside the subset.
+  Chips are plain buttons driven by reactive state — **not** native
+  checkboxes (see the checkbox-desync entry in [gotchas.md](gotchas.md)).
+  Options and counts are derived from the loaded rows, so the bar never
+  offers a slot that would return nothing, and any selected slot missing
+  from the new route's rows is dropped on `load()` (switching My ↔ All
+  can't leave an empty table behind an invisible filter). Items with a
+  blank `wear_slot` group under `(unslotted)`.
+
+- **"How these numbers work" explainer**
+  ([EqScoringHelp.vue](../www/src/components/EqScoringHelp.vue)), shown on
+  the list header and inside [ItemDetailModal.vue](../www/src/components/ItemDetailModal.vue).
+  Every number in `eq_items` is an **adjective score**, not the bonus the
+  item actually grants: the MUD only prints an adverb ("increases the
+  user's strength *a bit*"), and the real gain also depends on the race
+  multiplier, bound vs unbound, and the MUD's own rounding — none of which
+  we model. The panel says so explicitly and frames the scores as a
+  *ranking* tool. It renders the ladders from
+  **`GET /api/equipment/scales`**, which serves `eq_parse.mjs`'s own
+  `AMOUNT_SCALE` / `AC_SCALE` / `SKILL_MAP` tables, so the explainer can
+  never drift from the parser. (`_scales` gained `SKILL_MAP` for this.)
+  It also notes that the top of each ladder is estimated — the game prints
+  those tiers with no magnitude, so their values only need to rank
+  correctly. Player-observed resist steps line up with `AMOUNT_SCALE`
+  exactly: a bit 6, somewhat 8, adequately 10, strongly 14, superbly 16,
+  tremendously 17, unearthly 26.
+
+Regression test:
+[scripts/test/repro_bug40_43_equipment.mjs](../scripts/test/repro_bug40_43_equipment.mjs)
+(borrows an admin session like `responsive.mjs`; checks the total against
+every visible row, the filter's single/multi/clear behaviour, and the
+explainer's content).

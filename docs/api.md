@@ -216,6 +216,7 @@ rows, ownership is per user. Backed by `eq_items` / `eq_item_bonuses` /
 
 | Method | Path | Purpose |
 |---|---|---|
+| GET    | `/api/equipment/scales`          | the adjective ladders the parser scores items with — `{amount[], ac[], skill[]}`, each `{label, value}` ascending. Served straight from `eq_parse.mjs`'s own tables so the "how scoring works" panel can't drift from the parser. Static reference data; view-level |
 | GET    | `/api/equipment/items?q=&mine=1` | list catalog rows (structured columns) with an `owned` flag for the caller; `q` filters by name, `mine=1` restricts to owned |
 | GET    | `/api/equipment/items/:id`       | item detail + `bonuses[]` + `owned`/`own_note` |
 | POST   | `/api/equipment/add`             | `{info, slot, eqmob?, note?}` — parse identify text server-side, **best-of-merge** into the catalog (`UNIQUE(name, wear_slot)`), and tag the caller as an owner. Replaces legacy `/add` + `copy_to_user` |
