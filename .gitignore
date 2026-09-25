@@ -5,6 +5,8 @@ api/uploads/
 docs/Zombiemud.pdf
 www/src/dist/
 scripts/test/out/
+# Personal scratch files at the repo root (never committed).
+/tmp/
 api/uploads/
 
 # Track Claude Code workspace settings in this repo. Overrides the
