@@ -75,8 +75,13 @@ export default {
 
     <div v-if="loading" class="text-muted">Loading...</div>
 
-    <!-- Desktop table -->
-    <table v-if="!loading && rows.length" class="table table-sm table-striped table-hover align-middle mob-list-table d-none d-md-table">
+    <!-- Desktop table. Wrapped in its own horizontal scroll box: its
+         min-content width (bold names + resist/flag badges) is ~615px, wider
+         than the content column at tablet widths (800px minus the sidebar),
+         and unwrapped it pushed the whole page sideways. No sticky header
+         here, so overflow-x on the wrapper is safe (docs/gotchas.md). -->
+    <div v-if="!loading && rows.length" class="table-responsive d-none d-md-block">
+    <table class="table table-sm table-striped table-hover align-middle mob-list-table">
         <thead>
             <tr>
                 <th>Name</th>
@@ -115,6 +120,7 @@ export default {
             </tr>
         </tbody>
     </table>
+    </div>
 
     <!-- Mobile cards -->
     <div v-if="!loading && rows.length" class="d-md-none">
