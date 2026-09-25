@@ -3,6 +3,7 @@ import axios from 'axios';
 import MobHistory from './MobHistory.vue';
 import MobAsciiEditor from './MobAsciiEditor.vue';
 import ItemDetailModal from './ItemDetailModal.vue';
+import EqScoringHelp from './EqScoringHelp.vue';
 
 const DAMAGE_TYPES = ['physical', 'magical', 'fire', 'cold', 'electric', 'poison', 'acid', 'asphyxiation', 'psionic'];
 const DAMAGE_LABELS = {
@@ -11,9 +12,30 @@ const DAMAGE_LABELS = {
     asphyxiation: 'Asph', psionic: 'Psi',
 };
 
+// Loot table stat columns, in the equipment catalog's order and with its
+// labels. Only columns where at least one of this mob's drops is non-zero
+// are shown, so a mob that drops two cloaks doesn't get 25 blank columns.
+const RESIST_KEYS = ['rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold', 'racid', 'rasphx', 'rshadow'];
+const LOOT_STATS = [
+    ['weapon_class_value', 'WpnCls'], ['dmg', 'Dmg'], ['ac', 'Ac'],
+    ['str', 'Str'], ['con', 'Con'], ['dex', 'Dex'], ['int', 'Int'], ['wis', 'Wis'], ['cha', 'Cha'],
+    ['hpr', 'Hpr'], ['spr', 'Spr'], ['hp', 'Hp'], ['sp', 'Sp'],
+    ['rphys', 'Phys'], ['rpsi', 'Psi'], ['relec', 'Elec'], ['rmag', 'Mag'], ['rpoi', 'Poi'],
+    ['rfire', 'Fire'], ['rcold', 'Cold'], ['racid', 'Acid'], ['rasphx', 'Asph'], ['rshadow', 'Shdw'],
+    ['rtot', 'ΣRes'],
+];
+
+// Reference sections below the loot. Collapsed by default so the page
+// opens on what you need for the kill (resists, prots, drops); which ones
+// a viewer opens is remembered in their browser across mobs.
+const FOLDS_KEY = 'zeq_mob_folds';
+function loadFolds() {
+    try { return JSON.parse(localStorage.getItem(FOLDS_KEY)) || {}; } catch (e) { return {}; }
+}
+
 export default {
     name: 'MobDetail',
-    components: { MobHistory, MobAsciiEditor, ItemDetailModal },
+    components: { MobHistory, MobAsciiEditor, ItemDetailModal, EqScoringHelp },
     props: ['id'],
     data() {
         return {
@@ -42,6 +64,9 @@ export default {
             lootQuery: '',
             lootResults: [],
             editingMap: null,
+            // Loot table sort: null key = the stored loot order.
+            lootSort: { key: null, dir: 1 },
+            folds: loadFolds(),
             DAMAGE_TYPES,
             DAMAGE_LABELS,
         };
@@ -53,6 +78,34 @@ export default {
             const m = {};
             for (const r of this.mob.resistances) m[r.damage_type] = r;
             return m;
+        },
+        linkedLootCount() {
+            return this.mob ? this.mob.loot.filter(l => l.equipment_id).length : 0;
+        },
+        lootCols() {
+            if (!this.mob) return [];
+            return LOOT_STATS
+                .filter(([k]) => this.mob.loot.some(l => this.statNum(l, k) !== 0))
+                .map(([key, label]) => ({ key, label }));
+        },
+        lootHasBonuses() {
+            return !!this.mob && this.mob.loot.some(l => l.bonus_summary);
+        },
+        // Every column, for the binder row's colspan.
+        lootColspan() {
+            return 2 + this.lootCols.length + (this.lootHasBonuses ? 1 : 0) + (this.canEdit ? 1 : 0);
+        },
+        sortedLoot() {
+            if (!this.mob) return [];
+            const { key, dir } = this.lootSort;
+            if (!key) return this.mob.loot;
+            const val = key === 'name' ? (l) => (l.eq_name || l.item_name || '').toLowerCase()
+                : key === 'slot' ? (l) => this.lootSlot(l).toLowerCase()
+                : (l) => this.statNum(l, key);
+            return [...this.mob.loot].sort((a, b) => {
+                const x = val(a), y = val(b);
+                return (x < y ? -1 : x > y ? 1 : 0) * dir;
+            });
         },
     },
     methods: {
@@ -277,6 +330,51 @@ export default {
         openMapEditor(map) {
             this.editingMap = map || { title: '', ascii_content: '', notes: '', area_name: '' };
         },
+        // --- Loot stats table ---
+        // Numeric value of a stat column for sorting / column pruning. Free
+        // text rows carry NULL stats → 0.
+        statNum(l, key) {
+            if (key === 'dmg') return Number(l.dmg_pct) || 0;
+            if (key === 'rtot') return RESIST_KEYS.reduce((a, k) => a + (Number(l[k]) || 0), 0);
+            return Number(l[key]) || 0;
+        },
+        // Cell text: blank for zero so the dense table stays readable (same
+        // rule as the equipment catalog).
+        statCell(l, key) {
+            const n = this.statNum(l, key);
+            if (!n) return '';
+            if (key === 'dmg') return `${n}% ${l.dmg_type || ''}`.trim();
+            return n;
+        },
+        // Catalog slot display (weapon class / shield / 2h suffix, as in the
+        // equipment list), falling back to the loot row's own slot text.
+        lootSlot(l) {
+            if (!l.equipment_id) return l.slot || '';
+            let slot = l.eq_wear_slot || l.slot || '';
+            if (l.weapon_class) slot += ` (${l.weapon_class}${l.hands == 2 ? ' 2h' : ''})`;
+            else if (l.is_shield) slot += ' (shield)';
+            else if (l.hands == 2) slot += ' (2h)';
+            return slot;
+        },
+        // Click a header: stats sort highest first, text columns A→Z; a
+        // second click flips the direction.
+        sortLoot(key) {
+            if (this.lootSort.key === key) this.lootSort.dir = -this.lootSort.dir;
+            else this.lootSort = { key, dir: key === 'name' || key === 'slot' ? 1 : -1 };
+        },
+        sortMark(key) {
+            if (this.lootSort.key !== key) return '';
+            return this.lootSort.dir > 0 ? '▲' : '▼';
+        },
+        // --- Collapsible sections ---
+        // <details> owns its open state; @toggle copies it back, so the
+        // bound value always matches the DOM (no checkbox-style desync).
+        onFold(name, e) {
+            const open = e.target.open;
+            if (!!this.folds[name] === open) return;
+            this.folds = { ...this.folds, [name]: open };
+            try { localStorage.setItem(FOLDS_KEY, JSON.stringify(this.folds)); } catch (err) { /* private mode etc. */ }
+        },
         async saveMap(mapData) {
             const payload = { ...mapData };
             if (this.editingMap && this.editingMap.id) payload.map_id = this.editingMap.id;
@@ -375,177 +473,177 @@ export default {
         </div>
     </div>
 
-    <!-- Main layout: content left, sidebar right -->
+    <!-- Layout, top to bottom: what you need for the kill (resists, prots,
+         guilds), then every drop with its stats, then the long reference
+         material (directions, notes, maps, images) folded away. -->
     <template v-if="!isNew && editing !== 'info'">
-    <div class="mob-layout">
 
-        <!-- LEFT: Main content (~85%) -->
-        <div class="mob-main">
-
-            <!-- Directions -->
-            <div class="mob-section" v-if="mob.directions">
-                <h6 class="mob-section-title">Directions</h6>
-                <pre class="mob-directions">{{ mob.directions }}</pre>
-                <div v-if="mob.directions_back">
-                    <small class="text-muted fw-bold">Back:</small>
-                    <pre class="mob-directions">{{ mob.directions_back }}</pre>
+    <!-- Overview: resists / prots / guilds -->
+    <div class="mob-overview">
+        <section class="mob-panel mob-panel-resists">
+            <div class="d-flex align-items-center mb-1">
+                <h6 class="mob-section-title mb-0 me-auto">Resists</h6>
+                <button v-if="canEdit && editing !== 'resistances'" class="btn btn-sm btn-outline-primary py-0 px-1" @click="startEdit('resistances')">Edit</button>
+            </div>
+            <div v-if="editing === 'resistances'">
+                <div class="mob-resist-strip mb-1">
+                    <label v-for="r in resistDraft" :key="r.damage_type" class="mob-resist-tile">
+                        <span class="mob-resist-lbl">{{ DAMAGE_LABELS[r.damage_type] }}</span>
+                        <input type="number" min="1" max="8" class="form-control form-control-sm text-center px-0" v-model.number="r.value">
+                    </label>
+                </div>
+                <button class="btn btn-sm btn-primary me-1" @click="saveResistances">Save</button>
+                <button class="btn btn-sm btn-secondary" @click="cancelEdit">Cancel</button>
+            </div>
+            <div v-else class="mob-resist-strip">
+                <div v-for="dt in DAMAGE_TYPES" :key="dt" class="mob-resist-tile"
+                     :class="resistClass(resistMap[dt] && resistMap[dt].value)">
+                    <span class="mob-resist-lbl">{{ DAMAGE_LABELS[dt] }}</span>
+                    <span class="mob-resist-num">{{ resistMap[dt] && resistMap[dt].value != null ? resistMap[dt].value : '-' }}</span>
                 </div>
             </div>
+            <!-- Raw KYA captures for this mob (name-string match) -->
+            <router-link v-if="mob.kya && mob.kya.count && $root.canLookups"
+                         class="small d-inline-block mt-1"
+                         :to="{ name: 'kya', query: { name: mob.kya.matched_name } }">
+                KYA Lookup ({{ mob.kya.count }} raw entr{{ mob.kya.count > 1 ? 'ies' : 'y' }}) &rarr;
+            </router-link>
+        </section>
 
-            <!-- Kill Strategy -->
-            <div class="mob-section" v-if="mob.kill_strategy">
-                <h6 class="mob-section-title">Kill Strategy</h6>
-                <pre class="mob-strategy">{{ mob.kill_strategy }}</pre>
+        <!-- Protections -->
+        <section class="mob-panel">
+            <div class="d-flex align-items-center mb-1">
+                <h6 class="mob-section-title mb-0 me-auto">Prots</h6>
+                <button v-if="canEdit" class="btn btn-sm btn-outline-primary py-0 px-1" @click="showAddProt = !showAddProt">+</button>
             </div>
-
-            <!-- Notes (the primary content — all imported text lives here) -->
-            <div class="mob-section" v-if="mob.notes">
-                <h6 class="mob-section-title">Notes</h6>
-                <pre class="mob-notes">{{ mob.notes }}</pre>
+            <div v-if="mob.prots.length" class="d-flex flex-wrap gap-1 mb-1">
+                <span v-for="p in mob.prots" :key="p.id"
+                      class="badge" :class="p.priority === 'required' ? 'bg-danger' : 'bg-warning text-dark'">
+                    {{ p.prot_type }}
+                    <span v-if="canEdit" class="ms-1" style="cursor:pointer;" @click="deleteProt(p)">&times;</span>
+                </span>
             </div>
-
-            <!-- ASCII Maps -->
-            <div class="mob-section" v-if="mob.maps.length || canEdit">
-                <div class="d-flex align-items-center mb-1">
-                    <h6 class="mob-section-title mb-0 me-2">Maps</h6>
-                    <button v-if="canEdit" class="btn btn-sm btn-outline-primary" @click="openMapEditor(null)">Add</button>
-                </div>
-                <div v-for="m in mob.maps" :key="m.id" class="mb-2">
-                    <div class="d-flex align-items-center mb-1 gap-1">
-                        <strong class="small">{{ m.title }}</strong>
-                        <button v-if="canEdit" class="btn btn-sm btn-outline-secondary py-0 px-1" @click="openMapEditor(m)">Edit</button>
-                        <button v-if="canEdit" class="btn btn-sm btn-outline-danger py-0 px-1" @click="deleteMap(m)">X</button>
-                    </div>
-                    <pre class="mob-ascii-map">{{ m.ascii_content }}</pre>
-                </div>
-                <span v-if="!mob.maps.length && !canEdit" class="text-muted small">None</span>
+            <div v-else class="text-muted small mb-1">Empty</div>
+            <div v-if="showAddProt" class="mt-1">
+                <input class="form-control form-control-sm mb-1" v-model="newProt.prot_type" maxlength="255" placeholder="e.g. cold, or 'G-physical / Lpsionic / Iron will'">
+                <select class="form-select form-select-sm mb-1" v-model="newProt.priority">
+                    <option value="required">Required</option>
+                    <option value="recommended">Recommended</option>
+                </select>
+                <button class="btn btn-sm btn-primary me-1" @click="addProt">Add</button>
+                <button class="btn btn-sm btn-secondary" @click="showAddProt = false">X</button>
             </div>
+        </section>
 
-            <MobAsciiEditor v-if="editingMap" :initial="editingMap" @save="saveMap" @cancel="editingMap = null" />
-
-            <!-- Images -->
-            <div class="mob-section" v-if="mob.images.length || canEdit">
-                <h6 class="mob-section-title">Images</h6>
-                <div class="mob-image-grid mb-2" v-if="mob.images.length">
-                    <div v-for="img in mob.images" :key="img.id" class="mob-image-thumb">
-                        <img :src="imageUrl(img)" :alt="img.caption || img.filename" loading="lazy">
-                        <button v-if="canEdit" class="btn btn-sm btn-outline-danger mt-1" @click="deleteImage(img)">X</button>
-                    </div>
-                </div>
-                <div v-if="canEdit">
-                    <input type="file" class="form-control form-control-sm mb-1" multiple accept="image/jpeg,image/png" @change="onImageSelect">
-                    <button v-if="imageFiles.length" class="btn btn-sm btn-primary" @click="uploadImages" :disabled="uploading">
-                        {{ uploading ? 'Uploading...' : 'Upload ' + imageFiles.length }}
-                    </button>
+        <!-- Party Guilds -->
+        <section class="mob-panel">
+            <div class="d-flex align-items-center mb-1">
+                <h6 class="mob-section-title mb-0 me-auto">Guilds</h6>
+                <button v-if="canEdit" class="btn btn-sm btn-outline-primary py-0 px-1" @click="showAddGuild = !showAddGuild">+</button>
+            </div>
+            <div v-if="mob.guilds.length">
+                <div v-for="g in mob.guilds" :key="g.id" class="small d-flex align-items-center mb-1">
+                    <span class="me-auto">{{ g.guild_name }} <span v-if="g.role" class="text-muted">({{ g.role }})</span></span>
+                    <span v-if="canEdit" class="text-danger" style="cursor:pointer;" @click="deleteGuild(g)">&times;</span>
                 </div>
             </div>
+            <div v-else class="text-muted small mb-1">Empty</div>
+            <div v-if="showAddGuild" class="mt-1">
+                <input class="form-control form-control-sm mb-1" v-model="newGuild.guild_name" placeholder="Guild">
+                <input class="form-control form-control-sm mb-1" v-model="newGuild.role" placeholder="Role">
+                <button class="btn btn-sm btn-primary me-1" @click="addGuild">Add</button>
+                <button class="btn btn-sm btn-secondary" @click="showAddGuild = false">X</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Loot: every drop with its catalog stats, side by side -->
+    <section class="mob-section">
+        <div class="d-flex align-items-center flex-wrap gap-2 mb-1">
+            <h6 class="mob-section-title mb-0">Loot</h6>
+            <span v-if="mob.loot.length" class="small text-muted">
+                {{ mob.loot.length }} drop{{ mob.loot.length === 1 ? '' : 's' }}<template
+                    v-if="linkedLootCount < mob.loot.length">, {{ linkedLootCount }} with stats</template>
+            </span>
+            <button v-if="canEdit" class="btn btn-sm btn-outline-primary py-0 px-1" @click="showAddLoot = !showAddLoot">+</button>
+            <span class="ms-auto d-flex align-items-center flex-wrap gap-2 small">
+                <EqScoringHelp v-if="linkedLootCount" small />
+                <!-- Jump to the equipment list filtered to this mob's drops -->
+                <router-link v-if="$root.canEquipment && linkedLootCount"
+                             :to="{ name: 'equipment-all', query: { mob: mob.id } }">
+                    Browse in Equipment &rarr;
+                </router-link>
+            </span>
         </div>
 
-        <!-- RIGHT: Sidebar (~15%) -->
-        <div class="mob-sidebar">
-
-            <!-- Resistances -->
-            <div class="mob-sidebar-section">
-                <div class="d-flex align-items-center mb-1">
-                    <h6 class="mob-section-title mb-0 me-auto">Resists</h6>
-                    <button v-if="canEdit" class="btn btn-sm btn-outline-primary py-0 px-1" @click="startEdit('resistances')">Edit</button>
-                </div>
-                <div v-if="editing === 'resistances'" class="mb-2">
-                    <div v-for="r in resistDraft" :key="r.damage_type" class="d-flex align-items-center gap-1 mb-1">
-                        <span class="resist-label-sm">{{ DAMAGE_LABELS[r.damage_type] }}</span>
-                        <input type="number" min="1" max="8" class="form-control form-control-sm" style="width:3.5em;" v-model.number="r.value">
-                    </div>
-                    <button class="btn btn-sm btn-primary me-1" @click="saveResistances">Save</button>
-                    <button class="btn btn-sm btn-secondary" @click="cancelEdit">X</button>
-                </div>
-                <div v-else class="mob-resist-compact">
-                    <div v-for="dt in DAMAGE_TYPES" :key="dt" class="resist-row" :class="resistClass(resistMap[dt] && resistMap[dt].value)">
-                        <span class="resist-label-sm">{{ DAMAGE_LABELS[dt] }}</span>
-                        <span class="resist-val">{{ resistMap[dt] && resistMap[dt].value != null ? resistMap[dt].value : '-' }}</span>
-                    </div>
-                </div>
-                <!-- Raw KYA captures for this mob (name-string match) -->
-                <router-link v-if="mob.kya && mob.kya.count && $root.canLookups"
-                             class="small d-block mt-1"
-                             :to="{ name: 'kya', query: { name: mob.kya.matched_name } }">
-                    KYA Lookup ({{ mob.kya.count }} raw entr{{ mob.kya.count > 1 ? 'ies' : 'y' }}) &rarr;
-                </router-link>
+        <div v-if="showAddLoot" class="mb-2 mob-loot-binder mob-loot-add">
+            <input class="form-control form-control-sm mb-1" v-model="newLoot.item_name"
+                   @input="searchNewLoot" placeholder="Type to search the catalog…">
+            <div v-if="newLootResults.length" class="mob-loot-results small mb-1">
+                <a v-for="it in newLootResults" :key="it.id" href="#" class="d-block px-1"
+                   @click.prevent="pickNewLoot(it)">
+                    {{ it.name }} <span class="text-muted">({{ it.wear_slot }}<template v-if="it.weapon_class"> {{ it.weapon_class }}</template>)</span>
+                </a>
             </div>
-
-            <!-- Protections -->
-            <div class="mob-sidebar-section">
-                <div class="d-flex align-items-center mb-1">
-                    <h6 class="mob-section-title mb-0 me-auto">Prots</h6>
-                    <button v-if="canEdit" class="btn btn-sm btn-outline-primary py-0 px-1" @click="showAddProt = !showAddProt">+</button>
-                </div>
-                <div v-if="mob.prots.length" class="d-flex flex-wrap gap-1 mb-1">
-                    <span v-for="p in mob.prots" :key="p.id"
-                          class="badge" :class="p.priority === 'required' ? 'bg-danger' : 'bg-warning text-dark'">
-                        {{ p.prot_type }}
-                        <span v-if="canEdit" class="ms-1" style="cursor:pointer;" @click="deleteProt(p)">&times;</span>
-                    </span>
-                </div>
-                <div v-else class="text-muted small mb-1">Empty</div>
-                <div v-if="showAddProt" class="mt-1">
-                    <input class="form-control form-control-sm mb-1" v-model="newProt.prot_type" maxlength="255" placeholder="e.g. cold, or 'G-physical / Lpsionic / Iron will'">
-                    <select class="form-select form-select-sm mb-1" v-model="newProt.priority">
-                        <option value="required">Required</option>
-                        <option value="recommended">Recommended</option>
-                    </select>
-                    <button class="btn btn-sm btn-primary me-1" @click="addProt">Add</button>
-                    <button class="btn btn-sm btn-secondary" @click="showAddProt = false">X</button>
-                </div>
+            <div class="small mb-1">
+                <template v-if="newLoot.equipment_id">
+                    <i class="bi bi-box-seam text-success"></i> Will be linked to this catalog item.
+                </template>
+                <template v-else-if="newLoot.item_name.trim()">
+                    <span class="text-muted">No catalog pick — will be added as plain text.</span>
+                </template>
             </div>
+            <!-- No slot input: a catalog pick brings its own wear slot
+                 (auto-filled in pickNewLoot); free-text rows don't need one. -->
+            <button class="btn btn-sm btn-primary me-1" @click="addLoot">Add</button>
+            <button class="btn btn-sm btn-secondary" @click="showAddLoot = false">X</button>
+        </div>
 
-            <!-- Party Guilds -->
-            <div class="mob-sidebar-section">
-                <div class="d-flex align-items-center mb-1">
-                    <h6 class="mob-section-title mb-0 me-auto">Guilds</h6>
-                    <button v-if="canEdit" class="btn btn-sm btn-outline-primary py-0 px-1" @click="showAddGuild = !showAddGuild">+</button>
-                </div>
-                <div v-if="mob.guilds.length">
-                    <div v-for="g in mob.guilds" :key="g.id" class="small d-flex align-items-center mb-1">
-                        <span class="me-auto">{{ g.guild_name }} <span v-if="g.role" class="text-muted">({{ g.role }})</span></span>
-                        <span v-if="canEdit" class="text-danger" style="cursor:pointer;" @click="deleteGuild(g)">&times;</span>
-                    </div>
-                </div>
-                <div v-else class="text-muted small mb-1">Empty</div>
-                <div v-if="showAddGuild" class="mt-1">
-                    <input class="form-control form-control-sm mb-1" v-model="newGuild.guild_name" placeholder="Guild">
-                    <input class="form-control form-control-sm mb-1" v-model="newGuild.role" placeholder="Role">
-                    <button class="btn btn-sm btn-primary me-1" @click="addGuild">Add</button>
-                    <button class="btn btn-sm btn-secondary" @click="showAddGuild = false">X</button>
-                </div>
-            </div>
-
-            <!-- Loot -->
-            <div class="mob-sidebar-section">
-                <div class="d-flex align-items-center mb-1">
-                    <h6 class="mob-section-title mb-0 me-auto">Loot</h6>
-                    <button v-if="canEdit" class="btn btn-sm btn-outline-primary py-0 px-1" @click="showAddLoot = !showAddLoot">+</button>
-                </div>
-                <div v-if="mob.loot.length">
-                    <div v-for="l in mob.loot" :key="l.id" class="small mb-1">
-                        <div class="d-flex align-items-center">
-                            <span class="me-auto">
-                                <!-- Linked to the equipment catalog → open the item modal -->
-                                <template v-if="l.equipment_id">
-                                    <i class="bi bi-box-seam text-success me-1" title="In equipment catalog"></i><a
-                                        href="#" @click.prevent="modalItemId = l.equipment_id">{{ l.eq_name || l.item_name }}</a>
-                                </template>
-                                <template v-else>{{ l.item_name }}</template>
-                                <span v-if="l.slot" class="text-muted"> ({{ l.slot }})</span>
-                            </span>
-                            <i v-if="canEdit && !l.equipment_id" class="bi bi-link-45deg text-primary me-1"
-                               style="cursor:pointer" title="Link this text to an equipment catalog item"
-                               @click="linkingLootId === l.id ? cancelLinkLoot() : startLinkLoot(l)"></i>
-                            <i v-if="canEdit && l.equipment_id" class="bi bi-x-diamond text-warning me-1"
-                               style="cursor:pointer" title="Unlink from the equipment catalog (keeps the text row)"
-                               @click="setLootLink(l, null)"></i>
-                            <span v-if="canEdit" class="text-danger" style="cursor:pointer;" @click="deleteLoot(l)">&times;</span>
-                        </div>
-                        <!-- Inline binder typeahead -->
-                        <div v-if="linkingLootId === l.id" class="mob-loot-binder mt-1">
+        <!-- Own horizontal scroll box: with many stat columns the table is
+             wider than a phone. No sticky header, so overflow-x here is
+             safe (docs/gotchas.md); the Item column sticks LEFT instead. -->
+        <div v-if="mob.loot.length" class="table-responsive">
+        <table class="table table-sm table-hover align-middle mb-0 mob-loot-table">
+            <thead>
+                <tr>
+                    <th class="mob-loot-name" @click="sortLoot('name')">Item {{ sortMark('name') }}</th>
+                    <th @click="sortLoot('slot')">Slot {{ sortMark('slot') }}</th>
+                    <th v-for="c in lootCols" :key="c.key" class="text-end" @click="sortLoot(c.key)">{{ c.label }}{{ sortMark(c.key) }}</th>
+                    <th v-if="lootHasBonuses" class="mob-loot-bonus mob-loot-nosort">Bonuses</th>
+                    <th v-if="canEdit" class="mob-loot-nosort"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <template v-for="l in sortedLoot" :key="l.id">
+                <tr>
+                    <td class="mob-loot-name">
+                        <!-- Linked to the equipment catalog → open the item modal -->
+                        <template v-if="l.equipment_id">
+                            <a href="#" @click.prevent="modalItemId = l.equipment_id">{{ l.eq_name || l.item_name }}</a>
+                        </template>
+                        <template v-else>
+                            {{ l.item_name }}
+                            <span class="text-muted small" title="Free text — not linked to the equipment catalog, so no stats">(no stats)</span>
+                        </template>
+                    </td>
+                    <td class="text-nowrap">{{ lootSlot(l) }}</td>
+                    <td v-for="c in lootCols" :key="c.key" class="text-end text-nowrap"
+                        :class="{ 'text-danger': statNum(l, c.key) < 0 }">{{ statCell(l, c.key) }}</td>
+                    <td v-if="lootHasBonuses" class="small mob-loot-bonus">{{ l.bonus_summary }}</td>
+                    <td v-if="canEdit" class="text-nowrap text-end">
+                        <i v-if="!l.equipment_id" class="bi bi-link-45deg text-primary me-1"
+                           style="cursor:pointer" title="Link this text to an equipment catalog item"
+                           @click="linkingLootId === l.id ? cancelLinkLoot() : startLinkLoot(l)"></i>
+                        <i v-if="l.equipment_id" class="bi bi-x-diamond text-warning me-1"
+                           style="cursor:pointer" title="Unlink from the equipment catalog (keeps the text row)"
+                           @click="setLootLink(l, null)"></i>
+                        <span class="text-danger" style="cursor:pointer;" title="Remove this drop" @click="deleteLoot(l)">&times;</span>
+                    </td>
+                </tr>
+                <!-- Inline binder typeahead -->
+                <tr v-if="linkingLootId === l.id">
+                    <td :colspan="lootColspan">
+                        <div class="mob-loot-binder mob-loot-add small">
                             <input class="form-control form-control-sm mb-1" v-model="lootQuery"
                                    @input="searchLootItems" placeholder="Search catalog items…">
                             <div v-if="lootResults.length" class="mob-loot-results">
@@ -556,42 +654,72 @@ export default {
                             </div>
                             <div v-else-if="lootQuery.trim()" class="text-muted">No catalog match.</div>
                         </div>
-                    </div>
-                </div>
-                <div v-else class="text-muted small mb-1">Empty</div>
-                <div v-if="showAddLoot" class="mt-1 mob-loot-binder">
-                    <input class="form-control form-control-sm mb-1" v-model="newLoot.item_name"
-                           @input="searchNewLoot" placeholder="Type to search the catalog…">
-                    <div v-if="newLootResults.length" class="mob-loot-results small mb-1">
-                        <a v-for="it in newLootResults" :key="it.id" href="#" class="d-block px-1"
-                           @click.prevent="pickNewLoot(it)">
-                            {{ it.name }} <span class="text-muted">({{ it.wear_slot }}<template v-if="it.weapon_class"> {{ it.weapon_class }}</template>)</span>
-                        </a>
-                    </div>
-                    <div class="small mb-1">
-                        <template v-if="newLoot.equipment_id">
-                            <i class="bi bi-box-seam text-success"></i> Will be linked to this catalog item.
-                        </template>
-                        <template v-else-if="newLoot.item_name.trim()">
-                            <span class="text-muted">No catalog pick — will be added as plain text.</span>
-                        </template>
-                    </div>
-                    <!-- No slot input: a catalog pick brings its own wear slot
-                         (auto-filled in pickNewLoot); free-text rows don't need one. -->
-                    <button class="btn btn-sm btn-primary me-1" @click="addLoot">Add</button>
-                    <button class="btn btn-sm btn-secondary" @click="showAddLoot = false">X</button>
-                </div>
-                <!-- Jump to the equipment list filtered to this mob's drops -->
-                <router-link v-if="$root.canEquipment && mob.loot.some(l => l.equipment_id)"
-                             class="small d-block mt-1"
-                             :to="{ name: 'equipment-all', query: { mob: mob.id } }">
-                    Browse in Equipment &rarr;
-                </router-link>
+                    </td>
+                </tr>
+                </template>
+            </tbody>
+        </table>
+        </div>
+        <div v-else class="text-muted small">Empty</div>
+    </section>
+
+    <!-- Reference material, folded (open state remembered per browser) -->
+    <details v-if="mob.directions || mob.directions_back" class="mob-fold"
+             :open="!!folds.directions" @toggle="onFold('directions', $event)">
+        <summary class="mob-section-title">Directions</summary>
+        <pre v-if="mob.directions" class="mob-directions">{{ mob.directions }}</pre>
+        <div v-if="mob.directions_back">
+            <small class="text-muted fw-bold">Back:</small>
+            <pre class="mob-directions">{{ mob.directions_back }}</pre>
+        </div>
+    </details>
+
+    <details v-if="mob.kill_strategy" class="mob-fold"
+             :open="!!folds.strategy" @toggle="onFold('strategy', $event)">
+        <summary class="mob-section-title">Kill Strategy</summary>
+        <pre class="mob-strategy">{{ mob.kill_strategy }}</pre>
+    </details>
+
+    <!-- Notes (the primary content — all imported text lives here) -->
+    <details v-if="mob.notes" class="mob-fold"
+             :open="!!folds.notes" @toggle="onFold('notes', $event)">
+        <summary class="mob-section-title">Notes</summary>
+        <pre class="mob-notes">{{ mob.notes }}</pre>
+    </details>
+
+    <!-- ASCII Maps -->
+    <details v-if="mob.maps.length || canEdit" class="mob-fold"
+             :open="!!folds.maps" @toggle="onFold('maps', $event)">
+        <summary class="mob-section-title">Maps <span class="mob-fold-count">({{ mob.maps.length }})</span></summary>
+        <button v-if="canEdit && !editingMap" class="btn btn-sm btn-outline-primary mb-2" @click="openMapEditor(null)">Add map</button>
+        <div v-for="m in mob.maps" :key="m.id" class="mb-2">
+            <div class="d-flex align-items-center mb-1 gap-1">
+                <strong class="small">{{ m.title }}</strong>
+                <button v-if="canEdit" class="btn btn-sm btn-outline-secondary py-0 px-1" @click="openMapEditor(m)">Edit</button>
+                <button v-if="canEdit" class="btn btn-sm btn-outline-danger py-0 px-1" @click="deleteMap(m)">X</button>
             </div>
+            <pre class="mob-ascii-map">{{ m.ascii_content }}</pre>
+        </div>
+        <MobAsciiEditor v-if="editingMap" :initial="editingMap" @save="saveMap" @cancel="editingMap = null" />
+    </details>
 
-        </div><!-- /sidebar -->
-    </div><!-- /mob-layout -->
-
+    <!-- Images -->
+    <details v-if="mob.images.length || canEdit" class="mob-fold"
+             :open="!!folds.images" @toggle="onFold('images', $event)">
+        <summary class="mob-section-title">Images <span class="mob-fold-count">({{ mob.images.length }})</span></summary>
+        <div class="mob-image-grid mb-2" v-if="mob.images.length">
+            <div v-for="img in mob.images" :key="img.id" class="mob-image-thumb">
+                <img :src="imageUrl(img)" :alt="img.caption || img.filename" loading="lazy">
+                <button v-if="canEdit" class="btn btn-sm btn-outline-danger mt-1" @click="deleteImage(img)">X</button>
+            </div>
+        </div>
+        <div v-if="canEdit">
+            <input type="file" class="form-control form-control-sm mb-1" multiple accept="image/jpeg,image/png" @change="onImageSelect">
+            <button v-if="imageFiles.length" class="btn btn-sm btn-primary" @click="uploadImages" :disabled="uploading">
+                {{ uploading ? 'Uploading...' : 'Upload ' + imageFiles.length }}
+            </button>
+        </div>
+    </details>
     <MobHistory v-if="showHistory" :mob-id="mob.id" />
     </template>
 

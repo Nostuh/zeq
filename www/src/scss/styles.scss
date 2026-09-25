@@ -219,30 +219,76 @@ tr.guild-closed-row > * {
 
 /* ===== EQ Mob Knowledge Base ===== */
 
-/* Two-column layout: main content left, sidebar right */
-.mob-layout {
-    display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: 1.5rem;
-    align-items: start;
-}
-@media (max-width: 768px) {
-    .mob-layout {
-        grid-template-columns: 1fr;
-    }
-}
-.mob-main { min-width: 0; }
-/* Plain flow column — no sticky, no viewport-height cap, no inner scroll.
-   It used to be `position: sticky; max-height: calc(100vh - 80px);
-   overflow-y: auto`, which gave any mob with a long loot list a second
-   scrollbar and clipped Loot part-way down the page. The page scrollbar
-   now covers everything. */
-.mob-sidebar { min-width: 0; }
-.mob-sidebar-section {
+/* MobDetail, top to bottom: an overview row (resists / prots / guilds),
+   the loot table with every drop's stats, then folded reference sections.
+   It used to be a two-column page with a 220px right sidebar holding
+   resists + loot; the loot list there had no room for stats. */
+.mob-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid #dee2e6;
 }
+.mob-panel {
+    flex: 1 1 13rem;
+    min-width: 0;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+}
+/* Wide enough for nine tiles (and their number inputs while editing);
+   on narrower screens it takes the whole row and prots/guilds wrap below. */
+.mob-panel-resists { flex: 3 1 26rem; }
+.mob-resist-strip {
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 0.25rem;
+}
+@media (max-width: 420px) {
+    .mob-resist-strip { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+.mob-resist-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0.2rem 0.15rem;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0.25rem;
+    line-height: 1.2;
+}
+.mob-resist-lbl { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; }
+.mob-resist-num { font-size: 1rem; font-weight: 700; }
+
+/* Loot table. Headers sort (click). The Item column is pinned left so it
+   stays visible while the stat columns scroll sideways inside
+   .table-responsive on phones; Bootstrap table cells already paint an
+   opaque --bs-table-bg in both themes, so nothing shows through. */
+.mob-loot-table { font-size: 0.85rem; }
+.mob-loot-table thead th {
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    font-size: 0.75rem;
+}
+.mob-loot-table thead th.mob-loot-nosort { cursor: default; }
+.mob-loot-table .mob-loot-name {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 9rem;
+}
+.mob-loot-table .mob-loot-bonus { min-width: 12rem; }
+.mob-loot-add { max-width: 28rem; }
+
+/* Folded reference sections (directions, notes, maps, images). */
+.mob-fold {
+    border-bottom: 1px solid var(--bs-border-color);
+    padding: 0.4rem 0;
+}
+.mob-fold > summary { cursor: pointer; }
+.mob-fold[open] > summary { margin-bottom: 0.4rem; }
+.mob-fold-count { font-weight: 400; }
 .mob-section-title {
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -254,7 +300,7 @@ tr.guild-closed-row > * {
 .mob-detail .mob-section {
     margin-bottom: 1.25rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--bs-border-color);
 }
 
 /* Loot → equipment inline binder (MobDetail). Bootstrap body vars keep it
@@ -388,23 +434,3 @@ tr.guild-closed-row > * {
 
 /* List page table */
 .mob-list-table tr:hover td { background: rgba(13, 110, 253, 0.05); }
-
-/* Compact sidebar resist list */
-.mob-resist-compact .resist-row {
-    display: flex;
-    align-items: center;
-    padding: 2px 6px;
-    border-radius: 3px;
-    margin-bottom: 1px;
-    font-size: 0.8rem;
-}
-.resist-label-sm {
-    width: 3.5em;
-    font-weight: 600;
-    font-size: 0.75rem;
-}
-.resist-val {
-    font-weight: 700;
-    font-size: 0.85rem;
-    margin-left: auto;
-}

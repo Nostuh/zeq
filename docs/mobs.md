@@ -77,10 +77,13 @@ The client must refresh and retry.
 
 - [MobList.vue](../www/src/components/MobList.vue) — searchable table
   (desktop) / cards (mobile). Click row → detail.
-- [MobDetail.vue](../www/src/components/MobDetail.vue) — two-column
-  layout: main content left (~85%), sidebar right (~220px) with
-  resistances, protections, guilds, loot. Edit forms hidden behind
-  `+` buttons; show "Empty" when no data.
+- [MobDetail.vue](../www/src/components/MobDetail.vue) — top to bottom:
+  an overview row (resists as nine colour-coded tiles, prots, guilds), the
+  loot table with each drop's catalog stats, then Directions / Kill
+  Strategy / Notes / Maps / Images as `<details>` folds, collapsed by
+  default. Which folds a viewer opens is remembered per browser
+  (`localStorage` `zeq_mob_folds`), across mobs. Edit forms hidden behind
+  `+` buttons; empty sections show "Empty". See [ui.md](ui.md#eq-mob-knowledge-base-pages).
 - [MobHistory.vue](../www/src/components/MobHistory.vue) — paginated
   edit history with expandable inline diffs. `init` entries styled
   as system imports.
@@ -134,8 +137,8 @@ us twice — once in the importer, once in the API. See
 the loot row back to free text; `item_name` is preserved). The legacy
 `eq`/`eqmobs` tables remain NOT wired in.
 
-- `GET /:id` joins loot to `eq_items` (`eq_name`, `eq_wear_slot`) and adds
-  a `kya: {matched_name, count}` summary (name-string match against
+- `GET /:id` joins loot to `eq_items` (`eq_name`, `eq_wear_slot`, the full
+  stat line, `bonus_summary`) and adds a `kya: {matched_name, count}` summary (name-string match against
   `kya_info`, trailing `NN%` stripped, `short_name` tried too).
 - `POST /:id/loot` and `POST /:id/loot/:lid` accept an optional validated
   `equipment_id` (absent = keep, null = clear). History diffs record the
@@ -150,6 +153,8 @@ the loot row back to free text; `item_name` is preserved). The legacy
 - Bootstrap linking was done by
   [scripts/migrate_mob_links.mjs](../scripts/migrate_mob_links.mjs)
   (idempotent, `--dry-run`; report lists unmatched/ambiguous names).
-- UI: MobDetail loot rows with a link open the shared ItemDetailModal;
+- UI: MobDetail's loot table shows every drop's stats side by side
+  (Falcore's ask: "see all the possible loot/stats at same time"); linked
+  names open the shared ItemDetailModal;
   editors get an inline link/unlink typeahead; "Browse in Equipment →"
   jumps to `/equipment-all?mob=<id>`.

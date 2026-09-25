@@ -144,18 +144,31 @@ with `/api` proxied to `localhost:50000`.
 
 ## EQ Mob Knowledge Base pages
 
-The mob KB is a two-column layout: main content left (~85%), sidebar
-right (~220px). The right column is plain page flow, **not** sticky and
-not height-capped: a sticky `max-height: calc(100vh - 80px)` column gave
-long loot lists their own second scrollbar. Components:
+Components:
 
 - `MobList.vue` — searchable table (desktop) / cards (mobile). Search
   is debounced 300ms. Click row → detail view.
-- `MobDetail.vue` — all-in-one mob view. Left side: directions, kill
-  strategy, notes (primary content), maps, images. Right sidebar:
-  resistances (compact color-coded rows), protections (badges), guilds,
-  loot. Edit forms hidden behind `+` buttons to reduce clutter; empty
-  sections show "Empty". Optimistic lock conflict shows a toast.
+- `MobDetail.vue` — all-in-one mob view, one column in plain page flow
+  (no sticky panels, no inner vertical scroll), ordered by what a player
+  needs for the kill:
+  1. **Overview row** (`.mob-overview`, flex-wrap): Resists (nine
+     `.mob-resist-tile`s, 9 across, 5+4 below 420px; the edit inputs live
+     in the same tiles), Prots (badges), Guilds. Resists take the full row
+     at tablet widths and prots/guilds wrap under it.
+  2. **Loot table** (`.mob-loot-table`): every drop with its catalog stat
+     line. Only stat columns that are non-zero for at least one of this
+     mob's drops are rendered; zeros are blank, negatives red, headers sort
+     (stats high→low first). Free-text rows show "(no stats)". It sits in
+     `.table-responsive` (no sticky header, so `overflow-x` is safe) with
+     the Item column `position: sticky; left: 0` so names stay visible
+     while the stats scroll sideways on a phone.
+  3. **Folds** (`details.mob-fold`): Directions, Kill Strategy, Notes,
+     Maps, Images — collapsed by default, open state remembered per
+     browser. `:open` + `@toggle` copying `e.target.open` back keeps the
+     bound state equal to the DOM (see the checkbox gotcha).
+
+  It used to be two columns with a 220px right sidebar for resists/loot;
+  the sidebar had no room for stats, so it was replaced.
 - `MobHistory.vue` — paginated changelog. Click entry to expand inline
   diff (old → new per field). `init` entries styled as system imports.
 - `MobAsciiEditor.vue` — split-pane: textarea left, `<pre>` preview

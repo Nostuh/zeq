@@ -109,9 +109,23 @@ router.get('/:id', requireEqViewer, async function(req, res) {
             zeq.query(`SELECT * FROM mob_resistances WHERE mob_id = @id ORDER BY FIELD(damage_type, 'physical','magical','fire','cold','electric','poison','acid','asphyxiation','psionic')`, { id }),
             zeq.query(`SELECT * FROM mob_prots WHERE mob_id = @id ORDER BY priority, prot_type`, { id }),
             zeq.query(`SELECT * FROM mob_guilds WHERE mob_id = @id ORDER BY id`, { id }),
-            // Linked loot rows carry the catalog item's name/slot so the UI
-            // can render them as links into the item detail modal.
-            zeq.query(`SELECT l.*, i.name AS eq_name, i.wear_slot AS eq_wear_slot
+            // Linked loot rows carry the catalog item's name, slot and full
+            // stat line so the page can show every drop's stats side by side
+            // (item modal for the rest). Stats are NULL on free-text rows.
+            // Mob viewers can already read these via the item modal
+            // (GET /api/equipment/items/:id accepts the eqmobs flags).
+            zeq.query(`SELECT l.*, i.name AS eq_name, i.wear_slot AS eq_wear_slot,
+                              i.weapon_class, i.hands, i.is_shield,
+                              i.str, i.con, i.dex, i.\`int\`, i.wis, i.cha,
+                              i.hpr, i.spr, i.hp, i.sp, i.ac,
+                              i.rphys, i.rpsi, i.relec, i.rmag, i.rpoi, i.rfire,
+                              i.rcold, i.racid, i.rasphx, i.rshadow,
+                              i.weapon_class_value, i.dmg_pct, i.dmg_type,
+                              (SELECT GROUP_CONCAT(CONCAT(b.bonus_name,
+                                          CASE WHEN b.amount > 0 THEN CONCAT(' +', b.amount)
+                                               WHEN b.amount < 0 THEN CONCAT(' ', b.amount) ELSE '' END)
+                                      ORDER BY b.amount DESC, b.bonus_name SEPARATOR ', ')
+                               FROM eq_item_bonuses b WHERE b.item_id = i.id) AS bonus_summary
                        FROM mob_loot l LEFT JOIN eq_items i ON i.id = l.equipment_id
                        WHERE l.mob_id = @id ORDER BY l.sort_order, l.id`, { id }),
             zeq.query(`SELECT id, mob_id, section, filename, mime_type, size_bytes, caption, sort_order, created FROM mob_images WHERE mob_id = @id ORDER BY sort_order, id`, { id }),

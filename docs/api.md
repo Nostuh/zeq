@@ -176,7 +176,7 @@ Gated by the `eqmobs` / `eqmobs_edit` capability flags. Full documentation in [m
 | Method | Path | Role | Purpose |
 |---|---|---|---|
 | GET | `/api/mobs?q=...` | eqmobs | list/search mobs |
-| GET | `/api/mobs/:id` | eqmobs | full mob detail (all sub-resources joined) |
+| GET | `/api/mobs/:id` | eqmobs | full mob detail (all sub-resources joined). Each `loot` row carries its linked `eq_items` stat line (str…sp, ac, r* resists, weapon class/value, dmg) + `bonus_summary` (`"parry +2, anatomy +4"`); stats are NULL on free-text rows |
 | POST | `/api/mobs` | eqmobs_edit | create mob |
 | POST | `/api/mobs/:id` | eqmobs_edit | update mob (requires `version` for optimistic lock) |
 | DELETE | `/api/mobs/:id` | eqmobs_edit | delete mob + cascade + disk cleanup |
@@ -216,7 +216,7 @@ rows, ownership is per user. Backed by `eq_items` / `eq_item_bonuses` /
 
 | Method | Path | Purpose |
 |---|---|---|
-| GET    | `/api/equipment/scales`          | the adjective ladders the parser scores items with — `{amount[], ac[], skill[]}`, each `{label, value}` ascending. Served straight from `eq_parse.mjs`'s own tables so the "how scoring works" panel can't drift from the parser. Static reference data; view-level |
+| GET    | `/api/equipment/scales`          | the adjective ladders the parser scores items with — `{amount[], ac[], skill[]}`, each `{label, value}` ascending. Served straight from `eq_parse.mjs`'s own tables so the "how scoring works" panel can't drift from the parser. Static reference data; any equipment **or** eqmobs flag (the explainer also sits in the item modal and the Mob KB loot table) |
 | GET    | `/api/equipment/items?q=&mine=1` | list catalog rows (structured columns) with an `owned` flag for the caller; `q` filters by name, `mine=1` restricts to owned |
 | GET    | `/api/equipment/items/:id`       | item detail + `bonuses[]` + `owned`/`own_note` |
 | POST   | `/api/equipment/add`             | `{info, slot, eqmob?, note?}` — parse identify text server-side, **best-of-merge** into the catalog (`UNIQUE(name, wear_slot)`), and tag the caller as an owner. Replaces legacy `/add` + `copy_to_user` |

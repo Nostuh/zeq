@@ -106,8 +106,8 @@ the report's "did you mean" suggestions guide manual cleanup.
   dismissible chip; route watch widened to `$route.fullPath`
   (component-reuse gotcha).
 - **EquipmentBuild.vue** — pick names open the modal.
-- **MobDetail.vue** — linked loot rows render `bi-box-seam` + a link into
-  the modal; editors get per-row link (`bi-link-45deg`) / unlink
+- **MobDetail.vue** — linked loot rows link into the modal (now a stats
+  table; see [ui.md](ui.md#eq-mob-knowledge-base-pages)); editors get per-row link (`bi-link-45deg`) / unlink
   (`bi-x-diamond`, confirm dialog) with an inline typeahead over
   `GET /api/mobs/eq-items`; the `+` Add-loot form is a catalog typeahead
   (pick → adds linked + auto slot; no pick → explicit "plain text" note;

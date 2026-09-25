@@ -36,8 +36,10 @@ const viewAny = requireFlag('equipment', 'equipment_edit', 'eqmobs', 'eqmobs_edi
 // parser itself. Every number in the equipment tables is one of these
 // ordinal scores — NOT the actual in-game bonus, which also depends on
 // race multipliers, bound vs unbound, and the MUD's own rounding.
-// Static reference data, so view-level access is enough.
-router.get('/scales', viewEq, function(req, res) {
+// Static reference data, so view-level access is enough — and viewAny, not
+// viewEq: the explainer also sits beside the item modal's stats and the
+// Mob KB loot table, which eqmobs-only viewers see.
+router.get('/scales', viewAny, function(req, res) {
     const pairs = (t) => t.map(([label, value]) => ({ label, value }));
     ok(res, {
         // Ascending so the UI can render them as a ladder.
