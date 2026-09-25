@@ -47,15 +47,14 @@ See [docs/schema.md](docs/schema.md).
 
 `pm2 restart api`; `cd www/src && npx vite build`; `cd scripts && node import_zcreator.mjs [--force]`. Deployment/SSL/pm2: [docs/deployment.md](docs/deployment.md).
 **ONE heavy job at a time, ever** — `vite build`, any Puppeteer script (`responsive.mjs`, `repro_*.mjs`), importers: strictly sequential, `nice -n 19`, never two at once (background included), never rebuild mid-test; check `ps -eo comm` is clear first. Full `responsive.mjs` sweep ONLY when the user asks — otherwise one `repro_*.mjs` or `--only=<page> --vp=<size>`. [docs/testing.md](docs/testing.md#server-load--one-heavy-job-at-a-time).
+**Tests hit the live DB while people edit it** — repros stay read-only (open + cancel, never save/delete) and assert against the API at read time, not counts read at startup. [docs/gotchas.md](docs/gotchas.md#production-data-changes-while-you-test).
 
 ## "resolve all bugs"
 
-Follow [docs/bug-workflow.md](docs/bug-workflow.md). Every report is a
-hypothesis that must be **confirmed or denied** with evidence. Re-read
-this CLAUDE.md and the subsystem's source of truth (`.chr` /
-`schema/*.sql` / responsive harness). Each bug captures
-`app_state` / `dom_snapshot` / `console_log` — use them. NEVER auto-apply.
+Follow [docs/bug-workflow.md](docs/bug-workflow.md) (re-reads, source of truth,
+captured `app_state`/`dom_snapshot`/`console_log`). Every report is a hypothesis
+that must be **confirmed or denied** with evidence. NEVER auto-apply.
 
 ## Before touching code
 
-**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us (Vue checkbox desync, int32 wrap, `.tab-body`+grid trap, `overflow-x`→sticky-header ghost, `totalLevels` direction, mysql `@name`-only, param prefix collisions). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), [docs/mobs.md](docs/mobs.md), [docs/help-text.md](docs/help-text.md).
+**Read [docs/gotchas.md](docs/gotchas.md) first** — every bug that bit us (Vue checkbox desync, int32 wrap, `.tab-body`+grid trap, `overflow-x`→sticky-header ghost, hash-only `goto` doesn't reload, `totalLevels` direction, mysql `@name`-only, param prefix collisions). Then [docs/schema.md](docs/schema.md), [docs/data-import.md](docs/data-import.md), [docs/mobs.md](docs/mobs.md), [docs/help-text.md](docs/help-text.md).
