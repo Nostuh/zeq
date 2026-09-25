@@ -76,7 +76,11 @@ The client must refresh and retry.
 ## Frontend
 
 - [MobList.vue](../www/src/components/MobList.vue) — searchable table
-  (desktop) / cards (mobile). Click row → detail.
+  (desktop) / cards (mobile). Click row → detail. Coming back from a mob
+  (its "← Back" button *or* the browser's back) restores the rows, the
+  search and the scroll offset from a module-level cache, then refreshes
+  quietly behind them. Arriving any other way loads fresh. Regression:
+  [repro_mob_list_scroll.mjs](../scripts/test/repro_mob_list_scroll.mjs).
 - [MobDetail.vue](../www/src/components/MobDetail.vue) — top to bottom:
   an overview row (resists as nine colour-coded tiles, prots, guilds), the
   loot table with each drop's catalog stats, then Directions / Kill

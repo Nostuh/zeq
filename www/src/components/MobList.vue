@@ -1,7 +1,21 @@
 <script>
 import axios from 'axios';
+
+// Coming back from a mob (its Back button or the browser's) should land where
+// the viewer left the list. The list is re-fetched on every mount and starts
+// empty, so neither the browser nor the router can restore the scroll: keep
+// the rows, the search and the scroll offset here and put them back.
+let saved = null;          // { q, rows, scrollY } from the last list -> mob hop
+let fromMob = false;       // set by beforeRouteEnter, read in mounted
+
 export default {
     name: 'MobList',
+    beforeRouteEnter(to, from) { fromMob = from.name === 'mob-detail'; },
+    beforeRouteLeave(to) {
+        saved = to.name === 'mob-detail'
+            ? { q: this.q, rows: this.rows, scrollY: window.scrollY }
+            : null;
+    },
     data() {
         return {
             rows: [],
@@ -14,8 +28,10 @@ export default {
         canEdit() { return this.$root.canEditEq; },
     },
     methods: {
-        async load() {
-            this.loading = true;
+        // quiet: refresh behind rows already on screen, without the
+        // "Loading..." swap that would collapse the page and lose the scroll.
+        async load(quiet = false) {
+            if (!quiet) this.loading = true;
             try {
                 const params = this.q ? { q: this.q } : {};
                 const r = await axios.get('/api/mobs', { params });
@@ -55,7 +71,20 @@ export default {
             return String(v);
         },
     },
-    mounted() { this.load(); },
+    mounted() {
+        if (fromMob && saved) {
+            const { q, rows, scrollY } = saved;
+            this.q = q;
+            this.rows = rows;
+            // 'instant': Bootstrap's `scroll-behavior: smooth` would
+            // otherwise animate the whole way down from the top.
+            this.$nextTick(() => window.scrollTo({ top: scrollY, behavior: 'instant' }));
+            this.load(true);
+        } else {
+            this.load();
+        }
+        saved = null;
+    },
 };
 </script>
 <template>

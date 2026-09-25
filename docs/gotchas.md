@@ -194,6 +194,19 @@ extra background: Bootstrap table cells already paint an opaque
 `--bs-table-bg` (= body bg) in both themes. Only add one if you override the
 table background.
 
+### Page scroll: nothing resets it, and Bootstrap makes it smooth
+The router has no `scrollBehavior`, so the signed-in pages never reset the
+window scroll: a page opens at the previous page's offset, clamped to its
+own height (KYA at 500px → sidebar → Mobs lands at 500px; a mob opened from
+far down the list opens at the bottom of its page). A list that re-fetches
+on mount can't be restored by the browser either, since it's empty at the
+moment of the back navigation. The Mob list keeps its own copy (see
+[mobs.md](mobs.md#frontend)). And Bootstrap's reboot sets
+`:root { scroll-behavior: smooth }`, so a plain `window.scrollTo(0, y)` or
+`scrollIntoView()` *animates*: `scrollY` read right afterwards is still the
+old value, and a restore visibly slides down from the top. Pass
+`behavior: 'instant'` for any programmatic jump, in app code and in repros.
+
 ### `JSON.stringify(err)` is `"{}"`
 An `Error`'s `message` and `stack` are not enumerable, so the bug-report
 console capture in [main.js](../www/src/main.js) turned every
