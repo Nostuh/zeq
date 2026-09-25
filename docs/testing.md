@@ -21,6 +21,54 @@ sets generous launch/navigation timeouts and `--disable-dev-shm-usage` to
 cope). Do not kick it off unprompted. See CLAUDE.md ("only runs when
 asked").
 
+## Server load — one heavy job at a time
+
+This box has **1 vCPU, ~765MB RAM and 2GB swap**, and it is also serving
+the live site (pm2 `api`) and `virgil`. Headless Chromium alone is a few
+hundred MB; `vite build` pegs the CPU for ~40s and wants several hundred
+MB more. Two of these at once pushes the box deep into swap, the live
+site slows for real users, and the tests themselves start failing for
+reasons that have nothing to do with the code.
+
+**Heavy jobs:** `vite build`; anything that launches Puppeteer
+(`responsive.mjs`, every `repro_*.mjs`); `import_zcreator.mjs` and the
+other bulk importers/migrations. (`sanity_level_exp.mjs` and
+`audit_engine.mjs` are pure Node and light.)
+
+Rules:
+
+1. **Strictly sequential.** Let one heavy job exit before starting the
+   next. Never start one in the background and launch another meanwhile.
+2. **Never rebuild while a browser test is running.** Besides the load,
+   the build swaps the assets out from under the test mid-run.
+3. **Check the box is clear first:**
+   `ps -eo pid,comm,rss --sort=-rss | awk 'NR==1 || $2 ~ /chrom|vite|node/'`
+   — at rest this shows only the API (`node /srv/zeq/a…`) and virgil.
+   Watch `uptime`: load average above ~1.5 means something is still
+   running.
+4. **`nice -n 19`** every heavy job so the live API keeps priority.
+5. **Smallest test that proves the change.** One `repro_*.mjs`, or a
+   scoped harness run: `--only=<label substring>` picks pages,
+   `--vp=<label substring>` picks viewports (e.g.
+   `--only=mob-detail --vp=desktop`). The full sweep (every page × 8
+   viewports, ~15 min at 100% CPU) runs **only when the user asks**.
+6. **Cleaning up a killed run.** A killed Puppeteer script leaves orphan
+   Chromium, plus the admin `sessions` row it borrowed — test sessions
+   last 1–2h, real logins 340h, so
+   `DELETE FROM sessions WHERE TIMESTAMPDIFF(HOUR,created,expires)
+   BETWEEN 1 AND 2 AND created >= NOW() - INTERVAL 1 DAY` removes only
+   those. **Do not use `pgrep -f` / `pkill -f` with a pattern that
+   appears in your own command line** — it matches the invoking shell
+   and kills it (it also matches the Claude process). Match on `comm`
+   (as above) or kill by PID.
+
+**The tell for an overloaded box:** *every* selector reported missing on
+a page that passes at the other viewports. The page never finished
+rendering, so this is not a layout bug. Re-run just that case
+(`--only=… --vp=…`) once the box is quiet. The Sep 2026 sweep hit exactly
+this on `reinc-home_short-laptop` while load average sat at 6.2 with 1GB
+swapped.
+
 ## Authenticated pages
 
 Most routes (equipment, mobs, planner-admin, users, bugs) are
@@ -41,8 +89,9 @@ overlays and clicks tabs, so it is safe to run against production.
 
 ```
 cd scripts/test
-node responsive.mjs                       # local: http://localhost
-node responsive.mjs --base=https://nostuh.com
+nice -n 19 node responsive.mjs --only=mob-detail --vp=desktop   # scoped — the normal case
+nice -n 19 node responsive.mjs                                   # full sweep — ONLY when asked
+nice -n 19 node responsive.mjs --base=https://other.host         # default is https://nostuh.com
 ```
 
 Exit code `0` = everything passed, non-zero = at least one failure.

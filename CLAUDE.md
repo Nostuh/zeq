@@ -32,7 +32,6 @@ See [docs/schema.md](docs/schema.md).
 - UI: dense Bootstrap tables; viewers see data, no edit controls; responsive
   via CSS grid + `@media` (no fixed px). Every new style MUST work in BOTH
   light and dark themes (`data-bs-theme` on `<html>`, overrides in [www/src/scss/styles.scss](www/src/scss/styles.scss)).
-  Responsive harness (`scripts/test/responsive.mjs`) only runs when asked.
   See [docs/ui.md](docs/ui.md), [docs/testing.md](docs/testing.md).
 - API shape: `{ok:true,data}` / `{ok:false,error}`; see [docs/api.md](docs/api.md).
 - Reinc planner: public at `/`, targets ZombieMUD. Page locked to
@@ -44,9 +43,10 @@ See [docs/schema.md](docs/schema.md).
 - Chest Sorter + Import Equipment: public `/chest-sorter` parses pasted chest contents (shared parser [www/src/lib/chestParser.js](www/src/lib/chestParser.js); stat lookup `POST /api/chestlookup`, public). `/equipment-import` (equipment flag) reuses it to bulk-tag ownership via `POST /api/equipment/import` (loose plural matching). [docs/chest-sorter.md](docs/chest-sorter.md).
 - Equipment: `/equipment*` + `/api/equipment` over `eq_items` (paste→**server**-parse in [api/classes/eq_parse.mjs](api/classes/eq_parse.mjs) — reads identify + library `lookup` text; ownership = tag). Legacy `eq`/`/api/eq` frozen. Bulk-load from in-game library via [manual_onboard/](manual_onboard/) + [scripts/onboard_eq.mjs](scripts/onboard_eq.mjs). External in-game (zmud) lookup: `POST /api/eqlookup` (plain-text out, `secretpw` gate, NOT auth/JSON). [docs/equipment-redesign.md](docs/equipment-redesign.md), [docs/manual-onboard.md](docs/manual-onboard.md), [docs/eqlookup.md](docs/eqlookup.md).
 
-## Running
+## Running — this server is TINY (1 CPU, 765MB RAM, 2GB swap)
 
 `pm2 restart api`; `cd www/src && npx vite build`; `cd scripts && node import_zcreator.mjs [--force]`. Deployment/SSL/pm2: [docs/deployment.md](docs/deployment.md).
+**ONE heavy job at a time, ever** — `vite build`, any Puppeteer script (`responsive.mjs`, `repro_*.mjs`), importers: strictly sequential, `nice -n 19`, never two at once (background included), never rebuild mid-test; check `ps -eo comm` is clear first. Full `responsive.mjs` sweep ONLY when the user asks — otherwise one `repro_*.mjs` or `--only=<page> --vp=<size>`. [docs/testing.md](docs/testing.md#server-load--one-heavy-job-at-a-time).
 
 ## "resolve all bugs"
 

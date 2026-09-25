@@ -286,13 +286,42 @@ Regression test:
 drives the whole chain in a browser (render depth, lock/unlock, the
 pooled 15-level budget, and both cascade directions).
 
-**Known gap, not yet fixed:** `faction_of_balance.chr` also lists
-*itself* — `Faction_of_Balance 10` — in its own `Subguilds:` section,
-i.e. a sorcerer who stays balanced takes 10 further Balance levels for
-15 total, which is why `game_guild_bonuses` carries Balance rows up to
-level 15. The importer's cycle guard (`seen`) drops that self-reference,
-so `game_guilds.max_level` for Balance is 5 and the planner caps it
-there. Chaos/Order are unaffected.
+### Branch points (Faction of Balance)
+
+`faction_of_balance.chr` also lists *itself* in its own `Subguilds:`
+section — `Faction_of_Chaos 10 / Faction_of_Order 10 /
+Faction_of_Balance 10`. That is a **branch point**, not a cycle: at
+Balance 5 a sorcerer takes **exactly one** path: Chaos 1–10, **or**
+Order 1–10, **or** continuing Balance 6–15. Balance's bonus, skill and
+spell tables already run to level 15. Both paths spend exactly the
+15-level subguild pool.
+
+- **Data:** `game_guilds.sub_unlock_level` (nullable). Balance is
+  `max_level = 15`, `sub_unlock_level = 5`; every other guild is `NULL`
+  (= subguilds unlock at `max_level`, unchanged). The importer sets it
+  when a guild lists itself; the old cycle guard (`seen`) used to drop
+  that line silently, capping Balance at 5.
+  [scripts/migrate_guild_branches.mjs](../scripts/migrate_guild_branches.mjs)
+  applies the same thing to an existing database without a re-import.
+- **Planner rules** (`subUnlockLevel(g)` / `isBranchPoint(g)` in
+  Reinc.vue):
+  - A subguild unlocks only when its parent sits **exactly** at the
+    parent's unlock level. For ordinary guilds that is `max_level`, so
+    nothing changes. For Balance, level 5 opens Chaos/Order, and
+    continuing past 5 closes them again.
+  - **One path only.** Chaos and Order are mutually exclusive
+    (`pickedBranchSibling`). The 15-level pool alone would have accepted
+    Balance 5 + Chaos 3 + Order 3.
+  - While a faction is picked, Balance is held at 5; typing more flashes
+    why instead of silently accepting it.
+  - A newly added Balance starts at 5 (every path open), not at 15.
+  - The saved-build restore drops a faction whose Balance isn't exactly 5,
+    and keeps only one of Chaos/Order (`branchTaken`).
+  - Lock tooltips and flashes come from `lockReason(g)`, which names the
+    parent and level ("Requires Faction of Balance at level 5").
+- `/api/game/reinc-bootstrap` sends `sub_unlock_level` and now filters
+  closed guilds through the **whole ancestor chain**. The old one-level
+  join still sent Chaos/Order when Sorcerers itself was closed.
 
 ## Wishes and boons
 

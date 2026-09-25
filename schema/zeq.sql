@@ -151,6 +151,7 @@ CREATE TABLE IF NOT EXISTS game_guilds (
     file_name     VARCHAR(128) NOT NULL,  -- underscored stem
     parent_id     INT NULL,               -- set for subguilds
     max_level     INT NOT NULL DEFAULT 0,
+    sub_unlock_level INT NULL,            -- branch point: subguilds open at this level (< max_level); NULL = at max_level
     enabled       TINYINT(1) NOT NULL DEFAULT 1,  -- 0 = closed for reincs (game's help guilds)
     PRIMARY KEY (id),
     UNIQUE KEY uk_game_guilds_name (name),
@@ -161,7 +162,11 @@ CREATE TABLE IF NOT EXISTS game_guilds (
 -- `last_verified_at` if the table existed before these columns.
 ALTER TABLE game_guilds
     ADD COLUMN IF NOT EXISTS enabled TINYINT(1) NOT NULL DEFAULT 1,
-    ADD COLUMN IF NOT EXISTS last_verified_at DATETIME NULL;
+    ADD COLUMN IF NOT EXISTS last_verified_at DATETIME NULL,
+    -- Branch point (Faction of Balance): subguilds unlock at this level,
+    -- below max_level. Set by the importer when a guild lists itself in its
+    -- own Subguilds: section. See docs/reinc.md "Branch points".
+    ADD COLUMN IF NOT EXISTS sub_unlock_level INT NULL AFTER max_level;
 
 -- Per-level guild stat/attribute bonuses.
 CREATE TABLE IF NOT EXISTS game_guild_bonuses (

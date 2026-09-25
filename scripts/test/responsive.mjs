@@ -681,6 +681,14 @@ async function main() {
     // --only=sub1,sub2 restricts the run to cases whose label contains any
     // listed substring (handy for re-verifying a fix without a full sweep).
     const only = args.only ? String(args.only).split(',').map((s) => s.trim()).filter(Boolean) : null;
+    // --vp=sub1,sub2 does the same for viewport labels (e.g. --vp=desktop,
+    // --vp=mobile-wide). Together with --only this is the normal way to
+    // verify a fix: this host has 1 CPU / 765MB RAM, and a full sweep of
+    // every page x 8 viewports pins it for ~15 min. See docs/testing.md
+    // "Server load".
+    const vpOnly = args.vp ? String(args.vp).split(',').map((s) => s.trim()).filter(Boolean) : null;
+    const viewports = vpOnly ? VIEWPORTS.filter((v) => vpOnly.some((o) => v.label.includes(o))) : VIEWPORTS;
+    if (vpOnly && !viewports.length) throw new Error(`--vp=${args.vp} matches no viewport label`);
 
     let allOk = true;
     try {
@@ -689,7 +697,7 @@ async function main() {
             if (tc.auth && !authCtx) { console.log(`SKIP  ${tc.label} (no auth session)`); continue; }
             if (tc.skip) { console.log(`SKIP  ${tc.label} (${tc.skip})`); continue; }
             const ctx = tc.auth ? authCtx : browser;
-            for (const vp of VIEWPORTS) {
+            for (const vp of viewports) {
                 const ok = await runCase(ctx, vp, tc, cookie);
                 if (!ok) allOk = false;
             }

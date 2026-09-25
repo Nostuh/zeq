@@ -86,7 +86,8 @@ For every row:
 4. Cross-reference the source of truth for the subsystem (see the
    "always consult the source of truth" rule above).
 5. Try to reproduce the reported behaviour:
-   - UI bug → responsive harness at the reported viewport, or a manual
+   - UI bug → a scoped harness run (`--only=<page> --vp=<size>`) at the
+     reported viewport, a one-off `repro_*.mjs`, or a manual
      browser check.
    - Reinc math → use `scripts/test/` sanity-style scripts or mirror
      the selections from `app_state.page` and compute by hand from the
@@ -129,8 +130,12 @@ and always include the confirm/deny decision.
 user will tell you which bugs to resolve. For each approved fix:
 
 1. Make the change.
-2. Run relevant tests (responsive harness for UI, sanity script for
-   reinc math, manual curl for API).
+2. Run the **smallest** relevant test, one at a time: a single
+   `scripts/test/repro_*.mjs`, or the harness scoped to the page and
+   viewport (`responsive.mjs --only=<page> --vp=<size>`) for UI; the
+   sanity script for reinc math; curl for API. The full responsive sweep
+   runs only when the user asks — this server has 1 CPU and 765MB RAM.
+   See [testing.md](testing.md#server-load--one-heavy-job-at-a-time).
 3. Update the bug report via `POST /api/bugs/:id/status` with
    `status: "resolved"`.
 4. Include the report id in the commit message.

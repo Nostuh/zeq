@@ -22,6 +22,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import mysql from 'mysql2/promise';
 import { parseIdentify, splitLibraryBlocks, classifySlot, normalizeName } from '../api/classes/eq_parse.mjs';
+// Shared merge policy (pure, no DB) — the same one the API applies.
+import { STAT_COLS, NUM_COLS, WRITE_COLS, mergeMag, mergeRecord } from '../api/classes/eq_merge.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -35,17 +37,9 @@ const ALL = process.argv.includes('--all');
 const fileArgIdx = process.argv.indexOf('--file');
 const ONLY_FILE = fileArgIdx !== -1 ? process.argv[fileArgIdx + 1] : null;
 
-const STAT_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
-    'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold',
-    'racid', 'rasphx', 'rshadow', 'ac'];
-const NUM_COLS = [...STAT_COLS, 'weapon_class_value', 'dmg_pct'];
-const WRITE_COLS = ['name', 'name_raw', 'wear_slot', 'weapon_class', 'is_shield',
-    'hands', 'slot_raw', 'bound', 'needs_review', ...NUM_COLS, 'dmg_type',
-    'raw_info', 'eqmob_id'];
 const col = c => (c === 'int' ? '`int`' : c);
 
 // Best-of: keep the larger-magnitude value (preserve sign); 0 always loses.
-const mergeMag = (a, b) => (Math.abs(Number(b) || 0) > Math.abs(Number(a) || 0) ? (Number(b) || 0) : (Number(a) || 0));
 
 // ---- drop-file → slot tag --------------------------------------------
 // Keyed on the BASENAME so it works for both the subfoldered drop files
@@ -184,26 +178,6 @@ function recordOf(p, rawInfo) {
     };
     for (const c of STAT_COLS) r[c] = p.stats[c];
     return r;
-}
-
-// Best-of merge an incoming record over the existing DB row (or another
-// in-file record). Mirrors api/classes/eq_store.mjs::mergeRecord.
-function mergeRecord(existing, incoming) {
-    const m = { ...incoming };
-    for (const c of NUM_COLS) m[c] = mergeMag(existing[c], incoming[c]);
-    m.dmg_type = existing.dmg_type || incoming.dmg_type || null;
-    m.weapon_class = existing.weapon_class || incoming.weapon_class || null;
-    m.is_shield = (existing.is_shield || incoming.is_shield) ? 1 : 0;
-    m.bound = (existing.bound || incoming.bound) ? 1 : 0;
-    m.hands = Math.max(Number(existing.hands) || 1, Number(incoming.hands) || 1);
-    m.needs_review = (existing.needs_review && incoming.needs_review) ? 1 : 0;
-    m.eqmob_id = existing.eqmob_id ?? incoming.eqmob_id ?? null;
-    // slot_raw: keep incoming (the `{...incoming}` spread already does), matching
-    // eq_store.mjs::mergeRecord and migrate_eq.mjs (slot_raw=VALUES(slot_raw)).
-    // It's audit-only with no readers, so all three writers stay consistent.
-    m.name_raw = (incoming.name_raw || '').length > (existing.name_raw || '').length ? incoming.name_raw : existing.name_raw;
-    m.raw_info = (incoming.raw_info || '').length > (existing.raw_info || '').length ? incoming.raw_info : existing.raw_info;
-    return m;
 }
 
 const statSummary = r => NUM_COLS.map(c => [c, r[c]]).filter(([, v]) => v).map(([c, v]) => `${c}=${v}`).join(' ') || '(no stats)';

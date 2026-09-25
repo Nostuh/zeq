@@ -197,6 +197,16 @@ const SEED = [
         title: 'The Misc menu no longer jumps around when you open it',
         body: 'Opening the "Misc" menu in the top bar pushed the whole row of links onto a second line and shoved "Misc" out from under your cursor, which made Chest Sorter awkward to click. The menu now drops down cleanly below the bar and nothing else moves.',
     },
+    {
+        created: '2026-09-24 20:30:00', kind: 'fix',
+        title: 'Faction of Balance can now continue to level 15',
+        body: 'A sorcerer who stays balanced can take Faction of Balance all the way to level 15, instead of stopping at 5. After the first 5 Balance levels you take one path: Faction of Chaos (1-10), Faction of Order (1-10), or the rest of Balance (6-15). The planner now allows all three and only one at a time, just like in the game.',
+    },
+    {
+        created: '2026-09-24 20:30:01', kind: 'fix',
+        title: 'Log out and the theme button show up on phones again',
+        body: 'On a phone, when you are signed in, the top bar has more links than fit on one line. The bar used to stay the same height, so the extra row slipped out of it and Log out and the light/dark button were invisible. The bar now grows to fit and uses the space next to the logo, so everything is readable and tappable.',
+    },
 ];
 
 async function main() {

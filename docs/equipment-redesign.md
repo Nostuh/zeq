@@ -96,6 +96,31 @@ take the **most-complete value per stat** across all identifies; retain
 every raw text. Re-adding an existing item just ensures an
 `eq_ownership` tag — never a new catalog row.
 
+The policy lives in one pure module,
+[api/classes/eq_merge.mjs](../api/classes/eq_merge.mjs) (`mergeRecord`,
+`mergeRawInfo`, `mergeMag`, the column lists). It's shared by the API
+(`eq_store.mjs`), `scripts/onboard_eq.mjs` and one-off cleanups;
+onboard_eq used to carry a hand-mirrored copy. **Raw text is actually
+retained now:** the code used to keep only the *longer* text, so a
+longer re-paste silently discarded e.g. the library `lookup` box an item
+was onboarded from. `mergeRawInfo` appends each distinct text (blank line
+between), and skips one already contained after whitespace-collapsing, so
+re-pasting the same capture never duplicates it. Nothing re-parses
+`raw_info`; it is display/audit only.
+
+**Blank-slot rows.** A few legacy-migrated identifies had no slot (`wear_slot
+= ''`, `needs_review = 1`). The library onboarding later re-added most of
+them with a slot, which, because dedup is on `(name, wear_slot)`, created a
+correctly slotted twin instead of merging. The ownership tags and mob-loot
+links stayed on the blank row, so the item appeared twice in the catalog and
+twice in its mob's loot.
+[scripts/fix_unslotted_items.mjs](../scripts/fix_unslotted_items.mjs)
+(`--dry-run` first) merges each blank row into its twin with the policy
+above, moves ownership, removes a duplicate loot row or moves the link
+(logged in `mob_history`, one-source-mob rule enforced), and deletes the
+blank row. A row with no twin is only slotted when given explicitly
+(`--slot=<id>:<slot>`); the script never infers a slot from the name.
+
 ## Server-side parser (`api/classes/eq_parse.mjs`)
 
 Single source of truth. `parseIdentify(text)` →

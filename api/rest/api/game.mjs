@@ -542,11 +542,30 @@ router.get('/reinc-bootstrap', async function(req, res) {
         // mirror the game's `help guilds` (open|closed) state — e.g.
         // when Warlock closes for a reinc cycle the admin toggles it
         // off and the planner stops offering it.
-        const guilds = await zeq.query(
-            `SELECT g.id, g.name, g.file_name, g.parent_id, g.max_level, p.name AS parent_name
+        //
+        // The enabled check walks the WHOLE ancestor chain, not just the
+        // parent: the sorcerer tree is three deep, so a one-level join still
+        // sent Faction of Chaos/Order when Sorcerers itself was closed.
+        // `g.*` rather than a column list so this keeps working whether or
+        // not the `sub_unlock_level` column (schema/zeq.sql) has been added
+        // yet — the planner treats a missing value as "unlock at max_level".
+        const allGuilds = await zeq.query(
+            `SELECT g.*, p.name AS parent_name
              FROM game_guilds g LEFT JOIN game_guilds p ON p.id = g.parent_id
-             WHERE g.enabled = 1 AND (p.id IS NULL OR p.enabled = 1)
              ORDER BY COALESCE(p.name, g.name), g.parent_id IS NULL DESC, g.name`);
+        const byId = new Map(allGuilds.map((g) => [g.id, g]));
+        const chainOpen = (g) => {
+            for (let cur = g, hops = 0; cur && hops < 16; cur = byId.get(cur.parent_id), hops++) {
+                if (!cur.enabled) return false;
+                if (!cur.parent_id) return true;
+            }
+            return false; // broken or cyclic parent chain
+        };
+        const guilds = allGuilds.filter(chainOpen).map((g) => ({
+            id: g.id, name: g.name, file_name: g.file_name, parent_id: g.parent_id,
+            max_level: g.max_level, sub_unlock_level: g.sub_unlock_level ?? null,
+            parent_name: g.parent_name,
+        }));
         const skills = await zeq.query(
             `SELECT id, name, start_cost, help_text FROM game_skills ORDER BY name`);
         const spells = await zeq.query(

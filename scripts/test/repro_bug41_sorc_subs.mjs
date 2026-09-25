@@ -131,7 +131,7 @@ check('Chaos picked at its full 10 (5 + 10 = 15)', s.chaos.picked && s.chaos.lev
 
 await page.evaluate(async () => { await window.__click('Faction of Order'); });
 s = await page.evaluate(() => ({ order: window.__find('Faction of Order') }));
-check('Order refused — subguild budget exhausted', !s.order.picked);
+check('Order refused while Chaos is picked (one path only)', !s.order.picked);
 
 // 4. Cascade: un-maxing Balance must drop Chaos with it.
 console.log('\n4. Cascade drop through the middle tier');
@@ -157,6 +157,63 @@ s = await page.evaluate(() => ({
 check('Sorcerers dropped', !s.sorc.picked);
 check('Balance dropped with it', !s.balance.picked);
 check('Chaos dropped with it (grandchild)', !s.chaos.picked);
+
+// 6. Branch point: Faction of Balance continues to 15 OR branches at 5.
+//    Needs the data from scripts/migrate_guild_branches.mjs; skipped (not
+//    failed) until that has been applied.
+console.log('\n6. Faction of Balance branch point (continue to 15, or branch at 5)');
+await page.evaluate(async () => { await window.__click('Sorcerers'); });
+const balMax = await page.evaluate(() => {
+    const r = window.__find('Faction of Balance');
+    const t = r && r.el.textContent.match(/\/\s*(\d+)/);
+    return t ? Number(t[1]) : null;
+});
+if (balMax !== 15) {
+    console.log(`  SKIP Balance max is ${balMax} — branch data not applied yet (node scripts/migrate_guild_branches.mjs)`);
+} else {
+    await page.evaluate(async () => { await window.__click('Faction of Balance'); });
+    s = await page.evaluate(() => ({ balance: window.__find('Faction of Balance'), chaos: window.__find('Faction of Chaos') }));
+    check('new Balance pick starts at the branch level (5)', s.balance.level === 5, `level=${s.balance.level}`);
+    check('Chaos unlocked at Balance 5', !s.chaos.locked);
+
+    await page.evaluate(async () => { await window.__setLevel('Faction of Balance', 15); });
+    s = await page.evaluate(() => ({
+        balance: window.__find('Faction of Balance'), chaos: window.__find('Faction of Chaos'),
+        order: window.__find('Faction of Order'),
+        reason: (window.__find('Faction of Chaos').el.getAttribute('title') || ''),
+    }));
+    check('Balance continues to 15', s.balance.level === 15, `level=${s.balance.level}`);
+    check('continuing Balance locks Chaos', s.chaos.locked);
+    check('continuing Balance locks Order', s.order.locked);
+    check('lock tooltip explains the branch', /past level 5/.test(s.reason), JSON.stringify(s.reason));
+
+    await page.evaluate(async () => { await window.__setLevel('Faction of Balance', 5); });
+    await page.evaluate(async () => { await window.__click('Faction of Chaos'); });
+    s = await page.evaluate(() => ({ chaos: window.__find('Faction of Chaos') }));
+    check('back at 5, Chaos can be picked at 10', s.chaos.picked && s.chaos.level === 10, `level=${s.chaos.level}`);
+
+    await page.evaluate(async () => { await window.__setLevel('Faction of Balance', 12); });
+    s = await page.evaluate(() => ({ balance: window.__find('Faction of Balance'), chaos: window.__find('Faction of Chaos') }));
+    check('with Chaos picked, Balance is held at 5', s.balance.level === 5, `level=${s.balance.level}`);
+    check('…and Chaos stays picked', s.chaos.picked);
+
+    // Chaos XOR Order: Balance 5 + Chaos 3 + Order 3 fits the 15-level pool,
+    // but only ONE path is allowed after Balance 5.
+    await page.evaluate(async () => { await window.__setLevel('Faction of Chaos', 3); });
+    await page.evaluate(async () => { await window.__click('Faction of Order'); });
+    s = await page.evaluate(() => ({
+        chaos: window.__find('Faction of Chaos'), order: window.__find('Faction of Order'),
+        reason: (window.__find('Faction of Order').el.getAttribute('title') || ''),
+    }));
+    check('Chaos lowered to 3', s.chaos.level === 3, `level=${s.chaos.level}`);
+    check('Order still refused with room in the pool (one path only)', !s.order.picked && s.order.locked);
+    check('lock tooltip names the path already taken', /Only one path/.test(s.reason) && /Chaos/.test(s.reason),
+        JSON.stringify(s.reason));
+    await page.evaluate(async () => { await window.__click('Faction of Chaos'); });
+    s = await page.evaluate(() => ({ order: window.__find('Faction of Order') }));
+    check('dropping Chaos re-opens Order', !s.order.locked);
+    await page.evaluate(async () => { await window.__click('Sorcerers'); });
+}
 
 await browser.close();
 

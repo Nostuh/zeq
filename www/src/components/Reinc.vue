@@ -596,6 +596,7 @@ export default {
                 // never lands here, which cascades the drop to its children.
                 const keptLevelById = new Map();
                 const subBudgetByRoot = new Map();
+                const branchTaken = new Set(); // branch-point parents whose one branch is kept
                 const validPicks = [];
                 const droppedSubs = [];
                 const clampedSubs = [];
@@ -604,7 +605,17 @@ export default {
                     if (g.parent_id) {
                         const parent = this.guilds.find((x) => x.id === g.parent_id);
                         const parentLvl = keptLevelById.get(g.parent_id);
-                        if (!parent || parentLvl == null || parentLvl < (parent.max_level | 0)) {
+                        // Parent must sit exactly at its unlock level — max_level
+                        // for ordinary guilds, the branch level for Faction of
+                        // Balance (a build continuing Balance past 5 cannot also
+                        // hold Chaos/Order).
+                        if (!parent || parentLvl == null || parentLvl !== this.subUnlockLevel(parent)) {
+                            droppedSubs.push(g.name);
+                            continue;
+                        }
+                        // Branch point: only one branch survives (Chaos XOR
+                        // Order) — a build authored via the API could hold both.
+                        if (this.isBranchPoint(parent) && branchTaken.has(parent.id)) {
                             droppedSubs.push(g.name);
                             continue;
                         }
@@ -620,6 +631,7 @@ export default {
                         if (lvl > room) { lvl = room; clampedSubs.push(g.name); }
                         subBudgetByRoot.set(rootId, used + lvl);
                         keptLevelById.set(g.id, lvl);
+                        if (this.isBranchPoint(parent)) branchTaken.add(parent.id);
                         validPicks.push({ guildId: g.id, level: lvl });
                         continue;
                     }
@@ -635,7 +647,7 @@ export default {
                 if (droppedSubs.length) {
                     this.$root.flashMsg(
                         `Dropped invalid subguild pick${droppedSubs.length > 1 ? 's' : ''}: `
-                        + `${droppedSubs.join(', ')} (parent not at max level)`,
+                        + `${droppedSubs.join(', ')} (parent not at its unlock level)`,
                         'danger');
                 }
                 // Load each guild's per-level data before assigning
@@ -815,15 +827,55 @@ export default {
             }
             return out;
         },
+        // Level at which a guild's subguilds unlock. Ordinarily its max_level;
+        // for a BRANCH POINT (`sub_unlock_level` set — today only Faction of
+        // Balance: subguilds at 5, max 15) it is the branch level, and the
+        // guild can either stop there and branch, or continue past it.
+        // See docs/reinc.md "Branch points".
+        subUnlockLevel(g) {
+            const u = g && g.sub_unlock_level;
+            return u && u < (g.max_level | 0) ? (u | 0) : (g.max_level | 0);
+        },
+        isBranchPoint(g) { return this.subUnlockLevel(g) < (g.max_level | 0); },
         // A subguild is only available once its parent guild is selected and
-        // sitting at the parent's max_level. The desktop client enforces this
-        // because guild-level bonuses flow: parent_max + subguild_levels.
+        // sitting EXACTLY at the parent's unlock level. For ordinary guilds
+        // that is max_level (so `===` is the old `>=`); for a branch point,
+        // continuing past the branch level closes the subguild path — a
+        // Balance 10 sorcerer cannot also join Chaos. The desktop client
+        // enforces the max-level rule because bonuses flow parent_max +
+        // subguild_levels.
         isLocked(g) {
             const parent = this.parentOf(g);
             if (!parent) return false;
             const pick = this.guildPicks.find((p) => p.guildId === parent.id);
             if (!pick) return true;
-            return (pick.level | 0) < (parent.max_level | 0);
+            if ((pick.level | 0) !== this.subUnlockLevel(parent)) return true;
+            // A branch point offers ONE path: Chaos 1-10, OR Order 1-10, OR
+            // continuing Balance 6-15 (the level check above covers that
+            // last one). Without this, Balance 5 + Chaos 3 + Order 3 fitted
+            // the 15-level pool and was accepted.
+            return !!this.pickedBranchSibling(g);
+        },
+        // The other already-picked subguild of g's branch-point parent, if any.
+        pickedBranchSibling(g) {
+            const parent = this.parentOf(g);
+            if (!parent || !this.isBranchPoint(parent)) return null;
+            return this.guilds.find((x) => x.parent_id === parent.id && x.id !== g.id && this.isPicked(x)) || null;
+        },
+        // Human-readable reason for a lock, for the tooltip and the flash.
+        lockReason(g) {
+            const parent = this.parentOf(g);
+            if (!parent) return '';
+            const need = this.subUnlockLevel(parent);
+            const pick = this.guildPicks.find((p) => p.guildId === parent.id);
+            if (pick && this.isBranchPoint(parent) && (pick.level | 0) > need) {
+                return `${parent.name} is past level ${need} — set it back to exactly ${need} to branch into ${g.name}`;
+            }
+            const sib = pick && (pick.level | 0) === need ? this.pickedBranchSibling(g) : null;
+            if (sib) {
+                return `Only one path after ${parent.name} ${need}: ${sib.name} is already picked — remove it to take ${g.name}`;
+            }
+            return `Requires ${parent.name} at level ${need}`;
         },
         // Hard cap from Guild.cs:200 — `availSubLevels = 15` per PRIMARY
         // guild. Sums every currently-picked subguild level anywhere below
@@ -863,7 +915,7 @@ export default {
         // (e.g. locked subguild, or the 120-level cap is full).
         onGuildClick(g) {
             if (this.isLocked(g)) {
-                this.$root.flashMsg('Select the parent guild at max level first', 'danger');
+                this.$root.flashMsg(this.lockReason(g), 'danger');
                 return;
             }
             this.toggleGuild(g);
@@ -890,7 +942,10 @@ export default {
                 this.$root.flashMsg('Only 15 subguild levels allowed per primary guild', 'danger');
                 return;
             }
-            const startLevel = Math.min(g.max_level, room, subRoom);
+            // New picks start at their unlock level: max_level for ordinary
+            // guilds (unchanged), the branch level for a branch point so
+            // every path stays open (raise it to continue, or add a faction).
+            const startLevel = Math.min(this.subUnlockLevel(g), room, subRoom);
             this.guildPicks.push({ guildId: g.id, level: startLevel });
             await this.loadGuildData(g.id);
         },
@@ -899,7 +954,13 @@ export default {
             const p = this.guildPicks.find((pp) => pp.guildId === g.id);
             return p ? p.level : null;
         },
-        setPickLevel(g, v) {
+        // `el` is the level <input>. When a clamp leaves the stored level
+        // unchanged (typing 12 into Balance while Chaos holds it at 5, or 50
+        // into a guild already at 45), Vue has no change to re-render, so the
+        // box would keep showing the typed number while the state says
+        // otherwise — the number-input cousin of the checkbox desync in
+        // docs/gotchas.md. Write the real value back.
+        setPickLevel(g, v, el = null) {
             const p = this.guildPicks.find((pp) => pp.guildId === g.id);
             if (!p) return;
             // Respect the per-guild max, the global 120-level cap, AND the
@@ -907,11 +968,23 @@ export default {
             const otherSum = this.guildLevelsSum - p.level;
             const globalRoom = Math.max(0, MAX_LEVEL - otherSum);
             const subRoom = this.subRoomFor(g);
-            const newLevel = Math.max(1, Math.min(g.max_level, globalRoom, subRoom, parseInt(v, 10) || 0));
+            // A branch point with a subguild picked (Balance + Chaos) is held
+            // at the branch level: continuing past it means not branching.
+            const children = this.descendantIdsOf(g.id);
+            const hasPickedChild = this.guildPicks.some((pp) => children.has(pp.guildId));
+            const cap = hasPickedChild ? this.subUnlockLevel(g) : g.max_level;
+            const wanted = parseInt(v, 10) || 0;
+            const newLevel = Math.max(1, Math.min(cap, globalRoom, subRoom, wanted));
+            if (hasPickedChild && wanted > cap && this.isBranchPoint(g)) {
+                this.$root.flashMsg(
+                    `${g.name} stays at ${cap} while a faction is picked — remove it to continue ${g.name}`,
+                    'danger');
+            }
             p.level = newLevel;
-            // Any guild dropping below its max unlocks nothing beneath it —
+            if (el && String(el.value) !== String(newLevel)) el.value = String(newLevel);
+            // Off its unlock level, a guild unlocks nothing beneath it —
             // including a mid-tree subguild like Faction of Balance.
-            if (newLevel < g.max_level) this.dropDependentsOf(g);
+            if (newLevel !== this.subUnlockLevel(g)) this.dropDependentsOf(g);
         },
         reset() {
             if (!confirm('Reset all selections?')) return;

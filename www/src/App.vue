@@ -52,6 +52,9 @@ export default {
             // Vue-controlled so it works without Bootstrap's dropdown JS and
             // resets on every route change like the mobile sidebar.
             miscOpen: false,
+            // Desktop sidebar collapsed to the icon-only rail. Per-browser
+            // preference in localStorage (like the theme); only affects >=md.
+            sideCollapsed: false,
         };
     },
     computed: {
@@ -77,6 +80,45 @@ export default {
                 || this.canPlannerAdmin || this.isAdmin;
         },
         onReinc() { return this.$route && ['home','reinc','dashboard'].includes(this.$route.name); },
+        // Sidebar contents, filtered by capability flag. One entry per link
+        // so the label, icon and access rule live together — the collapsed
+        // rail shows only the icon (label becomes the tooltip / aria-label).
+        // Keep in sync with routeAllowed() above.
+        sideSections() {
+            const L = (name, label, icon, show = true) => (show ? { name, label, icon } : null);
+            const secs = [
+                { key: 'misc', title: 'Misc', show: true, links: [
+                    L('chest-sorter', 'Chest Sorter', 'bi-box-seam'),
+                ] },
+                { key: 'equipment', title: 'Equipment', show: this.canEquipment, links: [
+                    L('equipment', 'My Equipment', 'bi-bag-check'),
+                    L('equipment-all', 'All Equipment', 'bi-grid-3x3-gap'),
+                    L('equipment-add', 'Add Equipment', 'bi-plus-square', this.canEquipmentEdit),
+                    L('equipment-import', 'Import Equipment', 'bi-box-arrow-in-down'),
+                    L('equipment-build', 'EQ Builder', 'bi-hammer'),
+                ] },
+                { key: 'lookups', title: 'Lookups', show: this.canLookups, links: [
+                    L('kya', 'KYA Lookup', 'bi-search'),
+                ] },
+                { key: 'eqmobs', title: 'EQ Mobs', show: this.canEqmobs, links: [
+                    L('mobs', 'Mob Database', 'bi-crosshair'),
+                ] },
+                { key: 'planner', title: 'Planner Admin', show: this.canPlannerAdmin, links: [
+                    L('races', 'Races', 'bi-people'),
+                    L('guilds', 'Guilds', 'bi-shield'),
+                    L('skills', 'Skills', 'bi-award'),
+                    L('spells', 'Spells', 'bi-magic'),
+                    L('costs', 'Costs', 'bi-coin'),
+                ] },
+                { key: 'admin', title: 'Admin', show: this.isAdmin, links: [
+                    L('users', 'Users', 'bi-person-gear'),
+                    L('bugs', 'Bug Reports', 'bi-bug'),
+                ] },
+            ];
+            return secs
+                .filter((sec) => sec.show)
+                .map((sec) => ({ ...sec, links: sec.links.filter(Boolean) }));
+        },
     },
     methods: {
         async loadMe() {
@@ -229,9 +271,17 @@ export default {
             this.applyTheme();
             try { localStorage.setItem('zeq_theme', this.theme); } catch (e) {}
         },
+        loadSideCollapsed() {
+            try { this.sideCollapsed = localStorage.getItem('zeq_side_collapsed') === '1'; } catch (e) {}
+        },
+        toggleSide() {
+            this.sideCollapsed = !this.sideCollapsed;
+            try { localStorage.setItem('zeq_side_collapsed', this.sideCollapsed ? '1' : '0'); } catch (e) {}
+        },
     },
     async mounted() {
         this.loadTheme();
+        this.loadSideCollapsed();
         await this.loadMe();
         this.ready = true;
         this.syncReincBodyClass();
@@ -377,59 +427,46 @@ export default {
     <div v-if="onReinc" class="reinc-wrap">
         <router-view />
     </div>
+    <!-- Signed-in shell: sidebar rail + main, as a CSS grid at >=md. The
+         rail is sticky and exactly one viewport tall; it collapses to an
+         icon-only strip via the toggle (state kept in localStorage). Below md
+         it is the hamburger-driven stacked menu, always full labels. See
+         docs/ui.md "Sidebar". `.app-content main h2` is what
+         scripts/test/responsive.mjs keys on — keep main inside .app-content. -->
+    <div v-else-if="user" class="app-content app-shell" :class="{ 'side-collapsed': sideCollapsed }">
+        <nav id="sidebarMenu" class="sidebar bg-light collapse d-md-block" :class="{ show: sidebarOpen }"
+             aria-label="Sections">
+            <button type="button" class="btn btn-primary btn-sm side-toggle d-none d-md-flex"
+                    @click="toggleSide"
+                    :aria-expanded="sideCollapsed ? 'false' : 'true'"
+                    :title="sideCollapsed ? 'Expand menu' : 'Collapse menu to icons'">
+                <i class="bi" :class="sideCollapsed ? 'bi-chevron-double-right' : 'bi-chevron-double-left'" aria-hidden="true"></i>
+                <span class="side-label">Collapse menu</span>
+                <span v-if="sideCollapsed" class="visually-hidden">Expand menu</span>
+            </button>
+            <!-- Sections are gated by capability flag (sideSections); the
+                 server enforces the same access regardless. -->
+            <template v-for="sec in sideSections" :key="sec.key">
+                <div class="side-heading" role="presentation"><span class="side-label">{{ sec.title }}</span></div>
+                <router-link v-for="l in sec.links" :key="l.name" class="side-link" :to="{ name: l.name }"
+                             :title="sideCollapsed ? l.label : null"
+                             :aria-label="sideCollapsed ? l.label : null">
+                    <i class="bi" :class="l.icon" aria-hidden="true"></i>
+                    <span class="side-label">{{ l.label }}</span>
+                </router-link>
+            </template>
+            <div v-if="!hasAnySection" class="side-empty small text-muted">
+                <span class="side-label">No sections enabled — ask an admin for access.</span>
+            </div>
+        </nav>
+        <main class="app-main px-3 px-md-4 pt-3">
+            <router-view />
+        </main>
+    </div>
+    <!-- Signed-out, non-reinc pages (login, updates, builds, chest sorter):
+         no sidebar, original offset column layout. -->
     <div v-else class="container-fluid app-content">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" :class="{ show: sidebarOpen }" v-if="user">
-                <div class="position-sticky pt-3">
-                    <ul class="nav flex-column">
-                        <!-- Public Misc tools — always shown to signed-in users
-                             (also reachable from the header "Misc" menu). -->
-                        <li class="nav-item"><small class="text-muted ps-2 text-uppercase fw-bold">Misc</small></li>
-                        <li class="nav-item"><router-link class="nav-link" :to="{name:'chest-sorter'}">Chest Sorter</router-link></li>
-
-                        <!-- Sidebar sections are gated by capability flag; the
-                             server enforces the same access regardless. -->
-                        <template v-if="canEquipment">
-                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Equipment</small></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment'}">My Equipment</router-link></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-all'}">All Equipment</router-link></li>
-                            <li class="nav-item" v-if="canEquipmentEdit"><router-link class="nav-link" :to="{name:'equipment-add'}">Add Equipment</router-link></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-import'}">Import Equipment</router-link></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'equipment-build'}">EQ Builder</router-link></li>
-                        </template>
-
-                        <template v-if="canLookups">
-                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Lookups</small></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'kya'}">KYA Lookup</router-link></li>
-                        </template>
-
-                        <template v-if="canEqmobs">
-                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">EQ Mobs</small></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'mobs'}">Mob Database</router-link></li>
-                        </template>
-
-                        <template v-if="canPlannerAdmin">
-                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Planner Admin</small></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'races'}">Races</router-link></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'guilds'}">Guilds</router-link></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'skills'}">Skills</router-link></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'spells'}">Spells</router-link></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'costs'}">Costs</router-link></li>
-                        </template>
-
-                        <template v-if="isAdmin">
-                            <li class="nav-item mt-3"><small class="text-muted ps-2 text-uppercase fw-bold">Admin</small></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'users'}">Users</router-link></li>
-                            <li class="nav-item"><router-link class="nav-link" :to="{name:'bugs'}">Bug Reports</router-link></li>
-                        </template>
-
-                        <li class="nav-item" v-if="!hasAnySection">
-                            <small class="text-muted ps-2">No sections enabled — ask an admin for access.</small>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-3">
                 <router-view />
             </main>
@@ -472,6 +509,94 @@ body.reinc-active #app {
    covers the last rows of a page's table. Reinc layout is excluded (it
    is locked to 100vh and uses .reinc-wrap, not .app-content). */
 .app-content { padding-bottom: 6rem; }
+
+/* ===== Signed-in shell: sidebar rail + main =====
+   All colours are Bootstrap CSS variables, so both themes are covered
+   (the panel background itself is .bg-light, overridden for dark in
+   styles.scss). Sizes are rem, no fixed px. See docs/ui.md "Sidebar". */
+.app-main { min-width: 0; }
+#sidebarMenu { padding: 0.5rem 0 1rem; }
+/* Visibility is d-none / d-md-flex in the template (desktop only — below md
+   the header hamburger owns the menu). */
+.side-toggle {
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: calc(100% - 0.7rem);
+    margin: 0 0.35rem 0.35rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.side-heading {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--bs-secondary-color);
+    padding: 0.55rem 0.75rem 0.1rem;
+    white-space: nowrap;
+}
+.side-link {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0.35rem;
+    padding: 0.2rem 0.45rem;
+    border-radius: 0.3rem;
+    font-size: 0.875rem;
+    line-height: 1.3;
+    color: var(--bs-link-color);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.side-link:hover { background: var(--bs-tertiary-bg); color: var(--bs-link-hover-color); }
+/* Current page — matters most in the collapsed rail, where the icon is the
+   only cue to where you are. */
+.side-link.router-link-active {
+    background: var(--bs-primary-bg-subtle);
+    color: var(--bs-primary-text-emphasis);
+    font-weight: 600;
+}
+.side-link .bi { flex: 0 0 auto; width: 1.1rem; text-align: center; font-size: 1rem; }
+.side-empty { padding: 0.5rem 0.75rem; }
+
+@media (min-width: 768px) {
+    .app-shell {
+        --zeq-sidew: 12.5rem;
+        display: grid;
+        grid-template-columns: var(--zeq-sidew) minmax(0, 1fr);
+        align-items: start;
+    }
+    .app-shell.side-collapsed { --zeq-sidew: 5rem; }
+    /* Sticky rail exactly one viewport tall (below the measured navbar), so
+       the panel background always reaches the bottom of the window. If the
+       links ever outgrow a very short window the rail scrolls on its own;
+       it never spills past its painted box again. */
+    #sidebarMenu {
+        position: sticky;
+        top: var(--zeq-navh, 65px);
+        height: calc(100vh - var(--zeq-navh, 65px));
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+    /* Collapsed: icons only. Labels leave the layout (display:none), which
+       is why each link switches to a title + aria-label in the template. */
+    .side-collapsed .side-label { display: none; }
+    .side-collapsed .side-link {
+        justify-content: center;
+        margin: 0.05rem 0.6rem;
+        padding: 0.4rem 0;
+    }
+    .side-collapsed .side-link .bi { width: auto; font-size: 1.25rem; }
+    /* Section titles become thin dividers between icon groups. */
+    .side-collapsed .side-heading {
+        padding: 0;
+        margin: 0.45rem 1rem;
+        border-top: 1px solid var(--bs-border-color);
+    }
+    .side-collapsed .side-toggle { font-size: 1.1rem; padding-block: 0.3rem; }
+}
 
 .fab-report {
     position: fixed;
@@ -549,9 +674,14 @@ body.reinc-active #app {
     .zeq-navbar .navbar-nav .nav-link,
     .zeq-navbar .navbar-nav .theme-toggle,
     .zeq-navbar .navbar-nav .navbar-text { margin-right: 0.4rem !important; }
-    .zeq-navbar .navbar-nav .nav-link { padding-left: 0.25rem; padding-right: 0.25rem; font-size: 0.85rem; }
+    .zeq-navbar .navbar-nav .nav-link { padding: 0.3rem 0.25rem; font-size: 0.85rem; }
     .zeq-navbar .report-btn { display: none; }
     .zeq-navbar .navbar-text { display: none; }
+    /* Share the brand's row instead of wrapping onto a mostly-empty row of
+       its own: take the remaining width and wrap INSIDE it. At 360px that
+       keeps a signed-in admin's header to three compact rows (~95px) and
+       the anonymous one within the 65px minimum (two rows). */
+    .zeq-navbar .navbar-nav { flex: 1 1 0; min-width: 0; }
 }
 
 /* Public "Misc" dropdown in the header. `position: relative` is what the

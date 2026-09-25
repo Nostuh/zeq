@@ -57,9 +57,40 @@ re-checks the session (`loadMe()` if `user` is null), kicks
 unauthenticated users to `login`, and redirects any user lacking the
 route's required flag back to `home` (the public planner). The
 `routeAllowed(name)` switch is the single source of truth for which flag
-each route needs — keep it in sync with the sidebar `v-if`s. The sidebar
-is organised into flag-gated sections: **Equipment**, **Lookups**,
+each route needs — keep it in sync with the sidebar's `sideSections`. The sidebar
+is organised into flag-gated sections: **Misc**, **Equipment**, **Lookups**,
 **EQ Mobs**, **Planner Admin**, **Admin** (Users + Bug Reports).
+
+## Sidebar
+
+Signed-in, non-reinc pages use the `.app-content.app-shell` wrapper in
+[App.vue](../www/src/App.vue): a CSS grid at `>=md` with the sidebar rail
+(`#sidebarMenu`) and `<main>`. Signed-out pages keep the old offset
+`col-md-9` column with no sidebar.
+
+- **Contents are data, not markup.** `sideSections` (computed) lists every
+  section and link with its label, Bootstrap icon and flag gate. To add a
+  page: add one `L(routeName, label, icon, flag)` entry, and a matching
+  case in `routeAllowed()`. Check the icon exists in the installed
+  `bootstrap-icons` (1.11.x), or it renders blank.
+- **Sticky rail, one viewport tall.** `top: var(--zeq-navh)` and
+  `height: calc(100vh - var(--zeq-navh))` with `overflow-y: auto`. The panel
+  background always reaches the bottom of the window, and if the links ever
+  outgrow a very short window the rail scrolls on its own. The previous
+  rule (fixed `calc(100vh - 65px)` in styles.scss, no overflow) let an
+  admin's list spill below the painted panel.
+- **Condensed** by default (12.5rem wide, 0.875rem links, tight padding),
+  with the current page highlighted (`router-link-active` →
+  `--bs-primary-bg-subtle`).
+- **Collapse toggle.** The solid button at the top shrinks the rail to a
+  5rem (80px) icon strip: labels go `display:none`, section titles become
+  thin dividers, and each link gains a `title` tooltip + `aria-label`
+  (the hidden label no longer names it). The state is per-browser in
+  `localStorage['zeq_side_collapsed']`, the same pattern as the theme. It
+  only applies at `>=md`: below that the header hamburger opens the stacked
+  menu with full labels and the collapse button is hidden.
+- All colours are Bootstrap CSS variables; the panel background is
+  `.bg-light`, overridden for dark mode in `styles.scss`.
 
 ## Component layout
 
@@ -114,7 +145,9 @@ with `/api` proxied to `localhost:50000`.
 ## EQ Mob Knowledge Base pages
 
 The mob KB is a two-column layout: main content left (~85%), sidebar
-right (~220px sticky). Components:
+right (~220px). The right column is plain page flow, **not** sticky and
+not height-capped: a sticky `max-height: calc(100vh - 80px)` column gave
+long loot lists their own second scrollbar. Components:
 
 - `MobList.vue` — searchable table (desktop) / cards (mobile). Search
   is debounced 300ms. Click row → detail view.

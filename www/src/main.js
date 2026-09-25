@@ -5,8 +5,18 @@
     if (window.__zeqConsoleBuffer) return;
     const buf = [];
     const MAX = 100;
+    // Error objects need special handling: `message`/`stack` are not
+    // enumerable, so JSON.stringify(err) is literally "{}". Every
+    // `console.error(err)` used to reach bug reports as `{}` (bug #40's
+    // capture holds one). Axios errors also carry the request + status.
     const safeStringify = (a) => {
         if (typeof a === 'string') return a;
+        if (a instanceof Error) {
+            const req = a.config ? ` [${(a.config.method || '').toUpperCase()} ${a.config.url || ''}` +
+                (a.response ? ` → ${a.response.status}` : '') + ']' : '';
+            const top = (a.stack || '').split('\n').slice(1, 3).map((l) => l.trim()).join(' | ');
+            return `${a.name || 'Error'}: ${a.message}${req}${top ? ` @ ${top}` : ''}`;
+        }
         try { return JSON.stringify(a); } catch { return String(a); }
     };
     for (const level of ['log', 'info', 'warn', 'error']) {

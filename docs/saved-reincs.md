@@ -59,7 +59,8 @@ admin edit changes those underlying tables, old builds can rot:
 | Skill / spell deleted         | Learned percent is dropped for that entity. |
 | Wish / boon renamed or deleted| Selection is dropped. |
 | Cost table values changed     | No effect on state, BUT cached `total_exp` / `gold` are now stale. |
-| New constraint added (e.g. 15 sub-levels per primary)| Restore loop clamps or drops the offending picks; user gets a flash. The build can never re-import as an *invalid* state — see the `subBudgetByParent` walk in `applyBuildState`. |
+| New constraint added (e.g. 15 sub-levels per primary)| Restore loop clamps or drops the offending picks; user gets a flash. The build can never re-import as an *invalid* state — see the `subBudgetByRoot` walk in `applyBuildState`. |
+| Guild `max_level` raised / branch point added (Faction of Balance 5 → 15, factions at 5) | Old picks stay valid. A saved faction whose Balance isn't exactly at the branch level is dropped with a flash (never happens for builds saved before the change: Balance was capped at 5). |
 
 **Rules when making future changes to game data:**
 

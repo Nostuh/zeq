@@ -49,7 +49,7 @@ export default {
             <div v-if="reinc.guildTree.length === 0" class="small text-muted p-2">No guilds match “{{ reinc.guildSearch }}”.</div>
             <div v-for="g in reinc.guildTree" :key="g.id" class="guild-row"
                  :class="{ picked: reinc.isPicked(g), sub: g.depth === 1, sub2: g.depth >= 2, locked: reinc.isLocked(g) }"
-                 :title="reinc.isLocked(g) ? 'Select the parent guild at max level to unlock this subguild' : ''">
+                 :title="reinc.isLocked(g) ? reinc.lockReason(g) : ''">
                 <!-- Bug #27 — native <input checkbox> desync is unfixable
                      in Vue 3: `:checked` + `@click.prevent` still drifts
                      from the DOM .checked property across browsers. Replace
@@ -70,7 +70,7 @@ export default {
                     <span v-if="reinc.isLocked(g)" class="ms-2 small text-muted">🔒</span>
                 </div>
                 <input v-if="reinc.isPicked(g)" type="number" class="form-control form-control-sm level-input"
-                       :value="reinc.pickLevel(g)" @input="reinc.setPickLevel(g, $event.target.value)" :max="g.max_level" min="1">
+                       :value="reinc.pickLevel(g)" @input="reinc.setPickLevel(g, $event.target.value, $event.target)" :max="g.max_level" min="1">
                 <span v-if="reinc.isPicked(g)" class="small text-muted ms-1">/ {{ g.max_level }}</span>
                 <button type="button" class="info-btn"
                         :disabled="reinc.isLocked(g)"

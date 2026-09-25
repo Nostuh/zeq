@@ -12,21 +12,13 @@
 
 import dbs from '../db.mjs';
 import { parseIdentify } from './eq_parse.mjs';
+// Merge policy (best-of stats, retain every raw text) is shared with the
+// scripts — see eq_merge.mjs.
+import { WRITE_COLS, mergeRecord } from './eq_merge.mjs';
 
 const zeq = dbs.get('zeq');
 
-// Numeric columns merged by "keep the larger magnitude" (best-of).
-const NUM_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
-    'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold',
-    'racid', 'rasphx', 'rshadow', 'ac', 'weapon_class_value', 'dmg_pct'];
-
-// Every column we write (in a stable order). `int` is reserved → backtick.
-const WRITE_COLS = ['name', 'name_raw', 'wear_slot', 'weapon_class',
-    'is_shield', 'hands', 'slot_raw', 'bound', 'needs_review', ...NUM_COLS,
-    'dmg_type', 'raw_info', 'eqmob_id'];
-
 const ident = c => (c === 'int' ? '`int`' : c);
-const mergeMag = (a, b) => (Math.abs(b) > Math.abs(a) ? b : a);
 
 // Flatten a parseIdentify() result into a flat column→value record.
 function flatten(p, rawInfo, eqmobId) {
@@ -43,24 +35,6 @@ function flatten(p, rawInfo, eqmobId) {
         'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire',
         'rcold', 'racid', 'rasphx', 'rshadow', 'ac']) r[c] = p.stats[c];
     return r;
-}
-
-// Best-of merge an incoming record over the existing DB row.
-function mergeRecord(existing, incoming) {
-    const m = { ...incoming };
-    for (const c of NUM_COLS) m[c] = mergeMag(Number(existing[c]) || 0, Number(incoming[c]) || 0);
-    m.dmg_type = existing.dmg_type || incoming.dmg_type || null;
-    m.weapon_class = existing.weapon_class || incoming.weapon_class || null;
-    m.is_shield = (existing.is_shield || incoming.is_shield) ? 1 : 0;
-    m.bound = (existing.bound || incoming.bound) ? 1 : 0;
-    m.hands = Math.max(Number(existing.hands) || 1, incoming.hands);
-    m.needs_review = (existing.needs_review && incoming.needs_review) ? 1 : 0;
-    m.eqmob_id = existing.eqmob_id ?? incoming.eqmob_id ?? null;
-    m.name_raw = (incoming.name_raw || '').length > (existing.name_raw || '').length
-        ? incoming.name_raw : existing.name_raw;
-    m.raw_info = (incoming.raw_info || '').length > (existing.raw_info || '').length
-        ? incoming.raw_info : existing.raw_info;
-    return m;
 }
 
 // Parse `text` (tagged with `slotRaw`), upsert the catalog row with a

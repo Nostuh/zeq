@@ -88,17 +88,23 @@ droplet shows only the non-reserved `157.245.90.29`.
 
 After any code change:
 
+One heavy job at a time — this box has 1 CPU / 765MB RAM (see
+[testing.md](testing.md#server-load--one-heavy-job-at-a-time)). Don't build
+while a browser test is running.
+
 ```bash
+# Web (if frontend changed)
+cd /srv/zeq/www/src && nice -n 19 npx vite build
+
 # API
 pm2 restart api --update-env
 
-# Web (if frontend changed)
-cd /srv/zeq/www/src && npx vite build
-
 # Sanity
 curl -sI https://nostuh.com/                    # expect 200
-curl -sI https://nostuh.com/api/auth/me         # expect 200 + {ok:true,data:null}
-cd /srv/zeq/scripts/test && node responsive.mjs # expect 12/12 passed
+curl -s  https://nostuh.com/api/auth/me         # expect {"ok":true,"data":null}
+
+# UI check — scoped to what changed; the full sweep only when asked
+cd /srv/zeq/scripts/test && nice -n 19 node responsive.mjs --only=<page> --vp=<size>
 ```
 
 ## Importing/re-importing Zcreator data

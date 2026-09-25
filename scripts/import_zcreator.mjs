@@ -237,7 +237,8 @@ async function upsertGuild(db, displayName, fileName, parentId, maxLevel) {
          ON DUPLICATE KEY UPDATE
            file_name=VALUES(file_name),
            parent_id=VALUES(parent_id),
-           max_level=VALUES(max_level)`,
+           max_level=VALUES(max_level),
+           sub_unlock_level=NULL`,
         [displayName, fileName, parentId, maxLevel]);
     if (r.insertId) return r.insertId;
     const [[row]] = await db.query('SELECT id FROM game_guilds WHERE name = ?', [displayName]);
@@ -301,6 +302,22 @@ async function importGuildFile(db, fileName, displayName, parentId, maxLevel,
     // Phase 3: subguilds section
     const subguilds = parseSubguildsSection(text);
     for (const sg of subguilds) {
+        // A guild that lists ITSELF is a branch point, not a cycle:
+        // faction_of_balance.chr offers Chaos 10 / Order 10 / Balance 10,
+        // i.e. at its own max (5, from sorcerers.chr) you either branch
+        // into a faction or continue Balance for 10 more levels (its bonus,
+        // skill and spell tables run to 15). Record that as max_level =
+        // base + N, with subguilds unlocking at the base level only.
+        // upsertGuild resets sub_unlock_level first, so this is idempotent.
+        // The `seen` guard below would otherwise drop the line silently.
+        // See docs/reinc.md "Branch points".
+        if (sg.fileName.toLowerCase() === fileName.toLowerCase()) {
+            await db.query(
+                'UPDATE game_guilds SET sub_unlock_level = ?, max_level = ? WHERE id = ?',
+                [maxLevel, maxLevel + sg.maxLevel, guildId]);
+            log(`  ~ ${displayName}: branch point — subguilds at ${maxLevel}, continues to ${maxLevel + sg.maxLevel}`);
+            continue;
+        }
         await importGuildFile(db, sg.fileName, sg.displayName, guildId, sg.maxLevel,
             skillMap, spellMap, seen, files);
     }

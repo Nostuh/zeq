@@ -1,20 +1,25 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
 
+/* min-height, NOT height: the header must grow when its links wrap (phones,
+   and tablets for signed-in users). A fixed `height: 65px` let the wrapped
+   rows overflow the dark bar, so on a phone the theme toggle and Log out
+   rendered white-on-white behind the page. App.vue measures the real height
+   into --zeq-navh for everything that offsets against the header. */
 header.navbar {
-    height: 65px;
+    min-height: 65px;
     position: sticky;
     top: 0;
 }
 
-#sidebarMenu {
-    height: calc(100vh - 65px);
-    position: sticky;
-    top: 65px;
-}
+/* #sidebarMenu sizing (sticky rail, collapsed/expanded widths) lives with
+   the rest of the signed-in shell layout in App.vue — see docs/ui.md
+   "Sidebar". The old fixed `height: calc(100vh - 65px)` here had no
+   overflow handling, so an admin's full link list spilled below the
+   painted panel on shorter windows. */
 
 #login-div {
-    height: calc(100vh - 65px);
+    height: calc(100vh - var(--zeq-navh, 65px));
     width: 50%;
     margin:3em auto;
 }
@@ -227,12 +232,12 @@ tr.guild-closed-row > * {
     }
 }
 .mob-main { min-width: 0; }
-.mob-sidebar {
-    position: sticky;
-    top: 70px;
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
-}
+/* Plain flow column — no sticky, no viewport-height cap, no inner scroll.
+   It used to be `position: sticky; max-height: calc(100vh - 80px);
+   overflow-y: auto`, which gave any mob with a long loot list a second
+   scrollbar and clipped Loot part-way down the page. The page scrollbar
+   now covers everything. */
+.mob-sidebar { min-width: 0; }
 .mob-sidebar-section {
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;

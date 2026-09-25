@@ -91,7 +91,12 @@ Three sections, in order:
    list of `SubguildName maxLevel` pairs. For each pair the importer
    recursively imports the `<SubguildName>.chr` file — the subguild
    has the same bonus-box + ability-block structure as a main guild.
-   Subguilds never have their own `Subguilds:` section.
+   A subguild **can** have its own `Subguilds:` section: Faction of
+   Balance lists Chaos and Order (so the sorcerer tree is three deep), and
+   it also lists *itself*. A self-listing is a **branch point**, not
+   recursion. The importer sets `sub_unlock_level = maxLevel` and
+   `max_level = maxLevel + N` instead of recursing (see
+   [reinc.md](reinc.md) "Branch points").
 
 ### `costs.txt` — `loadSSCosts()`
 - Three whitespace-separated columns per line: `from_pct`, `to_pct`,

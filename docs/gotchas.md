@@ -56,6 +56,14 @@ purely by reactive state. The reinc guild list (TabGeneral.vue) uses
 this approach after bug #27 proved every native-checkbox pattern
 eventually desyncs.
 
+**Number inputs have the same trap.** `:value` + `@input` where the handler
+*clamps*: if the clamped value equals what was already stored, Vue sees no
+change and never re-renders, so the box keeps the typed number. Typing 12
+into Faction of Balance while Chaos holds it at 5, or 50 into a guild
+already at 45, left "12"/"50" on screen with the real state at 5/45. The
+reinc guild level input now passes `$event.target` to `setPickLevel`, which
+writes the clamped value back whenever they differ.
+
 ### Same component on two routes is REUSED — `mounted` won't re-fire
 `Equipment.vue` serves both `/equipment` (mine) and `/equipment-all`
 (catalog). Vue Router reuses the **same instance** when navigating
@@ -126,6 +134,24 @@ navbar section of
 [repro_bug40_43_equipment.mjs](../scripts/test/repro_bug40_43_equipment.mjs),
 which asserts the navbar height is byte-identical open vs closed.
 
+### A viewport-height panel needs an overflow plan, or it spills or scrolls
+Two panels were sized to the viewport with nothing deciding what happens
+when their content is taller. The admin sidebar had a fixed
+`height: calc(100vh - 65px)` and no `overflow`, so on shorter windows the
+bottom links (Spells, Costs, Admin…) spilled past the painted panel onto
+the page background. The Mob KB's right column had
+`max-height: calc(100vh - 80px); overflow-y: auto`, so every long loot list
+got its own second scrollbar. The header had the same problem: a fixed
+`height: 65px` (styles.scss) meant that when its links wrapped (phones, and
+tablets for signed-in users) the extra rows overflowed the dark bar. On a
+phone the theme toggle and Log out rendered white-on-white behind the page.
+It is `min-height` now; App.vue measures the real height into
+`--zeq-navh`. Decide per panel. A navigation rail stays
+sticky, exactly one viewport tall, with `overflow-y: auto` as a
+short-window safety net, after condensing it so that case is rare. A
+*content* column (loot, notes) should just flow with the page. Details in
+[ui.md](ui.md) "Sidebar" and "EQ Mob Knowledge Base pages".
+
 ### `100vw` includes the vertical scrollbar
 Any `max-width: 100vw` or similar on a page-level container overflows
 horizontally as soon as the content generates a vertical scrollbar.
@@ -158,6 +184,28 @@ header at `top: 0` inside it, with an **opaque** `background` (a transparent
 sticky header lets rows show through). App.vue publishes `--zeq-navh` (measured
 navbar height) for the max-height sum. Don't reach for a page-level sticky header
 above a horizontal-scroll table — it can't work.
+
+### `JSON.stringify(err)` is `"{}"`
+An `Error`'s `message` and `stack` are not enumerable, so the bug-report
+console capture in [main.js](../www/src/main.js) turned every
+`console.error(err)` into the literal string `{}` — bug #40's capture holds
+one, with nothing to go on. `safeStringify` now special-cases `Error`
+(name, message, the first stack frames, plus method/url/status for axios
+errors). Anywhere else you serialize an error for storage, do the same.
+
+### Some files are CRLF — keep each file's line endings
+Newer files are LF, but many older ones are **entirely CRLF**:
+[styles.scss](../www/src/scss/styles.scss), [main.js](../www/src/main.js),
+`zSimpleTable.vue`, `Dashboard.vue`, `vite.config.js`, `api/api.mjs`,
+`api/db.mjs`, `api/classes/mysql.mjs`, `api/utils/tools.mjs`,
+`api/rest/api/eq.mjs`, plus `old_components/`. Each file is consistently
+one or the other. Any tool that rewrites in text mode (Python
+`open().read()/write()`, an editor's "normalize EOL") silently converts a
+CRLF file to LF, and a two-line change becomes a whole-file diff (it
+happened to styles.scss: 810 lines for 2 rules). The build output is the
+same either way; the history isn't. Before committing, compare
+`grep -c $'\r$' <file>` with `wc -l <file>` for every file you touched,
+and edit CRLF files in binary mode.
 
 ## API / backend
 

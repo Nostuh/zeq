@@ -10,10 +10,6 @@ import { uf } from '../../utils/tools.mjs';
 // "My Equipment" (mine) and "All Equipment" views, picked by route name,
 // which is why EquipmentAll.vue no longer exists. See
 // docs/equipment-redesign.md.
-const STAT_COLS = ['str', 'con', 'dex', 'int', 'wis', 'cha', 'hpr', 'spr',
-    'hp', 'sp', 'rphys', 'rpsi', 'relec', 'rmag', 'rpoi', 'rfire', 'rcold',
-    'racid', 'rasphx', 'rshadow', 'ac', 'wc', 'dmg_pct'];
-
 // Every resistance column, summed into the ΣRes total column. Shadow is
 // included: it is a real resist and on most items it is 0 anyway, so
 // leaving it out would only hide the handful of items that carry it.

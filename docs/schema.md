@@ -37,6 +37,10 @@ is the display name (underscores replaced by spaces); `file_name` is the
 original filename stem (underscored). `max_level` is the trailing
 number from `guilds.chr` for top-level guilds, or from a `Subguilds:`
 section inside a parent guild's `.chr` file for subguilds.
+`sub_unlock_level` (nullable) marks a **branch point**: the level at which
+the guild's subguilds unlock, below `max_level`. Only Faction of Balance
+has it (5 of 15). `NULL` means subguilds unlock at `max_level`. See
+[reinc.md](reinc.md) "Branch points".
 
 ### `game_guild_bonuses`
 Per-level stat bonuses parsed from the ASCII box at the top of each
