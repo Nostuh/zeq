@@ -185,6 +185,15 @@ sticky header lets rows show through). App.vue publishes `--zeq-navh` (measured
 navbar height) for the max-height sum. Don't reach for a page-level sticky header
 above a horizontal-scroll table — it can't work.
 
+A sticky **left** column is the opposite case and works fine inside
+`.table-responsive`: it should stick to the wrapper, and the wrapper is
+where it gets its offset. The Mob KB loot table pins its Item column this
+way (`.mob-loot-name`, `position: sticky; left: 0; z-index: 1`) so item
+names stay visible while the stats scroll sideways on a phone. It needs no
+extra background: Bootstrap table cells already paint an opaque
+`--bs-table-bg` (= body bg) in both themes. Only add one if you override the
+table background.
+
 ### `JSON.stringify(err)` is `"{}"`
 An `Error`'s `message` and `stack` are not enumerable, so the bug-report
 console capture in [main.js](../www/src/main.js) turned every
@@ -359,3 +368,21 @@ you recreate it.
 bugs. Keep them around after fixing — they double as regression
 tests. The harness at `responsive.mjs` is the gate; these are
 investigation tools.
+
+### Hash-only `page.goto` does NOT reload the SPA
+The app uses hash routing, so `page.goto('…/#/mobs/5')` from `…/#/` is only
+a `hashchange`: the same App instance keeps running and never re-reads
+`localStorage`. Setting `zeq_theme` (or any stored preference) and then
+navigating left the page in the old theme, and the first dark-mode check in
+[repro_mob_loot_stats.mjs](../scripts/test/repro_mob_loot_stats.mjs)
+failed for exactly this reason. After writing localStorage, call
+`page.reload()`.
+
+### Production data changes while you test
+The repros and `responsive.mjs` run against the live DB, and Mob KB /
+equipment editors work in it at the same time. Mid-run, an editor added
+two drops to the very mob the loot repro was checking (22 → 24 rows), and a
+count read at script start then "failed". Don't assert against numbers you
+read at startup. Fetch the API from inside the page at the moment you read
+the DOM and compare against that. Repros must also stay read-only: open
+editors and cancel them, never save or delete.

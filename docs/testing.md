@@ -201,7 +201,16 @@ Each modal is torn down (close button clicked) before the next opens.
   eye when a PR touches CSS heavily.
 - **Keyboard / focus management** — not exercised. Use manual keyboard
   testing when adding new form widgets.
-- **CSS `prefers-reduced-motion` / dark-mode / RTL** — not tested.
+- **CSS `prefers-reduced-motion` / dark-mode / RTL** — not tested by
+  the harness. A repro can cover dark mode: set `localStorage.zeq_theme =
+  'dark'`, then `page.reload()` (a hash-only `goto` won't re-read it, see
+  [gotchas.md](gotchas.md#hash-only-pagegoto-does-not-reload-the-spa)), and
+  assert `data-bs-theme` on `<html>`.
+  [repro_mob_loot_stats.mjs](../scripts/test/repro_mob_loot_stats.mjs)
+  does this. It is also the mob-detail check that has real content. The
+  harness's `mob-detail` case opens the first mob in the list, which may
+  have no loot. The repro picks the mob with the most catalog-linked drops
+  and runs desktop + phone in both themes.
 
 ## Dependencies
 
